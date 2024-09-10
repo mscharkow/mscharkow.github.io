@@ -1,0 +1,11 @@
+---
+title: Inhaltsanalyse
+date-format: "[WS 2024/25]"
+format: minimalist-revealjs
+---
+
+# Einführung
+
+# Sitzung 3 
+
+# Sitzung 4 {background-color="rgb(193,0,42)"}

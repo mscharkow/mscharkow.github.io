@@ -1,0 +1,66 @@
+---
+title: "BA Seminar Inhaltsanalyse"
+subtitle: "Analyse öffentlicher Kommunikation"
+title-block-style: default
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+---
+
+```{r}
+source(here::here("funcs.R"))
+start_date = as.Date("2024-10-25")
+end_date = as.Date("2025-02-10")
+no_classes = as.Date(c("2024-11-01", "2024-12-27", "2025-01-03"))
+topics = "Einführung und Grundlagen, CCS: Inhaltsanalyse mit LLM, Themenwahl und Forschungsfragen, Studiendesign und Stichprobe*, CCS: Datenerhebung, Kategorien und Codierung*, 
+CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde), Datenanalyse und -visualisierung*, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
+```
+
+![](r.png)
+
+## Beschreibung
+
+Im Kurs werden eigene Inhaltsanalysen zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.
+
+Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt.
+
+## Seminarplan
+
+```{r}
+make_schedule(start_date, end_date, no_classes, topics) |> 
+  mutate(Datum = strftime(Datum, "%d.%m.%Y"))
+```
+
+\* = 5-Minuten-Präsentation des Zwischenstands
+
+## Sitzung 1 {#1}
+
+```{r, purl=F, echo=F, eval = F}
+xaringanExtra::embed_xaringan(
+  url = "slides.html#/title-slide",
+  ratio = "16:9",
+  border = F
+)
+```
+
+## Sitzung 2 {#2}
+
+### Vorbereitung
+
+{{< lipsum 1 >}}
+
+### Literatur
+
+@altay2022
+
+```{r, purl=F, echo=F, eval = F}
+xaringanExtra::embed_xaringan(
+  url = "slides.html#/sitzung-2",
+  ratio = "16:9",
+  border = F
+)
+```
+
+## Literatur
+
+::: {#refs}
+:::
