@@ -2,8 +2,14 @@ author:
   name: Michael Scharkow | <scharkow@uni-mainz.de>
   affiliation: Institut für Publizistik | JGU Mainz
 date: last-modified
+
 date-format: "MM/YYYY"
 lang: de
+language:
+  title-block-author-single: Dozent
+  title-block-affiliation-single: Institut
+  title-block-published: Datum
+
 format:
   html:
     theme: cosmo
@@ -16,14 +22,11 @@ format:
     title-block-style: default
 
 df-print: kable
+
 execute:
   echo: false
   warning: false
-
-language:
-  title-block-author-single: Dozent
-  title-block-affiliation-single: Institut
-  title-block-published: Letzte Aktualisierung
+  freeze: auto
 
 project:
   type: website

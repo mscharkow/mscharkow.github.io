@@ -1,6 +1,7 @@
 ---
 title: "BA Seminar Inhaltsanalyse"
 subtitle: "Analyse öffentlicher Kommunikation"
+date: 2024-10-01
 title-block-style: default
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
