@@ -1,0 +1,85 @@
+/*-- scss:defaults --*/
+
+// colors
+$body-color:    #2c2c2c !default;
+$link-color:    rgb(193,0,42) !default;
+$primary:       rgb(193,0,42) !default;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@300;400;700;900&display=swap');
+
+$font-family-sans-serif: "Roboto Slab", serif !default;
+$font-family-monospace: "Roboto Mono" !default;
+$presentation-font-size-root: 40px;
+
+// headings
+//$presentation-heading-font: "Roboto Condensed", sans-serif !default;
+//$presentation-heading-font-weight: 400 !default;
+
+$presentation-h1-font-size: 2em !default;
+$presentation-h2-font-size: 1.5em !default;
+$presentation-h3-font-size: 1em !default;
+
+// code
+$code-block-font-size: .67em;
+
+.reveal div.sourceCode, .reveal pre code {
+  background-color: #f8f8f8 !important;
+  max-height: 100% !important;
+}
+.reveal div.sourceCode {
+  margin-bottom: 10px !important;
+}
+
+/*-- scss:rules --*/
+
+// colors
+
+.reveal h1.title {
+  margin-bottom:1em;
+  margin-top:1em;
+  color: $body-color;
+  text-align:left;
+  padding:0;
+  margin-left:0;
+}
+
+
+.reveal h2 {
+  color: $primary;
+  margin-bottom:1em;
+  text-transform: uppercase;
+}
+
+.reveal h3 {
+  font-weight: bold;
+}
+
+
+#title-slide div {
+  justify-content: left;
+  padding:0;
+
+}
+
+p.subtitle {
+  font-size: $presentation-h2-font-size;
+}
+
+p.author, p.date, p.subtitle {
+  margin-bottom:.75em;
+  text-align: left; }
+
+.reveal table {
+  margin:0;
+  margin-left:0 !important;
+  font-size: .8em !important;
+}
+
+.reveal .slide-number {
+  font-family: $presentation-heading-font;
+}
+
+.bordered{border:1px solid #ccc; padding:5px;}
+.reveal figure figcaption, .caption {font-size:1rem !important; text-align:center;}
+.quarto-title-authors{text-align:left;}

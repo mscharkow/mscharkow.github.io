@@ -1,0 +1,18 @@
+title: Minimalist Theme
+author: Michael Scharkow
+version: 1.0.0
+contributes:
+  formats:
+    revealjs:
+      height: 900
+      width: 1600
+      theme: [theme.scss]
+      slide-number: c
+      code-line-numbers: false
+      menu: false
+      history: false
+      progress: false
+      title-slide-attributes:
+        data-background-image: https://cdn.zdv.uni-mainz.de/assets/rlp.net/logos/uni-mainz.png
+        data-background-position: "top right"
+        data-background-size: auto
