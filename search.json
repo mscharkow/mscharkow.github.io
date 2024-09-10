@@ -14,6 +14,20 @@
     "text": "coming 2025"
   },
   {
+    "objectID": "ma-datenanalyse/index.html#beschreibung",
+    "href": "ma-datenanalyse/index.html#beschreibung",
+    "title": "MA Fortgeschrittene Datenanalyse mit R",
+    "section": "Beschreibung",
+    "text": "Beschreibung\nIm Kurs werden eigene Experimente zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.\nDer Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt."
+  },
+  {
+    "objectID": "ma-datenanalyse/index.html#coming-soon",
+    "href": "ma-datenanalyse/index.html#coming-soon",
+    "title": "MA Fortgeschrittene Datenanalyse mit R",
+    "section": "coming soon",
+    "text": "coming soon"
+  },
+  {
     "objectID": "inhaltsanalyse/index.html#beschreibung",
     "href": "inhaltsanalyse/index.html#beschreibung",
     "title": "BA Seminar Inhaltsanalyse",
@@ -44,8 +58,22 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Lehrveranstaltungen",
+    "title": "Michael Scharkow",
     "section": "",
-    "text": "BA Seminar Experiment\n\n\nMediennutzung und Medienwirkung\n\n\n\n04/2025\n\n\n\n\n\n\n\n\n\n\n\n\nBA Seminar Inhaltsanalyse\n\n\nAnalyse öffentlicher Kommunikation\n\n\n\n10/2024\n\n\n\n\n\n\n\n\nKeine Treffer"
+    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\nCheck out my CV for a complete list of publications and presentations."
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Michael Scharkow",
+    "section": "",
+    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\nCheck out my CV for a complete list of publications and presentations."
+  },
+  {
+    "objectID": "index.html#teaching",
+    "href": "index.html#teaching",
+    "title": "Michael Scharkow",
+    "section": "Teaching",
+    "text": "Teaching"
   }
 ]

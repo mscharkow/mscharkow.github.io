@@ -2,8 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/experiment/index.html",
-      "/inhaltsanalyse/index.html"
+      "/inhaltsanalyse/index.html",
+      "/ma-datenanalyse/index.html",
+      "/experiment/index.html"
     ]
   }
 ]
