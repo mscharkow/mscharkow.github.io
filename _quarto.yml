@@ -1,14 +1,15 @@
 author:
-  name: Michael Scharkow | <scharkow@uni-mainz.de>
-  affiliation: Institut für Publizistik | JGU Mainz
+  - name: Michael Scharkow
+    affiliation: JGU Mainz
+    email: scharkow@uni-mainz.de
 date: last-modified
 
 date-format: "MM/YYYY"
 lang: de
 language:
-  title-block-author-single: Dozent
-  title-block-affiliation-single: Institut
-  title-block-published: Datum
+  title-block-author-single: ""
+  title-block-affiliation-single: ""
+  title-block-published: ""
 
 format:
   html:
