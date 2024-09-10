@@ -3,7 +3,7 @@ title: "BA Seminar Experiment"
 subtitle: "Mediennutzung und Medienwirkung"
 date: 2025-04-01
 title-block-style: default
-bibliography: references.bib
+#bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
 ---
 
