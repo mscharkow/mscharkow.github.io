@@ -19,11 +19,11 @@ jobs:
 
       - name: Setup R
         uses: r-lib/actions/setup-r-dependencies@v2
-          with:
-            packages:
-              any::knitr
-              any::rmarkdown
-              any::tidyverse
+        with:
+          packages:
+            any::knitr
+            any::rmarkdown
+            any::tidyverse
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
