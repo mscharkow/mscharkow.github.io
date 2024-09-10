@@ -15,7 +15,7 @@ topics = "Einführung und Grundlagen, CCS: Inhaltsanalyse mit LLM, Themenwahl un
 CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde), Datenanalyse und -visualisierung*, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
 ```
 
-![](r.png)
+![](images/ia_title.png)
 
 ## Beschreibung
 
@@ -34,31 +34,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 ## Sitzung 1 {#1}
 
-```{r, purl=F, echo=F, eval = F}
-xaringanExtra::embed_xaringan(
-  url = "slides.html#/title-slide",
-  ratio = "16:9",
-  border = F
-)
-```
-
-## Sitzung 2 {#2}
-
-### Vorbereitung
-
-{{< lipsum 1 >}}
-
-### Literatur
-
-@altay2022
-
-```{r, purl=F, echo=F, eval = F}
-xaringanExtra::embed_xaringan(
-  url = "slides.html#/sitzung-2",
-  ratio = "16:9",
-  border = F
-)
-```
+TODO.
 
 ## Literatur
 

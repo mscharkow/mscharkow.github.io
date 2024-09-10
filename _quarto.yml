@@ -1,0 +1,29 @@
+author:
+  name: Michael Scharkow | <scharkow@uni-mainz.de>
+  affiliation: Institut für Publizistik | JGU Mainz
+date: last-modified
+date-format: "MM/YYYY"
+lang: de
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: right
+    margin-top: 1em
+    toc-title: Inhalt
+    mainfont: "Roboto Slab"
+    color: rgb(193,0,42)
+    title-block-style: default
+
+df-print: kable
+execute:
+  echo: false
+  warning: false
+
+language:
+  title-block-author-single: Dozent
+  title-block-affiliation-single: Institut
+  title-block-published: Letzte Aktualisierung
+
+project:
+  type: website
