@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lehrveranstaltungen",
-    "section": "",
-    "text": "BA Seminar Inhaltsanalyse\n\n\nAnalyse öffentlicher Kommunikation\n\n\n\n10/2024\n\n\n\n\n\n\n\n\nKeine Treffer"
+    "objectID": "experiment/index.html#beschreibung",
+    "href": "experiment/index.html#beschreibung",
+    "title": "BA Seminar Experiment",
+    "section": "Beschreibung",
+    "text": "Beschreibung\nIm Kurs werden eigene Experimente zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.\nDer Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt."
+  },
+  {
+    "objectID": "experiment/index.html#coming-2025",
+    "href": "experiment/index.html#coming-2025",
+    "title": "BA Seminar Experiment",
+    "section": "coming 2025",
+    "text": "coming 2025"
   },
   {
     "objectID": "inhaltsanalyse/index.html#beschreibung",
@@ -33,5 +40,12 @@
     "title": "BA Seminar Inhaltsanalyse",
     "section": "Literatur",
     "text": "Literatur"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lehrveranstaltungen",
+    "section": "",
+    "text": "BA Seminar Experiment\n\n\nMediennutzung und Medienwirkung\n\n\n\n04/2025\n\n\n\n\n\n\n\n\n\n\n\n\nBA Seminar Inhaltsanalyse\n\n\nAnalyse öffentlicher Kommunikation\n\n\n\n10/2024\n\n\n\n\n\n\n\n\nKeine Treffer"
   }
 ]
