@@ -1,0 +1,24 @@
+---
+title: Michael Scharkow
+subtitle: Computational Communication Researcher
+page-layout: full
+format: 
+  html:
+    toc: false
+listing: 
+  type: grid
+  contents: 
+    - "*/index.qmd"
+  fields: [image, title, subtitle, date]
+  sort: 
+    - "date asc"
+    - title
+---
+
+## About
+
+I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling. 
+
+Check out my CV for a complete list of publications and presentations.
+
+## Teaching
