@@ -1,5 +1,5 @@
 ---
-title: "MA Fortgeschrittene Datenanalyse mit R"
+title: "MA Übung Fortgeschrittene Datenanalyse mit R"
 #subtitle: "Mediennutzung und Medienwirkung"
 date: 2024-10-01
 title-block-style: default
