@@ -24,10 +24,7 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          dependencies: '"hard"'
-          pak-version: rc
-          cache-version: 2
-          packages: |
+          extra-packages: |
             any::knitr
             any::rmarkdown
             any::tidyverse
