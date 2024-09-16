@@ -32,6 +32,7 @@ jobs:
           packages: |
             any::knitr
             any::rmarkdown
+            any::xaringanExtra
             any::tidyverse
             any::here
 
