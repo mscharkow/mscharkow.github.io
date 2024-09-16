@@ -26,7 +26,7 @@ jobs:
         with:
           dependencies: '"hard"'
           cache-version: 2
-          packages:
+          packages: |
             any::knitr
             any::rmarkdown
             any::tidyverse
