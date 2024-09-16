@@ -25,6 +25,7 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           dependencies: '"hard"'
+          pak-version: rc
           cache-version: 2
           packages: |
             any::knitr
