@@ -7,7 +7,7 @@ name: Quarto Publish
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     permissions:
       contents: write
     steps:
@@ -24,8 +24,7 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          cache-version: 3
-          extra-packages: |
+          packages: |
             any::knitr
             any::rmarkdown
             any::tidyverse
