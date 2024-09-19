@@ -1,7 +1,7 @@
 author:
   - name: Michael Scharkow
     affiliation: JGU Mainz
-    email: scharkow@uni-mainz.de
+    url: /
 date: last-modified
 
 date-format: "MM/YYYY"
@@ -14,6 +14,7 @@ language:
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
     toc-location: right
     margin-top: 1em
@@ -21,6 +22,7 @@ format:
     mainfont: "Roboto Slab"
     color: rgb(193,0,42)
     title-block-style: default
+    footer: "hello"
 
 df-print: kable
 
@@ -31,3 +33,6 @@ execute:
 
 project:
   type: website
+
+website:
+  page-footer: "[home](/)"
