@@ -20,8 +20,6 @@ CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde
 
 ## Beschreibung
 
-Im Kurs werden eigene Experimente zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.
+Ziel der Übung ist die Vermittlung von praktischen Kenntnissen in der fortgeschrittenen Datenanalyse mit R. Behandelt werden lineare Modelle, Längsschnitt- und Multilevel-Modelle sowie explorative und konfirmatorische Faktorenanalyse. 
 
-Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt.
-
-## coming soon
+[Kurs-Website mit R-Code, Daten und Hausaufgaben](https://stats.ifp.uni-mainz.de/ma-datenanalyse/)

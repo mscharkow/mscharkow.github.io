@@ -20,7 +20,7 @@ listing:
 ## About
 ![](ms.jpg){style="float:right;padding:5px;border: 1px solid #ccc;width:200px; margin-left:2em;"}
 
-I am professor for [Computational Communication Science](https://ccs.ifp.uni-mainz.de) at the [Department of Communication](https://www.ifp.uni-mainz.de), [Johannes Gutenberg University Mainz](https://uni-mainz.de). My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling. 
+I am professor for [Computational Communication Science](https://ccs.ifp.uni-mainz.de) at the [Department of Communication](https://www.ifp.uni-mainz.de), [Johannes Gutenberg University Mainz](https://www.uni-mainz.de). My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling. 
 
 ### Contact
 
