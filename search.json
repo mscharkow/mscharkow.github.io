@@ -16,58 +16,191 @@
   {
     "objectID": "ma-datenanalyse/index.html#beschreibung",
     "href": "ma-datenanalyse/index.html#beschreibung",
-    "title": "MA Übung Fortgeschrittene Datenanalyse mit R",
+    "title": "MA Fortgeschrittene Datenanalyse mit R",
     "section": "Beschreibung",
     "text": "Beschreibung\nIm Kurs werden eigene Experimente zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.\nDer Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt."
   },
   {
     "objectID": "ma-datenanalyse/index.html#coming-soon",
     "href": "ma-datenanalyse/index.html#coming-soon",
-    "title": "MA Übung Fortgeschrittene Datenanalyse mit R",
+    "title": "MA Fortgeschrittene Datenanalyse mit R",
     "section": "coming soon",
     "text": "coming soon"
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#lernziele",
+    "href": "inhaltsanalyse/slides.html#lernziele",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Lernziele",
+    "text": "Lernziele\n\nWie führen wir ein Forschungsprojekt durch?\nWie koordinieren und managen wir ein komplexes Projekt mit mehren Mitarbeitern unter Zeitdruck? (Projektmanagement)\nWie präsentieren wir Projektfortschritte, Forschungsprozesse und Forschungsergebnisse?\nWie geben wir konstruktives Feedback im Forschungsprozess? Wie nehmen wir Feedback an und setzen es um?\nSpaß haben in der Forschung!"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#warum-computational-methods",
+    "href": "inhaltsanalyse/slides.html#warum-computational-methods",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Warum Computational Methods?",
+    "text": "Warum Computational Methods?\n\nmein Lehr- und Forschungsbereich\nhohe Nachfrage in der Kommunikationswissenschaft\nrelevante Skills in vielen Jobs außerhalb der Wissenschaft (Data Science, Journalismus, Marktforschung)\nZiel ist vor allem Verständnis der Grundlagen und Dinge ausprobieren"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#inhalt",
+    "href": "inhaltsanalyse/slides.html#inhalt",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Inhalt",
+    "text": "Inhalt\n\n\n\n\n\n\n\n\n\nSitzung\n\n\nDatum\n\n\nThema\n\n\n\n\n\n\n1\n\n\n25.10.2024\n\n\nEinführung und Grundlagen\n\n\n\n\n2\n\n\n08.11.2024\n\n\nCCS: Inhaltsanalyse mit LLM\n\n\n\n\n3\n\n\n15.11.2024\n\n\nThemenwahl und Forschungsfragen\n\n\n\n\n4\n\n\n22.11.2024\n\n\nStudiendesign und Stichprobe*\n\n\n\n\n5\n\n\n29.11.2024\n\n\nCCS: Datenerhebung\n\n\n\n\n6\n\n\n06.12.2024\n\n\nKategorien und Codierung*\n\n\n\n\n7\n\n\n13.12.2024\n\n\nCCS: Reli-Test und Validierung*\n\n\n\n\n8\n\n\n20.12.2024\n\n\nCodebuch-Finalisierung (Sprechstunde)\n\n\n\n\n9\n\n\n10.01.2025\n\n\nFeldphase (Sprechstunde)\n\n\n\n\n10\n\n\n17.01.2025\n\n\nDatenanalyse und -visualisierung*\n\n\n\n\n11\n\n\n24.01.2025\n\n\nErgebnisaufbereitung\n\n\n\n\n12\n\n\n31.01.2025\n\n\nAbschluss"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#literatur",
+    "href": "inhaltsanalyse/slides.html#literatur",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Literatur",
+    "text": "Literatur"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#leistungen",
+    "href": "inhaltsanalyse/slides.html#leistungen",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Leistungen",
+    "text": "Leistungen\nAktive Teilnahme\n\naktive Mitarbeit in einer Arbeitsgruppe\n1 Gruppenbericht zum Stand der Arbeit\n3 Hausaufgaben zu CCS-Sitzungen\n\nPrüfungsleistung\n\nProjektbericht als Gruppenhausarbeit"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#studentische-arbeitsgruppen",
+    "href": "inhaltsanalyse/slides.html#studentische-arbeitsgruppen",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Studentische Arbeitsgruppen",
+    "text": "Studentische Arbeitsgruppen\n\ni.d.R. 4 Studierende pro Gruppe (= max. 5 Gruppen im Seminar)\n‚Learning by doing’ in der AG\nvon anderen AGs lernen über andere Methoden, Themen und Arbeitsweisen\nLernen von Feedback zur eigenen Arbeit und der Arbeit der anderen AGs"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#gruppenberichte",
+    "href": "inhaltsanalyse/slides.html#gruppenberichte",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Gruppenberichte",
+    "text": "Gruppenberichte\n\njedes Gruppenmitglied ist federführend für einen Bericht\nProtokollierung des Diskussionsprozesse in der AG seit dem letzen Bericht\nVorbereitung einer zusammenfassenden Kurzpräsentation (5 min) mit 2-3 Folien\nUpload der Folien spätestens Fr, 8h in Moodle\nalle anderen geben Feedback für eigene und andere AG"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#sitzungen-zu-ccs",
+    "href": "inhaltsanalyse/slides.html#sitzungen-zu-ccs",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Sitzungen zu CCS",
+    "text": "Sitzungen zu CCS\n\nInverted Classroom, d.h. verpflichtende Vorbereitung https://stats.ifp.uni-mainz.de/ba-ccs-track/\nHausaufgaben für jede CCS-Sitzung, Abgabe jeweils Do, 12h in Moodle\neigenes Notebook zu den praktischen Sitzungen mitbringen\nwir verwenden R und RStudio, https://rstudio.ifp.uni-mainz.de\ngern paarweise arbeiten, das hilft in der Sitzung und macht mehr Spaß"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#hausarbeiten",
+    "href": "inhaltsanalyse/slides.html#hausarbeiten",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Hausarbeiten",
+    "text": "Hausarbeiten\n\nGruppenhausarbeit als Modulprüfung\nmaximal (!) 10 Seiten pro Gruppenmitglied, max. 10.000 Wörter insgesamt\nDokumentation der eigenen Arbeit, d.h. Gruppenberichte können recycled werden\nes muss nichts “rauskommen”, außer dass sie etwas gelernt haben\nFormalien und Regeln wissenschaftlicher Arbeit sind wichtig und notenrelevant"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe",
+    "href": "inhaltsanalyse/slides.html#aufgabe",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe",
+    "text": "Aufgabe\nTODO\n\nCodieren Sie politische TikTok-Inhalte zunächst alleine in verschiedenen Formaten.\nWas ist Ihnen beim Codieren aufgefallen? Was war einfach, was schwierig?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#definitionen",
+    "href": "inhaltsanalyse/slides.html#definitionen",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Definitionen",
+    "text": "Definitionen\n„Content analysis is a research technique for the objective, systematic, and quantitative description of the manifest content of communication.” (Berelson 1952, S. 18)\n„Die Inhaltsanalyse ist eine empirische Methode zur systematischen, intersubjektiv nachvollziehbaren Beschreibung inhaltlicher und formaler Merkmale von Mitteilungen” (Früh, 1998, S.24)\n“Content analysis is a research technique for making replicable and valid inferences from texts (or other meaningful matter) to the contexts of their use.” (Krippendorff, 2004, S. 18)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#theorie-der-inhaltsanalyse---inferenzen",
+    "href": "inhaltsanalyse/slides.html#theorie-der-inhaltsanalyse---inferenzen",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Theorie der Inhaltsanalyse - Inferenzen",
+    "text": "Theorie der Inhaltsanalyse - Inferenzen\n\nQuelle: Früh, 2007"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe-1",
+    "href": "inhaltsanalyse/slides.html#aufgabe-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe",
+    "text": "Aufgabe\nDiskutieren Sie in Paaren, wie nach Benoit et al. (2009) politische Positionen zu Aussagen werden, und welche Inferenzen wir durch Analysen dieser Aussagen ziehen können."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe-2",
+    "href": "inhaltsanalyse/slides.html#aufgabe-2",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe",
+    "text": "Aufgabe\nEs soll Sexismus in Social Media Posts dichotom codiert werden (ja/nein).\n\nEntwerfen Sie eine kurze (1-3 Sätze) Codieranweisung auf englisch.\nTauschen Sie die Codieranweisung mit Ihrer Sitznachbarin aus.\nCodieren Sie die 5 Aussagen auf der nächsten Seite mit Hilfe der Codieranweisung.\nNutzen Sie eine KI (ChatGPT, Gemini, Copilot) und lassen Sie diese dieselben 5 Aussagen codieren.\nNotieren Sie Ihre und die KI-basierten Codierentscheidungen."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#posts",
+    "href": "inhaltsanalyse/slides.html#posts",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Posts",
+    "text": "Posts\n\n\n\n\n\n\n\n\n\n\nid\ntext\n\n\n\n\n1\nAnd toxic masculinity is actually a byproduct of toxic femininity.\n\n\n2\nIs he working on stuff too? Ask her where she goes to school, what she plans to study, etc. She’ll ask you the same questions in return if she’s interested.\n\n\n3\nThis is coming from the bitch who once flashed a teacher to distract him so her boyfriend could sneak out of detention. God the bitch used to be so much cooler.\n\n\n4\nHoly fucking shit dude. Fuck this bitch. Seriously. OP, I wish I could say I feel your pain but I don’t. All I can say is I hope you pull through it all. I fully believe in karma and it is a bigger bitch than this woman.\n\n\n5\nPeople have no problems with a female lead. They got problems with them shoving down bullshit PC/SJW down their throats. Disney already ruined Star Wars Marvel is just next on the list."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#zero-shot-codierung",
+    "href": "inhaltsanalyse/slides.html#zero-shot-codierung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Zero-Shot-Codierung",
+    "text": "Zero-Shot-Codierung\n\nLarge Language Models (umgangssprachlich oft KI) können verschiedene sprachliche Aufgaben “lösen”, u.a. auch inhaltsanalytische\nda die Modelle dafür nicht extra angepasst werden müssen, spricht man von Zero-Shot-Codierung\nim Gegensatz zu älteren automatischen Verfahren braucht es (fast) keine Umstellung gegenüber manuellem Codieren\nzahlreiche aktuelle Studien untersuchen, ob man manuelle Codierung durch LLM-basierte ersetzen kann\nob und wie gut man eigene Kategorien mit LLM codieren kann, muss man ausprobieren (und machen wir)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#hausaufgaben",
+    "href": "inhaltsanalyse/slides.html#hausaufgaben",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Hausaufgaben",
+    "text": "Hausaufgaben\n\nhttps://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html selbständig durcharbeiten\nHausaufgabe (Abgabe Do, 12h, Moodle)\nLektüre: Törnberg (2023)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#literatur-1",
+    "href": "inhaltsanalyse/slides.html#literatur-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Literatur",
+    "text": "Literatur\n\n\n\n\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nTörnberg, P. (2023). How to use llms for text analysis. arXiv preprint arXiv:2307.13106."
+  },
+  {
     "objectID": "inhaltsanalyse/index.html#beschreibung",
     "href": "inhaltsanalyse/index.html#beschreibung",
-    "title": "BA Seminar Inhaltsanalyse",
+    "title": "BA Inhaltsanalyse",
     "section": "Beschreibung",
     "text": "Beschreibung\nIm Kurs werden eigene Inhaltsanalysen zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.\nDer Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt."
   },
   {
     "objectID": "inhaltsanalyse/index.html#seminarplan",
     "href": "inhaltsanalyse/index.html#seminarplan",
-    "title": "BA Seminar Inhaltsanalyse",
+    "title": "BA Inhaltsanalyse",
     "section": "Seminarplan",
     "text": "Seminarplan\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n25.10.2024\nEinführung und Grundlagen\n\n\n2\n08.11.2024\nCCS: Inhaltsanalyse mit LLM\n\n\n3\n15.11.2024\nThemenwahl und Forschungsfragen\n\n\n4\n22.11.2024\nStudiendesign und Stichprobe*\n\n\n5\n29.11.2024\nCCS: Datenerhebung\n\n\n6\n06.12.2024\nKategorien und Codierung*\n\n\n7\n13.12.2024\nCCS: Reli-Test und Validierung*\n\n\n8\n20.12.2024\nCodebuch-Finalisierung\n\n\n9\n10.01.2025\nFeldphase (Sprechstunde)\n\n\n10\n17.01.2025\nDatenanalyse und -visualisierung*\n\n\n11\n24.01.2025\nErgebnisaufbereitung\n\n\n12\n31.01.2025\nAbschluss\n\n\n\n\n\n\n* = 5-Minuten-Präsentation des Zwischenstands"
   },
   {
     "objectID": "inhaltsanalyse/index.html#1",
     "href": "inhaltsanalyse/index.html#1",
-    "title": "BA Seminar Inhaltsanalyse",
-    "section": "Sitzung 1",
-    "text": "Sitzung 1\nTODO."
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 1 ",
+    "text": "Sitzung 1 \n\nThemen\n\nEinführung, Ablauf, Leistungsanforderungen, Formalia\nDefinition und Grundlagen Inhaltsanalyse\nmanuelle vs. LLM-basierte Codierung\n\n\n\nLiteratur\nBenoit et al. (2009)\n\n\nAufgabe zur nächsten Sitzung\nZero-Shot-Codierung in R mit Hausaufgabe"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#literatur",
-    "href": "inhaltsanalyse/index.html#literatur",
-    "title": "BA Seminar Inhaltsanalyse",
+    "objectID": "inhaltsanalyse/index.html#2",
+    "href": "inhaltsanalyse/index.html#2",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 2",
+    "text": "Sitzung 2\n\nLiteratur\nTörnberg (2023)"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#literatur-2",
+    "href": "inhaltsanalyse/index.html#literatur-2",
+    "title": "BA Inhaltsanalyse",
     "section": "Literatur",
-    "text": "Literatur"
+    "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nTörnberg, P. (2023). How to use llms for text analysis. arXiv preprint arXiv:2307.13106."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
     "section": "",
-    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\nCheck out my CV for a complete list of publications and presentations."
+    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\nCheck out my CV for a complete list of publications and presentations.\n\n\nJohannes-Gutenberg University Mainz  Department of Communication  Jakob-Welder-Weg 12  55128 Mainz  Germany\nscharkow@uni-mainz.de"
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
     "title": "Michael Scharkow",
     "section": "",
-    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\nCheck out my CV for a complete list of publications and presentations."
+    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\nCheck out my CV for a complete list of publications and presentations.\n\n\nJohannes-Gutenberg University Mainz  Department of Communication  Jakob-Welder-Weg 12  55128 Mainz  Germany\nscharkow@uni-mainz.de"
   },
   {
     "objectID": "index.html#teaching",

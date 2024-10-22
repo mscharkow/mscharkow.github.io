@@ -10,8 +10,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Michael Scharkow">
-  <title>Inhaltsanalyse</title>
+  <meta name="author" content="Prof.&nbsp;Dr.&nbsp;Michael Scharkow">
+  <title>Inhaltsanalyse: Inhalte öffentlicher Kommunikation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,7 +29,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -326,40 +346,381 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="https://cdn.zdv.uni-mainz.de/assets/rlp.net/logos/uni-mainz.png" data-background-position="top right" data-background-size="auto" class="quarto-title-block center">
-  <h1 class="title">Inhaltsanalyse</h1>
+  <h1 class="title">Inhaltsanalyse: Inhalte öffentlicher Kommunikation</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="../">Michael Scharkow</a> 
+Prof.&nbsp;Dr.&nbsp;Michael Scharkow 
 </div>
-        <p class="quarto-title-affiliation">
-            JGU Mainz
-          </p>
-    </div>
+</div>
 </div>
 
-  <p class="date">WS 2024/25</p>
+  <p class="date">Wintersemester 2024/25</p>
 </section>
-<section id="einführung" class="title-slide slide level1 center">
-<h1>Einführung</h1>
-
-</section>
-
-<section id="sitzung-3" class="title-slide slide level1 center">
-<h1>Sitzung 3</h1>
+<section>
+<section id="hallo." class="title-slide slide level1 center">
+<h1>Hallo.</h1>
 
 </section>
+<section id="lernziele" class="slide level2">
+<h2>Lernziele</h2>
+<ul>
+<li>Wie führen wir ein Forschungsprojekt durch?</li>
+<li>Wie koordinieren und managen wir ein komplexes Projekt mit mehren Mitarbeitern unter Zeitdruck? (Projektmanagement)</li>
+<li>Wie präsentieren wir Projektfortschritte, Forschungsprozesse und Forschungsergebnisse?</li>
+<li>Wie geben wir konstruktives Feedback im Forschungsprozess? Wie nehmen wir Feedback an und setzen es um?</li>
+<li>Spaß haben in der Forschung!</li>
+</ul>
+</section>
+<section id="warum-computational-methods" class="slide level2">
+<h2>Warum Computational Methods?</h2>
+<ul>
+<li>mein Lehr- und Forschungsbereich</li>
+<li>hohe Nachfrage in der Kommunikationswissenschaft</li>
+<li>relevante Skills in vielen Jobs außerhalb der Wissenschaft (Data Science, Journalismus, Marktforschung)</li>
+<li>Ziel ist vor allem Verständnis der Grundlagen und Dinge ausprobieren</li>
+</ul>
+</section>
+<section id="inhalt" class="slide level2">
+<h2>Inhalt</h2>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">
+Sitzung
+</th>
+<th style="text-align: left;">
+Datum
+</th>
+<th style="text-align: left;">
+Thema
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">
+1
+</td>
+<td style="text-align: left;">
+25.10.2024
+</td>
+<td style="text-align: left;">
+<a href="#1">Einführung und Grundlagen</a><a></a>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+2
+</td>
+<td style="text-align: left;">
+08.11.2024
+</td>
+<td style="text-align: left;">
+<a href="#2">CCS: Inhaltsanalyse mit LLM</a><a></a>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+3
+</td>
+<td style="text-align: left;">
+15.11.2024
+</td>
+<td style="text-align: left;">
+<a href="#3">Themenwahl und Forschungsfragen</a><a></a>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+4
+</td>
+<td style="text-align: left;">
+22.11.2024
+</td>
+<td style="text-align: left;">
+<a href="#4">Studiendesign und Stichprobe*</a><a></a>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+5
+</td>
+<td style="text-align: left;">
+29.11.2024
+</td>
+<td style="text-align: left;">
+<a href="#5">CCS: Datenerhebung</a><a></a>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+6
+</td>
+<td style="text-align: left;">
+06.12.2024
+</td>
+<td style="text-align: left;">
+<a href="#6">Kategorien und Codierung*</a><a></a>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+7
+</td>
+<td style="text-align: left;">
+13.12.2024
+</td>
+<td style="text-align: left;">
+<a href="#7">CCS: Reli-Test und Validierung*</a><a></a>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+8
+</td>
+<td style="text-align: left;">
+20.12.2024
+</td>
+<td style="text-align: left;">
+<a href="#8">Codebuch-Finalisierung (Sprechstunde)</a><a></a>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+9
+</td>
+<td style="text-align: left;">
+10.01.2025
+</td>
+<td style="text-align: left;">
+<a href="#9">Feldphase (Sprechstunde)</a><a></a>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+10
+</td>
+<td style="text-align: left;">
+17.01.2025
+</td>
+<td style="text-align: left;">
+<a href="#10">Datenanalyse und -visualisierung*</a><a></a>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">
+11
+</td>
+<td style="text-align: left;">
+24.01.2025
+</td>
+<td style="text-align: left;">
+<a href="#11">Ergebnisaufbereitung</a><a></a>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">
+12
+</td>
+<td style="text-align: left;">
+31.01.2025
+</td>
+<td style="text-align: left;">
+<a href="#12">Abschluss</a><a></a>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="literatur" class="slide level2">
+<h2>Literatur</h2>
+<p><img data-src="https://images-na.ssl-images-amazon.com/images/I/51+sDU+LbxL._SX347_BO1,204,203,200_.jpg" data-align="right" height="600"> <img data-src="https://media.springernature.com/full/springer-static/cover-hires/book/978-3-658-36179-2?as=webp.png" data-align="right" height="600"> <img data-src="https://pictures.abebooks.com/isbn/9781506395661-us.jpg" data-align="right" height="600"></p>
+</section>
+<section id="leistungen" class="slide level2">
+<h2>Leistungen</h2>
+<h3 id="aktive-teilnahme">Aktive Teilnahme</h3>
+<ul>
+<li>aktive Mitarbeit in einer Arbeitsgruppe</li>
+<li>1 Gruppenbericht zum Stand der Arbeit</li>
+<li>3 Hausaufgaben zu CCS-Sitzungen</li>
+</ul>
+<h3 id="prüfungsleistung">Prüfungsleistung</h3>
+<ul>
+<li>Projektbericht als Gruppenhausarbeit</li>
+</ul>
+</section>
+<section id="studentische-arbeitsgruppen" class="slide level2">
+<h2>Studentische Arbeitsgruppen</h2>
+<ul>
+<li>i.d.R. 4 Studierende pro Gruppe (= max. 5 Gruppen im Seminar)</li>
+<li>‚Learning by doing’ in der AG</li>
+<li>von anderen AGs lernen über andere Methoden, Themen und Arbeitsweisen</li>
+<li>Lernen von Feedback zur eigenen Arbeit und der Arbeit der anderen AGs</li>
+</ul>
+</section>
+<section id="gruppenberichte" class="slide level2">
+<h2>Gruppenberichte</h2>
+<ul>
+<li>jedes Gruppenmitglied ist federführend für einen Bericht</li>
+<li>Protokollierung des Diskussionsprozesse in der AG seit dem letzen Bericht</li>
+<li>Vorbereitung einer zusammenfassenden Kurzpräsentation (5 min) mit 2-3 Folien</li>
+<li>Upload der Folien spätestens Fr, 8h in Moodle</li>
+<li>alle anderen geben Feedback für eigene und andere AG</li>
+</ul>
+</section>
+<section id="sitzungen-zu-ccs" class="slide level2">
+<h2>Sitzungen zu CCS</h2>
+<ul>
+<li>Inverted Classroom, d.h. verpflichtende Vorbereitung <br><a href="https://stats.ifp.uni-mainz.de/ba-ccs-track/" class="uri">https://stats.ifp.uni-mainz.de/ba-ccs-track/</a></li>
+<li>Hausaufgaben für jede CCS-Sitzung, Abgabe jeweils Do, 12h in Moodle</li>
+<li>eigenes Notebook zu den praktischen Sitzungen mitbringen</li>
+<li>wir verwenden R und RStudio, <a href="https://rstudio.ifp.uni-mainz.de" class="uri">https://rstudio.ifp.uni-mainz.de</a></li>
+<li>gern paarweise arbeiten, das hilft in der Sitzung und macht mehr Spaß</li>
+</ul>
+</section>
+<section id="hausarbeiten" class="slide level2">
+<h2>Hausarbeiten</h2>
+<ul>
+<li>Gruppenhausarbeit als Modulprüfung</li>
+<li>maximal (!) 10 Seiten pro Gruppenmitglied, max. 10.000 Wörter insgesamt</li>
+<li>Dokumentation der eigenen Arbeit, d.h. Gruppenberichte können recycled werden</li>
+<li>es muss nichts “rauskommen”, außer dass sie etwas gelernt haben</li>
+<li>Formalien und Regeln wissenschaftlicher Arbeit sind wichtig und notenrelevant</li>
+</ul>
+</section></section>
+<section>
+<section id="was-ist-inhaltsanalyse" class="title-slide slide level1 center">
+<h1>Was ist Inhaltsanalyse?</h1>
 
-<section id="sitzung-4" class="title-slide slide level1 center" data-background-color="rgb(193,0,42)">
-<h1>Sitzung 4</h1>
+</section>
+<section id="aufgabe" class="slide level2">
+<h2>Aufgabe</h2>
+<p>TODO</p>
+<ol type="1">
+<li>Codieren Sie politische TikTok-Inhalte zunächst alleine in verschiedenen Formaten.</li>
+<li>Was ist Ihnen beim Codieren aufgefallen? Was war einfach, was schwierig?</li>
+</ol>
+</section>
+<section id="definitionen" class="slide level2">
+<h2>Definitionen</h2>
+<p>„Content analysis is a research technique for the objective, systematic, and quantitative description of the manifest content of communication.” (Berelson 1952, S. 18)</p>
+<p>„Die Inhaltsanalyse ist eine empirische Methode zur systematischen, intersubjektiv nachvollziehbaren Beschreibung inhaltlicher und formaler Merkmale von Mitteilungen” (Früh, 1998, S.24)</p>
+<p>“Content analysis is a research technique for making replicable and valid inferences from texts (or other meaningful matter) to the contexts of their use.” (Krippendorff, 2004, S. 18)</p>
+</section>
+<section id="theorie-der-inhaltsanalyse---inferenzen" class="slide level2">
+<h2>Theorie der Inhaltsanalyse - Inferenzen</h2>
+
+<img data-src="images/inferenz.png" class="r-stretch quarto-figure-center"><p class="caption">Quelle: Früh, 2007</p></section>
+<section id="aufgabe-1" class="slide level2">
+<h2>Aufgabe</h2>
+<p>Diskutieren Sie in Paaren, wie nach <span class="citation" data-cites="benoit2009">Benoit et al. (<a href="#/literatur-1" role="doc-biblioref" onclick="">2009</a>)</span> politische Positionen zu Aussagen werden, und welche Inferenzen wir durch Analysen dieser Aussagen ziehen können.</p>
+</section></section>
+<section>
+<section id="manuelle-und-automatische-codierung" class="title-slide slide level1 center">
+<h1>Manuelle und automatische Codierung</h1>
+
+</section>
+<section id="aufgabe-2" class="slide level2">
+<h2>Aufgabe</h2>
+<p>Es soll Sexismus in Social Media Posts dichotom codiert werden (ja/nein).</p>
+<ol type="1">
+<li>Entwerfen Sie eine kurze (1-3 Sätze) Codieranweisung auf englisch.</li>
+<li>Tauschen Sie die Codieranweisung mit Ihrer Sitznachbarin aus.</li>
+<li>Codieren Sie die 5 Aussagen auf der nächsten Seite mit Hilfe der Codieranweisung.</li>
+<li>Nutzen Sie eine KI (ChatGPT, Gemini, Copilot) und lassen Sie diese dieselben 5 Aussagen codieren.</li>
+<li>Notieren Sie Ihre und die KI-basierten Codierentscheidungen.</li>
+</ol>
+</section>
+<section id="posts" class="slide level2">
+<h2>Posts</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<colgroup>
+<col style="width: 1%">
+<col style="width: 98%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">text</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">And toxic masculinity is actually a byproduct of toxic femininity.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Is he working on stuff too? Ask her where she goes to school, what she plans to study, etc. She’ll ask you the same questions in return if she’s interested.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">This is coming from the bitch who once flashed a teacher to distract him so her boyfriend could sneak out of detention. God the bitch used to be so much cooler.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Holy fucking shit dude. Fuck this bitch. Seriously. OP, I wish I could say I feel your pain but I don’t. All I can say is I hope you pull through it all. I fully believe in karma and it is a bigger bitch than this woman.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">People have no problems with a female lead. They got problems with them shoving down bullshit PC/SJW down their throats. Disney already ruined Star Wars Marvel is just next on the list.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="zero-shot-codierung" class="slide level2">
+<h2>Zero-Shot-Codierung</h2>
+<ul>
+<li>Large Language Models (umgangssprachlich oft KI) können verschiedene sprachliche Aufgaben “lösen”, u.a. auch inhaltsanalytische</li>
+<li>da die Modelle dafür nicht extra angepasst werden müssen, spricht man von Zero-Shot-Codierung</li>
+<li>im Gegensatz zu älteren automatischen Verfahren braucht es (fast) keine Umstellung gegenüber manuellem Codieren</li>
+<li>zahlreiche aktuelle Studien untersuchen, ob man manuelle Codierung durch LLM-basierte ersetzen kann</li>
+<li>ob und wie gut man eigene Kategorien mit LLM codieren kann, muss man ausprobieren (und machen wir)</li>
+</ul>
+</section>
+<section id="hausaufgaben" class="slide level2">
+<h2>Hausaufgaben</h2>
+<ul>
+<li><a href="https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html" class="uri">https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html</a> selbständig durcharbeiten</li>
+<li>Hausaufgabe (Abgabe Do, 12h, Moodle)</li>
+<li>Lektüre: <span class="citation" data-cites="tornberg2023">Törnberg (<a href="#/literatur-1" role="doc-biblioref" onclick="">2023</a>)</span></li>
+</ul>
+</section></section>
+<section>
+<section id="fragen" class="title-slide slide level1 center">
+<h1>Fragen?</h1>
+
+</section>
+<section id="literatur-1" class="slide level2 smaller scrollable">
+<h2>Literatur</h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-benoit2009" class="csl-entry" role="listitem">
+Benoit, K., Laver, M., &amp; Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. <em>American Journal of Political Science</em>, <em>53</em>(2), 495–513. <a href="https://doi.org/10.1111/j.1540-5907.2009.00383.x">https://doi.org/10.1111/j.1540-5907.2009.00383.x</a>
+</div>
+<div id="ref-tornberg2023" class="csl-entry" role="listitem">
+Törnberg, P. (2023). How to use llms for text analysis. <em>arXiv preprint arXiv:2307.13106</em>.
+</div>
+</div>
+</section></section>
     </div>
   </div>
 
@@ -570,6 +931,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
