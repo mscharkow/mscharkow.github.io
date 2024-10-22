@@ -1,6 +1,8 @@
 ---
 title: Michael Scharkow
 subtitle: Computational Communication Researcher
+author: ""
+date: ""
 page-layout: full
 format: 
   html:
@@ -16,9 +18,21 @@ listing:
 ---
 
 ## About
+![](ms.jpg){style="float:right;padding:5px;border: 1px solid #ccc;width:200px; margin-left:2em;"}
 
 I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling. 
 
 Check out my CV for a complete list of publications and presentations.
+
+### Contact
+
+Johannes-Gutenberg University Mainz <br/>
+Department of Communication </br>
+Jakob-Welder-Weg 12 </br>
+55128 Mainz <br/>
+Germany
+
+<scharkow@uni-mainz.de>
+
 
 ## Teaching
