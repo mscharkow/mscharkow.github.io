@@ -34,13 +34,9 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 \* = 5-Minuten-Präsentation des Zwischenstands
 
-## Sitzung 1 <a class="bi bi-easel-fill" href="slides.html#1" alt="Folien"></a> {#1} 
-
-
+## Sitzung 1 <a class="bi bi-easel-fill" href="slides.html#/1" alt="Folien"></a> {#1} 
 
 ### Themen 
-
-
 
 -   Einführung, Ablauf, Leistungsanforderungen, Formalia
 -   Definition und Grundlagen Inhaltsanalyse
