@@ -18,14 +18,7 @@
     "href": "ma-datenanalyse/index.html#beschreibung",
     "title": "MA Fortgeschrittene Datenanalyse mit R",
     "section": "Beschreibung",
-    "text": "Beschreibung\nIm Kurs werden eigene Experimente zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.\nDer Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt."
-  },
-  {
-    "objectID": "ma-datenanalyse/index.html#coming-soon",
-    "href": "ma-datenanalyse/index.html#coming-soon",
-    "title": "MA Fortgeschrittene Datenanalyse mit R",
-    "section": "coming soon",
-    "text": "coming soon"
+    "text": "Beschreibung\nZiel der Übung ist die Vermittlung von praktischen Kenntnissen in der fortgeschrittenen Datenanalyse mit R. Behandelt werden lineare Modelle, Längsschnitt- und Multilevel-Modelle sowie explorative und konfirmatorische Faktorenanalyse.\nKurs-Website mit R-Code, Daten und Hausaufgaben"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#lernziele",
