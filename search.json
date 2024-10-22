@@ -18,7 +18,14 @@
     "href": "ma-datenanalyse/index.html#beschreibung",
     "title": "MA Fortgeschrittene Datenanalyse mit R",
     "section": "Beschreibung",
-    "text": "Beschreibung\nZiel der Übung ist die Vermittlung von praktischen Kenntnissen in der fortgeschrittenen Datenanalyse mit R. Behandelt werden lineare Modelle, Längsschnitt- und Multilevel-Modelle sowie explorative und konfirmatorische Faktorenanalyse.\nKurs-Website mit R-Code, Daten und Hausaufgaben"
+    "text": "Beschreibung\nZiel der Übung ist die Vermittlung von praktischen Kenntnissen in der fortgeschrittenen Datenanalyse mit R. Behandelt werden lineare Modelle, Längsschnitt- und Multilevel-Modelle sowie explorative und konfirmatorische Faktorenanalyse."
+  },
+  {
+    "objectID": "ma-datenanalyse/index.html#seminarplan",
+    "href": "ma-datenanalyse/index.html#seminarplan",
+    "title": "MA Fortgeschrittene Datenanalyse mit R",
+    "section": "Seminarplan",
+    "text": "Seminarplan\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n22.10.2024\nR Basics (Blocktermin Fr)\n\n\n2\n29.10.2024\nR Basics (Blocktermin Mo)\n\n\n3\n05.11.2024\nANOVA und Regression\n\n\n4\n12.11.2024\nModerationsanalyse\n\n\n5\n19.11.2024\nMediationsanalyse und Pfadmodelle\n\n\n6\n26.11.2024\nLagged und Cross-Lagged Modelle\n\n\n7\n03.12.2024\nMultilevel-Längsschnittanalyse\n\n\n8\n10.12.2024\nMultilevelmodelle\n\n\n9\n17.12.2024\nWiederholung\n\n\n10\n07.01.2025\nÜbung (keine Sitzung)\n\n\n11\n14.01.2025\nExplorative Faktorenanalyse\n\n\n12\n21.01.2025\nKonfirmatorische Faktorenanalyse\n\n\n13\n28.01.2025\nMessinvarianz\n\n\n14\n04.02.2025\nWiederholung/Übung"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#lernziele",
