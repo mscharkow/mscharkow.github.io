@@ -7,7 +7,6 @@ bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
 ---
 
-
 ```{r}
 source(here::here("funcs.R"))
 start_date = as.Date("2024-10-25")
@@ -34,9 +33,9 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 \* = 5-Minuten-Präsentation des Zwischenstands
 
-## Sitzung 1 <a class="bi bi-easel-fill" href="slides.html#/1" alt="Folien"></a> {#1} 
+## Sitzung 1 <a class="bi bi-easel-fill" href="slides.html#/1" alt="Folien"></a> {#1}
 
-### Themen 
+### Themen
 
 -   Einführung, Ablauf, Leistungsanforderungen, Formalia
 -   Definition und Grundlagen Inhaltsanalyse
@@ -44,7 +43,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 ### Literatur
 
-@benoit2009
+@benoit2009; @rössler2017 [Kap. 1, 2]
 
 ### Aufgabe zur nächsten Sitzung
 
@@ -52,9 +51,37 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 ## Sitzung 2 {#2}
 
+### Themen
+
+- Textcodierung mit Large Language Models
+- Bildcodierung mit multimodalen Modellen
+- Prompting-Strategien für Zero- und Few-Shot-Codierung
+- praktische Tipps mit für die Batch-Codierung mit R und {tidyllm}
+
 ### Literatur
 
-@tornberg2023
+@tornberg2023; @weber2024
+
+### Aufgabe zur nächsten Sitzung
+
+Gruppenbildung und Ideen für Themen und Forschungsfragen
+
+
+## Sitzung 3 {#3}
+
+### Themen
+
+- Vorstellung von Themenideen
+- Herleitung von Forschungsfragen und Hypothesen
+- Begriffsarbeit (semantische und dimensionale Analyse)
+
+### Literatur
+
+@rössler2017 [Kap. 3]
+
+### Aufgabe zur nächsten Sitzung
+
+Forschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren 
 
 ## Literatur
 
