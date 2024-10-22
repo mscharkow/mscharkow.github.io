@@ -1,11 +1,12 @@
 ---
-title: "BA Seminar Inhaltsanalyse"
+title: "BA Inhaltsanalyse"
 subtitle: "Analyse öffentlicher Kommunikation"
 date: 2024-10-01
 title-block-style: default
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
 ---
+
 
 ```{r}
 source(here::here("funcs.R"))
@@ -33,9 +34,31 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 \* = 5-Minuten-Präsentation des Zwischenstands
 
-## Sitzung 1 {#1}
+## Sitzung 1 <a class="bi bi-easel-fill" href="slides.html#1" alt="Folien"></a> {#1} 
 
-TODO.
+
+
+### Themen 
+
+
+
+-   Einführung, Ablauf, Leistungsanforderungen, Formalia
+-   Definition und Grundlagen Inhaltsanalyse
+-   manuelle vs. LLM-basierte Codierung
+
+### Literatur
+
+@benoit2009
+
+### Aufgabe zur nächsten Sitzung
+
+[Zero-Shot-Codierung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html) mit Hausaufgabe
+
+## Sitzung 2 {#2}
+
+### Literatur
+
+@tornberg2023
 
 ## Literatur
 
