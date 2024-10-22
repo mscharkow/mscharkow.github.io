@@ -168,7 +168,7 @@ library(tidyverse)
 
 ## Aufgabe
 
-TODO
+<https://sosci.zdv.uni-mainz.de/ia_btw2021/>
  
   1. Codieren Sie politische TikTok-Inhalte zunächst alleine in verschiedenen Formaten.
   2. Was ist Ihnen beim Codieren aufgefallen? Was war einfach, was schwierig?
