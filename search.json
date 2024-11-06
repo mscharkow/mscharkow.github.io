@@ -193,7 +193,14 @@
     "href": "inhaltsanalyse/slides.html#aufgabe-prompting-strategien",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Aufgabe: Prompting-Strategien",
-    "text": "Aufgabe: Prompting-Strategien\n\nWorin unterscheiden sich Zero-Shot-, Few-Shot- und Chain-of-Thought-Strategien für die Codierung? (vgl. Weber & Reichardt (2024))\nEntwickeln Sie für die Hausaufgabe zur Codierung Studierende je einen Prompt-Typ und testen Sie diese.\n(Wie) funktioniert dies bei der Bildklassifikation?"
+    "text": "Aufgabe: Prompting-Strategien\n\nWorin unterscheiden sich Zero-Shot-, Few-Shot- und Chain-of-Thought-Strategien für die Codierung? (vgl. Weber & Reichardt, 2024)\nEntwickeln Sie für die Hausaufgabe zur Codierung Studierende je einen Prompt-Typ und testen Sie diese.\n(Wie) funktioniert dies bei der Bildklassifikation?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#vor--und-nachteile-der-llm-codierung",
+    "href": "inhaltsanalyse/slides.html#vor--und-nachteile-der-llm-codierung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Vor- und Nachteile der LLM-Codierung",
+    "text": "Vor- und Nachteile der LLM-Codierung\n\nPrompts ähneln manuellen Codieranweisungen (+ etwas Prompt Engineering)\nLLM können Codierentscheidung und Begründungen liefern\nviele verschiedene kommerzielle und freie LLM sind verfügbar, Ensemble Codierung möglich\nnicht alles lässt sich leicht per LLM codieren (z.B. einfach Personen zählen)\nkommerzielle LLM kosten Geld pro Abfrage und haben ggf. Guardrails, die die Codierung verhindern bzw. erschweren\ndie Nutzung von LLM ist datenschutzrechtlich und ethisch bedenklich\nmultimodalle LLM sind aktuell noch sehr neu und ungetestet\nvalidieren, validieren, validieren!"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#aufgabe-codepläne-in-aktueller-forschung",
@@ -214,7 +221,7 @@
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Literatur",
-    "text": "Literatur\n\n\n\n\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106"
+    "text": "Literatur\n\n\n\n\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
   },
   {
     "objectID": "inhaltsanalyse/index.html#beschreibung",
