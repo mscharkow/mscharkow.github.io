@@ -268,11 +268,29 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 
 ![https://openai.com/blog/chatgpt](images/ChatGPT_Diagram.png){fig-align="left"}
 
+
 ## Aufgabe: Prompting-Strategien
 
-- Worin unterscheiden sich Zero-Shot-, Few-Shot- und Chain-of-Thought-Strategien für die Codierung? (vgl. Weber & Reichardt (2024))
+- Worin unterscheiden sich Zero-Shot-, Few-Shot- und Chain-of-Thought-Strategien für die Codierung? [vgl. @weber2024]
 - Entwickeln Sie für die Hausaufgabe zur Codierung *Studierende* je einen Prompt-Typ und testen Sie diese.
 - (Wie) funktioniert dies bei der Bildklassifikation?
+
+
+
+## Vor- und Nachteile der LLM-Codierung
+
+- Prompts ähneln manuellen Codieranweisungen (+ etwas Prompt Engineering)
+- LLM können Codierentscheidung und Begründungen liefern
+- viele verschiedene kommerzielle und freie LLM sind verfügbar, Ensemble Codierung möglich
+- nicht alles lässt sich leicht per LLM codieren (z.B. einfach Personen zählen)
+- kommerzielle LLM kosten Geld pro Abfrage und haben ggf. Guardrails, die die Codierung verhindern bzw. erschweren
+- die Nutzung von LLM ist datenschutzrechtlich und ethisch bedenklich
+- multimodalle LLM sind aktuell noch sehr neu und ungetestet
+- validieren, validieren, validieren!
+
+
+
+
 
 ## Aufgabe: Codepläne in aktueller Forschung
 
