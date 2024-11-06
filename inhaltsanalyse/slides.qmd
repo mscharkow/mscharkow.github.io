@@ -9,7 +9,7 @@ bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
 ---
 
-# Sitzung 1 {#1}
+# Sitzung 1 {#s1}
 
 ```{r}
 library(tidyverse)
@@ -232,10 +232,9 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 
 # Fragen?
 
-# Sitzung 2 {#2}
+# Sitzung 2 {#s2}
 
-
-## Besprechung Hausaufgabe Zero-Shot-Codierung
+## HA Zero-Shot-Codierung
 
 - Wie hat unser Beispielcode funktioniert?
 - Wie haben Sie die Aufgaben gelöst?
