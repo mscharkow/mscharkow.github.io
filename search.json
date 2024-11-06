@@ -147,11 +147,11 @@
     "text": "Hausaufgaben\n\nhttps://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html selbständig durcharbeiten\nHausaufgabe (Abgabe Do, 12h, Moodle)\nLektüre: Törnberg (2023)"
   },
   {
-    "objectID": "inhaltsanalyse/slides.html#besprechung-hausaufgabe-zero-shot-codierung",
-    "href": "inhaltsanalyse/slides.html#besprechung-hausaufgabe-zero-shot-codierung",
+    "objectID": "inhaltsanalyse/slides.html#ha-zero-shot-codierung",
+    "href": "inhaltsanalyse/slides.html#ha-zero-shot-codierung",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
-    "section": "Besprechung Hausaufgabe Zero-Shot-Codierung",
-    "text": "Besprechung Hausaufgabe Zero-Shot-Codierung\n\nWie hat unser Beispielcode funktioniert?\nWie haben Sie die Aufgaben gelöst?\nWie kann man größere Mengen an Codierungen automatisch durchführen?"
+    "section": "HA Zero-Shot-Codierung",
+    "text": "HA Zero-Shot-Codierung\n\nWie hat unser Beispielcode funktioniert?\nWie haben Sie die Aufgaben gelöst?\nWie kann man größere Mengen an Codierungen automatisch durchführen?"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#was-sind-neuronale-netze",
