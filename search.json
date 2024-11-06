@@ -147,6 +147,69 @@
     "text": "Hausaufgaben\n\nhttps://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html selbständig durcharbeiten\nHausaufgabe (Abgabe Do, 12h, Moodle)\nLektüre: Törnberg (2023)"
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#besprechung-hausaufgabe-zero-shot-codierung",
+    "href": "inhaltsanalyse/slides.html#besprechung-hausaufgabe-zero-shot-codierung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Besprechung Hausaufgabe Zero-Shot-Codierung",
+    "text": "Besprechung Hausaufgabe Zero-Shot-Codierung\n\nWie hat unser Beispielcode funktioniert?\nWie haben Sie die Aufgaben gelöst?\nWie kann man größere Mengen an Codierungen automatisch durchführen?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#was-sind-neuronale-netze",
+    "href": "inhaltsanalyse/slides.html#was-sind-neuronale-netze",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Was sind neuronale Netze?",
+    "text": "Was sind neuronale Netze?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#was-sind-transformer-modelle",
+    "href": "inhaltsanalyse/slides.html#was-sind-transformer-modelle",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Was sind Transformer Modelle",
+    "text": "Was sind Transformer Modelle"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe-large-language-models-llm",
+    "href": "inhaltsanalyse/slides.html#aufgabe-large-language-models-llm",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe: Large Language Models (LLM)",
+    "text": "Aufgabe: Large Language Models (LLM)\n\nLesen und besprechen Sie in Kleingruppen https://ig.ft.com/generative-ai/.\nUnter https://huggingface.co/docs/transformers/task_summary werden einige Tasks vorgestellt, die mit LLM bearbeitet werden können. Beschreiben Sie einen Task!\n\n\nWelche Aufgabe wird damit gelöst?\nWelcher Input ist nötig, welcher Output wird geliefert?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#multimodale-embeddings-clip",
+    "href": "inhaltsanalyse/slides.html#multimodale-embeddings-clip",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Multimodale Embeddings: CLIP",
+    "text": "Multimodale Embeddings: CLIP\n\nhttps://openai.com/index/clip/"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#wie-funktioniert-chatgpt",
+    "href": "inhaltsanalyse/slides.html#wie-funktioniert-chatgpt",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Wie funktioniert ChatGPT?",
+    "text": "Wie funktioniert ChatGPT?\n\nhttps://openai.com/blog/chatgpt"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe-prompting-strategien",
+    "href": "inhaltsanalyse/slides.html#aufgabe-prompting-strategien",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe: Prompting-Strategien",
+    "text": "Aufgabe: Prompting-Strategien\n\nWorin unterscheiden sich Zero-Shot-, Few-Shot- und Chain-of-Thought-Strategien für die Codierung? (vgl. Weber & Reichardt (2024))\nEntwickeln Sie für die Hausaufgabe zur Codierung Studierende je einen Prompt-Typ und testen Sie diese.\n(Wie) funktioniert dies bei der Bildklassifikation?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe-codepläne-in-aktueller-forschung",
+    "href": "inhaltsanalyse/slides.html#aufgabe-codepläne-in-aktueller-forschung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe: Codepläne in aktueller Forschung",
+    "text": "Aufgabe: Codepläne in aktueller Forschung\n\nIn Moodle sind 15 Titelseiten plus Codepläne aus aktuelleren Publikationen abgelegt.\nSuchen Sie einen oder mehrere interessante Artikel aus und versuchen probehalber einige oder alle dort codierten Kategorien einmal anzuwenden.\nLaden Sie sich dafür exemplarisch Texte oder Bilder aus dem Internet und codieren Sie diese (a) manuell und (b) mit Hilfe von LLM."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#hausaufgaben-1",
+    "href": "inhaltsanalyse/slides.html#hausaufgaben-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Hausaufgaben",
+    "text": "Hausaufgaben\n\nBilden Sie Arbeitsgruppen (à 4 Personen) und entwickeln Sie erste Themenideen (ca. 1-3 Themen).\nBringen Sie die Themenideen als kurze Pitches samt Forschungsfrage(n) mit."
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
@@ -178,8 +241,8 @@
     "objectID": "inhaltsanalyse/index.html#2",
     "href": "inhaltsanalyse/index.html#2",
     "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 2",
-    "text": "Sitzung 2\n\nThemen\n\nTextcodierung mit Large Language Models\nBildcodierung mit multimodalen Modellen\nPrompting-Strategien für Zero- und Few-Shot-Codierung\npraktische Tipps mit für die Batch-Codierung mit R und {tidyllm}\n\n\n\nLiteratur\nTörnberg (2023); Weber & Reichardt (2024)\n\n\nAufgabe zur nächsten Sitzung\nGruppenbildung und Ideen für Themen und Forschungsfragen"
+    "section": "Sitzung 2 ",
+    "text": "Sitzung 2 \n\nThemen\n\nTextcodierung mit Large Language Models\nBildcodierung mit multimodalen Modellen\nPrompting-Strategien für Zero- und Few-Shot-Codierung\npraktische Tipps mit für die Batch-Codierung mit R und {tidyllm}\n\n\n\nLiteratur\nTörnberg (2023); Weber & Reichardt (2024)\n\n\nAufgabe zur nächsten Sitzung\nGruppenbildung und Ideen für Themen und Forschungsfragen"
   },
   {
     "objectID": "inhaltsanalyse/index.html#3",
