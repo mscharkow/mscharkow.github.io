@@ -49,7 +49,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 [Zero-Shot-Codierung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html) mit Hausaufgabe
 
-## Sitzung 2 {#2}
+## Sitzung 2 <a class="bi bi-easel-fill" href="slides.html#/2" alt="Folien"></a> {#2}
 
 ### Themen
 
