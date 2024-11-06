@@ -232,5 +232,60 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 
 # Fragen?
 
+# Sitzung 2 {#2}
+
+
+## Besprechung Hausaufgabe Zero-Shot-Codierung
+
+- Wie hat unser Beispielcode funktioniert?
+- Wie haben Sie die Aufgaben gelöst?
+- Wie kann man größere Mengen an Codierungen automatisch durchführen?
+
+
+## Was sind neuronale Netze?
+
+{{< video https://www.youtube.com/watch?v=jmmW0F0biz0   height="80%" width="80%" >}}
+
+
+## Was sind Transformer Modelle
+
+{{< video https://www.youtube.com/watch?v=SZorAJ4I-sA&t=51s   height="80%" width="80%" >}}
+
+
+## Aufgabe: Large Language Models (LLM)
+
+1. Lesen und besprechen Sie in Kleingruppen <https://ig.ft.com/generative-ai/>.
+
+2. Unter <https://huggingface.co/docs/transformers/task_summary> werden einige Tasks vorgestellt, die mit LLM bearbeitet werden können. Beschreiben Sie einen Task!
+  - Welche Aufgabe wird damit gelöst?
+  - Welcher Input ist nötig, welcher Output wird geliefert?
+  
+## Multimodale Embeddings: CLIP
+
+![https://openai.com/index/clip/](https://images.ctfassets.net/kftzwdyauwt9/fbc4f633-9ad4-4dc2-3809c22df5e0/0bd2d5abf90d052731538613e4a42668/overview-a.svg){fig-align="left"}
+
+
+## Wie funktioniert ChatGPT?
+
+![https://openai.com/blog/chatgpt](figs/ChatGPT_Diagram.png){fig-align="left"}
+
+## Aufgabe: Prompting-Strategien
+
+- Worin unterscheiden sich Zero-Shot-, Few-Shot- und Chain-of-Thought-Strategien für die Codierung? (vgl. Weber & Reichardt (2024))
+- Entwickeln Sie für die Hausaufgabe zur Codierung *Studierende* je einen Prompt-Typ und testen Sie diese.
+- (Wie) funktioniert dies bei der Bildklassifikation?
+
+## Aufgabe: Codepläne in aktueller Forschung
+
+- In Moodle sind 15 Titelseiten plus Codepläne aus aktuelleren Publikationen abgelegt.
+- Suchen Sie einen oder mehrere interessante Artikel aus und versuchen probehalber einige oder alle dort codierten Kategorien einmal anzuwenden.
+- Laden Sie sich dafür exemplarisch Texte oder Bilder aus dem Internet und codieren Sie diese (a) manuell und (b) mit Hilfe von LLM.
+
+## Hausaufgaben
+
+- Bilden Sie Arbeitsgruppen (à 4 Personen) und entwickeln Sie erste Themenideen (ca. 1-3 Themen).
+- Bringen Sie die Themenideen als kurze Pitches samt Forschungsfrage(n) mit.
+
+# Fragen?
 
 ## Literatur
