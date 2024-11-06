@@ -266,7 +266,7 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 
 ## Wie funktioniert ChatGPT?
 
-![https://openai.com/blog/chatgpt](figs/ChatGPT_Diagram.png){fig-align="left"}
+![https://openai.com/blog/chatgpt](images/ChatGPT_Diagram.png){fig-align="left"}
 
 ## Aufgabe: Prompting-Strategien
 
