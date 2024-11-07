@@ -154,25 +154,11 @@
     "text": "HA Zero-Shot-Codierung\n\nWie hat unser Beispielcode funktioniert?\nWie haben Sie die Aufgaben gelöst?\nWie kann man größere Mengen an Codierungen automatisch durchführen?"
   },
   {
-    "objectID": "inhaltsanalyse/slides.html#was-sind-neuronale-netze",
-    "href": "inhaltsanalyse/slides.html#was-sind-neuronale-netze",
-    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
-    "section": "Was sind neuronale Netze?",
-    "text": "Was sind neuronale Netze?"
-  },
-  {
     "objectID": "inhaltsanalyse/slides.html#was-sind-transformer-modelle",
     "href": "inhaltsanalyse/slides.html#was-sind-transformer-modelle",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Was sind Transformer Modelle",
-    "text": "Was sind Transformer Modelle"
-  },
-  {
-    "objectID": "inhaltsanalyse/slides.html#aufgabe-large-language-models-llm",
-    "href": "inhaltsanalyse/slides.html#aufgabe-large-language-models-llm",
-    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
-    "section": "Aufgabe: Large Language Models (LLM)",
-    "text": "Aufgabe: Large Language Models (LLM)\n\nLesen und besprechen Sie in Kleingruppen https://ig.ft.com/generative-ai/.\nUnter https://huggingface.co/docs/transformers/task_summary werden einige Tasks vorgestellt, die mit LLM bearbeitet werden können. Beschreiben Sie einen Task!\n\n\nWelche Aufgabe wird damit gelöst?\nWelcher Input ist nötig, welcher Output wird geliefert?"
+    "text": "Was sind Transformer Modelle\n\nExplainer: https://ig.ft.com/generative-ai/"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#multimodale-embeddings-clip",
