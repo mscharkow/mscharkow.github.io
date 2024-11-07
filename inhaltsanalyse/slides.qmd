@@ -241,23 +241,13 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 - Wie kann man größere Mengen an Codierungen automatisch durchführen?
 
 
-## Was sind neuronale Netze?
-
-{{< video https://www.youtube.com/watch?v=jmmW0F0biz0   height="80%" width="80%" >}}
-
 
 ## Was sind Transformer Modelle
 
-{{< video https://www.youtube.com/watch?v=SZorAJ4I-sA&t=51s   height="80%" width="80%" >}}
+{{< video https://www.youtube.com/watch?v=SZorAJ4I-sA&t=51s   height="70%" width="70%" >}}
 
+Explainer: <https://ig.ft.com/generative-ai/>
 
-## Aufgabe: Large Language Models (LLM)
-
-1. Lesen und besprechen Sie in Kleingruppen <https://ig.ft.com/generative-ai/>.
-
-2. Unter <https://huggingface.co/docs/transformers/task_summary> werden einige Tasks vorgestellt, die mit LLM bearbeitet werden können. Beschreiben Sie einen Task!
-  - Welche Aufgabe wird damit gelöst?
-  - Welcher Input ist nötig, welcher Output wird geliefert?
   
 ## Multimodale Embeddings: CLIP
 
@@ -274,7 +264,6 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 - Worin unterscheiden sich Zero-Shot-, Few-Shot- und Chain-of-Thought-Strategien für die Codierung? [vgl. @weber2024]
 - Entwickeln Sie für die Hausaufgabe zur Codierung *Studierende* je einen Prompt-Typ und testen Sie diese.
 - (Wie) funktioniert dies bei der Bildklassifikation?
-
 
 
 ## Vor- und Nachteile der LLM-Codierung
