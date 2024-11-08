@@ -240,7 +240,9 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 - Wie haben Sie die Aufgaben gelöst?
 - Wie kann man größere Mengen an Codierungen automatisch durchführen?
 
+## Wie funktioniert ein Neuronales Netz?
 
+![https://medium.com/data-science-365/overview-of-a-neural-networks-learning-process-61690a502fa](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ZXAOUqmlyECgfVa81Sr6Ew.png)
 
 ## Was sind Transformer Modelle
 
