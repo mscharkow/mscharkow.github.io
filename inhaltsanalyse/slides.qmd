@@ -296,4 +296,40 @@ Explainer: <https://ig.ft.com/generative-ai/>
 
 # Fragen?
 
+# Sitzung 3 {#s3}
+
+# Ihre Themenideen
+
+## Noch einmal: Inferenzen
+
+![Früh, 2007](images/inferenz.png){fig-align="left"}
+
+## Was ist eine gute Forschungsfrage?
+
+-   Eine Forschungsfrage ist eine **Frage**!
+-   Eine Forschungsfrage lässt sich empirisch beantworten, am besten mit der eigenen Inhaltsanalyse.
+-   Eine Forschungsfrage ist weder zu allgemein noch zu spezifisch.
+-   Eine Forschungsfrage hat oft eine (implizite oder explizite) Vergleichsdimension.
+
+## Was ist eine gute Hypothese?
+
+-   Eine Hypothese ist empirisch falsifizierbar, und es muss klar sein, wann sie falsifiziert ist.
+-   Eine Hypothese ist klar und widerspruchsfrei formuliert.
+-   Eine Hypothese ist einfach, komplexe Hypothesen sollten in einfache Hypothesen zerlegt werden.
+-   Es ist nicht schlimm, sich widersprechende Hypothesen zu formulieren (H1a vs H1b).
+-   Eine Nullhypothese ist selten eine interessante Hypothese, und oft nicht leicht zu prüfen.
+
+## Begriffsarbeit
+
+![Quelle: @kromrey2016](images/begriffe.png){fig-align="left"}
+
+# Fragen?
+
+## Aufgaben bis nächste Woche
+
+1.  Recherchieren sie relevante Literatur zu ihrem Thema.
+2.  Formulieren sie (eher allgemeine) 1-2 Forschungsfragen.
+3.  Stellen sie 3-5 (eher konkrete) Hypothesen auf (mit Begründung!).
+4.  Unterziehen Sie die für Ihre Studie relevanten Konstrukte einer dimensionalen und semantischen Analyse.
+
 ## Literatur

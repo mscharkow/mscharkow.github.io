@@ -67,7 +67,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 Gruppenbildung und Ideen für Themen und Forschungsfragen
 
 
-## Sitzung 3 {#3}
+## Sitzung 3 <a class="bi bi-easel-fill" href="slides.html#/s3" alt="Folien"></a> {#3}
 
 ### Themen
 
@@ -81,7 +81,8 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 
 ### Aufgabe zur nächsten Sitzung
 
-Forschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren 
+- Forschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren 
+- Gruppen und Verantwortlichkeiten melden
 
 ## Literatur
 
