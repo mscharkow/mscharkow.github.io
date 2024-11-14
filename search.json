@@ -210,11 +210,46 @@
     "text": "Hausaufgaben\n\nBilden Sie Arbeitsgruppen (à 4 Personen) und entwickeln Sie erste Themenideen (ca. 1-3 Themen).\nBringen Sie die Themenideen als kurze Pitches samt Forschungsfrage(n) mit."
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#noch-einmal-inferenzen",
+    "href": "inhaltsanalyse/slides.html#noch-einmal-inferenzen",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Noch einmal: Inferenzen",
+    "text": "Noch einmal: Inferenzen\n\nFrüh, 2007"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#was-ist-eine-gute-forschungsfrage",
+    "href": "inhaltsanalyse/slides.html#was-ist-eine-gute-forschungsfrage",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Was ist eine gute Forschungsfrage?",
+    "text": "Was ist eine gute Forschungsfrage?\n\nEine Forschungsfrage ist eine Frage!\nEine Forschungsfrage lässt sich empirisch beantworten, am besten mit der eigenen Inhaltsanalyse.\nEine Forschungsfrage ist weder zu allgemein noch zu spezifisch.\nEine Forschungsfrage hat oft eine (implizite oder explizite) Vergleichsdimension."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#was-ist-eine-gute-hypothese",
+    "href": "inhaltsanalyse/slides.html#was-ist-eine-gute-hypothese",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Was ist eine gute Hypothese?",
+    "text": "Was ist eine gute Hypothese?\n\nEine Hypothese ist empirisch falsifizierbar, und es muss klar sein, wann sie falsifiziert ist.\nEine Hypothese ist klar und widerspruchsfrei formuliert.\nEine Hypothese ist einfach, komplexe Hypothesen sollten in einfache Hypothesen zerlegt werden.\nEs ist nicht schlimm, sich widersprechende Hypothesen zu formulieren (H1a vs H1b).\nEine Nullhypothese ist selten eine interessante Hypothese, und oft nicht leicht zu prüfen."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#begriffsarbeit",
+    "href": "inhaltsanalyse/slides.html#begriffsarbeit",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Begriffsarbeit",
+    "text": "Begriffsarbeit\n\nQuelle: Kromrey et al. (2016)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgaben-bis-nächste-woche",
+    "href": "inhaltsanalyse/slides.html#aufgaben-bis-nächste-woche",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgaben bis nächste Woche",
+    "text": "Aufgaben bis nächste Woche\n\nRecherchieren sie relevante Literatur zu ihrem Thema.\nFormulieren sie (eher allgemeine) 1-2 Forschungsfragen.\nStellen sie 3-5 (eher konkrete) Hypothesen auf (mit Begründung!).\nUnterziehen Sie die für Ihre Studie relevanten Konstrukte einer dimensionalen und semantischen Analyse."
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Literatur",
-    "text": "Literatur\n\n\n\n\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
+    "text": "Literatur\n\n\n\n\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nKromrey, H., Roose, J., & Strübing, J. (2016). Empirische Sozialforschung: Modelle und Methoden der standardisierten Datenerhebung und Datenauswertung (Bd. 1040). Utb.\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
   },
   {
     "objectID": "inhaltsanalyse/index.html#beschreibung",
@@ -248,8 +283,8 @@
     "objectID": "inhaltsanalyse/index.html#3",
     "href": "inhaltsanalyse/index.html#3",
     "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 3",
-    "text": "Sitzung 3\n\nThemen\n\nVorstellung von Themenideen\nHerleitung von Forschungsfragen und Hypothesen\nBegriffsarbeit (semantische und dimensionale Analyse)\n\n\n\nLiteratur\nRössler (2017, Kapitel 3)\n\n\nAufgabe zur nächsten Sitzung\nForschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren"
+    "section": "Sitzung 3 ",
+    "text": "Sitzung 3 \n\nThemen\n\nVorstellung von Themenideen\nHerleitung von Forschungsfragen und Hypothesen\nBegriffsarbeit (semantische und dimensionale Analyse)\n\n\n\nLiteratur\nRössler (2017, Kapitel 3)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren\nGruppen und Verantwortlichkeiten melden"
   },
   {
     "objectID": "inhaltsanalyse/index.html#literatur-3",
