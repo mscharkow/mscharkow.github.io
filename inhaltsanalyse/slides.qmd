@@ -310,6 +310,7 @@ Explainer: <https://ig.ft.com/generative-ai/>
 -   Eine Forschungsfrage lässt sich empirisch beantworten, am besten mit der eigenen Inhaltsanalyse.
 -   Eine Forschungsfrage ist weder zu allgemein noch zu spezifisch.
 -   Eine Forschungsfrage hat oft eine (implizite oder explizite) Vergleichsdimension.
+-   Inhaltliche und methodische Forschungsfragen sind gleich relevant.
 
 ## Was ist eine gute Hypothese?
 
@@ -318,6 +319,13 @@ Explainer: <https://ig.ft.com/generative-ai/>
 -   Eine Hypothese ist einfach, komplexe Hypothesen sollten in einfache Hypothesen zerlegt werden.
 -   Es ist nicht schlimm, sich widersprechende Hypothesen zu formulieren (H1a vs H1b).
 -   Eine Nullhypothese ist selten eine interessante Hypothese, und oft nicht leicht zu prüfen.
+
+## Woher bekommt man gute Hypothesen?
+
+  - existierende Theorien mit klaren Annahmen
+  - existierende empirische Befunde (auch bei mehrdeutiger Ergebnislage)
+  - eigene Herleitung aus plausiblen, begründeten Annahmen
+  - nicht: 3 Sätze Alltagserfahrung
 
 ## Begriffsarbeit
 
