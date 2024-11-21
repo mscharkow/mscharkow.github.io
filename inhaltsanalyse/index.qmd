@@ -85,7 +85,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Gruppen und Verantwortlichkeiten melden
 
 
-## Sitzung 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Folien"></a> {#3}
+## Sitzung 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Folien"></a> {#4}
 
 ### Themen
 
