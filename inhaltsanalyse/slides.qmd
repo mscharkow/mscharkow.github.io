@@ -340,4 +340,102 @@ Explainer: <https://ig.ft.com/generative-ai/>
 3.  Stellen sie 3-5 (eher konkrete) Hypothesen auf (mit Begründung!).
 4.  Unterziehen Sie die für Ihre Studie relevanten Konstrukte einer dimensionalen und semantischen Analyse.
 
+# Forschungsdesign und Stichprobe {#s4}
+
+# 5-Minuten Präsentationen
+
+## Forschungsdesign
+
+-   die Grundlagen fast aller empirischen Untersuchungen ist der Vergleich
+-   bei der Inhaltsanalyse typische Vergleiche:
+    -   verschiedene Medienangebote oder Plattformen
+    -   verschiedene Kommunikatoren
+    -   verschiedene Messzeitpunkte
+-   mehr als zwei Vergleichsdimensionen machen die Analyse und Ergebnisdarstellung oft komplex
+
+## Einheiten der Inhaltsanalyse
+
+-   Auswahleinheit
+-   Untersuchungseinheit
+-   Analyseeinheit
+-   Codiereinheit
+-   Kontexteinheit
+
+## Auswahl vs. Analyseeinheit
+
+### Auswahleinheit
+
+-   alle vorliegende Materialen, die aus dem gesamten Spektrum verfügbaren Medienmaterials für die Untersuchung ausgewählt werden
+    -   Beispiel: Facebook-Posts der IfP-Seite (inkl. dazugehöriger Kommentare)
+
+### Analyseeinheit
+
+-   Einheit, auf die man sich bei der Interpretation beziehen will und für die ein Codebogen angelegt wird
+    -   z.B. Beitrag, Foto, Absatz oder Aussage
+
+## Analyseeinheit: Aussage oder Beitrag?
+
+### Beitrag
+
+-   weniger aufwändig, aber ungenauer
+-   entspricht eher dem Verständnis der Rezipienten, weil sie aller Wahrscheinlichkeit nicht jede Aussage wahrnehmen und behalten
+
+### Aussage
+
+-   sehr aufwändig, aber ggf. genauer
+-   ggf. enthalten Beiträge unterschiedliche Aussagen, die man berücksichtigen will
+-   Herausforderung: reliable Identifikation derselben Aussagen
+
+## Stichprobenziehung
+
+### Grundgesamtheit
+
+-   Alle Botschaften (Artikel, Beiträge usw.), über die die Studie etwas aussagen soll
+-   Auswahl der Grundgesamtheit setzt sich zusammen aus Auswahl der Medien und Auswahl des Untersuchungszeitraums
+
+### Auswahlverfahren bei der Stichprobenbildung
+
+-   Vollerhebung (alle Einheiten)
+-   Zufallsauswahl (z.B. mehrstufig)
+-   nicht zufallsgesteuert (willkürliche, typische Fälle)
+
+## Stichprobenpraxis
+
+-   oft werden Inhalte in einer mehrstufigen Auswahl gezogen
+-   nicht auf allen Stufen ist derselbe Auswahlmechnismus nötig oder sinnvoll
+-   Beispiel:
+    1.  Auswahl von Politikeraccounts auf Instagram (gezielte Auswahl)
+    2.  Auswahl von 100 zufälligen Beiträgen aus 2019 (einfache Zufallsstichprobe)
+    3.  Auswahl jedes 5. Nutzerkommentars (bis zu 20) (systematsche Zufallsstichprobe)
+
+## Stichproben und Inferenzschlüsse
+
+-   die Auswahl der Untersuchungseinheiten bestimmt, welche Inferenzschlüsse man ziehen kann
+-   streng genommen sind statistische Inferenzen nur für Zufallsstichproben möglich
+-   Für welche zusätzlichen (unbekannten) Untersuchungseinheiten können wir Voraussagen treffen?
+-   Beispiel:
+    -   Sie finden stat. signifikante Unterschiede zwischen Posts der offiziellen SPD- und FDP-Twitter-Accounts im Oktober 2019
+    -   Auf was beziehen sich Ihre Inferenzen?
+
+## Stichprobenumfang
+
+-   je größer die Stichprobe, desto präziser die Schätzung
+-   Stichprobenumfang hat **nichts** mit Repräsentativität zu tun
+
+## Beschaffung des Materials
+
+-   Woher bekomme ich die Inhalte?
+-   technische Schwierigkeiten, z.B. zuverlässiges Speichern der Inhalte
+-   rechtliche Schwierigkeiten, z.B. Verbot in Terms of Services
+-   Welche Teile (Text, Bild, Video, etc.) des Beitrags werden zur Codierung benötigt?
+-   Kann ich die Inhalte automatisch speichern und verarbeiten?
+
+## Aufgaben bis zur nächsten Sitzung
+
+1.  Finalisieren Sie die Forschungsfragen und Hypothesen.
+3.  Diskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.
+4.  Definieren Sie Untersuchungseinheit(en) und Grundgesamtheit.
+5.  Entwickeln Sie einen konzeptionell angemessenen Stichprobenplan.
+6.  Überlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann.
+
 ## Literatur
