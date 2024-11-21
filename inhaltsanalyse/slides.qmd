@@ -432,6 +432,12 @@ Explainer: <https://ig.ft.com/generative-ai/>
 
 ## Aufgaben bis zur nächsten Sitzung
 
+1. Lesen Sie [Datenerhebung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html) 
+2. Lösen Sie die Hausaufgaben in R
+
+
+## Aufgaben bis zur übernächsten Sitzung
+
 1.  Finalisieren Sie die Forschungsfragen und Hypothesen.
 3.  Diskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.
 4.  Definieren Sie Untersuchungseinheit(en) und Grundgesamtheit.

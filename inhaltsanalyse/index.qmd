@@ -99,8 +99,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 
 ### Aufgabe zur nächsten Sitzung
 
-- Grundgesamtheit und Stichprobe definieren
-- praktische Stichprobenziehung planen
+[Datenerhebung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html) mit Hausaufgabe
 
 ## Literatur
 
