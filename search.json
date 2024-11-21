@@ -319,7 +319,14 @@
     "href": "inhaltsanalyse/slides.html#aufgaben-bis-zur-nächsten-sitzung",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Aufgaben bis zur nächsten Sitzung",
-    "text": "Aufgaben bis zur nächsten Sitzung\n\nFinalisieren Sie die Forschungsfragen und Hypothesen.\nDiskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.\nDefinieren Sie Untersuchungseinheit(en) und Grundgesamtheit.\nEntwickeln Sie einen konzeptionell angemessenen Stichprobenplan.\nÜberlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann."
+    "text": "Aufgaben bis zur nächsten Sitzung\n\nLesen Sie Datenerhebung in R\nLösen Sie die Hausaufgaben in R"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgaben-bis-zur-übernächsten-sitzung",
+    "href": "inhaltsanalyse/slides.html#aufgaben-bis-zur-übernächsten-sitzung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgaben bis zur übernächsten Sitzung",
+    "text": "Aufgaben bis zur übernächsten Sitzung\n\nFinalisieren Sie die Forschungsfragen und Hypothesen.\nDiskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.\nDefinieren Sie Untersuchungseinheit(en) und Grundgesamtheit.\nEntwickeln Sie einen konzeptionell angemessenen Stichprobenplan.\nÜberlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann."
   },
   {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
@@ -360,8 +367,15 @@
     "objectID": "inhaltsanalyse/index.html#3",
     "href": "inhaltsanalyse/index.html#3",
     "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 3 ",
+    "text": "Sitzung 3 \n\nThemen\n\nVorstellung von Themenideen\nHerleitung von Forschungsfragen und Hypothesen\nBegriffsarbeit (semantische und dimensionale Analyse)\n\n\n\nLiteratur\nRössler (2017, Kapitel 3)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren\nGruppen und Verantwortlichkeiten melden"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#4",
+    "href": "inhaltsanalyse/index.html#4",
+    "title": "BA Inhaltsanalyse",
     "section": "Sitzung 4 ",
-    "text": "Sitzung 4 \n\nThemen\n\nVorstellung der Forschungsfragen und Hypothesen\nStudiendesign bei Inhaltsanalysen\nStichproben und Untersuchungseinheiten\n\n\n\nLiteratur\nRössler (2017, Kapitel 4)\n\n\nAufgabe zur nächsten Sitzung\n\nGrundgesamtheit und Stichprobe definieren\npraktische Stichprobenziehung planen"
+    "text": "Sitzung 4 \n\nThemen\n\nVorstellung der Forschungsfragen und Hypothesen\nStudiendesign bei Inhaltsanalysen\nStichproben und Untersuchungseinheiten\n\n\n\nLiteratur\nRössler (2017, Kapitel 4)\n\n\nAufgabe zur nächsten Sitzung\nDatenerhebung in R mit Hausaufgabe"
   },
   {
     "objectID": "inhaltsanalyse/index.html#literatur-4",
