@@ -252,6 +252,76 @@
     "text": "Aufgaben bis nächste Woche\n\nRecherchieren sie relevante Literatur zu ihrem Thema.\nFormulieren sie (eher allgemeine) 1-2 Forschungsfragen.\nStellen sie 3-5 (eher konkrete) Hypothesen auf (mit Begründung!).\nUnterziehen Sie die für Ihre Studie relevanten Konstrukte einer dimensionalen und semantischen Analyse."
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#forschungsdesign",
+    "href": "inhaltsanalyse/slides.html#forschungsdesign",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Forschungsdesign",
+    "text": "Forschungsdesign\n\ndie Grundlagen fast aller empirischen Untersuchungen ist der Vergleich\nbei der Inhaltsanalyse typische Vergleiche:\n\nverschiedene Medienangebote oder Plattformen\nverschiedene Kommunikatoren\nverschiedene Messzeitpunkte\n\nmehr als zwei Vergleichsdimensionen machen die Analyse und Ergebnisdarstellung oft komplex"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#einheiten-der-inhaltsanalyse",
+    "href": "inhaltsanalyse/slides.html#einheiten-der-inhaltsanalyse",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Einheiten der Inhaltsanalyse",
+    "text": "Einheiten der Inhaltsanalyse\n\nAuswahleinheit\nUntersuchungseinheit\nAnalyseeinheit\nCodiereinheit\nKontexteinheit"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#auswahl-vs.-analyseeinheit",
+    "href": "inhaltsanalyse/slides.html#auswahl-vs.-analyseeinheit",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Auswahl vs. Analyseeinheit",
+    "text": "Auswahl vs. Analyseeinheit\nAuswahleinheit\n\nalle vorliegende Materialen, die aus dem gesamten Spektrum verfügbaren Medienmaterials für die Untersuchung ausgewählt werden\n\nBeispiel: Facebook-Posts der IfP-Seite (inkl. dazugehöriger Kommentare)\n\n\nAnalyseeinheit\n\nEinheit, auf die man sich bei der Interpretation beziehen will und für die ein Codebogen angelegt wird\n\nz.B. Beitrag, Foto, Absatz oder Aussage"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#analyseeinheit-aussage-oder-beitrag",
+    "href": "inhaltsanalyse/slides.html#analyseeinheit-aussage-oder-beitrag",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Analyseeinheit: Aussage oder Beitrag?",
+    "text": "Analyseeinheit: Aussage oder Beitrag?\nBeitrag\n\nweniger aufwändig, aber ungenauer\nentspricht eher dem Verständnis der Rezipienten, weil sie aller Wahrscheinlichkeit nicht jede Aussage wahrnehmen und behalten\n\nAussage\n\nsehr aufwändig, aber ggf. genauer\nggf. enthalten Beiträge unterschiedliche Aussagen, die man berücksichtigen will\nHerausforderung: reliable Identifikation derselben Aussagen"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#stichprobenziehung",
+    "href": "inhaltsanalyse/slides.html#stichprobenziehung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Stichprobenziehung",
+    "text": "Stichprobenziehung\nGrundgesamtheit\n\nAlle Botschaften (Artikel, Beiträge usw.), über die die Studie etwas aussagen soll\nAuswahl der Grundgesamtheit setzt sich zusammen aus Auswahl der Medien und Auswahl des Untersuchungszeitraums\n\nAuswahlverfahren bei der Stichprobenbildung\n\nVollerhebung (alle Einheiten)\nZufallsauswahl (z.B. mehrstufig)\nnicht zufallsgesteuert (willkürliche, typische Fälle)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#stichprobenpraxis",
+    "href": "inhaltsanalyse/slides.html#stichprobenpraxis",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Stichprobenpraxis",
+    "text": "Stichprobenpraxis\n\noft werden Inhalte in einer mehrstufigen Auswahl gezogen\nnicht auf allen Stufen ist derselbe Auswahlmechnismus nötig oder sinnvoll\nBeispiel:\n\nAuswahl von Politikeraccounts auf Instagram (gezielte Auswahl)\nAuswahl von 100 zufälligen Beiträgen aus 2019 (einfache Zufallsstichprobe)\nAuswahl jedes 5. Nutzerkommentars (bis zu 20) (systematsche Zufallsstichprobe)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#stichproben-und-inferenzschlüsse",
+    "href": "inhaltsanalyse/slides.html#stichproben-und-inferenzschlüsse",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Stichproben und Inferenzschlüsse",
+    "text": "Stichproben und Inferenzschlüsse\n\ndie Auswahl der Untersuchungseinheiten bestimmt, welche Inferenzschlüsse man ziehen kann\nstreng genommen sind statistische Inferenzen nur für Zufallsstichproben möglich\nFür welche zusätzlichen (unbekannten) Untersuchungseinheiten können wir Voraussagen treffen?\nBeispiel:\n\nSie finden stat. signifikante Unterschiede zwischen Posts der offiziellen SPD- und FDP-Twitter-Accounts im Oktober 2019\nAuf was beziehen sich Ihre Inferenzen?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#stichprobenumfang",
+    "href": "inhaltsanalyse/slides.html#stichprobenumfang",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Stichprobenumfang",
+    "text": "Stichprobenumfang\n\nje größer die Stichprobe, desto präziser die Schätzung\nStichprobenumfang hat nichts mit Repräsentativität zu tun"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#beschaffung-des-materials",
+    "href": "inhaltsanalyse/slides.html#beschaffung-des-materials",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Beschaffung des Materials",
+    "text": "Beschaffung des Materials\n\nWoher bekomme ich die Inhalte?\ntechnische Schwierigkeiten, z.B. zuverlässiges Speichern der Inhalte\nrechtliche Schwierigkeiten, z.B. Verbot in Terms of Services\nWelche Teile (Text, Bild, Video, etc.) des Beitrags werden zur Codierung benötigt?\nKann ich die Inhalte automatisch speichern und verarbeiten?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgaben-bis-zur-nächsten-sitzung",
+    "href": "inhaltsanalyse/slides.html#aufgaben-bis-zur-nächsten-sitzung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgaben bis zur nächsten Sitzung",
+    "text": "Aufgaben bis zur nächsten Sitzung\n\nFinalisieren Sie die Forschungsfragen und Hypothesen.\nDiskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.\nDefinieren Sie Untersuchungseinheit(en) und Grundgesamtheit.\nEntwickeln Sie einen konzeptionell angemessenen Stichprobenplan.\nÜberlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann."
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
@@ -290,12 +360,12 @@
     "objectID": "inhaltsanalyse/index.html#3",
     "href": "inhaltsanalyse/index.html#3",
     "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 3 ",
-    "text": "Sitzung 3 \n\nThemen\n\nVorstellung von Themenideen\nHerleitung von Forschungsfragen und Hypothesen\nBegriffsarbeit (semantische und dimensionale Analyse)\n\n\n\nLiteratur\nRössler (2017, Kapitel 3)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren\nGruppen und Verantwortlichkeiten melden"
+    "section": "Sitzung 4 ",
+    "text": "Sitzung 4 \n\nThemen\n\nVorstellung der Forschungsfragen und Hypothesen\nStudiendesign bei Inhaltsanalysen\nStichproben und Untersuchungseinheiten\n\n\n\nLiteratur\nRössler (2017, Kapitel 4)\n\n\nAufgabe zur nächsten Sitzung\n\nGrundgesamtheit und Stichprobe definieren\npraktische Stichprobenziehung planen"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#literatur-3",
-    "href": "inhaltsanalyse/index.html#literatur-3",
+    "objectID": "inhaltsanalyse/index.html#literatur-4",
+    "href": "inhaltsanalyse/index.html#literatur-4",
     "title": "BA Inhaltsanalyse",
     "section": "Literatur",
     "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
