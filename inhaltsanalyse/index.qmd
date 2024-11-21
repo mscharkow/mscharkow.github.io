@@ -84,6 +84,24 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Forschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren 
 - Gruppen und Verantwortlichkeiten melden
 
+
+## Sitzung 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Folien"></a> {#3}
+
+### Themen
+
+- Vorstellung der Forschungsfragen und Hypothesen
+- Studiendesign bei Inhaltsanalysen
+- Stichproben und Untersuchungseinheiten
+
+### Literatur
+
+@rössler2017 [Kap. 4]
+
+### Aufgabe zur nächsten Sitzung
+
+- Grundgesamtheit und Stichprobe definieren
+- praktische Stichprobenziehung planen
+
 ## Literatur
 
 ::: {#refs}
