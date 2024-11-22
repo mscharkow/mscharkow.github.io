@@ -99,7 +99,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 
 ### Aufgabe zur nächsten Sitzung
 
-[Datenerhebung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html) mit Hausaufgabe
+[Datenerhebung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html) mit Hausaufgaben 1 und 2
 
 ## Literatur
 
