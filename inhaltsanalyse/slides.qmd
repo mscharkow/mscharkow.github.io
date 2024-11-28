@@ -445,4 +445,122 @@ Explainer: <https://ig.ft.com/generative-ai/>
 5.  Entwickeln Sie einen konzeptionell angemessenen Stichprobenplan.
 6.  Überlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann.
 
+# Sitzung 5 {#s5}
+
+## Erhebung von Inhalten für Inhaltsanalysen
+
+-   sehr viele Text- und Bild-Inhalte sind digital (und online) vorhanden, aber Zugang für wissenschaftliche Zwecke oft problembehaftet
+-   Problem 1: Vollständigkeit, z.B. durch selektive Rechtevergabe oder technische Zugangsbarrieren im Archiv
+-   Problem 2: Rechtslage/Copyright, wobei Forschung und Lehre stark priviligiert sind
+-   Problem 3: Ethische Fragen, etwa ob Individuen Schaden bei der Erhebung ersteht oder Zustimmung der Betroffenen vorliegt
+-   Problem 4: Praktische und methodische Fragen, etwa wie man möglichst zuverlässig Inhalte erheben kann
+
+## Online-Archive traditioneller Medien
+
+-   seitens der Anbieter, z.B. SPIEGEL oder ZEIT Archiv, Tagesschau Sendungsarchiv
+-   kommerzielle Datenbanken, z.B. LexisNexis oder Factiva
+-   GDELT (Global Database of Events, Language and Tone) und Mediacloud als riesige, nicht-kommerzielle Datenbanken (ohne Volltexte)
+-   NewsAPI als kommerzielle Datenbank mit einfachem Zugriff, aber limitiertem (kostenlosen) Zugang
+
+## Social Media Plattformen
+
+-   fast alle großen Social Media Plattformen mit eigenen durchsuchbaren Archiven
+-   hohe technische Hürden gegen automatisierte Erhebung im großen Stil (Mastodon \> TikTok \> Facebook/Instagram)
+-   hohes Risiko, dass gerade noch funktionierende Zugänge kurzfristig nicht verfügbar sind
+-   Alternative zur anbieterseitigen Erhebung: Data Donation
+
+## Mobile Apps und andere geschlossene Systeme
+
+-   technisch extrem schwierig zu erheben durch Sandboxing auf Android/iOS
+-   Alternative 1: Überwachung und Mitschnitt von Netzwerk-Traffic
+-   Alternative 2: Data Donations von NutzerInnen, z.B. in Form von Screenshots (u.a. Screenome Project)
+
+## Datenerhebung mit R
+
+Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
+
+1.  maschinenlesbaren Dateien direkt aus dem WWW einlesen (z.B. CSV-Files)
+2.  fertige R-Pakete für einzelne Plattformen/Anbieter verwenden
+3.  über API (Application Programming Interface) halb-standardisierte Daten erhalten
+4.  über Web-Scraping HTML-Inhalte von Websites herunterladen und verarbeiten
+5.  über ferngesteuerte Browser Inhalte erheben oder Screenshots erstellen
+6.  NutzerInnen um Datenspenden bitten
+
+## Was ist eine API?
+
+- Austausch maschinenlesbarer Daten zwischen verschiedenen Programmen/Computern
+- Formate sind standardisiert (z.B. XML oder JSON), Inhalte variieren
+- Web-APIs nutzen die gleichen Protokolle wie Browser, aber liefern anderen Datenstrukturen
+- oft nutzen Plattformen für ihre eigenen (Mobil-) Apps ebenfalls APIs
+- mit speziellen R-Paketen können diese API-Daten wieder in R-Objekte wie z.B. Datenframes umgewandelt werden
+
+
+## Beispiel JSON
+
+<https://api.breakingbadquotes.xyz/v1/quotes>
+
+```{r, echo = F}
+a = read_lines("https://api.breakingbadquotes.xyz/v1/quotes") 
+a |> jsonlite::prettify()
+```
+
+## Workflow
+
+1.  Datenquelle finden (Website, Feed, API)
+2.  relevanten Ausgangspunkt finden (Suchanfrage, Accountname, etc.)
+3.  Daten herunterladen
+4.  Daten filtern und auswählen
+5.  Daten in ein standardisiertes Format für die Analyse bringen
+6.  (Daten quick & dirty auswerten oder visualisieren)
+
+## Buchempfehlungen {layout-ncol="3"}
+
+![](https://medien.umbreitkatalog.de/bildzentrale_original/978/365/840/1702.jpg){height="600px" }
+![](https://media.springernature.com/full/springer-static/cover-hires/book/978-3-658-37747-2?as=png){height="600px" }
+![](https://media.wiley.com/product_data/coverImage300/39/11196802/1119680239.jpg){height="600px" } 
+
+
+## CLI-Tools in Python
+
+- für spezifische Aufgaben gibt es zahlreiche Tools, z.B.
+- Videos herunterladen - `youtube-dlp`
+- Audio transkribieren - `whisper-ctranslate2`
+- Videos in Einzelbilder zerlegen - `vcsi`
+- Python ist auf Mac und Linux-Systemen installiert, unter Windows kann es nachinstalliert werden
+- Installation der einzelnen Pakete über `pip install <tool>`
+
+
+## Aufgabe 1
+
+ - Installieren Sie das CLI-Tool youtube-dlp und laden Sie Videos und Metadaten eines TikTok-Kanals herunter.
+ - Importieren Sie die Daten in R. Welche Meta-Daten werden gesammelt?
+
+
+## Zeeschuimer-Datenspende
+
+- Firefox-Erweiterung, die beim Surfen auf bestimmten Plattformen die angezeigten Inhalte und deren Metadaten speichert
+- Export als `ndjson`-Datei, die man mit R einlesen kann
+- vor allem für Instagram und ggf. auch TikTok interessant
+- sehr umfangreiche Meta-Daten, aber etwas unübersichtlich
+
+## Aufgabe 2
+
+- Laden Sie mit Zeeschuimer Daten von Instagram oder TikTok herunter.
+- Importieren Sie die Daten in R.
+- Werten Sie die Daten ein wenig aus.
+
+## Aufgabe 3
+
+- Überlegen Sie, welche Online-Daten Sie für Ihr Projekt wie erheben wollen.
+- Welche weiteren Schritte sind nötig (Transkription, Bildzerlegung, etc.)?
+- Erstellen Sie eine Datenpipeline auf dem Papier, die wir dann ggf. automatisieren können.
+
+## Aufgaben bis zur nächsten Sitzung
+
+1.  Finalisieren Sie die Forschungsfragen und Hypothesen.
+3.  Diskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.
+4.  Definieren Sie Untersuchungseinheit(en) und Grundgesamtheit.
+5.  Entwickeln Sie einen konzeptionell angemessenen Stichprobenplan.
+6.  Überlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann.
+
 ## Literatur
