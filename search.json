@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Shut the f*ck up and let me die in peace.\",\n        \"author\": \"Mike Ehrmantraut\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I am the man that I am son, and there's plenty that I would change about that but, here we are and this is just what it is.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -483,11 +483,11 @@
     "text": "Sitzung 4 \n\nThemen\n\nVorstellung der Forschungsfragen und Hypothesen\nStudiendesign bei Inhaltsanalysen\nStichproben und Untersuchungseinheiten\n\n\n\nLiteratur\nRössler (2017, Kapitel 4)\n\n\nAufgabe zur nächsten Sitzung\nDatenerhebung in R mit Hausaufgaben 1 und 2"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#sitzung-4",
-    "href": "inhaltsanalyse/index.html#sitzung-4",
+    "objectID": "inhaltsanalyse/index.html#sitzung-5",
+    "href": "inhaltsanalyse/index.html#sitzung-5",
     "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 4 ",
-    "text": "Sitzung 4 \n\nThemen\n\nErhebung von Online-Inhalten in R\nNutzung von CLI-Tools für Datenerhebung und -verarbeitung\n\n\n\nLiteratur\nHaim (2023, Kapitel 5 und 6)"
+    "section": "Sitzung 5 ",
+    "text": "Sitzung 5 \n\nThemen\n\nErhebung von Online-Inhalten in R\nNutzung von CLI-Tools für Datenerhebung und -verarbeitung\n\n\n\nLiteratur\nHaim (2023, Kapitel 5 und 6)"
   },
   {
     "objectID": "inhaltsanalyse/index.html#literatur-5",
