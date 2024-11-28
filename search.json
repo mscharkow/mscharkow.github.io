@@ -329,11 +329,116 @@
     "text": "Aufgaben bis zur übernächsten Sitzung\n\nFinalisieren Sie die Forschungsfragen und Hypothesen.\nDiskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.\nDefinieren Sie Untersuchungseinheit(en) und Grundgesamtheit.\nEntwickeln Sie einen konzeptionell angemessenen Stichprobenplan.\nÜberlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann."
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#erhebung-von-inhalten-für-inhaltsanalysen",
+    "href": "inhaltsanalyse/slides.html#erhebung-von-inhalten-für-inhaltsanalysen",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Erhebung von Inhalten für Inhaltsanalysen",
+    "text": "Erhebung von Inhalten für Inhaltsanalysen\n\nsehr viele Text- und Bild-Inhalte sind digital (und online) vorhanden, aber Zugang für wissenschaftliche Zwecke oft problembehaftet\nProblem 1: Vollständigkeit, z.B. durch selektive Rechtevergabe oder technische Zugangsbarrieren im Archiv\nProblem 2: Rechtslage/Copyright, wobei Forschung und Lehre stark priviligiert sind\nProblem 3: Ethische Fragen, etwa ob Individuen Schaden bei der Erhebung ersteht oder Zustimmung der Betroffenen vorliegt\nProblem 4: Praktische und methodische Fragen, etwa wie man möglichst zuverlässig Inhalte erheben kann"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#online-archive-traditioneller-medien",
+    "href": "inhaltsanalyse/slides.html#online-archive-traditioneller-medien",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Online-Archive traditioneller Medien",
+    "text": "Online-Archive traditioneller Medien\n\nseitens der Anbieter, z.B. SPIEGEL oder ZEIT Archiv, Tagesschau Sendungsarchiv\nkommerzielle Datenbanken, z.B. LexisNexis oder Factiva\nGDELT (Global Database of Events, Language and Tone) und Mediacloud als riesige, nicht-kommerzielle Datenbanken (ohne Volltexte)\nNewsAPI als kommerzielle Datenbank mit einfachem Zugriff, aber limitiertem (kostenlosen) Zugang"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#social-media-plattformen",
+    "href": "inhaltsanalyse/slides.html#social-media-plattformen",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Social Media Plattformen",
+    "text": "Social Media Plattformen\n\nfast alle großen Social Media Plattformen mit eigenen durchsuchbaren Archiven\nhohe technische Hürden gegen automatisierte Erhebung im großen Stil (Mastodon &gt; TikTok &gt; Facebook/Instagram)\nhohes Risiko, dass gerade noch funktionierende Zugänge kurzfristig nicht verfügbar sind\nAlternative zur anbieterseitigen Erhebung: Data Donation"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#mobile-apps-und-andere-geschlossene-systeme",
+    "href": "inhaltsanalyse/slides.html#mobile-apps-und-andere-geschlossene-systeme",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Mobile Apps und andere geschlossene Systeme",
+    "text": "Mobile Apps und andere geschlossene Systeme\n\ntechnisch extrem schwierig zu erheben durch Sandboxing auf Android/iOS\nAlternative 1: Überwachung und Mitschnitt von Netzwerk-Traffic\nAlternative 2: Data Donations von NutzerInnen, z.B. in Form von Screenshots (u.a. Screenome Project)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#datenerhebung-mit-r",
+    "href": "inhaltsanalyse/slides.html#datenerhebung-mit-r",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Datenerhebung mit R",
+    "text": "Datenerhebung mit R\nMöglichkeiten, aufsteigend vom leichtesten zum schwierigsten\n\nmaschinenlesbaren Dateien direkt aus dem WWW einlesen (z.B. CSV-Files)\nfertige R-Pakete für einzelne Plattformen/Anbieter verwenden\nüber API (Application Programming Interface) halb-standardisierte Daten erhalten\nüber Web-Scraping HTML-Inhalte von Websites herunterladen und verarbeiten\nüber ferngesteuerte Browser Inhalte erheben oder Screenshots erstellen\nNutzerInnen um Datenspenden bitten"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#was-ist-eine-api",
+    "href": "inhaltsanalyse/slides.html#was-ist-eine-api",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Was ist eine API?",
+    "text": "Was ist eine API?\n\nAustausch maschinenlesbarer Daten zwischen verschiedenen Programmen/Computern\nFormate sind standardisiert (z.B. XML oder JSON), Inhalte variieren\nWeb-APIs nutzen die gleichen Protokolle wie Browser, aber liefern anderen Datenstrukturen\noft nutzen Plattformen für ihre eigenen (Mobil-) Apps ebenfalls APIs\nmit speziellen R-Paketen können diese API-Daten wieder in R-Objekte wie z.B. Datenframes umgewandelt werden"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#beispiel-json",
+    "href": "inhaltsanalyse/slides.html#beispiel-json",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Beispiel JSON",
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Shut the f*ck up and let me die in peace.\",\n        \"author\": \"Mike Ehrmantraut\"\n    }\n]"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#workflow",
+    "href": "inhaltsanalyse/slides.html#workflow",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Workflow",
+    "text": "Workflow\n\nDatenquelle finden (Website, Feed, API)\nrelevanten Ausgangspunkt finden (Suchanfrage, Accountname, etc.)\nDaten herunterladen\nDaten filtern und auswählen\nDaten in ein standardisiertes Format für die Analyse bringen\n(Daten quick & dirty auswerten oder visualisieren)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#buchempfehlungen",
+    "href": "inhaltsanalyse/slides.html#buchempfehlungen",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Buchempfehlungen",
+    "text": "Buchempfehlungen"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#cli-tools-in-python",
+    "href": "inhaltsanalyse/slides.html#cli-tools-in-python",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "CLI-Tools in Python",
+    "text": "CLI-Tools in Python\n\nfür spezifische Aufgaben gibt es zahlreiche Tools, z.B.\nVideos herunterladen - youtube-dlp\nAudio transkribieren - whisper-ctranslate2\nVideos in Einzelbilder zerlegen - vcsi\nPython ist auf Mac und Linux-Systemen installiert, unter Windows kann es nachinstalliert werden\nInstallation der einzelnen Pakete über pip install &lt;tool&gt;"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe-1-1",
+    "href": "inhaltsanalyse/slides.html#aufgabe-1-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe 1",
+    "text": "Aufgabe 1\n\nInstallieren Sie das CLI-Tool youtube-dlp und laden Sie Videos und Metadaten eines TikTok-Kanals herunter.\nImportieren Sie die Daten in R. Welche Meta-Daten werden gesammelt?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#zeeschuimer-datenspende",
+    "href": "inhaltsanalyse/slides.html#zeeschuimer-datenspende",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Zeeschuimer-Datenspende",
+    "text": "Zeeschuimer-Datenspende\n\nFirefox-Erweiterung, die beim Surfen auf bestimmten Plattformen die angezeigten Inhalte und deren Metadaten speichert\nExport als ndjson-Datei, die man mit R einlesen kann\nvor allem für Instagram und ggf. auch TikTok interessant\nsehr umfangreiche Meta-Daten, aber etwas unübersichtlich"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe-2-1",
+    "href": "inhaltsanalyse/slides.html#aufgabe-2-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe 2",
+    "text": "Aufgabe 2\n\nLaden Sie mit Zeeschuimer Daten von Instagram oder TikTok herunter.\nImportieren Sie die Daten in R.\nWerten Sie die Daten ein wenig aus."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgabe-3",
+    "href": "inhaltsanalyse/slides.html#aufgabe-3",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgabe 3",
+    "text": "Aufgabe 3\n\nÜberlegen Sie, welche Online-Daten Sie für Ihr Projekt wie erheben wollen.\nWelche weiteren Schritte sind nötig (Transkription, Bildzerlegung, etc.)?\nErstellen Sie eine Datenpipeline auf dem Papier, die wir dann ggf. automatisieren können."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgaben-bis-zur-nächsten-sitzung-1",
+    "href": "inhaltsanalyse/slides.html#aufgaben-bis-zur-nächsten-sitzung-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgaben bis zur nächsten Sitzung",
+    "text": "Aufgaben bis zur nächsten Sitzung\n\nFinalisieren Sie die Forschungsfragen und Hypothesen.\nDiskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.\nDefinieren Sie Untersuchungseinheit(en) und Grundgesamtheit.\nEntwickeln Sie einen konzeptionell angemessenen Stichprobenplan.\nÜberlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann."
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Literatur",
-    "text": "Literatur\n\n\n\n\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nKromrey, H., Roose, J., & Strübing, J. (2016). Empirische Sozialforschung: Modelle und Methoden der standardisierten Datenerhebung und Datenauswertung (Bd. 1040). Utb.\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
+    "text": "Literatur\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nKromrey, H., Roose, J., & Strübing, J. (2016). Empirische Sozialforschung: Modelle und Methoden der standardisierten Datenerhebung und Datenauswertung (Bd. 1040). Utb.\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
   },
   {
     "objectID": "inhaltsanalyse/index.html#beschreibung",
@@ -378,11 +483,18 @@
     "text": "Sitzung 4 \n\nThemen\n\nVorstellung der Forschungsfragen und Hypothesen\nStudiendesign bei Inhaltsanalysen\nStichproben und Untersuchungseinheiten\n\n\n\nLiteratur\nRössler (2017, Kapitel 4)\n\n\nAufgabe zur nächsten Sitzung\nDatenerhebung in R mit Hausaufgaben 1 und 2"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#literatur-4",
-    "href": "inhaltsanalyse/index.html#literatur-4",
+    "objectID": "inhaltsanalyse/index.html#sitzung-4",
+    "href": "inhaltsanalyse/index.html#sitzung-4",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 4 ",
+    "text": "Sitzung 4 \n\nThemen\n\nErhebung von Online-Inhalten in R\nNutzung von CLI-Tools für Datenerhebung und -verarbeitung\n\n\n\nLiteratur\nHaim (2023, Kapitel 5 und 6)"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#literatur-5",
+    "href": "inhaltsanalyse/index.html#literatur-5",
     "title": "BA Inhaltsanalyse",
     "section": "Literatur",
-    "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
+    "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
   },
   {
     "objectID": "index.html",
