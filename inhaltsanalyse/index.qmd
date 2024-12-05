@@ -110,6 +110,24 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 
 @haim2023 [Kap. 5 und 6]
 
+
+## Sitzung 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Folien"></a>
+
+### Themen
+
+-   Codebuchentwicklung und Kategorienbildung
+-   Dateneingabe und Probecodierung
+
+### Literatur
+
+@rössler2017 [Kap. 6-9]
+
+### Aufgabe zur nächsten Sitzung
+
+- Finalisierung Design und Stichprobe
+- erste Codebuch-Fassung
+- Probecodierung
+
 ## Literatur
 
 ::: {#refs}

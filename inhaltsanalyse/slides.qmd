@@ -563,4 +563,100 @@ a |> jsonlite::prettify()
 5.  Entwickeln Sie einen konzeptionell angemessenen Stichprobenplan.
 6.  Überlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann.
 
+
+# Sitzung 6 {#s6}
+
+# 5-Minuten Präsentationen
+
+## Codierprozess als gelenkte Rezeption
+
+-   Problem: Informationen über die Struktur von großen Mengen von Botschaften
+    -   Lösung 1: Selektion: Nicht alle Dimensionen der Botschaften werden berücksichtigt
+    -   Lösung 2: Klassifikation: Die Dimensionen werden kategorisiert und gemessen
+-   Nachteil: Informationsverlust
+-   Vorteile:
+    -   Reduktion von Komplexität
+    -   Analyse großer Mengen von Botschaften möglich
+
+## Kategorien
+
+-   Formale Kategorien
+    -   Medium, Autor
+    -   Umfang des Beitrag
+    -   Datum
+-   Inhaltliche Kategorien
+    -   Themen der Artikel („Hauptthema")
+    -   Akteure der Artikel („Hauptakteur")
+    -   Urheber von Aussagen
+    -   Tendenz/Bewertung
+
+## Kategorienbildung
+
+-   empiriegeleitet
+    -   Auswahl von Beispielen
+    -   Sammlung von Themen, Aussagen, Argumenten usw., die repräsentativ sind
+    -   Identifikation der inhaltlichen Struktur und Bildung von Gruppen\
+    -   erster Kategorieentwurf
+-   theoriegeleitet
+    -   Frühere Studien und Hypothesen
+    -   Erwartung zu Inhalt und Struktur
+    -   erster Kategorieentwurf
+
+## Kategorien im Codebuch
+
+1.  Verbale Beschreibung
+
+-   "Hier wird codiert, ob der Post ein politisches Thema behandelt."
+
+2.  Information über die Indikatoren (wenn nötig)
+
+-   "Politische Themen werden codiert, wenn der Beitrag Politikfelder (z.B. Innen- oder Wirtschaftspolitik), den politischen Prozess (z.B. Wahlen) oder politische Institutionen (z.B. Bundestag) behandelt."
+
+3.  Messanweisungen i.e.S. (= Regeln für die Überführung der Daten)
+
+-   **0** = kein politisches Thema, **1** = politisches Thema
+
+## Kriterien guter Kategorien
+
+-   Kategorien müssen die Forschungsfragen beantworten können.
+-   Kategorien müssen trennscharf sein.
+-   Kategorien müssen erschöpfend sein („Sonstiges"-Kategorie)
+-   Kategorien müssen auf dem selben Klassifikationsprinzip beruhen, d.h. sie dürfen nur eine Dimension messen.
+
+## Strategien für Kategorien
+
+-   Multinomiale Variablen = mehrere Ausprägung
+    -   1 = Außenpolitik, 2 = Innenpolitik, 3 = Wirtschaftspolitik
+    -   Problem: gleichzeitiges Auftreten mehrerer Ausprägungen
+-   Dummy-Codierung (Mehrfachantworten)
+    -   V1: Außenpolitik 0/1, V2 Innenpolitik 0/1, ...
+    -   Nachteil: vielen Nullen in den Daten, Eingabe etwas aufwändiger
+-   Wichtig: NIE mehrere Werte in eine Zelle des Codesheets eintragen
+
+## Aufbau Codebuch
+
+-   Informationen über das Thema der Analyse
+-   Forschungsfragen/ Hypothesen
+-   Informationen über den Untersuchungszeitraum
+-   Definitionen der Auswahl-, Analyse, Codier- und Kontexteinheit
+-   Informationen über das Auswahlverfahren (Vollerhebung vs. Stichprobe)
+-   Definition der Zugriffskriterien
+-   Allgemeine Codieranweisungen
+-   Kategoriensystem (= alle Kategorien zusammengenommen)
+-   Codebogen
+
+## Zero-Shot Codierung
+
+- am besten die Zero-Shot-Tasks gleich mitdenken bzw. identische Codieranweisungen für Codierer und LLM
+- structured output Beispiel in R ansehen, Code anpassen
+- mehrere LLM-Modelle/Anbieter als Codierer verwenden
+- validieren, validieren, validieren!
+
+## Aufgaben bis nächste Woche
+
+1.  Finalisieren Sie Forschungsdesign und Stichprobenplan.
+2.  Entwickeln Sie ein erstes Codebuch für die Studie.
+3.  Erstellen Sie ein passendes Codesheet für die Dateneingabe in Excel oder Teams.
+4.  Jedes Gruppenmitglied codiert dieselben (!) 10 Codiereinheiten, die Codierungen werden untereinander in einer Datei gesammelt.
+
 ## Literatur
