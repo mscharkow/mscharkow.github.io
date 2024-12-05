@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I am the man that I am son, and there's plenty that I would change about that but, here we are and this is just what it is.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"We're done when I say we're done.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -434,6 +434,69 @@
     "text": "Aufgaben bis zur nächsten Sitzung\n\nFinalisieren Sie die Forschungsfragen und Hypothesen.\nDiskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.\nDefinieren Sie Untersuchungseinheit(en) und Grundgesamtheit.\nEntwickeln Sie einen konzeptionell angemessenen Stichprobenplan.\nÜberlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann."
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#codierprozess-als-gelenkte-rezeption",
+    "href": "inhaltsanalyse/slides.html#codierprozess-als-gelenkte-rezeption",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Codierprozess als gelenkte Rezeption",
+    "text": "Codierprozess als gelenkte Rezeption\n\nProblem: Informationen über die Struktur von großen Mengen von Botschaften\n\nLösung 1: Selektion: Nicht alle Dimensionen der Botschaften werden berücksichtigt\nLösung 2: Klassifikation: Die Dimensionen werden kategorisiert und gemessen\n\nNachteil: Informationsverlust\nVorteile:\n\nReduktion von Komplexität\nAnalyse großer Mengen von Botschaften möglich"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#kategorien",
+    "href": "inhaltsanalyse/slides.html#kategorien",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Kategorien",
+    "text": "Kategorien\n\nFormale Kategorien\n\nMedium, Autor\nUmfang des Beitrag\nDatum\n\nInhaltliche Kategorien\n\nThemen der Artikel („Hauptthema”)\nAkteure der Artikel („Hauptakteur”)\nUrheber von Aussagen\nTendenz/Bewertung"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#kategorienbildung",
+    "href": "inhaltsanalyse/slides.html#kategorienbildung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Kategorienbildung",
+    "text": "Kategorienbildung\n\nempiriegeleitet\n\nAuswahl von Beispielen\nSammlung von Themen, Aussagen, Argumenten usw., die repräsentativ sind\nIdentifikation der inhaltlichen Struktur und Bildung von Gruppen\n\nerster Kategorieentwurf\n\ntheoriegeleitet\n\nFrühere Studien und Hypothesen\nErwartung zu Inhalt und Struktur\nerster Kategorieentwurf"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#kategorien-im-codebuch",
+    "href": "inhaltsanalyse/slides.html#kategorien-im-codebuch",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Kategorien im Codebuch",
+    "text": "Kategorien im Codebuch\n\nVerbale Beschreibung\n\n\n“Hier wird codiert, ob der Post ein politisches Thema behandelt.”\n\n\nInformation über die Indikatoren (wenn nötig)\n\n\n“Politische Themen werden codiert, wenn der Beitrag Politikfelder (z.B. Innen- oder Wirtschaftspolitik), den politischen Prozess (z.B. Wahlen) oder politische Institutionen (z.B. Bundestag) behandelt.”\n\n\nMessanweisungen i.e.S. (= Regeln für die Überführung der Daten)\n\n\n0 = kein politisches Thema, 1 = politisches Thema"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#kriterien-guter-kategorien",
+    "href": "inhaltsanalyse/slides.html#kriterien-guter-kategorien",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Kriterien guter Kategorien",
+    "text": "Kriterien guter Kategorien\n\nKategorien müssen die Forschungsfragen beantworten können.\nKategorien müssen trennscharf sein.\nKategorien müssen erschöpfend sein („Sonstiges”-Kategorie)\nKategorien müssen auf dem selben Klassifikationsprinzip beruhen, d.h. sie dürfen nur eine Dimension messen."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#strategien-für-kategorien",
+    "href": "inhaltsanalyse/slides.html#strategien-für-kategorien",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Strategien für Kategorien",
+    "text": "Strategien für Kategorien\n\nMultinomiale Variablen = mehrere Ausprägung\n\n1 = Außenpolitik, 2 = Innenpolitik, 3 = Wirtschaftspolitik\nProblem: gleichzeitiges Auftreten mehrerer Ausprägungen\n\nDummy-Codierung (Mehrfachantworten)\n\nV1: Außenpolitik 0/1, V2 Innenpolitik 0/1, …\nNachteil: vielen Nullen in den Daten, Eingabe etwas aufwändiger\n\nWichtig: NIE mehrere Werte in eine Zelle des Codesheets eintragen"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufbau-codebuch",
+    "href": "inhaltsanalyse/slides.html#aufbau-codebuch",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufbau Codebuch",
+    "text": "Aufbau Codebuch\n\nInformationen über das Thema der Analyse\nForschungsfragen/ Hypothesen\nInformationen über den Untersuchungszeitraum\nDefinitionen der Auswahl-, Analyse, Codier- und Kontexteinheit\nInformationen über das Auswahlverfahren (Vollerhebung vs. Stichprobe)\nDefinition der Zugriffskriterien\nAllgemeine Codieranweisungen\nKategoriensystem (= alle Kategorien zusammengenommen)\nCodebogen"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#zero-shot-codierung-1",
+    "href": "inhaltsanalyse/slides.html#zero-shot-codierung-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Zero-Shot Codierung",
+    "text": "Zero-Shot Codierung\n\nam besten die Zero-Shot-Tasks gleich mitdenken bzw. identische Codieranweisungen für Codierer und LLM\nstructured output Beispiel in R ansehen, Code anpassen\nmehrere LLM-Modelle/Anbieter als Codierer verwenden\nvalidieren, validieren, validieren!"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgaben-bis-nächste-woche-1",
+    "href": "inhaltsanalyse/slides.html#aufgaben-bis-nächste-woche-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgaben bis nächste Woche",
+    "text": "Aufgaben bis nächste Woche\n\nFinalisieren Sie Forschungsdesign und Stichprobenplan.\nEntwickeln Sie ein erstes Codebuch für die Studie.\nErstellen Sie ein passendes Codesheet für die Dateneingabe in Excel oder Teams.\nJedes Gruppenmitglied codiert dieselben (!) 10 Codiereinheiten, die Codierungen werden untereinander in einer Datei gesammelt."
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
@@ -490,8 +553,15 @@
     "text": "Sitzung 5 \n\nThemen\n\nErhebung von Online-Inhalten in R\nNutzung von CLI-Tools für Datenerhebung und -verarbeitung\n\n\n\nLiteratur\nHaim (2023, Kapitel 5 und 6)"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#literatur-5",
-    "href": "inhaltsanalyse/index.html#literatur-5",
+    "objectID": "inhaltsanalyse/index.html#sitzung-6",
+    "href": "inhaltsanalyse/index.html#sitzung-6",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 6 ",
+    "text": "Sitzung 6 \n\nThemen\n\nCodebuchentwicklung und Kategorienbildung\nDateneingabe und Probecodierung\n\n\n\nLiteratur\nRössler (2017, Kapitel 6–9)\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Design und Stichprobe\nerste Codebuch-Fassung\nProbecodierung"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#literatur-6",
+    "href": "inhaltsanalyse/index.html#literatur-6",
     "title": "BA Inhaltsanalyse",
     "section": "Literatur",
     "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
