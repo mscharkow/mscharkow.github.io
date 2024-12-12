@@ -13,7 +13,7 @@ start_date = as.Date("2024-10-25")
 end_date = as.Date("2025-02-10")
 no_classes = as.Date(c("2024-11-01", "2024-12-27", "2025-01-03"))
 topics = "Einführung und Grundlagen, CCS: Inhaltsanalyse mit LLM, Themenwahl und Forschungsfragen, Studiendesign und Stichprobe*, CCS: Datenerhebung, Kategorien und Codierung*, 
-CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde), Datenanalyse und -visualisierung*, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
+CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde), Datenanalyse und -visualisierung*, Zero-Shot Codierung/Validierung, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
 ```
 
 ![](images/ia_title.png)
