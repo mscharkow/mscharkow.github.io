@@ -128,6 +128,23 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - erste Codebuch-Fassung
 - Probecodierung
 
+## Sitzung 7 <a class="bi bi-easel-fill" href="slides.html#/s7" alt="Folien"></a>
+
+### Themen
+
+- Codebuchentwicklung
+- Reliabilität und Validität
+
+### Literatur
+
+@rössler2017 [Kap. 12]
+
+### Aufgabe zur nächsten Sitzung
+
+- Finalisierung Codebuch
+- Reliabilitätstest
+- Datenerhebung
+
 ## Literatur
 
 ::: {#refs}

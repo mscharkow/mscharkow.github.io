@@ -659,4 +659,63 @@ a |> jsonlite::prettify()
 3.  Erstellen Sie ein passendes Codesheet für die Dateneingabe in Excel oder Teams.
 4.  Jedes Gruppenmitglied codiert dieselben (!) 10 Codiereinheiten, die Codierungen werden untereinander in einer Datei gesammelt.
 
+
+# Sitzung 7 {#s7}
+
+# 5-Minuten Präsentationen
+
+## Gütekriterien
+
+- Validität
+  - Gültigkeit der Messung
+  - Betrifft den gesamten Messvorgang
+
+- Reliabilität
+  - Zuverlässigkeit (=Reproduzierbarkeit) der Messung
+  - Betrifft die eigentlich Messprozedur
+  - Wird aus der Übereinstimmung in der Codierung abgeleitet
+
+## Typen der Reliabilitätsmessung nach Rössler, 2017
+
+![](figs/roessner_reli.png)
+
+## Festlegung von Übereinstimmung und Abweichung
+
+- Für die Bewertung der Reliabilität muss zunächst festgelegt werden, was eine Übereinstimmung und Abweichung bei der Codierung darstellt.
+- Einfach bei Kategorien mit dichotomer Ausprägung ("An-/Abwesenheit").
+- Schwieriger bei Kategorien mit ordinal/metrischem Niveau.
+  - Wie stark darf die Abweichung sein (Toleranzbereich)? 
+
+## Reliablitätsindex I: Übereinstimmung nach Holsti 
+
+- Berechnet die Übereinstimmung zwischen zwei Codierern.
+  - Kann als prozentuale Übereinstimmung interpretiert werden.
+- Ignoriert die Wahrscheinlichkeit von zufälliger Übereinstimmung, z.B. .5 bei dichotomen Variablen.
+- Begrenzt aussagefähig bei sehr schiefen Verteilungen.
+  - Bsp.: Eine 0/1 Variable wird in 9 von 10 Fällen von Codierern A abwesend codiert (0) und ein Mal mit (1). Codierer B codiert immer 0. Holsti = .9, obwohl wir gar nicht wissen, ob die Codierer überhaupt Ausprägung 1 erkennen.
+- Akzeptable Werte: nahe 1 (formale Kategorien) oder > .8 (inhaltliche Kategorien)
+
+## Reliablitätsindex II: Krippendorffs $\alpha$
+
+- Gold-Standard in der Kommunikationswissenschaft für Reliabilitätstests.
+- Berücksichtigt die Wahrscheinlichkeit zufälliger Übereinstimmungen, d.h. es wird geprüft, inwieweit die beobachtete Übereinstimmung über der zufälligen liegt.
+- Für mehr als zwei Codierer und verschiedene Skalenniveaus geeignet.
+- Akzeptable Werte wie bei Holsti (> .8), allerdings deutlich "strenger" wg. Zufallskorrektur.
+
+## Validierungsmaße für Classifier
+
+- manuelle Codierung als Goldstandard
+- Abweichung automatischer von manueller Codierung
+- Grundlage: Konfusionsmatrix mit korrekt/falsch positiven/negativen
+- Maße: Precision, Recall, F-Score
+
+## Aufgaben bis nächste Woche
+
+- Codebuch überarbeiten
+- Reliabilitätstest durchführen (20 Codiereinheiten) und auswerten
+- Datenerhebung abschließen
+
+Keine Sitzung nächste Woche, aber Angebot Sprechstunde per Teams zum gleichen Termin.
+
+
 ## Literatur
