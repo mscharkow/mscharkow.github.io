@@ -677,7 +677,7 @@ a |> jsonlite::prettify()
 
 ## Typen der Reliabilitätsmessung nach Rössler, 2017
 
-![](figs/roessner_reli.png)
+![](images/roessner_reli.png)
 
 ## Festlegung von Übereinstimmung und Abweichung
 
