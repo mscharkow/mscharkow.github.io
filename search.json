@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"We're done when I say we're done.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You add plus a douchebag to a minus douchebag and you get, Like, Zero Douchebags.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -497,6 +497,55 @@
     "text": "Aufgaben bis nächste Woche\n\nFinalisieren Sie Forschungsdesign und Stichprobenplan.\nEntwickeln Sie ein erstes Codebuch für die Studie.\nErstellen Sie ein passendes Codesheet für die Dateneingabe in Excel oder Teams.\nJedes Gruppenmitglied codiert dieselben (!) 10 Codiereinheiten, die Codierungen werden untereinander in einer Datei gesammelt."
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#gütekriterien",
+    "href": "inhaltsanalyse/slides.html#gütekriterien",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Gütekriterien",
+    "text": "Gütekriterien\n\nValidität\n\nGültigkeit der Messung\nBetrifft den gesamten Messvorgang\n\nReliabilität\n\nZuverlässigkeit (=Reproduzierbarkeit) der Messung\nBetrifft die eigentlich Messprozedur\nWird aus der Übereinstimmung in der Codierung abgeleitet"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#typen-der-reliabilitätsmessung-nach-rössler-2017",
+    "href": "inhaltsanalyse/slides.html#typen-der-reliabilitätsmessung-nach-rössler-2017",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Typen der Reliabilitätsmessung nach Rössler, 2017",
+    "text": "Typen der Reliabilitätsmessung nach Rössler, 2017"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#festlegung-von-übereinstimmung-und-abweichung",
+    "href": "inhaltsanalyse/slides.html#festlegung-von-übereinstimmung-und-abweichung",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Festlegung von Übereinstimmung und Abweichung",
+    "text": "Festlegung von Übereinstimmung und Abweichung\n\nFür die Bewertung der Reliabilität muss zunächst festgelegt werden, was eine Übereinstimmung und Abweichung bei der Codierung darstellt.\nEinfach bei Kategorien mit dichotomer Ausprägung (“An-/Abwesenheit”).\nSchwieriger bei Kategorien mit ordinal/metrischem Niveau.\n\nWie stark darf die Abweichung sein (Toleranzbereich)?"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#reliablitätsindex-i-übereinstimmung-nach-holsti",
+    "href": "inhaltsanalyse/slides.html#reliablitätsindex-i-übereinstimmung-nach-holsti",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Reliablitätsindex I: Übereinstimmung nach Holsti",
+    "text": "Reliablitätsindex I: Übereinstimmung nach Holsti\n\nBerechnet die Übereinstimmung zwischen zwei Codierern.\n\nKann als prozentuale Übereinstimmung interpretiert werden.\n\nIgnoriert die Wahrscheinlichkeit von zufälliger Übereinstimmung, z.B. .5 bei dichotomen Variablen.\nBegrenzt aussagefähig bei sehr schiefen Verteilungen.\n\nBsp.: Eine 0/1 Variable wird in 9 von 10 Fällen von Codierern A abwesend codiert (0) und ein Mal mit (1). Codierer B codiert immer 0. Holsti = .9, obwohl wir gar nicht wissen, ob die Codierer überhaupt Ausprägung 1 erkennen.\n\nAkzeptable Werte: nahe 1 (formale Kategorien) oder &gt; .8 (inhaltliche Kategorien)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#reliablitätsindex-ii-krippendorffs-alpha",
+    "href": "inhaltsanalyse/slides.html#reliablitätsindex-ii-krippendorffs-alpha",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Reliablitätsindex II: Krippendorffs \\(\\alpha\\)",
+    "text": "Reliablitätsindex II: Krippendorffs \\(\\alpha\\)\n\nGold-Standard in der Kommunikationswissenschaft für Reliabilitätstests.\nBerücksichtigt die Wahrscheinlichkeit zufälliger Übereinstimmungen, d.h. es wird geprüft, inwieweit die beobachtete Übereinstimmung über der zufälligen liegt.\nFür mehr als zwei Codierer und verschiedene Skalenniveaus geeignet.\nAkzeptable Werte wie bei Holsti (&gt; .8), allerdings deutlich “strenger” wg. Zufallskorrektur."
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#validierungsmaße-für-classifier",
+    "href": "inhaltsanalyse/slides.html#validierungsmaße-für-classifier",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Validierungsmaße für Classifier",
+    "text": "Validierungsmaße für Classifier\n\nmanuelle Codierung als Goldstandard\nAbweichung automatischer von manueller Codierung\nGrundlage: Konfusionsmatrix mit korrekt/falsch positiven/negativen\nMaße: Precision, Recall, F-Score"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgaben-bis-nächste-woche-2",
+    "href": "inhaltsanalyse/slides.html#aufgaben-bis-nächste-woche-2",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgaben bis nächste Woche",
+    "text": "Aufgaben bis nächste Woche\n\nCodebuch überarbeiten\nReliabilitätstest durchführen (20 Codiereinheiten) und auswerten\nDatenerhebung abschließen\n\nKeine Sitzung nächste Woche, aber Angebot Sprechstunde per Teams zum gleichen Termin."
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
@@ -560,8 +609,15 @@
     "text": "Sitzung 6 \n\nThemen\n\nCodebuchentwicklung und Kategorienbildung\nDateneingabe und Probecodierung\n\n\n\nLiteratur\nRössler (2017, Kapitel 6–9)\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Design und Stichprobe\nerste Codebuch-Fassung\nProbecodierung"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#literatur-6",
-    "href": "inhaltsanalyse/index.html#literatur-6",
+    "objectID": "inhaltsanalyse/index.html#sitzung-7",
+    "href": "inhaltsanalyse/index.html#sitzung-7",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 7 ",
+    "text": "Sitzung 7 \n\nThemen\n\nCodebuchentwicklung\nReliabilität und Validität\n\n\n\nLiteratur\nRössler (2017, Kapitel 12)\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Codebuch\nReliabilitätstest\nDatenerhebung"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#literatur-7",
+    "href": "inhaltsanalyse/index.html#literatur-7",
     "title": "BA Inhaltsanalyse",
     "section": "Literatur",
     "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
