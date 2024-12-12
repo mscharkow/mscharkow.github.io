@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I do not believe fear to be an effective motivator. I want investment. For now, I'm simply interested in time frame.\",\n        \"author\": \"Gustavo Fring\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"The one that says if I can't kill you, you'll sure as *beep* wish you were dead.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -564,7 +564,7 @@
     "href": "inhaltsanalyse/index.html#seminarplan",
     "title": "BA Inhaltsanalyse",
     "section": "Seminarplan",
-    "text": "Seminarplan\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n25.10.2024\nEinführung und Grundlagen\n\n\n2\n08.11.2024\nCCS: Inhaltsanalyse mit LLM\n\n\n3\n15.11.2024\nThemenwahl und Forschungsfragen\n\n\n4\n22.11.2024\nStudiendesign und Stichprobe*\n\n\n5\n29.11.2024\nCCS: Datenerhebung\n\n\n6\n06.12.2024\nKategorien und Codierung*\n\n\n7\n13.12.2024\nCCS: Reli-Test und Validierung*\n\n\n8\n20.12.2024\nCodebuch-Finalisierung\n\n\n9\n10.01.2025\nFeldphase (Sprechstunde)\n\n\n10\n17.01.2025\nDatenanalyse und -visualisierung*\n\n\n11\n24.01.2025\nZero-Shot Codierung/Validierung\n\n\n12\n31.01.2025\nErgebnisaufbereitung\n\n\n13\n07.02.2025\nAbschluss\n\n\n\n\n\n\n* = 5-Minuten-Präsentation des Zwischenstands"
+    "text": "Seminarplan\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n25.10.2024\nEinführung und Grundlagen\n\n\n2\n08.11.2024\nCCS: Inhaltsanalyse mit LLM\n\n\n3\n15.11.2024\nThemenwahl und Forschungsfragen\n\n\n4\n22.11.2024\nStudiendesign und Stichprobe*\n\n\n5\n29.11.2024\nCCS: Datenerhebung\n\n\n6\n06.12.2024\nKategorien und Codierung*\n\n\n7\n13.12.2024\nCCS: Reli-Test und Validierung*\n\n\n8\n20.12.2024\nCodebuch-Finalisierung\n\n\n9\n10.01.2025\nFeldphase (Sprechstunde)\n\n\n10\n17.01.2025\nDatenanalyse und -visualisierung*\n\n\n11\n24.01.2025\nCCS: Zero-Shot Codierung/Validierung\n\n\n12\n31.01.2025\nErgebnisaufbereitung\n\n\n13\n07.02.2025\nAbschluss\n\n\n\n\n\n\n* = 5-Minuten-Präsentation des Zwischenstands"
   },
   {
     "objectID": "inhaltsanalyse/index.html#1",
