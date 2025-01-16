@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"It's always darkest just before the dawn.\",\n        \"author\": \"Hank Schrader\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Seriously? \\\"Hello Kitty\\\"?\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -655,11 +655,11 @@
     "href": "inhaltsanalyse/index.html#sitzung-8",
     "title": "BA Inhaltsanalyse",
     "section": "Sitzung 8 ",
-    "text": "Sitzung 8 \n\nThemen\n\nDatenaufbereitung\nDatenanalyse\n\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Codierung\nAufbereitung der finalen Daten\nErstellung Analyseplan und Auswertung"
+    "text": "Sitzung 8 \n\nThemen\n\nDatenaufbereitung\nDatenanalyse\n\n\n\nLiteratur\nhttps://stats.ifp.uni-mainz.de/ba-datenanalyse\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Codierung\nAufbereitung der finalen Daten\nErstellung Analyseplan und Auswertung"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#literatur-7",
-    "href": "inhaltsanalyse/index.html#literatur-7",
+    "objectID": "inhaltsanalyse/index.html#literatur-8",
+    "href": "inhaltsanalyse/index.html#literatur-8",
     "title": "BA Inhaltsanalyse",
     "section": "Literatur",
     "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
