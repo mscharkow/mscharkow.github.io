@@ -717,7 +717,7 @@ a |> jsonlite::prettify()
 
 Keine Sitzung nächste Woche, aber Angebot Sprechstunde per Teams zum gleichen Termin.
 
-# Sitzung 8 {#s8}
+# Sitzung 10 {#s10}
 
 # 5-Minuten Präsentationen
 

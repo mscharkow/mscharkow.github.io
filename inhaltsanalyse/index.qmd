@@ -145,7 +145,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Reliabilitätstest
 - Datenerhebung
 
-## Sitzung 8 <a class="bi bi-easel-fill" href="slides.html#/s8" alt="Folien"></a>
+## Sitzung 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Folien"></a>
 
 ### Themen
 
