@@ -153,6 +153,10 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Datenanalyse
 
 
+### Literatur
+
+<https://stats.ifp.uni-mainz.de/ba-datenanalyse>
+
 ### Aufgabe zur nächsten Sitzung
 
 - Finalisierung Codierung
