@@ -145,6 +145,22 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Reliabilitätstest
 - Datenerhebung
 
+## Sitzung 8 <a class="bi bi-easel-fill" href="slides.html#/s8" alt="Folien"></a>
+
+### Themen
+
+- Datenaufbereitung
+- Datenanalyse
+
+
+### Aufgabe zur nächsten Sitzung
+
+- Finalisierung Codierung
+- Aufbereitung der finalen Daten
+- Erstellung Analyseplan und Auswertung
+
+
+
 ## Literatur
 
 ::: {#refs}

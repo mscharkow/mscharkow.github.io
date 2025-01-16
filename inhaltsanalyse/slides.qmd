@@ -717,5 +717,56 @@ a |> jsonlite::prettify()
 
 Keine Sitzung nächste Woche, aber Angebot Sprechstunde per Teams zum gleichen Termin.
 
+# Sitzung 8 {#s8}
+
+# 5-Minuten Präsentationen
+
+## Datenbereinigung
+
+- Fusionieren der einzelnen Codesheets
+- Entfernung von Formatierungen, zusammengefassten Zellen, etc.
+- Import in SPSS oder R
+- Prüfen von Missings und falschen Codes (univariate Häufigkeitstabellen)
+
+
+## Datenaggregation
+- oft entspricht Codiereinheit (z.B. Aussage) nicht Analyseeinheit (z.B. Beitrag)
+- Aggregation auf Ebene der Analyseeinheit
+  - Berechnung von Summen- oder Mittelwertindices pro Analyseeinheit
+  - Prüfung durch Vergleich aggregierte vs. nicht aggregierte Zahlen
+- Neuberechnung der korrekten Fallzahlen
+
+## Datenauswertung
+
+Für jede Hypothese 3 min Schritte:
+
+1.  Deskriptive Auswertung (z.B. Gruppenmittelwerte, Prozentanteile)
+2.  inferenzstatistischer Test (t-Test, ANOVA, Chi-Quadrat-Test)
+3.  Ergebnisdarstellung als Text, Tabelle und/oder Grafik
+
+Hinweis: Bei 0/1 Dummy-Variablen entspricht der Mittelwert dem Anteil 1, und oft reicht es, diese zu berichten bzw. zu vergleichen.
+
+## Ergebnisteil im Projektbericht
+
+1.  Beschreibung der finalen Stichprobe (allgemein relevante Informationen)
+2.  Univariate Auswertung zentraler Variablen 
+3.  Auswertung der eigentlichen Hypothesen
+4.  weitere interessante Analysen
+
+Wichtig: Exaktheit, Konsistenz, Beschriftungen, etc.
+
+# Fragen?
+
+## Aufgaben heute
+
+1. Bereiten sie Ihre Codierdaten final auf und prüfen sie auf Konsistenz etc.
+2. Berechnen sie ggf. aggregierte Kennzahlen für die Analyse.
+3. Berechnen sie zentrale Kennzahlen der Stichprobe für den Ergebnisbericht.
+3. Planen sie die notwendigen Analyseschritte für die Hypothesentests, d.h.
+  - Welche Variablen sind univariat und bivariate auszuwerten?
+  - Welche stat. Test sind für jede Hypothese notwendig?
+  - Wann wäre die Hypothese wider- oder belegt? (*nicht* "bewiesen" oder "verifiziert")
+4. Werten sie die Daten entsprechend aus.
+
 
 ## Literatur
