@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I have lived under the threat of death for a year now, and because of that, I've made peace with it.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"MILFs? What the hell is a MILF?\",\n        \"author\": \"Skyler White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -581,6 +581,20 @@
     "text": "Aufgaben heute\n\nBereiten sie Ihre Codierdaten final auf und prüfen sie auf Konsistenz etc.\nBerechnen sie ggf. aggregierte Kennzahlen für die Analyse.\nBerechnen sie zentrale Kennzahlen der Stichprobe für den Ergebnisbericht.\nPlanen sie die notwendigen Analyseschritte für die Hypothesentests, d.h.\n\n\nWelche Variablen sind univariat und bivariate auszuwerten?\nWelche stat. Test sind für jede Hypothese notwendig?\nWann wäre die Hypothese wider- oder belegt? (nicht “bewiesen” oder “verifiziert”)\n\n\nWerten sie die Daten entsprechend aus."
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#zero-shot-klassifikation",
+    "href": "inhaltsanalyse/slides.html#zero-shot-klassifikation",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Zero-shot Klassifikation",
+    "text": "Zero-shot Klassifikation\n\nEntwickeln eines bzw. mehererer Prompts mit Instruktionen (auf englisch)\nDazu passendes Response-Schema für strukturierte Klassifikation entwickeln\nTesten der Prompts mit wenigen Stimuli\nNach Verfeinerung der Prompts: alles klassifizieren lassen\nVergleich mit manueller Codierung"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#praxis",
+    "href": "inhaltsanalyse/slides.html#praxis",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Praxis",
+    "text": "Praxis\n\nRStudio-Server mit hinterlegtem Gemini-API-Key\nzero-shot-v2.R ausprobieren und mit eigenen Daten testen\nUpload von Stimuli am besten als gezippten Ordner\nHilfe: https://edubruell.github.io/tidyllm/"
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
@@ -656,6 +670,13 @@
     "title": "BA Inhaltsanalyse",
     "section": "Sitzung 10 ",
     "text": "Sitzung 10 \n\nThemen\n\nDatenaufbereitung\nDatenanalyse\n\n\n\nLiteratur\nhttps://stats.ifp.uni-mainz.de/ba-datenanalyse\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Codierung\nAufbereitung der finalen Daten\nErstellung Analyseplan und Auswertung"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#sitzung-11",
+    "href": "inhaltsanalyse/index.html#sitzung-11",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 11 ",
+    "text": "Sitzung 11 \n\nThemen\n\nStrukturierte Zero-Shot Klassifikation mit tidyllm\nErstellen eigener Prompts und JSON-Schemata"
   },
   {
     "objectID": "inhaltsanalyse/index.html#literatur-8",
