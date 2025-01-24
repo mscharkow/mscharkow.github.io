@@ -99,7 +99,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 
 [Datenerhebung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html) mit Hausaufgaben 1 und 2
 
-## Sitzung 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Folien"></a>
+## Sitzung 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Folien"></a> {#5}
 
 ### Themen
 
@@ -111,7 +111,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 @haim2023 [Kap. 5 und 6]
 
 
-## Sitzung 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Folien"></a>
+## Sitzung 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Folien"></a> {#6}
 
 ### Themen
 
@@ -128,7 +128,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - erste Codebuch-Fassung
 - Probecodierung
 
-## Sitzung 7 <a class="bi bi-easel-fill" href="slides.html#/s7" alt="Folien"></a>
+## Sitzung 7 <a class="bi bi-easel-fill" href="slides.html#/s7" alt="Folien"></a> {#7}
 
 ### Themen
 
@@ -145,7 +145,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Reliabilitätstest
 - Datenerhebung
 
-## Sitzung 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Folien"></a>
+## Sitzung 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Folien"></a> {#10}
 
 ### Themen
 
@@ -163,7 +163,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Aufbereitung der finalen Daten
 - Erstellung Analyseplan und Auswertung
 
-## Sitzung 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Folien"></a>
+## Sitzung 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Folien"></a> {#11}
 
 ### Themen
 
