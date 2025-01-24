@@ -768,5 +768,23 @@ Wichtig: Exaktheit, Konsistenz, Beschriftungen, etc.
   - Wann wäre die Hypothese wider- oder belegt? (*nicht* "bewiesen" oder "verifiziert")
 4. Werten sie die Daten entsprechend aus.
 
+# Sitzung 11 {#s11}
+
+## Zero-shot Klassifikation
+
+1. Entwickeln eines bzw. mehererer Prompts mit Instruktionen (auf englisch)
+2. Dazu passendes Response-Schema für strukturierte Klassifikation entwickeln
+2. Testen der Prompts mit wenigen Stimuli
+3. Nach Verfeinerung der Prompts: alles klassifizieren lassen
+4. Vergleich mit manueller Codierung
+
+
+## Praxis
+
+- RStudio-Server mit hinterlegtem Gemini-API-Key
+- `zero-shot-v2.R` ausprobieren und mit eigenen Daten testen
+- Upload von Stimuli am besten als gezippten Ordner
+- Hilfe: <https://edubruell.github.io/tidyllm/>
+
 
 ## Literatur

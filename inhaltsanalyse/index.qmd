@@ -163,6 +163,13 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Aufbereitung der finalen Daten
 - Erstellung Analyseplan und Auswertung
 
+## Sitzung 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Folien"></a>
+
+### Themen
+
+- Strukturierte Zero-Shot Klassifikation mit `tidyllm`
+- Erstellen eigener Prompts und JSON-Schemata
+
 
 
 ## Literatur
