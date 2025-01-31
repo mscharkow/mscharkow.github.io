@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Name one thing in this world that is non negotiable.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Yeah, bitch! Magnets!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -595,6 +595,76 @@
     "text": "Praxis\n\nRStudio-Server mit hinterlegtem Gemini-API-Key\nzero-shot-v2.R ausprobieren und mit eigenen Daten testen\nUpload von Stimuli am besten als gezippten Ordner\nHilfe: https://edubruell.github.io/tidyllm/"
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#datenmanagement",
+    "href": "inhaltsanalyse/slides.html#datenmanagement",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Datenmanagement",
+    "text": "Datenmanagement\n\ngültige und fehlende Werte prüfen (ggf. NA setzen)\nDatensatz filtern und finale Fallzahlen prüfen\nIndices bilden und auf Plausibilität testen\nggf. finalen Datensatz separat speichern"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#datenbeschreibung-i-univariat",
+    "href": "inhaltsanalyse/slides.html#datenbeschreibung-i-univariat",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Datenbeschreibung I: univariat",
+    "text": "Datenbeschreibung I: univariat\n\nmtcars |&gt; \n  select(am, cyl, hp) |&gt; \n  report::report_table() |&gt; \n  summary()\n\n\n\n\n\nVariable\nMean\nSD\nMin\nMax\nn_Missing\n\n\n\n\nam\n0.40625\n0.4989909\n0\n1\n0\n\n\ncyl\n6.18750\n1.7859216\n4\n8\n0\n\n\nhp\n146.68750\n68.5628685\n52\n335\n0"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#datenbeschreibung-ii-gruppiert",
+    "href": "inhaltsanalyse/slides.html#datenbeschreibung-ii-gruppiert",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Datenbeschreibung II: gruppiert",
+    "text": "Datenbeschreibung II: gruppiert\n\nmtcars |&gt; \n  select(am, cyl, hp) |&gt;\n  group_by(am) |&gt; \n  report::report_table() |&gt; \n  summary()\n\n\n\n\n\nGroup\nVariable\nMean\nSD\nMin\nMax\nn_Missing\n\n\n\n\n0\ncyl\n6.947368\n1.544657\n4\n8\n0\n\n\n0\nhp\n160.263158\n53.908196\n62\n245\n0\n\n\n1\ncyl\n5.076923\n1.552500\n4\n8\n0\n\n\n1\nhp\n126.846154\n84.062324\n52\n335\n0"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#hypothesentests-i",
+    "href": "inhaltsanalyse/slides.html#hypothesentests-i",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Hypothesentests I",
+    "text": "Hypothesentests I\n\nt.test(hp ~ am, data = mtcars) |&gt; \n  report::report_table() |&gt; \n  summary()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifference\nCI\nCI_low\nCI_high\nt\ndf_error\np\nAlternative\nd\n\n\n\n\n33.417\n0.95\n-21.87858\n88.71259\n1.266189\n18.71541\n0.2209796\ntwo.sided\n0.5853677"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#hypothesentests-ii",
+    "href": "inhaltsanalyse/slides.html#hypothesentests-ii",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Hypothesentests II",
+    "text": "Hypothesentests II\n\naov(hp ~ am, data = mtcars) |&gt; \n  report::report_table() |&gt; \n  summary()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSum_Squares\ndf\nMean_Square\nF\np\nEta2\n\n\n\n\nam\n8619.498\n1\n8619.498\n1.886003\n0.1798309\n0.0591483\n\n\nResiduals\n137107.377\n30\n4570.246\nNA\nNA\nNA"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#hypothesentests-iii",
+    "href": "inhaltsanalyse/slides.html#hypothesentests-iii",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Hypothesentests III",
+    "text": "Hypothesentests III\n\nmtcars |&gt; \n  select(am, vs) |&gt; \n  table() |&gt; \n  chisq.test() |&gt; \n  report::report_table() |&gt; \n  summary()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChi2\ndf\np\nMethod\nCramers_v_adjusted\nCramers_v_adjusted_CI_low\nCramers_v_adjusted_CI_high\n\n\n\n\n0.3475355\n1\n0.5555115\nPearson’s Chi-squared test with Yates’ continuity correction\n0\n0\n1"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#hypothesentests-iii-1",
+    "href": "inhaltsanalyse/slides.html#hypothesentests-iii-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Hypothesentests III",
+    "text": "Hypothesentests III\n\ncor.test(~ mpg + hp, data = mtcars) |&gt; \n  report::report_table() |&gt; \n  summary()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter1\nParameter2\nr\nCI\nCI_low\nCI_high\np\nMethod\nAlternative\n\n\n\n\nmpg\nhp\n-0.7761684\n0.95\n-0.8852686\n-0.5860994\n2e-07\nPearson’s product-moment correlation\ntwo.sided"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#visualizisierung-mit-ggplot2",
+    "href": "inhaltsanalyse/slides.html#visualizisierung-mit-ggplot2",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Visualizisierung mit ggplot2",
+    "text": "Visualizisierung mit ggplot2\n\nmtcars |&gt; \n  ggplot(aes(x = factor(cyl), y = hp))+\n  stat_summary(fun.data = mean_cl_boot)+\n  theme_minimal()+ labs(x = \"Zylinder\", y = \"Leistung in PS\", caption = \"n = 32\")"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#tipps",
+    "href": "inhaltsanalyse/slides.html#tipps",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Tipps",
+    "text": "Tipps\n\nreport::report_table() (plus ggf. summary()) ist sehr vielseitig\nfür dichotome Variablen Chi-Quadrat-Test oder Linear Probability Model (= ANOVA/t-Test)\nVisualisierung mit ggplot (theme_minimal oder tinythemes::theme_ipsum_rc)\neigene Farben und Themes sehr leicht möglich (z.B. remotes::install_github('Mikata-Project/ggthemr'))\nggplot2 Grafiken abspeichern mit ggsave(\"myplot.png\", width = 8, height = 4.5)"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#aufgaben-heute-1",
+    "href": "inhaltsanalyse/slides.html#aufgaben-heute-1",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Aufgaben heute",
+    "text": "Aufgaben heute\n\nDaten aufbereiten und auswerten\nErgebnispräsentation (1-2 Folien FF+Hypothesen, 1-2 Folien Methoden, 3-5 Folien Ergebnisse)\nPräsentation maximal 10 min nächste Woche (gern nur 1 Vortragende/r)"
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
@@ -679,8 +749,15 @@
     "text": "Sitzung 11 \n\nThemen\n\nStrukturierte Zero-Shot Klassifikation mit tidyllm\nErstellen eigener Prompts und JSON-Schemata"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#literatur-8",
-    "href": "inhaltsanalyse/index.html#literatur-8",
+    "objectID": "inhaltsanalyse/index.html#12",
+    "href": "inhaltsanalyse/index.html#12",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 12 ",
+    "text": "Sitzung 12 \n\nThemen\n\nDatenaufbereitung und Datenanalyse mit R\n\n\n\nLiteratur\nhttps://stats.ifp.uni-mainz.de/ba-datenanalyse\n\n\nAufgabe zur nächsten Sitzung\n\nDaten auswerten\nErgebnispräsentation vorbereiten (max. 10 min)"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#literatur-9",
+    "href": "inhaltsanalyse/index.html#literatur-9",
     "title": "BA Inhaltsanalyse",
     "section": "Literatur",
     "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
