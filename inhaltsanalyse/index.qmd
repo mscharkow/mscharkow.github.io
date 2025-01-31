@@ -171,6 +171,22 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Erstellen eigener Prompts und JSON-Schemata
 
 
+## Sitzung 12 <a class="bi bi-easel-fill" href="slides.html#/s12" alt="Folien"></a> {#12}
+
+### Themen
+
+- Datenaufbereitung und Datenanalyse mit R
+
+
+### Literatur
+
+<https://stats.ifp.uni-mainz.de/ba-datenanalyse>
+
+### Aufgabe zur nächsten Sitzung
+
+- Daten auswerten
+- Ergebnispräsentation vorbereiten (max. 10 min)
+
 
 ## Literatur
 
