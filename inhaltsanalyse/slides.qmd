@@ -872,5 +872,44 @@ mtcars |>
 - Präsentation **maximal** 10 min nächste Woche (gern nur 1 Vortragende/r)
 
 
+# Sitzung 13 {#s13}
+
+## Evaluation
+
+<https://befragung.uni-mainz.de/evasys/online.php?p=73T1T>
+
+# Abschlusspräsentationen
+
+## Projektbericht I
+
+- Kennzeichnung der eigenen Arbeitsleistung ist verpflichtend (entweder auf dem Deckblatt oder unter der Kapitelüberschrift)
+- Gruppennote ist der Standard, ggf. Wunsch nach Einzelbenotung in der Abgabe-Email vermerken
+- [Eidesstattliche Erklärung](https://www.sozialwissenschaften.uni-mainz.de/files/2024/10/BA_Erklaerung_01.10.24.pdf) anfügen
+- Sie dürfen KI-Tools (sinnvoll!) nutzen, die Arbeit müssen Sie selbst schreiben ([Kennzeichnungspflicht!](https://www.sozialwissenschaften.uni-mainz.de/files/2024/10/Beispiel-Tabelle.pdf)).
+- elektronische Abgabe per E-Mail von Codebuch, Codesheet, Hausarbeit und Analyseskript (R, SPSS, Excel) an scharkow@uni-mainz.de
+- Weitere Informationen (Deckblatt, Schriftgröße, etc.) gibt es auf der [Webseite des Instituts für Publizistik](https://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/)
+
+  
+## Projektbericht II
+
+- ca. 10 Seiten pro Gruppenmitglied, maximal (!) 10.000 Wörter insgesamt. Es gilt Qualität vor Quantität.
+- relevante Grafiken und Tabellen in den Text, ergänzende Analysen in den Anhang
+- Dokumentation der eigenen Arbeit, d.h. Berichte können recycled werden
+- es muss nichts "rauskommen", außer dass sie etwas gelernt haben
+- Formalien und Regeln wissenschaftlicher Arbeit sind wichtig und notenrelevant
+- sprachliche und formale Endredaktion lohnt sich, ebenso schöne Aufbereitung der Ergebnisse
+
+## Projektbericht III
+
+- übliche Gliederung jeder empirischen Studie (gern an Fachartikeln orientieren)
+- zentrale Begriffe sind zu definieren, Forschungsfragen und Hypothesen sind aus der Literatur herzuleiten
+- methodisches Vorgehen ist zu erläutern und zu begründen (u.a. Stichprobe, Codebuch, Reliabilität, etc.) 
+- Abbildungen und Tabellen sind verständlich (!) zu beschriften (inkl. Fallzahl!)
+- Ergebnisse sind inhaltlich zu interpretieren und in den Forschungsstand einzuordnen 
+- (Was ist neu? Was wurde bestätigt? Was nicht? Praktische Implikationen? Weitere Forschung?)
+
+# Fragen?
+
+# Danke fürs Mitmachen!
 
 ## Literatur
