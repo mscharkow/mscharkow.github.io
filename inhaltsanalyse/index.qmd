@@ -187,7 +187,7 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Daten auswerten
 - Ergebnispräsentation vorbereiten (max. 10 min)
 
-## Sitzung 12 <a class="bi bi-easel-fill" href="slides.html#/s13" alt="Folien"></a> {#13}
+## Sitzung 13 <a class="bi bi-easel-fill" href="slides.html#/s13" alt="Folien"></a> {#13}
 
 ### Themen
 
