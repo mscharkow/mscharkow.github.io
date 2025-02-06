@@ -35,6 +35,7 @@ jobs:
             any::xaringanExtra
             any::tidyverse
             any::here
+            any::report
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
