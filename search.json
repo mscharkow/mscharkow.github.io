@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Yeah, bitch! Magnets!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"They're minerals, Marie! Jesus!\",\n        \"author\": \"Hank Schrader\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -665,6 +665,34 @@
     "text": "Aufgaben heute\n\nDaten aufbereiten und auswerten\nErgebnispräsentation (1-2 Folien FF+Hypothesen, 1-2 Folien Methoden, 3-5 Folien Ergebnisse)\nPräsentation maximal 10 min nächste Woche (gern nur 1 Vortragende/r)"
   },
   {
+    "objectID": "inhaltsanalyse/slides.html#evaluation",
+    "href": "inhaltsanalyse/slides.html#evaluation",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Evaluation",
+    "text": "Evaluation\nhttps://befragung.uni-mainz.de/evasys/online.php?p=73T1T"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#projektbericht-i",
+    "href": "inhaltsanalyse/slides.html#projektbericht-i",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Projektbericht I",
+    "text": "Projektbericht I\n\nKennzeichnung der eigenen Arbeitsleistung ist verpflichtend (entweder auf dem Deckblatt oder unter der Kapitelüberschrift)\nGruppennote ist der Standard, ggf. Wunsch nach Einzelbenotung in der Abgabe-Email vermerken\nEidesstattliche Erklärung anfügen\nSie dürfen KI-Tools (sinnvoll!) nutzen, die Arbeit müssen Sie selbst schreiben (Kennzeichnungspflicht!).\nelektronische Abgabe per E-Mail von Codebuch, Codesheet, Hausarbeit und Analyseskript (R, SPSS, Excel) an scharkow@uni-mainz.de\nWeitere Informationen (Deckblatt, Schriftgröße, etc.) gibt es auf der Webseite des Instituts für Publizistik"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#projektbericht-ii",
+    "href": "inhaltsanalyse/slides.html#projektbericht-ii",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Projektbericht II",
+    "text": "Projektbericht II\n\nca. 10 Seiten pro Gruppenmitglied, maximal (!) 10.000 Wörter insgesamt. Es gilt Qualität vor Quantität.\nrelevante Grafiken und Tabellen in den Text, ergänzende Analysen in den Anhang\nDokumentation der eigenen Arbeit, d.h. Berichte können recycled werden\nes muss nichts “rauskommen”, außer dass sie etwas gelernt haben\nFormalien und Regeln wissenschaftlicher Arbeit sind wichtig und notenrelevant\nsprachliche und formale Endredaktion lohnt sich, ebenso schöne Aufbereitung der Ergebnisse"
+  },
+  {
+    "objectID": "inhaltsanalyse/slides.html#projektbericht-iii",
+    "href": "inhaltsanalyse/slides.html#projektbericht-iii",
+    "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
+    "section": "Projektbericht III",
+    "text": "Projektbericht III\n\nübliche Gliederung jeder empirischen Studie (gern an Fachartikeln orientieren)\nzentrale Begriffe sind zu definieren, Forschungsfragen und Hypothesen sind aus der Literatur herzuleiten\nmethodisches Vorgehen ist zu erläutern und zu begründen (u.a. Stichprobe, Codebuch, Reliabilität, etc.)\nAbbildungen und Tabellen sind verständlich (!) zu beschriften (inkl. Fallzahl!)\nErgebnisse sind inhaltlich zu interpretieren und in den Forschungsstand einzuordnen\n(Was ist neu? Was wurde bestätigt? Was nicht? Praktische Implikationen? Weitere Forschung?)"
+  },
+  {
     "objectID": "inhaltsanalyse/slides.html#literatur-1",
     "href": "inhaltsanalyse/slides.html#literatur-1",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
@@ -754,6 +782,13 @@
     "title": "BA Inhaltsanalyse",
     "section": "Sitzung 12 ",
     "text": "Sitzung 12 \n\nThemen\n\nDatenaufbereitung und Datenanalyse mit R\n\n\n\nLiteratur\nhttps://stats.ifp.uni-mainz.de/ba-datenanalyse\n\n\nAufgabe zur nächsten Sitzung\n\nDaten auswerten\nErgebnispräsentation vorbereiten (max. 10 min)"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#13",
+    "href": "inhaltsanalyse/index.html#13",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 12 ",
+    "text": "Sitzung 12 \n\nThemen\n\nAbschlusspräsentationen\nProjektberichte\nEvaluation"
   },
   {
     "objectID": "inhaltsanalyse/index.html#literatur-9",
