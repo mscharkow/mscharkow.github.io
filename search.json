@@ -375,7 +375,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Hey, tell your douchebag brother-in-law to head towards the light.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You don't want a criminal lawyer. You want a criminal lawyer.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
