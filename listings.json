@@ -2,9 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/analyseverfahren/index.html",
+      "/experiment/index.html",
+      "/ccs/index.html",
       "/inhaltsanalyse/index.html",
-      "/ma-datenanalyse/index.html",
-      "/experiment/index.html"
+      "/ma-datenanalyse/index.html"
     ]
   }
 ]
