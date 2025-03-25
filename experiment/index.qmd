@@ -1,6 +1,6 @@
 ---
-title: "BA Seminar Experiment"
-subtitle: "Mediennutzung und Medienwirkung"
+title: "BA Experiment"
+subtitle: "Mediennutzung und -wirkung"
 date: 2025-04-01
 title-block-style: default
 #bibliography: references.bib
@@ -9,11 +9,11 @@ csl: https://www.zotero.org/styles/apa
 
 ```{r}
 source(here::here("funcs.R"))
-start_date = as.Date("2024-10-25")
-end_date = as.Date("2025-02-10")
-no_classes = as.Date(c("2024-11-01", "2024-12-27", "2025-01-03"))
-topics = "Einführung und Grundlagen, CCS: Inhaltsanalyse mit LLM, Themenwahl und Forschungsfragen, Studiendesign und Stichprobe*, CCS: Datenerhebung, Kategorien und Codierung*, 
-CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde), Datenanalyse und -visualisierung*, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
+start_date = as.Date("2025-04-14")
+end_date = as.Date("2025-07-15")
+no_classes = as.Date(c("2025-04-21", "2025-06-09"))
+topics = "Einführung, Themen, CCS: Simulation, Forschungsfragen & Hypothesen, Studiendesign und Stichprobe*, CCS: Stimuluserstellung*, 
+Messung & Fragebogen*, CCS: Soscisurvey*, Pretest, Feldphase, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
 ```
 
 ![](images/exp_title.jpg)
@@ -24,4 +24,11 @@ Im Kurs werden eigene Experimente zu einem selbstgewählten Thema von der Entwic
 
 Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt.
 
-## coming 2025
+## Seminarplan
+
+```{r}
+make_schedule(start_date, end_date, no_classes, topics) |> 
+  mutate(Datum = strftime(Datum, "%d.%m.%Y"))
+```
+
+\* = 5-Minuten-Präsentation des Zwischenstands

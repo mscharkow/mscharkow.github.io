@@ -1,0 +1,35 @@
+---
+title: "BA Anwendungsorientierte Analyseverfahren"
+#subtitle: "Mediennutzung und Medienwirkung"
+date: 2025-04-01
+title-block-style: default
+#bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+---
+
+```{r}
+source(here::here("funcs.R"))
+start_date = as.Date("2025-04-23")
+end_date = as.Date("2025-07-17")
+no_classes = as.Date(c("2025-05-14"))
+topics = "Einführung, GLM Grundlagen, Lineare Regression, Mittelwertvergleiche, Multiple Regression, 
+Modellannahmen, Modellvorhersagen, Moderationsanalyse I, Moderationsanalyse II, Logistische Regression, Multilevel-Regression, Abschluss" |> str_split_1(", ") |> str_squish()
+```
+
+![](images/aa_title.jpg)
+
+## Beschreibung
+
+In dieser Vorlesung werden am Beispiel von kommunikationswissenschaftlichen Studien und praktischen Beispielen anwendungsorientiert vor allem das GLM und Regressionsmodelle behandelt. Neben der konzeptionellen Diskussion der Verfahren steht die praktische Umsetzung in R im Vordergrund.
+
+## Vorlesungsplan
+
+```{r}
+make_schedule(start_date, end_date, no_classes, topics) |> 
+  mutate(Datum = strftime(Datum, "%d.%m.%Y"))
+```
+
+
+## Materialien
+
+[Kurs-Website mit R-Code, Daten und Hausaufgaben](https://stats.ifp.uni-mainz.de/ba-aa-vl/)

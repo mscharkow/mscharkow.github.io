@@ -1,0 +1,32 @@
+---
+title: "MA Computational Communication Science "
+#subtitle: "Mediennutzung und -wirkung"
+date: 2025-04-01
+title-block-style: default
+#bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+---
+
+```{r}
+source(here::here("funcs.R"))
+start_date = as.Date("2025-04-16")
+end_date = as.Date("2025-07-18")
+no_classes = as.Date(c("2025-05-14"))
+topics = "Einführung und Grundlagen, CCS: Inhaltsanalyse mit LLM, Themenwahl und Forschungsfragen, Studiendesign und Stichprobe*, CCS: Datenerhebung, Kategorien und Codierung*, 
+CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde), Datenanalyse und -visualisierung*, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
+```
+
+![](images/ccs_title.jpg)
+
+## Description
+
+Computational communication science focuses on analyzing communication processes and structures using computational methods such as automated content analysis or agent-based modeling.
+
+In this seminar, we will examine key concepts, theoretical foundations, and empirical studies within this research field. We will also apply computational methods in practical exercises to better understand how they can be used to investigate media content and processes of media use.
+
+## Schedule
+
+```{r, eval = F}
+make_schedule(start_date, end_date, no_classes, topics) |> 
+  mutate(Datum = strftime(Datum, "%d.%m.%Y"))
+```

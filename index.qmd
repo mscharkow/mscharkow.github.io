@@ -13,7 +13,7 @@ listing:
     - "*/index.qmd"
   fields: [image, title, subtitle, date]
   sort: 
-    - "date asc"
+    - "date desc"
     - title
 ---
 
