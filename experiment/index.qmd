@@ -5,6 +5,7 @@ date: 2025-04-01
 title-block-style: default
 #bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
+bibliography: references.bib
 ---
 
 ```{r}
@@ -32,3 +33,18 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 ```
 
 \* = 5-Minuten-Präsentation des Zwischenstands
+
+## Sitzung 1 <a class="bi bi-easel-fill" href="slides.html#/s1" alt="Folien"></a> {#1}
+
+### Themen
+
+-   Einführung, Ablauf, Leistungsanforderungen, Formalia
+
+### Literatur
+
+@koch2019 [Kap. 1, 2]
+
+### Aufgabe zur nächsten Sitzung
+
+- Videos zu Grundlagen des Experiments schauen
+- Vorschlag für ein eigenes Experiment erstellen (1/2 A4 Seite), vor allem Versuchsbedingungen und Outcome-Variable(n)

@@ -1,0 +1,108 @@
+---
+title: "Experiment: Mediennutzung und -wirkung"
+author: "Prof. Dr. Michael Scharkow"
+date: today
+date-format: "[Sommersemester] 2025"
+format: minimalist-revealjs
+df-print: kable
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+---
+
+# Sitzung 1 {#s1}
+
+```{r}
+library(tidyverse)
+```
+
+
+## Kursbeschreibung
+
+Im Kurs werden eigene Experimente zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.
+
+Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch untereinander und mit mir.
+
+## Lernziele
+
+-   Wie führen wir ein Forschungsprojekt durch?
+-   Wie koordinieren und managen wir ein komplexes Projekt mit mehren Mitarbeitern unter Zeitdruck? (Projektmanagement)
+-   Wie präsentieren wir Projektfortschritte, Forschungsprozesse und Forschungsergebnisse?
+-   Wie geben wir konstruktives Feedback im Forschungsprozess? Wie nehmen wir Feedback an und setzen es um?
+-   Spaß haben in der Forschung!
+
+## Warum Computational Methods?
+
+-   mein Lehr- und Forschungsbereich :-)
+-   hohe Nachfrage in der Kommunikationswissenschaft
+-   relevante Skills in vielen Jobs außerhalb der Wissenschaft (Data Science, Journalismus, Marktforschung)
+-   Ziel ist vor allem Verständnis der Grundlagen und Dinge ausprobieren
+-   für das eigenene Projekte kann jede Gruppe so viele oder wenige automatische Verfahren verwenden, wie sie will
+
+
+## Studentische Arbeitsgruppen
+
+-   maximal 4-5 Studierende pro Gruppe (4-5 Gruppen im Seminar)
+-   ‚Learning by doing‘ in der AG
+-   Von anderen AGs lernen über andere Methoden, Themen und Arbeitsweisen
+-   Lernen von Feedback zur eigenen Arbeit und der Arbeit der anderen AGs
+
+## Struktur der Sitzungen
+
+-   min. **zwei** Team-Mitglieder sollten da sein (1x Bericht, 1x Feedback an andere)
+-   5-Minuten-Gruppenbericht (jedes Gruppenmitglied ist einmal an der Reihe) und Feedbackrunde
+-   ggf. Refresher und Diskussion der methodischen Grundlagen
+-   Diskussion der nächsten Arbeitsschritte
+
+## Gruppenberichte
+
+-   jedes Gruppenmitglied ist federführend für ein Sitzungsthema und den dazugehörigen Bericht in der jeweils nächsten Sitzung zuständig
+-   die ggf. übrigbleibende Gruppenberichte machen sie als Gruppe (z.B. Themen)
+
+### Aufgaben
+
+-   Protokollierung des Diskussionsprozesse in der AG
+-   Vorbereitung einer Kurzpräsentation (5 min) mit 3-4 Folien
+-   Upload von Folien spätestens Mo 8h, Präsentation in der Sitzung
+
+## Themen
+
+-   in diesem Seminar keine zentrale Themenvorgabe
+-   jede Gruppe kann und soll sich ein eigenes Thema und eine eigene Forschungsfrage erarbeiten
+-   wichtig ist, ob Sie das Thema ein Semester lang motiviert, aufwändige und schwierige Gruppenarbeiten zu erfüllen
+
+**Themenvorschlag dieses Semester:** Irgendwas mit generativer KI (Text, Bild, etc.)
+
+## Sitzungen zu Computational Methods
+
+-   Material <https://stats.ifp.uni-mainz.de/ba-ccs-track>
+-   bitte eigenes Notebook zu den praktischen Sitzungen mitbringen
+-   wir verwenden ggf. R und RStudio, <https://rstudio.ifp.uni-mainz.de>
+-   gern paarweise arbeiten, das hilft in der Sitzung und macht mehr Spaß
+-   Lernziel ist, grundlegende Methoden kennenzulernen und Sachen einfach auszuprobieren
+
+## Aufgaben zur nächsten Sitzung
+
+### Grundlagen wiederholen
+
+-   Bitte schauen Sie diese Videos und/oder lesen Sie die einführenden Kapitel im Lehrbuch.
+    -   <https://video.uni-mainz.de/Panopto/Pages/Viewer.aspx?id=be301c13-62dc-4038-a1ce-aba500e7bc0c>
+    -   <https://video.uni-mainz.de/Panopto/Pages/Viewer.aspx?id=49adf458-ec65-4619-ba19-aba300e08f16>
+
+
+## Experiment vorschlagen
+
+- Schauen Sie die auf Moodle hochgeladenen Beispielstudien zur Inspiration an.
+- Überlegen Sie, was Sie gern experimentell untersuchen wollen. Die Machbarkeit ist erst einmal sekundär.
+- Fassen Sie Ihre Überlegungen auf max. 1/2 A4-Seite zusammen. Diese stellen Sie in der nächsten Sitzung mündlich kurz vor.
+- Relevant sind grob Thema,  Versuchsbedingen, Outcome-Variablen 
+
+## Literatur
+
+::: {layout-ncol="2"}
+Koch, T., Peter, C., & Müller, P. (2019). *Das Experiment in der Kommunikations- und Medienwissenschaft*. Grundlagen, Durchführung und Auswertung experimenteller Forschung. Wiesbaden: Springer VS.
+
+![](https://imageservice.azureedge.net/api/getimage?productId=23864269&width=270)
+:::
+
+
+## Literatur
