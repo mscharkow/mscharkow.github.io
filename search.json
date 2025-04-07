@@ -14,144 +14,102 @@
     "text": "Schedule"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Michael Scharkow",
-    "section": "",
-    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\n\n\nJohannes-Gutenberg University Mainz  Department of Communication  Jakob-Welder-Weg 12  55128 Mainz  Germany\nscharkow@uni-mainz.de"
+    "objectID": "experiment/slides.html#kursbeschreibung",
+    "href": "experiment/slides.html#kursbeschreibung",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Kursbeschreibung",
+    "text": "Kursbeschreibung\nIm Kurs werden eigene Experimente zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.\nDer Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch untereinander und mit mir."
   },
   {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "Michael Scharkow",
-    "section": "",
-    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\n\n\nJohannes-Gutenberg University Mainz  Department of Communication  Jakob-Welder-Weg 12  55128 Mainz  Germany\nscharkow@uni-mainz.de"
+    "objectID": "experiment/slides.html#lernziele",
+    "href": "experiment/slides.html#lernziele",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Lernziele",
+    "text": "Lernziele\n\nWie führen wir ein Forschungsprojekt durch?\nWie koordinieren und managen wir ein komplexes Projekt mit mehren Mitarbeitern unter Zeitdruck? (Projektmanagement)\nWie präsentieren wir Projektfortschritte, Forschungsprozesse und Forschungsergebnisse?\nWie geben wir konstruktives Feedback im Forschungsprozess? Wie nehmen wir Feedback an und setzen es um?\nSpaß haben in der Forschung!"
   },
   {
-    "objectID": "index.html#teaching",
-    "href": "index.html#teaching",
-    "title": "Michael Scharkow",
-    "section": "Teaching",
-    "text": "Teaching"
+    "objectID": "experiment/slides.html#warum-computational-methods",
+    "href": "experiment/slides.html#warum-computational-methods",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Warum Computational Methods?",
+    "text": "Warum Computational Methods?\n\nmein Lehr- und Forschungsbereich :-)\nhohe Nachfrage in der Kommunikationswissenschaft\nrelevante Skills in vielen Jobs außerhalb der Wissenschaft (Data Science, Journalismus, Marktforschung)\nZiel ist vor allem Verständnis der Grundlagen und Dinge ausprobieren\nfür das eigenene Projekte kann jede Gruppe so viele oder wenige automatische Verfahren verwenden, wie sie will"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#beschreibung",
-    "href": "inhaltsanalyse/index.html#beschreibung",
-    "title": "BA Inhaltsanalyse",
-    "section": "Beschreibung",
-    "text": "Beschreibung\nIm Kurs werden eigene Inhaltsanalysen zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.\nDer Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt."
+    "objectID": "experiment/slides.html#studentische-arbeitsgruppen",
+    "href": "experiment/slides.html#studentische-arbeitsgruppen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Studentische Arbeitsgruppen",
+    "text": "Studentische Arbeitsgruppen\n\nmaximal 4-5 Studierende pro Gruppe (4-5 Gruppen im Seminar)\n‚Learning by doing‘ in der AG\nVon anderen AGs lernen über andere Methoden, Themen und Arbeitsweisen\nLernen von Feedback zur eigenen Arbeit und der Arbeit der anderen AGs"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#seminarplan",
-    "href": "inhaltsanalyse/index.html#seminarplan",
-    "title": "BA Inhaltsanalyse",
-    "section": "Seminarplan",
-    "text": "Seminarplan\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n25.10.2024\nEinführung und Grundlagen\n\n\n2\n08.11.2024\nCCS: Inhaltsanalyse mit LLM\n\n\n3\n15.11.2024\nThemenwahl und Forschungsfragen\n\n\n4\n22.11.2024\nStudiendesign und Stichprobe*\n\n\n5\n29.11.2024\nCCS: Datenerhebung\n\n\n6\n06.12.2024\nKategorien und Codierung*\n\n\n7\n13.12.2024\nCCS: Reli-Test und Validierung*\n\n\n8\n20.12.2024\nCodebuch-Finalisierung\n\n\n9\n10.01.2025\nFeldphase (Sprechstunde)\n\n\n10\n17.01.2025\nDatenanalyse und -visualisierung*\n\n\n11\n24.01.2025\nCCS: Zero-Shot Codierung/Validierung\n\n\n12\n31.01.2025\nErgebnisaufbereitung\n\n\n13\n07.02.2025\nAbschluss\n\n\n\n\n\n\n* = 5-Minuten-Präsentation des Zwischenstands"
+    "objectID": "experiment/slides.html#struktur-der-sitzungen",
+    "href": "experiment/slides.html#struktur-der-sitzungen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Struktur der Sitzungen",
+    "text": "Struktur der Sitzungen\n\nmin. zwei Team-Mitglieder sollten da sein (1x Bericht, 1x Feedback an andere)\n5-Minuten-Gruppenbericht (jedes Gruppenmitglied ist einmal an der Reihe) und Feedbackrunde\nggf. Refresher und Diskussion der methodischen Grundlagen\nDiskussion der nächsten Arbeitsschritte"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#1",
-    "href": "inhaltsanalyse/index.html#1",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 1 ",
-    "text": "Sitzung 1 \n\nThemen\n\nEinführung, Ablauf, Leistungsanforderungen, Formalia\nDefinition und Grundlagen Inhaltsanalyse\nmanuelle vs. LLM-basierte Codierung\n\n\n\nLiteratur\nBenoit et al. (2009); Rössler (2017, Kapitel 1, 2)\n\n\nAufgabe zur nächsten Sitzung\nZero-Shot-Codierung in R mit Hausaufgabe"
+    "objectID": "experiment/slides.html#gruppenberichte",
+    "href": "experiment/slides.html#gruppenberichte",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Gruppenberichte",
+    "text": "Gruppenberichte\n\njedes Gruppenmitglied ist federführend für ein Sitzungsthema und den dazugehörigen Bericht in der jeweils nächsten Sitzung zuständig\ndie ggf. übrigbleibende Gruppenberichte machen sie als Gruppe (z.B. Themen)\n\nAufgaben\n\nProtokollierung des Diskussionsprozesse in der AG\nVorbereitung einer Kurzpräsentation (5 min) mit 3-4 Folien\nUpload von Folien spätestens Mo 8h, Präsentation in der Sitzung"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#2",
-    "href": "inhaltsanalyse/index.html#2",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 2 ",
-    "text": "Sitzung 2 \n\nThemen\n\nTextcodierung mit Large Language Models\nBildcodierung mit multimodalen Modellen\nPrompting-Strategien für Zero- und Few-Shot-Codierung\npraktische Tipps mit für die Batch-Codierung mit R und {tidyllm}\n\n\n\nLiteratur\nTörnberg (2023); Weber & Reichardt (2024)\n\n\nAufgabe zur nächsten Sitzung\nGruppenbildung und Ideen für Themen und Forschungsfragen"
+    "objectID": "experiment/slides.html#themen",
+    "href": "experiment/slides.html#themen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Themen",
+    "text": "Themen\n\nin diesem Seminar keine zentrale Themenvorgabe\njede Gruppe kann und soll sich ein eigenes Thema und eine eigene Forschungsfrage erarbeiten\nwichtig ist, ob Sie das Thema ein Semester lang motiviert, aufwändige und schwierige Gruppenarbeiten zu erfüllen\n\nThemenvorschlag dieses Semester: Irgendwas mit generativer KI (Text, Bild, etc.)"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#3",
-    "href": "inhaltsanalyse/index.html#3",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 3 ",
-    "text": "Sitzung 3 \n\nThemen\n\nVorstellung von Themenideen\nHerleitung von Forschungsfragen und Hypothesen\nBegriffsarbeit (semantische und dimensionale Analyse)\n\n\n\nLiteratur\nRössler (2017, Kapitel 3)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren\nGruppen und Verantwortlichkeiten melden"
+    "objectID": "experiment/slides.html#sitzungen-zu-computational-methods",
+    "href": "experiment/slides.html#sitzungen-zu-computational-methods",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Sitzungen zu Computational Methods",
+    "text": "Sitzungen zu Computational Methods\n\nMaterial https://stats.ifp.uni-mainz.de/ba-ccs-track\nbitte eigenes Notebook zu den praktischen Sitzungen mitbringen\nwir verwenden ggf. R und RStudio, https://rstudio.ifp.uni-mainz.de\ngern paarweise arbeiten, das hilft in der Sitzung und macht mehr Spaß\nLernziel ist, grundlegende Methoden kennenzulernen und Sachen einfach auszuprobieren"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#4",
-    "href": "inhaltsanalyse/index.html#4",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 4 ",
-    "text": "Sitzung 4 \n\nThemen\n\nVorstellung der Forschungsfragen und Hypothesen\nStudiendesign bei Inhaltsanalysen\nStichproben und Untersuchungseinheiten\n\n\n\nLiteratur\nRössler (2017, Kapitel 4)\n\n\nAufgabe zur nächsten Sitzung\nDatenerhebung in R mit Hausaufgaben 1 und 2"
+    "objectID": "experiment/slides.html#aufgaben-zur-nächsten-sitzung",
+    "href": "experiment/slides.html#aufgaben-zur-nächsten-sitzung",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgaben zur nächsten Sitzung",
+    "text": "Aufgaben zur nächsten Sitzung\nGrundlagen wiederholen\n\nBitte schauen Sie diese Videos und/oder lesen Sie die einführenden Kapitel im Lehrbuch.\n\nhttps://video.uni-mainz.de/Panopto/Pages/Viewer.aspx?id=be301c13-62dc-4038-a1ce-aba500e7bc0c\nhttps://video.uni-mainz.de/Panopto/Pages/Viewer.aspx?id=49adf458-ec65-4619-ba19-aba300e08f16"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#5",
-    "href": "inhaltsanalyse/index.html#5",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 5 ",
-    "text": "Sitzung 5 \n\nThemen\n\nErhebung von Online-Inhalten in R\nNutzung von CLI-Tools für Datenerhebung und -verarbeitung\n\n\n\nLiteratur\nHaim (2023, Kapitel 5 und 6)"
+    "objectID": "experiment/slides.html#experiment-vorschlagen",
+    "href": "experiment/slides.html#experiment-vorschlagen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Experiment vorschlagen",
+    "text": "Experiment vorschlagen\n\nSchauen Sie die auf Moodle hochgeladenen Beispielstudien zur Inspiration an.\nÜberlegen Sie, was Sie gern experimentell untersuchen wollen. Die Machbarkeit ist erst einmal sekundär.\nFassen Sie Ihre Überlegungen auf max. 1/2 A4-Seite zusammen. Diese stellen Sie in der nächsten Sitzung mündlich kurz vor.\nRelevant sind grob Thema, Versuchsbedingen, Outcome-Variablen"
   },
   {
-    "objectID": "inhaltsanalyse/index.html#6",
-    "href": "inhaltsanalyse/index.html#6",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 6 ",
-    "text": "Sitzung 6 \n\nThemen\n\nCodebuchentwicklung und Kategorienbildung\nDateneingabe und Probecodierung\n\n\n\nLiteratur\nRössler (2017, Kapitel 6–9)\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Design und Stichprobe\nerste Codebuch-Fassung\nProbecodierung"
-  },
-  {
-    "objectID": "inhaltsanalyse/index.html#7",
-    "href": "inhaltsanalyse/index.html#7",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 7 ",
-    "text": "Sitzung 7 \n\nThemen\n\nCodebuchentwicklung\nReliabilität und Validität\n\n\n\nLiteratur\nRössler (2017, Kapitel 12)\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Codebuch\nReliabilitätstest\nDatenerhebung"
-  },
-  {
-    "objectID": "inhaltsanalyse/index.html#10",
-    "href": "inhaltsanalyse/index.html#10",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 10 ",
-    "text": "Sitzung 10 \n\nThemen\n\nDatenaufbereitung\nDatenanalyse\n\n\n\nLiteratur\nhttps://stats.ifp.uni-mainz.de/ba-datenanalyse\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Codierung\nAufbereitung der finalen Daten\nErstellung Analyseplan und Auswertung"
-  },
-  {
-    "objectID": "inhaltsanalyse/index.html#11",
-    "href": "inhaltsanalyse/index.html#11",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 11 ",
-    "text": "Sitzung 11 \n\nThemen\n\nStrukturierte Zero-Shot Klassifikation mit tidyllm\nErstellen eigener Prompts und JSON-Schemata"
-  },
-  {
-    "objectID": "inhaltsanalyse/index.html#12",
-    "href": "inhaltsanalyse/index.html#12",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 12 ",
-    "text": "Sitzung 12 \n\nThemen\n\nDatenaufbereitung und Datenanalyse mit R\n\n\n\nLiteratur\nhttps://stats.ifp.uni-mainz.de/ba-datenanalyse\n\n\nAufgabe zur nächsten Sitzung\n\nDaten auswerten\nErgebnispräsentation vorbereiten (max. 10 min)"
-  },
-  {
-    "objectID": "inhaltsanalyse/index.html#13",
-    "href": "inhaltsanalyse/index.html#13",
-    "title": "BA Inhaltsanalyse",
-    "section": "Sitzung 13 ",
-    "text": "Sitzung 13 \n\nThemen\n\nAbschlusspräsentationen\nProjektberichte\nEvaluation"
-  },
-  {
-    "objectID": "inhaltsanalyse/index.html#literatur-9",
-    "href": "inhaltsanalyse/index.html#literatur-9",
-    "title": "BA Inhaltsanalyse",
+    "objectID": "experiment/slides.html#literatur",
+    "href": "experiment/slides.html#literatur",
+    "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Literatur",
-    "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
+    "text": "Literatur\n\n\n\n\n\n\nKoch, T., Peter, C., & Müller, P. (2019). Das Experiment in der Kommunikations- und Medienwissenschaft. Grundlagen, Durchführung und Auswertung experimenteller Forschung. Wiesbaden: Springer VS."
   },
   {
-    "objectID": "analyseverfahren/index.html#beschreibung",
-    "href": "analyseverfahren/index.html#beschreibung",
-    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "objectID": "experiment/slides.html#literatur-1",
+    "href": "experiment/slides.html#literatur-1",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Literatur",
+    "text": "Literatur"
+  },
+  {
+    "objectID": "ma-datenanalyse/index.html#beschreibung",
+    "href": "ma-datenanalyse/index.html#beschreibung",
+    "title": "MA Fortgeschrittene Datenanalyse mit R",
     "section": "Beschreibung",
-    "text": "Beschreibung\nIn dieser Vorlesung werden am Beispiel von kommunikationswissenschaftlichen Studien und praktischen Beispielen anwendungsorientiert vor allem das GLM und Regressionsmodelle behandelt. Neben der konzeptionellen Diskussion der Verfahren steht die praktische Umsetzung in R im Vordergrund."
+    "text": "Beschreibung\nZiel der Übung ist die Vermittlung von praktischen Kenntnissen in der fortgeschrittenen Datenanalyse mit R. Behandelt werden lineare Modelle, Längsschnitt- und Multilevel-Modelle sowie explorative und konfirmatorische Faktorenanalyse."
   },
   {
-    "objectID": "analyseverfahren/index.html#vorlesungsplan",
-    "href": "analyseverfahren/index.html#vorlesungsplan",
-    "title": "BA Anwendungsorientierte Analyseverfahren",
-    "section": "Vorlesungsplan",
-    "text": "Vorlesungsplan\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n23.04.2025\nEinführung\n\n\n2\n30.04.2025\nGLM Grundlagen\n\n\n3\n07.05.2025\nLineare Regression\n\n\n4\n21.05.2025\nMittelwertvergleiche\n\n\n5\n28.05.2025\nMultiple Regression\n\n\n6\n04.06.2025\nModellannahmen\n\n\n7\n11.06.2025\nModellvorhersagen\n\n\n8\n18.06.2025\nModerationsanalyse I\n\n\n9\n25.06.2025\nModerationsanalyse II\n\n\n10\n02.07.2025\nLogistische Regression\n\n\n11\n09.07.2025\nMultilevel-Regression\n\n\n12\n16.07.2025\nAbschluss"
-  },
-  {
-    "objectID": "analyseverfahren/index.html#materialien",
-    "href": "analyseverfahren/index.html#materialien",
-    "title": "BA Anwendungsorientierte Analyseverfahren",
-    "section": "Materialien",
-    "text": "Materialien\nKurs-Website mit R-Code, Daten und Hausaufgaben"
+    "objectID": "ma-datenanalyse/index.html#seminarplan",
+    "href": "ma-datenanalyse/index.html#seminarplan",
+    "title": "MA Fortgeschrittene Datenanalyse mit R",
+    "section": "Seminarplan",
+    "text": "Seminarplan\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n22.10.2024\nR Basics (Blocktermin Fr)\n\n\n2\n29.10.2024\nR Basics (Blocktermin Mo)\n\n\n3\n05.11.2024\nANOVA und Regression\n\n\n4\n12.11.2024\nModerationsanalyse\n\n\n5\n19.11.2024\nMediationsanalyse und Pfadmodelle\n\n\n6\n26.11.2024\nLagged und Cross-Lagged Modelle\n\n\n7\n03.12.2024\nMultilevel-Längsschnittanalyse\n\n\n8\n10.12.2024\nMultilevelmodelle\n\n\n9\n17.12.2024\nWiederholung\n\n\n10\n07.01.2025\nÜbung (keine Sitzung)\n\n\n11\n14.01.2025\nExplorative Faktorenanalyse\n\n\n12\n21.01.2025\nKonfirmatorische Faktorenanalyse\n\n\n13\n28.01.2025\nMessinvarianz\n\n\n14\n04.02.2025\nWiederholung/Übung"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#lernziele",
@@ -501,7 +459,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Clearly, his taste in women is the same as his taste in lawyers.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Sometimes it just feels better not to talk. At All. About Anything. To Anyone.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -826,18 +784,144 @@
     "text": "Literatur\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nKromrey, H., Roose, J., & Strübing, J. (2016). Empirische Sozialforschung: Modelle und Methoden der standardisierten Datenerhebung und Datenauswertung (Bd. 1040). Utb.\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
   },
   {
-    "objectID": "ma-datenanalyse/index.html#beschreibung",
-    "href": "ma-datenanalyse/index.html#beschreibung",
-    "title": "MA Fortgeschrittene Datenanalyse mit R",
+    "objectID": "analyseverfahren/index.html#beschreibung",
+    "href": "analyseverfahren/index.html#beschreibung",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
     "section": "Beschreibung",
-    "text": "Beschreibung\nZiel der Übung ist die Vermittlung von praktischen Kenntnissen in der fortgeschrittenen Datenanalyse mit R. Behandelt werden lineare Modelle, Längsschnitt- und Multilevel-Modelle sowie explorative und konfirmatorische Faktorenanalyse."
+    "text": "Beschreibung\nIn dieser Vorlesung werden am Beispiel von kommunikationswissenschaftlichen Studien und praktischen Beispielen anwendungsorientiert vor allem das GLM und Regressionsmodelle behandelt. Neben der konzeptionellen Diskussion der Verfahren steht die praktische Umsetzung in R im Vordergrund."
   },
   {
-    "objectID": "ma-datenanalyse/index.html#seminarplan",
-    "href": "ma-datenanalyse/index.html#seminarplan",
-    "title": "MA Fortgeschrittene Datenanalyse mit R",
+    "objectID": "analyseverfahren/index.html#vorlesungsplan",
+    "href": "analyseverfahren/index.html#vorlesungsplan",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Vorlesungsplan",
+    "text": "Vorlesungsplan\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n23.04.2025\nEinführung\n\n\n2\n30.04.2025\nGLM Grundlagen\n\n\n3\n07.05.2025\nLineare Regression\n\n\n4\n21.05.2025\nMittelwertvergleiche\n\n\n5\n28.05.2025\nMultiple Regression\n\n\n6\n04.06.2025\nModellannahmen\n\n\n7\n11.06.2025\nModellvorhersagen\n\n\n8\n18.06.2025\nModerationsanalyse I\n\n\n9\n25.06.2025\nModerationsanalyse II\n\n\n10\n02.07.2025\nLogistische Regression\n\n\n11\n09.07.2025\nMultilevel-Regression\n\n\n12\n16.07.2025\nAbschluss"
+  },
+  {
+    "objectID": "analyseverfahren/index.html#materialien",
+    "href": "analyseverfahren/index.html#materialien",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Materialien",
+    "text": "Materialien\nKurs-Website mit R-Code, Daten und Hausaufgaben"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#beschreibung",
+    "href": "inhaltsanalyse/index.html#beschreibung",
+    "title": "BA Inhaltsanalyse",
+    "section": "Beschreibung",
+    "text": "Beschreibung\nIm Kurs werden eigene Inhaltsanalysen zu einem selbstgewählten Thema von der Entwicklung der Forschungsfrage bis hin zur Darstellung der Ergebnisse praktisch eingeübt.\nDer Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sich allein oder in der Gruppe die Inhalte an, die Sitzungen dienen vornehmlich dem Austausch und der gemeinsamen Arbeit am Forschungsprojekt."
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#seminarplan",
+    "href": "inhaltsanalyse/index.html#seminarplan",
+    "title": "BA Inhaltsanalyse",
     "section": "Seminarplan",
-    "text": "Seminarplan\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n22.10.2024\nR Basics (Blocktermin Fr)\n\n\n2\n29.10.2024\nR Basics (Blocktermin Mo)\n\n\n3\n05.11.2024\nANOVA und Regression\n\n\n4\n12.11.2024\nModerationsanalyse\n\n\n5\n19.11.2024\nMediationsanalyse und Pfadmodelle\n\n\n6\n26.11.2024\nLagged und Cross-Lagged Modelle\n\n\n7\n03.12.2024\nMultilevel-Längsschnittanalyse\n\n\n8\n10.12.2024\nMultilevelmodelle\n\n\n9\n17.12.2024\nWiederholung\n\n\n10\n07.01.2025\nÜbung (keine Sitzung)\n\n\n11\n14.01.2025\nExplorative Faktorenanalyse\n\n\n12\n21.01.2025\nKonfirmatorische Faktorenanalyse\n\n\n13\n28.01.2025\nMessinvarianz\n\n\n14\n04.02.2025\nWiederholung/Übung"
+    "text": "Seminarplan\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n25.10.2024\nEinführung und Grundlagen\n\n\n2\n08.11.2024\nCCS: Inhaltsanalyse mit LLM\n\n\n3\n15.11.2024\nThemenwahl und Forschungsfragen\n\n\n4\n22.11.2024\nStudiendesign und Stichprobe*\n\n\n5\n29.11.2024\nCCS: Datenerhebung\n\n\n6\n06.12.2024\nKategorien und Codierung*\n\n\n7\n13.12.2024\nCCS: Reli-Test und Validierung*\n\n\n8\n20.12.2024\nCodebuch-Finalisierung\n\n\n9\n10.01.2025\nFeldphase (Sprechstunde)\n\n\n10\n17.01.2025\nDatenanalyse und -visualisierung*\n\n\n11\n24.01.2025\nCCS: Zero-Shot Codierung/Validierung\n\n\n12\n31.01.2025\nErgebnisaufbereitung\n\n\n13\n07.02.2025\nAbschluss\n\n\n\n\n\n\n* = 5-Minuten-Präsentation des Zwischenstands"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#1",
+    "href": "inhaltsanalyse/index.html#1",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 1 ",
+    "text": "Sitzung 1 \n\nThemen\n\nEinführung, Ablauf, Leistungsanforderungen, Formalia\nDefinition und Grundlagen Inhaltsanalyse\nmanuelle vs. LLM-basierte Codierung\n\n\n\nLiteratur\nBenoit et al. (2009); Rössler (2017, Kapitel 1, 2)\n\n\nAufgabe zur nächsten Sitzung\nZero-Shot-Codierung in R mit Hausaufgabe"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#2",
+    "href": "inhaltsanalyse/index.html#2",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 2 ",
+    "text": "Sitzung 2 \n\nThemen\n\nTextcodierung mit Large Language Models\nBildcodierung mit multimodalen Modellen\nPrompting-Strategien für Zero- und Few-Shot-Codierung\npraktische Tipps mit für die Batch-Codierung mit R und {tidyllm}\n\n\n\nLiteratur\nTörnberg (2023); Weber & Reichardt (2024)\n\n\nAufgabe zur nächsten Sitzung\nGruppenbildung und Ideen für Themen und Forschungsfragen"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#3",
+    "href": "inhaltsanalyse/index.html#3",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 3 ",
+    "text": "Sitzung 3 \n\nThemen\n\nVorstellung von Themenideen\nHerleitung von Forschungsfragen und Hypothesen\nBegriffsarbeit (semantische und dimensionale Analyse)\n\n\n\nLiteratur\nRössler (2017, Kapitel 3)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren\nGruppen und Verantwortlichkeiten melden"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#4",
+    "href": "inhaltsanalyse/index.html#4",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 4 ",
+    "text": "Sitzung 4 \n\nThemen\n\nVorstellung der Forschungsfragen und Hypothesen\nStudiendesign bei Inhaltsanalysen\nStichproben und Untersuchungseinheiten\n\n\n\nLiteratur\nRössler (2017, Kapitel 4)\n\n\nAufgabe zur nächsten Sitzung\nDatenerhebung in R mit Hausaufgaben 1 und 2"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#5",
+    "href": "inhaltsanalyse/index.html#5",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 5 ",
+    "text": "Sitzung 5 \n\nThemen\n\nErhebung von Online-Inhalten in R\nNutzung von CLI-Tools für Datenerhebung und -verarbeitung\n\n\n\nLiteratur\nHaim (2023, Kapitel 5 und 6)"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#6",
+    "href": "inhaltsanalyse/index.html#6",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 6 ",
+    "text": "Sitzung 6 \n\nThemen\n\nCodebuchentwicklung und Kategorienbildung\nDateneingabe und Probecodierung\n\n\n\nLiteratur\nRössler (2017, Kapitel 6–9)\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Design und Stichprobe\nerste Codebuch-Fassung\nProbecodierung"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#7",
+    "href": "inhaltsanalyse/index.html#7",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 7 ",
+    "text": "Sitzung 7 \n\nThemen\n\nCodebuchentwicklung\nReliabilität und Validität\n\n\n\nLiteratur\nRössler (2017, Kapitel 12)\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Codebuch\nReliabilitätstest\nDatenerhebung"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#10",
+    "href": "inhaltsanalyse/index.html#10",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 10 ",
+    "text": "Sitzung 10 \n\nThemen\n\nDatenaufbereitung\nDatenanalyse\n\n\n\nLiteratur\nhttps://stats.ifp.uni-mainz.de/ba-datenanalyse\n\n\nAufgabe zur nächsten Sitzung\n\nFinalisierung Codierung\nAufbereitung der finalen Daten\nErstellung Analyseplan und Auswertung"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#11",
+    "href": "inhaltsanalyse/index.html#11",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 11 ",
+    "text": "Sitzung 11 \n\nThemen\n\nStrukturierte Zero-Shot Klassifikation mit tidyllm\nErstellen eigener Prompts und JSON-Schemata"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#12",
+    "href": "inhaltsanalyse/index.html#12",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 12 ",
+    "text": "Sitzung 12 \n\nThemen\n\nDatenaufbereitung und Datenanalyse mit R\n\n\n\nLiteratur\nhttps://stats.ifp.uni-mainz.de/ba-datenanalyse\n\n\nAufgabe zur nächsten Sitzung\n\nDaten auswerten\nErgebnispräsentation vorbereiten (max. 10 min)"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#13",
+    "href": "inhaltsanalyse/index.html#13",
+    "title": "BA Inhaltsanalyse",
+    "section": "Sitzung 13 ",
+    "text": "Sitzung 13 \n\nThemen\n\nAbschlusspräsentationen\nProjektberichte\nEvaluation"
+  },
+  {
+    "objectID": "inhaltsanalyse/index.html#literatur-9",
+    "href": "inhaltsanalyse/index.html#literatur-9",
+    "title": "BA Inhaltsanalyse",
+    "section": "Literatur",
+    "text": "Literatur\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nRössler, P. (2017). Inhaltsanalyse, 3. Auflage. UTB. https://doi.org/10.36198/9783838547060\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Michael Scharkow",
+    "section": "",
+    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\n\n\nJohannes-Gutenberg University Mainz  Department of Communication  Jakob-Welder-Weg 12  55128 Mainz  Germany\nscharkow@uni-mainz.de"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Michael Scharkow",
+    "section": "",
+    "text": "I am professor for Computational Communication Science at the Department of Communication, Johannes Gutenberg University Mainz. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.\n\n\nJohannes-Gutenberg University Mainz  Department of Communication  Jakob-Welder-Weg 12  55128 Mainz  Germany\nscharkow@uni-mainz.de"
+  },
+  {
+    "objectID": "index.html#teaching",
+    "href": "index.html#teaching",
+    "title": "Michael Scharkow",
+    "section": "Teaching",
+    "text": "Teaching"
   },
   {
     "objectID": "experiment/index.html#beschreibung",
@@ -852,5 +936,12 @@
     "title": "BA Experiment",
     "section": "Seminarplan",
     "text": "Seminarplan\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n14.04.2025\nEinführung\n\n\n2\n28.04.2025\nThemen\n\n\n3\n05.05.2025\nCCS: Simulation\n\n\n4\n12.05.2025\nForschungsfragen & Hypothesen\n\n\n5\n19.05.2025\nStudiendesign und Stichprobe*\n\n\n6\n26.05.2025\nCCS: Stimuluserstellung*\n\n\n7\n02.06.2025\nMessung & Fragebogen*\n\n\n8\n16.06.2025\nCCS: Soscisurvey*\n\n\n9\n23.06.2025\nPretest\n\n\n10\n30.06.2025\nFeldphase\n\n\n11\n07.07.2025\nErgebnisaufbereitung\n\n\n12\n14.07.2025\nAbschluss\n\n\n\n\n\n\n* = 5-Minuten-Präsentation des Zwischenstands"
+  },
+  {
+    "objectID": "experiment/index.html#1",
+    "href": "experiment/index.html#1",
+    "title": "BA Experiment",
+    "section": "Sitzung 1 ",
+    "text": "Sitzung 1 \n\nThemen\n\nEinführung, Ablauf, Leistungsanforderungen, Formalia\n\n\n\nLiteratur\nKoch et al. (2019, Kapitel 1, 2)\n\n\nAufgabe zur nächsten Sitzung\n\nVideos zu Grundlagen des Experiments schauen\nVorschlag für ein eigenes Experiment erstellen (1/2 A4 Seite), vor allem Versuchsbedingungen und Outcome-Variable(n)"
   }
 ]

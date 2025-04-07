@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mscharkow.github.io/ccs/index.html</loc>
-    <lastmod>2025-03-25T07:22:55.467Z</lastmod>
+    <lastmod>2025-04-07T17:03:58.355Z</lastmod>
   </url>
   <url>
-    <loc>https://mscharkow.github.io/index.html</loc>
-    <lastmod>2025-03-25T07:22:55.469Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mscharkow.github.io/inhaltsanalyse/index.html</loc>
-    <lastmod>2025-03-25T07:22:55.477Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mscharkow.github.io/analyseverfahren/index.html</loc>
-    <lastmod>2025-03-25T07:22:55.465Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mscharkow.github.io/inhaltsanalyse/slides.html</loc>
-    <lastmod>2025-03-25T07:22:55.478Z</lastmod>
+    <loc>https://mscharkow.github.io/experiment/slides.html</loc>
+    <lastmod>2025-04-07T17:03:58.356Z</lastmod>
   </url>
   <url>
     <loc>https://mscharkow.github.io/ma-datenanalyse/index.html</loc>
-    <lastmod>2025-03-25T07:22:55.479Z</lastmod>
+    <lastmod>2025-04-07T17:03:58.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mscharkow.github.io/inhaltsanalyse/slides.html</loc>
+    <lastmod>2025-04-07T17:03:58.367Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mscharkow.github.io/analyseverfahren/index.html</loc>
+    <lastmod>2025-04-07T17:03:58.354Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mscharkow.github.io/inhaltsanalyse/index.html</loc>
+    <lastmod>2025-04-07T17:03:58.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mscharkow.github.io/index.html</loc>
+    <lastmod>2025-04-07T17:03:58.356Z</lastmod>
   </url>
   <url>
     <loc>https://mscharkow.github.io/experiment/index.html</loc>
-    <lastmod>2025-03-25T07:22:55.468Z</lastmod>
+    <lastmod>2025-04-07T17:03:58.356Z</lastmod>
   </url>
 </urlset>
