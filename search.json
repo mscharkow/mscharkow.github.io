@@ -11,7 +11,28 @@
     "href": "ccs/index.html#schedule",
     "title": "MA Computational Communication Science",
     "section": "Schedule",
-    "text": "Schedule"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n23.04.2025\nIntroduction\n\n\n2\n30.04.2025\nCCS Paper Potpourri\n\n\n3\n07.05.2025\nEthical and legal perspectives\n\n\n4\n21.05.2025\nDigital trace data\n\n\n5\n28.05.2025\nDigital trace data\n\n\n6\n04.06.2025\nAutomatic content analysis\n\n\n7\n11.06.2025\nAutomatic content analysis\n\n\n8\n18.06.2025\nAutomatic content analysis\n\n\n9\n25.06.2025\nAutomatic content analysis\n\n\n10\n02.07.2025\nSimulation and computational experiments\n\n\n11\n09.07.2025\nSimulation and computational experiments\n\n\n12\n16.07.2025\nQ & A"
+  },
+  {
+    "objectID": "ccs/index.html#1",
+    "href": "ccs/index.html#1",
+    "title": "MA Computational Communication Science",
+    "section": "Session 1 ",
+    "text": "Session 1 \n\nTopics\n\nIntroduction, course structure, credits\nWhat is Computational Communication Science?\n\n\n\nReading\nHilbert et al. (2019); Lazer et al. (2009)\n\n\nTasks for the next session\nSelect a study on Moodle and repare a poster (A1) for the study you selected."
+  },
+  {
+    "objectID": "ccs/index.html#2",
+    "href": "ccs/index.html#2",
+    "title": "MA Computational Communication Science",
+    "section": "Session 2",
+    "text": "Session 2\n\nTopics\nPoster Session: Interesting studies in computational communication science."
+  },
+  {
+    "objectID": "ccs/index.html#3",
+    "href": "ccs/index.html#3",
+    "title": "MA Computational Communication Science",
+    "section": "Session 3",
+    "text": "Session 3\n\nTopics\n\nBasic of research ethics\nApplication of ethical principles to computational research\nRisks in computational research on, with and by big social media platforms\n\n\n\nReading\nSalganik (2018, Ch. 6); Freelon (2018)\n\n\nTasks for the next session\nRefresh your R skills."
   },
   {
     "objectID": "experiment/slides.html#kursbeschreibung",
@@ -459,7 +480,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Sometimes it just feels better not to talk. At All. About Anything. To Anyone.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Moral of the story is: I chose a half measure when I should have gone all the way. I'll never make that mistake again. No more half measures, Walter.\",\n        \"author\": \"Mike Ehrmantraut\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
