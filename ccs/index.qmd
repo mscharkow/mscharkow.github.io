@@ -1,19 +1,20 @@
 ---
 title: "MA Computational Communication Science "
+lang: en 
 #subtitle: "Mediennutzung und -wirkung"
 date: 2025-04-01
 title-block-style: default
-#bibliography: references.bib
+bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
 ---
 
 ```{r}
 source(here::here("funcs.R"))
-start_date = as.Date("2025-04-16")
-end_date = as.Date("2025-07-18")
+start_date = as.Date("2025-04-23")
+end_date = as.Date("2025-07-17")
 no_classes = as.Date(c("2025-05-14"))
-topics = "Einführung und Grundlagen, CCS: Inhaltsanalyse mit LLM, Themenwahl und Forschungsfragen, Studiendesign und Stichprobe*, CCS: Datenerhebung, Kategorien und Codierung*, 
-CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde), Datenanalyse und -visualisierung*, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
+topics = "Introduction, CCS Paper Potpourri, Ethical and legal perspectives, Digital trace data, Digital trace data, Automatic content analysis, Automatic content analysis, Automatic content analysis, Automatic content analysis, Simulation and computational experiments, Simulation and computational experiments,  Q & A" |> str_split_1(", ") |> str_squish()
+#topics = "Introduction, CCS Paper Potpourri, Ethical and legal perspectives, Digital traces - data collection, Digital traces - data analysis, Computational content analysis - data collection, Computational content analysis - unsupervised approaches, Computational content analysis - supervised approaches, Computational content analysis - multimodal content, Agent-based modeling, Computational experiments,  Q & A" |> str_split_1(", ") |> str_squish()
 ```
 
 ![](images/ccs_title.jpg)
@@ -26,7 +27,45 @@ In this seminar, we will examine key concepts, theoretical foundations, and empi
 
 ## Schedule
 
-```{r, eval = F}
+```{r, eval = T}
 make_schedule(start_date, end_date, no_classes, topics) |> 
   mutate(Datum = strftime(Datum, "%d.%m.%Y"))
 ```
+
+## Session 1 <a class="bi bi-easel-fill" href="slides.html#/s1" alt="Slides"></a> {#1}
+
+### Topics
+
+-   Introduction, course structure, credits
+-   What is Computational Communication Science?
+
+### Reading
+
+@hilbertbarnett2019; @lazerpentland2009
+
+### Tasks for the next session
+
+Select a study on Moodle and repare a poster (A1) for the study you selected.
+
+## Session 2 {#2}
+
+### Topics
+
+Poster Session: Interesting studies in computational communication science.
+
+
+## Session 3 {#3}
+
+### Topics
+
+-   Basic of research ethics
+-   Application of ethical principles to computational research
+- Risks in computational research on, with and by big social media platforms
+
+### Reading
+
+@salganik2018 [Ch. 6]; @freelon2018
+
+### Tasks for the next session
+
+Refresh your R skills.
