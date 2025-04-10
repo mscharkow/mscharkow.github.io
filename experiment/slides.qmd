@@ -101,7 +101,7 @@ Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sic
 ::: {layout-ncol="2"}
 Koch, T., Peter, C., & Müller, P. (2019). *Das Experiment in der Kommunikations- und Medienwissenschaft*. Grundlagen, Durchführung und Auswertung experimenteller Forschung. Wiesbaden: Springer VS.
 
-![](https://imageservice.azureedge.net/api/getimage?productId=23864269&width=270)
+![](https://media2.hugendubel.de/shop/coverscans/310/31053865_9783658197537_xl.jpg){width=480}
 :::
 
 
