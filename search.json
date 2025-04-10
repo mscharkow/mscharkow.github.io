@@ -480,7 +480,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"No more prolonging the inevitable.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Better safe than sorry. That's my motto.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
