@@ -13,7 +13,7 @@ source(here::here("funcs.R"))
 start_date = as.Date("2025-04-14")
 end_date = as.Date("2025-07-15")
 no_classes = as.Date(c("2025-04-21", "2025-06-09"))
-topics = "Einführung, Themen, CCS: Simulation, Forschungsfragen & Hypothesen, Studiendesign und Stichprobe*, CCS: Stimuluserstellung*, 
+topics = "Einführung (keine Sitzung), Themen, CCS: Simulation, Forschungsfragen & Hypothesen, Studiendesign und Stichprobe*, CCS: Stimuluserstellung*, 
 Messung & Fragebogen*, CCS: Soscisurvey*, Pretest, Feldphase, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
 ```
 
