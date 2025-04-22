@@ -419,7 +419,7 @@ außerdem:
 ::: {.column width="40%"}
 -   Ein $\alpha = .05$ bedeutet, dass wir in 5 von 100 Fällen ein signifikantes Ergebnis bekommen, obwohl die Nullhypothese gilt.
 -   Mit unseren 1000 Stichproben und $\mu_0 = 170$ sollten wir beim T-Test grob 50 fälschlich signifikante Ergebnisse bekommen.
--   Der Alpha-Fehler ist abhängig von $\alpha$, aber unabhängig von den Daten und der konkreten $H_0$
+-   Fehler ist abhängig von $\alpha$, aber unabhängig von den Daten und der konkreten $H_0$.
 :::
 
 ::: {.column width="10%"}
