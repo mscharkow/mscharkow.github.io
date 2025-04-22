@@ -38,6 +38,7 @@ jobs:
             any::report
             any::tinythemes
             any::kableExtra
+            any::reshape2
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
