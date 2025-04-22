@@ -3,7 +3,7 @@ title: "BA Anwendungsorientierte Analyseverfahren"
 #subtitle: "Mediennutzung und Medienwirkung"
 date: 2025-04-01
 title-block-style: default
-#bibliography: references.bib
+bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
 ---
 
@@ -25,11 +25,22 @@ In dieser Vorlesung werden am Beispiel von kommunikationswissenschaftlichen Stud
 ## Vorlesungsplan
 
 ```{r}
-make_schedule(start_date, end_date, no_classes, topics) |> 
+make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |> 
   mutate(Datum = strftime(Datum, "%d.%m.%Y"))
 ```
-
 
 ## Materialien
 
 [Kurs-Website mit R-Code, Daten und Hausaufgaben](https://stats.ifp.uni-mainz.de/ba-aa-vl/)
+
+## Sitzung 1 <a class="bi bi-easel-fill" href="slides.html#/s1" alt="Folien"></a> {#1}
+
+### Themen
+
+-   Einführung, Ablauf, Leistungsanforderungen, Formalia
+-   Refresher Inferenzstatistik
+
+### Literatur
+
+@eidgollwitzer2015
+
