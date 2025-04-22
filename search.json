@@ -480,7 +480,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Coin flip is sacred.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Never say never\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -991,7 +991,7 @@
     "href": "analyseverfahren/slides.html#alpha-fehler",
     "title": "Anwendungsorientierte Analyseverfahren",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\n\n\nEin \\(\\alpha = .05\\) bedeutet, dass wir in 5 von 100 Fällen ein signifikantes Ergebnis bekommen, obwohl die Nullhypothese gilt.\nMit unseren 1000 Stichproben und \\(\\mu_0 = 170\\) sollten wir beim T-Test grob 50 fälschlich signifikante Ergebnisse bekommen.\nDer Alpha-Fehler ist abhängig von \\(\\alpha\\), aber unabhängig von den Daten und der konkreten \\(H_0\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem: Wir wissen (wie immer!) nicht, ob unsere Stichprobe zu den grauen oder roten Stichproben gehört."
+    "text": "Alpha-Fehler\n\n\n\nEin \\(\\alpha = .05\\) bedeutet, dass wir in 5 von 100 Fällen ein signifikantes Ergebnis bekommen, obwohl die Nullhypothese gilt.\nMit unseren 1000 Stichproben und \\(\\mu_0 = 170\\) sollten wir beim T-Test grob 50 fälschlich signifikante Ergebnisse bekommen.\nFehler ist abhängig von \\(\\alpha\\), aber unabhängig von den Daten und der konkreten \\(H_0\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem: Wir wissen (wie immer!) nicht, ob unsere Stichprobe zu den grauen oder roten Stichproben gehört."
   },
   {
     "objectID": "analyseverfahren/slides.html#beta-fehler-und-statistische-power",
