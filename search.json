@@ -480,7 +480,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Better safe than sorry. That's my motto.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Coin flip is sacred.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -805,6 +805,230 @@
     "text": "Literatur\n\n\n\n\nBenoit, K., Laver, M., & Mikhaylov, S. (2009). Treating Words as Data with Error: Uncertainty in Text Statements of Policy Positions. American Journal of Political Science, 53(2), 495–513. https://doi.org/10.1111/j.1540-5907.2009.00383.x\n\n\nKromrey, H., Roose, J., & Strübing, J. (2016). Empirische Sozialforschung: Modelle und Methoden der standardisierten Datenerhebung und Datenauswertung (Bd. 1040). Utb.\n\n\nTörnberg, P. (2023). How to use LLMs for text analysis. https://arxiv.org/pdf/2307.13106\n\n\nWeber, M., & Reichardt, M. (2024). Evaluation is all you need. Prompting Generative Large Language Models for Annotation Tasks in the Social Sciences. A Primer using Open Models. https://arxiv.org/pdf/2401.00284"
   },
   {
+    "objectID": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
+    "href": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Warum (noch) eine Vorlesung zur Statistik?",
+    "text": "Warum (noch) eine Vorlesung zur Statistik?\n\nLiteracy: Wenn man aktuelle Forschung lesen möchte (oder muss), führt kein Weg an etwas komplexeren Analysen vorbei.\nSelbstwirksamkeit: Wer einmal eine Analyse durchgeführt hat, kann in Seminar- und Abschlussarbeiten besser Daten auswerten.\nJobaussichten: Viele AbsolventInnen berichten rückblickend, dass gerade die Methodenskills am besten verwertbar waren bei der Jobsuche und im Beruf."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#ziele-der-vorlesung",
+    "href": "analyseverfahren/slides.html#ziele-der-vorlesung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Ziele der Vorlesung",
+    "text": "Ziele der Vorlesung\n\nStudierende werden dazu befähigt, die Anwendung ausgewählter Analyseverfahren nachzuvollziehen sowie entsprechende Forschungsergebnisse und Interpretationen zu verstehen.\nStudierende sind in der Lage, für ausgewählte Analyseverfahren anhand vorgegebener Daten Ergebnisse aus der Forschungsliteratur mittels Statistiksoftware zu reproduzieren.\nStudierende verfügen über die die Kompetenz, Angemessenheit und Güte von methodischen Vorgehensweisen zu beurteilen.\n(Studierende finden Statistik weniger schlimm und langweilig)."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#was-die-vorlesung-nicht-ist",
+    "href": "analyseverfahren/slides.html#was-die-vorlesung-nicht-ist",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Was die Vorlesung (nicht) ist",
+    "text": "Was die Vorlesung (nicht) ist\n\nkeine Wiederholung der VL Statistik oder der Datenanalyse-Übungen\nFokus auf das Verständnis für und die Anwendung von statistischen Verfahren, weniger die Mathematik dahinter\ndas Allgemeine Lineare Modell (GLM) als grundlegendes Verfahren\nkein reines Ablesen von p-Werten und Signifikanz-Sternchen\nemanzipierter Umgang mit statistischen Verfahren statt Rezepte abarbeiten"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#vorlesungsplan",
+    "href": "analyseverfahren/slides.html#vorlesungsplan",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Vorlesungsplan",
+    "text": "Vorlesungsplan\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n23.04.2025\nEinführung\n\n\n2\n30.04.2025\nGLM Grundlagen\n\n\n3\n07.05.2025\nLineare Regression\n\n\n4\n21.05.2025\nMittelwertvergleiche\n\n\n5\n28.05.2025\nMultiple Regression\n\n\n6\n04.06.2025\nModellannahmen\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n7\n11.06.2025\nModellvorhersagen\n\n\n8\n18.06.2025\nModerationsanalyse I\n\n\n9\n25.06.2025\nModerationsanalyse II\n\n\n10\n02.07.2025\nLogistische Regression\n\n\n11\n09.07.2025\nMultilevel-Regression\n\n\n12\n16.07.2025\nAbschluss"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#ablauf-der-sitzungen-und-anwesenheit",
+    "href": "analyseverfahren/slides.html#ablauf-der-sitzungen-und-anwesenheit",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Ablauf der Sitzungen und Anwesenheit",
+    "text": "Ablauf der Sitzungen und Anwesenheit\nAblauf\n\nBesprechung der praktischen Übungen/Hausaufgabe (max. 15 min)\nVorlesungsteil (max. 60 min)\nFragen und Antworten zur Vorlesung und praktischen Übung\n\nAnwesenheit\n\nkeine Anwesenheitspflicht, aber auch keine Nachhilfepflicht meinerseits\neigenständige Nachbereitung der praktischen Übungen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#e-learning-und-studienleistung",
+    "href": "analyseverfahren/slides.html#e-learning-und-studienleistung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "E-Learning und Studienleistung",
+    "text": "E-Learning und Studienleistung\nMaterial\n\nFolien und Übungsmaterialien samt Daten und R-Code auf  https://stats.ifp.uni-mainz.de/ba-aa-vl\n\nStudienleistung\n\nwährend der Vorlesungszeit 3 Teil-Studienleistungen (je ca. 15 min)\nsowohl Interpretations- als auch praktische Analyseaufgaben\nDeadline jeweils 2 Wochen nach Aufgabenstellung, Mi 12h\nBenotung jeweils Pass/Fail, 3x Pass nötig (ggf. Zusatzaufgabe)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#praktische-übungen",
+    "href": "analyseverfahren/slides.html#praktische-übungen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Praktische Übungen",
+    "text": "Praktische Übungen\n\nzu jeder Sitzung eine praktische Übung auf Basis einer publizierten Studie\nkurze Besprechung in der Vorlesung, meist mit einer exemplarischen Analyse\nR-Code zum Replizieren der Analysen zuhause oder während der Vorlesung\npraktische Anwendung als integraler Teil der Vorlesung und der Studienleistung\nCopy & Paste/Anpassung von bestehendem Code ist ok!"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#software",
+    "href": "analyseverfahren/slides.html#software",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Software",
+    "text": "Software\n\nin der VL vorgestellten Analysen lassen sich mit praktisch jeder Statistiksoftware reproduzieren\njede Statistiksoftware ist nur ein Werkzeug\nLektürekompetenz heißt auch, man kann sowohl SPSS als auch Stata oder R-Output lesen\nwegen Verfügbarkeit und Zukunftsfähigkeit verwende ich R\n\nFür die Studienleistung ist irrelevant, welche Software Sie verwenden!"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#warum-muss-ich-jetzt-auch-noch-r-lernen",
+    "href": "analyseverfahren/slides.html#warum-muss-ich-jetzt-auch-noch-r-lernen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Warum muss ich jetzt auch noch R lernen?",
+    "text": "Warum muss ich jetzt auch noch R lernen?\n\nSie müssen nicht!\nR ist freie Software und durch viele tausend Pakete (packages) erweiterbar, u.a. für\n\nDatenerhebung: Web-Scraping, APIs (z.B. für TikTok oder Spotify), Textdaten\nAuswertung: Statistik, Textanalyse, Audiodaten, Psychophysiologie, etc.\nDatenpräsentation und -visualisierung: Grafiken, Berichte, Folien (z.B. diese)\n\ngrundlegende Programmierkenntnisse, die auch ohne Statistik nützlich sein können\ndas IfP hat auf R umgestellt, siehe Kurz-Websites https://stats.ifp.uni-mainz.de/"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#kleines-r-beispiel-breaking-bad-deaths",
+    "href": "analyseverfahren/slides.html#kleines-r-beispiel-breaking-bad-deaths",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Kleines R-Beispiel: Breaking Bad Deaths",
+    "text": "Kleines R-Beispiel: Breaking Bad Deaths\nWas macht dieser Code?\n\nlibrary(tidyverse)\nread_csv('https://wegweisr.haim.it/Daten/breaking_bad_deaths.csv') |&gt;  \n  count(method, sort = TRUE) |&gt; \n  head(n = 5)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#kleines-r-beispiel-breaking-bad-deaths-1",
+    "href": "analyseverfahren/slides.html#kleines-r-beispiel-breaking-bad-deaths-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Kleines R-Beispiel: Breaking Bad Deaths",
+    "text": "Kleines R-Beispiel: Breaking Bad Deaths\nWas macht dieser Code?\n\nlibrary(tidyverse)\nread_csv('https://wegweisr.haim.it/Daten/breaking_bad_deaths.csv') |&gt;  \n  count(method, sort = TRUE) |&gt; \n  head(n = 5)\n\n\n\n\n\nmethod\n\n\nn\n\n\n\n\n\n\naccidental death\n\n\n172\n\n\n\n\nshot\n\n\n59\n\n\n\n\npoisoned\n\n\n14\n\n\n\n\nstabbed\n\n\n13\n\n\n\n\nbombed\n\n\n4"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#literaturempfehlungen",
+    "href": "analyseverfahren/slides.html#literaturempfehlungen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Literaturempfehlungen",
+    "text": "Literaturempfehlungen\nField, A., Miles, J., & Field, Z. (2012). Discovering statistics using R. London: Sage.\nMiles, J., & Shevlin, M. (2001). Applying regression and correlation: A guide for students and researchers. London: Sage.\nDarlington, R. B., & Hayes, A. F. (2016). Regression analysis and linear models: Concepts, applications, and implementation. Guilford Publications.\nMcElreath, R. (2020). Statistical rethinking: A Bayesian course with examples in R and Stan. CRC press. (für Interessierte)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#was-ist-inferenzstatistik",
+    "href": "analyseverfahren/slides.html#was-ist-inferenzstatistik",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Was ist Inferenzstatistik?",
+    "text": "Was ist Inferenzstatistik?\n\n“Die Inferenzstatistik (d.h. schließende Statistik) beschäftigt sich mit der Frage, wie man aufgrund von Stichprobendaten auf Sachverhalte in einer zugrundeliegenden Population schließen kann.” (Eid et al., 2010, p. 191)\n\n\nUns interessieren Verfahren für die statistische Punkt- und Intervallschätzung.\nDie Verfahren basieren auf bestimmten Annahmen über die Stichprobe und Variable(n).\nKlassische (asymptotische) Inferenzstatistik basiert auf ausreichend großen Zufallsstichproben.\nAlternative Ansätze, wie z.B. Bootstrapping, kommen mit weniger strengen Annahmen aus, sind dafür aber weniger mathematisch abgesichert und elegant."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#ein-simuliertes-beispiel",
+    "href": "analyseverfahren/slides.html#ein-simuliertes-beispiel",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Ein simuliertes Beispiel",
+    "text": "Ein simuliertes Beispiel\n\n\nSimulation\n\nWir simulieren die Körpergröße in der Grundgesamtheit von N = 1200 Studentinnen und Studenten am IfP.\nDadurch können wir prüfen, wie gut unsere Schätzung der Körpergröße durch eine einzelne Stichprobe gelingt.\n\n\n\n\nGrundgesamtheit\n\n\n\n\n\n\n\n\n\n\nGrundgesamtheit: M = 170, SD = 10"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#stichprobenziehung-und--kennwerte",
+    "href": "analyseverfahren/slides.html#stichprobenziehung-und--kennwerte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Stichprobenziehung und -kennwerte",
+    "text": "Stichprobenziehung und -kennwerte\n\n\nEine einzelne Stichprobe\n\nWir ziehen eine Zufallsstichprobe von n = 30 Studierenden und erheben deren Körpergröße.\nIn dieser Stichprobe beträgt die mittlere Körpergröße M = 172 (SD = 11).\n\n\n\n\nStichprobenkennwerte"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#wiederholte-stichproben",
+    "href": "analyseverfahren/slides.html#wiederholte-stichproben",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Wiederholte Stichproben",
+    "text": "Wiederholte Stichproben\n\n\n\nAsymptotische Inferenz basiert auf der Annahme, dass die Mittelwerte vieler Stichproben derselben Grundgesamtheit normalverteilt sind.\nwir ziehen 1000 Stichproben mit jeweils n = 30\nBlau: Mittelwert in der Grundgesamtheit, Rot: Mittelwert in der einzelnen Stichprobe"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#stichprobenmittelwerte-und-se",
+    "href": "analyseverfahren/slides.html#stichprobenmittelwerte-und-se",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Stichprobenmittelwerte und SE",
+    "text": "Stichprobenmittelwerte und SE\n\n\n\nDie Mittelwerte der einzelnen Stichproben streuen um den wahren Populationsmittelwert von 170 = Standardfehler (SE).\nSE = \\(SD(x)/\\sqrt(n-1)\\), den wir anhand einer Stichprobe berechnen können, als Schätzer für die Streuung der Stichprobenmittelwerte.\nSE auf Basis unserer ersten Stichprobe: SE = \\(11/\\sqrt(29)\\) = 2.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBei unseren 1000 simulierten Stichproben ist der Mittelwert der Mittelwerte M = 169.9.\nDie Standardabweichung der Mittelwerte ist SE = 1.7."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#stichprobentheorie-und--empirie",
+    "href": "analyseverfahren/slides.html#stichprobentheorie-und--empirie",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Stichprobentheorie und -empirie",
+    "text": "Stichprobentheorie und -empirie\n\n\n\nStichprobentheorie sagt uns wie bestimmte Kennwerte (z.B. Mittelwerte) in unendlich wiederholten Stichproben verteilt sind.\nDiese Information können wir mit den Schätzern aus einer Stichprobe kombinieren.\nDarauf basieren die Intervallschätzung und Hypothesentests.\n\n\n\n\n\n\n\n\n\n\n\n\n\nRot: Normalverteilungskurve mit Mittelwert und Standardfehler aus der ersten Stichprobe."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#konfidenzintervalle",
+    "href": "analyseverfahren/slides.html#konfidenzintervalle",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Konfidenzintervalle",
+    "text": "Konfidenzintervalle\n\n\n\nbasieren auf der Annahme, dass ein Schätzer einer bestimmten Verteilung folgt.\nBei einer Standardnormalverteilung (M = 0, SD = 1) liegen 95% aller Werte zwischen -1,96 und 1,96.\nWenn wir M und SE einsetzen, bekommen wir ein 95%-CI für den Mittelwert, d.h. M - 1.96xSE und M + 1.96xSE.\n\n\n\n\n\n\n\n\n\n\n\n\n\n95%-Konfidenzintervall auf Basis unserer ersten Stichprobe (M und SE): 167.8 - 175.8"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#interpretation-eines-konfidenzintervalls",
+    "href": "analyseverfahren/slides.html#interpretation-eines-konfidenzintervalls",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Interpretation eines Konfidenzintervalls",
+    "text": "Interpretation eines Konfidenzintervalls\n\nEin 95%-Konfidenzintervall bedeutet: in 95 Prozent aller denkbaren Stichproben würde das Konfidenzintervall den wahren Populationswert enthalten.\nDie Wahrscheinlichkeit, den wahren Wert zu enthalten, bezieht sich auf die Konstruktion von Konfidenzintervallen, nicht auf ein einzelnes Intervall.\nWir wissen aber bei einer einzigen, konkreten Stichprobe nicht, ob unser Konfidenzintervall den wahren Wert enthält.\nAber wir sind zuversichtlich (“confident”), dass unsere Stichprobe zu den 95% “Treffern” gehört, nicht zu den 5% Abweichlern.\nWenn der Wert unter der Nullhypothese nicht im Konfidenzintervall liegt, bezeichnen wir das Ergebnis als statistisch signifikant."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#abdeckung-der-konfidenzintervalle",
+    "href": "analyseverfahren/slides.html#abdeckung-der-konfidenzintervalle",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Abdeckung der Konfidenzintervalle",
+    "text": "Abdeckung der Konfidenzintervalle\nJe größer die Stichprobe (n), desto kleiner der Standardfehler (SE), d.h. desto enger das Konfidenzintervall. Es gilt aber immer, bei 95%-CI enthalten langfristig 5 von 100 Intervallen nicht den Populationswert."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#die-welt-der-nullhypothese",
+    "href": "analyseverfahren/slides.html#die-welt-der-nullhypothese",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Die Welt der Nullhypothese?",
+    "text": "Die Welt der Nullhypothese?\n\nIm Gegensatz zu den unendlich vielen Alternativhypothesen, die man haben kann, gibt es immer nur eine Nullhypothese.\n\nEs besteht kein Unterschied/Abhängigekeit zwischen Gruppen oder Variablen.\n\nVon fast allen Verfahren (T-Test, Korrelation, Chi-Quadrat-Test, etc.) wissen wir, wie die “Welt der Nullhypothese aussieht.\nWir prüfen Stichprobenkennwerte daraufhin, wie häufig oder wahrscheinlich sie in der Welt der Nullhypothese sind.\nDiese Wahrscheinlichkeit ist der p-Wert."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#was-bedeutet-der-p-wert",
+    "href": "analyseverfahren/slides.html#was-bedeutet-der-p-wert",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Was bedeutet der p-Wert?",
+    "text": "Was bedeutet der p-Wert?\np(Daten|H0)\n\nDer p-Wert ist die bedingte Wahrscheinlichkeit, die empirischen Daten (z.B. eine Mittelwertdifferenz zwischen zwei Gruppen) zu beobachten, wenn die Nullhypothese in der Grundgesamtheit gilt.\nBeispiel bei einem t-Test für eine Mittelwertdifferenz erhalten wir einen p-Wert von p = .08. Das bedeutet, wir würden in 8 von 100 Fällen eine mindestens gleich große Differenz beobachten, auch wenn in der Grundgesamtheit gar kein Unterschied ist."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#was-bedeutet-der-p-wert-nicht",
+    "href": "analyseverfahren/slides.html#was-bedeutet-der-p-wert-nicht",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Was bedeutet der p-Wert nicht?",
+    "text": "Was bedeutet der p-Wert nicht?\n\np(Daten|H1): Die Wahrscheinlichkeit, die empirischen Daten zu beoachten, wenn die Alternativhypothese gilt.\np(H0|Daten): Die Wahrscheinlichkeit für die Richtigkeit der Nullhypothese im Lichte der Daten.\np(H1|Daten): Die Wahrscheinlichkeit für die Richtigkeit der Alternativhypothese im Licht der Daten.\nDer p-Wert sagt also nichts über die Wahrscheinlichkeit der Null- oder Alternativhypothese!\n\naußerdem:\n\nDas Ablehnen der Nullhypothese sagt nichts über die Alternativhypothese!\nDie meisten von uns interessieren sich nicht für die Frage, die der p-Wert beantwortet!"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#was-bedeutet-dann-statistische-signifikanz",
+    "href": "analyseverfahren/slides.html#was-bedeutet-dann-statistische-signifikanz",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Was bedeutet dann statistische Signifikanz?",
+    "text": "Was bedeutet dann statistische Signifikanz?\n\nWir nennen ein Ergebnis statistisch signifikant, wenn \\(p &lt; \\alpha\\), wobei \\(\\alpha\\) das zuvor angenommene Signifikanzniveau ist.\nZwei mögliche Ursachen:\n\nDie Nullhypothese gilt, aber wir beobachten zufällig ein sehr seltenes Ereignis oder\nDie Nullhypothese gilt nicht. (Das heißt nicht, die Alternativhypothese gilt.)\n\nWenn \\(p &lt; .05\\), sind wir zuversichtlich, dass unsere Stichprobe nicht zu den 5% Abweichlern in der Welt der Nullhypothese gehört, sondern einfach die Nullhypothese nicht stimmt."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#alpha--und-beta-fehler",
+    "href": "analyseverfahren/slides.html#alpha--und-beta-fehler",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Alpha- und Beta-Fehler",
+    "text": "Alpha- und Beta-Fehler\n\nQuelle: https://www.statisticssolutions.com"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#alpha-fehler",
+    "href": "analyseverfahren/slides.html#alpha-fehler",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Alpha-Fehler",
+    "text": "Alpha-Fehler\n\n\n\nEin \\(\\alpha = .05\\) bedeutet, dass wir in 5 von 100 Fällen ein signifikantes Ergebnis bekommen, obwohl die Nullhypothese gilt.\nMit unseren 1000 Stichproben und \\(\\mu_0 = 170\\) sollten wir beim T-Test grob 50 fälschlich signifikante Ergebnisse bekommen.\nDer Alpha-Fehler ist abhängig von \\(\\alpha\\), aber unabhängig von den Daten und der konkreten \\(H_0\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem: Wir wissen (wie immer!) nicht, ob unsere Stichprobe zu den grauen oder roten Stichproben gehört."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beta-fehler-und-statistische-power",
+    "href": "analyseverfahren/slides.html#beta-fehler-und-statistische-power",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beta-Fehler und statistische Power",
+    "text": "Beta-Fehler und statistische Power\n\nUm Beta-Fehler (H0 wird fälschlich angenommen) zu verringern, brauchen wir statistische Power bzw. Präzision (vgl. Konfidenzintervalle).\nUm die Power/Präzision eines Tests/einer Schätzung zu erhöhen, muss man zumeist die Stichprobengröße erhöhen.\nPer Umstellung der SE-Formel kann man die nötige Stichprobengröße für erwartete Schätzer berechnen."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-message",
+    "href": "analyseverfahren/slides.html#take-home-message",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take home message",
+    "text": "Take home message\nInferenzstatistik ‚funktioniert’, weil…\n\nwir die Form der Verteilung von Kennwerten bei wiederholter Durchführung von Zufallsstichproben kennen (zentrales Grenzwerttheorem) und\nwir die Parameter der Verteilung aus den Daten unserer Stichprobe schätzen können.\nAber: wir kennen nur die Welt der Nullhypothese (egal für welchen Test und welchen Schätzer), d.h. alle Aussagen der NHST beziehen sich auf diese Welt.\nDie Präzision unserer Schätzung bzw. Power unseres Tests hängt ab von der Streuung des Merkmals und der Größe der Stichprobe (je größer, desto präziser). Entsprechend sollten Untersuchungen geplant werden.\nEs gibt immer Alpha- und Beta-Fehler, und für eine Stichprobe können wir nie exakt wissen, wo wir stehen."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#hauptsache-signifikant",
+    "href": "analyseverfahren/slides.html#hauptsache-signifikant",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Hauptsache signifikant?",
+    "text": "Hauptsache signifikant?\n\nHypothesentests als stumpfe Rituale mit dem Ziel, p &lt; .05 zu erhalten.\nvon Konvention zum reinen Selbstzweck (Signifikanz = gut, keine = schlecht).\nDas sog. p-Hacking bedeutet, die Daten und Analysen so zu frisieren, bis ein stat. signifikantes Ergebnis erscheint.\nSignifikanz sagt nichts über substanzielle Bedeutung!\nBitte in Zukunft beachten:\n\nNicht p-hacken, nicht im Nachhinein am Alpha-Niveau schrauben!\nKein Bedauern nicht-signifikanter Ergebnisse (“leider knapp nicht signifikant”)!"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#aufgaben-zur-nächsten-sitzung",
+    "href": "analyseverfahren/slides.html#aufgaben-zur-nächsten-sitzung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Aufgaben zur nächsten Sitzung",
+    "text": "Aufgaben zur nächsten Sitzung\n\nLesen Sie die Einführung in R aus dem BA-Datenanalyse Kurs https://stats.ifp.uni-mainz.de/ba-datenanalyse/r-und-rstudio.html\nLösen Sie dort die Hausaufgaben 1 und 2 (Installieren von R).  Achtung: Bei Aufgabe 2 bitte die Materialien dieser VL https://stats.ifp.uni-mainz.de/ba-aa-vl/ statt der BA-Datenanalyse herunterladen und öffnen.\nFallback-Option: RStudio im Browser https://rstudio.ifp.uni-mainz.de, dort das Projekt im Ordner ba-aa-vl öffnen.  (nur aus dem JGU-Netzwerk, Username = Passwort = ZDV-Nutzername)\nFrischen Sie ggf. ihre Statistik-Kenntnisse auf. Alle sollten wissen, was eine (Ko)-Varianz ist oder wie eine Datenmatrix aussieht."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#literatur",
+    "href": "analyseverfahren/slides.html#literatur",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Literatur",
+    "text": "Literatur"
+  },
+  {
     "objectID": "analyseverfahren/index.html#beschreibung",
     "href": "analyseverfahren/index.html#beschreibung",
     "title": "BA Anwendungsorientierte Analyseverfahren",
@@ -824,6 +1048,13 @@
     "title": "BA Anwendungsorientierte Analyseverfahren",
     "section": "Materialien",
     "text": "Materialien\nKurs-Website mit R-Code, Daten und Hausaufgaben"
+  },
+  {
+    "objectID": "analyseverfahren/index.html#1",
+    "href": "analyseverfahren/index.html#1",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Sitzung 1 ",
+    "text": "Sitzung 1 \n\nThemen\n\nEinführung, Ablauf, Leistungsanforderungen, Formalia\nRefresher Inferenzstatistik\n\n\n\nLiteratur\nEid et al. (2015)"
   },
   {
     "objectID": "inhaltsanalyse/index.html#beschreibung",
