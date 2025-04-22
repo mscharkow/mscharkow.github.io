@@ -1,0 +1,518 @@
+---
+title: "Anwendungsorientierte Analyseverfahren"
+author: "Prof. Dr. Michael Scharkow"
+date: today
+date-format: "[Sommersemester] 2025"
+format: minimalist-revealjs
+df-print: kable
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+---
+
+```{r child = '_common.qmd'}
+```
+
+# Sitzung 1 {#s1}
+
+
+## Warum (noch) eine Vorlesung zur Statistik?
+
+- **Literacy**: Wenn man aktuelle Forschung lesen möchte (oder muss), führt kein Weg an etwas komplexeren Analysen vorbei.
+- **Selbstwirksamkeit**: Wer einmal eine Analyse durchgeführt hat,  kann in Seminar- und Abschlussarbeiten besser Daten auswerten.
+- **Jobaussichten**: Viele AbsolventInnen berichten rückblickend, dass gerade die Methodenskills am besten verwertbar waren bei der Jobsuche und im Beruf.
+
+
+## Ziele der Vorlesung
+
+- Studierende werden dazu befähigt, die Anwendung ausgewählter Analyseverfahren nachzuvollziehen sowie entsprechende Forschungsergebnisse und Interpretationen zu verstehen. 
+- Studierende sind in der Lage, für ausgewählte Analyseverfahren anhand vorgegebener Daten Ergebnisse aus der Forschungsliteratur mittels Statistiksoftware zu reproduzieren. 
+- Studierende verfügen über die die Kompetenz, Angemessenheit und Güte von methodischen Vorgehensweisen zu beurteilen.
+- (Studierende finden Statistik weniger schlimm und langweilig).
+
+
+## Was die Vorlesung (nicht) ist
+
+- keine Wiederholung der VL Statistik oder der Datenanalyse-Übungen
+- Fokus auf das Verständnis für und die Anwendung von statistischen Verfahren, weniger die Mathematik dahinter
+- das Allgemeine Lineare Modell (GLM) als grundlegendes Verfahren
+- kein reines Ablesen von p-Werten und Signifikanz-Sternchen
+-  emanzipierter Umgang mit statistischen Verfahren statt Rezepte abarbeiten
+
+## Vorlesungsplan
+
+```{r}
+#| layout-ncol: 2
+plan <- readr::read_tsv("plan.tsv") |> 
+  mutate(Datum = strftime(Datum, "%d.%m.%Y"))
+kable(plan[1:6, ])
+kable(plan[7:12, ])
+```
+
+## Ablauf der Sitzungen und Anwesenheit
+
+### Ablauf 
+1. Besprechung der praktischen Übungen/Hausaufgabe (max. 15 min)
+2. Vorlesungsteil (max. 60 min)
+3. Fragen und Antworten zur Vorlesung und praktischen Übung
+
+### Anwesenheit
+- keine Anwesenheitspflicht, aber auch keine Nachhilfepflicht meinerseits
+- eigenständige Nachbereitung der praktischen Übungen
+
+## E-Learning und Studienleistung
+
+### Material
+
+- Folien und Übungsmaterialien samt Daten und R-Code auf <br/> <https://stats.ifp.uni-mainz.de/ba-aa-vl>
+
+### Studienleistung
+
+- während der Vorlesungszeit **3** Teil-Studienleistungen (je ca. 15 min)
+- sowohl Interpretations- als auch praktische Analyseaufgaben
+- Deadline jeweils 2 Wochen nach Aufgabenstellung, Mi 12h 
+- Benotung jeweils Pass/Fail, 3x Pass nötig (ggf. Zusatzaufgabe)
+
+
+## Praktische Übungen
+
+- zu jeder Sitzung eine praktische Übung auf Basis einer publizierten Studie
+- kurze Besprechung in der Vorlesung, meist mit einer exemplarischen Analyse
+- R-Code zum Replizieren der Analysen zuhause oder während der Vorlesung
+- praktische Anwendung als integraler Teil der Vorlesung und der Studienleistung
+- Copy & Paste/Anpassung von bestehendem Code ist ok!
+
+
+## Software
+
+- in der VL vorgestellten Analysen lassen sich mit praktisch jeder Statistiksoftware reproduzieren
+- jede Statistiksoftware ist nur ein Werkzeug
+- Lektürekompetenz heißt auch, man kann sowohl SPSS als auch Stata oder R-Output lesen
+- wegen Verfügbarkeit und Zukunftsfähigkeit verwende ich R
+
+
+### Für die Studienleistung ist irrelevant, welche Software Sie verwenden!
+
+## Warum muss ich jetzt auch noch R lernen?
+
+- **Sie müssen nicht!** 
+- R ist freie Software und durch viele tausend Pakete (packages) erweiterbar, u.a. für
+  - Datenerhebung: Web-Scraping, APIs (z.B. für TikTok oder Spotify), Textdaten
+  - Auswertung: Statistik, Textanalyse, Audiodaten, Psychophysiologie, etc.
+  - Datenpräsentation und -visualisierung: Grafiken, Berichte, Folien (z.B. diese)
+- grundlegende Programmierkenntnisse, die auch ohne Statistik nützlich sein können
+- das IfP hat auf R umgestellt, siehe Kurz-Websites <https://stats.ifp.uni-mainz.de/>
+
+## Kleines R-Beispiel: Breaking Bad Deaths
+
+Was macht dieser Code?
+
+```{r, echo = T, eval = F}
+library(tidyverse)
+read_csv('https://wegweisr.haim.it/Daten/breaking_bad_deaths.csv') |>  
+  count(method, sort = TRUE) |> 
+  head(n = 5)
+```
+
+## Kleines R-Beispiel: Breaking Bad Deaths
+
+Was macht dieser Code?
+
+```{r, echo = T}
+library(tidyverse)
+read_csv('https://wegweisr.haim.it/Daten/breaking_bad_deaths.csv') |>  
+  count(method, sort = TRUE) |> 
+  head(n = 5)
+```
+
+
+## Literaturempfehlungen
+
+Field, A., Miles, J., & Field, Z. (2012). Discovering statistics using R. London: Sage.
+
+Miles, J., & Shevlin, M. (2001). Applying regression and correlation: A guide for students and researchers. London: Sage.
+
+Darlington, R. B., & Hayes, A. F. (2016). Regression analysis and linear models: Concepts, applications, and implementation. Guilford Publications.
+
+McElreath, R. (2020). Statistical rethinking: A Bayesian course with examples in R and Stan. CRC press. (für Interessierte)
+
+# Refresher Inferenzstatistik
+
+## Was ist Inferenzstatistik?
+
+> "Die Inferenzstatistik (d.h. schließende Statistik) beschäftigt sich mit der Frage, wie man aufgrund von Stichprobendaten auf Sachverhalte in einer zugrundeliegenden Population schließen kann." (Eid et al., 2010, p. 191)
+
+-   Uns interessieren Verfahren für die statistische **Punkt**- und **Intervallschätzung**.
+-   Die Verfahren basieren auf bestimmten Annahmen über die Stichprobe und Variable(n).
+-   Klassische (asymptotische) Inferenzstatistik basiert auf ausreichend großen Zufallsstichproben.
+-   Alternative Ansätze, wie z.B. Bootstrapping, kommen mit weniger strengen Annahmen aus, sind dafür aber weniger mathematisch abgesichert und elegant.
+
+## Ein simuliertes Beispiel
+
+::: columns
+::: {.column width="40%"}
+### Simulation
+
+-   Wir simulieren die Körpergröße in der Grundgesamtheit von N = 1200 Studentinnen und Studenten am IfP.
+-   Dadurch können wir prüfen, wie gut unsere Schätzung der Körpergröße durch eine einzelne Stichprobe gelingt.
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+### Grundgesamtheit
+
+```{r, fig.height = 5, fig.width = 10, echo = F}
+set.seed(123)
+GG <- rbeta(1200, 2, 5) * 62 + 152 ## Simulierte Grundgesamtheit mit N = 10.000
+ggplot(data.frame(GG), aes(GG)) +
+  geom_histogram(fill = "#999999") +
+  geom_vline(xintercept = mean(GG), color = "#C1002B") +
+  labs(title = "Körpergröße in der Grundgesamtheit", y = "Häufigkeit", x = paste0("Körpergröße (M = ", round(mean(GG), 0), ", SD = ", round(sd(GG), 0), ")")) +
+  xlim(150, 210)
+```
+
+-   Grundgesamtheit: M = `r round(mean(GG), 0)`, SD = `r round(sd(GG), 0)`
+:::
+:::
+
+## Stichprobenziehung und -kennwerte
+
+::: columns
+::: {.column width="40%"}
+### Eine einzelne Stichprobe
+
+```{r}
+set.seed(10)
+STP <- sample(GG, 30)
+STP.mean <- mean(STP)
+STP.sd <- sd(STP)
+```
+
+-   Wir ziehen **eine** Zufallsstichprobe von n = 30 Studierenden und erheben deren Körpergröße.
+-   In dieser Stichprobe beträgt die mittlere Körpergröße M = `r round(STP.mean)` (SD = `r round(STP.sd)`).
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+### Stichprobenkennwerte
+
+```{r, fig.height = 5, fig.width = 10, echo = F}
+## Grafische Darstellung der Körpergrößesverteilung in der Stichprobe
+ggplot(data.frame(STP), aes(STP)) +
+  geom_histogram(fill = "#999999") +
+  geom_vline(xintercept = STP.mean, color = "#C1002B") +
+  labs(title = "Körpergröße in der Stichprobe (n = 30)", y = "Häufigkeit", x = paste0("Körpergröße (M = ", round(STP.mean, 0), ", SD = ", round(STP.sd, 0), ")"))
+```
+:::
+:::
+
+## Wiederholte Stichproben
+
+::: columns
+::: {.column width="40%"}
+-   Asymptotische Inferenz basiert auf der Annahme, dass die Mittelwerte **vieler** Stichproben derselben Grundgesamtheit normalverteilt sind.
+-   wir ziehen 1000 Stichproben mit jeweils n = 30
+-   Blau: Mittelwert in der Grundgesamtheit, Rot: Mittelwert in der einzelnen Stichprobe
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+```{r, fig.width=10, fig.height=8}
+set.seed(1223)
+STPx1000 <- replicate(1000, (sample(GG, 30)))
+## Mittelwerte und Standardabweichungen in den 1000 Stichproben
+STPx1000.mean <- apply(STPx1000, 2, mean)
+STPx1000.sd <- apply(STPx1000, 2, sd)
+## Grafische Darstellung der Körpergrößesverteilung in den ersten X Stichproben
+STPx1000.vis <- reshape2::melt(data.frame(STPx1000[, 1:20]), id.vars = NULL)
+STPx1000.vis$facet <- rep(1:20, each = 30)
+STPx1000.vis$mean <- rep(STPx1000.mean[1:20], each = 30)
+ggplot(filter(STPx1000.vis, facet < 5)) +
+  geom_histogram(aes(value), fill = "#999999") +
+  geom_vline(aes(xintercept = mean), color = "#C1002B", size = 1.5) +
+  geom_vline(aes(xintercept = 170), color = "steelblue1", size = 1.5) +
+  labs(title = "Körpergröße in den ersten 4 Stichproben (n = 30)", x = "Körpergröße", y = "") +
+  facet_wrap(~ paste("Stichprobe Nr.", facet), ncol = 2)
+```
+:::
+:::
+
+## Stichprobenmittelwerte und SE
+
+::: columns
+::: {.column width="40%"}
+-   Die Mittelwerte der einzelnen Stichproben streuen um den wahren Populationsmittelwert von `r round(mean(GG))` =  Standardfehler (SE).
+
+-   SE = $SD(x)/\sqrt(n-1)$, den wir anhand **einer** Stichprobe berechnen können, als Schätzer für die Streuung der Stichprobenmittelwerte.
+
+-   SE auf Basis unserer ersten Stichprobe: SE = $11/\sqrt(29)$ = `r round(STP.sd/sqrt(29),1)`.
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+```{r}
+ggplot(data.frame(STPx1000.mean)) +
+  geom_histogram(aes(STPx1000.mean), fill = "#999999") +
+  geom_vline(xintercept = mean(GG), color = "#C1002B") +
+  labs(title = "Mittelwerte aus 1000 Stichproben mit n = 30", x = paste0("Körpergröße (M(GG) = ", round(mean(GG), 0), ", SD = ", round(sd(STPx1000.mean), 1)))
+```
+
+-   Bei unseren 1000 simulierten Stichproben ist der Mittelwert der Mittelwerte M = `r round(mean(STPx1000.mean), 1)`.
+-   Die Standardabweichung der Mittelwerte ist SE = `r round(sd(STPx1000.mean),1)`.
+:::
+:::
+
+## Stichprobentheorie und -empirie
+
+::: columns
+::: {.column width="40%"}
+-   Stichprobentheorie sagt uns wie bestimmte Kennwerte (z.B. Mittelwerte) in unendlich wiederholten Stichproben verteilt sind.
+-   Diese Information können wir mit den Schätzern aus *einer* Stichprobe kombinieren.
+-   Darauf basieren die Intervallschätzung und Hypothesentests.
+:::
+
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+```{r}
+gg_df <- tibble(x = rnorm(1000000, 170, STP.sd / sqrt(29)))
+
+ggplot(data.frame(x = STPx1000.mean), aes(x)) +
+  geom_histogram(aes(y = ..density..), fill = "#999999") +
+  labs(title = "Mittelwerte aus 1000 Stichproben mit n = 30", x = paste0("Körpergröße (M(GG) = ", round(mean(GG), 0), ", SD = ", round(sd(STPx1000.mean), 1))) +
+  geom_density(data = gg_df, aes(x), color = "#C1002B", size = 1)
+```
+
+
+*Rot: Normalverteilungskurve mit Mittelwert und Standardfehler aus der ersten Stichprobe.*
+
+:::
+:::
+
+## Konfidenzintervalle
+
+::: columns
+::: {.column width="40%"}
+-   basieren auf der Annahme, dass ein Schätzer einer bestimmten Verteilung folgt.
+-   Bei einer Standardnormalverteilung (M = 0, SD = 1) liegen 95% aller Werte zwischen -1,96 und 1,96.
+-   Wenn wir M und SE einsetzen, bekommen wir ein 95%-CI für den Mittelwert, d.h. M - 1.96xSE und M + 1.96xSE.
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+```{r}
+dd <- density(rnorm(1000000, STP.mean, STP.sd / sqrt(29)))
+
+gg_df <- tibble(x = dd$x, y = dd$y) |>
+  mutate(fi = x < STP.mean - 1.96 * STP.sd / sqrt(29) | x > STP.mean + 1.96 * STP.sd / sqrt(29))
+
+gg_df |>
+  ggplot(aes(x)) +
+  ## geom_histogram(aes(y = ..density..), fill = "## 999999")+
+  labs(title = "Normalverteilung der Mittelwerte auf Basis einer Stichprobe") +
+  geom_line(data = gg_df, aes(x, y), color = "#C1002B", size = 1) +
+  geom_area(data = filter(gg_df, fi == F), aes(x, y), fill = "#999999")
+```
+
+95%-Konfidenzintervall auf Basis unserer ersten Stichprobe (M und SE): `r round(STP.mean - 1.96*STP.sd/sqrt(29),1)` - `r round(STP.mean + 1.96*STP.sd/sqrt(29),1)`
+:::
+:::
+
+## Interpretation eines Konfidenzintervalls
+
+-   Ein 95%-Konfidenzintervall bedeutet: in 95 Prozent aller denkbaren Stichproben würde das Konfidenzintervall den wahren Populationswert enthalten.
+-   Die Wahrscheinlichkeit, den wahren Wert zu enthalten, bezieht sich auf die **Konstruktion** von Konfidenzintervallen, nicht auf ein einzelnes Intervall.
+-   Wir wissen aber bei einer einzigen, konkreten Stichprobe **nicht**, ob unser Konfidenzintervall den wahren Wert enthält.
+-   Aber wir sind **zuversichtlich** ("confident"), dass unsere Stichprobe zu den 95% "Treffern" gehört, nicht zu den 5% Abweichlern.
+-   Wenn der Wert unter der Nullhypothese nicht im Konfidenzintervall liegt, bezeichnen wir das Ergebnis als statistisch signifikant.
+
+## Abdeckung der Konfidenzintervalle
+
+Je größer die Stichprobe (n), desto kleiner der Standardfehler (SE), d.h. desto enger das Konfidenzintervall. Es gilt aber immer, bei 95%-CI enthalten langfristig 5 von 100 Intervallen **nicht** den Populationswert.
+
+```{r, fig.width = 10, fig.height = 3.5}
+stp100.grph <- function(input) {
+  STPx100 <- replicate(100, (sample(GG, input)), simplify = F)
+  STPx100.mean <- sapply(STPx100, mean)
+  STPx100.sd <- sapply(STPx100, sd)
+  STPx100.n <- sapply(STPx100, length)
+  STPx100.se <- STPx100.sd / sqrt(STPx100.n)
+  STPx100.ci <- cbind(STPx100.mean - 1.96 * STPx100.se, STPx100.mean + 1.96 * STPx100.se)
+  STPx100.vis <- data.frame(STPx100.mean, STPx100.ci, STPx100.n)
+  names(STPx100.vis) <- c("M", "lo", "hi", "n")
+  STPx100.vis$x <- rank(STPx100.vis$M, ties.method = "random")
+  STPx100.vis$n_lab <- ifelse(STPx100.vis$lo < mean(GG) & STPx100.vis$hi > mean(GG), T, F)
+  ggplot(STPx100.vis) +
+    geom_pointrange(aes(x, M, ymin = lo, ymax = hi, color = n_lab), size = .5) +
+    geom_hline(yintercept = mean(GG), color = "#C1002B", size = 1) +
+    theme(legend.position = "none") +
+    labs(title = paste("Stichprobengröße n =", input)) +
+    coord_cartesian(ylim = c(160, 180))
+}
+set.seed(1214)
+a1 = stp100.grph(30)
+set.seed(4)
+a2 = stp100.grph(10)
+library(patchwork)
+a1 + a2
+```
+
+
+## Die Welt der Nullhypothese?
+
+-   Im Gegensatz zu den unendlich vielen Alternativhypothesen, die man haben kann, gibt es immer nur eine Nullhypothese.
+    -   Es besteht kein Unterschied/Abhängigekeit zwischen Gruppen oder Variablen.
+-   Von fast allen Verfahren (T-Test, Korrelation, Chi-Quadrat-Test, etc.) wissen wir, wie die "Welt der Nullhypothese aussieht.
+-   Wir prüfen Stichprobenkennwerte daraufhin, wie häufig oder wahrscheinlich sie in der Welt der Nullhypothese sind.
+-   Diese Wahrscheinlichkeit ist der p-Wert.
+
+## Was bedeutet der p-Wert?
+
+**p(Daten\|H0)**
+
+-   Der p-Wert ist die bedingte Wahrscheinlichkeit, die empirischen Daten (z.B. eine Mittelwertdifferenz zwischen zwei Gruppen) zu beobachten, wenn die Nullhypothese in der Grundgesamtheit gilt.
+-   Beispiel bei einem t-Test für eine Mittelwertdifferenz erhalten wir einen p-Wert von p = .08. Das bedeutet, wir würden in 8 von 100 Fällen eine mindestens gleich große Differenz beobachten, auch wenn in der Grundgesamtheit gar kein Unterschied ist.
+
+## Was bedeutet der p-Wert **nicht**?
+
+-   **p(Daten\|H1)**: Die Wahrscheinlichkeit, die empirischen Daten zu beoachten, wenn die Alternativhypothese gilt.
+
+-   **p(H0\|Daten)**: Die Wahrscheinlichkeit für die Richtigkeit der Nullhypothese im Lichte der Daten.
+
+-   **p(H1\|Daten)**: Die Wahrscheinlichkeit für die Richtigkeit der Alternativhypothese im Licht der Daten.
+
+-   Der p-Wert sagt also **nichts** über die Wahrscheinlichkeit der Null- **oder** Alternativhypothese!
+
+außerdem:
+
+-   Das Ablehnen der Nullhypothese sagt nichts über die Alternativhypothese!
+-   Die meisten von uns interessieren sich nicht für die Frage, die der p-Wert beantwortet!
+
+## Was bedeutet dann statistische Signifikanz?
+
+-   Wir nennen ein Ergebnis statistisch signifikant, wenn $p < \alpha$, wobei $\alpha$ das zuvor angenommene Signifikanzniveau ist.
+-   Zwei mögliche Ursachen:
+    -   Die Nullhypothese gilt, aber wir beobachten zufällig ein sehr seltenes Ereignis *oder*
+    -   Die Nullhypothese gilt nicht. (Das heißt nicht, die Alternativhypothese gilt.)
+-   Wenn  $p < .05$, sind wir zuversichtlich, dass unsere Stichprobe nicht zu den 5% Abweichlern in der Welt der Nullhypothese gehört, sondern einfach die Nullhypothese nicht stimmt.
+
+# Fehler in der Inferenz
+
+## Alpha- und Beta-Fehler
+
+![Quelle: https://www.statisticssolutions.com](https://miro.medium.com/v2/resize:fit:1093/0*FZY5VvXtWRk19FAH.jpg)
+
+## Alpha-Fehler
+
+::: columns
+::: {.column width="40%"}
+-   Ein $\alpha = .05$ bedeutet, dass wir in 5 von 100 Fällen ein signifikantes Ergebnis bekommen, obwohl die Nullhypothese gilt.
+-   Mit unseren 1000 Stichproben und $\mu_0 = 170$ sollten wir beim T-Test grob 50 fälschlich signifikante Ergebnisse bekommen.
+-   Der Alpha-Fehler ist abhängig von $\alpha$, aber unabhängig von den Daten und der konkreten $H_0$
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+```{r}
+1:1000 |>
+  map(~ sample(GG, 30)) |>
+  map(~ t.test(.x, mu = 170)) |>
+  map_dbl("statistic") |>
+  as.tibble() |>
+  ggplot(aes(x = value, fill = ifelse(abs(value) > 2, "signifikant", "n.s."))) +
+  geom_histogram() +
+  scale_fill_manual(values = c("#999999", "#C1002B")) +
+  labs(fill = "", x = "t-Wert", y = "Häufigkeit", title = "1000 Einstichproben-T-Tests (n=30)")
+```
+
+-   Problem: Wir wissen (wie immer!) nicht, ob unsere Stichprobe zu den grauen oder roten Stichproben gehört.
+:::
+:::
+
+
+## Beta-Fehler und statistische Power 
+
+- Um Beta-Fehler (H0 wird fälschlich angenommen) zu verringern, brauchen wir statistische Power bzw. Präzision (vgl. Konfidenzintervalle).
+-   Um die Power/Präzision eines Tests/einer Schätzung zu erhöhen, muss man zumeist die Stichprobengröße erhöhen.
+- Per Umstellung der SE-Formel kann man die nötige Stichprobengröße für erwartete Schätzer berechnen.
+
+::: {layout-ncol=2}
+
+
+```{r}
+1:1000 |>
+  map(~ sample(GG, 10)) |>
+  map(~ t.test(.x, mu = 175)) |>
+  map_dbl("statistic") |>
+  as.tibble() |>
+  ggplot(aes(x = value, fill = ifelse(abs(value) > 2, "signifikant", "n.s."))) +
+  geom_histogram() +
+  scale_fill_manual(values = c("#999999", "#C1002B")) +
+  labs(fill = "", x = "t-Wert", y = "Häufigkeit", title = "1000 Einstichproben-T-Tests (n=10)")
+```
+
+
+```{r}
+1:1000 |>
+  map(~ sample(GG, 50)) |>
+  map(~ t.test(.x, mu = 175)) |>
+  map_dbl("statistic") |>
+  as.tibble() |>
+  ggplot(aes(x = value, fill = ifelse(abs(value) > 2, "signifikant", "n.s."))) +
+  geom_histogram() +
+  scale_fill_manual(values = c("#999999", "#C1002B")) +
+  labs(fill = "", x = "t-Wert", y = "Häufigkeit", title = "1000 Einstichproben-T-Tests (n=50)")
+```
+
+:::
+
+
+## Take home message
+
+Inferenzstatistik ‚funktioniert', weil...
+
+-   wir die Form der Verteilung von Kennwerten bei wiederholter Durchführung von Zufallsstichproben kennen (zentrales Grenzwerttheorem) und
+-   wir die Parameter der Verteilung aus den Daten unserer Stichprobe schätzen können.
+-   Aber: wir kennen **nur** die Welt der Nullhypothese (egal für welchen Test und welchen Schätzer), d.h. alle Aussagen der NHST beziehen sich auf diese Welt.
+-   Die Präzision unserer Schätzung bzw. Power unseres Tests hängt ab von der Streuung des Merkmals und der Größe der Stichprobe (je größer, desto präziser). Entsprechend sollten Untersuchungen geplant werden.
+-   Es gibt immer Alpha- und Beta-Fehler, und für eine Stichprobe können wir nie exakt wissen, wo wir stehen.
+
+## Hauptsache signifikant?
+
+-   Hypothesentests als stumpfe Rituale mit dem Ziel, p \< .05 zu erhalten.
+-   von Konvention zum reinen Selbstzweck (Signifikanz = gut, keine = schlecht).
+-   Das sog. **p-Hacking** bedeutet, die Daten und Analysen so zu frisieren, bis ein stat. signifikantes Ergebnis erscheint.
+-   Signifikanz sagt nichts über substanzielle Bedeutung!
+-   Bitte in Zukunft beachten:
+    -   Nicht p-hacken, nicht im Nachhinein am Alpha-Niveau schrauben!
+    -   Kein Bedauern nicht-signifikanter Ergebnisse ("leider knapp nicht signifikant")!
+    
+    
+# Fragen? {background-color="rgb(193,0,42)"}
+
+
+
+## Aufgaben zur nächsten Sitzung
+
+1. Lesen Sie die Einführung in R aus dem BA-Datenanalyse Kurs <https://stats.ifp.uni-mainz.de/ba-datenanalyse/r-und-rstudio.html>
+2. Lösen Sie dort die Hausaufgaben 1 und 2 (Installieren von R). <br/>
+**Achtung**: Bei Aufgabe 2 bitte die Materialien dieser VL <https://stats.ifp.uni-mainz.de/ba-aa-vl/> statt der BA-Datenanalyse herunterladen und öffnen.
+3. **Fallback-Option**: RStudio im Browser <https://rstudio.ifp.uni-mainz.de>, dort das Projekt im Ordner `ba-aa-vl` öffnen. <br/>
+(nur aus dem JGU-Netzwerk, Username = Passwort = ZDV-Nutzername)
+3. Frischen Sie ggf. ihre Statistik-Kenntnisse auf. Alle sollten wissen, was eine (Ko)-Varianz ist oder wie eine Datenmatrix aussieht.
+
+
+## Literatur

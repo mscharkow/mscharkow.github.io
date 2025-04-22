@@ -1,0 +1,28 @@
+```{r, include=FALSE}
+options(tibble.width = 100, width = 100, scipen = 99)
+set.seed(12345)
+library(tidyverse)
+library(tinythemes)
+theme_set(theme_ipsum_rc())
+library(kableExtra)
+
+knit_print.data.frame <- function(x, ...) {
+  res <- paste(c(
+    "", "",
+    knitr::kable(x, digits = 2) |>
+      kableExtra::kable_styling()
+  ), collapse = "\n")
+  knitr::asis_output(res)
+}
+
+registerS3method(
+  "knit_print", "data.frame", knit_print.data.frame,
+  envir = asNamespace("knitr")
+)
+
+model_table <- function(model) {
+  report::report_table(model) |> 
+    summary() |> 
+    insight::display(zap_small = TRUE)
+}
+```
