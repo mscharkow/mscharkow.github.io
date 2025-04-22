@@ -44,8 +44,8 @@ csl: https://www.zotero.org/styles/apa
 #| layout-ncol: 2
 plan <- readr::read_tsv("plan.tsv") |> 
   mutate(Datum = strftime(Datum, "%d.%m.%Y"))
-kable(plan[1:6, ])
-kable(plan[7:12, ])
+knitr::kable(plan[1:6, ])
+knitr::kable(plan[7:12, ])
 ```
 
 ## Ablauf der Sitzungen und Anwesenheit

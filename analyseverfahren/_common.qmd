@@ -4,7 +4,7 @@ set.seed(12345)
 library(tidyverse)
 library(tinythemes)
 theme_set(theme_ipsum_rc())
-library(kableExtra)
+#library(kableExtra)
 
 knit_print.data.frame <- function(x, ...) {
   res <- paste(c(
