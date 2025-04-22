@@ -1,0 +1,120 @@
+---
+title: "Computational Communication Science"
+author: "Prof. Dr. Michael Scharkow"
+date: today
+date-format: "[Sommersemester] 2025"
+format: minimalist-revealjs
+df-print: kable
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+lang: en
+---
+
+# Session 1 {#s1}
+
+## CCS Module
+
+-   *Computational Communication Science* is mostly
+    -   introduction to basic literature and methods
+    -   very practical exercises in computational methods
+-   *Datafied Society* is more
+    -   theory and research-focused
+    -   (and probably has a unifying topic)
+-   Write your term paper in either of the classes.
+
+## Course credit and requirements
+
+-   active participation, i.e. by presenting a poster on a CCS study
+-   smaller homework assignments, i.e. practical computational methods
+-   term paper, preferably a data-driven analysis of your choice
+    -   either as traditional 3000 word research paper or
+    -   alternative forms, e.g. [Scrollytelling](https://posit.co/blog/closeread-prize-winners/)
+    -   fantastic example (in German): [Blaue Bücher, rosa Bücher](https://www.sueddeutsche.de/projekte/artikel/kultur/gender-wie-gleichberechtigt-sind-kinderbuecher-e970817/)
+-   team work (in small teams) is more fun ad highly encouraged
+
+## English
+
+-   English is used for **all** spoken and written communication in the module
+-   English proficiency is never judged or graded
+-   the core difficulties in understanding the literature are rarely language-related
+-   CCS is almost exclusively based on English publications, with two notable intro book exceptions: @jünger2023; @haim2023
+
+
+
+
+## Computational Communication Science?
+
+> A field is emerging that leverages the capacity to collect and analyze data at a scale that may reveal patterns of individual and group behaviors. [@lazerpentland2009]
+
+  > [W]e define computational communication science as the endeavor to understand human communication by developing and applying digital tools that often involve a high degree of automation in observational, theoretical, and experimental research. [@hilbertbarnett2019]
+
+
+## Computational Communication Science
+
+- definition based on methods rather than study subject or theoretical background
+- somehow "big data" are involved, as are automatic methods
+- terminology and many methods mostly derived from the natural sciences and engineering
+- innovation often (but not always) happens outside academia, e.g. within companies such as Google or Meta
+
+## Computational methods
+
+- the "Big 3" approaches in CCS:
+  1. automatic content analysis
+  2. analysis of digital traces and digital behavioral data
+  3. simulation and agent-based modelling
+- historically, *very* strong emphasis on web data and automatic content analysis [@vanatteveldt2022computational]
+- agent-based modeling still very niche topics (see your own study choices for next week!)
+
+## Schedule
+```{r}
+library(tidyverse)
+plan <- readr::read_tsv("plan.tsv") |> 
+  dplyr::rename(Session = Sitzung, Date = Datum, Topic = Thema)
+knitr::kable(plan)
+```
+
+## Challenges
+
+- data access for academic research [@freelon2018]
+- legal and ethical challenges in using private or semi-public data 
+- technical and methodological issues in analyzing very large datasets
+- necessary skills for students and scholars, lack of curricula
+- computational studies are often (by necessity) interdisciplinary
+- also: literacy for reviewing computational studies in communication research
+
+## Caveats 
+
+- the field is moving extremely fast, that means
+  - many approaches are outdated within a few years
+  - platforms restrict access to data and prohibit distribution of replication data
+  - replication of many studies is difficult
+- starting from methods or data feels strange (and for some uncomfortable) compared to traditional empirical research
+- you will need (and learn) coding skills at least in R, but might need Python later
+
+## Benefits
+
+- computational skills are **extremely** valuable on the job market, both in academia and in the real world
+- the CCS perspective challenges many traditional assumptions about how research works, i.e. by valuing creative re-operationalization of existing measures
+- with a full methods toolbox, you can conduct high-quality research even on niche topics
+- ideally the course will help you conduct better studies in your large empirical modules
+
+## Course setup
+
+- "cold opening" introduction by actually reading CCS papers
+- then, for every approach:
+  - I prepare a small presentation on the basics
+  - you work through an application using R at home
+  - we discuss the practical tasks in the following session
+  - we creatively apply the new methods to our own topics
+- Bring your own ideas, data, research questions to class!
+
+## CCS Paper Potpourri
+
+- 10 posters overall, we'll probably do 2x 45min sessions.
+- please bring the digital versions as well, just in case
+- remember to get the posters printed ASAP
+- any questions about the studies or posters?
+
+# Questions?
+
+## References
