@@ -287,6 +287,13 @@
     "text": "Literaturempfehlungen\nField, A., Miles, J., & Field, Z. (2012). Discovering statistics using R. London: Sage.\nMiles, J., & Shevlin, M. (2001). Applying regression and correlation: A guide for students and researchers. London: Sage.\nDarlington, R. B., & Hayes, A. F. (2016). Regression analysis and linear models: Concepts, applications, and implementation. Guilford Publications.\nMcElreath, R. (2020). Statistical rethinking: A Bayesian course with examples in R and Stan. CRC press. (für Interessierte)"
   },
   {
+    "objectID": "analyseverfahren/slides.html#self-assessment",
+    "href": "analyseverfahren/slides.html#self-assessment",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Self-Assessment",
+    "text": "Self-Assessment\nInterpretieren Sie die folgenden Analysen:\n\nSie vergleichen mit einem T-Test die Körpergröße zwischen Männern und Frauen. Der berechnete T-Wert: t(100) = 3.45\nSie vergleichen die Hausarbeitsnoten über alle 6 Parallelkurse Inhaltsanalyse mittels Varianzanalyse: p = .074\nSie berechnen die Korrelation zwischen Anwesenheit und Punkten in der Klausur: r = .41 95%-CI (.24;.58)"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#was-ist-inferenzstatistik",
     "href": "analyseverfahren/slides.html#was-ist-inferenzstatistik",
     "title": "Anwendungsorientierte Analyseverfahren",
@@ -774,7 +781,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Look, I saved your life, Jesse. Are you gonna save mine?\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Don't you know me by now?\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
