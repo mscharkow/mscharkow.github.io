@@ -137,6 +137,14 @@ McElreath, R. (2020). Statistical rethinking: A Bayesian course with examples in
 
 # Refresher Inferenzstatistik
 
+## Self-Assessment
+
+Interpretieren Sie die folgenden Analysen:
+
+1. Sie vergleichen mit einem T-Test die Körpergröße zwischen Männern und Frauen. Der berechnete T-Wert: t(100) = 3.45
+2. Sie vergleichen die Hausarbeitsnoten über alle 6 Parallelkurse Inhaltsanalyse mittels Varianzanalyse: p  = .074
+3. Sie berechnen die Korrelation zwischen Anwesenheit und Punkten in der Klausur: r = .41 95%-CI (.24;.58)
+
 ## Was ist Inferenzstatistik?
 
 > "Die Inferenzstatistik (d.h. schließende Statistik) beschäftigt sich mit der Frage, wie man aufgrund von Stichprobendaten auf Sachverhalte in einer zugrundeliegenden Population schließen kann." (Eid et al., 2010, p. 191)
