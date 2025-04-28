@@ -56,6 +56,13 @@
     "text": "Sitzung 1 \n\nThemen\n\nEinführung, Ablauf, Leistungsanforderungen, Formalia\n\n\n\nLiteratur\nKoch et al. (2019, Kapitel 1, 2)\n\n\nAufgabe zur nächsten Sitzung\n\nVideos zu Grundlagen des Experiments schauen\nVorschlag für ein eigenes Experiment erstellen (1/2 A4 Seite), vor allem Versuchsbedingungen und Outcome-Variable(n)"
   },
   {
+    "objectID": "experiment/index.html#2",
+    "href": "experiment/index.html#2",
+    "title": "BA Experiment",
+    "section": "Sitzung 2 ",
+    "text": "Sitzung 2 \n\nThemen\n\nThemenwahl\nGruppenfindung\n\n\n\nAufgabe zur nächsten Sitzung\n\nGruppen und Thema finden, Literatur recherchieren\nR und RStudio installieren bzw. prüfen, Notebook mitbringen"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
@@ -781,7 +788,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Don't you know me by now?\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You do seem to have a little “shit creek” action going… You know, FYI, you can buy a paddle.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1195,6 +1202,20 @@
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Literatur",
     "text": "Literatur\n\n\n\n\n\n\nKoch, T., Peter, C., & Müller, P. (2019). Das Experiment in der Kommunikations- und Medienwissenschaft. Grundlagen, Durchführung und Auswertung experimenteller Forschung. Wiesbaden: Springer VS."
+  },
+  {
+    "objectID": "experiment/slides.html#themenvorstellung",
+    "href": "experiment/slides.html#themenvorstellung",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Themenvorstellung",
+    "text": "Themenvorstellung\nStellen Sie kurz sich und Ihren Themenvorschlag vor!"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgaben-zur-nächsten-sitzung-1",
+    "href": "experiment/slides.html#aufgaben-zur-nächsten-sitzung-1",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgaben zur nächsten Sitzung",
+    "text": "Aufgaben zur nächsten Sitzung\n\nGruppen bilden (4-5 Personen, ungern weniger)\nE-Mail schreiben, wer in der Gruppe für welches Thema zuständig ist\nStudien mit verwandten Themen recherchieren\nNotebook (bzw. Tablet mit Tastatur) mitbringen\nggf. RStudio und R installieren"
   },
   {
     "objectID": "experiment/slides.html#literatur-1",
