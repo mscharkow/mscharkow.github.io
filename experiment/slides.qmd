@@ -104,5 +104,22 @@ Koch, T., Peter, C., & Müller, P. (2019). *Das Experiment in der Kommunikations
 ![](https://media2.hugendubel.de/shop/coverscans/310/31053865_9783658197537_xl.jpg){width=480}
 :::
 
+# Sitzung 2 {#s2}
+
+
+## Themenvorstellung
+
+Stellen Sie kurz sich und Ihren Themenvorschlag vor!
+
+
+## Aufgaben zur nächsten Sitzung
+
+- Gruppen bilden (4-5 Personen, ungern weniger)
+- E-Mail schreiben, wer in der Gruppe für welches Thema zuständig ist
+- Studien mit verwandten Themen recherchieren
+
+- Notebook (bzw. Tablet *mit* Tastatur) mitbringen
+- ggf. RStudio und R installieren
+
 
 ## Literatur
