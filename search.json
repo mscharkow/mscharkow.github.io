@@ -63,6 +63,13 @@
     "text": "Sitzung 2 \n\nThemen\n\nThemenwahl\nGruppenfindung\n\n\n\nAufgabe zur nächsten Sitzung\n\nGruppen und Thema finden, Literatur recherchieren\nR und RStudio installieren bzw. prüfen, Notebook mitbringen"
   },
   {
+    "objectID": "experiment/index.html#3",
+    "href": "experiment/index.html#3",
+    "title": "BA Experiment",
+    "section": "Sitzung 3 ",
+    "text": "Sitzung 3 \n\nThemen\n\nSimulation von Studien und agentenbasierte Modelle\npraktische R-Übung\n\n\n\nAufgabe zur nächsten Sitzung\n\nR-Hausaufgabe zur Simulation"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
@@ -235,7 +242,7 @@
     "href": "analyseverfahren/slides.html#vorlesungsplan",
     "title": "Anwendungsorientierte Analyseverfahren",
     "section": "Vorlesungsplan",
-    "text": "Vorlesungsplan\n\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n23.04.2025\nEinführung\n\n\n2\n30.04.2025\nGLM Grundlagen\n\n\n3\n07.05.2025\nLineare Regression\n\n\n4\n21.05.2025\nMittelwertvergleiche\n\n\n5\n28.05.2025\nMultiple Regression\n\n\n6\n04.06.2025\nModellannahmen\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n7\n11.06.2025\nModellvorhersagen\n\n\n8\n18.06.2025\nModerationsanalyse I\n\n\n9\n25.06.2025\nModerationsanalyse II\n\n\n10\n02.07.2025\nLogistische Regression\n\n\n11\n09.07.2025\nMultilevel-Regression\n\n\n12\n16.07.2025\nAbschluss"
+    "text": "Vorlesungsplan\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n1\n23.04.2025\nEinführung\n\n\n2\n30.04.2025\nGLM Grundlagen\n\n\n3\n07.05.2025\nLineare Regression\n\n\n4\n21.05.2025\nMittelwertvergleiche\n\n\n5\n28.05.2025\nMultiple Regression\n\n\n6\n04.06.2025\nModellannahmen\n\n\n\n\n\n\n\n\nSitzung\nDatum\nThema\n\n\n\n\n7\n11.06.2025\nModellvorhersagen\n\n\n8\n18.06.2025\nModerationsanalyse I\n\n\n9\n25.06.2025\nModerationsanalyse II\n\n\n10\n02.07.2025\nLogistische Regression\n\n\n11\n09.07.2025\nMultilevel-Regression\n\n\n12\n16.07.2025\nAbschluss"
   },
   {
     "objectID": "analyseverfahren/slides.html#ablauf-der-sitzungen-und-anwesenheit",
@@ -788,7 +795,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You do seem to have a little “shit creek” action going… You know, FYI, you can buy a paddle.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Look, I saved your life, Jesse. Are you gonna save mine?\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1201,7 +1208,7 @@
     "href": "experiment/slides.html#literatur",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Literatur",
-    "text": "Literatur\n\n\n\n\n\n\nKoch, T., Peter, C., & Müller, P. (2019). Das Experiment in der Kommunikations- und Medienwissenschaft. Grundlagen, Durchführung und Auswertung experimenteller Forschung. Wiesbaden: Springer VS."
+    "text": "Literatur\n\n\n\nKoch, T., Peter, C., & Müller, P. (2019). Das Experiment in der Kommunikations- und Medienwissenschaft. Grundlagen, Durchführung und Auswertung experimenteller Forschung. Wiesbaden: Springer VS."
   },
   {
     "objectID": "experiment/slides.html#themenvorstellung",
@@ -1216,6 +1223,132 @@
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Aufgaben zur nächsten Sitzung",
     "text": "Aufgaben zur nächsten Sitzung\n\nGruppen bilden (4-5 Personen, ungern weniger)\nE-Mail schreiben, wer in der Gruppe für welches Thema zuständig ist\nStudien mit verwandten Themen recherchieren\nNotebook (bzw. Tablet mit Tastatur) mitbringen\nggf. RStudio und R installieren"
+  },
+  {
+    "objectID": "experiment/slides.html#theorie-und-empirie",
+    "href": "experiment/slides.html#theorie-und-empirie",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Theorie und Empirie",
+    "text": "Theorie und Empirie\nKlassische empirische Sozialforschung\n\nTheorieentwicklung in Form verbaler Aussagen\nTheorieprüfung anhand empirischer Daten\n(Null-)Hypothesentests als Abgleich von Theorie und Empirie\n\nSimulationen\n\nTheorieentwicklung in Form von Algorithmen/Code\nGenerierung von (mehrfach) simulierten Daten\nAbgleich der simulierten mit empirischen Daten"
+  },
+  {
+    "objectID": "experiment/slides.html#typen-von-simulationen",
+    "href": "experiment/slides.html#typen-von-simulationen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Typen von Simulationen",
+    "text": "Typen von Simulationen\n\nMonte-Carlo-Simulation\nsoziale Simulationen"
+  },
+  {
+    "objectID": "experiment/slides.html#monte-carlo-simulation",
+    "href": "experiment/slides.html#monte-carlo-simulation",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Monte-Carlo-Simulation",
+    "text": "Monte-Carlo-Simulation\n\nAnnahmen über Verteilung von Daten in der Grundgesamtheit\nwiederholtes Ziehen von Zufallsstichproben aus der Grundgesamtheit\nwiederholte Anwendung eines Verfahrens und Analyse der Ergebnisse"
+  },
+  {
+    "objectID": "experiment/slides.html#beispiel-t-test",
+    "href": "experiment/slides.html#beispiel-t-test",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Beispiel T-Test",
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.59, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02417 -13.96878\nsample estimates:\nmean of x mean of y \n 165.9920  179.9885"
+  },
+  {
+    "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
+    "href": "experiment/slides.html#simulation-mit-zufallsziehung",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Simulation mit Zufallsziehung",
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 5.2759e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.8811645"
+  },
+  {
+    "objectID": "experiment/slides.html#alpha-fehler",
+    "href": "experiment/slides.html#alpha-fehler",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Alpha-Fehler",
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.12801639 0.82014636 0.45716268 0.38652661 0.93455346 0.00320164\n\nsum(results_h0 &lt;= .05)\n\n[1] 51"
+  },
+  {
+    "objectID": "experiment/slides.html#beta-fehler-und-power",
+    "href": "experiment/slides.html#beta-fehler-und-power",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Beta-Fehler und Power",
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 448\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+  },
+  {
+    "objectID": "experiment/slides.html#power-analyse",
+    "href": "experiment/slides.html#power-analyse",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Power-Analyse",
+    "text": "Power-Analyse\n\nfür jedes Experiment sollte vorher eine Power-Analyse durchgeführt werden\nplausible Annahmen (z.B. aus der Literatur) für Effektgrößen/Unterschiede zwischen den Versuchsbedingungen\nfür einfache Designs gibt es z.B. Online-Calculators\nfür komplexere Designs Monte-Carlo-Simulation\nwir zielen auf ca. 80% Power für den erwarteten Effekt"
+  },
+  {
+    "objectID": "experiment/slides.html#vor--und-nachteile-monte-carlo-simulation",
+    "href": "experiment/slides.html#vor--und-nachteile-monte-carlo-simulation",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Vor- und Nachteile Monte-Carlo-Simulation",
+    "text": "Vor- und Nachteile Monte-Carlo-Simulation\n\neignen sich vor allem zum Prüfen von Verfahren (tut meine Analyse was sie soll?) und zur\nPower-Analyse (kann meine Studie einen bestimmten Effekt finden?)\ndatengenerierender Prozess muss (näherungsweise) bekannt sein\nRegelspezifikation über Formeln\nisolierte Betrachtung aller Fälle (keine Interaktionen zwischen Agenten)"
+  },
+  {
+    "objectID": "experiment/slides.html#soziale-simulationen",
+    "href": "experiment/slides.html#soziale-simulationen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Soziale Simulationen",
+    "text": "Soziale Simulationen\n\nkomplexe Gleichungssysteme - Makromodelle\nMikrosimulation (Sample von Agenten wird künstlich “gealtert”)\nDiscrete-Event-Simulations (z.B. Warteschlangenmodelle)\nZelluläre Automaten (z.B. Schellings Segregationsmodell)\nAgent-based Models"
+  },
+  {
+    "objectID": "experiment/slides.html#agentenbasierte-modelle-abm",
+    "href": "experiment/slides.html#agentenbasierte-modelle-abm",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Agentenbasierte Modelle (ABM)",
+    "text": "Agentenbasierte Modelle (ABM)\nComputermodelle mit folgenden Komponenten:\n\nAgenten\nUmwelt\nRegeln\n\nGeeignet zur Modellierung und Simulation komplexer Systeme mit\n\nheterogenen, interagierenden und adaptiven Agenten\ndynamischen, nicht-linearen Prozessen\nMikro-Makro-Verknüpfungen"
+  },
+  {
+    "objectID": "experiment/slides.html#spezifikation-der-simulation",
+    "href": "experiment/slides.html#spezifikation-der-simulation",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Spezifikation der Simulation",
+    "text": "Spezifikation der Simulation\n\nin ABM häufig relativ einfache Handlungs-Regeln\nformale Spezifikation mit probabilistischer Komponente\nwenige Parameter innerhalb der Agenten, wenige für die Umwelt\nProblem 1: sozialwissenschaftliche Theorie oft nicht ausreichend spezifisch und vollständig\nProblem 2: Annahmen des Modells vs. Ergebnisse der Simulation"
+  },
+  {
+    "objectID": "experiment/slides.html#beispiel-1-analoge-simulation-heroes-cowards",
+    "href": "experiment/slides.html#beispiel-1-analoge-simulation-heroes-cowards",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Beispiel 1: Analoge Simulation Heroes & Cowards",
+    "text": "Beispiel 1: Analoge Simulation Heroes & Cowards\n\nWir definieren unseren Seminarraum als Umwelt, inkl. aller physikalischen Einschränkungen\nAgenten des ABM: Teilnehmerinnen\neinfache Handlungsanweisungen und minimale soziale Interaktion"
+  },
+  {
+    "objectID": "experiment/slides.html#beispiel-2-generative-agenten-mit-llm",
+    "href": "experiment/slides.html#beispiel-2-generative-agenten-mit-llm",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Beispiel 2: Generative Agenten mit LLM",
+    "text": "Beispiel 2: Generative Agenten mit LLM\n\nForschungfrage: Wie wirken Emojis in Textnachrichten?\nWhatsapp-Nachrichten mit und ohne passende Emojis (generiert mit ChatGPT)\nverschiedene Agentenpersonas (Alter, Geschlecht, Erfahrung)\nExperimentaldesign Within-Subjects: alle Agenten bewerten alle Nachrichten (mit einer Replikation)\nverwendetes Modell GPT3.5 (Kosten wenige Cent pro Durchlauf)"
+  },
+  {
+    "objectID": "experiment/slides.html#simulierte-daten",
+    "href": "experiment/slides.html#simulierte-daten",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Simulierte Daten",
+    "text": "Simulierte Daten\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nagent_age\nagent_experience\nagent_gender\nscenario_condition\nscenario_message\nanswer_friendly\n\n\n\n\n60\nloves texting and knows all the emojis.\nman\nannoyed with matching emojis\nKim, make sure you buy and bring a pack of coffee. 😒☕\n1\n\n\n60\nloves texting and knows all the emojis.\nman\nfriendly with matching emojis\nHey Kim, could you vacuum the living room? 🧹😊 You’re a star!\n4\n\n\n40\njust learned how to use Whatsapp\nwoman\nannoyed without emojis\nKim, don’t forget to wash the dishes.\n2"
+  },
+  {
+    "objectID": "experiment/slides.html#simulierte-ergebnisse",
+    "href": "experiment/slides.html#simulierte-ergebnisse",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Simulierte Ergebnisse",
+    "text": "Simulierte Ergebnisse"
+  },
+  {
+    "objectID": "experiment/slides.html#ausblick-llm-basierte-abm",
+    "href": "experiment/slides.html#ausblick-llm-basierte-abm",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Ausblick LLM-basierte ABM",
+    "text": "Ausblick LLM-basierte ABM\n\nvielfältige Anwendungsbereiche, vor allem auch im Bereich Rezeptionsforschung\nrelativ einfache Regelspezifikation, komplexe Agentenpersonas (ggf. mit Gedächtnis)\nVerknüpfung mit realen Stimuli einfach möglich\nInter-Agent-Kommunikation möglich, aber bislang in Expected Parrot nicht umgesetzt\nNachteile: Biases der LLM schlagen durch, unklare Generalisierbarkeit\nLLM-Antworten sind definitiv nicht äquivalent mit menschlichen Befragten!"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgaben-zur-nächsten-sitzung-2",
+    "href": "experiment/slides.html#aufgaben-zur-nächsten-sitzung-2",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgaben zur nächsten Sitzung",
+    "text": "Aufgaben zur nächsten Sitzung\n\npraktische Übung nachbereiten https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html\nHausaufgabe in R erledigen"
   },
   {
     "objectID": "experiment/slides.html#literatur-1",
