@@ -62,3 +62,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 - Gruppen und Thema finden, Literatur recherchieren
 - R und RStudio installieren bzw. prüfen, Notebook mitbringen
+
+
+
+# Literatur

@@ -122,4 +122,182 @@ Stellen Sie kurz sich und Ihren Themenvorschlag vor!
 - ggf. RStudio und R installieren
 
 
+# Sitzung 3 {#s3}
+
+
+## Theorie und Empirie
+
+### Klassische empirische Sozialforschung
+
+-   Theorieentwicklung in Form verbaler Aussagen
+-   Theorieprüfung anhand empirischer Daten
+-   (Null-)Hypothesentests als Abgleich von Theorie und Empirie
+
+### Simulationen
+
+-   Theorieentwicklung in Form von Algorithmen/Code
+-   Generierung von (mehrfach) simulierten Daten
+-   Abgleich der simulierten mit empirischen Daten
+
+## Typen von Simulationen
+
+-  Monte-Carlo-Simulation
+- soziale Simulationen
+
+## Monte-Carlo-Simulation
+
+- Annahmen über Verteilung von Daten in der Grundgesamtheit
+- wiederholtes Ziehen von Zufallsstichproben aus der Grundgesamtheit
+- wiederholte Anwendung eines Verfahrens und Analyse der Ergebnisse
+
+## Beispiel T-Test
+
+```{r, echo = T}
+males = rnorm(n = 1e6, m = 180, sd = 10)
+females = rnorm(n = 1e6, m = 166, sd = 10)
+t.test(females, males) 
+```
+
+## Simulation mit Zufallsziehung
+
+```{r, echo = T}
+do_t_test = function(n, group1, group2){
+  m = sample(group1, n)
+  w = sample(group2, n)
+  t.test(m,w)$p.value
+}
+
+do_t_test(100, females, males)
+do_t_test(100, males, males)
+```
+
+## Alpha-Fehler
+
+```{r, echo = T}
+set.seed(123)
+results_h0 = replicate(1000, do_t_test(n = 100, males, males))
+results_h0 |> head()
+sum(results_h0 <= .05)
+```
+
+## Beta-Fehler und Power
+
+```{r, echo = T}
+results_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))
+results_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))
+
+sum(results_h1_n10 <= .05)
+sum(results_h1_n100 <= .05)
+```
+
+## Power-Analyse
+
+- für jedes Experiment sollte vorher eine Power-Analyse durchgeführt werden
+- plausible Annahmen (z.B. aus der Literatur) für Effektgrößen/Unterschiede zwischen den Versuchsbedingungen
+- für einfache Designs gibt es z.B. Online-Calculators
+- für komplexere Designs Monte-Carlo-Simulation
+- wir zielen auf ca. 80% Power für den erwarteten Effekt
+
+
+## Vor- und Nachteile Monte-Carlo-Simulation
+
+- eignen sich vor allem zum Prüfen von Verfahren (tut meine Analyse was sie soll?) und zur 
+- Power-Analyse (kann meine Studie einen bestimmten Effekt finden?)
+- datengenerierender Prozess muss (näherungsweise) bekannt sein
+- Regelspezifikation über Formeln
+- isolierte Betrachtung aller Fälle (keine Interaktionen zwischen Agenten)
+
+
+## Soziale Simulationen
+
+-   komplexe Gleichungssysteme - Makromodelle
+-   Mikrosimulation (Sample von Agenten wird künstlich "gealtert")
+-   Discrete-Event-Simulations (z.B. Warteschlangenmodelle)
+-   Zelluläre Automaten (z.B. Schellings Segregationsmodell)
+-   Agent-based Models
+
+## Agentenbasierte Modelle (ABM)
+
+### Computermodelle mit folgenden Komponenten:
+
+-   Agenten
+-   Umwelt
+-   Regeln
+
+### Geeignet zur Modellierung und Simulation komplexer Systeme mit
+
+-   heterogenen, interagierenden und adaptiven Agenten
+-   dynamischen, nicht-linearen Prozessen
+-   Mikro-Makro-Verknüpfungen
+
+## Spezifikation der Simulation
+
+-   in ABM häufig relativ einfache Handlungs-Regeln
+-   formale Spezifikation mit probabilistischer Komponente
+-   wenige Parameter innerhalb der Agenten, wenige für die Umwelt
+-   Problem 1: sozialwissenschaftliche Theorie oft nicht ausreichend spezifisch und vollständig
+-   Problem 2: Annahmen des Modells vs. Ergebnisse der Simulation
+
+## Beispiel 1: Analoge Simulation Heroes & Cowards
+
+- Wir definieren unseren Seminarraum als Umwelt, inkl. aller physikalischen Einschränkungen
+- Agenten des ABM: Teilnehmerinnen
+- einfache Handlungsanweisungen und minimale soziale Interaktion
+
+
+## Beispiel 2: Generative Agenten mit LLM
+
+- Forschungfrage: Wie wirken Emojis in Textnachrichten?
+- Whatsapp-Nachrichten mit und ohne passende Emojis (generiert mit ChatGPT)
+- verschiedene Agentenpersonas (Alter, Geschlecht, Erfahrung)
+- Experimentaldesign Within-Subjects: alle Agenten bewerten alle Nachrichten (mit einer Replikation)
+- verwendetes Modell GPT3.5 (Kosten wenige Cent pro Durchlauf)
+
+## Simulierte Daten
+
+```{r}
+library(tidyverse)
+library(lme4)
+theme_set(tinythemes::theme_ipsum_rc(base_family = "Helvetica"))
+```
+
+::: {.small}
+
+```{r}
+d = read_csv("results_emo3i.csv") %>%
+  janitor::clean_names() %>%
+  mutate(text = ifelse(str_detect(scenario_condition, "friendly"), "friendly", "annoyed"),
+         emoji = ifelse(str_detect(scenario_condition, "without"), "without", "with"))
+d %>% 
+  select(starts_with("agent"), starts_with("scenario"), answer_friendly, -agent_agent_name) %>% 
+  sample_n(3)
+```
+
+:::
+
+## Simulierte Ergebnisse
+
+```{r}
+lmer(answer_friendly ~ text * emoji + (1|agent_agent_name), data = d) %>%
+  marginaleffects::avg_predictions(variables = c("text", "emoji")) %>%
+  ggplot(aes(x = text, y = estimate, ymin = conf.low, ymax = conf.high, color = emoji))+
+  geom_pointrange(position = position_dodge(1))
+```
+
+
+## Ausblick LLM-basierte ABM
+
+- vielfältige Anwendungsbereiche, vor allem auch im Bereich Rezeptionsforschung
+- relativ einfache Regelspezifikation, komplexe Agentenpersonas (ggf. mit Gedächtnis)
+- Verknüpfung mit realen Stimuli einfach möglich
+- Inter-Agent-Kommunikation möglich, aber bislang in Expected Parrot nicht umgesetzt
+- Nachteile: Biases der LLM schlagen durch, unklare Generalisierbarkeit
+- LLM-Antworten sind definitiv nicht äquivalent mit menschlichen Befragten!
+
+
+## Aufgaben zur nächsten Sitzung
+
+- praktische Übung nachbereiten <https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html>
+- Hausaufgabe in R erledigen
+
 ## Literatur
