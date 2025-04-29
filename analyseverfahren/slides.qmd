@@ -7,6 +7,8 @@ format: minimalist-revealjs
 df-print: kable
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
+
+embed-resources: true
 ---
 
 ```{r child = '_common.qmd'}
@@ -14,29 +16,26 @@ csl: https://www.zotero.org/styles/apa
 
 # Sitzung 1 {#s1}
 
-
 ## Warum (noch) eine Vorlesung zur Statistik?
 
-- **Literacy**: Wenn man aktuelle Forschung lesen möchte (oder muss), führt kein Weg an etwas komplexeren Analysen vorbei.
-- **Selbstwirksamkeit**: Wer einmal eine Analyse durchgeführt hat,  kann in Seminar- und Abschlussarbeiten besser Daten auswerten.
-- **Jobaussichten**: Viele AbsolventInnen berichten rückblickend, dass gerade die Methodenskills am besten verwertbar waren bei der Jobsuche und im Beruf.
-
+-   **Literacy**: Wenn man aktuelle Forschung lesen möchte (oder muss), führt kein Weg an etwas komplexeren Analysen vorbei.
+-   **Selbstwirksamkeit**: Wer einmal eine Analyse durchgeführt hat, kann in Seminar- und Abschlussarbeiten besser Daten auswerten.
+-   **Jobaussichten**: Viele AbsolventInnen berichten rückblickend, dass gerade die Methodenskills am besten verwertbar waren bei der Jobsuche und im Beruf.
 
 ## Ziele der Vorlesung
 
-- Studierende werden dazu befähigt, die Anwendung ausgewählter Analyseverfahren nachzuvollziehen sowie entsprechende Forschungsergebnisse und Interpretationen zu verstehen. 
-- Studierende sind in der Lage, für ausgewählte Analyseverfahren anhand vorgegebener Daten Ergebnisse aus der Forschungsliteratur mittels Statistiksoftware zu reproduzieren. 
-- Studierende verfügen über die die Kompetenz, Angemessenheit und Güte von methodischen Vorgehensweisen zu beurteilen.
-- (Studierende finden Statistik weniger schlimm und langweilig).
-
+-   Studierende werden dazu befähigt, die Anwendung ausgewählter Analyseverfahren nachzuvollziehen sowie entsprechende Forschungsergebnisse und Interpretationen zu verstehen.
+-   Studierende sind in der Lage, für ausgewählte Analyseverfahren anhand vorgegebener Daten Ergebnisse aus der Forschungsliteratur mittels Statistiksoftware zu reproduzieren.
+-   Studierende verfügen über die die Kompetenz, Angemessenheit und Güte von methodischen Vorgehensweisen zu beurteilen.
+-   (Studierende finden Statistik weniger schlimm und langweilig).
 
 ## Was die Vorlesung (nicht) ist
 
-- keine Wiederholung der VL Statistik oder der Datenanalyse-Übungen
-- Fokus auf das Verständnis für und die Anwendung von statistischen Verfahren, weniger die Mathematik dahinter
-- das Allgemeine Lineare Modell (GLM) als grundlegendes Verfahren
-- kein reines Ablesen von p-Werten und Signifikanz-Sternchen
--  emanzipierter Umgang mit statistischen Verfahren statt Rezepte abarbeiten
+-   keine Wiederholung der VL Statistik oder der Datenanalyse-Übungen
+-   Fokus auf das Verständnis für und die Anwendung von statistischen Verfahren, weniger die Mathematik dahinter
+-   das Allgemeine Lineare Modell (GLM) als grundlegendes Verfahren
+-   kein reines Ablesen von p-Werten und Signifikanz-Sternchen
+-   emanzipierter Umgang mit statistischen Verfahren statt Rezepte abarbeiten
 
 ## Vorlesungsplan
 
@@ -50,57 +49,56 @@ knitr::kable(plan[7:12, ])
 
 ## Ablauf der Sitzungen und Anwesenheit
 
-### Ablauf 
-1. Besprechung der praktischen Übungen/Hausaufgabe (max. 15 min)
-2. Vorlesungsteil (max. 60 min)
-3. Fragen und Antworten zur Vorlesung und praktischen Übung
+### Ablauf
+
+1.  Besprechung der praktischen Übungen/Hausaufgabe (max. 15 min)
+2.  Vorlesungsteil (max. 60 min)
+3.  Fragen und Antworten zur Vorlesung und praktischen Übung
 
 ### Anwesenheit
-- keine Anwesenheitspflicht, aber auch keine Nachhilfepflicht meinerseits
-- eigenständige Nachbereitung der praktischen Übungen
+
+-   keine Anwesenheitspflicht, aber auch keine Nachhilfepflicht meinerseits
+-   eigenständige Nachbereitung der praktischen Übungen
 
 ## E-Learning und Studienleistung
 
 ### Material
 
-- Folien und Übungsmaterialien samt Daten und R-Code auf <br/> <https://stats.ifp.uni-mainz.de/ba-aa-vl>
+-   Folien und Übungsmaterialien samt Daten und R-Code auf <br/> <https://stats.ifp.uni-mainz.de/ba-aa-vl>
 
 ### Studienleistung
 
-- während der Vorlesungszeit **3** Teil-Studienleistungen (je ca. 15 min)
-- sowohl Interpretations- als auch praktische Analyseaufgaben
-- Deadline jeweils 2 Wochen nach Aufgabenstellung, Mi 12h 
-- Benotung jeweils Pass/Fail, 3x Pass nötig (ggf. Zusatzaufgabe)
-
+-   während der Vorlesungszeit **3** Teil-Studienleistungen (je ca. 15 min)
+-   sowohl Interpretations- als auch praktische Analyseaufgaben
+-   Deadline jeweils 2 Wochen nach Aufgabenstellung, Mi 12h
+-   Benotung jeweils Pass/Fail, 3x Pass nötig (ggf. Zusatzaufgabe)
 
 ## Praktische Übungen
 
-- zu jeder Sitzung eine praktische Übung auf Basis einer publizierten Studie
-- kurze Besprechung in der Vorlesung, meist mit einer exemplarischen Analyse
-- R-Code zum Replizieren der Analysen zuhause oder während der Vorlesung
-- praktische Anwendung als integraler Teil der Vorlesung und der Studienleistung
-- Copy & Paste/Anpassung von bestehendem Code ist ok!
-
+-   zu jeder Sitzung eine praktische Übung auf Basis einer publizierten Studie
+-   kurze Besprechung in der Vorlesung, meist mit einer exemplarischen Analyse
+-   R-Code zum Replizieren der Analysen zuhause oder während der Vorlesung
+-   praktische Anwendung als integraler Teil der Vorlesung und der Studienleistung
+-   Copy & Paste/Anpassung von bestehendem Code ist ok!
 
 ## Software
 
-- in der VL vorgestellten Analysen lassen sich mit praktisch jeder Statistiksoftware reproduzieren
-- jede Statistiksoftware ist nur ein Werkzeug
-- Lektürekompetenz heißt auch, man kann sowohl SPSS als auch Stata oder R-Output lesen
-- wegen Verfügbarkeit und Zukunftsfähigkeit verwende ich R
-
+-   in der VL vorgestellten Analysen lassen sich mit praktisch jeder Statistiksoftware reproduzieren
+-   jede Statistiksoftware ist nur ein Werkzeug
+-   Lektürekompetenz heißt auch, man kann sowohl SPSS als auch Stata oder R-Output lesen
+-   wegen Verfügbarkeit und Zukunftsfähigkeit verwende ich R
 
 ### Für die Studienleistung ist irrelevant, welche Software Sie verwenden!
 
 ## Warum muss ich jetzt auch noch R lernen?
 
-- **Sie müssen nicht!** 
-- R ist freie Software und durch viele tausend Pakete (packages) erweiterbar, u.a. für
-  - Datenerhebung: Web-Scraping, APIs (z.B. für TikTok oder Spotify), Textdaten
-  - Auswertung: Statistik, Textanalyse, Audiodaten, Psychophysiologie, etc.
-  - Datenpräsentation und -visualisierung: Grafiken, Berichte, Folien (z.B. diese)
-- grundlegende Programmierkenntnisse, die auch ohne Statistik nützlich sein können
-- das IfP hat auf R umgestellt, siehe Kurz-Websites <https://stats.ifp.uni-mainz.de/>
+-   **Sie müssen nicht!**
+-   R ist freie Software und durch viele tausend Pakete (packages) erweiterbar, u.a. für
+    -   Datenerhebung: Web-Scraping, APIs (z.B. für TikTok oder Spotify), Textdaten
+    -   Auswertung: Statistik, Textanalyse, Audiodaten, Psychophysiologie, etc.
+    -   Datenpräsentation und -visualisierung: Grafiken, Berichte, Folien (z.B. diese)
+-   grundlegende Programmierkenntnisse, die auch ohne Statistik nützlich sein können
+-   das IfP hat auf R umgestellt, siehe Kurz-Websites <https://stats.ifp.uni-mainz.de/>
 
 ## Kleines R-Beispiel: Breaking Bad Deaths
 
@@ -124,7 +122,6 @@ read_csv('https://wegweisr.haim.it/Daten/breaking_bad_deaths.csv') |>
   head(n = 5)
 ```
 
-
 ## Literaturempfehlungen
 
 Field, A., Miles, J., & Field, Z. (2012). Discovering statistics using R. London: Sage.
@@ -141,9 +138,9 @@ McElreath, R. (2020). Statistical rethinking: A Bayesian course with examples in
 
 Interpretieren Sie die folgenden Analysen:
 
-1. Sie vergleichen mit einem T-Test die Körpergröße zwischen Männern und Frauen. Der berechnete T-Wert: t(100) = 3.45
-2. Sie vergleichen die Hausarbeitsnoten über alle 6 Parallelkurse Inhaltsanalyse mittels Varianzanalyse: p  = .074
-3. Sie berechnen die Korrelation zwischen Anwesenheit und Punkten in der Klausur: r = .41 95%-CI (.24;.58)
+1.  Sie vergleichen mit einem T-Test die Körpergröße zwischen Männern und Frauen. Der berechnete T-Wert: t(100) = 3.45
+2.  Sie vergleichen die Hausarbeitsnoten über alle 6 Parallelkurse Inhaltsanalyse mittels Varianzanalyse: p = .074
+3.  Sie berechnen die Korrelation zwischen Anwesenheit und Punkten in der Klausur: r = .41 95%-CI (.24;.58)
 
 ## Was ist Inferenzstatistik?
 
@@ -156,7 +153,7 @@ Interpretieren Sie die folgenden Analysen:
 
 ## Ein simuliertes Beispiel
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 ### Simulation
 
@@ -182,11 +179,11 @@ ggplot(data.frame(GG), aes(GG)) +
 
 -   Grundgesamtheit: M = `r round(mean(GG), 0)`, SD = `r round(sd(GG), 0)`
 :::
-:::
+::::::
 
 ## Stichprobenziehung und -kennwerte
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 ### Eine einzelne Stichprobe
 
@@ -215,11 +212,11 @@ ggplot(data.frame(STP), aes(STP)) +
   labs(title = "Körpergröße in der Stichprobe (n = 30)", y = "Häufigkeit", x = paste0("Körpergröße (M = ", round(STP.mean, 0), ", SD = ", round(STP.sd, 0), ")"))
 ```
 :::
-:::
+::::::
 
 ## Wiederholte Stichproben
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 -   Asymptotische Inferenz basiert auf der Annahme, dass die Mittelwerte **vieler** Stichproben derselben Grundgesamtheit normalverteilt sind.
 -   wir ziehen 1000 Stichproben mit jeweils n = 30
@@ -248,13 +245,13 @@ ggplot(filter(STPx1000.vis, facet < 5)) +
   facet_wrap(~ paste("Stichprobe Nr.", facet), ncol = 2)
 ```
 :::
-:::
+::::::
 
 ## Stichprobenmittelwerte und SE
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
--   Die Mittelwerte der einzelnen Stichproben streuen um den wahren Populationsmittelwert von `r round(mean(GG))` =  Standardfehler (SE).
+-   Die Mittelwerte der einzelnen Stichproben streuen um den wahren Populationsmittelwert von `r round(mean(GG))` = Standardfehler (SE).
 
 -   SE = $SD(x)/\sqrt(n-1)$, den wir anhand **einer** Stichprobe berechnen können, als Schätzer für die Streuung der Stichprobenmittelwerte.
 
@@ -275,17 +272,16 @@ ggplot(data.frame(STPx1000.mean)) +
 -   Bei unseren 1000 simulierten Stichproben ist der Mittelwert der Mittelwerte M = `r round(mean(STPx1000.mean), 1)`.
 -   Die Standardabweichung der Mittelwerte ist SE = `r round(sd(STPx1000.mean),1)`.
 :::
-:::
+::::::
 
 ## Stichprobentheorie und -empirie
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 -   Stichprobentheorie sagt uns wie bestimmte Kennwerte (z.B. Mittelwerte) in unendlich wiederholten Stichproben verteilt sind.
 -   Diese Information können wir mit den Schätzern aus *einer* Stichprobe kombinieren.
 -   Darauf basieren die Intervallschätzung und Hypothesentests.
 :::
-
 
 ::: {.column width="10%"}
 :::
@@ -300,15 +296,13 @@ ggplot(data.frame(x = STPx1000.mean), aes(x)) +
   geom_density(data = gg_df, aes(x), color = "#C1002B", size = 1)
 ```
 
-
 *Rot: Normalverteilungskurve mit Mittelwert und Standardfehler aus der ersten Stichprobe.*
-
 :::
-:::
+::::::
 
 ## Konfidenzintervalle
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 -   basieren auf der Annahme, dass ein Schätzer einer bestimmten Verteilung folgt.
 -   Bei einer Standardnormalverteilung (M = 0, SD = 1) liegen 95% aller Werte zwischen -1,96 und 1,96.
@@ -335,7 +329,7 @@ gg_df |>
 
 95%-Konfidenzintervall auf Basis unserer ersten Stichprobe (M und SE): `r round(STP.mean - 1.96*STP.sd/sqrt(29),1)` - `r round(STP.mean + 1.96*STP.sd/sqrt(29),1)`
 :::
-:::
+::::::
 
 ## Interpretation eines Konfidenzintervalls
 
@@ -376,7 +370,6 @@ library(patchwork)
 a1 + a2
 ```
 
-
 ## Die Welt der Nullhypothese?
 
 -   Im Gegensatz zu den unendlich vielen Alternativhypothesen, die man haben kann, gibt es immer nur eine Nullhypothese.
@@ -413,7 +406,7 @@ außerdem:
 -   Zwei mögliche Ursachen:
     -   Die Nullhypothese gilt, aber wir beobachten zufällig ein sehr seltenes Ereignis *oder*
     -   Die Nullhypothese gilt nicht. (Das heißt nicht, die Alternativhypothese gilt.)
--   Wenn  $p < .05$, sind wir zuversichtlich, dass unsere Stichprobe nicht zu den 5% Abweichlern in der Welt der Nullhypothese gehört, sondern einfach die Nullhypothese nicht stimmt.
+-   Wenn $p < .05$, sind wir zuversichtlich, dass unsere Stichprobe nicht zu den 5% Abweichlern in der Welt der Nullhypothese gehört, sondern einfach die Nullhypothese nicht stimmt.
 
 # Fehler in der Inferenz
 
@@ -423,7 +416,7 @@ außerdem:
 
 ## Alpha-Fehler
 
-::: columns
+:::::: columns
 ::: {.column width="40%"}
 -   Ein $\alpha = .05$ bedeutet, dass wir in 5 von 100 Fällen ein signifikantes Ergebnis bekommen, obwohl die Nullhypothese gilt.
 -   Mit unseren 1000 Stichproben und $\mu_0 = 170$ sollten wir beim T-Test grob 50 fälschlich signifikante Ergebnisse bekommen.
@@ -448,18 +441,15 @@ außerdem:
 
 -   Problem: Wir wissen (wie immer!) nicht, ob unsere Stichprobe zu den grauen oder roten Stichproben gehört.
 :::
-:::
+::::::
 
+## Beta-Fehler und statistische Power
 
-## Beta-Fehler und statistische Power 
-
-- Um Beta-Fehler (H0 wird fälschlich angenommen) zu verringern, brauchen wir statistische Power bzw. Präzision (vgl. Konfidenzintervalle).
+-   Um Beta-Fehler (H0 wird fälschlich angenommen) zu verringern, brauchen wir statistische Power bzw. Präzision (vgl. Konfidenzintervalle).
 -   Um die Power/Präzision eines Tests/einer Schätzung zu erhöhen, muss man zumeist die Stichprobengröße erhöhen.
-- Per Umstellung der SE-Formel kann man die nötige Stichprobengröße für erwartete Schätzer berechnen.
+-   Per Umstellung der SE-Formel kann man die nötige Stichprobengröße für erwartete Schätzer berechnen.
 
-::: {layout-ncol=2}
-
-
+::: {layout-ncol="2"}
 ```{r}
 1:1000 |>
   map(~ sample(GG, 10)) |>
@@ -472,7 +462,6 @@ außerdem:
   labs(fill = "", x = "t-Wert", y = "Häufigkeit", title = "1000 Einstichproben-T-Tests (n=10)")
 ```
 
-
 ```{r}
 1:1000 |>
   map(~ sample(GG, 50)) |>
@@ -484,9 +473,7 @@ außerdem:
   scale_fill_manual(values = c("#999999", "#C1002B")) +
   labs(fill = "", x = "t-Wert", y = "Häufigkeit", title = "1000 Einstichproben-T-Tests (n=50)")
 ```
-
 :::
-
 
 ## Take home message
 
@@ -507,20 +494,230 @@ Inferenzstatistik ‚funktioniert', weil...
 -   Bitte in Zukunft beachten:
     -   Nicht p-hacken, nicht im Nachhinein am Alpha-Niveau schrauben!
     -   Kein Bedauern nicht-signifikanter Ergebnisse ("leider knapp nicht signifikant")!
-    
-    
+
 # Fragen? {background-color="rgb(193,0,42)"}
 
+# Sitzung 2 {#s2}
 
+# Klassische Statistiklehre
 
-## Aufgaben zur nächsten Sitzung
+![Quelle: https://onishlab.colostate.edu/wp-content/uploads/2019/07/which_test_flowchart.png](https://onishlab.colostate.edu/wp-content/uploads/2019/07/which_test_flowchart.png)
 
-1. Lesen Sie die Einführung in R aus dem BA-Datenanalyse Kurs <https://stats.ifp.uni-mainz.de/ba-datenanalyse/r-und-rstudio.html>
-2. Lösen Sie dort die Hausaufgaben 1 und 2 (Installieren von R). <br/>
-**Achtung**: Bei Aufgabe 2 bitte die Materialien dieser VL <https://stats.ifp.uni-mainz.de/ba-aa-vl/> statt der BA-Datenanalyse herunterladen und öffnen.
-3. **Fallback-Option**: RStudio im Browser <https://rstudio.ifp.uni-mainz.de>, dort das Projekt im Ordner `ba-aa-vl` öffnen. <br/>
-(nur aus dem JGU-Netzwerk, Username = Passwort = ZDV-Nutzername)
-3. Frischen Sie ggf. ihre Statistik-Kenntnisse auf. Alle sollten wissen, was eine (Ko)-Varianz ist oder wie eine Datenmatrix aussieht.
+## Datenanalyse als Rezeptsammlung
 
+-   In der klassischen Statistikausbildung (auch bei uns) als Rezeptesammlung:
+
+    -   Mittelwerte in (genau) zwei Gruppen vergleichen - T-Test
+    -   Mittelwerte in mehr als zwei Gruppen vergleichen - Varianzanalyse (ANOVA)
+    -   Zusammenhänge von kategoriellen Variablen testen - $\chi^2$-Test
+    -   ...
+
+-   Fokus auf Unterschieden und Spezifika statt auf Gemeinsamkeiten
+
+-   Viele Verfahren sind aber mindestens funktional, oft auch mathematisch äquivalent!
+
+## Beispielstudie: @auty2004
+
+> There has been little attempt to understand the influence on children of branded products that appear in television programs and movies. A study exposed children of two different age groups (6--7 and 11--12) in classrooms to a brief film clip. Half of each class was shown a scene from Home Alone that shows Pepsi Cola being spilled during a meal. The other half was shown a similar clip from Home Alone but without branded products. All children were invited to help themselves from a choice of Pepsi or Coke at the outset of the individual interviews.
+
+## Beispielstudie: Daten
+
+```{r, echo = F}
+autylewis04 <- haven::read_sav("data/Auty_Lewis_2004.sav")
+autylewis04 |> sample_n(5)
+```
+
+## Beispielstudie: Chi-Quadrat Test
+
+### Kreuztabelle (Spaltenprozente)
+
+```{r, echo = F}
+autylewis04 |>
+  group_by(pepsi_placement) |>
+  count(pepsi_chosen) |>
+  mutate(n = n / sum(n) * 100) |>
+  spread(pepsi_placement, n) |>
+  rename(no_placement = 2, placement = 3) |> 
+  mutate_if(is.numeric, round)
+```
+
+\
+
+### Chi-Quadrat Test
+
+```{r}
+table(
+  autylewis04$pepsi_placement,
+  autylewis04$pepsi_chosen
+) |>
+  chisq.test(correct = FALSE) |> 
+  model_table()
+```
+
+## Beispielstudie: Bivariate Korrelation
+
+### Pearson Korrelation
+
+```{r}
+cor.test(~ pepsi_placement + pepsi_chosen, data = autylewis04) |> 
+  model_table() 
+```
+
+\
+
+### Kendall Korrelation
+
+```{r}
+cor.test(~ pepsi_placement + pepsi_chosen, data = autylewis04, method = "kendall") |> 
+  model_table() 
+```
+
+## Beispielstudie: Mittelwertvergleiche
+
+### t-Test
+
+```{r}
+t.test(pepsi_chosen ~ pepsi_placement, data = autylewis04, var.equal = TRUE) |> 
+  model_table()
+```
+
+\
+
+### ANOVA
+
+```{r}
+aov(pepsi_chosen ~ pepsi_placement, data = autylewis04) |>
+  model_table()
+```
+
+## Gemeinsamkeiten und Unterschiede
+
+-   dieselbe Testentscheidung (signifikanter Unterschied zwischen den Gruppen bzw. signifikanter Zusammenhang zwischen Placement und Produktwahl).
+-   bei 3 Verfahren exakt gleicher p-Wert (d.h. Berechnung ist identisch), beim Chi-Quadrat-Test einen (leicht) abweichenden (d.h. Berechnung ist nicht identisch).
+-   die Verfahren unterscheiden sich vor allem im Modelloutput
+-   manchmal nur globale Teststatistiken (Chi-Quadrat, F-, t-Wert), manchmal auch Konfidenzintervalle oder Effektgrößen
+-   auch wenn es z.T. substanziell-statistische Unterschiede gibt, unterscheiden sich vor allem die Konventionen des Berichtens
+
+# Das Allgemeine Lineare Modell <br/> (General linear model, GLM)
+
+ 
+
+"The only formula you'll ever need." Andy Field
+
+## Datenanalyse als statistische Modellierung
+
+-   Datenanalyse als Anwendung und Test bestimmter statistischer **Modelle**
+-   ein statistisches Modell ist eine vereinfachte Vorstellung, wie die beobachteten Daten zustande kommen (könnten)
+-   wir wenden diese Modell an und prüfen, wie gut die empirischen Daten dazu passen
+
+$$
+outcome_i = Model_i + error_i
+$$
+
+-   beobachtete Daten (Outcome) als Summe von modellierten und nicht-modellierten Zusammenhängen
+
+## Das Nullmodell
+
+Frage: Wenn wir nur einen Schätzwert $a$ für $Y$ haben, welcher ist der beste Schätzer?
+
+$$
+Y_i = a + \epsilon_i
+$$
+
+-   das beste $a$ ist dasjenige, das den Fehler $\epsilon$ minimiert ($\epsilon_i = Y_i - a$)
+-   bester Schätzer = kleinste Summe quadrierter Abweichungen $\epsilon_i$ von $y$
+-   Kriterium der *least squares* -\> Ordinary Least Squares (OLS)
+
+Antwort: Mittelwert $\bar{x}$ als der beste Modellkoeffizient im Nullmodell
+
+Problem: damit erklärt das Modell aber nichts, es fehlt eine Prädiktorvariable $X$
+
+## Modellformel für das GLM (bivariat)
+
+$$
+Y_i = b_0 + b_1 X_i + \epsilon_i
+$$
+
+-   Grundidee, eine Variable $Y$ (abhängige Variable, Outcome) durch ein statistisches Modell mit einem oder mehr Parametern $b$ vorhersagen zu lassen
+-   Annahme: linearer Zusammenhang, d.h. $Y$ hängt nur von $b_0$ und der durch $b_1$ gewichteten (unabhängige) Prädiktorvariable $X$ ab
+-   $b_0$ = Intercept = Achsenabschnitt = vorhergesagter Wert von $Y$, wenn $X = 0$
+-   grundlegende Interpretation:
+    -   "je mehr X, desto mehr Y", wenn $b_1 > 0$, und
+    -   "je mehr X, desto weniger Y", wenn $b_1<0$.
+-   es bleibt ein Vorhersage- bzw. Residualfehler $\epsilon$ (der minimiert wird)
+
+## Modellformel für das GLM (multivariat)
+
+$$
+Y_i = b_0 + b_1 X_1 + + b_2 X_2 + b_3 X_3 + ... + \epsilon_i
+$$
+
+-   weil der Modell eine lineare Gleichung ist, können wir problemlos mehrere Prädikorvariablen $X$ hinzufügen
+-   Outcome $Y$ als eine (gewichtete) Linearkombination der Prädiktorvariablen $X_1$ ... $X_k$
+-   Parameter $b_1$, $b_2$, $b3$ ... sind die Gewichte, mit denen die Prädiktoren $X$ zur Vorhersage von $Y$ beitragen
+-   Interpretation von jedem $b$ ist dieselbe wie im bivariaten Fall
+-   Intercept $b_0$ ist der vorhergesagte Wert von $Y$, wenn **alle** $X_1 = X_2 = X_3 = 0$.
+
+## Anwendungsfälle des GLM
+
+-   Wenn die Prädiktorvariablen $X$ kategoriell sind, entspricht das GLM dem T-Test bzw. der Varianzanalyse.
+-   Wenn die Prädiktorvariablen $X$ metrisch sind, entspricht das GLM der linearen Regression bzw. Korrelation.
+-   Man kann problemlos beliebig viele kategorielle und metrische Prädiktoren mischen.
+-   Die Interpretation ist immer dieselbe, d.h. man muss nur eine Interpretationsregel lernen.
+
+## Annahmen und Erweiterungen
+
+-   Annahme: Zusammenhang zwischen $X$ und $Y$ ist linear
+    -   wenn die Annahme nicht gerechtfertigt ist, kann man auch andere funktionale Zusammenhänge modellieren, <br/>siehe Sitzung zur logistischen Regression
+-   Annahme: Untersuchungseinheiten sind unabhängig voneinander
+    -   wenn die Annahme verletzt ist, kann man Abhängigkeiten zwischen Fällen modellieren, <br/> siehe Sitzung zu Multilevel-Modellen
+
+## Welche Kennziffern sind relevant?
+
+-   Modellparameter bzw. Regressionskoeffizienten $b$ geben die geschätzten Zusammenhänge bzw. Unterschiede wieder
+-   Koeffizienten haben einen Punktschätzer und einen Standardfehler bzw. ein Konfidenzintervall (Inferenzstatistik)
+-   (Null-)Hypothesentests der Koeffizienten = testen, ob die beobachteten Daten zur Nullhypothese $b=0$ passen
+-   Modellgütemaße wie $R^2$ quantifizieren, wie gut das statistische Modell insgesamt die Werte von $Y$ vorhersagen kann (Verhältnis von vorhergesagter und Residualvarianz)
+
+## Modellvorhersagen
+
+-   Regressionsmodelle sind Vorhersageinstrumente
+-   mit Hilfe der Regressionskoeffizienten kann man für jede Kombination von Prädiktoren $X$ das Outcome $Y$ vorhersagen
+-   Vorhersagen für einzelne Individuen oder spezifische Gruppen (siehe Sitzung Modellvorhersagen)
+-   vorhergesagte Werte für die Visualisierung von Unterschieden und Zusammenhängen verwenden
+-   Vorhersagen oft intuitiver zu verstehen als einzelne Parameterschätzungen
+
+## Wie ist nun unser GLM-Rezept?
+
+1.  Daten einlesen und Outcome $Y$ deskriptiv auswerten
+2.  GLM spezifizieren (d.h. welches sind unsere Prädiktorvariablen?) und schätzen
+3.  Regressionskoeffizienten interpretieren (Vorzeichen, Größe, Konfidenzintervall, stat. Signifikanz)
+4.  Modellgüte und ggf. globale Teststatistik interpretieren
+5.  durch das Modell vorhergesagte Werte schätzen, vergleichen, visualisieren
+
+## Beispielstudie: GLM
+
+### Modelloutput (Regressionstabelle)
+
+```{r}
+lm(pepsi_chosen ~ pepsi_placement, data = autylewis04) |>
+  model_table()
+```
+
+## Interpretation
+
+-   Intercept $b_0$: in der Kontrollgruppe (kein Placement, $X = 0$) vorhergesagte Wahrscheinlichkeit von .43 für Pepsi
+-   Regressionskoeffizient $b_1$: bei Placement ($X = 1$) ist die vorhergesagte Wahrscheinlichkeit für Pepsi .20 **höher** als ohne Placement
+-   der Regressionskoeffizient $b_1$ ist stat. signifikant (p \< .05), d.h. er deckt sich nicht mit der Nullhypothese, dass es keinen Unterschied gibt
+-   Modellvorhersage bei Pepsi-Placement: $0.43 + 0.20 * 1 = .63$ in der Placement-Bedingung
+-   $R^2$: das Modell kann 4% der Varianz im Outcome $Y$ erklären, der Rest bleibt unerklärt.
+
+## Was sind die Nachteile der GLM-Perspektive?
+
+-   viele SozialwissenschaftlerInnen haben es anders gelernt und verinnerlicht ("Warum machst du nicht T-Test statt Regression?").
+-   Fachzeitschriften und Reviewer haben bestimmte Erwartungen und Vorgaben, AutorInnen präsentieren daher t-Test, ANOVA, etc.
+-   für Lektürekompetenz müssen wir (leider!) weiterhin auch die anderen Verfahren interpretieren können
+
+# Fragen? {background-color="rgb(193,0,42)"}
 
 ## Literatur

@@ -44,3 +44,13 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 
 @eidgollwitzer2015
 
+## Sitzung 2 <a class="bi bi-easel-fill" href="slides.html#/s2" alt="Folien"></a> {#2}
+
+### Themen
+
+-   Grundlagen statistischer Modelle
+-   GLM
+
+### Literatur
+
+@auty2004
