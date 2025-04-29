@@ -265,7 +265,7 @@ theme_set(tinythemes::theme_ipsum_rc(base_family = "Helvetica"))
 
 ```{r}
 d = read_csv("results_emo3i.csv") %>%
-  janitor::clean_names() %>%
+  set_names(str_replace_all, pattern = "\\.", replacement = "_") |> 
   mutate(text = ifelse(str_detect(scenario_condition, "friendly"), "friendly", "annoyed"),
          emoji = ifelse(str_detect(scenario_condition, "without"), "without", "with"))
 d %>% 

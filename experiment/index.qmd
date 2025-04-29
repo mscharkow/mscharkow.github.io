@@ -50,7 +50,6 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 - Vorschlag für ein eigenes Experiment erstellen (1/2 A4 Seite), vor allem Versuchsbedingungen und Outcome-Variable(n)
 
 
-
 ## Sitzung 2 <a class="bi bi-easel-fill" href="slides.html#/s2" alt="Folien"></a> {#2}
 
 ### Themen
@@ -63,6 +62,15 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 - Gruppen und Thema finden, Literatur recherchieren
 - R und RStudio installieren bzw. prüfen, Notebook mitbringen
 
+## Sitzung 3 <a class="bi bi-easel-fill" href="slides.html#/s3" alt="Folien"></a> {#3}
 
+### Themen
+
+- Simulation von Studien und agentenbasierte Modelle
+- praktische R-Übung 
+
+### Aufgabe zur nächsten Sitzung
+
+- [R-Hausaufgabe zur Simulation](https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html)
 
 # Literatur
