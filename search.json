@@ -217,6 +217,13 @@
     "text": "Sitzung 1 \n\nThemen\n\nEinführung, Ablauf, Leistungsanforderungen, Formalia\nRefresher Inferenzstatistik\n\n\n\nLiteratur\nEid et al. (2015)"
   },
   {
+    "objectID": "analyseverfahren/index.html#2",
+    "href": "analyseverfahren/index.html#2",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Sitzung 2 ",
+    "text": "Sitzung 2 \n\nThemen\n\nGrundlagen statistischer Modelle\nGLM\n\n\n\nLiteratur\nAuty & Lewis (2004)"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
     "href": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
     "title": "Anwendungsorientierte Analyseverfahren",
@@ -434,18 +441,144 @@
     "text": "Hauptsache signifikant?\n\nHypothesentests als stumpfe Rituale mit dem Ziel, p &lt; .05 zu erhalten.\nvon Konvention zum reinen Selbstzweck (Signifikanz = gut, keine = schlecht).\nDas sog. p-Hacking bedeutet, die Daten und Analysen so zu frisieren, bis ein stat. signifikantes Ergebnis erscheint.\nSignifikanz sagt nichts über substanzielle Bedeutung!\nBitte in Zukunft beachten:\n\nNicht p-hacken, nicht im Nachhinein am Alpha-Niveau schrauben!\nKein Bedauern nicht-signifikanter Ergebnisse (“leider knapp nicht signifikant”)!"
   },
   {
-    "objectID": "analyseverfahren/slides.html#aufgaben-zur-nächsten-sitzung",
-    "href": "analyseverfahren/slides.html#aufgaben-zur-nächsten-sitzung",
+    "objectID": "analyseverfahren/slides.html#datenanalyse-als-rezeptsammlung",
+    "href": "analyseverfahren/slides.html#datenanalyse-als-rezeptsammlung",
     "title": "Anwendungsorientierte Analyseverfahren",
-    "section": "Aufgaben zur nächsten Sitzung",
-    "text": "Aufgaben zur nächsten Sitzung\n\nLesen Sie die Einführung in R aus dem BA-Datenanalyse Kurs https://stats.ifp.uni-mainz.de/ba-datenanalyse/r-und-rstudio.html\nLösen Sie dort die Hausaufgaben 1 und 2 (Installieren von R).  Achtung: Bei Aufgabe 2 bitte die Materialien dieser VL https://stats.ifp.uni-mainz.de/ba-aa-vl/ statt der BA-Datenanalyse herunterladen und öffnen.\nFallback-Option: RStudio im Browser https://rstudio.ifp.uni-mainz.de, dort das Projekt im Ordner ba-aa-vl öffnen.  (nur aus dem JGU-Netzwerk, Username = Passwort = ZDV-Nutzername)\nFrischen Sie ggf. ihre Statistik-Kenntnisse auf. Alle sollten wissen, was eine (Ko)-Varianz ist oder wie eine Datenmatrix aussieht."
+    "section": "Datenanalyse als Rezeptsammlung",
+    "text": "Datenanalyse als Rezeptsammlung\n\nIn der klassischen Statistikausbildung (auch bei uns) als Rezeptesammlung:\n\nMittelwerte in (genau) zwei Gruppen vergleichen - T-Test\nMittelwerte in mehr als zwei Gruppen vergleichen - Varianzanalyse (ANOVA)\nZusammenhänge von kategoriellen Variablen testen - \\(\\chi^2\\)-Test\n…\n\nFokus auf Unterschieden und Spezifika statt auf Gemeinsamkeiten\nViele Verfahren sind aber mindestens funktional, oft auch mathematisch äquivalent!"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-auty2004",
+    "href": "analyseverfahren/slides.html#beispielstudie-auty2004",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: Auty & Lewis (2004)",
+    "text": "Beispielstudie: Auty & Lewis (2004)\n\nThere has been little attempt to understand the influence on children of branded products that appear in television programs and movies. A study exposed children of two different age groups (6–7 and 11–12) in classrooms to a brief film clip. Half of each class was shown a scene from Home Alone that shows Pepsi Cola being spilled during a meal. The other half was shown a similar clip from Home Alone but without branded products. All children were invited to help themselves from a choice of Pepsi or Coke at the outset of the individual interviews."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-daten",
+    "href": "analyseverfahren/slides.html#beispielstudie-daten",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: Daten",
+    "text": "Beispielstudie: Daten\n\n\n\n\n\n\nid\n\n\npepsi_placement\n\n\npepsi_chosen\n\n\n\n\n\n\n49\n\n\n1\n\n\n0\n\n\n\n\n54\n\n\n1\n\n\n0\n\n\n\n\n19\n\n\n1\n\n\n1\n\n\n\n\n6\n\n\n1\n\n\n1\n\n\n\n\n52\n\n\n1\n\n\n0"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-chi-quadrat-test",
+    "href": "analyseverfahren/slides.html#beispielstudie-chi-quadrat-test",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: Chi-Quadrat Test",
+    "text": "Beispielstudie: Chi-Quadrat Test\nKreuztabelle (Spaltenprozente)\n\n\n\n\n\n\npepsi_chosen\n\n\nno_placement\n\n\nplacement\n\n\n\n\n\n\n0\n\n\n57\n\n\n37\n\n\n\n\n1\n\n\n43\n\n\n63\n\n\n\n\n\n\n\n\nChi-Quadrat Test\n\n\n\n\n\nChi2(1)\np\nCramer’s V (adj.)\nCramers_v_adjusted CI\n\n\n\n\n4.14\n0.042\n0.17\n(0.00, 1.00)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-bivariate-korrelation",
+    "href": "analyseverfahren/slides.html#beispielstudie-bivariate-korrelation",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: Bivariate Korrelation",
+    "text": "Beispielstudie: Bivariate Korrelation\nPearson Korrelation\n\n\n\n\n\nParameter1\nParameter2\nr\n95% CI\np\n\n\n\n\npepsi_placement\npepsi_chosen\n0.20\n(0.01, 0.38)\n0.042\n\n\n\nAlternative hypothesis: true correlation is not equal to 0\n\n\n\n\nKendall Korrelation\n\n\n\n\n\nParameter1\nParameter2\ntau\nz\np\n\n\n\n\npepsi_placement\npepsi_chosen\n0.20\n2.03\n0.043\n\n\n\nAlternative hypothesis: true tau is not equal to 0"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-mittelwertvergleiche",
+    "href": "analyseverfahren/slides.html#beispielstudie-mittelwertvergleiche",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: Mittelwertvergleiche",
+    "text": "Beispielstudie: Mittelwertvergleiche\nt-Test\n\n\n\n\n\nDifference\n95% CI\nt(103)\np\nd\n\n\n\n\n-0.20\n(-0.39, -0.01)\n-2.06\n0.042\n-0.41\n\n\n\n\n\n\n\nANOVA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSum_Squares\ndf\nMean_Square\nF\np\nEta2\n\n\n\n\npepsi_placement\n1.03\n1\n1.03\n4.23\n0.042\n0.04\n\n\nResiduals\n25.10\n103\n0.24"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#gemeinsamkeiten-und-unterschiede",
+    "href": "analyseverfahren/slides.html#gemeinsamkeiten-und-unterschiede",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Gemeinsamkeiten und Unterschiede",
+    "text": "Gemeinsamkeiten und Unterschiede\n\ndieselbe Testentscheidung (signifikanter Unterschied zwischen den Gruppen bzw. signifikanter Zusammenhang zwischen Placement und Produktwahl).\nbei 3 Verfahren exakt gleicher p-Wert (d.h. Berechnung ist identisch), beim Chi-Quadrat-Test einen (leicht) abweichenden (d.h. Berechnung ist nicht identisch).\ndie Verfahren unterscheiden sich vor allem im Modelloutput\nmanchmal nur globale Teststatistiken (Chi-Quadrat, F-, t-Wert), manchmal auch Konfidenzintervalle oder Effektgrößen\nauch wenn es z.T. substanziell-statistische Unterschiede gibt, unterscheiden sich vor allem die Konventionen des Berichtens"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#datenanalyse-als-statistische-modellierung",
+    "href": "analyseverfahren/slides.html#datenanalyse-als-statistische-modellierung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Datenanalyse als statistische Modellierung",
+    "text": "Datenanalyse als statistische Modellierung\n\nDatenanalyse als Anwendung und Test bestimmter statistischer Modelle\nein statistisches Modell ist eine vereinfachte Vorstellung, wie die beobachteten Daten zustande kommen (könnten)\nwir wenden diese Modell an und prüfen, wie gut die empirischen Daten dazu passen\n\n\\[\noutcome_i = Model_i + error_i\n\\]\n\nbeobachtete Daten (Outcome) als Summe von modellierten und nicht-modellierten Zusammenhängen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#das-nullmodell",
+    "href": "analyseverfahren/slides.html#das-nullmodell",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Das Nullmodell",
+    "text": "Das Nullmodell\nFrage: Wenn wir nur einen Schätzwert \\(a\\) für \\(Y\\) haben, welcher ist der beste Schätzer?\n\\[\nY_i = a + \\epsilon_i\n\\]\n\ndas beste \\(a\\) ist dasjenige, das den Fehler \\(\\epsilon\\) minimiert (\\(\\epsilon_i = Y_i - a\\))\nbester Schätzer = kleinste Summe quadrierter Abweichungen \\(\\epsilon_i\\) von \\(y\\)\nKriterium der least squares -&gt; Ordinary Least Squares (OLS)\n\nAntwort: Mittelwert \\(\\bar{x}\\) als der beste Modellkoeffizient im Nullmodell\nProblem: damit erklärt das Modell aber nichts, es fehlt eine Prädiktorvariable \\(X\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellformel-für-das-glm-bivariat",
+    "href": "analyseverfahren/slides.html#modellformel-für-das-glm-bivariat",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellformel für das GLM (bivariat)",
+    "text": "Modellformel für das GLM (bivariat)\n\\[\nY_i = b_0 + b_1 X_i + \\epsilon_i\n\\]\n\nGrundidee, eine Variable \\(Y\\) (abhängige Variable, Outcome) durch ein statistisches Modell mit einem oder mehr Parametern \\(b\\) vorhersagen zu lassen\nAnnahme: linearer Zusammenhang, d.h. \\(Y\\) hängt nur von \\(b_0\\) und der durch \\(b_1\\) gewichteten (unabhängige) Prädiktorvariable \\(X\\) ab\n\\(b_0\\) = Intercept = Achsenabschnitt = vorhergesagter Wert von \\(Y\\), wenn \\(X = 0\\)\ngrundlegende Interpretation:\n\n“je mehr X, desto mehr Y”, wenn \\(b_1 &gt; 0\\), und\n“je mehr X, desto weniger Y”, wenn \\(b_1&lt;0\\).\n\nes bleibt ein Vorhersage- bzw. Residualfehler \\(\\epsilon\\) (der minimiert wird)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellformel-für-das-glm-multivariat",
+    "href": "analyseverfahren/slides.html#modellformel-für-das-glm-multivariat",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellformel für das GLM (multivariat)",
+    "text": "Modellformel für das GLM (multivariat)\n\\[\nY_i = b_0 + b_1 X_1 + + b_2 X_2 + b_3 X_3 + ... + \\epsilon_i\n\\]\n\nweil der Modell eine lineare Gleichung ist, können wir problemlos mehrere Prädikorvariablen \\(X\\) hinzufügen\nOutcome \\(Y\\) als eine (gewichtete) Linearkombination der Prädiktorvariablen \\(X_1\\) … \\(X_k\\)\nParameter \\(b_1\\), \\(b_2\\), \\(b3\\) … sind die Gewichte, mit denen die Prädiktoren \\(X\\) zur Vorhersage von \\(Y\\) beitragen\nInterpretation von jedem \\(b\\) ist dieselbe wie im bivariaten Fall\nIntercept \\(b_0\\) ist der vorhergesagte Wert von \\(Y\\), wenn alle \\(X_1 = X_2 = X_3 = 0\\)."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#anwendungsfälle-des-glm",
+    "href": "analyseverfahren/slides.html#anwendungsfälle-des-glm",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Anwendungsfälle des GLM",
+    "text": "Anwendungsfälle des GLM\n\nWenn die Prädiktorvariablen \\(X\\) kategoriell sind, entspricht das GLM dem T-Test bzw. der Varianzanalyse.\nWenn die Prädiktorvariablen \\(X\\) metrisch sind, entspricht das GLM der linearen Regression bzw. Korrelation.\nMan kann problemlos beliebig viele kategorielle und metrische Prädiktoren mischen.\nDie Interpretation ist immer dieselbe, d.h. man muss nur eine Interpretationsregel lernen."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#annahmen-und-erweiterungen",
+    "href": "analyseverfahren/slides.html#annahmen-und-erweiterungen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Annahmen und Erweiterungen",
+    "text": "Annahmen und Erweiterungen\n\nAnnahme: Zusammenhang zwischen \\(X\\) und \\(Y\\) ist linear\n\nwenn die Annahme nicht gerechtfertigt ist, kann man auch andere funktionale Zusammenhänge modellieren, siehe Sitzung zur logistischen Regression\n\nAnnahme: Untersuchungseinheiten sind unabhängig voneinander\n\nwenn die Annahme verletzt ist, kann man Abhängigkeiten zwischen Fällen modellieren,  siehe Sitzung zu Multilevel-Modellen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#welche-kennziffern-sind-relevant",
+    "href": "analyseverfahren/slides.html#welche-kennziffern-sind-relevant",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Welche Kennziffern sind relevant?",
+    "text": "Welche Kennziffern sind relevant?\n\nModellparameter bzw. Regressionskoeffizienten \\(b\\) geben die geschätzten Zusammenhänge bzw. Unterschiede wieder\nKoeffizienten haben einen Punktschätzer und einen Standardfehler bzw. ein Konfidenzintervall (Inferenzstatistik)\n(Null-)Hypothesentests der Koeffizienten = testen, ob die beobachteten Daten zur Nullhypothese \\(b=0\\) passen\nModellgütemaße wie \\(R^2\\) quantifizieren, wie gut das statistische Modell insgesamt die Werte von \\(Y\\) vorhersagen kann (Verhältnis von vorhergesagter und Residualvarianz)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellvorhersagen",
+    "href": "analyseverfahren/slides.html#modellvorhersagen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellvorhersagen",
+    "text": "Modellvorhersagen\n\nRegressionsmodelle sind Vorhersageinstrumente\nmit Hilfe der Regressionskoeffizienten kann man für jede Kombination von Prädiktoren \\(X\\) das Outcome \\(Y\\) vorhersagen\nVorhersagen für einzelne Individuen oder spezifische Gruppen (siehe Sitzung Modellvorhersagen)\nvorhergesagte Werte für die Visualisierung von Unterschieden und Zusammenhängen verwenden\nVorhersagen oft intuitiver zu verstehen als einzelne Parameterschätzungen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#wie-ist-nun-unser-glm-rezept",
+    "href": "analyseverfahren/slides.html#wie-ist-nun-unser-glm-rezept",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Wie ist nun unser GLM-Rezept?",
+    "text": "Wie ist nun unser GLM-Rezept?\n\nDaten einlesen und Outcome \\(Y\\) deskriptiv auswerten\nGLM spezifizieren (d.h. welches sind unsere Prädiktorvariablen?) und schätzen\nRegressionskoeffizienten interpretieren (Vorzeichen, Größe, Konfidenzintervall, stat. Signifikanz)\nModellgüte und ggf. globale Teststatistik interpretieren\ndurch das Modell vorhergesagte Werte schätzen, vergleichen, visualisieren"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-glm",
+    "href": "analyseverfahren/slides.html#beispielstudie-glm",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: GLM",
+    "text": "Beispielstudie: GLM\nModelloutput (Regressionstabelle)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(103)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n0.43\n(0.29, 0.57)\n6.24\n&lt; .001\n0.00\n\n\n\npepsi placement\n0.20\n(0.01, 0.39)\n2.06\n0.042\n0.20\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n153.96\n\n\nR2\n\n\n\n\n\n0.04\n\n\nR2 (adj.)\n\n\n\n\n\n0.03\n\n\nSigma\n\n\n\n\n\n0.49"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#interpretation",
+    "href": "analyseverfahren/slides.html#interpretation",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Interpretation",
+    "text": "Interpretation\n\nIntercept \\(b_0\\): in der Kontrollgruppe (kein Placement, \\(X = 0\\)) vorhergesagte Wahrscheinlichkeit von .43 für Pepsi\nRegressionskoeffizient \\(b_1\\): bei Placement (\\(X = 1\\)) ist die vorhergesagte Wahrscheinlichkeit für Pepsi .20 höher als ohne Placement\nder Regressionskoeffizient \\(b_1\\) ist stat. signifikant (p &lt; .05), d.h. er deckt sich nicht mit der Nullhypothese, dass es keinen Unterschied gibt\nModellvorhersage bei Pepsi-Placement: \\(0.43 + 0.20 * 1 = .63\\) in der Placement-Bedingung\n\\(R^2\\): das Modell kann 4% der Varianz im Outcome \\(Y\\) erklären, der Rest bleibt unerklärt."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#was-sind-die-nachteile-der-glm-perspektive",
+    "href": "analyseverfahren/slides.html#was-sind-die-nachteile-der-glm-perspektive",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Was sind die Nachteile der GLM-Perspektive?",
+    "text": "Was sind die Nachteile der GLM-Perspektive?\n\nviele SozialwissenschaftlerInnen haben es anders gelernt und verinnerlicht (“Warum machst du nicht T-Test statt Regression?”).\nFachzeitschriften und Reviewer haben bestimmte Erwartungen und Vorgaben, AutorInnen präsentieren daher t-Test, ANOVA, etc.\nfür Lektürekompetenz müssen wir (leider!) weiterhin auch die anderen Verfahren interpretieren können"
   },
   {
     "objectID": "analyseverfahren/slides.html#literatur",
     "href": "analyseverfahren/slides.html#literatur",
     "title": "Anwendungsorientierte Analyseverfahren",
     "section": "Literatur",
-    "text": "Literatur"
+    "text": "Literatur\n\n\n\n\nAuty, S., & Lewis, C. (2004). Exploring children’s choice: The reminder effect of product placement. Psychology & Marketing, 21(9), 697–713. https://doi.org/10.1002/mar.20025"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#lernziele",
@@ -795,7 +928,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Look, I saved your life, Jesse. Are you gonna save mine?\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Just so you know, this isn't personal.\",\n        \"author\": \"Todd\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1250,28 +1383,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.59, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02417 -13.96878\nsample estimates:\nmean of x mean of y \n 165.9920  179.9885"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.92, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02134 -13.96593\nsample estimates:\nmean of x mean of y \n 166.0099  180.0036"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 5.2759e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.8811645"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 9.065553e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.7549104"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.12801639 0.82014636 0.45716268 0.38652661 0.93455346 0.00320164\n\nsum(results_h0 &lt;= .05)\n\n[1] 51"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.51776175 0.68347489 0.02299549 0.22804517 0.36334920 0.40194075\n\nsum(results_h0 &lt;= .05)\n\n[1] 51"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 448\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 465\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
