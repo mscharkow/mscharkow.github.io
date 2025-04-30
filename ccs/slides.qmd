@@ -117,4 +117,31 @@ knitr::kable(plan)
 
 # Questions?
 
+
+# Session 2 {#s2}
+
+## CCS Paper Potpourri
+
+- 2x 30 minutes/5 papers in the hallway
+- presenters: 
+  - think of a 30 second summary pitch to get the conversation started
+  - note/remember questions that came up repeatedly or were noteworthy
+- audience
+  - provide interactions on the poster site (in English)!
+  - note/remember questions you'd like to discuss in class
+
+## Discussion
+
+1. Which paper/study do you remember best (and why)?
+2. Which study was the most difficult to understand (and why)?
+3. Which study would you like to replicate?
+
+## Next week
+
+1. Read @salganik2018, Chapter 6 and @freelon2018.
+2. Read about  (at least skim the posts) the very recent Reddit/AI experiment issue:
+    - [summary article](https://retractionwatch.com/2025/04/28/experiment-using-ai-generated-posts-on-reddit-draws-fire-for-ethics-concerns/) and [follow up](https://retractionwatch.com/2025/04/29/ethics-committee-ai-llm-reddit-changemyview-university-zurich/)
+    - [original thread on Reddit](<https://www.reddit.com/r/changemyview/comments/1k8b2hj/meta_unauthorized_experiment_on_cmv_involving)
+    
+
 ## References

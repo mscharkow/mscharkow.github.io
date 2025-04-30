@@ -64,7 +64,7 @@ Poster Session: Interesting studies in computational communication science.
 
 ### Reading
 
-@salganik2018 [Ch. 6]; @freelon2018
+@salganik2018 [Ch. 6]; @freelon2018; [2025 Reddit/AI experiment](https://retractionwatch.com/2025/04/28/experiment-using-ai-generated-posts-on-reddit-draws-fire-for-ethics-concerns/)
 
 ### Tasks for the next session
 
