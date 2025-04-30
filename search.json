@@ -32,7 +32,7 @@
     "href": "ccs/index.html#3",
     "title": "MA Computational Communication Science",
     "section": "Session 3",
-    "text": "Session 3\n\nTopics\n\nBasic of research ethics\nApplication of ethical principles to computational research\nRisks in computational research on, with and by big social media platforms\n\n\n\nReading\nSalganik (2018, Ch. 6); Freelon (2018)\n\n\nTasks for the next session\nRefresh your R skills."
+    "text": "Session 3\n\nTopics\n\nBasic of research ethics\nApplication of ethical principles to computational research\nRisks in computational research on, with and by big social media platforms\n\n\n\nReading\nSalganik (2018, Ch. 6); Freelon (2018); 2025 Reddit/AI experiment\n\n\nTasks for the next session\nRefresh your R skills."
   },
   {
     "objectID": "experiment/index.html#beschreibung",
@@ -1383,28 +1383,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.92, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02134 -13.96593\nsample estimates:\nmean of x mean of y \n 166.0099  180.0036"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.09, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02373 -13.96827\nsample estimates:\nmean of x mean of y \n 166.0047  180.0007"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 9.065553e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.7549104"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 9.162205e-24\n\ndo_t_test(100, males, males)\n\n[1] 0.6159286"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.51776175 0.68347489 0.02299549 0.22804517 0.36334920 0.40194075\n\nsum(results_h0 &lt;= .05)\n\n[1] 51"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.7181624 0.9143403 0.1989693 0.8689990 0.9111700 0.5955309\n\nsum(results_h0 &lt;= .05)\n\n[1] 46"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 465\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 468\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -1575,10 +1575,31 @@
     "text": "CCS Paper Potpourri\n\n10 posters overall, we’ll probably do 2x 45min sessions.\nplease bring the digital versions as well, just in case\nremember to get the posters printed ASAP\nany questions about the studies or posters?"
   },
   {
+    "objectID": "ccs/slides.html#ccs-paper-potpourri-1",
+    "href": "ccs/slides.html#ccs-paper-potpourri-1",
+    "title": "Computational Communication Science",
+    "section": "CCS Paper Potpourri",
+    "text": "CCS Paper Potpourri\n\n2x 30 minutes/5 papers in the hallway\npresenters:\n\nthink of a 30 second summary pitch to get the conversation started\nnote/remember questions that came up repeatedly or were noteworthy\n\naudience\n\nprovide interactions on the poster site (in English)!\nnote/remember questions you’d like to discuss in class"
+  },
+  {
+    "objectID": "ccs/slides.html#discussion",
+    "href": "ccs/slides.html#discussion",
+    "title": "Computational Communication Science",
+    "section": "Discussion",
+    "text": "Discussion\n\nWhich paper/study do you remember best (and why)?\nWhich study was the most difficult to understand (and why)?\nWhich study would you like to replicate?"
+  },
+  {
+    "objectID": "ccs/slides.html#next-week",
+    "href": "ccs/slides.html#next-week",
+    "title": "Computational Communication Science",
+    "section": "Next week",
+    "text": "Next week\n\nRead Salganik (2018), Chapter 6 and Freelon (2018).\nRead about (at least skim the posts) the very recent Reddit/AI experiment issue:\n\nsummary article and follow up\noriginal thread on Reddit"
+  },
+  {
     "objectID": "ccs/slides.html#references",
     "href": "ccs/slides.html#references",
     "title": "Computational Communication Science",
     "section": "References",
-    "text": "References\n\n\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell."
+    "text": "References\n\n\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell."
   }
 ]
