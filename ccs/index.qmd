@@ -47,7 +47,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 Select a study on Moodle and repare a poster (A1) for the study you selected.
 
-## Session 2 {#2} <a class="bi bi-easel-fill" href="slides.html#/s2" alt="Slides"></a> {#2}
+## Session 2 <a class="bi bi-easel-fill" href="slides.html#/s2" alt="Slides"></a> {#2}
 
 ### Topics
 
