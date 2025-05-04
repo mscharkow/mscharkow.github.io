@@ -94,7 +94,27 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-cc36686ce08b987172259137d1c0a415.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -361,7 +381,7 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
 <h2>Typen von Simulationen</h2>
 <ul>
 <li>Monte-Carlo-Simulation</li>
-<li>soziale Simulationen</li>
+<li>soziale Simulationen <span class="citation" data-cites="waldherr2019">(<a href="#/literatur-1" role="doc-biblioref" onclick="">Waldherr &amp; Wettstein, 2019</a>)</span></li>
 </ul>
 </section>
 <section id="monte-carlo-simulation" class="slide level2">
@@ -383,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -987.6, df = 2e+06, p-value &lt; 2.2e-16
+t = -990.82, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.00327 -13.94780
+ -14.04367 -13.98822
 sample estimates:
 mean of x mean of y 
- 166.0205  179.9961 </code></pre>
+ 165.9897  180.0057 </code></pre>
 </div>
 </div>
 </section>
@@ -404,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.570999e-16</code></pre>
+<pre><code>[1] 1.642777e-22</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4962852</code></pre>
+<pre><code>[1] 0.5112677</code></pre>
 </div>
 </div>
 </section>
@@ -419,11 +439,11 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.81098751 0.30918451 0.94388502 0.59259148 0.90058828 0.01280553</code></pre>
+<pre><code>[1] 0.5347476 0.2262478 0.5457692 0.8983216 0.2033886 0.7469986</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 58</code></pre>
+<pre><code>[1] 56</code></pre>
 </div>
 </div>
 </section>
@@ -435,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 482</code></pre>
+<pre><code>[1] 458</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -496,6 +516,17 @@ mean of x mean of y
 <li>wenige Parameter innerhalb der Agenten, wenige für die Umwelt</li>
 <li>Problem 1: sozialwissenschaftliche Theorie oft nicht ausreichend spezifisch und vollständig</li>
 <li>Problem 2: Annahmen des Modells vs.&nbsp;Ergebnisse der Simulation</li>
+</ul>
+</section>
+<section id="generative-agentenmodelle" class="slide level2">
+<h2>Generative Agentenmodelle</h2>
+<ul>
+<li>statt formaler (programmierter) Regeln sprachliche Regeln</li>
+<li>Nutzung eines LLM als Agent (“Roleplaying”)</li>
+<li>LLM ergänzt sprachliche Anweisungen und Rolle durch verbale Antworten</li>
+<li>Antworten hängen von den Trainingsdaten und der Qualität des LLM ab</li>
+<li>bislang sehr wenige Validierungsstudien <span class="citation" data-cites="larooij2025">(<a href="#/literatur-1" role="doc-biblioref" onclick="">Larooij &amp; Törnberg, 2025</a>)</span></li>
+<li>oft relativ naive Annahmen über die Generalisierbarkeit der Ergebnisse (= Ersatz für menschliche Agenten)</li>
 </ul>
 </section>
 <section id="beispiel-1-analoge-simulation-heroes-cowards" class="slide level2">
@@ -595,10 +626,18 @@ mean of x mean of y
 <li>Hausaufgabe in R erledigen</li>
 </ul>
 </section>
-<section id="literatur-1" class="slide level2">
+<section id="literatur-1" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-larooij2025" class="csl-entry" role="listitem">
+Larooij, M., &amp; Törnberg, P. (2025). <em>Do Large Language Models Solve the Problems of Agent-Based Modeling? A Critical Review of Generative Social Simulations</em>. <a href="https://doi.org/10.48550/ARXIV.2504.03274">https://doi.org/10.48550/ARXIV.2504.03274</a>
+</div>
+<div id="ref-waldherr2019" class="csl-entry" role="listitem">
+Waldherr, A., &amp; Wettstein, M. (2019). Bridging the Gaps: Using Agent-Based Modeling to Reconcile Data and Theory in Computational Communication Science. <em>International Journal of Communication</em>, <em>13</em>(00), 24. <a href="https://ijoc.org/index.php/ijoc/article/view/10588">https://ijoc.org/index.php/ijoc/article/view/10588</a>
+</div>
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
