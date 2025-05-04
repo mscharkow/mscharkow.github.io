@@ -142,7 +142,7 @@ Stellen Sie kurz sich und Ihren Themenvorschlag vor!
 ## Typen von Simulationen
 
 -  Monte-Carlo-Simulation
-- soziale Simulationen
+- soziale Simulationen [@waldherr2019]
 
 ## Monte-Carlo-Simulation
 
@@ -237,6 +237,15 @@ sum(results_h1_n100 <= .05)
 -   wenige Parameter innerhalb der Agenten, wenige für die Umwelt
 -   Problem 1: sozialwissenschaftliche Theorie oft nicht ausreichend spezifisch und vollständig
 -   Problem 2: Annahmen des Modells vs. Ergebnisse der Simulation
+
+## Generative Agentenmodelle
+
+- statt formaler (programmierter) Regeln sprachliche Regeln
+- Nutzung eines LLM als Agent ("Roleplaying")
+- LLM ergänzt sprachliche Anweisungen und Rolle durch verbale Antworten
+- Antworten hängen von den Trainingsdaten und der Qualität des LLM ab
+- bislang sehr wenige Validierungsstudien [@larooij2025]
+- oft relativ naive Annahmen über die Generalisierbarkeit der Ergebnisse (= Ersatz für menschliche Agenten)
 
 ## Beispiel 1: Analoge Simulation Heroes & Cowards
 
