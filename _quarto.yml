@@ -21,6 +21,7 @@ format:
     toc-title: Inhalt
     mainfont: "Roboto Slab"
     color: rgb(193,0,42)
+    linkcolor: "#257180"
     title-block-style: default
     footer: "hello"
 
@@ -33,6 +34,9 @@ execute:
 
 project:
   type: website
+  preview:
+    port: 4200
+    browser: false
 
 website:
   page-footer: "[home](/)"

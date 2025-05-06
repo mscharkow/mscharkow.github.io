@@ -83,3 +83,7 @@ p.author, p.date, p.subtitle {
 .bordered{border:1px solid #ccc; padding:5px;}
 .reveal figure figcaption, .caption {font-size:1rem !important; text-align:center;}
 .quarto-title-authors{text-align:left;}
+
+.reveal .cell p {
+font-size:28px
+}

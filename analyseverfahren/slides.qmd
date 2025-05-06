@@ -720,4 +720,205 @@ lm(pepsi_chosen ~ pepsi_placement, data = autylewis04) |>
 
 # Fragen? {background-color="rgb(193,0,42)"}
 
+# Sitzung 3 {#s3}
+
+# Fragen zur praktischen Übung?
+
+## Korrelation, Regression und GLM
+
+-   historisch zwei unterschiedliche Ansätze, den Zusammenhang zweier metrischer Variablen zu analysieren: Korrelation und Regression
+-   Korrelation basiert auf der Idee der Kovarianz, d.h. dem "gemeinsamen Variieren" zweier Variablen
+-   bivariate Regression als GLM, bei dem ein metrisches Outcome $Y$ durch eine metrische Prädiktorvariable $X$ vorhergesagt werden soll
+
+## Form des Zusammenhangs
+
+```{r}
+#| fig-align: center
+anscombe |>
+  pivot_longer(
+    cols = everything(),
+    names_to = c(".value", "set"),
+    names_pattern = "(.)(.)"
+  ) |>
+  ggplot(aes(x = x, y = y)) +
+  geom_smooth(method = "lm", alpha = .33, color = "#C1002A") +
+  geom_point(alpha = .67, size = 3) +
+  facet_wrap("set") +
+  labs(title = "Anscombe's quartet (r = .82)")
+```
+
+## Regressions- vs. Korrelationskoeffizienten
+
+-   unstandardisierter Regressionskoeffizient $B$ als Anstieg, d.h. zunächst Richtung des Zusammenhangs
+-   Korrelationskoeffizient $r$ als Effektstärke, d.h. wie nahe die Werte von $Y$ der Regressionsgeraden sind
+-   starker Zusammenhang = wenig Residualvarianz = hohe Korrelation $r$ = hohe Varianzaufklärung $R^2$
+
+## Unterschiedlich starke Zusammenhänge
+
+```{r}
+#| fig-align: center
+c(0, .3, .5, .8) |>
+  map_df(~ faux::rnorm_multi(n = 100, r = .x, varnames = c("x", "y"), empirical = FALSE), .id = "set") |>
+  mutate(set = factor(set, levels = 1:4, labels = paste0("r=", c(0, .3, .5, .8)))) |>
+  ggplot(aes(x = x, y = y)) +
+  geom_smooth(method = "lm", alpha = .33, color = "#C1002A") +
+  geom_point(alpha = .67, size = 2) +
+  facet_wrap("set")
+```
+
+## Korrelationsmatrizen
+
+![Quelle: Scharkow, Festl, Vogelgesang & Quandt, 2013](images/scharkow13.png){fig-align="center"}
+
+## Mal wieder: Korrelation und Kausalität
+
+![Quelle: https://www.cjr.org/tow_center_reports/the_curious_journalists_guide_to_data.php](images/dj31.png){fig-align="center"}
+
+## Bivariate Regression
+
+-   linearer Zusammenhang zwischen $X$ und $Y$ wieder, wobei *wir* definieren, was Prädiktor $X$ und was Outcome $Y$ ist
+-   die Modellformel wie immer: $$ Y_i = b_0 + b_1 X_i + \epsilon_i $$
+-   $b_0$ ist der vorhergesagte Wert von $Y$, wenn $x=0$
+-   $b_1$ ist der vorhergesagte Anstieg von $Y$, wenn $X$ um eine Einheit steigt (d.h. der Ansteig in Originalmetrik)
+-   ändert sich die Metrik von $X$ oder $Y$, ändert sich die Interpretation von $b_1$
+
+## Intercepts und Zentrierung
+
+-   Intercept bzw. Konstante als vorausgesagte Wert von $Y$, wenn $X=0$
+-   nur sinnvoll zu interpretieren, wenn $X$ auch die Ausprägung 0 haben kann
+-   man kann $X$ *zentrieren*, z.B. von allen Werten $x_i$ eine Konstante $c$ subtrahieren, dann ist Intercept der vorausgesagte Wert für $x = c$
+-   häufigste Zentrierung ist die **Mittelwertzentrierung**, d.h. $c = \bar{x}$, der Intercept bezieht sich auf den durchschnittlichen Wert von $X$
+-   Zentrierung ändert nichts an den Regressionskoeffizienten oder am Globalfit, sondern nur am Intercept
+
+## Effektgrößen und Modellgüte
+
+-   jeder Koeffizient $B$ hat einen Standardfehler SE(B) und ein Konfindenzintervall
+-   mit beiden lässt sich $H_0$ prüfen können, dass *kein* linearer Zusammenhang existiert - bzw. ob die Daten sich mit $B=0$ decken
+-   $B$ lässt sich substantiell in der Metrik von $Y$ interpretieren (eine Einheit mehr/weniger $X$ entspricht $B$ Einheiten mehr/weniger $Y$), er sagt aber nichts über die Stärke des Zusammenhangs oder Modellgüte
+-   wie gut das lineare Modell (im Vergleich zum Nullmodell ohne Prädiktoren) vorhersagt, kann man am $R^2$ erkennen
+-   im bivariaten Fall entspricht das exakt dem quadrierten Korrelationskoeffizienten $r_{XY}$
+
+## Unstandardisierte B vs. standardisierte Beta
+
+-   Interpretation von unstandardisiertem $B$ setzt voraus, dass wir die Metriken von $X$ und vor allem $Y$ kennen
+-   oft wird (z.B. für Vergleiche oder Meta-Analysen) ein standardisiertes Maß gewünscht, das unabhängig von $X$ und $Y$ ist
+-   wir können Regressionskoeffizienten standardisieren, in dem wir
+    -   entweder die Daten $X$ und $Y$ *vor der Analyse* z-standardisieren (M = 0, SD = 1)
+    -   oder den Koeffizienten selbst standardisieren, durch $\beta = b \frac{s_x}{s_y}$
+-   im bivariaten Fall (nur dort!) entspricht $\beta$ dem Korrelationskoeffizienten $r$
+
+## Korrelation vs. bivariate Regression/GLM
+
+-   $r$ als standardisierte Größe, d.h. auch ohne Kenntnis der Skalen von $X$ und $Y$ interpretierbar
+-   Korrelationsanalyse verführt ggf. weniger zu kausalen (Fehl-)Interpretationen als ein GLM mit unabhängiger und abhängiger Variable
+-   bei Korrelationen sind alternative Verfahren für nicht-metrische Daten (z.B. Spearmans Rangkorrelation) verbreitet
+-   beim GLM bekommt mehr Informationen: unstandardisierte Effektgrößen (inkl. Intercept)
+-   beide Verfahren liefern dieselben Schätzer und dieselben Testentscheidungen, basieren auf denselben Annahmen
+
+## Beispielstudie @johannes2022:
+
+![](images/johannes_etal22.png)
+
+## Daten
+
+:::::: columns
+::: {.column width="45%"}
+```{r}
+johannes22 <- haven::read_sav("data/Johannes_2022.sav")
+johannes22 |>
+  select(tv_time, age, games_time, music_time) |> 
+  head()
+```
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+```{r}
+johannes22 |>
+  select(tv_time, age, games_time, music_time) |> 
+  report::report_sample()
+```
+:::
+::::::
+
+## Outcome-Variable
+
+```{r}
+johannes22 |>
+  ggplot(aes(x = music_time)) +
+  geom_histogram()
+```
+
+## Scatterplot
+
+```{r}
+#| fig-align: center
+johannes22 |>
+  ggplot(aes(x = age, y = music_time)) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm")
+```
+
+## Korrelation samt Hypothesentest
+
+```{r}
+cor.test(~ age + music_time, data = johannes22) |> 
+  model_table()
+```
+
+## Bivariate lineare Regression
+
+```{r}
+lm(music_time ~ age, data = johannes22) |> 
+  model_table()
+```
+
+::: aside
+Reminder: t-Wert = $B/SE(B)$
+
+Interpretation: stat. signifikant, wenn t \< -1.96 oder \> 1.96 (kritischer Wert der Normalverteilung)
+:::
+
+```{r}
+johannes22 <- johannes22 |>
+  mutate(
+    age18 = age - 18,
+    age_centered = age - mean(age, na.rm = TRUE),
+    age_zstd = scale(age),
+    music_time_zstd = scale(music_time),
+    music_time_m = music_time * 60,
+    books_time_m = books_time * 60
+  )
+```
+
+## Zentrierung Alter = 18
+
+```{r}
+lm(music_time ~ age18, data = johannes22) |> 
+  model_table()
+```
+
+## Mittelwertzentrierung
+
+```{r}
+lm(music_time ~ age_centered, data = johannes22) |> 
+  model_table()
+```
+
+## Transformierte Y-Variable (Minuten)
+
+```{r}
+lm(music_time_m ~ age_centered, data = johannes22) |> 
+  model_table()
+```
+
+## Z-standardisierte Variablen
+
+```{r}
+lm(music_time_zstd ~ age_zstd, data = johannes22) |> 
+  model_table()
+```
+
 ## Literatur

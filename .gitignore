@@ -1,7 +1,7 @@
 figs/
 /_site/*
 .DS_Store
-
+*_error.scss
 
 # History files
 .Rhistory
