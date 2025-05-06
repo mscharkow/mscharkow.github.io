@@ -1082,7 +1082,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"A guy that clean has to be dirty.\",\n        \"author\": \"Hank Schrader\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Being the best at something is a very rare thing. You don't just toss something like that away. And what, you wanna squander that potential?\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1537,28 +1537,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.55, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02763 -13.97223\nsample estimates:\nmean of x mean of y \n 165.9966  179.9965"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.5, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02871 -13.97325\nsample estimates:\nmean of x mean of y \n 166.0071  180.0081"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 2.833165e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.8707499"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.08835e-20\n\ndo_t_test(100, males, males)\n\n[1] 0.6589441"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.8615114 0.1287024 0.6453021 0.7253590 0.8727105 0.9874961\n\nsum(results_h0 &lt;= .05)\n\n[1] 47"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.7118135 0.5222025 0.4742580 0.5467043 0.2536408 0.2805527\n\nsum(results_h0 &lt;= .05)\n\n[1] 42"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 478\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 450\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -1757,10 +1757,73 @@
     "text": "Next week\n\nRead Salganik (2018), Chapter 6 and Freelon (2018).\nRead about (at least skim the posts) the very recent Reddit/AI experiment issue:\n\nsummary article and follow up\noriginal thread on Reddit"
   },
   {
+    "objectID": "ccs/slides.html#salganik2018-i",
+    "href": "ccs/slides.html#salganik2018-i",
+    "title": "Computational Communication Science",
+    "section": "Salganik (2018) I",
+    "text": "Salganik (2018) I"
+  },
+  {
+    "objectID": "ccs/slides.html#salganik2018-i-1",
+    "href": "ccs/slides.html#salganik2018-i-1",
+    "title": "Computational Communication Science",
+    "section": "Salganik (2018) I",
+    "text": "Salganik (2018) I\n\nWhat are the main differences between Consequentialism and Deontology?\nHow can the four mentioned ethical principles be applied to the experiment run by Munger (2017)?\nIn case of doubt, what priority should these principles have among themselves?"
+  },
+  {
+    "objectID": "ccs/slides.html#salganik2018-ii",
+    "href": "ccs/slides.html#salganik2018-ii",
+    "title": "Computational Communication Science",
+    "section": "Salganik (2018) II",
+    "text": "Salganik (2018) II"
+  },
+  {
+    "objectID": "ccs/slides.html#research-ethics-in-practice",
+    "href": "ccs/slides.html#research-ethics-in-practice",
+    "title": "Computational Communication Science",
+    "section": "Research Ethics in Practice",
+    "text": "Research Ethics in Practice\n\nIs informed consent needed for a content analysis of social media posts from members parliament?\nWhat about comments on posts or public pages, e.g., from parties or politicians?\nWhat about Tinder profiles or other online dating platforms?\nWhat if informed consent is practically not possible?"
+  },
+  {
+    "objectID": "ccs/slides.html#group-task",
+    "href": "ccs/slides.html#group-task",
+    "title": "Computational Communication Science",
+    "section": "Group Task",
+    "text": "Group Task\n(four groups, 10 minutes)\n\nSummarise the design and execution of the Reddit AI experiment.\nWhat were the main points of criticism from the Reddit mods/legal people?\nWhat were the main rebuttals from the researcher team and UZH?\nCan you salvage the study idea and run it ethically? How?"
+  },
+  {
+    "objectID": "ccs/slides.html#api-and-non-api-access",
+    "href": "ccs/slides.html#api-and-non-api-access",
+    "title": "Computational Communication Science",
+    "section": "API and non-API access",
+    "text": "API and non-API access\n\nfree model (e.g. Wikipedia): everyone can get the data\npaid model (e.g. Twitter/X): you pay the platform or a third party for access\ngrant model (e.g. TikTok): you can apply for access to the API as a scholar\ncollab model (e.g. Meta): you can work with the platforms on spefific research questions\ndata donation model: you ask participants to donate their DDP (Data Download Packages)\nindependent/rogue model: you access a secret API or scrape the data otherwise"
+  },
+  {
+    "objectID": "ccs/slides.html#post-api-era",
+    "href": "ccs/slides.html#post-api-era",
+    "title": "Computational Communication Science",
+    "section": "Post-API era",
+    "text": "Post-API era\n\nmost models have failed due to platforms (change of) self-interests (Freelon, 2018)\n\ncommercial interests (i.e. monetization) or concerns about bad PR\nprivacy concerns for well-meaning platforms https://en.wikipedia.org/wiki/Netflix_Prize\n“research data” incomplete and at times worse than public data\n\nbig collaborations like Social Science One failed miserably and publicly\nother were challenging (Wagner, 2023) and ultimately problematic (Bagchi et al., 2024)"
+  },
+  {
+    "objectID": "ccs/slides.html#issues-with-online-data",
+    "href": "ccs/slides.html#issues-with-online-data",
+    "title": "Computational Communication Science",
+    "section": "Issues with online data",
+    "text": "Issues with online data\n\nnot all available online data can/should be considered public\nprivacy vs. reproducibility vs. ethics vs. legal questions\nmany instances of well-meaning research with unethically obtained data\nmany instances of unethical research\nsecond and third order effects, e.g. LLM training data or vision models\nplus biases, errors, etc."
+  },
+  {
+    "objectID": "ccs/slides.html#questions-1",
+    "href": "ccs/slides.html#questions-1",
+    "title": "Computational Communication Science",
+    "section": "Questions",
+    "text": "Questions\n\nWhen can you scrape and use online data (against the platforms terms)?\nCan you use an AI model based on unethical, possibly illegal training data?\nHow can you ensure reproducible findings with problematic data?"
+  },
+  {
     "objectID": "ccs/slides.html#references",
     "href": "ccs/slides.html#references",
     "title": "Computational Communication Science",
     "section": "References",
-    "text": "References\n\n\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell."
+    "text": "References\n\n\n\n\nBagchi, C., Menczer, F., Lundquist, J., Tarafdar, M., Paik, A., & Grabowicz, P. A. (2024). Social media algorithms can curb misinformation, but do they? arXiv. https://doi.org/10.48550/ARXIV.2409.18393\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nMunger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. Political Behavior, 39(3), 629–649. https://doi.org/10.1007/s11109-016-9373-5\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell.\n\n\nWagner, M. W. (2023). Independence by permission. Science, 381(6656), 388–391. https://doi.org/10.1126/science.adi2430"
   }
 ]
