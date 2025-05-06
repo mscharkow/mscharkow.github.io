@@ -54,3 +54,14 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 ### Literatur
 
 @auty2004
+
+## Sitzung 3 <a class="bi bi-easel-fill" href="slides.html#/s3" alt="Folien"></a> {#3}
+
+### Themen
+
+-   Grundlagen Korrelation und lineare Regression
+-   Zentrierung und Standardisierung
+
+### Literatur
+
+@johannes2022
