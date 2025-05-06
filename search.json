@@ -224,6 +224,13 @@
     "text": "Sitzung 2 \n\nThemen\n\nGrundlagen statistischer Modelle\nGLM\n\n\n\nLiteratur\nAuty & Lewis (2004)"
   },
   {
+    "objectID": "analyseverfahren/index.html#3",
+    "href": "analyseverfahren/index.html#3",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Sitzung 3 ",
+    "text": "Sitzung 3 \n\nThemen\n\nGrundlagen Korrelation und lineare Regression\nZentrierung und Standardisierung\n\n\n\nLiteratur\nJohannes et al. (2022)"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
     "href": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
     "title": "Anwendungsorientierte Analyseverfahren",
@@ -574,11 +581,158 @@
     "text": "Was sind die Nachteile der GLM-Perspektive?\n\nviele SozialwissenschaftlerInnen haben es anders gelernt und verinnerlicht (“Warum machst du nicht T-Test statt Regression?”).\nFachzeitschriften und Reviewer haben bestimmte Erwartungen und Vorgaben, AutorInnen präsentieren daher t-Test, ANOVA, etc.\nfür Lektürekompetenz müssen wir (leider!) weiterhin auch die anderen Verfahren interpretieren können"
   },
   {
+    "objectID": "analyseverfahren/slides.html#korrelation-regression-und-glm",
+    "href": "analyseverfahren/slides.html#korrelation-regression-und-glm",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Korrelation, Regression und GLM",
+    "text": "Korrelation, Regression und GLM\n\nhistorisch zwei unterschiedliche Ansätze, den Zusammenhang zweier metrischer Variablen zu analysieren: Korrelation und Regression\nKorrelation basiert auf der Idee der Kovarianz, d.h. dem “gemeinsamen Variieren” zweier Variablen\nbivariate Regression als GLM, bei dem ein metrisches Outcome \\(Y\\) durch eine metrische Prädiktorvariable \\(X\\) vorhergesagt werden soll"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#form-des-zusammenhangs",
+    "href": "analyseverfahren/slides.html#form-des-zusammenhangs",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Form des Zusammenhangs",
+    "text": "Form des Zusammenhangs"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regressions--vs.-korrelationskoeffizienten",
+    "href": "analyseverfahren/slides.html#regressions--vs.-korrelationskoeffizienten",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regressions- vs. Korrelationskoeffizienten",
+    "text": "Regressions- vs. Korrelationskoeffizienten\n\nunstandardisierter Regressionskoeffizient \\(B\\) als Anstieg, d.h. zunächst Richtung des Zusammenhangs\nKorrelationskoeffizient \\(r\\) als Effektstärke, d.h. wie nahe die Werte von \\(Y\\) der Regressionsgeraden sind\nstarker Zusammenhang = wenig Residualvarianz = hohe Korrelation \\(r\\) = hohe Varianzaufklärung \\(R^2\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#unterschiedlich-starke-zusammenhänge",
+    "href": "analyseverfahren/slides.html#unterschiedlich-starke-zusammenhänge",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Unterschiedlich starke Zusammenhänge",
+    "text": "Unterschiedlich starke Zusammenhänge"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#korrelationsmatrizen",
+    "href": "analyseverfahren/slides.html#korrelationsmatrizen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Korrelationsmatrizen",
+    "text": "Korrelationsmatrizen\n\nQuelle: Scharkow, Festl, Vogelgesang & Quandt, 2013"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#mal-wieder-korrelation-und-kausalität",
+    "href": "analyseverfahren/slides.html#mal-wieder-korrelation-und-kausalität",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Mal wieder: Korrelation und Kausalität",
+    "text": "Mal wieder: Korrelation und Kausalität\n\nQuelle: https://www.cjr.org/tow_center_reports/the_curious_journalists_guide_to_data.php"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#bivariate-regression",
+    "href": "analyseverfahren/slides.html#bivariate-regression",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Bivariate Regression",
+    "text": "Bivariate Regression\n\nlinearer Zusammenhang zwischen \\(X\\) und \\(Y\\) wieder, wobei wir definieren, was Prädiktor \\(X\\) und was Outcome \\(Y\\) ist\ndie Modellformel wie immer: \\[ Y_i = b_0 + b_1 X_i + \\epsilon_i \\]\n\\(b_0\\) ist der vorhergesagte Wert von \\(Y\\), wenn \\(x=0\\)\n\\(b_1\\) ist der vorhergesagte Anstieg von \\(Y\\), wenn \\(X\\) um eine Einheit steigt (d.h. der Ansteig in Originalmetrik)\nändert sich die Metrik von \\(X\\) oder \\(Y\\), ändert sich die Interpretation von \\(b_1\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#intercepts-und-zentrierung",
+    "href": "analyseverfahren/slides.html#intercepts-und-zentrierung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Intercepts und Zentrierung",
+    "text": "Intercepts und Zentrierung\n\nIntercept bzw. Konstante als vorausgesagte Wert von \\(Y\\), wenn \\(X=0\\)\nnur sinnvoll zu interpretieren, wenn \\(X\\) auch die Ausprägung 0 haben kann\nman kann \\(X\\) zentrieren, z.B. von allen Werten \\(x_i\\) eine Konstante \\(c\\) subtrahieren, dann ist Intercept der vorausgesagte Wert für \\(x = c\\)\nhäufigste Zentrierung ist die Mittelwertzentrierung, d.h. \\(c = \\bar{x}\\), der Intercept bezieht sich auf den durchschnittlichen Wert von \\(X\\)\nZentrierung ändert nichts an den Regressionskoeffizienten oder am Globalfit, sondern nur am Intercept"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#effektgrößen-und-modellgüte",
+    "href": "analyseverfahren/slides.html#effektgrößen-und-modellgüte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Effektgrößen und Modellgüte",
+    "text": "Effektgrößen und Modellgüte\n\njeder Koeffizient \\(B\\) hat einen Standardfehler SE(B) und ein Konfindenzintervall\nmit beiden lässt sich \\(H_0\\) prüfen können, dass kein linearer Zusammenhang existiert - bzw. ob die Daten sich mit \\(B=0\\) decken\n\\(B\\) lässt sich substantiell in der Metrik von \\(Y\\) interpretieren (eine Einheit mehr/weniger \\(X\\) entspricht \\(B\\) Einheiten mehr/weniger \\(Y\\)), er sagt aber nichts über die Stärke des Zusammenhangs oder Modellgüte\nwie gut das lineare Modell (im Vergleich zum Nullmodell ohne Prädiktoren) vorhersagt, kann man am \\(R^2\\) erkennen\nim bivariaten Fall entspricht das exakt dem quadrierten Korrelationskoeffizienten \\(r_{XY}\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#unstandardisierte-b-vs.-standardisierte-beta",
+    "href": "analyseverfahren/slides.html#unstandardisierte-b-vs.-standardisierte-beta",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Unstandardisierte B vs. standardisierte Beta",
+    "text": "Unstandardisierte B vs. standardisierte Beta\n\nInterpretation von unstandardisiertem \\(B\\) setzt voraus, dass wir die Metriken von \\(X\\) und vor allem \\(Y\\) kennen\noft wird (z.B. für Vergleiche oder Meta-Analysen) ein standardisiertes Maß gewünscht, das unabhängig von \\(X\\) und \\(Y\\) ist\nwir können Regressionskoeffizienten standardisieren, in dem wir\n\nentweder die Daten \\(X\\) und \\(Y\\) vor der Analyse z-standardisieren (M = 0, SD = 1)\noder den Koeffizienten selbst standardisieren, durch \\(\\beta = b \\frac{s_x}{s_y}\\)\n\nim bivariaten Fall (nur dort!) entspricht \\(\\beta\\) dem Korrelationskoeffizienten \\(r\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#korrelation-vs.-bivariate-regressionglm",
+    "href": "analyseverfahren/slides.html#korrelation-vs.-bivariate-regressionglm",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Korrelation vs. bivariate Regression/GLM",
+    "text": "Korrelation vs. bivariate Regression/GLM\n\n\\(r\\) als standardisierte Größe, d.h. auch ohne Kenntnis der Skalen von \\(X\\) und \\(Y\\) interpretierbar\nKorrelationsanalyse verführt ggf. weniger zu kausalen (Fehl-)Interpretationen als ein GLM mit unabhängiger und abhängiger Variable\nbei Korrelationen sind alternative Verfahren für nicht-metrische Daten (z.B. Spearmans Rangkorrelation) verbreitet\nbeim GLM bekommt mehr Informationen: unstandardisierte Effektgrößen (inkl. Intercept)\nbeide Verfahren liefern dieselben Schätzer und dieselben Testentscheidungen, basieren auf denselben Annahmen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-johannes2022",
+    "href": "analyseverfahren/slides.html#beispielstudie-johannes2022",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie Johannes et al. (2022):",
+    "text": "Beispielstudie Johannes et al. (2022):"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#daten",
+    "href": "analyseverfahren/slides.html#daten",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Daten",
+    "text": "Daten\n\n\n\n\n\n\n\n\ntv_time\n\n\nage\n\n\ngames_time\n\n\nmusic_time\n\n\n\n\n\n\n0.0\n\n\n22\n\n\n0\n\n\n4.00\n\n\n\n\n0.0\n\n\n43\n\n\n0\n\n\n2.50\n\n\n\n\n2.0\n\n\n38\n\n\n0\n\n\n0.17\n\n\n\n\n5.0\n\n\n30\n\n\n0\n\n\n2.00\n\n\n\n\n1.5\n\n\n29\n\n\n1\n\n\n0.75\n\n\n\n\n2.0\n\n\n57\n\n\n0\n\n\n0.00\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariable\n\n\nSummary\n\n\n\n\n\n\nMean tv_time (SD)\n\n\n2.73 (3.67)\n\n\n\n\nMean age (SD)\n\n\n46.95 (14.67)\n\n\n\n\nMean games_time (SD)\n\n\n0.93 (2.41)\n\n\n\n\nMean music_time (SD)\n\n\n2.14 (2.75)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#outcome-variable",
+    "href": "analyseverfahren/slides.html#outcome-variable",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Outcome-Variable",
+    "text": "Outcome-Variable"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#scatterplot",
+    "href": "analyseverfahren/slides.html#scatterplot",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Scatterplot",
+    "text": "Scatterplot"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#korrelation-samt-hypothesentest",
+    "href": "analyseverfahren/slides.html#korrelation-samt-hypothesentest",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Korrelation samt Hypothesentest",
+    "text": "Korrelation samt Hypothesentest\n\n\n\n\n\nParameter1\nParameter2\nr\n95% CI\np\n\n\n\n\nage\nmusic_time\n-0.22\n(-0.26, -0.17)\n&lt; .001\n\n\n\nAlternative hypothesis: true correlation is not equal to 0"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#bivariate-lineare-regression",
+    "href": "analyseverfahren/slides.html#bivariate-lineare-regression",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Bivariate lineare Regression",
+    "text": "Bivariate lineare Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2101)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n4.04\n(3.65, 4.42)\n20.53\n&lt; .001\n0.00\n\n\n\nage\n-0.04\n(-0.05, -0.03)\n-10.14\n&lt; .001\n-0.22\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n10125.19\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n2.68\n\n\n\n\n\n\n\nReminder: t-Wert = \\(B/SE(B)\\)\nInterpretation: stat. signifikant, wenn t &lt; -1.96 oder &gt; 1.96 (kritischer Wert der Normalverteilung)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#zentrierung-alter-18",
+    "href": "analyseverfahren/slides.html#zentrierung-alter-18",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Zentrierung Alter = 18",
+    "text": "Zentrierung Alter = 18\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2101)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n3.31\n(3.06, 3.57)\n25.49\n&lt; .001\n0.00\n\n\n\nage18\n-0.04\n(-0.05, -0.03)\n-10.14\n&lt; .001\n-0.22\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n10125.19\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n2.68"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#mittelwertzentrierung",
+    "href": "analyseverfahren/slides.html#mittelwertzentrierung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Mittelwertzentrierung",
+    "text": "Mittelwertzentrierung\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2101)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n2.14\n(2.03, 2.25)\n36.56\n&lt; .001\n0.00\n\n\n\nage centered\n-0.04\n(-0.05, -0.03)\n-10.14\n&lt; .001\n-0.22\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n10125.19\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n2.68"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#transformierte-y-variable-minuten",
+    "href": "analyseverfahren/slides.html#transformierte-y-variable-minuten",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Transformierte Y-Variable (Minuten)",
+    "text": "Transformierte Y-Variable (Minuten)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2101)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n128.40\n(121.51, 135.28)\n36.56\n&lt; .001\n0.00\n\n\n\nage centered\n-2.43\n(-2.90, -1.96)\n-10.14\n&lt; .001\n-0.22\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n27346.01\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n161.06"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#z-standardisierte-variablen",
+    "href": "analyseverfahren/slides.html#z-standardisierte-variablen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Z-standardisierte Variablen",
+    "text": "Z-standardisierte Variablen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2101)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n0.00\n(-0.04, 0.04)\n0.08\n0.936\n0.00\n\n\n\nage zstd\n-0.22\n(-0.26, -0.17)\n-10.14\n&lt; .001\n-0.22\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n5872.65\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n0.98"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#literatur",
     "href": "analyseverfahren/slides.html#literatur",
     "title": "Anwendungsorientierte Analyseverfahren",
     "section": "Literatur",
-    "text": "Literatur\n\n\n\n\nAuty, S., & Lewis, C. (2004). Exploring children’s choice: The reminder effect of product placement. Psychology & Marketing, 21(9), 697–713. https://doi.org/10.1002/mar.20025"
+    "text": "Literatur\n\n\n\n\nAuty, S., & Lewis, C. (2004). Exploring children’s choice: The reminder effect of product placement. Psychology & Marketing, 21(9), 697–713. https://doi.org/10.1002/mar.20025\n\n\nJohannes, N., Dienlin, T., Bakhshi, H., & Przybylski, A. K. (2022). No effect of different types of media on well-being. Scientific Reports, 12(1), 61."
   },
   {
     "objectID": "inhaltsanalyse/slides.html#lernziele",
@@ -928,7 +1082,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Don't bullshit a bullshitter.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"A guy that clean has to be dirty.\",\n        \"author\": \"Hank Schrader\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1383,28 +1537,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.82, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.04367 -13.98822\nsample estimates:\nmean of x mean of y \n 165.9897  180.0057"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.55, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02763 -13.97223\nsample estimates:\nmean of x mean of y \n 165.9966  179.9965"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.642777e-22\n\ndo_t_test(100, males, males)\n\n[1] 0.5112677"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 2.833165e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.8707499"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.5347476 0.2262478 0.5457692 0.8983216 0.2033886 0.7469986\n\nsum(results_h0 &lt;= .05)\n\n[1] 56"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.8615114 0.1287024 0.6453021 0.7253590 0.8727105 0.9874961\n\nsum(results_h0 &lt;= .05)\n\n[1] 47"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 458\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 478\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
