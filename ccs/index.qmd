@@ -54,7 +54,7 @@ Select a study on Moodle and repare a poster (A1) for the study you selected.
 Poster Session: Interesting studies in computational communication science.
 
 
-## Session 3 {#3} 
+## Session 3 <a class="bi bi-easel-fill" href="slides.html#/s3" alt="Slides"></a> {#3}
 
 ### Topics
 
