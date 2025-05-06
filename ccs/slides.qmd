@@ -39,33 +39,30 @@ lang: en
 -   the core difficulties in understanding the literature are rarely language-related
 -   CCS is almost exclusively based on English publications, with two notable intro book exceptions: @jünger2023; @haim2023
 
-
-
-
 ## Computational Communication Science?
 
 > A field is emerging that leverages the capacity to collect and analyze data at a scale that may reveal patterns of individual and group behaviors. [@lazerpentland2009]
 
-  > [W]e define computational communication science as the endeavor to understand human communication by developing and applying digital tools that often involve a high degree of automation in observational, theoretical, and experimental research. [@hilbertbarnett2019]
-
+> \[W\]e define computational communication science as the endeavor to understand human communication by developing and applying digital tools that often involve a high degree of automation in observational, theoretical, and experimental research. [@hilbertbarnett2019]
 
 ## Computational Communication Science
 
-- definition based on methods rather than study subject or theoretical background
-- somehow "big data" are involved, as are automatic methods
-- terminology and many methods mostly derived from the natural sciences and engineering
-- innovation often (but not always) happens outside academia, e.g. within companies such as Google or Meta
+-   definition based on methods rather than study subject or theoretical background
+-   somehow "big data" are involved, as are automatic methods
+-   terminology and many methods mostly derived from the natural sciences and engineering
+-   innovation often (but not always) happens outside academia, e.g. within companies such as Google or Meta
 
 ## Computational methods
 
-- the "Big 3" approaches in CCS:
-  1. automatic content analysis
-  2. analysis of digital traces and digital behavioral data
-  3. simulation and agent-based modelling
-- historically, *very* strong emphasis on web data and automatic content analysis [@vanatteveldt2022computational]
-- agent-based modeling still very niche topics (see your own study choices for next week!)
+-   the "Big 3" approaches in CCS:
+    1.  automatic content analysis
+    2.  analysis of digital traces and digital behavioral data
+    3.  simulation and agent-based modelling
+-   historically, *very* strong emphasis on web data and automatic content analysis [@vanatteveldt2022computational]
+-   agent-based modeling still very niche topics (see your own study choices for next week!)
 
 ## Schedule
+
 ```{r}
 library(tidyverse)
 plan <- readr::read_tsv("plan.tsv") |> 
@@ -75,73 +72,136 @@ knitr::kable(plan)
 
 ## Challenges
 
-- data access for academic research [@freelon2018]
-- legal and ethical challenges in using private or semi-public data 
-- technical and methodological issues in analyzing very large datasets
-- necessary skills for students and scholars, lack of curricula
-- computational studies are often (by necessity) interdisciplinary
-- also: literacy for reviewing computational studies in communication research
+-   data access for academic research [@freelon2018]
+-   legal and ethical challenges in using private or semi-public data
+-   technical and methodological issues in analyzing very large datasets
+-   necessary skills for students and scholars, lack of curricula
+-   computational studies are often (by necessity) interdisciplinary
+-   also: literacy for reviewing computational studies in communication research
 
-## Caveats 
+## Caveats
 
-- the field is moving extremely fast, that means
-  - many approaches are outdated within a few years
-  - platforms restrict access to data and prohibit distribution of replication data
-  - replication of many studies is difficult
-- starting from methods or data feels strange (and for some uncomfortable) compared to traditional empirical research
-- you will need (and learn) coding skills at least in R, but might need Python later
+-   the field is moving extremely fast, that means
+    -   many approaches are outdated within a few years
+    -   platforms restrict access to data and prohibit distribution of replication data
+    -   replication of many studies is difficult
+-   starting from methods or data feels strange (and for some uncomfortable) compared to traditional empirical research
+-   you will need (and learn) coding skills at least in R, but might need Python later
 
 ## Benefits
 
-- computational skills are **extremely** valuable on the job market, both in academia and in the real world
-- the CCS perspective challenges many traditional assumptions about how research works, i.e. by valuing creative re-operationalization of existing measures
-- with a full methods toolbox, you can conduct high-quality research even on niche topics
-- ideally the course will help you conduct better studies in your large empirical modules
+-   computational skills are **extremely** valuable on the job market, both in academia and in the real world
+-   the CCS perspective challenges many traditional assumptions about how research works, i.e. by valuing creative re-operationalization of existing measures
+-   with a full methods toolbox, you can conduct high-quality research even on niche topics
+-   ideally the course will help you conduct better studies in your large empirical modules
 
 ## Course setup
 
-- "cold opening" introduction by actually reading CCS papers
-- then, for every approach:
-  - I prepare a small presentation on the basics
-  - you work through an application using R at home
-  - we discuss the practical tasks in the following session
-  - we creatively apply the new methods to our own topics
-- Bring your own ideas, data, research questions to class!
+-   "cold opening" introduction by actually reading CCS papers
+-   then, for every approach:
+    -   I prepare a small presentation on the basics
+    -   you work through an application using R at home
+    -   we discuss the practical tasks in the following session
+    -   we creatively apply the new methods to our own topics
+-   Bring your own ideas, data, research questions to class!
 
 ## CCS Paper Potpourri
 
-- 10 posters overall, we'll probably do 2x 45min sessions.
-- please bring the digital versions as well, just in case
-- remember to get the posters printed ASAP
-- any questions about the studies or posters?
+-   10 posters overall, we'll probably do 2x 45min sessions.
+-   please bring the digital versions as well, just in case
+-   remember to get the posters printed ASAP
+-   any questions about the studies or posters?
 
 # Questions?
-
 
 # Session 2 {#s2}
 
 ## CCS Paper Potpourri
 
-- 2x 30 minutes/5 papers in the hallway
-- presenters: 
-  - think of a 30 second summary pitch to get the conversation started
-  - note/remember questions that came up repeatedly or were noteworthy
-- audience
-  - provide interactions on the poster site (in English)!
-  - note/remember questions you'd like to discuss in class
+-   2x 30 minutes/5 papers in the hallway
+-   presenters:
+    -   think of a 30 second summary pitch to get the conversation started
+    -   note/remember questions that came up repeatedly or were noteworthy
+-   audience
+    -   provide interactions on the poster site (in English)!
+    -   note/remember questions you'd like to discuss in class
 
 ## Discussion
 
-1. Which paper/study do you remember best (and why)?
-2. Which study was the most difficult to understand (and why)?
-3. Which study would you like to replicate?
+1.  Which paper/study do you remember best (and why)?
+2.  Which study was the most difficult to understand (and why)?
+3.  Which study would you like to replicate?
 
 ## Next week
 
-1. Read @salganik2018, Chapter 6 and @freelon2018.
-2. Read about  (at least skim the posts) the very recent Reddit/AI experiment issue:
-    - [summary article](https://retractionwatch.com/2025/04/28/experiment-using-ai-generated-posts-on-reddit-draws-fire-for-ethics-concerns/) and [follow up](https://retractionwatch.com/2025/04/29/ethics-committee-ai-llm-reddit-changemyview-university-zurich/)
-    - [original thread on Reddit](<https://www.reddit.com/r/changemyview/comments/1k8b2hj/meta_unauthorized_experiment_on_cmv_involving)
-    
+1.  Read @salganik2018, Chapter 6 and @freelon2018.
+2.  Read about (at least skim the posts) the very recent Reddit/AI experiment issue:
+    -   [summary article](https://retractionwatch.com/2025/04/28/experiment-using-ai-generated-posts-on-reddit-draws-fire-for-ethics-concerns/) and [follow up](https://retractionwatch.com/2025/04/29/ethics-committee-ai-llm-reddit-changemyview-university-zurich/)
+    -   [original thread on Reddit](%3Chttps://www.reddit.com/r/changemyview/comments/1k8b2hj/meta_unauthorized_experiment_on_cmv_involving)
+
+# Session 3 {#s3}
+
+## @salganik2018 I
+
+![](images/sal61.png)
+
+## @salganik2018 I
+
+-   What are the main differences between Consequentialism and Deontology?
+-   How can the four mentioned ethical principles be applied to the experiment run by @munger2017?
+-   In case of doubt, what priority should these principles have among themselves?
+
+## @salganik2018 II
+
+![](images/sal63.png)
+
+## Research Ethics in Practice
+
+-   Is informed consent needed for a content analysis of social media posts from members parliament?
+-   What about comments on posts or public pages, e.g., from parties or politicians?
+-   What about Tinder profiles or other online dating platforms?
+-   What if informed consent is practically not possible?
+
+## Group Task
+
+(four groups, 10 minutes)
+
+1.  Summarise the design and execution of the Reddit AI experiment.
+2.  What were the main points of criticism from the Reddit mods/legal people?
+3.  What were the main rebuttals from the researcher team and UZH?
+4.  Can you salvage the study idea and run it ethically? How?
+
+## API and non-API access
+
+-   free model (e.g. Wikipedia): everyone can get the data
+-   paid model (e.g. Twitter/X): you pay the platform or a third party for access
+-   grant model (e.g. TikTok): you can apply for access to the API as a scholar
+-   collab model (e.g. Meta): you can work with the platforms on spefific research questions
+-   data donation model: you ask participants to donate their DDP (Data Download Packages)
+-   independent/rogue model: you access a secret API or scrape the data otherwise
+
+## Post-API era
+
+-   most models have failed due to platforms (change of) self-interests [@freelon2018]
+    -   commercial interests (i.e. monetization) or concerns about bad PR
+    -   privacy concerns for well-meaning platforms <https://en.wikipedia.org/wiki/Netflix_Prize>
+    -   "research data" incomplete and at times worse than public data
+-   big collaborations like [Social Science One](https://www.buzzfeednews.com/article/craigsilverman/funders-are-ready-to-pull-out-of-facebooks-academic-data) failed miserably and publicly
+-   other were challenging [@wagner2023] and ultimately problematic [@bagchi2024]
+
+## Issues with online data
+
+- not all available online data can/should be considered public
+- privacy vs. reproducibility vs. ethics vs. legal questions
+- many instances of well-meaning research with unethically obtained data
+- many instances of unethical research 
+- second and third order effects, e.g. LLM training data or vision models
+- plus biases, errors, etc.
+
+## Questions
+
+- When can you scrape and use online data (against the platforms terms)?
+- Can you use an AI model based on unethical, possibly illegal training data?
+- How can you ensure reproducible findings with problematic data?
 
 ## References
