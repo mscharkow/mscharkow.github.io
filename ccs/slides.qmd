@@ -191,17 +191,24 @@ knitr::kable(plan)
 
 ## Issues with online data
 
-- not all available online data can/should be considered public
-- privacy vs. reproducibility vs. ethics vs. legal questions
-- many instances of well-meaning research with unethically obtained data
-- many instances of unethical research 
-- second and third order effects, e.g. LLM training data or vision models
-- plus biases, errors, etc.
+-   not all available online data can/should be considered public
+-   privacy vs. reproducibility vs. ethics vs. legal questions
+-   many instances of well-meaning research with unethically obtained data
+-   many instances of unethical research
+-   second and third order effects, e.g. LLM training data or vision models
+-   plus biases, errors, etc.
 
 ## Questions
 
-- When can you scrape and use online data (against the platforms terms)?
-- Can you use an AI model based on unethical, possibly illegal training data?
-- How can you ensure reproducible findings with problematic data?
+-   When can you scrape and use online data (against the platforms terms)?
+-   Can you use an AI model based on unethical, possibly illegal training data?
+-   How can you ensure reproducible findings with problematic data?
+
+## next session (in 2 weeks!)
+
+-   Get data dwnload packages (DDP) for all major online platforms/services that you use (at least 2), e.g. from Google/Youtube, Instagram, TikTok, Spotify, Netflix, etc.
+-   How? Google "data download package \[PLATFORM\]"
+-   Request JSON files if given the option between multiple formats
+-   Read @ohme2023
 
 ## References
