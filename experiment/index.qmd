@@ -76,4 +76,23 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 -   [R-Hausaufgabe zur Simulation](https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html)
 
+## Sitzung 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Folien"></a> {#4}
+
+### Themen
+
+-   Kausalität im Experiment
+- Drittvariablen, Mediation, Moderation
+-   Hypothesen, Forschungsfragen, Begriffe
+
+### Literatur
+
+@koch2019 [Kap. 2 und 3]
+
+### Aufgabe zur nächsten Sitzung
+
+-   Forschungsfragen und Hypothesen aufstellen
+- Begriffsarbeit
+- Literatur recherchieren
+
+
 # Literatur
