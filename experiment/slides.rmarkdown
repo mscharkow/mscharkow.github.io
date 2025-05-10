@@ -410,3 +410,4 @@ lmer(answer_friendly ~ text * emoji + (1|agent_agent_name), data = d) %>%
 4.  Definieren und erarbeiten Sie zentrale Begriffe, die in den Forschungsfragen und Hypothesen vorkommen.
 
 ## Literatur
+
