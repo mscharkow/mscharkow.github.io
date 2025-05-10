@@ -403,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -989.51, df = 2e+06, p-value &lt; 2.2e-16
+t = -990.51, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.02097 -13.96553
+ -14.04077 -13.98532
 sample estimates:
 mean of x mean of y 
- 166.0049  179.9981 </code></pre>
+ 165.9857  179.9987 </code></pre>
 </div>
 </div>
 </section>
@@ -424,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 5.572227e-16</code></pre>
+<pre><code>[1] 4.858151e-20</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4439309</code></pre>
+<pre><code>[1] 0.8308063</code></pre>
 </div>
 </div>
 </section>
@@ -439,11 +439,11 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.3922091 0.4962103 0.0795931 0.8346775 0.2085941 0.4324768</code></pre>
+<pre><code>[1] 0.8813725 0.9588130 0.6447348 0.1180073 0.3220231 0.1496931</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 42</code></pre>
+<pre><code>[1] 56</code></pre>
 </div>
 </div>
 </section>
@@ -455,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 462</code></pre>
+<pre><code>[1] 451</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -625,17 +625,178 @@ mean of x mean of y
 <li>praktische Übung nachbereiten <a href="https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html" class="uri">https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html</a></li>
 <li>Hausaufgabe in R erledigen</li>
 </ul>
+</section></section>
+<section>
+<section id="s4" class="title-slide slide level1 center">
+<h1>Sitzung 4</h1>
+
+</section>
+<section id="agenda-heute" class="slide level2">
+<h2>Agenda heute</h2>
+<ol start="2" type="1">
+<li>Fragen zu Grundlagen des Experiments</li>
+<li>Kausalmodelle und Experimentaldesign</li>
+<li>Forschungsfragen und Hypothesen</li>
+<li>Begriffsarbeit</li>
+</ol>
+</section></section>
+<section id="was-unterscheidet-experimentelle-von-nicht-experimentellen-studien" class="title-slide slide level1 center">
+<h1>Was unterscheidet experimentelle von nicht-experimentellen Studien?</h1>
+
+</section>
+
+<section>
+<section id="wann-können-statisches-zusammenhänge-als-kausal-betrachtet-werden" class="title-slide slide level1 center">
+<h1>Wann können statisches Zusammenhänge als kausal betrachtet werden?</h1>
+
+</section>
+<section id="experimente-randomisierung-kausalität" class="slide level2">
+<h2>Experimente, Randomisierung, Kausalität</h2>
+<ul>
+<li>Experimente dienen primär der Überprüfung kausaler Zusammenhänge</li>
+<li>kausale Interpretation durch Experimentaldesign
+<ul>
+<li>zeitliche Reihenfolge</li>
+<li>Drittvariablenkontrolle</li>
+</ul></li>
+<li>Kontrolle aller (beobachteten und nicht beobachteten) Drittvariablen durch Randomisierung und/oder Kovariate</li>
+</ul>
+</section>
+<section id="problem-1-drittvariablen-kovariate" class="slide level2">
+<h2>Problem 1: Drittvariablen (Kovariate)</h2>
+<ul>
+<li>Kovariate können recht einfach bei der Datenauswertung eingefügt werden</li>
+<li>Drittvariablenkontrolle bei Randomisierung unnötig, kann aber Präzision der Schätzung erhöhen, aber
+<ul>
+<li>Kovariate muss zeitlich und kausal <em>vor</em> der Experimentalmanipulation</li>
+<li>Inklusion von Post-Treatment-Variablen verzerrt die Schätzung des Effekts</li>
+</ul></li>
+<li>sowohl Exklusion als auch Inklusion von Kovariaten können problematisch sein</li>
+<li>im Zweifelsfall eher weniger oder keine Kovariate ins Modell aufnehmen</li>
+</ul>
+</section>
+<section id="mediation-und-moderation" class="slide level2">
+<h2>Mediation und Moderation</h2>
+
+<img data-src="images/mod_vs_med.png" class="r-stretch quarto-figure-center"><p class="caption">iv</p></section>
+<section id="kausalität-im-experiment" class="slide level2">
+<h2>Kausalität im Experiment</h2>
+
+<img data-src="images/kausal_koch.png" class="r-stretch quarto-figure-center"><p class="caption">Quelle: <span class="citation" data-cites="koch2019">Koch et al. (<a href="#/literatur-1" role="doc-biblioref" onclick="">2019</a>)</span></p></section>
+<section id="problem-2-mediation-und-indirekte-effekte" class="slide level2">
+<h2>Problem 2: Mediation und indirekte Effekte</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>der totale Effekt <span class="math inline">\(c\)</span> lässt sich kausal interpretieren, wenn Exposure experimentell variiert wird</li>
+<li>das Hinzufügen des Mediators verändert die Interpretation, nur <span class="math inline">\(a\)</span> kann nun kausal interpretiert werden</li>
+<li>der indirekte Effekt <span class="math inline">\(ab\)</span> kann <strong>nicht</strong> kausal interpretiert werden, und auch nicht der direkte Effect <span class="math inline">\(c'\)</span> <span class="citation" data-cites="bullock2010">Bullock et al. (<a href="#/literatur-1" role="doc-biblioref" onclick="">2010</a>)</span></li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12874-021-01426-3/MediaObjects/12874_2021_1426_Fig1_HTML.png"></p>
+<figcaption><span class="citation" data-cites="rijnhart2021">Rijnhart et al. (<a href="#/literatur-1" role="doc-biblioref" onclick="">2021</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-in-kleingruppen" class="slide level2">
+<h2>Aufgabe in Kleingruppen</h2>
+<ol type="1">
+<li>Lesen und diskutieren sie gemeinsam Abstract, Hypothesen, Design und Stimuli von <span class="citation" data-cites="wang2022">Wang &amp; Sundar (<a href="#/literatur-1" role="doc-biblioref" onclick="">2022</a>)</span> (15min)</li>
+<li>Fassen Sie die Haupthypothesen und deren empirische Umsetzung im Experiment in eigenen Worten zusammen.</li>
+<li>Markieren Sie die einzelnen Hypothesen als Pfade im Pfadmodell.</li>
+<li>Welche der Hypothesen können mit dem Experiment kausal getestet werden?</li>
+</ol>
+</section>
+<section id="wang2022" class="slide level2">
+<h2><span class="citation" data-cites="wang2022">Wang &amp; Sundar (<a href="#/literatur-1" role="doc-biblioref" onclick="">2022</a>)</span></h2>
+
+<img data-src="images/wang22.png" class="r-stretch quarto-figure-center"><p class="caption">Quelle: <span class="citation" data-cites="wang2022">Wang &amp; Sundar (<a href="#/literatur-1" role="doc-biblioref" onclick="">2022</a>)</span></p></section>
+<section id="problem-2-moderation" class="slide level2">
+<h2>Problem 2: Moderation</h2>
+<ul>
+<li>Effektheterogenität, d.h. der Zusammenhang von X und Y ist nicht für alle gleich</li>
+<li>der Effekt von X auf Y hängt von Moderatorvariable Z ab (“wird von Z moderiert”)</li>
+<li>die Größe und die Richtung des Regressionskoeffizienten ist davon abhängig, welche Ausprägung Z hat</li>
+<li>Beispiele:
+<ul>
+<li>Experimente mit min. 2 Faktoren, die sich gegenseitig beeiflussen</li>
+<li>Effektheterogenität in verschiedenen Subgruppen der Stichprobe (Kovariate)</li>
+</ul></li>
+<li>konditionale Kausalität schwierig zu testen und zu interpretieren</li>
+<li>Moderatonshypothesen erfordern deutlich höhere statistische Power</li>
+</ul>
+</section>
+<section id="was-ist-eine-gute-forschungsfrage" class="slide level2">
+<h2>Was ist eine gute Forschungsfrage?</h2>
+<ul>
+<li>Eine Forschungsfrage ist eine <strong>Frage</strong>!</li>
+<li>Eine Forschungsfrage lässt sich empirisch beantworten, am besten mit der eigenen Inhaltsanalyse.</li>
+<li>Eine Forschungsfrage ist weder zu allgemein noch zu spezifisch.</li>
+<li>Eine Forschungsfrage hat oft eine (implizite oder explizite) Vergleichsdimension.</li>
+</ul>
+</section>
+<section id="was-ist-eine-gute-hypothese" class="slide level2">
+<h2>Was ist eine gute Hypothese?</h2>
+<ul>
+<li>Eine Hypothese ist empirisch falsifizierbar, und es muss klar sein, wann sie falsifiziert ist.</li>
+<li>Eine Hypothese ist klar und widerspruchsfrei formuliert.</li>
+<li>Eine Hypothese ist einfach, komplexe Hypothesen sollten in einfache Hypothesen zerlegt werden.</li>
+<li>Es ist nicht schlimm, sich widersprechende Hypothesen zu formulieren (H1a vs H1b).</li>
+<li>Eine Nullhypothese ist selten eine interessante Hypothese, und oft nicht leicht zu prüfen.</li>
+</ul>
+</section>
+<section id="komplexe-hypothesen" class="slide level2">
+<h2>Komplexe Hypothesen</h2>
+<ul>
+<li>Mediationshypothesen lassen sich fast nie kausal prüfen, auch nicht im Experiment.</li>
+<li>Mediationshypothesen sind praktisch immer kausal, selbst wenn das Gegenteil (in den Limitationen) behauptet wird.</li>
+<li>Moderationshypothesen sind legitim, aber erfordern mehr Aufwand (z.B. Stichprobengröße)</li>
+<li>Wir sind zunächst an unkonditionalen Effekten interessiert (Sparsamkeit des Modells).</li>
+<li>Kovariaten- und Moderationshypothesen sollten nicht im Vordergrund des Experiments stehen.</li>
+</ul>
+</section>
+<section id="begriffsarbeit" class="slide level2">
+<h2>Begriffsarbeit</h2>
+
+<img data-src="images/begriffe.png" class="r-stretch quarto-figure-center"><p class="caption">Komrey, Roose &amp; Strübing, 2016</p></section>
+<section id="aufgaben-bis-nächste-woche" class="slide level2">
+<h2>Aufgaben bis nächste Woche</h2>
+<ol type="1">
+<li>Einigen sie sich in der Gruppe auf ein Thema.</li>
+<li>Recherchieren sie mindestens 4 thematische verwandte Studien, vorzugsweise Experimente.</li>
+<li>Formulieren Sie Forschungsfragen und Hypothesen.</li>
+<li>Definieren und erarbeiten Sie zentrale Begriffe, die in den Forschungsfragen und Hypothesen vorkommen.</li>
+</ol>
 </section>
 <section id="literatur-1" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-bullock2010" class="csl-entry" role="listitem">
+Bullock, J. G., Green, D. P., &amp; Ha, S. E. (2010). Yes, but what<span>’</span>s the mechanism? (don<span>’</span>t expect an easy answer). <em>Journal of Personality and Social Psychology</em>, <em>98</em>(4), 550–558. <a href="https://doi.org/10.1037/a0018933">https://doi.org/10.1037/a0018933</a>
+</div>
+<div id="ref-koch2019" class="csl-entry" role="listitem">
+Koch, T., Peter, C., &amp; Müller, P. (2019). <em>Das Experiment in der Kommunikations- und Medienwissenschaft</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-19754-4">https://doi.org/10.1007/978-3-658-19754-4</a>
+</div>
 <div id="ref-larooij2025" class="csl-entry" role="listitem">
 Larooij, M., &amp; Törnberg, P. (2025). <em>Do Large Language Models Solve the Problems of Agent-Based Modeling? A Critical Review of Generative Social Simulations</em>. <a href="https://doi.org/10.48550/ARXIV.2504.03274">https://doi.org/10.48550/ARXIV.2504.03274</a>
 </div>
+<div id="ref-rijnhart2021" class="csl-entry" role="listitem">
+Rijnhart, J. J. M., Lamp, S. J., Valente, M. J., MacKinnon, D. P., Twisk, J. W. R., &amp; Heymans, M. W. (2021). Mediation analysis methods used in observational research: a scoping review and recommendations. <em>BMC Medical Research Methodology</em>, <em>21</em>(1). <a href="https://doi.org/10.1186/s12874-021-01426-3">https://doi.org/10.1186/s12874-021-01426-3</a>
+</div>
 <div id="ref-waldherr2019" class="csl-entry" role="listitem">
 Waldherr, A., &amp; Wettstein, M. (2019). Bridging the Gaps: Using Agent-Based Modeling to Reconcile Data and Theory in Computational Communication Science. <em>International Journal of Communication</em>, <em>13</em>(00), 24. <a href="https://ijoc.org/index.php/ijoc/article/view/10588">https://ijoc.org/index.php/ijoc/article/view/10588</a>
+</div>
+<div id="ref-wang2022" class="csl-entry" role="listitem">
+Wang, J., &amp; Sundar, S. S. (2022). Liking versus commenting on online news: effects of expression affordances on political attitudes. <em>Journal of Computer-Mediated Communication</em>, <em>27</em>(6). <a href="https://doi.org/10.1093/jcmc/zmac018">https://doi.org/10.1093/jcmc/zmac018</a>
 </div>
 </div>
 </section></section>

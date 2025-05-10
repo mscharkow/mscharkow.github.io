@@ -70,6 +70,13 @@
     "text": "Sitzung 3 \n\nThemen\n\nSimulation von Studien und agentenbasierte Modelle\npraktische R-Übung\n\n\n\nLiteratur\nLarooij & Törnberg (2025);Waldherr & Wettstein (2019)\n\n\nAufgabe zur nächsten Sitzung\n\nR-Hausaufgabe zur Simulation"
   },
   {
+    "objectID": "experiment/index.html#4",
+    "href": "experiment/index.html#4",
+    "title": "BA Experiment",
+    "section": "Sitzung 4 ",
+    "text": "Sitzung 4 \n\nThemen\n\nKausalität im Experiment\nDrittvariablen, Mediation, Moderation\nHypothesen, Forschungsfragen, Begriffe\n\n\n\nLiteratur\nKoch et al. (2019, Kapitel 2 und 3)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungsfragen und Hypothesen aufstellen\nBegriffsarbeit\nLiteratur recherchieren"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
@@ -1082,7 +1089,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Some people are immune to good advice.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You all know exactly who I am. Say my name.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1537,28 +1544,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.51, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02097 -13.96553\nsample estimates:\nmean of x mean of y \n 166.0049  179.9981"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.51, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.04077 -13.98532\nsample estimates:\nmean of x mean of y \n 165.9857  179.9987"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 5.572227e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.4439309"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 4.858151e-20\n\ndo_t_test(100, males, males)\n\n[1] 0.8308063"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.3922091 0.4962103 0.0795931 0.8346775 0.2085941 0.4324768\n\nsum(results_h0 &lt;= .05)\n\n[1] 42"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.8813725 0.9588130 0.6447348 0.1180073 0.3220231 0.1496931\n\nsum(results_h0 &lt;= .05)\n\n[1] 56"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 462\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 451\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -1645,11 +1652,109 @@
     "text": "Aufgaben zur nächsten Sitzung\n\npraktische Übung nachbereiten https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html\nHausaufgabe in R erledigen"
   },
   {
+    "objectID": "experiment/slides.html#agenda-heute",
+    "href": "experiment/slides.html#agenda-heute",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Agenda heute",
+    "text": "Agenda heute\n\nFragen zu Grundlagen des Experiments\nKausalmodelle und Experimentaldesign\nForschungsfragen und Hypothesen\nBegriffsarbeit"
+  },
+  {
+    "objectID": "experiment/slides.html#experimente-randomisierung-kausalität",
+    "href": "experiment/slides.html#experimente-randomisierung-kausalität",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Experimente, Randomisierung, Kausalität",
+    "text": "Experimente, Randomisierung, Kausalität\n\nExperimente dienen primär der Überprüfung kausaler Zusammenhänge\nkausale Interpretation durch Experimentaldesign\n\nzeitliche Reihenfolge\nDrittvariablenkontrolle\n\nKontrolle aller (beobachteten und nicht beobachteten) Drittvariablen durch Randomisierung und/oder Kovariate"
+  },
+  {
+    "objectID": "experiment/slides.html#problem-1-drittvariablen-kovariate",
+    "href": "experiment/slides.html#problem-1-drittvariablen-kovariate",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Problem 1: Drittvariablen (Kovariate)",
+    "text": "Problem 1: Drittvariablen (Kovariate)\n\nKovariate können recht einfach bei der Datenauswertung eingefügt werden\nDrittvariablenkontrolle bei Randomisierung unnötig, kann aber Präzision der Schätzung erhöhen, aber\n\nKovariate muss zeitlich und kausal vor der Experimentalmanipulation\nInklusion von Post-Treatment-Variablen verzerrt die Schätzung des Effekts\n\nsowohl Exklusion als auch Inklusion von Kovariaten können problematisch sein\nim Zweifelsfall eher weniger oder keine Kovariate ins Modell aufnehmen"
+  },
+  {
+    "objectID": "experiment/slides.html#mediation-und-moderation",
+    "href": "experiment/slides.html#mediation-und-moderation",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Mediation und Moderation",
+    "text": "Mediation und Moderation\n\niv"
+  },
+  {
+    "objectID": "experiment/slides.html#kausalität-im-experiment",
+    "href": "experiment/slides.html#kausalität-im-experiment",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Kausalität im Experiment",
+    "text": "Kausalität im Experiment\n\nQuelle: Koch et al. (2019)"
+  },
+  {
+    "objectID": "experiment/slides.html#problem-2-mediation-und-indirekte-effekte",
+    "href": "experiment/slides.html#problem-2-mediation-und-indirekte-effekte",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Problem 2: Mediation und indirekte Effekte",
+    "text": "Problem 2: Mediation und indirekte Effekte\n\n\n\n\nder totale Effekt \\(c\\) lässt sich kausal interpretieren, wenn Exposure experimentell variiert wird\ndas Hinzufügen des Mediators verändert die Interpretation, nur \\(a\\) kann nun kausal interpretiert werden\nder indirekte Effekt \\(ab\\) kann nicht kausal interpretiert werden, und auch nicht der direkte Effect \\(c'\\) Bullock et al. (2010)\n\n\n\n\n\n\nRijnhart et al. (2021)"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgabe-in-kleingruppen",
+    "href": "experiment/slides.html#aufgabe-in-kleingruppen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgabe in Kleingruppen",
+    "text": "Aufgabe in Kleingruppen\n\nLesen und diskutieren sie gemeinsam Abstract, Hypothesen, Design und Stimuli von Wang & Sundar (2022) (15min)\nFassen Sie die Haupthypothesen und deren empirische Umsetzung im Experiment in eigenen Worten zusammen.\nMarkieren Sie die einzelnen Hypothesen als Pfade im Pfadmodell.\nWelche der Hypothesen können mit dem Experiment kausal getestet werden?"
+  },
+  {
+    "objectID": "experiment/slides.html#wang2022",
+    "href": "experiment/slides.html#wang2022",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Wang & Sundar (2022)",
+    "text": "Wang & Sundar (2022)\n\nQuelle: Wang & Sundar (2022)"
+  },
+  {
+    "objectID": "experiment/slides.html#problem-2-moderation",
+    "href": "experiment/slides.html#problem-2-moderation",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Problem 2: Moderation",
+    "text": "Problem 2: Moderation\n\nEffektheterogenität, d.h. der Zusammenhang von X und Y ist nicht für alle gleich\nder Effekt von X auf Y hängt von Moderatorvariable Z ab (“wird von Z moderiert”)\ndie Größe und die Richtung des Regressionskoeffizienten ist davon abhängig, welche Ausprägung Z hat\nBeispiele:\n\nExperimente mit min. 2 Faktoren, die sich gegenseitig beeiflussen\nEffektheterogenität in verschiedenen Subgruppen der Stichprobe (Kovariate)\n\nkonditionale Kausalität schwierig zu testen und zu interpretieren\nModeratonshypothesen erfordern deutlich höhere statistische Power"
+  },
+  {
+    "objectID": "experiment/slides.html#was-ist-eine-gute-forschungsfrage",
+    "href": "experiment/slides.html#was-ist-eine-gute-forschungsfrage",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Was ist eine gute Forschungsfrage?",
+    "text": "Was ist eine gute Forschungsfrage?\n\nEine Forschungsfrage ist eine Frage!\nEine Forschungsfrage lässt sich empirisch beantworten, am besten mit der eigenen Inhaltsanalyse.\nEine Forschungsfrage ist weder zu allgemein noch zu spezifisch.\nEine Forschungsfrage hat oft eine (implizite oder explizite) Vergleichsdimension."
+  },
+  {
+    "objectID": "experiment/slides.html#was-ist-eine-gute-hypothese",
+    "href": "experiment/slides.html#was-ist-eine-gute-hypothese",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Was ist eine gute Hypothese?",
+    "text": "Was ist eine gute Hypothese?\n\nEine Hypothese ist empirisch falsifizierbar, und es muss klar sein, wann sie falsifiziert ist.\nEine Hypothese ist klar und widerspruchsfrei formuliert.\nEine Hypothese ist einfach, komplexe Hypothesen sollten in einfache Hypothesen zerlegt werden.\nEs ist nicht schlimm, sich widersprechende Hypothesen zu formulieren (H1a vs H1b).\nEine Nullhypothese ist selten eine interessante Hypothese, und oft nicht leicht zu prüfen."
+  },
+  {
+    "objectID": "experiment/slides.html#komplexe-hypothesen",
+    "href": "experiment/slides.html#komplexe-hypothesen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Komplexe Hypothesen",
+    "text": "Komplexe Hypothesen\n\nMediationshypothesen lassen sich fast nie kausal prüfen, auch nicht im Experiment.\nMediationshypothesen sind praktisch immer kausal, selbst wenn das Gegenteil (in den Limitationen) behauptet wird.\nModerationshypothesen sind legitim, aber erfordern mehr Aufwand (z.B. Stichprobengröße)\nWir sind zunächst an unkonditionalen Effekten interessiert (Sparsamkeit des Modells).\nKovariaten- und Moderationshypothesen sollten nicht im Vordergrund des Experiments stehen."
+  },
+  {
+    "objectID": "experiment/slides.html#begriffsarbeit",
+    "href": "experiment/slides.html#begriffsarbeit",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Begriffsarbeit",
+    "text": "Begriffsarbeit\n\nKomrey, Roose & Strübing, 2016"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgaben-bis-nächste-woche",
+    "href": "experiment/slides.html#aufgaben-bis-nächste-woche",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgaben bis nächste Woche",
+    "text": "Aufgaben bis nächste Woche\n\nEinigen sie sich in der Gruppe auf ein Thema.\nRecherchieren sie mindestens 4 thematische verwandte Studien, vorzugsweise Experimente.\nFormulieren Sie Forschungsfragen und Hypothesen.\nDefinieren und erarbeiten Sie zentrale Begriffe, die in den Forschungsfragen und Hypothesen vorkommen."
+  },
+  {
     "objectID": "experiment/slides.html#literatur-1",
     "href": "experiment/slides.html#literatur-1",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Literatur",
-    "text": "Literatur\n\n\n\n\nLarooij, M., & Törnberg, P. (2025). Do Large Language Models Solve the Problems of Agent-Based Modeling? A Critical Review of Generative Social Simulations. https://doi.org/10.48550/ARXIV.2504.03274\n\n\nWaldherr, A., & Wettstein, M. (2019). Bridging the Gaps: Using Agent-Based Modeling to Reconcile Data and Theory in Computational Communication Science. International Journal of Communication, 13(00), 24. https://ijoc.org/index.php/ijoc/article/view/10588"
+    "text": "Literatur\n\n\n\n\nBullock, J. G., Green, D. P., & Ha, S. E. (2010). Yes, but what’s the mechanism? (don’t expect an easy answer). Journal of Personality and Social Psychology, 98(4), 550–558. https://doi.org/10.1037/a0018933\n\n\nKoch, T., Peter, C., & Müller, P. (2019). Das Experiment in der Kommunikations- und Medienwissenschaft. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-19754-4\n\n\nLarooij, M., & Törnberg, P. (2025). Do Large Language Models Solve the Problems of Agent-Based Modeling? A Critical Review of Generative Social Simulations. https://doi.org/10.48550/ARXIV.2504.03274\n\n\nRijnhart, J. J. M., Lamp, S. J., Valente, M. J., MacKinnon, D. P., Twisk, J. W. R., & Heymans, M. W. (2021). Mediation analysis methods used in observational research: a scoping review and recommendations. BMC Medical Research Methodology, 21(1). https://doi.org/10.1186/s12874-021-01426-3\n\n\nWaldherr, A., & Wettstein, M. (2019). Bridging the Gaps: Using Agent-Based Modeling to Reconcile Data and Theory in Computational Communication Science. International Journal of Communication, 13(00), 24. https://ijoc.org/index.php/ijoc/article/view/10588\n\n\nWang, J., & Sundar, S. S. (2022). Liking versus commenting on online news: effects of expression affordances on political attitudes. Journal of Computer-Mediated Communication, 27(6). https://doi.org/10.1093/jcmc/zmac018"
   },
   {
     "objectID": "ccs/slides.html#ccs-module",
