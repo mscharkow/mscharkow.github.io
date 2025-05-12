@@ -303,10 +303,10 @@ lmer(answer_friendly ~ text * emoji + (1|agent_agent_name), data = d) %>%
 
 ## Agenda heute
 
-2.  Fragen zu Grundlagen des Experiments
-3.  Kausalmodelle und Experimentaldesign
-4.  Forschungsfragen und Hypothesen
-5.  Begriffsarbeit
+  1.  Fragen zu Grundlagen des Experiments
+  3.  Kausalmodelle und Experimentaldesign
+  4.  Forschungsfragen und Hypothesen
+  5.  Begriffsarbeit
 
 # Was unterscheidet experimentelle von nicht-experimentellen Studien?
 
