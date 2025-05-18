@@ -1089,7 +1089,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I'm the guy your boss brought here to show you how it's done.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Yo, Mr. White. I can't even pronounce half this shit!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1544,28 +1544,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -988.84, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.01569 -13.96024\nsample estimates:\nmean of x mean of y \n 166.0001  179.9880"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.76, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02995 -13.97455\nsample estimates:\nmean of x mean of y \n 166.0095  180.0118"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 3.740804e-17\n\ndo_t_test(100, males, males)\n\n[1] 0.1746632"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 5.982217e-24\n\ndo_t_test(100, males, males)\n\n[1] 0.2632009"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.5198593 0.9797684 0.6392117 0.4213727 0.8309010 0.4983177\n\nsum(results_h0 &lt;= .05)\n\n[1] 45"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.1173653 0.7181681 0.8497417 0.8188493 0.9260992 0.4173133\n\nsum(results_h0 &lt;= .05)\n\n[1] 51"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 455\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 496\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -1748,6 +1748,90 @@
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Aufgaben bis nächste Woche",
     "text": "Aufgaben bis nächste Woche\n\nEinigen sie sich in der Gruppe auf ein Thema.\nRecherchieren sie mindestens 4 thematische verwandte Studien, vorzugsweise Experimente.\nFormulieren Sie Forschungsfragen und Hypothesen.\nDefinieren und erarbeiten Sie zentrale Begriffe, die in den Forschungsfragen und Hypothesen vorkommen."
+  },
+  {
+    "objectID": "experiment/slides.html#agenda-heute-1",
+    "href": "experiment/slides.html#agenda-heute-1",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Agenda heute",
+    "text": "Agenda heute\n\nFinalisierung Forschungsfragen und Hypothesen\nForschungsdesign\nStichprobe"
+  },
+  {
+    "objectID": "experiment/slides.html#experimentalfaktoren",
+    "href": "experiment/slides.html#experimentalfaktoren",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Experimentalfaktoren",
+    "text": "Experimentalfaktoren\n\nQuelle: Koch et al. (2019)"
+  },
+  {
+    "objectID": "experiment/slides.html#between--und-within-subject-design",
+    "href": "experiment/slides.html#between--und-within-subject-design",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Between- und Within-Subject-Design",
+    "text": "Between- und Within-Subject-Design\n\nQuelle: Koch et al. (2019)"
+  },
+  {
+    "objectID": "experiment/slides.html#studiendesign-und-stat.-power",
+    "href": "experiment/slides.html#studiendesign-und-stat.-power",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Studiendesign und stat. Power",
+    "text": "Studiendesign und stat. Power\n\nQuelle: https://measuringu.com/between-within/"
+  },
+  {
+    "objectID": "experiment/slides.html#studiendesign-und-datenanalyse",
+    "href": "experiment/slides.html#studiendesign-und-datenanalyse",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Studiendesign und Datenanalyse",
+    "text": "Studiendesign und Datenanalyse\n\n\n\nBetween-Subjects\n\n\n\n\n\n\nparticipant_id\ntreatment\noutcome\n\n\n\n\n1\nA\n4\n\n\n2\nB\n1\n\n\n3\nC\n3\n\n\n4\nA\n1\n\n\n\n\n\n\nlm(outcome ~ treatment, data = d)\n\nWithin-Subjects (Long Format)\n\n\n\n\n\n\nparticipant_id\ntreatment\noutcome\n\n\n\n\n1\nA\n1\n\n\n1\nB\n2\n\n\n1\nC\n5\n\n\n2\nA\n5\n\n\n\n\n\n\nlme4::lmer(outcome ~ treatment + (treatment | participant_id), data = d)"
+  },
+  {
+    "objectID": "experiment/slides.html#vor--und-nachteile",
+    "href": "experiment/slides.html#vor--und-nachteile",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Vor- und Nachteile",
+    "text": "Vor- und Nachteile\n\n\n\nBetween-Subjects\n\neinfach zu planen und umzusetzen\neinfach auszuwerten\nkeine Reihenfolgeeffekte etc.\ngroße Stichprobe erforderlich\nAufwand Rekrutierung vs. Ertrag\n\n\nWithin-Subjects\n\nmehr statistische Power\nggf. höhere Generalisierbarkeit\netwas mehr Aufwand in der Umsetzung\netwas schwierigere Auswertung\nggf. Reihenfolgeeffekte\n\n\n\nEs sind auch gemischte und/oder unvollständige Designs (within + between Faktoren) möglich."
+  },
+  {
+    "objectID": "experiment/slides.html#umsetzung-unvollständige-within-designs",
+    "href": "experiment/slides.html#umsetzung-unvollständige-within-designs",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Umsetzung (unvollständige) Within-Designs",
+    "text": "Umsetzung (unvollständige) Within-Designs\n\nstatt immer neu zu randomisieren, werden Pseudo-Between-Gruppen gebildet\nalle relevanten (Kombinationen von) Bedingungen sind enthalten\ninnerhalb dieser Gruppen ist der Ablauf immer gleich\nDesigns können unvollständig sein, aber die wichtigsten Bedingungen enthalten\nReihenfolge nur für die relevantesten Faktoren variieren\n\n\n\n\n\n\n\nGruppe\nTreatment_1\nTreatment_2\nTreatment_3\n\n\n\n\n1\nA\nB\nC\n\n\n2\nB\nC\nA\n\n\n3\nC\nA\nB"
+  },
+  {
+    "objectID": "experiment/slides.html#reihenfolge",
+    "href": "experiment/slides.html#reihenfolge",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Reihenfolge",
+    "text": "Reihenfolge\n\nCover-Story/Briefing, Studie, Debriefing\nmöglichst sofort mit dem Experiment beginnen, Kovariaten später messen (Abbrecher)\nbei Within-Designs entweder\n\ndirekte Messung nach Exposition zum Stimulus (Stimulus, Messung, Stimulus, Messung, etc.)\nvergleichende/aggregierte Messung nach Präsentation aller Stimuli (z.B. Recall)\n\nzeitlicher Abstand Stimulus-zu-Messung hängt von der Fragestellung ab"
+  },
+  {
+    "objectID": "experiment/slides.html#manipulations-check",
+    "href": "experiment/slides.html#manipulations-check",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Manipulations-Check",
+    "text": "Manipulations-Check\n\noft werden Manipulationschecks einfach empfohlen, aber zu bedenken:\n\nIst es nötig, dass die Probandinnen die Manipulation erkennen?\nWird durch den Check (die Frage) selbst ein Effekt erzielt?\nWas passiert, wenn jemand durch den Manipulationscheck fällt?\n\nim Zweifelsfall Manipulationscheck erst am Ende oder gar nicht"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgabe",
+    "href": "experiment/slides.html#aufgabe",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgabe",
+    "text": "Aufgabe\n\nWie viele Faktoren hat ihr Experiment, mit wie vielen Ausprägungen? Gibt es eine Kontrollgruppe?\nSkizzieren Sie in 15 min jeweils grob eine Within- und eine Between-Subject Variante Ihres Experiments.\nMalen Sie den Versuchsablauf auf und gehen Sie das Experiment im Geiste einmal durch.\nWas ist aus Perspektive der Forschenden vs. Probandinnen zu beachten?"
+  },
+  {
+    "objectID": "experiment/slides.html#stichprobe",
+    "href": "experiment/slides.html#stichprobe",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Stichprobe",
+    "text": "Stichprobe\n\nbeim Experiment vor allem Stichprobenumfang (statistische Power) relevant\nDefinition Grundgesamtheit vs. realisierbare Stichprobe\nRepräsentativität und Generalisierbarkeit der Ergebnisse\nGibt es Zweifel, ob die Experimentalmanipulation unterschiedlich wirken könnte?\nModerationsanalyse (Quasi-Experiment) möglich, aber mit Aufwand verbunden"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgaben-bis-nächste-woche-1",
+    "href": "experiment/slides.html#aufgaben-bis-nächste-woche-1",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgaben bis nächste Woche",
+    "text": "Aufgaben bis nächste Woche\n\nStudiendesign finalisieren und Studienablauf planen\nfinale Power-Analyse durchführen\nGrundgesamtheit, Stichprobe und Rekrutierungsplan entwerfen"
   },
   {
     "objectID": "experiment/slides.html#literatur-1",

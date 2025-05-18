@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.30">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Prof.&nbsp;Dr.&nbsp;Michael Scharkow">
   <title>Experiment: Mediennutzung und -wirkung</title>
@@ -403,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -988.84, df = 2e+06, p-value &lt; 2.2e-16
+t = -990.76, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.01569 -13.96024
+ -14.02995 -13.97455
 sample estimates:
 mean of x mean of y 
- 166.0001  179.9880 </code></pre>
+ 166.0095  180.0118 </code></pre>
 </div>
 </div>
 </section>
@@ -424,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.740804e-17</code></pre>
+<pre><code>[1] 5.982217e-24</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1746632</code></pre>
+<pre><code>[1] 0.2632009</code></pre>
 </div>
 </div>
 </section>
@@ -439,11 +439,11 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5198593 0.9797684 0.6392117 0.4213727 0.8309010 0.4983177</code></pre>
+<pre><code>[1] 0.1173653 0.7181681 0.8497417 0.8188493 0.9260992 0.4173133</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 45</code></pre>
+<pre><code>[1] 51</code></pre>
 </div>
 </div>
 </section>
@@ -455,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 455</code></pre>
+<pre><code>[1] 496</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -774,6 +774,247 @@ mean of x mean of y
 <li>Formulieren Sie Forschungsfragen und Hypothesen.</li>
 <li>Definieren und erarbeiten Sie zentrale Begriffe, die in den Forschungsfragen und Hypothesen vorkommen.</li>
 </ol>
+</section></section>
+<section>
+<section id="s5" class="title-slide slide level1 center">
+<h1>Sitzung 5</h1>
+
+</section>
+<section id="agenda-heute-1" class="slide level2">
+<h2>Agenda heute</h2>
+<ol type="1">
+<li>Finalisierung Forschungsfragen und Hypothesen</li>
+<li>Forschungsdesign</li>
+<li>Stichprobe</li>
+</ol>
+</section></section>
+<section>
+<section id="minuten-präsentationen" class="title-slide slide level1 center">
+<h1>5-Minuten Präsentationen</h1>
+
+</section>
+<section id="experimentalfaktoren" class="slide level2">
+<h2>Experimentalfaktoren</h2>
+
+<img data-src="images/clipboard-1783332828.png" class="r-stretch quarto-figure-center"><p class="caption">Quelle: <span class="citation" data-cites="koch2019">Koch et al. (<a href="#/literatur-1" role="doc-biblioref" onclick="">2019</a>)</span></p></section>
+<section id="between--und-within-subject-design" class="slide level2">
+<h2>Between- und Within-Subject-Design</h2>
+
+<img data-src="images/clipboard-2151872876.png" class="r-stretch quarto-figure-center"><p class="caption">Quelle: <span class="citation" data-cites="koch2019">Koch et al. (<a href="#/literatur-1" role="doc-biblioref" onclick="">2019</a>)</span></p></section>
+<section id="studiendesign-und-stat.-power" class="slide level2">
+<h2>Studiendesign und stat. Power</h2>
+
+<img data-src="images/clipboard-1551332205.png" class="r-stretch quarto-figure-center"><p class="caption">Quelle: https://measuringu.com/between-within/</p></section>
+<section id="studiendesign-und-datenanalyse" class="slide level2">
+<h2>Studiendesign und Datenanalyse</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<h3 id="between-subjects">Between-Subjects</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">participant_id</th>
+<th style="text-align: left;">treatment</th>
+<th style="text-align: right;">outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><code>lm(outcome ~ treatment, data = d)</code></p>
+</div><div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<h3 id="within-subjects-long-format">Within-Subjects (Long Format)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">participant_id</th>
+<th style="text-align: left;">treatment</th>
+<th style="text-align: right;">outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><code>lme4::lmer(outcome ~ treatment + (treatment | participant_id), data = d)</code></p>
+</div></div>
+</div>
+</section>
+<section id="vor--und-nachteile" class="slide level2">
+<h2>Vor- und Nachteile</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<h3 id="between-subjects-1">Between-Subjects</h3>
+<ul>
+<li><p>einfach zu planen und umzusetzen</p></li>
+<li><p>einfach auszuwerten</p></li>
+<li><p>keine Reihenfolgeeffekte etc.</p></li>
+<li><p>große Stichprobe erforderlich</p></li>
+<li><p>Aufwand Rekrutierung vs.&nbsp;Ertrag</p></li>
+</ul>
+</div><div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<h3 id="within-subjects">Within-Subjects</h3>
+<ul>
+<li><p>mehr statistische Power</p></li>
+<li><p>ggf. höhere Generalisierbarkeit</p></li>
+<li><p>etwas mehr Aufwand in der Umsetzung</p></li>
+<li><p>etwas schwierigere Auswertung</p></li>
+<li><p>ggf. Reihenfolgeeffekte</p></li>
+</ul>
+</div></div>
+</div>
+<p>Es sind auch gemischte und/oder unvollständige Designs (within + between Faktoren) möglich.</p>
+</section>
+<section id="umsetzung-unvollständige-within-designs" class="slide level2">
+<h2>Umsetzung (unvollständige) Within-Designs</h2>
+<ul>
+<li>statt immer neu zu randomisieren, werden Pseudo-Between-Gruppen gebildet</li>
+<li>alle relevanten (Kombinationen von) Bedingungen sind enthalten</li>
+<li>innerhalb dieser Gruppen ist der Ablauf immer gleich</li>
+<li>Designs können unvollständig sein, aber die wichtigsten Bedingungen enthalten</li>
+<li>Reihenfolge nur für die relevantesten Faktoren variieren</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Gruppe</th>
+<th style="text-align: left;">Treatment_1</th>
+<th style="text-align: left;">Treatment_2</th>
+<th style="text-align: left;">Treatment_3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">C</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">B</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="reihenfolge" class="slide level2">
+<h2>Reihenfolge</h2>
+<ul>
+<li>Cover-Story/Briefing, Studie, Debriefing</li>
+<li>möglichst sofort mit dem Experiment beginnen, Kovariaten später messen (Abbrecher)</li>
+<li>bei Within-Designs entweder
+<ul>
+<li>direkte Messung nach Exposition zum Stimulus (Stimulus, Messung, Stimulus, Messung, etc.)</li>
+<li>vergleichende/aggregierte Messung nach Präsentation aller Stimuli (z.B. Recall)</li>
+</ul></li>
+<li>zeitlicher Abstand Stimulus-zu-Messung hängt von der Fragestellung ab</li>
+</ul>
+</section>
+<section id="manipulations-check" class="slide level2">
+<h2>Manipulations-Check</h2>
+<ul>
+<li>oft werden Manipulationschecks einfach empfohlen, aber zu bedenken:
+<ol type="1">
+<li>Ist es nötig, dass die Probandinnen die Manipulation erkennen?</li>
+<li>Wird durch den Check (die Frage) selbst ein Effekt erzielt?</li>
+<li>Was passiert, wenn jemand durch den Manipulationscheck fällt?</li>
+</ol></li>
+<li>im Zweifelsfall Manipulationscheck erst am Ende oder gar nicht</li>
+</ul>
+</section>
+<section id="aufgabe" class="slide level2">
+<h2>Aufgabe</h2>
+<ol type="1">
+<li>Wie viele Faktoren hat ihr Experiment, mit wie vielen Ausprägungen? Gibt es eine Kontrollgruppe?</li>
+<li>Skizzieren Sie in 15 min jeweils grob eine Within- und eine Between-Subject Variante Ihres Experiments.</li>
+<li>Malen Sie den Versuchsablauf auf und gehen Sie das Experiment im Geiste einmal durch.</li>
+<li>Was ist aus Perspektive der Forschenden vs.&nbsp;Probandinnen zu beachten?</li>
+</ol>
+</section>
+<section id="stichprobe" class="slide level2">
+<h2>Stichprobe</h2>
+<ul>
+<li>beim Experiment vor allem Stichprobenumfang (statistische Power) relevant</li>
+<li>Definition Grundgesamtheit vs.&nbsp;realisierbare Stichprobe</li>
+<li>Repräsentativität und Generalisierbarkeit der Ergebnisse</li>
+<li>Gibt es Zweifel, ob die Experimentalmanipulation unterschiedlich wirken könnte?</li>
+<li>Moderationsanalyse (Quasi-Experiment) möglich, aber mit Aufwand verbunden</li>
+</ul>
+</section>
+<section id="aufgaben-bis-nächste-woche-1" class="slide level2">
+<h2>Aufgaben bis nächste Woche</h2>
+<ul>
+<li>Studiendesign finalisieren und Studienablauf planen</li>
+<li>finale Power-Analyse durchführen</li>
+<li>Grundgesamtheit, Stichprobe und Rekrutierungsplan entwerfen</li>
+</ul>
 </section>
 <section id="literatur-1" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
