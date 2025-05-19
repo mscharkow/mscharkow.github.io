@@ -94,5 +94,21 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 - Begriffsarbeit
 - Literatur recherchieren
 
+## Sitzung 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Folien"></a> {#5}
+
+### Themen
+
+- Forschungsdesign
+- Stichprobe
+
+### Literatur
+
+@koch2019 [Kap. 5 und 6]
+
+### Aufgabe zur nächsten Sitzung
+
+- Forschungdesign finalisieren
+- Power-Analyse und Stichprobenplan
+
 
 # Literatur
