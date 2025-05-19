@@ -77,6 +77,13 @@
     "text": "Sitzung 4 \n\nThemen\n\nKausalität im Experiment\nDrittvariablen, Mediation, Moderation\nHypothesen, Forschungsfragen, Begriffe\n\n\n\nLiteratur\nKoch et al. (2019, Kapitel 2 und 3)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungsfragen und Hypothesen aufstellen\nBegriffsarbeit\nLiteratur recherchieren"
   },
   {
+    "objectID": "experiment/index.html#5",
+    "href": "experiment/index.html#5",
+    "title": "BA Experiment",
+    "section": "Sitzung 5 ",
+    "text": "Sitzung 5 \n\nThemen\n\nForschungsdesign\nStichprobe\n\n\n\nLiteratur\nKoch et al. (2019, Kapitel 5 und 6)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungdesign finalisieren\nPower-Analyse und Stichprobenplan"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
@@ -1089,7 +1096,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Yo, Mr. White. I can't even pronounce half this shit!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"They're minerals, Marie! Jesus!\",\n        \"author\": \"Hank Schrader\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1544,28 +1551,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.76, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02995 -13.97455\nsample estimates:\nmean of x mean of y \n 166.0095  180.0118"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.42, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.01722 -13.96180\nsample estimates:\nmean of x mean of y \n 166.0130  180.0025"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 5.982217e-24\n\ndo_t_test(100, males, males)\n\n[1] 0.2632009"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.133605e-18\n\ndo_t_test(100, males, males)\n\n[1] 0.3249341"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.1173653 0.7181681 0.8497417 0.8188493 0.9260992 0.4173133\n\nsum(results_h0 &lt;= .05)\n\n[1] 51"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.05674726 0.25190947 0.96935870 0.72940902 0.43153376 0.46576317\n\nsum(results_h0 &lt;= .05)\n\n[1] 51"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 496\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 490\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
