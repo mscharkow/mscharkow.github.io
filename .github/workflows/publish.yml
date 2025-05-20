@@ -43,6 +43,7 @@ jobs:
             any::lme4
             any::marginaleffects
             any::faux
+            any::multcomp
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
