@@ -65,3 +65,14 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 ### Literatur
 
 @johannes2022
+
+## Sitzung 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Folien"></a> {#4}
+
+### Themen
+
+-   Mittelvergleiche
+-   Dummy-Codierung und Kontraste
+
+### Literatur
+
+@kümpel2019

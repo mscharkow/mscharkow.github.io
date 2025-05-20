@@ -921,6 +921,7 @@ lm(music_time_zstd ~ age_zstd, data = johannes22) |>
   model_table()
 ```
 
+# Sitzung 4 {#s4}
 
 # Fragen zur praktischen Übung?
 
@@ -1042,7 +1043,7 @@ Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-syst
 -   Dummy-Codierung (oder andere Effekt-Codierungen) machen ggf. Zusatzaufwand
 
 
-## Beispielstudie: Kümpel (2019)
+## Beispielstudie: @kümpel2019
 
 > Coming across news on social network sites (SNS) largely depends on news-related activities in one's network. Although there are many different ways to stumble upon news, limited research has been conducted on how distinct news curation practices influence users' intention to consume encountered content. In this mixed-methods investigation, using Facebook as an example, we first examine the results of an experiment (study 1, n = 524), showing that getting tagged in comments to news posts promotes news consumption the most.
 
