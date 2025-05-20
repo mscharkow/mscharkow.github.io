@@ -921,4 +921,352 @@ lm(music_time_zstd ~ age_zstd, data = johannes22) |>
   model_table()
 ```
 
+
+# Fragen zur praktischen Übung?
+
+## Wiederholung: TV Time (h/Tag)
+
+```{r}
+johannes22 <- haven::read_sav("data/Johannes_2022.sav")
+lm(tv_time ~ age, data = johannes22) |> 
+  model_table()
+```
+::: {.aside}
+ Daten: Johannes et al., 2022
+:::
+
+## Mittelwerte vergleichen
+
+-   in Experimenten werden oft Mittelwerte einer oder mehrerer Outcome-Variablen $Y$ zwischen verschiedenen Versuchsbedingungen verglichen.
+-   auch in nicht-experimentellen Analysen sind Mittelwertvergleiche häufig
+-   Nullhypothese, dass zwischen den Gruppen kein Unterschied besteht, d.h. die Mittelwerte sich nicht unterscheiden
+-   meistverwendet: t-Test oder einfaktorielle Varianzanalyse
+
+
+## Dichotome Prädiktoren
+
+-   Gruppierungsvariable wird in eine Dummy-Variablen recodiert (0 = Merkmal nicht vorhanden, 1 = Merkmal vorhanden)
+-   Dummy-Variable wird in das Regressionsmodell aufgenommen: $Y_i = b_0 + b_1 X_i + \epsilon_i$
+-   Referenzgruppe ($X = 0$), ergibt $Y = b_0$ (Intercept = Mittelwert der Kontrollgruppe)
+-  $b_1$ als Differenz zwischen der Gruppe 1 und der Referenzgruppe
+-  t-Wert (B/SE(B) des Regressionskoeffizienten exakt wie beim t-Test 
+
+## Alternative Codierung für X
+
+- Dummy-Codierung als meistverbreitete, aber nicht einzige Art, kategorielle Variablen abzubilden
+- wichtig ist nur, dass 
+  - unterschiedliche Gruppen unterschiedliche Zahlenwerte erhalten
+  - klar ist, was ein Unterschied von 1 bedeutet (Interpretation Regressionskoeffizient)
+  - der Intercept sinnvoll interpretierbar ist
+- Beispiel: **simple coding** mit -0.5 und 0.5 bei zwei Gruppen (vgl. Zentrierung) - <br/>
+ $b_0$ ist der Gesamtmittelwert, $b_1$ wieder der Unterschied zwischen den Gruppen
+
+::: {.aside}
+Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/>
+:::
+
+## Mehr als zwei Mittelwerte vergleichen
+
+-   traditionell die einfaktorielle Varianzanalyse (ANOVA) als Standardauswertung
+-   F-Test der Varianzanalyse prüft die Nullhypothese, dass *alle* Mittelwerte gleich sind (keine Unterschiede zwischen den Gruppen)
+-   Alternativhypothese ("Irgendwelche Gruppen unterscheiden sich in $Y$") oft theoretisch sehr unbefriedigend
+-   weil der F-Test nicht sagt, *welche* Gruppen sich im Mittelwert von $Y$ signifikant unterscheiden, ist oft ein zweiter Analyseschritt nötig
+- Post-hoc-Tests oder Kontraste, d.h. (ausgewählte oder alle) paarweisen Vergleiche zwischen zwei Gruppen 
+
+## GLM mit mehr als zwei Gruppen
+
+-   um  $k$ Gruppen zu vergleichen, werden $k-1$ Prädiktor-Variablen erstellt (vor oder automatisch während der Analyse)
+-   die $k-1$ Variablen werden in das Regressionsmodell aufgenommen: $Y_i = b_0 + b_1 X_1 + b_2 X_2 + ... + b_{k-1} X_{k-1} + \epsilon_i$.
+-   in der Referenzgruppe (alle $X_1 = X_2 = ... = 0$) ergibt sich $Y = b_0$ (Intercept = Mittelwert der Referenzgruppe)
+-   $b_1$ gibt (bei Dummy-Codierung) die Differenz zwischen der Gruppe 1 und der Referenzgruppe wider, $b_2$ die Differenz zwischen der Gruppe 2 und der Referenzgruppe, etc.
+-   man kann mehrere, aber **nicht alle** paarweisen Vergleiche gleichzeitig modellieren
+
+## Dummy-Codierung 4 Gruppen
+
+:::: {layout-ncol=2}
+
+::: {.column}
+
+### Gruppe A als Referenz
+```{r}
+x = paste("Gruppe", c("A", "B", "C", "D")) |> factor()
+contrasts(x) |> as.data.frame() |> rownames_to_column("Zugehörigkeit")
+```
+:::
+
+::: {.column}
+
+### Gruppe D als Referenz
+
+```{r}
+relevel(x, "Gruppe D") |> 
+contrasts() |> as.data.frame() |> rownames_to_column("Zugehörigkeit")
+```
+:::
+::::
+
+
+## Kontraste durch gezielte Codierung
+
+- spezifische Kontraste durch verschiedene Codierungen für die Prädiktorvariablen (vgl. Davis, 2010)
+- einfache Alternative: Referenzgruppe ändern, Modell neu schätzen
+- zahlreiche z.T. komplexe Codierungsverfahren, um z.B. ordinale Gruppenvariablen abzubilden
+- Beispiel: **Helmert coding** , bei dem eine Gruppe mit jeweils allen nachfolgenden Gruppen verglichen werden,
+  (1) Kontrollgruppe mit allen Treatments
+  (2) Treatment 1 mit Treatment 2, etc.
+
+::: {.aside}
+Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/>
+:::
+
+
+## Post-hoc-Tests
+
+- für kategorielle Prädiktoren kann man  anhand des geschätzten Modells alle Mittelwerte paarweise vergleichen
+- entspricht separaten  T-Tests mit je zwei Gruppen
+-   aufgrund der Vielzahl einzelner Tests erhöht sich die Gefahr von Alpha-Fehlern (d.h. irrtümlich signifikante Ergebnisse)
+- p-Werte (manchmal auch die CI) sollten daher korrigiert werden sollten (vgl. Bender & Lange, 2001)
+- verschiedenste Korrekturverfahren möglich (Bonferroni, Hochberg), eines sollte gewählt werden
+
+## GLM vs. t-Test/ANOVA
+### Vorteile 
+
+-   keine unterschiedliche Nomenklatur und Testverfahren, egal ob 2 oder mehr Gruppen
+-   $b$-Koeffizienten sind direkt als Mittelwertdifferenzen zwischen Gruppen interpretierbar, d.h. oft sind Post-Hoc-Tests unnötig
+-   beliebig erweiterbar durch weitere kategorielle und metrische Prädiktoren
+-   oft wird der globale F-Test sowie das $R^2$ als Effektstärkemaß zusätzlich ausgegeben
+
+### Nachteile
+
+-   Konvention und Fachgeschichte, d.h. GutachterInnen erwarten ANOVA oder t-Test
+-   Dummy-Codierung (oder andere Effekt-Codierungen) machen ggf. Zusatzaufwand
+
+
+## Beispielstudie: Kümpel (2019)
+
+> Coming across news on social network sites (SNS) largely depends on news-related activities in one's network. Although there are many different ways to stumble upon news, limited research has been conducted on how distinct news curation practices influence users' intention to consume encountered content. In this mixed-methods investigation, using Facebook as an example, we first examine the results of an experiment (study 1, n = 524), showing that getting tagged in comments to news posts promotes news consumption the most.
+
+## Daten
+
+
+```{r, echo = F}
+library(tidyverse)
+kuempel19 <- haven::read_sav("data/Kuempel_2019.sav") |>
+  select(
+    modus = Kurationsmodus_SNS,
+    rw = Rezeptionswahrscheinlichkeit
+  ) |>
+  mutate(
+    modus = as_factor(modus) |> relevel("Chronik"), # Faktor mit Referenz Chronik
+    modus_tag = ifelse(modus == "Tag", 1, 0), # Dummy-Variable
+    rw = as.numeric(rw) # Numerische Variable
+  ) |>
+  haven::zap_labels()
+
+```
+
+:::{.columns}
+::: {.column width="45%"}
+
+```{r}
+kuempel19 |> head()
+```
+:::
+
+::: {.column width="10%"} 
+::: 
+
+::: {.column width="45%"} 
+
+### Outcome-Variable
+
+```{r}
+kuempel19 |>
+  select(rw) |> 
+  report::report_sample()
+```
+
+\
+
+### Gruppenmittelwerte
+
+```{r}
+kuempel19 |>
+  group_by(modus) |>
+  summarise(
+    n = n(),
+    M = mean(rw, na.rm = TRUE),
+    SD = sd(rw, na.rm = TRUE)
+  )
+```
+
+
+:::
+::::
+
+## Outcome-Variable
+
+```{r}
+kuempel19 |>
+  ggplot(aes(x = rw)) +
+  geom_histogram()
+```
+
+## t-Test
+
+```{r}
+t.test(rw ~ modus_tag, data = kuempel19, var.equal = TRUE) |>
+  model_table()
+```
+
+## GLM mit zwei Gruppen
+
+```{r}
+m1_tag <- lm(rw ~ modus_tag, data = kuempel19)
+model_table(m1_tag)
+```
+
+
+## ANOVA mit vier Gruppen
+
+```{r}
+aov(rw ~ modus, data = kuempel19) |>
+  model_table()
+```
+
+
+## GLM mit vier Gruppen
+
+```{r}
+m2_modus <- lm(rw ~ modus, kuempel19)
+model_table(m2_modus)
+```
+
+## Referenzkategorie ändern
+
+```{r}
+kuempel19 <- kuempel19 |>
+  mutate(modus_dm = relevel(modus, "DM"))
+
+m2_modus_dm <- lm(rw ~ modus_dm, kuempel19)
+model_table(m2_modus_dm)
+```
+
+
+## Post-hoc/Kontraste
+
+```{r}
+posthocs = marginaleffects::avg_comparisons(m2_modus,
+  variables = list(modus = "pairwise")
+) 
+p_adj =  marginaleffects::hypotheses(posthocs, multcomp = "bonferroni") 
+
+
+posthocs |> 
+  as_tibble() |> 
+  mutate(p_adjusted = p_adj$p.value) |> 
+  select(-s.value)
+
+#m2_modus |> 
+#  marginaleffects::hypotheses( ~ pairwise, multcomp = "bonferroni")
+```
+::: {.aside}
+p-Werte (adjusted) mit Bonferroni-Korrektur
+:::
+
+## Vorhergesagte Mittelwerte
+
+```{r}
+marginaleffects::avg_predictions(m2_modus, variables = "modus") |> 
+  as_tibble() |> 
+  select(-s.value)
+```
+
+
+
+## Visualisierungsvorschlag
+
+```{r}
+marginaleffects::avg_predictions(m2_modus, variables="modus") |> 
+  ggplot(aes(x = modus, y = estimate))+
+  geom_pointrange(aes(ymin = conf.low, ymax = conf.high))+
+  labs(x  = "Versuchsbedingung", y = "Vorhergesagte Rezeptionswahrscheinlichkeit", caption = "Daten: Kümpel (2019)")
+```
+
+# Fragen?
+
+
+## Literatur
+
+Bender, R., & Lange, S. (2001). Adjusting for multiple testing---when and how?. Journal of clinical epidemiology, 54(4), 343-349.
+
+Davis, M. J. (2010). Contrast coding in multiple regression analysis: Strengths, weaknesses, and utility of popular coding structures. Journal of data science, 8(1), 61-73.
+
+Kümpel, A. S. (2019). Getting tagged, getting involved with news? A mixed-methods investigation of the effects and motives of news-related tagging activities on social network sites. Journal of Communication, 69(4), 373-395.
+
+
+## Take-home Aufgabe #1
+
+Wir vergleichen die Tanzbarkeit (danceability) und musikalische Stimmung (valence) der Top 10-Hits über 4 Dekaden (1990er bis 2020er) auf Basis von Billboard und Spotify-Daten.
+
+Beide Variablen sind von 0 (niedrig) - 100 (hoch) skaliert. Die Mittelwerte und Fallzahlen pro Dekade sind wie folgt:
+
+\
+
+```{r, echo = F}
+library(tidyverse)
+bb <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-14/billboard.csv")
+af <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-14/audio_features.csv")
+top <- bb |>
+  filter(str_detect(week_id, "199|200|201|202")) |>
+  filter(week_position <= 10) |>
+  left_join(af) |>
+  mutate(
+    year = str_extract(week_id, "/(\\d+)$") |> parse_number(),
+    decade = substr(year, 1, 3) |> paste0("0s")
+  ) |>
+  distinct(decade, spotify_track_id, .keep_all = T) |>
+  select(decade, song, performer, danceability, valence, speechiness, energy) |>
+  mutate_if(is.numeric, ~ . * 100) |>
+  na.omit()
+
+top |>
+  select(decade, danceability, valence) |>
+  group_by(decade) |>
+  summarise_at(vars(danceability, valence), mean) |>
+  left_join(top |> count(decade))
+```
+
+## Studienleistung, Teil 1 
+
+(1) Interpretieren sie die Ergebnisse der **beiden** linearen Modelle, in denen die Mittelwertunterschiede getestet werden, Zeile für Zeile.
+
+(2) Welche Dekaden werden *nicht* miteinander verglichen, d.h. für diese bräuchten wir Post-Hoc Vergleiche?
+
+Lösung bitte bis 04.06.2025, 10 Uhr in Moodle eintragen.
+
+\
+
+::: columns
+::: {.column width="50%"}
+```{r, echo=FALSE}
+lm(danceability ~ decade, data = top) |>
+  sjPlot::tab_model(show.ci = F, show.se = T, emph.p = F, show.r2 = F, show.obs = F, string.est = "Coefficient (B)", string.se = "SE (B)")
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="45%"}
+```{r, echo=FALSE}
+top <- top |> mutate(decade = relevel(factor(decade), "2020s"))
+lm(valence ~ decade, data = top) |>
+  sjPlot::tab_model(show.r2 = F, show.obs = F, show.p = F, string.est = "Coefficient (B)", string.ci = "95% CI (B)")
+```
+:::
+:::
+
+
+
 ## Literatur

@@ -1,5 +1,6 @@
 ```{r, include=FALSE}
 options(tibble.width = 100, width = 100, scipen = 99)
+options(marginaleffects_print_omit = c('s.value'))
 set.seed(12345)
 library(tidyverse)
 library(tinythemes)
