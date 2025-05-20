@@ -742,8 +742,176 @@
     "text": "Z-standardisierte Variablen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2101)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n0.00\n(-0.04, 0.04)\n0.08\n0.936\n0.00\n\n\n\nage zstd\n-0.22\n(-0.26, -0.17)\n-10.14\n&lt; .001\n-0.22\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n5872.65\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n0.98"
   },
   {
+    "objectID": "analyseverfahren/slides.html#wiederholung-tv-time-htag",
+    "href": "analyseverfahren/slides.html#wiederholung-tv-time-htag",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Wiederholung: TV Time (h/Tag)",
+    "text": "Wiederholung: TV Time (h/Tag)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2101)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n3.91\n(3.39, 4.43)\n14.63\n&lt; .001\n0.00\n\n\n\nage\n-0.03\n(-0.04, -0.01)\n-4.62\n&lt; .001\n-0.10\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n11414.93\n\n\nR2\n\n\n\n\n\n0.01\n\n\nR2 (adj.)\n\n\n\n\n\n0.01\n\n\nSigma\n\n\n\n\n\n3.65\n\n\n\n\n\n\n\nDaten: Johannes et al., 2022"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#mittelwerte-vergleichen",
+    "href": "analyseverfahren/slides.html#mittelwerte-vergleichen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Mittelwerte vergleichen",
+    "text": "Mittelwerte vergleichen\n\nin Experimenten werden oft Mittelwerte einer oder mehrerer Outcome-Variablen \\(Y\\) zwischen verschiedenen Versuchsbedingungen verglichen.\nauch in nicht-experimentellen Analysen sind Mittelwertvergleiche häufig\nNullhypothese, dass zwischen den Gruppen kein Unterschied besteht, d.h. die Mittelwerte sich nicht unterscheiden\nmeistverwendet: t-Test oder einfaktorielle Varianzanalyse"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#dichotome-prädiktoren",
+    "href": "analyseverfahren/slides.html#dichotome-prädiktoren",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Dichotome Prädiktoren",
+    "text": "Dichotome Prädiktoren\n\nGruppierungsvariable wird in eine Dummy-Variablen recodiert (0 = Merkmal nicht vorhanden, 1 = Merkmal vorhanden)\nDummy-Variable wird in das Regressionsmodell aufgenommen: \\(Y_i = b_0 + b_1 X_i + \\epsilon_i\\)\nReferenzgruppe (\\(X = 0\\)), ergibt \\(Y = b_0\\) (Intercept = Mittelwert der Kontrollgruppe)\n\\(b_1\\) als Differenz zwischen der Gruppe 1 und der Referenzgruppe\nt-Wert (B/SE(B) des Regressionskoeffizienten exakt wie beim t-Test"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#alternative-codierung-für-x",
+    "href": "analyseverfahren/slides.html#alternative-codierung-für-x",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Alternative Codierung für X",
+    "text": "Alternative Codierung für X\n\nDummy-Codierung als meistverbreitete, aber nicht einzige Art, kategorielle Variablen abzubilden\nwichtig ist nur, dass\n\nunterschiedliche Gruppen unterschiedliche Zahlenwerte erhalten\nklar ist, was ein Unterschied von 1 bedeutet (Interpretation Regressionskoeffizient)\nder Intercept sinnvoll interpretierbar ist\n\nBeispiel: simple coding mit -0.5 und 0.5 bei zwei Gruppen (vgl. Zentrierung) -  \\(b_0\\) ist der Gesamtmittelwert, \\(b_1\\) wieder der Unterschied zwischen den Gruppen\n\n\n\nBeispiele: https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#mehr-als-zwei-mittelwerte-vergleichen",
+    "href": "analyseverfahren/slides.html#mehr-als-zwei-mittelwerte-vergleichen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Mehr als zwei Mittelwerte vergleichen",
+    "text": "Mehr als zwei Mittelwerte vergleichen\n\ntraditionell die einfaktorielle Varianzanalyse (ANOVA) als Standardauswertung\nF-Test der Varianzanalyse prüft die Nullhypothese, dass alle Mittelwerte gleich sind (keine Unterschiede zwischen den Gruppen)\nAlternativhypothese (“Irgendwelche Gruppen unterscheiden sich in \\(Y\\)”) oft theoretisch sehr unbefriedigend\nweil der F-Test nicht sagt, welche Gruppen sich im Mittelwert von \\(Y\\) signifikant unterscheiden, ist oft ein zweiter Analyseschritt nötig\nPost-hoc-Tests oder Kontraste, d.h. (ausgewählte oder alle) paarweisen Vergleiche zwischen zwei Gruppen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#glm-mit-mehr-als-zwei-gruppen",
+    "href": "analyseverfahren/slides.html#glm-mit-mehr-als-zwei-gruppen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "GLM mit mehr als zwei Gruppen",
+    "text": "GLM mit mehr als zwei Gruppen\n\num \\(k\\) Gruppen zu vergleichen, werden \\(k-1\\) Prädiktor-Variablen erstellt (vor oder automatisch während der Analyse)\ndie \\(k-1\\) Variablen werden in das Regressionsmodell aufgenommen: \\(Y_i = b_0 + b_1 X_1 + b_2 X_2 + ... + b_{k-1} X_{k-1} + \\epsilon_i\\).\nin der Referenzgruppe (alle \\(X_1 = X_2 = ... = 0\\)) ergibt sich \\(Y = b_0\\) (Intercept = Mittelwert der Referenzgruppe)\n\\(b_1\\) gibt (bei Dummy-Codierung) die Differenz zwischen der Gruppe 1 und der Referenzgruppe wider, \\(b_2\\) die Differenz zwischen der Gruppe 2 und der Referenzgruppe, etc.\nman kann mehrere, aber nicht alle paarweisen Vergleiche gleichzeitig modellieren"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#dummy-codierung-4-gruppen",
+    "href": "analyseverfahren/slides.html#dummy-codierung-4-gruppen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Dummy-Codierung 4 Gruppen",
+    "text": "Dummy-Codierung 4 Gruppen\n\n\n\nGruppe A als Referenz\n\n\n\n\n\n\nZugehörigkeit\n\n\nGruppe B\n\n\nGruppe C\n\n\nGruppe D\n\n\n\n\n\n\nGruppe A\n\n\n0\n\n\n0\n\n\n0\n\n\n\n\nGruppe B\n\n\n1\n\n\n0\n\n\n0\n\n\n\n\nGruppe C\n\n\n0\n\n\n1\n\n\n0\n\n\n\n\nGruppe D\n\n\n0\n\n\n0\n\n\n1\n\n\n\n\n\n\n\nGruppe D als Referenz\n\n\n\n\n\n\nZugehörigkeit\n\n\nGruppe A\n\n\nGruppe B\n\n\nGruppe C\n\n\n\n\n\n\nGruppe D\n\n\n0\n\n\n0\n\n\n0\n\n\n\n\nGruppe A\n\n\n1\n\n\n0\n\n\n0\n\n\n\n\nGruppe B\n\n\n0\n\n\n1\n\n\n0\n\n\n\n\nGruppe C\n\n\n0\n\n\n0\n\n\n1"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#kontraste-durch-gezielte-codierung",
+    "href": "analyseverfahren/slides.html#kontraste-durch-gezielte-codierung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Kontraste durch gezielte Codierung",
+    "text": "Kontraste durch gezielte Codierung\n\nspezifische Kontraste durch verschiedene Codierungen für die Prädiktorvariablen (vgl. Davis, 2010)\neinfache Alternative: Referenzgruppe ändern, Modell neu schätzen\nzahlreiche z.T. komplexe Codierungsverfahren, um z.B. ordinale Gruppenvariablen abzubilden\nBeispiel: Helmert coding , bei dem eine Gruppe mit jeweils allen nachfolgenden Gruppen verglichen werden,\n\nKontrollgruppe mit allen Treatments\nTreatment 1 mit Treatment 2, etc.\n\n\n\n\nBeispiele: https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#post-hoc-tests",
+    "href": "analyseverfahren/slides.html#post-hoc-tests",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Post-hoc-Tests",
+    "text": "Post-hoc-Tests\n\nfür kategorielle Prädiktoren kann man anhand des geschätzten Modells alle Mittelwerte paarweise vergleichen\nentspricht separaten T-Tests mit je zwei Gruppen\naufgrund der Vielzahl einzelner Tests erhöht sich die Gefahr von Alpha-Fehlern (d.h. irrtümlich signifikante Ergebnisse)\np-Werte (manchmal auch die CI) sollten daher korrigiert werden sollten (vgl. Bender & Lange, 2001)\nverschiedenste Korrekturverfahren möglich (Bonferroni, Hochberg), eines sollte gewählt werden"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#glm-vs.-t-testanova",
+    "href": "analyseverfahren/slides.html#glm-vs.-t-testanova",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "GLM vs. t-Test/ANOVA",
+    "text": "GLM vs. t-Test/ANOVA\nVorteile\n\nkeine unterschiedliche Nomenklatur und Testverfahren, egal ob 2 oder mehr Gruppen\n\\(b\\)-Koeffizienten sind direkt als Mittelwertdifferenzen zwischen Gruppen interpretierbar, d.h. oft sind Post-Hoc-Tests unnötig\nbeliebig erweiterbar durch weitere kategorielle und metrische Prädiktoren\noft wird der globale F-Test sowie das \\(R^2\\) als Effektstärkemaß zusätzlich ausgegeben\n\nNachteile\n\nKonvention und Fachgeschichte, d.h. GutachterInnen erwarten ANOVA oder t-Test\nDummy-Codierung (oder andere Effekt-Codierungen) machen ggf. Zusatzaufwand"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-kümpel-2019",
+    "href": "analyseverfahren/slides.html#beispielstudie-kümpel-2019",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: Kümpel (2019)",
+    "text": "Beispielstudie: Kümpel (2019)\n\nComing across news on social network sites (SNS) largely depends on news-related activities in one’s network. Although there are many different ways to stumble upon news, limited research has been conducted on how distinct news curation practices influence users’ intention to consume encountered content. In this mixed-methods investigation, using Facebook as an example, we first examine the results of an experiment (study 1, n = 524), showing that getting tagged in comments to news posts promotes news consumption the most."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#daten-1",
+    "href": "analyseverfahren/slides.html#daten-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Daten",
+    "text": "Daten\n\n\n\n\n\n\n\n\nmodus\n\n\nrw\n\n\nmodus_tag\n\n\n\n\n\n\nTag\n\n\n5\n\n\n1\n\n\n\n\nChronik\n\n\n2\n\n\n0\n\n\n\n\nPost\n\n\n3\n\n\n0\n\n\n\n\nDM\n\n\n1\n\n\n0\n\n\n\n\nChronik\n\n\n1\n\n\n0\n\n\n\n\nChronik\n\n\n2\n\n\n0\n\n\n\n\n\n\n\n\n\nOutcome-Variable\n\n\n\n\n\n\nVariable\n\n\nSummary\n\n\n\n\n\n\nMean rw (SD)\n\n\n3.04 (1.30)\n\n\n\n\n\n\n\n\nGruppenmittelwerte\n\n\n\n\n\n\nmodus\n\n\nn\n\n\nM\n\n\nSD\n\n\n\n\n\n\nChronik\n\n\n141\n\n\n2.88\n\n\n1.20\n\n\n\n\nPost\n\n\n97\n\n\n2.79\n\n\n1.25\n\n\n\n\nTag\n\n\n152\n\n\n3.51\n\n\n1.33\n\n\n\n\nDM\n\n\n134\n\n\n2.84\n\n\n1.28"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#outcome-variable-2",
+    "href": "analyseverfahren/slides.html#outcome-variable-2",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Outcome-Variable",
+    "text": "Outcome-Variable"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#t-test-1",
+    "href": "analyseverfahren/slides.html#t-test-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "t-Test",
+    "text": "t-Test\n\n\n\n\n\nDifference\n95% CI\nt(522)\np\nd\n\n\n\n\n-0.67\n(-0.91, -0.43)\n-5.51\n&lt; .001\n-0.48"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#glm-mit-zwei-gruppen",
+    "href": "analyseverfahren/slides.html#glm-mit-zwei-gruppen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "GLM mit zwei Gruppen",
+    "text": "GLM mit zwei Gruppen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(522)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n2.84\n(2.71, 2.97)\n43.26\n&lt; .001\n0.00\n\n\n\nmodus tag\n0.67\n(0.43, 0.91)\n5.51\n&lt; .001\n0.23\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n1738.89\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n1.27"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#anova-mit-vier-gruppen",
+    "href": "analyseverfahren/slides.html#anova-mit-vier-gruppen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "ANOVA mit vier Gruppen",
+    "text": "ANOVA mit vier Gruppen\n\n\n\n\n\nParameter\nSum_Squares\ndf\nMean_Square\nF\np\nEta2\n\n\n\n\nmodus\n49.12\n3\n16.37\n10.17\n&lt; .001\n0.06\n\n\nResiduals\n837.19\n520\n1.61"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#glm-mit-vier-gruppen",
+    "href": "analyseverfahren/slides.html#glm-mit-vier-gruppen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "GLM mit vier Gruppen",
+    "text": "GLM mit vier Gruppen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(520)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n2.88\n(2.67, 3.09)\n26.95\n&lt; .001\n-0.12\n\n\n\nmodus (Post)\n-0.09\n(-0.41, 0.24)\n-0.51\n0.609\n-0.07\n\n\n\nmodus (Tag)\n0.63\n(0.34, 0.93)\n4.27\n&lt; .001\n0.49\n\n\n\nmodus (DM)\n-0.04\n(-0.34, 0.26)\n-0.28\n0.776\n-0.03\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n1742.69\n\n\nR2\n\n\n\n\n\n0.06\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n1.27"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#referenzkategorie-ändern",
+    "href": "analyseverfahren/slides.html#referenzkategorie-ändern",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Referenzkategorie ändern",
+    "text": "Referenzkategorie ändern\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(520)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n2.84\n(2.62, 3.05)\n25.87\n&lt; .001\n-0.15\n\n\n\nmodus dm (Chronik)\n0.04\n(-0.26, 0.34)\n0.28\n0.776\n0.03\n\n\n\nmodus dm (Post)\n-0.04\n(-0.37, 0.29)\n-0.25\n0.804\n-0.03\n\n\n\nmodus dm (Tag)\n0.68\n(0.38, 0.97)\n4.50\n&lt; .001\n0.52\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n1742.69\n\n\nR2\n\n\n\n\n\n0.06\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n1.27"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#post-hockontraste",
+    "href": "analyseverfahren/slides.html#post-hockontraste",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Post-hoc/Kontraste",
+    "text": "Post-hoc/Kontraste\n\n\n\n\n\n\nterm\n\n\ncontrast\n\n\nestimate\n\n\nstd.error\n\n\nstatistic\n\n\np.value\n\n\nconf.low\n\n\nconf.high\n\n\np_adjusted\n\n\n\n\n\n\nmodus\n\n\nDM - Chronik\n\n\n-0.04\n\n\n0.15\n\n\n-0.28\n\n\n0.78\n\n\n-0.34\n\n\n0.26\n\n\n1\n\n\n\n\nmodus\n\n\nDM - Post\n\n\n0.04\n\n\n0.17\n\n\n0.25\n\n\n0.80\n\n\n-0.29\n\n\n0.37\n\n\n1\n\n\n\n\nmodus\n\n\nDM - Tag\n\n\n-0.68\n\n\n0.15\n\n\n-4.50\n\n\n0.00\n\n\n-0.97\n\n\n-0.38\n\n\n0\n\n\n\n\nmodus\n\n\nPost - Chronik\n\n\n-0.09\n\n\n0.17\n\n\n-0.51\n\n\n0.61\n\n\n-0.41\n\n\n0.24\n\n\n1\n\n\n\n\nmodus\n\n\nTag - Chronik\n\n\n0.63\n\n\n0.15\n\n\n4.27\n\n\n0.00\n\n\n0.34\n\n\n0.92\n\n\n0\n\n\n\n\nmodus\n\n\nTag - Post\n\n\n0.72\n\n\n0.16\n\n\n4.36\n\n\n0.00\n\n\n0.40\n\n\n1.04\n\n\n0\n\n\n\n\n\n\n\n\np-Werte (adjusted) mit Bonferroni-Korrektur"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#vorhergesagte-mittelwerte",
+    "href": "analyseverfahren/slides.html#vorhergesagte-mittelwerte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Vorhergesagte Mittelwerte",
+    "text": "Vorhergesagte Mittelwerte\n\n\n\n\n\n\nmodus\n\n\nestimate\n\n\nstd.error\n\n\nstatistic\n\n\np.value\n\n\nconf.low\n\n\nconf.high\n\n\ndf\n\n\n\n\n\n\nChronik\n\n\n2.88\n\n\n0.11\n\n\n26.95\n\n\n0\n\n\n2.67\n\n\n3.09\n\n\nInf\n\n\n\n\nPost\n\n\n2.79\n\n\n0.13\n\n\n21.69\n\n\n0\n\n\n2.54\n\n\n3.05\n\n\nInf\n\n\n\n\nTag\n\n\n3.51\n\n\n0.10\n\n\n34.14\n\n\n0\n\n\n3.31\n\n\n3.71\n\n\nInf\n\n\n\n\nDM\n\n\n2.84\n\n\n0.11\n\n\n25.87\n\n\n0\n\n\n2.62\n\n\n3.05\n\n\nInf"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#visualisierungsvorschlag",
+    "href": "analyseverfahren/slides.html#visualisierungsvorschlag",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Visualisierungsvorschlag",
+    "text": "Visualisierungsvorschlag"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#literatur",
     "href": "analyseverfahren/slides.html#literatur",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Literatur",
+    "text": "Literatur\nBender, R., & Lange, S. (2001). Adjusting for multiple testing—when and how?. Journal of clinical epidemiology, 54(4), 343-349.\nDavis, M. J. (2010). Contrast coding in multiple regression analysis: Strengths, weaknesses, and utility of popular coding structures. Journal of data science, 8(1), 61-73.\nKümpel, A. S. (2019). Getting tagged, getting involved with news? A mixed-methods investigation of the effects and motives of news-related tagging activities on social network sites. Journal of Communication, 69(4), 373-395."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-aufgabe-1",
+    "href": "analyseverfahren/slides.html#take-home-aufgabe-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-home Aufgabe #1",
+    "text": "Take-home Aufgabe #1\nWir vergleichen die Tanzbarkeit (danceability) und musikalische Stimmung (valence) der Top 10-Hits über 4 Dekaden (1990er bis 2020er) auf Basis von Billboard und Spotify-Daten.\nBeide Variablen sind von 0 (niedrig) - 100 (hoch) skaliert. Die Mittelwerte und Fallzahlen pro Dekade sind wie folgt:\n\n\n\n\n\n\n\n\ndecade\n\n\ndanceability\n\n\nvalence\n\n\nn\n\n\n\n\n\n\n1990s\n\n\n64.72\n\n\n56.09\n\n\n588\n\n\n\n\n2000s\n\n\n67.34\n\n\n57.98\n\n\n558\n\n\n\n\n2010s\n\n\n67.31\n\n\n51.93\n\n\n499\n\n\n\n\n2020s\n\n\n66.10\n\n\n51.38\n\n\n69"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#studienleistung-teil-1",
+    "href": "analyseverfahren/slides.html#studienleistung-teil-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Studienleistung, Teil 1",
+    "text": "Studienleistung, Teil 1\n\nInterpretieren sie die Ergebnisse der beiden linearen Modelle, in denen die Mittelwertunterschiede getestet werden, Zeile für Zeile.\nWelche Dekaden werden nicht miteinander verglichen, d.h. für diese bräuchten wir Post-Hoc Vergleiche?\n\nLösung bitte bis 04.06.2025, 10 Uhr in Moodle eintragen.\n\n\n\n\n\n\n\n\n\n \ndanceability\n\n\nPredictors\nCoefficient (B)\nSE (B)\np\n\n\n(Intercept)\n64.72\n0.59\n&lt;0.001\n\n\ndecade [2000s]\n2.62\n0.85\n0.002\n\n\ndecade [2010s]\n2.59\n0.88\n0.003\n\n\ndecade [2020s]\n1.38\n1.83\n0.452\n\n\n\n\n\n\n\n\n\n\n\n\n\n \nvalence\n\n\nPredictors\nCoefficient (B)\n95% CI (B)\n\n\n(Intercept)\n51.38\n45.97 – 56.79\n\n\ndecade [1990s]\n4.71\n-1.01 – 10.43\n\n\ndecade [2000s]\n6.60\n0.87 – 12.34\n\n\ndecade [2010s]\n0.56\n-5.22 – 6.33"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#literatur-1",
+    "href": "analyseverfahren/slides.html#literatur-1",
     "title": "Anwendungsorientierte Analyseverfahren",
     "section": "Literatur",
     "text": "Literatur\n\n\n\n\nAuty, S., & Lewis, C. (2004). Exploring children’s choice: The reminder effect of product placement. Psychology & Marketing, 21(9), 697–713. https://doi.org/10.1002/mar.20025\n\n\nJohannes, N., Dienlin, T., Bakhshi, H., & Przybylski, A. K. (2022). No effect of different types of media on well-being. Scientific Reports, 12(1), 61."
@@ -1096,7 +1264,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"They're minerals, Marie! Jesus!\",\n        \"author\": \"Hank Schrader\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You are not the guy. You're not capable of being the guy. I had a guy but now I don't. You are not the guy.\",\n        \"author\": \"Mike Ehrmantraut\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1551,28 +1719,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.42, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.01722 -13.96180\nsample estimates:\nmean of x mean of y \n 166.0130  180.0025"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -988.39, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.00118 -13.94577\nsample estimates:\nmean of x mean of y \n 166.0161  179.9896"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.133605e-18\n\ndo_t_test(100, males, males)\n\n[1] 0.3249341"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 4.177252e-18\n\ndo_t_test(100, males, males)\n\n[1] 0.721411"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.05674726 0.25190947 0.96935870 0.72940902 0.43153376 0.46576317\n\nsum(results_h0 &lt;= .05)\n\n[1] 51"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.9741875 0.7147460 0.1176586 0.4075569 0.4283607 0.8992670\n\nsum(results_h0 &lt;= .05)\n\n[1] 49"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 490\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 486\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
