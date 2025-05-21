@@ -78,6 +78,11 @@ Refresh your R skills.
 - basics of digital trace data
 - analyzing digital download packages (DDP)
 
+### Reading
+
+@ohme2023
+
+
 ### Tasks for the next session
 
 1. Complete the [first coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/individual-trace-data.html) in R. 
