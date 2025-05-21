@@ -502,13 +502,106 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
 </ul>
 </section>
 <section id="next-session-in-2-weeks" class="slide level2">
-<h2>next session (in 2 weeks!)</h2>
+<h2>Next session (in 2 weeks!)</h2>
 <ul>
 <li>Get data dwnload packages (DDP) for all major online platforms/services that you use (at least 2), e.g.&nbsp;from Google/Youtube, Instagram, TikTok, Spotify, Netflix, etc.</li>
 <li>How? Google “data download package [PLATFORM]”</li>
 <li>Request JSON files if given the option between multiple formats</li>
 <li>Read <span class="citation" data-cites="ohme2023">Ohme et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></li>
 </ul>
+</section></section>
+<section>
+<section id="s4" class="title-slide slide level1 center">
+<h1>Session 4</h1>
+
+</section>
+<section id="digital-trace-data" class="slide level2">
+<h2>Digital trace data</h2>
+<ul>
+<li>people’s online activities are constantly logged client- and server-side</li>
+<li>digital trace data from users are unobtrusively and continuously collected (by platforms or researchers)</li>
+<li>trace data are (less) subject to common biases in self-reports, e.g.&nbsp;memory or social desirability <span class="citation" data-cites="scharkow2016">(<a href="#/references" role="doc-biblioref" onclick="">Scharkow, 2016</a>)</span></li>
+<li>trace data are subject to different biases, most notably selection bias (i.e.&nbsp;who we get data from)</li>
+<li>excellent <a href="https://www.gesis.org/en/gesis-guides/gesis-guides-to-digital-behavioral-data">Gesis Guides</a></li>
+</ul>
+</section>
+<section id="api-data" class="slide level2">
+<h2>API data</h2>
+<ul>
+<li>mostly only public <strong>content</strong> data with few meta data, e.g.&nbsp;time stamps and account information</li>
+<li>pure usage data very rarely available from an API, and mostly only aggregated</li>
+<li>very rare for any large platforms, severe privacy concerns for individual-level data</li>
+<li>example 1: <a href="https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Deutscher_Bun%20destag/daily/20240101/20250101">Wikipedia Views API</a>, aggregate views per day</li>
+<li>example 2: <a href="https://developer.spotify.com/documentation/web-api/reference/get-recently-played">Spotify API</a>, 50 recently played tracks <em>only</em> from the logged-in user, can be used for automatic data donations <span class="citation" data-cites="ernst2024">(<a href="#/references" role="doc-biblioref" onclick="">Ernst et al., 2024</a>)</span></li>
+</ul>
+</section>
+<section id="web-tracking-data" class="slide level2">
+<h2>Web tracking data</h2>
+<ul>
+<li>collected from devices using dedicated tools (e.g.&nbsp;browser plugins) or system logs</li>
+<li>technically difficult: mostly per-device, not per user tracking <span class="citation" data-cites="scharkow2016">(<a href="#/references" role="doc-biblioref" onclick="">Scharkow, 2016</a>)</span></li>
+<li>severe privacy concerns, even with temporary user opt-out and/or whitelisting</li>
+<li>most researchers obtain tracking data from third parties (e.g.&nbsp;Respondi panel)</li>
+<li>extensive processing necessary <span class="citation" data-cites="clemmvonhohenberg2024">(<a href="#/references" role="doc-biblioref" onclick="">Clemm von Hohenberg et al., 2024</a>)</span></li>
+<li>raw data is rarely public (exception: <a href="https://zenodo.org/records/4757574" class="uri">https://zenodo.org/records/4757574</a>)</li>
+</ul>
+</section>
+<section id="data-donations" class="slide level2">
+<h2>Data donations</h2>
+<ul>
+<li>collected from users who requested their data download packages (DDP) from platforms</li>
+<li>for large platforms, potentially very large DDP, which require filtering before upload</li>
+<li>DDP uploaded via browser, using dedicated tools (e.g.&nbsp;<a href="https://github.com/uzh/ddm">DDM</a>) or custom scripts</li>
+<li>(presumably) fewer trust and privacy issues, but requires motivated and skilled respondents <span class="citation" data-cites="pfiffner2023">(<a href="#/references" role="doc-biblioref" onclick="">Pfiffner &amp; Friemel, 2023</a>)</span></li>
+<li>single-platform, single-user, but multi-device data</li>
+<li>mostly in standardized (JSON) format, but with ever-changing variables and labels</li>
+</ul>
+</section>
+<section id="platform-tracking-donations" class="slide level2">
+<h2>Platform tracking + donations</h2>
+<ul>
+<li><a href="https://github.com/digitalmethodsinitiative/zeeschuimer">Zeeschuimer</a> browser extension tracks exposure to specific platforms</li>
+<li>TikTok, Instagram, X/Twitter, LinkedIn, Pinterest, etc.</li>
+<li>while active, logs exposure to content, along with content metadata</li>
+<li>logs can be sent to online server, or downloaded and donated manually</li>
+<li>works well for lab experiments, linkage studies, etc. that combine use + content data</li>
+<li>requires very active participation and data management strategies</li>
+</ul>
+</section>
+<section id="collecting-digital-trace-data" class="slide level2">
+<h2>Collecting digital trace data</h2>
+
+<img data-src="images/clipboard-4204924014.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <span class="citation" data-cites="ohme2023">Ohme et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p></section>
+<section id="questions-2" class="slide level2">
+<h2>Questions</h2>
+<ol type="1">
+<li>For which platforms did you obtain DDP?</li>
+<li>How difficult was it, how hard would it be for a regular respondent?</li>
+<li>Have you looked at the data? What did you find (interesting)?</li>
+</ol>
+</section>
+<section id="homework" class="slide level2">
+<h2>Homework</h2>
+<ol type="1">
+<li>You need to complete three homework assignments, at least one per topic (trace data, content analysis, simulation/experiments).</li>
+<li>You can submit each homework until the start of the next topic (e.g.&nbsp;from now until we start with content analysis).</li>
+<li>You can submit in any format you like (I suggest <a href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto HTML</a>), but it should be self-explanatory.</li>
+<li>You can and are encouraged to work in pairs.</li>
+<li>Homework is, as always, pass or fail.</li>
+</ol>
+</section>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
+<h3 id="trace-data-i"><a href="https://stats.ifp.uni-mainz.de/ma-ccs/individual-trace-data.html">Trace data I</a></h3>
+<ol type="1">
+<li>Data Download Packages</li>
+<li>Zeeschuimer browser logs</li>
+</ol>
+<h3 id="trace-data-ii"><a href="https://stats.ifp.uni-mainz.de/ma-ccs/aggregate-trace-data.html">Trace data II</a></h3>
+<ol start="3" type="1">
+<li>Aggregating and processing digital trace data</li>
+<li>Linking digital traces to survey or content data</li>
+</ol>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
@@ -517,6 +610,12 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-bagchi2024" class="csl-entry" role="listitem">
 Bagchi, C., Menczer, F., Lundquist, J., Tarafdar, M., Paik, A., &amp; Grabowicz, P. A. (2024). Social media algorithms can curb misinformation, but do they? <em>arXiv</em>. <a href="https://doi.org/10.48550/ARXIV.2409.18393">https://doi.org/10.48550/ARXIV.2409.18393</a>
+</div>
+<div id="ref-clemmvonhohenberg2024" class="csl-entry" role="listitem">
+Clemm von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., &amp; Wojcieszak, M. (2024). Analysis of Web Browsing Data: A Guide. <em>Social Science Computer Review</em>, <em>42</em>(6), 1479–1504. <a href="https://doi.org/10.1177/08944393241227868">https://doi.org/10.1177/08944393241227868</a>
+</div>
+<div id="ref-ernst2024" class="csl-entry" role="listitem">
+Ernst, A., Dietrich, F., Rohr, B., Reinecke, L., &amp; Scharkow, M. (2024). <em>Revisiting the digital jukebox in daily life: Applying mood management theory to algorithmically curated music streaming environments</em>. <a href="http://dx.doi.org/10.31234/osf.io/7eb4g">http://dx.doi.org/10.31234/osf.io/7eb4g</a>
 </div>
 <div id="ref-freelon2018" class="csl-entry" role="listitem">
 Freelon, D. (2018). Computational Research in the Post-API Age. <em>Political Communication</em>, <em>35</em>(4), 665–668. <a href="https://doi.org/10.1080/10584609.2018.1477506">https://doi.org/10.1080/10584609.2018.1477506</a>
@@ -539,8 +638,14 @@ Munger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing rac
 <div id="ref-ohme2023" class="csl-entry" role="listitem">
 Ohme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., &amp; Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. <em>Communication Methods and Measures</em>, <em>18</em>(2), 124–141. <a href="https://doi.org/10.1080/19312458.2023.2181319">https://doi.org/10.1080/19312458.2023.2181319</a>
 </div>
+<div id="ref-pfiffner2023" class="csl-entry" role="listitem">
+Pfiffner, N., &amp; Friemel, Thomas. N. (2023). Leveraging Data Donations for Communication Research: Exploring Drivers Behind the Willingness to Donate. <em>Communication Methods and Measures</em>, <em>17</em>(3), 227–249. <a href="https://doi.org/10.1080/19312458.2023.2176474">https://doi.org/10.1080/19312458.2023.2176474</a>
+</div>
 <div id="ref-salganik2018" class="csl-entry" role="listitem">
 Salganik, M. (2018). <em>Bit by bit: Social research in the digital age</em>. Princeton University Press.
+</div>
+<div id="ref-scharkow2016" class="csl-entry" role="listitem">
+Scharkow, M. (2016). The accuracy of self-reported internet use. A validation study using client log data. <em>Communication Methods and Measures</em>, <em>10</em>(1), 13–27. <a href="https://doi.org/10.1080/19312458.2015.1118446">https://doi.org/10.1080/19312458.2015.1118446</a>
 </div>
 <div id="ref-vanatteveldt2022computational" class="csl-entry" role="listitem">
 Van Atteveldt, W., Trilling, D., &amp; Calderón, C. A. (2022). <em>Computational analysis of communication</em>. Wiley Blackwell.
