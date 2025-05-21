@@ -69,3 +69,17 @@ Poster Session: Interesting studies in computational communication science.
 ### Tasks for the next session
 
 Refresh your R skills.
+
+
+## Session 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Slides"></a> {#4}
+
+### Topics
+
+- basics of digital trace data
+- analyzing digital download packages (DDP)
+
+### Tasks for the next session
+
+1. Complete the [first coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/individual-trace-data.html) in R. 
+2. Work through the [second chapter on digital trace data](https://stats.ifp.uni-mainz.de/ma-ccs/aggregate-trace-data.html) in R.
+
