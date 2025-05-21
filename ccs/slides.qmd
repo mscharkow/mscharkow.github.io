@@ -204,11 +204,88 @@ knitr::kable(plan)
 -   Can you use an AI model based on unethical, possibly illegal training data?
 -   How can you ensure reproducible findings with problematic data?
 
-## next session (in 2 weeks!)
+## Next session (in 2 weeks!)
 
 -   Get data dwnload packages (DDP) for all major online platforms/services that you use (at least 2), e.g. from Google/Youtube, Instagram, TikTok, Spotify, Netflix, etc.
 -   How? Google "data download package \[PLATFORM\]"
 -   Request JSON files if given the option between multiple formats
 -   Read @ohme2023
+
+# Session 4 {#s4}
+
+## Digital trace data
+
+-   people's online activities are constantly logged client- and server-side
+-   digital trace data from users are unobtrusively and continuously collected (by platforms or researchers)
+-   trace data are (less) subject to common biases in self-reports, e.g. memory or social desirability [@scharkow2016]
+-   trace data are subject to different biases, most notably selection bias (i.e. who we get data from)
+-   excellent [Gesis Guides](https://www.gesis.org/en/gesis-guides/gesis-guides-to-digital-behavioral-data)
+
+## API data
+
+-   mostly only public **content** data with few meta data, e.g. time stamps and account information
+-   pure usage data very rarely available from an API, and mostly only aggregated
+-   very rare for any large platforms, severe privacy concerns for individual-level data
+-   example 1: [Wikipedia Views API](https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Deutscher_Bun%20destag/daily/20240101/20250101), aggregate views per day
+-   example 2: [Spotify API](https://developer.spotify.com/documentation/web-api/reference/get-recently-played), 50 recently played tracks *only* from the logged-in user, can be used for automatic data donations [@ernst2024]
+
+## Web tracking data
+
+-   collected from devices using dedicated tools (e.g. browser plugins) or system logs
+-   technically difficult: mostly per-device, not per user tracking [@scharkow2016]
+-   severe privacy concerns, even with temporary user opt-out and/or whitelisting
+-   most researchers obtain tracking data from third parties (e.g. Respondi panel)
+-   extensive processing necessary [@clemmvonhohenberg2024]
+-   raw data is rarely public (exception: <https://zenodo.org/records/4757574>)
+
+## Data donations
+
+-   collected from users who requested their data download packages (DDP) from platforms
+-   for large platforms, potentially very large DDP, which require filtering before upload
+-   DDP uploaded via browser, using dedicated tools (e.g. [DDM](https://github.com/uzh/ddm)) or custom scripts
+-   (presumably) fewer trust and privacy issues, but requires motivated and skilled respondents [@pfiffner2023]
+-   single-platform, single-user, but multi-device data
+- mostly in standardized (JSON) format, but with ever-changing variables and labels
+
+## Platform tracking + donations
+
+- [Zeeschuimer](https://github.com/digitalmethodsinitiative/zeeschuimer) browser extension tracks exposure to specific platforms
+- TikTok, Instagram, X/Twitter, LinkedIn, Pinterest, etc.
+- while active, logs exposure to content, along with content metadata
+- logs can be sent to online server, or downloaded and donated manually
+- works well for lab experiments, linkage studies, etc. that combine use + content data
+- requires very active participation and data management strategies
+
+## Collecting digital trace data
+
+![Source: @ohme2023](images/clipboard-4204924014.png)
+
+## Questions
+
+1. For which platforms did you obtain DDP? 
+2. How difficult was it, how hard would it be for a regular respondent?
+3. Have you looked at the data? What did you find (interesting)?
+
+
+## Homework
+
+1. You need to complete three homework assignments, at least one per topic (trace data, content analysis, simulation/experiments).
+1. You can submit each homework until the start of the next topic (e.g. from now until we start with content analysis).
+3. You can submit in any format you like (I suggest [Quarto HTML](https://quarto.org/docs/get-started/hello/rstudio.html)), but it should be self-explanatory.
+4. You can and are encouraged to work in pairs.
+5. Homework is, as always, pass or fail.
+
+
+## Practice
+
+### [Trace data I](https://stats.ifp.uni-mainz.de/ma-ccs/individual-trace-data.html) 
+1. Data Download Packages
+2. Zeeschuimer browser logs
+
+### [Trace data II](https://stats.ifp.uni-mainz.de/ma-ccs/aggregate-trace-data.html)
+3. Aggregating and processing digital trace data
+4. Linking digital traces to survey or content data
+
+
 
 ## References
