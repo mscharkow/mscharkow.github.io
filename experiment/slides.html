@@ -403,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -989.19, df = 2e+06, p-value &lt; 2.2e-16
+t = -989.23, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.01859 -13.96315
+ -14.01388 -13.95846
 sample estimates:
 mean of x mean of y 
- 166.0121  180.0030 </code></pre>
+ 166.0143  180.0005 </code></pre>
 </div>
 </div>
 </section>
@@ -424,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 7.624437e-21</code></pre>
+<pre><code>[1] 1.238563e-13</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8132974</code></pre>
+<pre><code>[1] 0.3027394</code></pre>
 </div>
 </div>
 </section>
@@ -439,7 +439,7 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.3865295 0.1858382 0.2065696 0.9338342 0.5926993 0.5237133</code></pre>
+<pre><code>[1] 0.96472563 0.30370167 0.71599335 0.40714906 0.01997694 0.46874453</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -455,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 469</code></pre>
+<pre><code>[1] 484</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1074,6 +1074,93 @@ mean of x mean of y
 <li>Design- bzw. Auswahlstrategie für Stimuli entwickeln</li>
 <li>erste Stimuli auswählen bzw. erstellen (und mitbringen!)</li>
 <li>Präsentation der Stimuli im Experiment planen</li>
+</ul>
+</section></section>
+<section>
+<section id="s7" class="title-slide slide level1 center">
+<h1>Sitzung 7</h1>
+
+</section>
+<section id="agenda-heute-3" class="slide level2">
+<h2>Agenda heute</h2>
+<ol type="1">
+<li>5-Min Präsentationen</li>
+<li>Messinstrumente und Skalen</li>
+<li>Skalenrecherche und -auswahl</li>
+<li>Weiteres zur Fragebogengestaltung: Informed Consent, Datenschutz und Co.</li>
+</ol>
+</section></section>
+<section id="min-präsentationen-1" class="title-slide slide level1 center">
+<h1>5-Min Präsentationen</h1>
+
+</section>
+
+<section id="was-sind-gute-messungen-v.a.-in-experimentaldesigns" class="title-slide slide level1 center">
+<h1>Was sind gute Messungen (v.a. in Experimentaldesigns)?</h1>
+
+</section>
+
+<section>
+<section id="was-spricht-für-und-was-gegen-lange-fragenbatterien" class="title-slide slide level1 center">
+<h1>Was spricht für und was gegen lange Fragenbatterien?</h1>
+
+</section>
+<section id="messinstrumente-und-skalen" class="slide level2">
+<h2>Messinstrumente und Skalen</h2>
+<ul>
+<li><strong>Konstrukte</strong>: latent vs.&nbsp;manifest, reflexiv vs.&nbsp;formativ</li>
+<li><strong>Messmethode</strong>: Befragung vs.&nbsp;Beobachtung</li>
+<li><strong>Umfang der Messung</strong>: multi-item vs.&nbsp;single item, Langskala vs.&nbsp;Kurzskala</li>
+<li><strong>Menge an Messungen</strong>: Datensparsamkeit vs.&nbsp;Stichprobenbeschreibung, Teilnahmebürde vs.&nbsp;Ausschöpfung des Merkmalsraums</li>
+<li><strong>Platzierung der Messung</strong>: Reihenfolgen-, Ausstrahlungs- und andere Fragebogeneffekte (inbs. Platzierung des Manipulationschecks)</li>
+<li><strong>Messniveau</strong>: Varianz des Konstruktes und Skalierung</li>
+</ul>
+</section>
+<section id="skalenrecherche-und--auswahl" class="slide level2">
+<h2>Skalenrecherche und -auswahl</h2>
+<ul>
+<li><p><strong>Schritt 1</strong>: Konstrukte präzise definieren oder Arbeitsdefinition entwickeln, ggf. Dimensionen herausarbeiten (Konstruktexplikation)</p></li>
+<li><p><strong>Schritt 2</strong>: Messungen recherchieren auf deutsch oder englisch, Tipp: zunächst Suchbegriffe identifizieren (siehe: <a href="https://www.nature.com/articles/s44271-023-00026-9">“Jingle-jangle problem” und “Toothbrush problem”</a>)</p></li>
+<li><p><strong>Schritt 3</strong>: Übersicht aller Messungen erstellen und nach Güte evaluieren</p></li>
+<li><p><strong>Schritt 4</strong>: Für Messung entscheiden, ggf. übersetzen/an Gegenstand anpassen/ auf 1-3 Items kürzen (inbs. für within-subjects Design)</p></li>
+<li><p>Skalen-Sammlungen z.B.: <a href="https://zis.gesis.org/" class="uri">Sammlung sozialwissenschaftlicher Skalen der GESIS</a>, <a href="https://link.springer.com/book/10.1007/978-3-531-94179-0">Skalenhandbuch Kommunikationswissenschaft</a></p></li>
+</ul>
+</section>
+<section id="skalenrecherche-und--auswahl-wie-messungen-nach-güte-bewerten" class="slide level2">
+<h2>Skalenrecherche und -auswahl: Wie Messungen nach Güte bewerten?</h2>
+<ul>
+<li>Validität (v.a. Inhalts- und Konstruktvalidität)</li>
+<li>Reliabilität</li>
+<li>ggf. Psychometrie/Deskriptiva anschauen</li>
+<li>Itemformulierungen: kurz, präzise und eindeutig, verständlich, passend zur Zielgruppe</li>
+<li>Verortung und Verwendung im Forschungsfeld, Passung zur Konstruktexplikation, Bürde, Eignung für Zielgruppe</li>
+</ul>
+</section>
+<section id="weiteres-zur-fragebogengestaltung-informed-consent-datenschutz-und-co." class="slide level2">
+<h2>Weiteres zur Fragebogengestaltung: Informed Consent, Datenschutz und Co.</h2>
+<ul>
+<li><strong>Datenschutz</strong>: Klare Aufklärung und Zustimmung über Erhebung, Speicherung und Verwendung Ihrer Daten, Tipp: DSGVO-konforme Speicherung</li>
+<li><strong>Freiwilligkeit</strong>: Teilnehmende müssen explizit einen Button klicken zum Zustimmen</li>
+<li><strong>Absicht der Studie</strong>: Ethische Cover-Story überlegen (Studie über Wahrnehmung von XY)</li>
+<li><strong>Privatsphäre und Risiken</strong>: Anonymität und körperliche/seelische Unversehrtheit versichern und gewährleisten, keine nachhaltige Veränderung der Kognitionen, Emotionen oder des Verhaltens anstreben</li>
+<li><strong>Am Schluss</strong>: Debriefing und Aufklärung über das tatsächliche Forschungsinteresse</li>
+</ul>
+</section>
+<section id="formulierungsmuster-informed-consent-datenschutz-und-co." class="slide level2">
+<h2>Formulierungsmuster: Informed Consent, Datenschutz und Co.</h2>
+<ul>
+<li><a href="https://zwpd.transmit.de/images/zwpd/dienstleistungen/ethikkommission/0.1a_datenschutzrechtliche_empfehlungen_einwilligungforschungsvorhaben.pdf">Deutsche Gesellschaft für Psychologie</a></li>
+<li><a href="https://www.forschungsdaten-bildung.de/datenschutzrechtliche-aspekte#Informierte-Einwilligung" class="uri">Verbund Forschungsdatenbildung</a></li>
+<li><a href="https://www.phil.uni-mannheim.de/media/Lehrstuehle/phil/mkw/Merkblatt_zu_datenschutzrechtlichen_Fragen_in_Studienarbeiten.pdf" class="uri">Vorlagen einer Kollegin aus der Kommunikationswissenschaft</a></li>
+</ul>
+</section>
+<section id="aufgaben-bis-übernächste-woche" class="slide level2">
+<h2>Aufgaben bis übernächste (!) Woche</h2>
+<ul>
+<li>Präregistrierung finalisieren</li>
+<li>Experimentaldesign und Stimuli fertigstellen</li>
+<li>Skalen und Items recherchieren</li>
+<li>Fragebogen entwickeln (in Word oder SosciSurvey)</li>
 </ul>
 </section>
 <section id="literatur-1" class="slide level2 smaller scrollable">

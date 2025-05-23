@@ -98,6 +98,13 @@
     "text": "Sitzung 6 \n\nThemen\n\nStimulusdesign\ninterne und externe Validität\n\n\n\nAufgabe zur nächsten Sitzung\n\nStimuli entwerfen"
   },
   {
+    "objectID": "experiment/index.html#7",
+    "href": "experiment/index.html#7",
+    "title": "BA Experiment",
+    "section": "Sitzung 7 ",
+    "text": "Sitzung 7 \n\nThemen\n\nMessung\nBriefing, Informed Consent, Debriefing\n\n\n\nAufgabe zur nächsten Sitzung\n\nStimuli finalisieren\nMessinstrumente recherchieren und auswählen\nFragebogen entwerfen"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
@@ -1285,7 +1292,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Fifty years I spent like that. Finding myself awake at three in the morning. But you know what? Ever since my diagnosis, I sleep just fine.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"MILFs? What the hell is a MILF?\",\n        \"author\": \"Skyler White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1740,28 +1747,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.19, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.01859 -13.96315\nsample estimates:\nmean of x mean of y \n 166.0121  180.0030"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.23, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.01388 -13.95846\nsample estimates:\nmean of x mean of y \n 166.0143  180.0005"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 7.624437e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.8132974"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.238563e-13\n\ndo_t_test(100, males, males)\n\n[1] 0.3027394"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.3865295 0.1858382 0.2065696 0.9338342 0.5926993 0.5237133\n\nsum(results_h0 &lt;= .05)\n\n[1] 52"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.96472563 0.30370167 0.71599335 0.40714906 0.01997694 0.46874453\n\nsum(results_h0 &lt;= .05)\n\n[1] 52"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 469\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 484\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -2056,6 +2063,55 @@
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Aufgabe bis nächste Woche",
     "text": "Aufgabe bis nächste Woche\n\nDesign- bzw. Auswahlstrategie für Stimuli entwickeln\nerste Stimuli auswählen bzw. erstellen (und mitbringen!)\nPräsentation der Stimuli im Experiment planen"
+  },
+  {
+    "objectID": "experiment/slides.html#agenda-heute-3",
+    "href": "experiment/slides.html#agenda-heute-3",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Agenda heute",
+    "text": "Agenda heute\n\n5-Min Präsentationen\nMessinstrumente und Skalen\nSkalenrecherche und -auswahl\nWeiteres zur Fragebogengestaltung: Informed Consent, Datenschutz und Co."
+  },
+  {
+    "objectID": "experiment/slides.html#messinstrumente-und-skalen",
+    "href": "experiment/slides.html#messinstrumente-und-skalen",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Messinstrumente und Skalen",
+    "text": "Messinstrumente und Skalen\n\nKonstrukte: latent vs. manifest, reflexiv vs. formativ\nMessmethode: Befragung vs. Beobachtung\nUmfang der Messung: multi-item vs. single item, Langskala vs. Kurzskala\nMenge an Messungen: Datensparsamkeit vs. Stichprobenbeschreibung, Teilnahmebürde vs. Ausschöpfung des Merkmalsraums\nPlatzierung der Messung: Reihenfolgen-, Ausstrahlungs- und andere Fragebogeneffekte (inbs. Platzierung des Manipulationschecks)\nMessniveau: Varianz des Konstruktes und Skalierung"
+  },
+  {
+    "objectID": "experiment/slides.html#skalenrecherche-und--auswahl",
+    "href": "experiment/slides.html#skalenrecherche-und--auswahl",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Skalenrecherche und -auswahl",
+    "text": "Skalenrecherche und -auswahl\n\nSchritt 1: Konstrukte präzise definieren oder Arbeitsdefinition entwickeln, ggf. Dimensionen herausarbeiten (Konstruktexplikation)\nSchritt 2: Messungen recherchieren auf deutsch oder englisch, Tipp: zunächst Suchbegriffe identifizieren (siehe: “Jingle-jangle problem” und “Toothbrush problem”)\nSchritt 3: Übersicht aller Messungen erstellen und nach Güte evaluieren\nSchritt 4: Für Messung entscheiden, ggf. übersetzen/an Gegenstand anpassen/ auf 1-3 Items kürzen (inbs. für within-subjects Design)\nSkalen-Sammlungen z.B.: Sammlung sozialwissenschaftlicher Skalen der GESIS, Skalenhandbuch Kommunikationswissenschaft"
+  },
+  {
+    "objectID": "experiment/slides.html#skalenrecherche-und--auswahl-wie-messungen-nach-güte-bewerten",
+    "href": "experiment/slides.html#skalenrecherche-und--auswahl-wie-messungen-nach-güte-bewerten",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Skalenrecherche und -auswahl: Wie Messungen nach Güte bewerten?",
+    "text": "Skalenrecherche und -auswahl: Wie Messungen nach Güte bewerten?\n\nValidität (v.a. Inhalts- und Konstruktvalidität)\nReliabilität\nggf. Psychometrie/Deskriptiva anschauen\nItemformulierungen: kurz, präzise und eindeutig, verständlich, passend zur Zielgruppe\nVerortung und Verwendung im Forschungsfeld, Passung zur Konstruktexplikation, Bürde, Eignung für Zielgruppe"
+  },
+  {
+    "objectID": "experiment/slides.html#weiteres-zur-fragebogengestaltung-informed-consent-datenschutz-und-co.",
+    "href": "experiment/slides.html#weiteres-zur-fragebogengestaltung-informed-consent-datenschutz-und-co.",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Weiteres zur Fragebogengestaltung: Informed Consent, Datenschutz und Co.",
+    "text": "Weiteres zur Fragebogengestaltung: Informed Consent, Datenschutz und Co.\n\nDatenschutz: Klare Aufklärung und Zustimmung über Erhebung, Speicherung und Verwendung Ihrer Daten, Tipp: DSGVO-konforme Speicherung\nFreiwilligkeit: Teilnehmende müssen explizit einen Button klicken zum Zustimmen\nAbsicht der Studie: Ethische Cover-Story überlegen (Studie über Wahrnehmung von XY)\nPrivatsphäre und Risiken: Anonymität und körperliche/seelische Unversehrtheit versichern und gewährleisten, keine nachhaltige Veränderung der Kognitionen, Emotionen oder des Verhaltens anstreben\nAm Schluss: Debriefing und Aufklärung über das tatsächliche Forschungsinteresse"
+  },
+  {
+    "objectID": "experiment/slides.html#formulierungsmuster-informed-consent-datenschutz-und-co.",
+    "href": "experiment/slides.html#formulierungsmuster-informed-consent-datenschutz-und-co.",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Formulierungsmuster: Informed Consent, Datenschutz und Co.",
+    "text": "Formulierungsmuster: Informed Consent, Datenschutz und Co.\n\nDeutsche Gesellschaft für Psychologie\nVerbund Forschungsdatenbildung\nVorlagen einer Kollegin aus der Kommunikationswissenschaft"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgaben-bis-übernächste-woche",
+    "href": "experiment/slides.html#aufgaben-bis-übernächste-woche",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgaben bis übernächste (!) Woche",
+    "text": "Aufgaben bis übernächste (!) Woche\n\nPräregistrierung finalisieren\nExperimentaldesign und Stimuli fertigstellen\nSkalen und Items recherchieren\nFragebogen entwickeln (in Word oder SosciSurvey)"
   },
   {
     "objectID": "experiment/slides.html#literatur-1",
