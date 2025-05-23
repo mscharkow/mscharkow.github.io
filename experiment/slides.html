@@ -403,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -989.62, df = 2e+06, p-value &lt; 2.2e-16
+t = -989.19, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.02724 -13.97178
+ -14.01859 -13.96315
 sample estimates:
 mean of x mean of y 
- 166.0053  180.0048 </code></pre>
+ 166.0121  180.0030 </code></pre>
 </div>
 </div>
 </section>
@@ -424,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.719277e-15</code></pre>
+<pre><code>[1] 7.624437e-21</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1754184</code></pre>
+<pre><code>[1] 0.8132974</code></pre>
 </div>
 </div>
 </section>
@@ -439,11 +439,11 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1724094 0.3603775 0.6343234 0.1481436 0.4200302 0.5931000</code></pre>
+<pre><code>[1] 0.3865295 0.1858382 0.2065696 0.9338342 0.5926993 0.5237133</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 43</code></pre>
+<pre><code>[1] 52</code></pre>
 </div>
 </div>
 </section>
@@ -455,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 455</code></pre>
+<pre><code>[1] 469</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1014,6 +1014,66 @@ mean of x mean of y
 <li>Studiendesign finalisieren und Studienablauf planen</li>
 <li>finale Power-Analyse durchführen</li>
 <li>Grundgesamtheit, Stichprobe und Rekrutierungsplan entwerfen</li>
+</ul>
+</section></section>
+<section>
+<section id="s6" class="title-slide slide level1 center">
+<h1>Sitzung 6</h1>
+
+</section>
+<section id="agenda-heute-2" class="slide level2">
+<h2>Agenda heute</h2>
+<ol type="1">
+<li>5-Min Präsentationen</li>
+<li>Fragen zu Grundlagen des Experiments</li>
+<li>Treatments und Stimuli</li>
+<li>KI-generierte Stimuli</li>
+</ol>
+</section></section>
+<section id="min-präsentationen" class="title-slide slide level1 center">
+<h1>5-Min Präsentationen</h1>
+
+</section>
+
+<section id="was-sind-intern-und-was-sind-extern-valide-treatments" class="title-slide slide level1 center">
+<h1>Was sind intern und was sind extern valide Treatments?</h1>
+
+</section>
+
+<section id="wie-kann-man-passende-stimuli-generieren-oder-auswählen" class="title-slide slide level1 center">
+<h1>Wie kann man passende Stimuli generieren oder auswählen?</h1>
+
+</section>
+
+<section>
+<section id="wie-sollte-man-stimuli-und-fragen-präsentieren" class="title-slide slide level1 center">
+<h1>Wie sollte man Stimuli und Fragen präsentieren?</h1>
+
+</section>
+<section id="treatments" class="slide level2">
+<h2>Treatments</h2>
+<ul>
+<li>Stimuli selbst erstellen vs.&nbsp;aus existierenden auswählen und manipulieren</li>
+<li>Anzahl Stimuli pro Versuchsperson bzw. pro Versuchsbedingung</li>
+<li>subtile vs.&nbsp;starke Manipulation der Stimuli</li>
+<li>eigene (willkürliche) Auswahl vs.&nbsp;Pretest bzw. Fremdselektion</li>
+<li>(randomisierte) Präsentation der Stimuli</li>
+</ul>
+</section>
+<section id="ki-generierte-stimuli" class="slide level2">
+<h2>KI-generierte Stimuli</h2>
+<ul>
+<li><p>generative Sprachmodelle zur Texterstellung, z.B., <br><a href="https://ki-chat.uni-mainz.de" class="uri">https://ki-chat.uni-mainz.de</a></p></li>
+<li><p>generative Sprachmodelle zur Erstellung und direkten Bearbeitung von Mockups, z.B. <br> <a href="https://gemini.google/overview/canvas" class="uri">https://gemini.google/overview/canvas</a></p></li>
+<li><p>generative multimodale Modelle zur Bilderstellung, z.B. <br> <a href="https://chatgpt.com/" class="uri">https://chatgpt.com/</a></p></li>
+</ul>
+</section>
+<section id="aufgabe-bis-nächste-woche" class="slide level2">
+<h2>Aufgabe bis nächste Woche</h2>
+<ul>
+<li>Design- bzw. Auswahlstrategie für Stimuli entwickeln</li>
+<li>erste Stimuli auswählen bzw. erstellen (und mitbringen!)</li>
+<li>Präsentation der Stimuli im Experiment planen</li>
 </ul>
 </section>
 <section id="literatur-1" class="slide level2 smaller scrollable">

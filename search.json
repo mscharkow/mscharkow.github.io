@@ -91,6 +91,13 @@
     "text": "Sitzung 5 \n\nThemen\n\nForschungsdesign\nStichprobe\n\n\n\nLiteratur\nKoch et al. (2019, Kapitel 5 und 6)\n\n\nAufgabe zur nächsten Sitzung\n\nForschungdesign finalisieren\nPower-Analyse und Stichprobenplan"
   },
   {
+    "objectID": "experiment/index.html#6",
+    "href": "experiment/index.html#6",
+    "title": "BA Experiment",
+    "section": "Sitzung 6 ",
+    "text": "Sitzung 6 \n\nThemen\n\nStimulusdesign\ninterne und externe Validität\n\n\n\nAufgabe zur nächsten Sitzung\n\nStimuli entwerfen"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
@@ -1278,7 +1285,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Yo, Mr. White. I can't even pronounce half this shit!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Fifty years I spent like that. Finding myself awake at three in the morning. But you know what? Ever since my diagnosis, I sleep just fine.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1733,28 +1740,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.62, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02724 -13.97178\nsample estimates:\nmean of x mean of y \n 166.0053  180.0048"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.19, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.01859 -13.96315\nsample estimates:\nmean of x mean of y \n 166.0121  180.0030"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.719277e-15\n\ndo_t_test(100, males, males)\n\n[1] 0.1754184"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 7.624437e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.8132974"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.1724094 0.3603775 0.6343234 0.1481436 0.4200302 0.5931000\n\nsum(results_h0 &lt;= .05)\n\n[1] 43"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.3865295 0.1858382 0.2065696 0.9338342 0.5926993 0.5237133\n\nsum(results_h0 &lt;= .05)\n\n[1] 52"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 455\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 469\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -2021,6 +2028,34 @@
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Aufgaben bis nächste Woche",
     "text": "Aufgaben bis nächste Woche\n\nStudiendesign finalisieren und Studienablauf planen\nfinale Power-Analyse durchführen\nGrundgesamtheit, Stichprobe und Rekrutierungsplan entwerfen"
+  },
+  {
+    "objectID": "experiment/slides.html#agenda-heute-2",
+    "href": "experiment/slides.html#agenda-heute-2",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Agenda heute",
+    "text": "Agenda heute\n\n5-Min Präsentationen\nFragen zu Grundlagen des Experiments\nTreatments und Stimuli\nKI-generierte Stimuli"
+  },
+  {
+    "objectID": "experiment/slides.html#treatments",
+    "href": "experiment/slides.html#treatments",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Treatments",
+    "text": "Treatments\n\nStimuli selbst erstellen vs. aus existierenden auswählen und manipulieren\nAnzahl Stimuli pro Versuchsperson bzw. pro Versuchsbedingung\nsubtile vs. starke Manipulation der Stimuli\neigene (willkürliche) Auswahl vs. Pretest bzw. Fremdselektion\n(randomisierte) Präsentation der Stimuli"
+  },
+  {
+    "objectID": "experiment/slides.html#ki-generierte-stimuli",
+    "href": "experiment/slides.html#ki-generierte-stimuli",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "KI-generierte Stimuli",
+    "text": "KI-generierte Stimuli\n\ngenerative Sprachmodelle zur Texterstellung, z.B., https://ki-chat.uni-mainz.de\ngenerative Sprachmodelle zur Erstellung und direkten Bearbeitung von Mockups, z.B.  https://gemini.google/overview/canvas\ngenerative multimodale Modelle zur Bilderstellung, z.B.  https://chatgpt.com/"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgabe-bis-nächste-woche",
+    "href": "experiment/slides.html#aufgabe-bis-nächste-woche",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgabe bis nächste Woche",
+    "text": "Aufgabe bis nächste Woche\n\nDesign- bzw. Auswahlstrategie für Stimuli entwickeln\nerste Stimuli auswählen bzw. erstellen (und mitbringen!)\nPräsentation der Stimuli im Experiment planen"
   },
   {
     "objectID": "experiment/slides.html#literatur-1",
