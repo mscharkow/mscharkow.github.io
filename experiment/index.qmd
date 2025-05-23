@@ -123,4 +123,19 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 - Stimuli entwerfen
 
+## Sitzung 7 <a class="bi bi-easel-fill" href="slides.html#/s7" alt="Folien"></a> {#7}
+
+### Themen
+
+- Messung
+- Briefing, Informed Consent, Debriefing
+
+
+### Aufgabe zur nächsten Sitzung
+
+- Stimuli finalisieren
+- Messinstrumente recherchieren und auswählen
+- Fragebogen entwerfen
+
+
 # Literatur

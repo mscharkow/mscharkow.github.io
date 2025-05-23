@@ -576,6 +576,70 @@ tibble(Gruppe = 1:3, Treatment_1 = c("A", "B", "C"), Treatment_2 = c("B", "C", "
 -   erste Stimuli auswählen bzw. erstellen (und mitbringen!)
 -   Präsentation der Stimuli im Experiment planen
 
+# Sitzung 7 {#s7}
 
+## Agenda heute
+
+1.  5-Min Präsentationen
+3.  Messinstrumente und Skalen
+4.  Skalenrecherche und -auswahl
+5.  Weiteres zur Fragebogengestaltung: Informed Consent, Datenschutz und Co.
+
+# 5-Min Präsentationen
+
+# Was sind gute Messungen (v.a. in Experimentaldesigns)?
+
+# Was spricht für und was gegen lange Fragenbatterien?
+
+
+## Messinstrumente und Skalen
+
+-   **Konstrukte**: latent vs. manifest, reflexiv vs. formativ
+-   **Messmethode**: Befragung vs. Beobachtung
+-   **Umfang der Messung**: multi-item vs. single item, Langskala vs. Kurzskala
+-   **Menge an Messungen**: Datensparsamkeit vs. Stichprobenbeschreibung, Teilnahmebürde vs. Ausschöpfung des Merkmalsraums
+-   **Platzierung der Messung**: Reihenfolgen-, Ausstrahlungs- und andere Fragebogeneffekte (inbs. Platzierung des Manipulationschecks)
+-   **Messniveau**: Varianz des Konstruktes und Skalierung
+
+## Skalenrecherche und -auswahl
+
+-   **Schritt 1**: Konstrukte präzise definieren oder Arbeitsdefinition entwickeln, ggf. Dimensionen herausarbeiten (Konstruktexplikation)
+
+-   **Schritt 2**: Messungen recherchieren auf deutsch oder englisch, Tipp: zunächst Suchbegriffe identifizieren (siehe: ["Jingle-jangle problem" und "Toothbrush problem"](https://www.nature.com/articles/s44271-023-00026-9))
+
+-   **Schritt 3**: Übersicht aller Messungen erstellen und nach Güte evaluieren
+
+-   **Schritt 4**: Für Messung entscheiden, ggf. übersetzen/an Gegenstand anpassen/ auf 1-3 Items kürzen (inbs. für within-subjects Design)
+
+-   Skalen-Sammlungen z.B.: [Sammlung sozialwissenschaftlicher Skalen der GESIS](https://zis.gesis.org/){.uri}, [Skalenhandbuch Kommunikationswissenschaft](https://link.springer.com/book/10.1007/978-3-531-94179-0)
+
+## Skalenrecherche und -auswahl: Wie Messungen nach Güte bewerten?
+
+-   Validität (v.a. Inhalts- und Konstruktvalidität)
+-   Reliabilität
+-   ggf. Psychometrie/Deskriptiva anschauen
+-   Itemformulierungen: kurz, präzise und eindeutig, verständlich, passend zur Zielgruppe
+-   Verortung und Verwendung im Forschungsfeld, Passung zur Konstruktexplikation, Bürde, Eignung für Zielgruppe
+
+## Weiteres zur Fragebogengestaltung: Informed Consent, Datenschutz und Co.
+
+-   **Datenschutz**: Klare Aufklärung und Zustimmung über Erhebung, Speicherung und Verwendung Ihrer Daten, Tipp: DSGVO-konforme Speicherung
+-   **Freiwilligkeit**: Teilnehmende müssen explizit einen Button klicken zum Zustimmen
+-   **Absicht der Studie**: Ethische Cover-Story überlegen (Studie über Wahrnehmung von XY)
+-   **Privatsphäre und Risiken**: Anonymität und körperliche/seelische Unversehrtheit versichern und gewährleisten, keine nachhaltige Veränderung der Kognitionen, Emotionen oder des Verhaltens anstreben
+-   **Am Schluss**: Debriefing und Aufklärung über das tatsächliche Forschungsinteresse
+
+## Formulierungsmuster: Informed Consent, Datenschutz und Co.
+
+-   [Deutsche Gesellschaft für Psychologie](https://zwpd.transmit.de/images/zwpd/dienstleistungen/ethikkommission/0.1a_datenschutzrechtliche_empfehlungen_einwilligungforschungsvorhaben.pdf)
+-   [Verbund Forschungsdatenbildung](https://www.forschungsdaten-bildung.de/datenschutzrechtliche-aspekte#Informierte-Einwilligung){.uri}
+-   [Vorlagen einer Kollegin aus der Kommunikationswissenschaft](https://www.phil.uni-mannheim.de/media/Lehrstuehle/phil/mkw/Merkblatt_zu_datenschutzrechtlichen_Fragen_in_Studienarbeiten.pdf){.uri}
+
+## Aufgaben bis übernächste (!) Woche
+
+-   Präregistrierung finalisieren
+-   Experimentaldesign und Stimuli fertigstellen
+-   Skalen und Items recherchieren
+-   Fragebogen entwickeln (in Word oder SosciSurvey)
 
 ## Literatur
