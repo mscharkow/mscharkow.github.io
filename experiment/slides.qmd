@@ -534,4 +534,48 @@ tibble(Gruppe = 1:3, Treatment_1 = c("A", "B", "C"), Treatment_2 = c("B", "C", "
 - Grundgesamtheit, Stichprobe und Rekrutierungsplan entwerfen
 
 
+# Sitzung 6 {#s6}
+
+## Agenda heute
+
+1.  5-Min Präsentationen
+2.  Fragen zu Grundlagen des Experiments
+3.  Treatments und Stimuli
+4.  KI-generierte Stimuli
+
+# 5-Min Präsentationen
+
+# Was sind intern und was sind extern valide Treatments?
+
+# Wie kann man passende Stimuli generieren oder auswählen?
+
+# Wie sollte man Stimuli und Fragen präsentieren?
+
+## Treatments
+
+-   Stimuli selbst erstellen vs. aus existierenden auswählen und manipulieren
+-   Anzahl Stimuli pro Versuchsperson bzw. pro Versuchsbedingung
+-   subtile vs. starke Manipulation der Stimuli
+-   eigene (willkürliche) Auswahl vs. Pretest bzw. Fremdselektion
+-   (randomisierte) Präsentation der Stimuli
+
+
+## KI-generierte Stimuli
+
+-   generative Sprachmodelle zur Texterstellung, z.B., </br><https://ki-chat.uni-mainz.de>
+
+-   generative Sprachmodelle zur Erstellung und direkten Bearbeitung von Mockups, z.B. </br> <https://gemini.google/overview/canvas>
+
+-   generative multimodale Modelle zur Bilderstellung, z.B. </br> <https://chatgpt.com/>
+
+
+
+## Aufgabe bis nächste Woche
+
+-   Design- bzw. Auswahlstrategie für Stimuli entwickeln
+-   erste Stimuli auswählen bzw. erstellen (und mitbringen!)
+-   Präsentation der Stimuli im Experiment planen
+
+
+
 ## Literatur

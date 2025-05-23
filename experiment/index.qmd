@@ -111,4 +111,16 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 - Power-Analyse und Stichprobenplan
 
 
+## Sitzung 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Folien"></a> {#6}
+
+### Themen
+
+- Stimulusdesign
+- interne und externe Validität
+
+
+### Aufgabe zur nächsten Sitzung
+
+- Stimuli entwerfen
+
 # Literatur
