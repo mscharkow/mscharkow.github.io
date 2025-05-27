@@ -403,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -990.24, df = 2e+06, p-value &lt; 2.2e-16
+t = -987.75, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.03203 -13.97660
+ -14.00625 -13.95077
 sample estimates:
 mean of x mean of y 
- 166.0031  180.0074 </code></pre>
+ 165.9923  179.9708 </code></pre>
 </div>
 </div>
 </section>
@@ -424,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6.127298e-22</code></pre>
+<pre><code>[1] 4.17741e-30</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.487881</code></pre>
+<pre><code>[1] 0.1494454</code></pre>
 </div>
 </div>
 </section>
@@ -439,11 +439,11 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.05876025 0.34046014 0.95613646 0.26980882 0.94677630 0.63752420</code></pre>
+<pre><code>[1] 0.1386720 0.7884855 0.9673787 0.1294955 0.2782864 0.4237619</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 49</code></pre>
+<pre><code>[1] 43</code></pre>
 </div>
 </div>
 </section>
@@ -455,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 457</code></pre>
+<pre><code>[1] 439</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
