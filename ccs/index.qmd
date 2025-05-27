@@ -88,3 +88,13 @@ Refresh your R skills.
 1. Complete the [first coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/individual-trace-data.html) in R. 
 2. Work through the [second chapter on digital trace data](https://stats.ifp.uni-mainz.de/ma-ccs/aggregate-trace-data.html) in R.
 
+## Session 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Slides"></a> {#5}
+
+### Topics
+
+- analyzing large-scale digital trace data
+- combining trace data with survey or content analysis data
+
+### Reading
+
+@@douglasparry2025;@clemmvonhohenberg2024
