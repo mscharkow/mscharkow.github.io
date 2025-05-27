@@ -76,3 +76,14 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 ### Literatur
 
 @kümpel2019
+
+## Sitzung 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Folien"></a> {#5}
+
+### Themen
+
+-   Multiple Regression
+-   $R^2$ und Modellvergleich
+
+### Literatur
+
+@vanerkel2021

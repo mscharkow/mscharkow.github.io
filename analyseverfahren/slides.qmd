@@ -932,8 +932,9 @@ johannes22 <- haven::read_sav("data/Johannes_2022.sav")
 lm(tv_time ~ age, data = johannes22) |> 
   model_table()
 ```
-::: {.aside}
- Daten: Johannes et al., 2022
+
+::: aside
+Daten: Johannes et al., 2022
 :::
 
 ## Mittelwerte vergleichen
@@ -943,26 +944,24 @@ lm(tv_time ~ age, data = johannes22) |>
 -   Nullhypothese, dass zwischen den Gruppen kein Unterschied besteht, d.h. die Mittelwerte sich nicht unterscheiden
 -   meistverwendet: t-Test oder einfaktorielle Varianzanalyse
 
-
 ## Dichotome Prädiktoren
 
 -   Gruppierungsvariable wird in eine Dummy-Variablen recodiert (0 = Merkmal nicht vorhanden, 1 = Merkmal vorhanden)
 -   Dummy-Variable wird in das Regressionsmodell aufgenommen: $Y_i = b_0 + b_1 X_i + \epsilon_i$
 -   Referenzgruppe ($X = 0$), ergibt $Y = b_0$ (Intercept = Mittelwert der Kontrollgruppe)
--  $b_1$ als Differenz zwischen der Gruppe 1 und der Referenzgruppe
--  t-Wert (B/SE(B) des Regressionskoeffizienten exakt wie beim t-Test 
+-   $b_1$ als Differenz zwischen der Gruppe 1 und der Referenzgruppe
+-   t-Wert (B/SE(B) des Regressionskoeffizienten exakt wie beim t-Test
 
 ## Alternative Codierung für X
 
-- Dummy-Codierung als meistverbreitete, aber nicht einzige Art, kategorielle Variablen abzubilden
-- wichtig ist nur, dass 
-  - unterschiedliche Gruppen unterschiedliche Zahlenwerte erhalten
-  - klar ist, was ein Unterschied von 1 bedeutet (Interpretation Regressionskoeffizient)
-  - der Intercept sinnvoll interpretierbar ist
-- Beispiel: **simple coding** mit -0.5 und 0.5 bei zwei Gruppen (vgl. Zentrierung) - <br/>
- $b_0$ ist der Gesamtmittelwert, $b_1$ wieder der Unterschied zwischen den Gruppen
+-   Dummy-Codierung als meistverbreitete, aber nicht einzige Art, kategorielle Variablen abzubilden
+-   wichtig ist nur, dass
+    -   unterschiedliche Gruppen unterschiedliche Zahlenwerte erhalten
+    -   klar ist, was ein Unterschied von 1 bedeutet (Interpretation Regressionskoeffizient)
+    -   der Intercept sinnvoll interpretierbar ist
+-   Beispiel: **simple coding** mit -0.5 und 0.5 bei zwei Gruppen (vgl. Zentrierung) - <br/> $b_0$ ist der Gesamtmittelwert, $b_1$ wieder der Unterschied zwischen den Gruppen
 
-::: {.aside}
+::: aside
 Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/>
 :::
 
@@ -972,11 +971,11 @@ Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-syst
 -   F-Test der Varianzanalyse prüft die Nullhypothese, dass *alle* Mittelwerte gleich sind (keine Unterschiede zwischen den Gruppen)
 -   Alternativhypothese ("Irgendwelche Gruppen unterscheiden sich in $Y$") oft theoretisch sehr unbefriedigend
 -   weil der F-Test nicht sagt, *welche* Gruppen sich im Mittelwert von $Y$ signifikant unterscheiden, ist oft ein zweiter Analyseschritt nötig
-- Post-hoc-Tests oder Kontraste, d.h. (ausgewählte oder alle) paarweisen Vergleiche zwischen zwei Gruppen 
+-   Post-hoc-Tests oder Kontraste, d.h. (ausgewählte oder alle) paarweisen Vergleiche zwischen zwei Gruppen
 
 ## GLM mit mehr als zwei Gruppen
 
--   um  $k$ Gruppen zu vergleichen, werden $k-1$ Prädiktor-Variablen erstellt (vor oder automatisch während der Analyse)
+-   um $k$ Gruppen zu vergleichen, werden $k-1$ Prädiktor-Variablen erstellt (vor oder automatisch während der Analyse)
 -   die $k-1$ Variablen werden in das Regressionsmodell aufgenommen: $Y_i = b_0 + b_1 X_1 + b_2 X_2 + ... + b_{k-1} X_{k-1} + \epsilon_i$.
 -   in der Referenzgruppe (alle $X_1 = X_2 = ... = 0$) ergibt sich $Y = b_0$ (Intercept = Mittelwert der Referenzgruppe)
 -   $b_1$ gibt (bei Dummy-Codierung) die Differenz zwischen der Gruppe 1 und der Referenzgruppe wider, $b_2$ die Differenz zwischen der Gruppe 2 und der Referenzgruppe, etc.
@@ -984,19 +983,17 @@ Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-syst
 
 ## Dummy-Codierung 4 Gruppen
 
-:::: {layout-ncol=2}
-
-::: {.column}
-
+::::: {layout-ncol="2"}
+::: column
 ### Gruppe A als Referenz
+
 ```{r}
 x = paste("Gruppe", c("A", "B", "C", "D")) |> factor()
 contrasts(x) |> as.data.frame() |> rownames_to_column("Zugehörigkeit")
 ```
 :::
 
-::: {.column}
-
+::: column
 ### Gruppe D als Referenz
 
 ```{r}
@@ -1004,33 +1001,32 @@ relevel(x, "Gruppe D") |>
 contrasts() |> as.data.frame() |> rownames_to_column("Zugehörigkeit")
 ```
 :::
-::::
-
+:::::
 
 ## Kontraste durch gezielte Codierung
 
-- spezifische Kontraste durch verschiedene Codierungen für die Prädiktorvariablen (vgl. Davis, 2010)
-- einfache Alternative: Referenzgruppe ändern, Modell neu schätzen
-- zahlreiche z.T. komplexe Codierungsverfahren, um z.B. ordinale Gruppenvariablen abzubilden
-- Beispiel: **Helmert coding** , bei dem eine Gruppe mit jeweils allen nachfolgenden Gruppen verglichen werden,
-  (1) Kontrollgruppe mit allen Treatments
-  (2) Treatment 1 mit Treatment 2, etc.
+-   spezifische Kontraste durch verschiedene Codierungen für die Prädiktorvariablen (vgl. Davis, 2010)
+-   einfache Alternative: Referenzgruppe ändern, Modell neu schätzen
+-   zahlreiche z.T. komplexe Codierungsverfahren, um z.B. ordinale Gruppenvariablen abzubilden
+-   Beispiel: **Helmert coding** , bei dem eine Gruppe mit jeweils allen nachfolgenden Gruppen verglichen werden,
+    (1) Kontrollgruppe mit allen Treatments
+    (2) Treatment 1 mit Treatment 2, etc.
 
-::: {.aside}
+::: aside
 Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/>
 :::
 
-
 ## Post-hoc-Tests
 
-- für kategorielle Prädiktoren kann man  anhand des geschätzten Modells alle Mittelwerte paarweise vergleichen
-- entspricht separaten  T-Tests mit je zwei Gruppen
+-   für kategorielle Prädiktoren kann man anhand des geschätzten Modells alle Mittelwerte paarweise vergleichen
+-   entspricht separaten T-Tests mit je zwei Gruppen
 -   aufgrund der Vielzahl einzelner Tests erhöht sich die Gefahr von Alpha-Fehlern (d.h. irrtümlich signifikante Ergebnisse)
-- p-Werte (manchmal auch die CI) sollten daher korrigiert werden sollten (vgl. Bender & Lange, 2001)
-- verschiedenste Korrekturverfahren möglich (Bonferroni, Hochberg), eines sollte gewählt werden
+-   p-Werte (manchmal auch die CI) sollten daher korrigiert werden sollten (vgl. Bender & Lange, 2001)
+-   verschiedenste Korrekturverfahren möglich (Bonferroni, Hochberg), eines sollte gewählt werden
 
 ## GLM vs. t-Test/ANOVA
-### Vorteile 
+
+### Vorteile
 
 -   keine unterschiedliche Nomenklatur und Testverfahren, egal ob 2 oder mehr Gruppen
 -   $b$-Koeffizienten sind direkt als Mittelwertdifferenzen zwischen Gruppen interpretierbar, d.h. oft sind Post-Hoc-Tests unnötig
@@ -1042,13 +1038,11 @@ Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-syst
 -   Konvention und Fachgeschichte, d.h. GutachterInnen erwarten ANOVA oder t-Test
 -   Dummy-Codierung (oder andere Effekt-Codierungen) machen ggf. Zusatzaufwand
 
-
 ## Beispielstudie: @kümpel2019
 
 > Coming across news on social network sites (SNS) largely depends on news-related activities in one's network. Although there are many different ways to stumble upon news, limited research has been conducted on how distinct news curation practices influence users' intention to consume encountered content. In this mixed-methods investigation, using Facebook as an example, we first examine the results of an experiment (study 1, n = 524), showing that getting tagged in comments to news posts promotes news consumption the most.
 
 ## Daten
-
 
 ```{r, echo = F}
 library(tidyverse)
@@ -1066,19 +1060,17 @@ kuempel19 <- haven::read_sav("data/Kuempel_2019.sav") |>
 
 ```
 
-:::{.columns}
+:::::: columns
 ::: {.column width="45%"}
-
 ```{r}
 kuempel19 |> head()
 ```
 :::
 
-::: {.column width="10%"} 
-::: 
+::: {.column width="10%"}
+:::
 
-::: {.column width="45%"} 
-
+::: {.column width="45%"}
 ### Outcome-Variable
 
 ```{r}
@@ -1100,10 +1092,8 @@ kuempel19 |>
     SD = sd(rw, na.rm = TRUE)
   )
 ```
-
-
 :::
-::::
+::::::
 
 ## Outcome-Variable
 
@@ -1127,14 +1117,12 @@ m1_tag <- lm(rw ~ modus_tag, data = kuempel19)
 model_table(m1_tag)
 ```
 
-
 ## ANOVA mit vier Gruppen
 
 ```{r}
 aov(rw ~ modus, data = kuempel19) |>
   model_table()
 ```
-
 
 ## GLM mit vier Gruppen
 
@@ -1153,7 +1141,6 @@ m2_modus_dm <- lm(rw ~ modus_dm, kuempel19)
 model_table(m2_modus_dm)
 ```
 
-
 ## Post-hoc/Kontraste
 
 ```{r}
@@ -1171,7 +1158,8 @@ posthocs |>
 #m2_modus |> 
 #  marginaleffects::hypotheses( ~ pairwise, multcomp = "bonferroni")
 ```
-::: {.aside}
+
+::: aside
 p-Werte (adjusted) mit Bonferroni-Korrektur
 :::
 
@@ -1182,8 +1170,6 @@ marginaleffects::avg_predictions(m2_modus, variables = "modus") |>
   as_tibble() |> 
   select(-s.value)
 ```
-
-
 
 ## Visualisierungsvorschlag
 
@@ -1196,7 +1182,6 @@ marginaleffects::avg_predictions(m2_modus, variables="modus") |>
 
 # Fragen?
 
-
 ## Literatur
 
 Bender, R., & Lange, S. (2001). Adjusting for multiple testing---when and how?. Journal of clinical epidemiology, 54(4), 343-349.
@@ -1204,7 +1189,6 @@ Bender, R., & Lange, S. (2001). Adjusting for multiple testing---when and how?. 
 Davis, M. J. (2010). Contrast coding in multiple regression analysis: Strengths, weaknesses, and utility of popular coding structures. Journal of data science, 8(1), 61-73.
 
 Kümpel, A. S. (2019). Getting tagged, getting involved with news? A mixed-methods investigation of the effects and motives of news-related tagging activities on social network sites. Journal of Communication, 69(4), 373-395.
-
 
 ## Take-home Aufgabe #1
 
@@ -1238,7 +1222,7 @@ top |>
   left_join(top |> count(decade))
 ```
 
-## Studienleistung, Teil 1 
+## Studienleistung, Teil 1
 
 (1) Interpretieren sie die Ergebnisse der **beiden** linearen Modelle, in denen die Mittelwertunterschiede getestet werden, Zeile für Zeile.
 
@@ -1248,7 +1232,7 @@ Lösung bitte bis 04.06.2025, 10 Uhr in Moodle eintragen.
 
 \
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
 lm(danceability ~ decade, data = top) |>
@@ -1266,8 +1250,194 @@ lm(valence ~ decade, data = top) |>
   sjPlot::tab_model(show.r2 = F, show.obs = F, show.p = F, string.est = "Coefficient (B)", string.ci = "95% CI (B)")
 ```
 :::
+::::::
+
+# Sitzung 5 {#s5}
+
+# Fragen zur praktischen Übung?
+
+## Wiederholung: Facebook-News
+
+```{r}
+kuempel19 <- haven::read_sav("data/Kuempel_2019.sav") |>
+  select(
+    modus = Kurationsmodus_SNS,
+    rw = Rezeptionswahrscheinlichkeit
+  ) |>
+  mutate(
+    modus = as_factor(modus) |> relevel("Tag"), # Faktor mit Referenz Chronik
+    modus_tag = ifelse(modus == "Tag", 1, 0), # Dummy-Variable
+    rw = as.numeric(rw) # Numerische Variable
+  ) |>
+  haven::zap_labels()
+
+lm(rw ~ modus, data = kuempel19) |> 
+  model_table()
+```
+
+::: aside
+Outcome: Rezeptionswahrscheinlichkeit, Referenzkategorie: Tagging, Daten: Kümpel, 2019
 :::
 
+## Multiple Regression und das GLM
 
+-   im GLM können mehrere Prädiktorvariablen in einem Modell kombiniert werden
+-   die Regressionskoeffizienten $B$ sind wie sonst auch zu interpretieren, mit der Annahme, dass die anderen Prädiktoren sich nicht ändern ("ceteris paribus")
+-   der Intercept $B_0$ ist der erwartete Wert von $Y$, wenn **alle** Prädiktoren $X=0$ sind
+-   das $R^2$ ist die durch *alle* Prädiktoren erklärte Varianz in $Y$, d.h. nicht mehr nur die quadrierte Korrelation von $X$ und $Y$
+-   der F-Test ist nun ein Omnibustest, d.h. er prüft, ob *irgendeine* Variable $X$ einen signifikanten Zusammenhang mit $Y$ hat
+
+## Multiple vs. viele bivariate Regressionen
+
+-   in klassischen Befragungsstudien haben wir oft mehrere plausible Prädiktoren
+-   eine multiple Regression vermeidete unnötig viele Einzeltests
+-   technisch ist es trivial, mehrere Prädiktoren ins Modell zu nehmen
+-   die Zusammenhänge zwischen Prädiktoren und Outcome werden unter Berücksichtigung der anderen Variablen im Modell geschätzt (Drittvariablenkontrolle)
+-   ein Modell mit mehreren Prädiktoren kann besser $Y$ voraussagen als ein Modell mit weniger Prädiktoren
+
+## Regressionskoeffizienten
+
+-   bei multiplen Regressionen sollten standardisierte und unstandardisierte Regressionskoeffizienten berichtet werden
+-   **unstandardisierte** Koeffizienten lassen sich
+    (1) in der Originalmetrik von $X$ und $Y$ interpretieren *und*
+    (2) sind beim Vergleich von Modellen mit verschiedenen $Y$, aber denselben $X$ sinnvoll
+-   **standardisierte Koeffizienten** sind sinnvoll, um
+    (1) generell die Größe der Effekte abschätzen und
+    (2) *innerhalb* desselben Modells den relativen Einfluss verschiedener Variablen vergleichen zu können
+
+## Drittvariablen & Multikollinearität
+
+-   durch Hinzunahme einer weiteren $X_2$ Prädiktorvariable wird deren gemeinsamer Einfluss auf $X_1$ und $Y$ in der Schätzung berücksichtigt
+-   eine statistische Berücksichtigung ist jedoch keinesfalls mit einer kausalen Berücksichtigung oder Konstanthaltung zu verwechseln
+-   wenn $X_1$ und $X_2$ untereinander korrelieren, sprechen wir von Multikollinearität
+-   obwohl die Schätzer $B_1$ und $B_2$ unverzerrt sind, wird die Präzision bei Multikollinearität geringer, d.h. die Standardfehler größer
+-   Multikollinearität ist *kein* statistisches Problem und kann daher auch nicht statistisch (z.B. durch Zentrierung) gelöst werden, sondern nur durch Änderungen in der Messung oder Variablenauswahl
+
+## Modellgüte: $R^2$ und F-Test
+
+-   im bivariaten Fall entspricht das $R^2$ dem Determinationskoeffizienten $r^2$, also der quadrierten Korrelation
+-   alternative Herleitung als Verhältnis von erklärter (modellierter) und nicht erklärter (Residual-) Varianz
+-   Beispiel Nullmodell: keine Erklärungskraft, d.h. Residualvarianz $var(\epsilon) = var(Y)$, also Gesamtvarianz von $Y$
+-   $R2 = 1 - var(\epsilon)/var(Y)$, d.h. Anteil erklärter Varianz, den *alle* Prädiktoren zusammen ermöglichen
+-   F-Test: ist der Anteil erklärter Varianz signifikant von 0 verschieden
+
+## Korrigiertes $R^2$
+
+-   ein lineares Regressionsmodell wird durch Hinzunahme einer zusätzlichen Prädiktorvariable *nie* schlechter
+-   d.h. das naive $R^2$ kann durch zusätzliche Prädiktoren nur ansteigen oder sich schlimmstenfalls nicht (sichtbar) ändern, aber nie sinken
+-   würde man nun verschiedene Modelle miteinander vergleichen, würde das komplexere (= mehr Prädiktoren) Modell besser abschneiden, obwohl wir erkenntnistheoretisch eher an Modellsparsamkeit interessiert sind
+-   daher betrachten wir bei multiplen Regressionen immer ein (durch die Anzahl Prädiktoren $k$) korrigiertes $\bar R^2 = 1-(1-R^2){n-1 \over n-k-1}$
+
+## Schrittweise oder hierarchische Regression
+
+-   manchmal werden Regressionsmodelle schrittweise geschätzt, d.h. einzelne Prädiktoren (oder Prädiktorenblöcke) nacheinander in das Modell eingeführt
+-   Differenz $\Delta$ im $R^2$ und/oder ein sog. partieller F-Test durchgeführt, der prüft, ob die Hinzunahme der Prädiktoren das Modell signifikant verbessert hat
+-   in der Schätzung der Regression gibt es **keine Reihenfolge-Effekte**, d.h. das finale Modell ist immer dasselbe, egal, ob man mit $X_1$ oder $X_2$ startet
+-   grundsätzlich nur die Regressionskoeffizienten aus dem finalen Modell interpretieren, das alle theoretisch postulierten Variablen enthält
+-   Vorteil schrittweise Testung: Übersichtlichkeit der Darstellung, Nachteil: unnötig viele Zwischenschritte, voreilige Interpretationen
+
+## Beispiel @kümpel2019
+
+![](images/kuempel_hier.png){fig-align="center"}
+
+## Partieller F-Test
+
+-   globaler F-Test als Modellvergleich: Residualvarianz mein Modell vs. Nullmodell
+-   partieller F-Test: Modell 1 vs. Modell 2 (wobei Modell 2 auch alle Prädiktoren von 1 enthalten muss)
+-   Interpretation, wenn der F-Test signifikant ist: Modell 2 kann sig. mehr Varianz in $Y$ erklären als Modell 1
+-   Modell 2 ist damit auch signifikant besser darin, $Y$ vorauszusagen
+
+## Kitchen-sink regression
+
+-   oft ist es verführerisch, einfach möglichst viele (plausible) Prädiktoren ins Modell aufzunehmen
+-   Problem 1: Gefahr von Multikollinearität steigt, weil viele Variablen untereinander korrelieren
+-   Problem 2: durch falsche Einbeziehung von sog. Collider-Variablen, die von $X$ und $Y$ beeinflusst werden, werden die Schätzungen verzerrt (vgl. Sitzung zu Annahmen)
+-   Problem 3: sehr umfangreiche Regressionstabellen, die gelesen werden müssen
+
+## Beispiel: @vanerkel2021
+
+> Does exposure to news affect what people know about politics? This old question attracted new scholarly interest as the political informa- tion environment is changing rapidly. In particular, since citizens have new channels at their disposal, such as Twitter and Facebook, which increasingly complement or even replace traditional channels of information. This study investigates to what extent citizens have knowledge about daily politics and to what extent news on social media can provide this knowledge. It does so by means of a large online survey in Belgium (Flanders), in which we measured what people know about current political events, their so-called general surveillance knowledge. Our findings demonstrate that unlike following news via traditional media channels, citizens do not gain more political knowledge from following news on social media. We even find a negative association between following the news on Facebook and political knowledge.
+
+## Daten
+
+```{r}
+vanerkel21 <- haven::read_sav("data/Vanerkel_Vanaelst_2021.sav") |>
+  mutate(
+    Education = as_factor(Education),
+    Gender = as_factor(Gender)
+  ) |>
+  haven::zap_labels()
+
+vanerkel21 |>
+  select(Age, Gender, Education,  TV, Newspaper, Websites, Facebook, PK) |> 
+  sample_n(5)
+```
+
+## Deskriptivstatistik
+
+```{r}
+vanerkel21 |>
+   select(Age, Gender, Education,  TV, Newspaper, Websites, Facebook, PK) |> 
+  report::report_sample()
+```
+
+## Outcome-Variable
+
+```{r}
+vanerkel21 |>
+  ggplot(aes(x = PK)) +
+  geom_histogram()
+```
+
+## Regressionsmodell I (nur Soziodemographie)
+
+```{r}
+m1_socdem <- lm(PK ~ Gender + Age + Education, data = vanerkel21)
+model_table(m1_socdem)
+```
+
+## Regressionsmodell II (Mediennutzung)
+
+::: scrollable
+```{r}
+m2_media <- lm(PK ~ Gender + Age + Education +  TV + Newspaper + Websites + Facebook + Twitter, data = vanerkel21)
+model_table(m2_media)
+```
+:::
+
+## Partieller F-Test (Modellverbesserung)
+
+```{r}
+anova(m1_socdem, m2_media)|> 
+  as.data.frame() |> 
+  rownames_to_column("Modell")
+```
+
+## Bonus: Visualisierung der Ergebnisse
+
+:::::: columns
+::: {.column width="45%"}
+```{r, fig.asp=1, fig.width=7 }
+sjPlot::plot_model(m2_media, type = "est") + labs(
+  title = "Predicting political knowledge",
+  subtitle = "OLS regression (unstandardized)", y = "Unstandardized coefficient",
+  caption = "n = 987"
+)
+```
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+```{r, fig.asp=1, fig.width=7 }
+sjPlot::plot_model(m2_media, type = "std") + labs(
+  title = "Predicting political knowledge",
+  subtitle = "OLS regression (standardized)", y = "Standardized coefficient",
+  caption = "n = 987"
+)
+```
+:::
+::::::
 
 ## Literatur
