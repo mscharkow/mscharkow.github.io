@@ -273,6 +273,13 @@
     "text": "Sitzung 4 \n\nThemen\n\nMittelvergleiche\nDummy-Codierung und Kontraste\n\n\n\nLiteratur\nKümpel (2019)"
   },
   {
+    "objectID": "analyseverfahren/index.html#5",
+    "href": "analyseverfahren/index.html#5",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Sitzung 5 ",
+    "text": "Sitzung 5 \n\nThemen\n\nMultiple Regression\n\\(R^2\\) und Modellvergleich\n\n\n\nLiteratur\nVan Erkel & Van Aelst (2021)"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
     "href": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
     "title": "Anwendungsorientierte Analyseverfahren",
@@ -938,11 +945,144 @@
     "text": "Studienleistung, Teil 1\n\nInterpretieren sie die Ergebnisse der beiden linearen Modelle, in denen die Mittelwertunterschiede getestet werden, Zeile für Zeile.\nWelche Dekaden werden nicht miteinander verglichen, d.h. für diese bräuchten wir Post-Hoc Vergleiche?\n\nLösung bitte bis 04.06.2025, 10 Uhr in Moodle eintragen.\n\n\n\n\n\n\n\n\n\n \ndanceability\n\n\nPredictors\nCoefficient (B)\nSE (B)\np\n\n\n(Intercept)\n64.72\n0.59\n&lt;0.001\n\n\ndecade [2000s]\n2.62\n0.85\n0.002\n\n\ndecade [2010s]\n2.59\n0.88\n0.003\n\n\ndecade [2020s]\n1.38\n1.83\n0.452\n\n\n\n\n\n\n\n\n\n\n\n\n\n \nvalence\n\n\nPredictors\nCoefficient (B)\n95% CI (B)\n\n\n(Intercept)\n51.38\n45.97 – 56.79\n\n\ndecade [1990s]\n4.71\n-1.01 – 10.43\n\n\ndecade [2000s]\n6.60\n0.87 – 12.34\n\n\ndecade [2010s]\n0.56\n-5.22 – 6.33"
   },
   {
+    "objectID": "analyseverfahren/slides.html#wiederholung-facebook-news",
+    "href": "analyseverfahren/slides.html#wiederholung-facebook-news",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Wiederholung: Facebook-News",
+    "text": "Wiederholung: Facebook-News\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(520)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n3.51\n(3.31, 3.72)\n34.14\n&lt; .001\n0.37\n\n\n\nmodus (Post)\n-0.72\n(-1.04, -0.40)\n-4.36\n&lt; .001\n-0.55\n\n\n\nmodus (Chronik)\n-0.63\n(-0.93, -0.34)\n-4.27\n&lt; .001\n-0.49\n\n\n\nmodus (DM)\n-0.68\n(-0.97, -0.38)\n-4.50\n&lt; .001\n-0.52\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n1742.69\n\n\nR2\n\n\n\n\n\n0.06\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n1.27\n\n\n\n\n\n\n\nOutcome: Rezeptionswahrscheinlichkeit, Referenzkategorie: Tagging, Daten: Kümpel, 2019"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#multiple-regression-und-das-glm",
+    "href": "analyseverfahren/slides.html#multiple-regression-und-das-glm",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Multiple Regression und das GLM",
+    "text": "Multiple Regression und das GLM\n\nim GLM können mehrere Prädiktorvariablen in einem Modell kombiniert werden\ndie Regressionskoeffizienten \\(B\\) sind wie sonst auch zu interpretieren, mit der Annahme, dass die anderen Prädiktoren sich nicht ändern (“ceteris paribus”)\nder Intercept \\(B_0\\) ist der erwartete Wert von \\(Y\\), wenn alle Prädiktoren \\(X=0\\) sind\ndas \\(R^2\\) ist die durch alle Prädiktoren erklärte Varianz in \\(Y\\), d.h. nicht mehr nur die quadrierte Korrelation von \\(X\\) und \\(Y\\)\nder F-Test ist nun ein Omnibustest, d.h. er prüft, ob irgendeine Variable \\(X\\) einen signifikanten Zusammenhang mit \\(Y\\) hat"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#multiple-vs.-viele-bivariate-regressionen",
+    "href": "analyseverfahren/slides.html#multiple-vs.-viele-bivariate-regressionen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Multiple vs. viele bivariate Regressionen",
+    "text": "Multiple vs. viele bivariate Regressionen\n\nin klassischen Befragungsstudien haben wir oft mehrere plausible Prädiktoren\neine multiple Regression vermeidete unnötig viele Einzeltests\ntechnisch ist es trivial, mehrere Prädiktoren ins Modell zu nehmen\ndie Zusammenhänge zwischen Prädiktoren und Outcome werden unter Berücksichtigung der anderen Variablen im Modell geschätzt (Drittvariablenkontrolle)\nein Modell mit mehreren Prädiktoren kann besser \\(Y\\) voraussagen als ein Modell mit weniger Prädiktoren"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regressionskoeffizienten",
+    "href": "analyseverfahren/slides.html#regressionskoeffizienten",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regressionskoeffizienten",
+    "text": "Regressionskoeffizienten\n\nbei multiplen Regressionen sollten standardisierte und unstandardisierte Regressionskoeffizienten berichtet werden\nunstandardisierte Koeffizienten lassen sich\n\nin der Originalmetrik von \\(X\\) und \\(Y\\) interpretieren und\nsind beim Vergleich von Modellen mit verschiedenen \\(Y\\), aber denselben \\(X\\) sinnvoll\n\nstandardisierte Koeffizienten sind sinnvoll, um\n\ngenerell die Größe der Effekte abschätzen und\ninnerhalb desselben Modells den relativen Einfluss verschiedener Variablen vergleichen zu können"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#drittvariablen-multikollinearität",
+    "href": "analyseverfahren/slides.html#drittvariablen-multikollinearität",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Drittvariablen & Multikollinearität",
+    "text": "Drittvariablen & Multikollinearität\n\ndurch Hinzunahme einer weiteren \\(X_2\\) Prädiktorvariable wird deren gemeinsamer Einfluss auf \\(X_1\\) und \\(Y\\) in der Schätzung berücksichtigt\neine statistische Berücksichtigung ist jedoch keinesfalls mit einer kausalen Berücksichtigung oder Konstanthaltung zu verwechseln\nwenn \\(X_1\\) und \\(X_2\\) untereinander korrelieren, sprechen wir von Multikollinearität\nobwohl die Schätzer \\(B_1\\) und \\(B_2\\) unverzerrt sind, wird die Präzision bei Multikollinearität geringer, d.h. die Standardfehler größer\nMultikollinearität ist kein statistisches Problem und kann daher auch nicht statistisch (z.B. durch Zentrierung) gelöst werden, sondern nur durch Änderungen in der Messung oder Variablenauswahl"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellgüte-r2-und-f-test",
+    "href": "analyseverfahren/slides.html#modellgüte-r2-und-f-test",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellgüte: \\(R^2\\) und F-Test",
+    "text": "Modellgüte: \\(R^2\\) und F-Test\n\nim bivariaten Fall entspricht das \\(R^2\\) dem Determinationskoeffizienten \\(r^2\\), also der quadrierten Korrelation\nalternative Herleitung als Verhältnis von erklärter (modellierter) und nicht erklärter (Residual-) Varianz\nBeispiel Nullmodell: keine Erklärungskraft, d.h. Residualvarianz \\(var(\\epsilon) = var(Y)\\), also Gesamtvarianz von \\(Y\\)\n\\(R2 = 1 - var(\\epsilon)/var(Y)\\), d.h. Anteil erklärter Varianz, den alle Prädiktoren zusammen ermöglichen\nF-Test: ist der Anteil erklärter Varianz signifikant von 0 verschieden"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#korrigiertes-r2",
+    "href": "analyseverfahren/slides.html#korrigiertes-r2",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Korrigiertes \\(R^2\\)",
+    "text": "Korrigiertes \\(R^2\\)\n\nein lineares Regressionsmodell wird durch Hinzunahme einer zusätzlichen Prädiktorvariable nie schlechter\nd.h. das naive \\(R^2\\) kann durch zusätzliche Prädiktoren nur ansteigen oder sich schlimmstenfalls nicht (sichtbar) ändern, aber nie sinken\nwürde man nun verschiedene Modelle miteinander vergleichen, würde das komplexere (= mehr Prädiktoren) Modell besser abschneiden, obwohl wir erkenntnistheoretisch eher an Modellsparsamkeit interessiert sind\ndaher betrachten wir bei multiplen Regressionen immer ein (durch die Anzahl Prädiktoren \\(k\\)) korrigiertes \\(\\bar R^2 = 1-(1-R^2){n-1 \\over n-k-1}\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#schrittweise-oder-hierarchische-regression",
+    "href": "analyseverfahren/slides.html#schrittweise-oder-hierarchische-regression",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Schrittweise oder hierarchische Regression",
+    "text": "Schrittweise oder hierarchische Regression\n\nmanchmal werden Regressionsmodelle schrittweise geschätzt, d.h. einzelne Prädiktoren (oder Prädiktorenblöcke) nacheinander in das Modell eingeführt\nDifferenz \\(\\Delta\\) im \\(R^2\\) und/oder ein sog. partieller F-Test durchgeführt, der prüft, ob die Hinzunahme der Prädiktoren das Modell signifikant verbessert hat\nin der Schätzung der Regression gibt es keine Reihenfolge-Effekte, d.h. das finale Modell ist immer dasselbe, egal, ob man mit \\(X_1\\) oder \\(X_2\\) startet\ngrundsätzlich nur die Regressionskoeffizienten aus dem finalen Modell interpretieren, das alle theoretisch postulierten Variablen enthält\nVorteil schrittweise Testung: Übersichtlichkeit der Darstellung, Nachteil: unnötig viele Zwischenschritte, voreilige Interpretationen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispiel-kümpel2019",
+    "href": "analyseverfahren/slides.html#beispiel-kümpel2019",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispiel Kümpel (2019)",
+    "text": "Beispiel Kümpel (2019)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#partieller-f-test",
+    "href": "analyseverfahren/slides.html#partieller-f-test",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Partieller F-Test",
+    "text": "Partieller F-Test\n\nglobaler F-Test als Modellvergleich: Residualvarianz mein Modell vs. Nullmodell\npartieller F-Test: Modell 1 vs. Modell 2 (wobei Modell 2 auch alle Prädiktoren von 1 enthalten muss)\nInterpretation, wenn der F-Test signifikant ist: Modell 2 kann sig. mehr Varianz in \\(Y\\) erklären als Modell 1\nModell 2 ist damit auch signifikant besser darin, \\(Y\\) vorauszusagen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#kitchen-sink-regression",
+    "href": "analyseverfahren/slides.html#kitchen-sink-regression",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Kitchen-sink regression",
+    "text": "Kitchen-sink regression\n\noft ist es verführerisch, einfach möglichst viele (plausible) Prädiktoren ins Modell aufzunehmen\nProblem 1: Gefahr von Multikollinearität steigt, weil viele Variablen untereinander korrelieren\nProblem 2: durch falsche Einbeziehung von sog. Collider-Variablen, die von \\(X\\) und \\(Y\\) beeinflusst werden, werden die Schätzungen verzerrt (vgl. Sitzung zu Annahmen)\nProblem 3: sehr umfangreiche Regressionstabellen, die gelesen werden müssen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispiel-vanerkel2021",
+    "href": "analyseverfahren/slides.html#beispiel-vanerkel2021",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispiel: Van Erkel & Van Aelst (2021)",
+    "text": "Beispiel: Van Erkel & Van Aelst (2021)\n\nDoes exposure to news affect what people know about politics? This old question attracted new scholarly interest as the political informa- tion environment is changing rapidly. In particular, since citizens have new channels at their disposal, such as Twitter and Facebook, which increasingly complement or even replace traditional channels of information. This study investigates to what extent citizens have knowledge about daily politics and to what extent news on social media can provide this knowledge. It does so by means of a large online survey in Belgium (Flanders), in which we measured what people know about current political events, their so-called general surveillance knowledge. Our findings demonstrate that unlike following news via traditional media channels, citizens do not gain more political knowledge from following news on social media. We even find a negative association between following the news on Facebook and political knowledge."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#daten-2",
+    "href": "analyseverfahren/slides.html#daten-2",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Daten",
+    "text": "Daten\n\n\n\n\n\n\nAge\n\n\nGender\n\n\nEducation\n\n\nTV\n\n\nNewspaper\n\n\nWebsites\n\n\nFacebook\n\n\nPK\n\n\n\n\n\n\n21\n\n\nfemale\n\n\nHigh\n\n\n3\n\n\n3\n\n\n5\n\n\n6\n\n\n1\n\n\n\n\n21\n\n\nmale\n\n\nMiddle\n\n\n4\n\n\n5\n\n\n5\n\n\n5\n\n\n3\n\n\n\n\n67\n\n\nmale\n\n\nHigh\n\n\n5\n\n\n4\n\n\n5\n\n\n4\n\n\n3\n\n\n\n\n63\n\n\nfemale\n\n\nMiddle\n\n\n3\n\n\n1\n\n\n1\n\n\n1\n\n\n2\n\n\n\n\n61\n\n\nmale\n\n\nHigh\n\n\n5\n\n\n5\n\n\n5\n\n\n5\n\n\n5"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#deskriptivstatistik",
+    "href": "analyseverfahren/slides.html#deskriptivstatistik",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Deskriptivstatistik",
+    "text": "Deskriptivstatistik\n\n\n\n\n\n\nVariable\n\n\nSummary\n\n\n\n\n\n\nMean Age (SD)\n\n\n52.98 (13.96)\n\n\n\n\nGender [female], %\n\n\n47.7\n\n\n\n\nEducation [Lower], %\n\n\n13.7\n\n\n\n\nEducation [Middle], %\n\n\n40.7\n\n\n\n\nEducation [High], %\n\n\n45.6\n\n\n\n\nMean TV (SD)\n\n\n4.43 (1.33)\n\n\n\n\nMean Newspaper (SD)\n\n\n3.52 (1.69)\n\n\n\n\nMean Websites (SD)\n\n\n3.44 (1.72)\n\n\n\n\nMean Facebook (SD)\n\n\n2.69 (1.95)\n\n\n\n\nMean PK (SD)\n\n\n3.04 (1.36)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#outcome-variable-3",
+    "href": "analyseverfahren/slides.html#outcome-variable-3",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Outcome-Variable",
+    "text": "Outcome-Variable"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regressionsmodell-i-nur-soziodemographie",
+    "href": "analyseverfahren/slides.html#regressionsmodell-i-nur-soziodemographie",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regressionsmodell I (nur Soziodemographie)",
+    "text": "Regressionsmodell I (nur Soziodemographie)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(988)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n1.35\n(0.96, 1.74)\n6.81\n&lt; .001\n-0.20\n\n\n\nGender (female)\n-0.73\n(-0.89, -0.58)\n-9.23\n&lt; .001\n-0.54\n\n\n\nAge\n0.03\n(0.02, 0.03)\n9.46\n&lt; .001\n0.28\n\n\n\nEducation (Middle)\n0.51\n(0.27, 0.75)\n4.23\n&lt; .001\n0.38\n\n\n\nEducation (High)\n0.89\n(0.66, 1.13)\n7.43\n&lt; .001\n0.66\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n3217.50\n\n\nR2\n\n\n\n\n\n0.20\n\n\nR2 (adj.)\n\n\n\n\n\n0.20\n\n\nSigma\n\n\n\n\n\n1.22"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regressionsmodell-ii-mediennutzung",
+    "href": "analyseverfahren/slides.html#regressionsmodell-ii-mediennutzung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regressionsmodell II (Mediennutzung)",
+    "text": "Regressionsmodell II (Mediennutzung)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(983)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n0.74\n(0.28, 1.20)\n3.18\n0.002\n-0.12\n\n\n\nGender (female)\n-0.63\n(-0.78, -0.48)\n-8.21\n&lt; .001\n-0.46\n\n\n\nAge\n0.02\n(0.01, 0.02)\n6.23\n&lt; .001\n0.19\n\n\n\nEducation (Middle)\n0.39\n(0.16, 0.61)\n3.33\n&lt; .001\n0.28\n\n\n\nEducation (High)\n0.67\n(0.44, 0.90)\n5.69\n&lt; .001\n0.49\n\n\n\nTV\n0.14\n(0.08, 0.20)\n4.46\n&lt; .001\n0.14\n\n\n\nNewspaper\n0.12\n(0.07, 0.17)\n4.91\n&lt; .001\n0.15\n\n\n\nWebsites\n0.12\n(0.07, 0.16)\n4.77\n&lt; .001\n0.15\n\n\n\nFacebook\n-0.07\n(-0.11, -0.03)\n-3.29\n0.001\n-0.10\n\n\n\nTwitter\n-0.07\n(-0.15, 0.01)\n-1.81\n0.070\n-0.05\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n3114.32\n\n\nR2\n\n\n\n\n\n0.29\n\n\nR2 (adj.)\n\n\n\n\n\n0.28\n\n\nSigma\n\n\n\n\n\n1.15"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#partieller-f-test-modellverbesserung",
+    "href": "analyseverfahren/slides.html#partieller-f-test-modellverbesserung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Partieller F-Test (Modellverbesserung)",
+    "text": "Partieller F-Test (Modellverbesserung)\n\n\n\n\n\n\nModell\n\n\nRes.Df\n\n\nRSS\n\n\nDf\n\n\nSum of Sq\n\n\nF\n\n\nPr(&gt;F)\n\n\n\n\n\n\n1\n\n\n988\n\n\n1466.83\n\n\nNA\n\n\nNA\n\n\nNA\n\n\nNA\n\n\n\n\n2\n\n\n983\n\n\n1308.59\n\n\n5\n\n\n158.24\n\n\n23.77\n\n\n0"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#bonus-visualisierung-der-ergebnisse",
+    "href": "analyseverfahren/slides.html#bonus-visualisierung-der-ergebnisse",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Bonus: Visualisierung der Ergebnisse",
+    "text": "Bonus: Visualisierung der Ergebnisse"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#literatur-1",
     "href": "analyseverfahren/slides.html#literatur-1",
     "title": "Anwendungsorientierte Analyseverfahren",
     "section": "Literatur",
-    "text": "Literatur\n\n\n\n\nAuty, S., & Lewis, C. (2004). Exploring children’s choice: The reminder effect of product placement. Psychology & Marketing, 21(9), 697–713. https://doi.org/10.1002/mar.20025\n\n\nJohannes, N., Dienlin, T., Bakhshi, H., & Przybylski, A. K. (2022). No effect of different types of media on well-being. Scientific Reports, 12(1), 61.\n\n\nKümpel, A. S. (2019). Getting Tagged, Getting Involved with News? A Mixed-Methods Investigation of the Effects and Motives of News-Related Tagging Activities on Social Network Sites. Journal of Communication, 69(4), 373–395. https://doi.org/10.1093/joc/jqz019"
+    "text": "Literatur\n\n\n\n\nAuty, S., & Lewis, C. (2004). Exploring children’s choice: The reminder effect of product placement. Psychology & Marketing, 21(9), 697–713. https://doi.org/10.1002/mar.20025\n\n\nJohannes, N., Dienlin, T., Bakhshi, H., & Przybylski, A. K. (2022). No effect of different types of media on well-being. Scientific Reports, 12(1), 61.\n\n\nKümpel, A. S. (2019). Getting Tagged, Getting Involved with News? A Mixed-Methods Investigation of the Effects and Motives of News-Related Tagging Activities on Social Network Sites. Journal of Communication, 69(4), 373–395. https://doi.org/10.1093/joc/jqz019\n\n\nVan Erkel, P. F., & Van Aelst, P. (2021). Why don’t we learn from social media? Studying effects of and mechanisms behind social media news use on general surveillance political knowledge. Political Communication, 38(4), 407–425. https://doi.org/10.1080/10584609.2020.1784328"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#lernziele",
@@ -1292,7 +1432,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"MILFs? What the hell is a MILF?\",\n        \"author\": \"Skyler White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You're my free pass... bitch!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1747,28 +1887,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.23, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.01388 -13.95846\nsample estimates:\nmean of x mean of y \n 166.0143  180.0005"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -988.3, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.00495 -13.94951\nsample estimates:\nmean of x mean of y \n 166.0265  180.0037"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.238563e-13\n\ndo_t_test(100, males, males)\n\n[1] 0.3027394"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 7.088861e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.4870281"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.96472563 0.30370167 0.71599335 0.40714906 0.01997694 0.46874453\n\nsum(results_h0 &lt;= .05)\n\n[1] 52"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.5173858 0.1622263 0.8382043 0.3045189 0.3971600 0.2378073\n\nsum(results_h0 &lt;= .05)\n\n[1] 47"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 484\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 481\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
