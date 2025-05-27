@@ -1432,7 +1432,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You're my free pass... bitch!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I'm not a criminal. I'm a criminal lawyer.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1887,28 +1887,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -988.3, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.00495 -13.94951\nsample estimates:\nmean of x mean of y \n 166.0265  180.0037"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.24, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.03203 -13.97660\nsample estimates:\nmean of x mean of y \n 166.0031  180.0074"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 7.088861e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.4870281"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 6.127298e-22\n\ndo_t_test(100, males, males)\n\n[1] 0.487881"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.5173858 0.1622263 0.8382043 0.3045189 0.3971600 0.2378073\n\nsum(results_h0 &lt;= .05)\n\n[1] 47"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.05876025 0.34046014 0.95613646 0.26980882 0.94677630 0.63752420\n\nsum(results_h0 &lt;= .05)\n\n[1] 49"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 481\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 457\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -2499,10 +2499,31 @@
     "text": "Practice\nTrace data I\n\nData Download Packages\nZeeschuimer browser logs\n\nTrace data II\n\nAggregating and processing digital trace data\nLinking digital traces to survey or content data"
   },
   {
+    "objectID": "ccs/slides.html#json-data",
+    "href": "ccs/slides.html#json-data",
+    "title": "Computational Communication Science",
+    "section": "JSON data",
+    "text": "JSON data\n\n(How) did you successfully read your a single JSON file?\nHow can we read multiples files? list.files() & map() functions"
+  },
+  {
+    "objectID": "ccs/slides.html#session-detection",
+    "href": "ccs/slides.html#session-detection",
+    "title": "Computational Communication Science",
+    "section": "Session detection",
+    "text": "Session detection\n\nDescribe the basic algorithm to detect sessions.\nWhat assumptions do we have to make about user behavior?\nHow can we define sessions for (a) browser or (b) phone log files?\n\nParry & Toth (2025)"
+  },
+  {
+    "objectID": "ccs/slides.html#combining-data",
+    "href": "ccs/slides.html#combining-data",
+    "title": "Computational Communication Science",
+    "section": "Combining data",
+    "text": "Combining data\n\nWhat is the difference between join(), left_join() and right_join()?\nWhat kinds of data would you try to combine for a research project?"
+  },
+  {
     "objectID": "ccs/slides.html#references",
     "href": "ccs/slides.html#references",
     "title": "Computational Communication Science",
     "section": "References",
-    "text": "References\n\n\n\n\nBagchi, C., Menczer, F., Lundquist, J., Tarafdar, M., Paik, A., & Grabowicz, P. A. (2024). Social media algorithms can curb misinformation, but do they? arXiv. https://doi.org/10.48550/ARXIV.2409.18393\n\n\nClemm von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of Web Browsing Data: A Guide. Social Science Computer Review, 42(6), 1479–1504. https://doi.org/10.1177/08944393241227868\n\n\nErnst, A., Dietrich, F., Rohr, B., Reinecke, L., & Scharkow, M. (2024). Revisiting the digital jukebox in daily life: Applying mood management theory to algorithmically curated music streaming environments. http://dx.doi.org/10.31234/osf.io/7eb4g\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nMunger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. Political Behavior, 39(3), 629–649. https://doi.org/10.1007/s11109-016-9373-5\n\n\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 18(2), 124–141. https://doi.org/10.1080/19312458.2023.2181319\n\n\nPfiffner, N., & Friemel, Thomas. N. (2023). Leveraging Data Donations for Communication Research: Exploring Drivers Behind the Willingness to Donate. Communication Methods and Measures, 17(3), 227–249. https://doi.org/10.1080/19312458.2023.2176474\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nScharkow, M. (2016). The accuracy of self-reported internet use. A validation study using client log data. Communication Methods and Measures, 10(1), 13–27. https://doi.org/10.1080/19312458.2015.1118446\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell.\n\n\nWagner, M. W. (2023). Independence by permission. Science, 381(6656), 388–391. https://doi.org/10.1126/science.adi2430"
+    "text": "References\n\n\n\n\nBagchi, C., Menczer, F., Lundquist, J., Tarafdar, M., Paik, A., & Grabowicz, P. A. (2024). Social media algorithms can curb misinformation, but do they? arXiv. https://doi.org/10.48550/ARXIV.2409.18393\n\n\nClemm von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of Web Browsing Data: A Guide. Social Science Computer Review, 42(6), 1479–1504. https://doi.org/10.1177/08944393241227868\n\n\nErnst, A., Dietrich, F., Rohr, B., Reinecke, L., & Scharkow, M. (2024). Revisiting the digital jukebox in daily life: Applying mood management theory to algorithmically curated music streaming environments. http://dx.doi.org/10.31234/osf.io/7eb4g\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nMunger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. Political Behavior, 39(3), 629–649. https://doi.org/10.1007/s11109-016-9373-5\n\n\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 18(2), 124–141. https://doi.org/10.1080/19312458.2023.2181319\n\n\nParry, D., & Toth, R. (2025). Extracting Meaningful Measures of Smartphone Usage from Android Event Log Data: A Methodological Primer. Computational Communication Research, 7(1), 1. https://doi.org/10.5117/ccr2025.1.8.parr\n\n\nPfiffner, N., & Friemel, Thomas. N. (2023). Leveraging Data Donations for Communication Research: Exploring Drivers Behind the Willingness to Donate. Communication Methods and Measures, 17(3), 227–249. https://doi.org/10.1080/19312458.2023.2176474\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nScharkow, M. (2016). The accuracy of self-reported internet use. A validation study using client log data. Communication Methods and Measures, 10(1), 13–27. https://doi.org/10.1080/19312458.2015.1118446\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell.\n\n\nWagner, M. W. (2023). Independence by permission. Science, 381(6656), 388–391. https://doi.org/10.1126/science.adi2430"
   }
 ]
