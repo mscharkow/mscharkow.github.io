@@ -97,4 +97,20 @@ Refresh your R skills.
 
 ### Reading
 
-@@douglasparry2025;@clemmvonhohenberg2024
+@douglasparry2025;@clemmvonhohenberg2024
+
+
+## Session 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Slides"></a> {#6}
+
+### Topics
+
+- collecting data for content analysis
+- automatic content analysis basics
+
+### Reading
+
+@vanatteveldt2022computational
+
+### Tasks for the next session
+
+1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/content-data.html) in R. 
