@@ -622,7 +622,7 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
 <li>What assumptions do we have to make about user behavior?</li>
 <li>How can we define sessions for (a) browser or (b) phone log files?</li>
 </ol>
-<p><span class="citation" data-cites="douglasparry2025">Parry &amp; Toth (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
+<p><span class="citation" data-cites="douglasparry2025">Parry &amp; Toth (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>;<span class="citation" data-cites="clemmvonhohenberg2024">Clemm von Hohenberg et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
 </section>
 <section id="combining-data" class="slide level2">
 <h2>Combining data</h2>
@@ -630,6 +630,409 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
 <li>What is the difference between <code>join()</code>, <code>left_join()</code> and <code>right_join()</code>?</li>
 <li>What kinds of data would you try to combine for a research project?</li>
 </ol>
+</section></section>
+<section>
+<section id="s6" class="title-slide slide level1 center">
+<h1>Session 6</h1>
+
+</section>
+<section id="data-collection-for-content-analysis" class="slide level2">
+<h2>Data Collection for Content Analysis</h2>
+<p>Methods for data collection (using R), from simplest to most complex:</p>
+<ol type="1">
+<li><strong>Directly import machine-readable files</strong> from the web (e.g., CSV).</li>
+<li><strong>Use pre-built R packages</strong> for specific platforms/providers.</li>
+<li><strong>Obtain semi-standardized data via APIs</strong>.</li>
+<li><strong>Download and process HTML content</strong> from websites using web scraping.</li>
+<li><strong>Collect content or take screenshots</strong> using remotely controlled browsers.</li>
+<li><strong>Request data donations</strong> from users.</li>
+</ol>
+</section>
+<section id="machine-readable-files" class="slide level2">
+<h2>Machine-readable files</h2>
+<ul>
+<li>Download and read structured data files (like CSV, JSON, XML) that are publicly available online</li>
+<li><strong>Benefit:</strong> Often the easiest and most reliable way to obtain data when available</li>
+<li><strong>Drawbacks:</strong> Limited availability, needs some searching</li>
+<li>Examples:
+<ul>
+<li><a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-10-18/stranger_things_all_dialogue.csv">Stranger Things Dialogue</a></li>
+<li><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/L4OAKN">ParlSpeech V2 dataset</a></li>
+<li><a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-05-06/nsf_terminations.csv">NSF Grant Terminations</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="specific-r-packages" class="slide level2">
+<h2>Specific R packages</h2>
+<ul>
+<li><strong>Benefit:</strong> Simple to install in R, pre-processed or readily accessible text data</li>
+<li><strong>Drawbacks:</strong> Very limited scope, sometimes not up-to-date</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><strong><code>gutenbergr</code></strong>: Accessing literary works from Project Gutenberg.</li>
+<li><strong><code>manifestoR</code></strong>: Contains annotated party manifestos from many countries and years from the Manifesto project</li>
+<li><strong><code>taylor</code></strong>: Provides song data, including lyrics for the Taylor Swift discography</li>
+</ul></li>
+</ul>
+</section>
+<section id="rss-feeds" class="slide level2">
+<h2>RSS Feeds</h2>
+<ul>
+<li><strong>Benefit:</strong> Provides standardized, structured updates for frequently changing content.</li>
+<li><strong>Drawbacks:</strong> Content often limited to headlines/summaries, may not include full text; feeds can be discontinued or change formats.</li>
+</ul>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rss version="2.0"&gt;
+  &lt;channel&gt;
+    &lt;title&gt;Minimal News Feed&lt;/title&gt;
+    &lt;link&gt;http://www.example.com/news&lt;/link&gt;
+    &lt;item&gt;
+      &lt;title&gt;First Example News Story&lt;/title&gt;
+      &lt;link&gt;http://www.example.com/news/story1.html&lt;/link&gt;
+      &lt;description&gt;This is a brief summary of the first example news story.&lt;/description&gt;
+    &lt;/item&gt;
+  &lt;/channel&gt;
+&lt;/rss&gt;</code></pre>
+</section>
+<section id="json-apis" class="slide level2">
+<h2>JSON APIs</h2>
+<ul>
+<li><strong>Benefit:</strong> Provides structured, flexible data (JSON format); often allows for specific queries and filters.</li>
+<li><strong>Drawbacks:</strong> Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.</li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[
+    {
+        "quote": "I’m not saying it’s not bad. It’s bad. But it could be worse.",
+        "author": "Saul Goodman"
+    },
+    {
+        "quote": "Alright, I've got the talking pillow now... Okay?",
+        "author": "Walter White"
+    }
+]
+ </code></pre>
+</div>
+</div>
+</section>
+<section id="web-scraping" class="slide level2">
+<h2>Web Scraping</h2>
+<ul>
+<li>involves extracting data from websites, and it’s particularly useful for content where APIs might not be available.</li>
+<li>HTML content is downloaded and parsed to extract specific elements (e.g., headlines, article bodies, dates).</li>
+<li><strong>Challenges:</strong>
+<ul>
+<li>Layout updates can break scraping code.</li>
+<li>Websites may block or limit automated access.</li>
+<li>Content loaded via JavaScript can be harder to scrape directly.</li>
+</ul></li>
+</ul>
+</section>
+<section id="scraping-with-remote-controlled-browsers" class="slide level2">
+<h2>Scraping with remote-controlled browsers</h2>
+<ul>
+<li>Utilizes automated browsers (e.g., Chrome, Firefox) to navigate websites, interact with elements, and extract content, mimicking human user behavior.</li>
+<li><strong>Benefit:</strong> Can handle dynamic content (JavaScript, AJAX), login walls, and other complex interactive elements that traditional web scraping struggles with.</li>
+<li><strong>Drawbacks:</strong>
+<ul>
+<li>Significantly slower than direct HTML fetching as it renders the entire page.</li>
+<li>Requires setting up browser drivers (e.g., ChromeDriver, GeckoDriver).</li>
+<li>Still detectable by sophisticated anti-bot systems.</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-donations-1" class="slide level2">
+<h2>Data Donations</h2>
+<ul>
+<li>Involves requesting and collecting data directly from users, who volunteer to share their digital information for research purposes.</li>
+<li><strong>Benefit:</strong> Provides access to data from closed platforms (e.g., mobile apps, private social media groups) or highly personalized content that is otherwise inaccessible.</li>
+<li><strong>Drawbacks:</strong>
+<ul>
+<li>Data format and completeness can vary widely across platforms/donors.</li>
+<li>Sample may not be representative of the broader population.</li>
+<li>Requires robust infrastructure to collect and process diverse donated data.</li>
+</ul></li>
+</ul>
+</section>
+<section id="multimodal-data" class="slide level2">
+<h2>Multimodal data</h2>
+<ul>
+<li>Many platforms provide text as well as images or audiovisual data.</li>
+<li>Images and audiovisual data need to be downloaded before analysis.</li>
+<li>We can use the multimodal data directly or convert them to text (e.g.&nbsp;transcripts or image descriptions).</li>
+<li>Conversion to text makes things easier for us, but loses lots of information.</li>
+<li>Many useful tools available, e.g.&nbsp;for <a href="https://github.com/yt-dlp/yt-dlp">mass downloading</a>, <a href="https://github.com/Softcatala/whisper-ctranslate2">speech transcription</a>, <a href="https://github.com/amietn/vcsi">video-to-image conversion</a>, etc.</li>
+</ul>
+</section></section>
+<section>
+<section id="automatic-content-analysis" class="title-slide slide level1 center">
+<h1>Automatic content analysis</h1>
+
+</section>
+<section id="text-as-data" class="slide level2">
+<h2>Text as Data</h2>
+<p>Textual data, often unstructured, needs to be transformed into a format suitable for computational analysis. Common representations include:</p>
+<ul>
+<li><strong>Strings:</strong> The raw, sequential characters of text (e.g., “This is a sentence.”). This is the most basic form, preserving the original wording.</li>
+<li><strong>Term-Document Matrices (TDMs) / Document-Term Matrices (DTMs):</strong> Numerical representations where rows are documents and columns are terms (words), with cell values indicating term frequency (or presence) in a document. This focuses on word counts and relationships across documents.</li>
+<li><strong>Word Embeddings:</strong> Vector representations of words in a high-dimensional space, where semantically similar words are located closer together. This captures semantic meaning and context.</li>
+</ul>
+</section>
+<section id="text-as-strings" class="slide level2">
+<h2>Text as Strings</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">document_id</th>
+<th style="text-align: left;">text_content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">The quick brown fox jumps over the lazy dog.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">A lazy cat sleeps on the mat.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">The fox and the dog are friends.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="text-as-term-document-matrix" class="slide level2">
+<h2>Text as Term-Document Matrix</h2>
+<ul>
+<li>Term-Document Matrix (TDM) quantify word occurrences.</li>
+<li>Each column is a unique term, each row is a document, and cells indicate how often a term appears in a document.</li>
+</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">document</th>
+<th style="text-align: left;">brown</th>
+<th style="text-align: left;">cat</th>
+<th style="text-align: left;">dog</th>
+<th style="text-align: left;">fox</th>
+<th style="text-align: left;">friends</th>
+<th style="text-align: left;">jumps</th>
+<th style="text-align: left;">lazy</th>
+<th style="text-align: left;">mat</th>
+<th style="text-align: left;">quick</th>
+<th style="text-align: left;">sleeps</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="text-as-word-embeddings" class="slide level2">
+<h2>Text as Word Embeddings</h2>
+<ul>
+<li>Word or sentence embeddings represent text as numerical vectors, capturing semantic relationships.</li>
+<li>We can use vector arithmetic to compute semantic relations like <code>queen = king - man + woman</code>.</li>
+<li>The embedding dimensions themselves have no interpretable meaning to us.</li>
+</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sentence ID</th>
+<th style="text-align: left;">Dim 1</th>
+<th style="text-align: left;">Dim 2</th>
+<th style="text-align: left;">Dim 3</th>
+<th style="text-align: left;">Dim 4</th>
+<th style="text-align: left;">Dim 5</th>
+<th style="text-align: left;">Dim 6</th>
+<th style="text-align: left;">Dim 7</th>
+<th style="text-align: left;">Dim 8</th>
+<th style="text-align: left;">Dim 9</th>
+<th style="text-align: left;">Dim 10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0.78</td>
+<td style="text-align: left;">0.15</td>
+<td style="text-align: left;">0.92</td>
+<td style="text-align: left;">0.23</td>
+<td style="text-align: left;">0.65</td>
+<td style="text-align: left;">0.42</td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">0.19</td>
+<td style="text-align: left;">0.70</td>
+<td style="text-align: left;">0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0.21</td>
+<td style="text-align: left;">0.89</td>
+<td style="text-align: left;">0.10</td>
+<td style="text-align: left;">0.77</td>
+<td style="text-align: left;">0.33</td>
+<td style="text-align: left;">0.95</td>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.68</td>
+<td style="text-align: left;">0.25</td>
+<td style="text-align: left;">0.87</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">0.62</td>
+<td style="text-align: left;">0.35</td>
+<td style="text-align: left;">0.75</td>
+<td style="text-align: left;">0.12</td>
+<td style="text-align: left;">0.88</td>
+<td style="text-align: left;">0.08</td>
+<td style="text-align: left;">0.59</td>
+<td style="text-align: left;">0.30</td>
+<td style="text-align: left;">0.91</td>
+<td style="text-align: left;">0.17</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="traditional-automatic-content-analysis" class="slide level2">
+<h2>Traditional automatic content analysis</h2>
+<ul>
+<li>Preprocess the data
+<ul>
+<li>remove stopwords or infrequent terms</li>
+<li>resolve anaphora or homonyms</li>
+<li>detect entities, negations, fixed phrases</li>
+</ul></li>
+<li>Convert text to term-document matrix or text embeddings.</li>
+<li>Use unsupervised or supervised machine learning, dictionaries, or other approaches</li>
+<li>Get predictions (i.e.&nbsp;categories) per document or term</li>
+<li>extensive literature, e.g. <span class="citation" data-cites="scharkow2013">Scharkow (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>;<span class="citation" data-cites="vanatteveldt2022computational">Van Atteveldt et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></li>
+</ul>
+</section>
+<section id="large-language-models-llm" class="slide level2">
+<h2>Large Language Models (LLM)</h2>
+<ul>
+<li>Models train on vast internet text (books, articles, websites) and learn <strong>contextual word embeddings</strong>, i.e.&nbsp;word vectors change based on surrounding words (e.g., “river bank” vs.&nbsp;“money bank”), capturing nuanced meaning.</li>
+<li><strong>Reinforcement Learning from Human Feedback (RLHF):</strong> Human rankings of LLM responses to instructions train a reward model. The LLM then optimizes its responses to maximize this reward.</li>
+<li>Given a prompt, the LLM uses its learned knowledge to <strong>predict the most probable word sequence</strong> for a response.</li>
+<li>LLM can be used for many tasks: translation, summarization, text editing, etc.</li>
+<li><a href="https://ig.ft.com/generative-ai/">LLM Explainer by the FT</a>, <a href="https://openai.com/index/instruction-following/">RLHF explainer by OpenAI</a></li>
+</ul>
+</section>
+<section id="large-multimodal-models-lmms" class="slide level2">
+<h2>Large Multimodal Models (LMMs)</h2>
+<ul>
+<li>Beyond text, LMMs integrate modalities like text, images, audio, or video, unlike text-focused LLMs.</li>
+<li>Specifically trained to understand and generate image-related content</li>
+<li>LMM learn to represent different modalities in a shared “embedding space,” understanding how text relates to visuals.</li>
+<li>LMM can perform tasks like image captioning, visual question answering, image generation from text, and object recognition.</li>
+</ul>
+</section>
+<section id="content-analysis-with-llmlmm" class="slide level2">
+<h2>Content analysis with LLM/LMM</h2>
+<ul>
+<li><strong>Zero-Shot/Few Shot Coding</strong>, the LLM performs a task with no or few specific examples, relying solely on a clear instruction in the prompt</li>
+<li><strong>Benefits:</strong>
+<ul>
+<li>No preprocessing or training data necessary, can perform a wide array of tasks.</li>
+<li>We can simply re-use coding instructions for manual content analysis.</li>
+<li>Often better at understanding subtle meanings and complex tasks/contexts.</li>
+</ul></li>
+<li><strong>Drawbacks:</strong>
+<ul>
+<li>LLM may inherit and amplify biases present in their training data.</li>
+<li>Using commercial LLM APIs can be costly, and coding is relatively slow.</li>
+<li>Performance can vary significantly with minor changes in prompt wording or the selection of few-shot examples.</li>
+</ul></li>
+</ul>
+</section>
+<section id="ai-based-content-analysis" class="slide level2">
+<h2>AI-based content analysis</h2>
+<ul>
+<li>In this course, we use LLM/LMM for basically all content analysis tasks.</li>
+<li>Basic workflow is similar to manual content analysis:
+<ol type="1">
+<li>Collect the content data to be coded (text, image, video, etc.).</li>
+<li>Develop codebook with coding instructions and examples.</li>
+<li>Combine instructions with text/image data to prompts for LLM API.</li>
+<li>Collect structured predictions for each coding unit from the model.</li>
+<li>Maybe combine different predictions (varying tasks, varying LLM/LMM)</li>
+</ol></li>
+<li>Always validate with human coding!</li>
+</ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
@@ -674,6 +1077,9 @@ Pfiffner, N., &amp; Friemel, Thomas. N. (2023). Leveraging Data Donations for Co
 </div>
 <div id="ref-salganik2018" class="csl-entry" role="listitem">
 Salganik, M. (2018). <em>Bit by bit: Social research in the digital age</em>. Princeton University Press.
+</div>
+<div id="ref-scharkow2013" class="csl-entry" role="listitem">
+Scharkow, M. (2013). Thematic content analysis using supervised machine learning: An empirical evaluation using german online news. <em>Quality &amp; Quantity</em>, <em>47</em>(2), 761–773.
 </div>
 <div id="ref-scharkow2016" class="csl-entry" role="listitem">
 Scharkow, M. (2016). The accuracy of self-reported internet use. A validation study using client log data. <em>Communication Methods and Measures</em>, <em>10</em>(1), 13–27. <a href="https://doi.org/10.1080/19312458.2015.1118446">https://doi.org/10.1080/19312458.2015.1118446</a>

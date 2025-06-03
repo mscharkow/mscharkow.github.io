@@ -1439,7 +1439,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Some people are immune to good advice.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"The thing is, if you just do stuff and nothing happens, what's it all mean? What's the point? Oh right, this whole thing is about self-acceptance.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1894,28 +1894,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -987.75, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.00625 -13.95077\nsample estimates:\nmean of x mean of y \n 165.9923  179.9708"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.14, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02750 -13.97202\nsample estimates:\nmean of x mean of y \n 166.0049  180.0047"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 4.17741e-30\n\ndo_t_test(100, males, males)\n\n[1] 0.1494454"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.839044e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.3619127"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.1386720 0.7884855 0.9673787 0.1294955 0.2782864 0.4237619\n\nsum(results_h0 &lt;= .05)\n\n[1] 43"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.46550802 0.29638833 0.09385065 0.73538070 0.09191469 0.63665805\n\nsum(results_h0 &lt;= .05)\n\n[1] 70"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 439\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 473\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -2517,7 +2517,7 @@
     "href": "ccs/slides.html#session-detection",
     "title": "Computational Communication Science",
     "section": "Session detection",
-    "text": "Session detection\n\nDescribe the basic algorithm to detect sessions.\nWhat assumptions do we have to make about user behavior?\nHow can we define sessions for (a) browser or (b) phone log files?\n\nParry & Toth (2025)"
+    "text": "Session detection\n\nDescribe the basic algorithm to detect sessions.\nWhat assumptions do we have to make about user behavior?\nHow can we define sessions for (a) browser or (b) phone log files?\n\nParry & Toth (2025);Clemm von Hohenberg et al. (2024)"
   },
   {
     "objectID": "ccs/slides.html#combining-data",
@@ -2527,10 +2527,136 @@
     "text": "Combining data\n\nWhat is the difference between join(), left_join() and right_join()?\nWhat kinds of data would you try to combine for a research project?"
   },
   {
+    "objectID": "ccs/slides.html#data-collection-for-content-analysis",
+    "href": "ccs/slides.html#data-collection-for-content-analysis",
+    "title": "Computational Communication Science",
+    "section": "Data Collection for Content Analysis",
+    "text": "Data Collection for Content Analysis\nMethods for data collection (using R), from simplest to most complex:\n\nDirectly import machine-readable files from the web (e.g., CSV).\nUse pre-built R packages for specific platforms/providers.\nObtain semi-standardized data via APIs.\nDownload and process HTML content from websites using web scraping.\nCollect content or take screenshots using remotely controlled browsers.\nRequest data donations from users."
+  },
+  {
+    "objectID": "ccs/slides.html#machine-readable-files",
+    "href": "ccs/slides.html#machine-readable-files",
+    "title": "Computational Communication Science",
+    "section": "Machine-readable files",
+    "text": "Machine-readable files\n\nDownload and read structured data files (like CSV, JSON, XML) that are publicly available online\nBenefit: Often the easiest and most reliable way to obtain data when available\nDrawbacks: Limited availability, needs some searching\nExamples:\n\nStranger Things Dialogue\nParlSpeech V2 dataset\nNSF Grant Terminations"
+  },
+  {
+    "objectID": "ccs/slides.html#specific-r-packages",
+    "href": "ccs/slides.html#specific-r-packages",
+    "title": "Computational Communication Science",
+    "section": "Specific R packages",
+    "text": "Specific R packages\n\nBenefit: Simple to install in R, pre-processed or readily accessible text data\nDrawbacks: Very limited scope, sometimes not up-to-date\nExamples:\n\ngutenbergr: Accessing literary works from Project Gutenberg.\nmanifestoR: Contains annotated party manifestos from many countries and years from the Manifesto project\ntaylor: Provides song data, including lyrics for the Taylor Swift discography"
+  },
+  {
+    "objectID": "ccs/slides.html#rss-feeds",
+    "href": "ccs/slides.html#rss-feeds",
+    "title": "Computational Communication Science",
+    "section": "RSS Feeds",
+    "text": "RSS Feeds\n\nBenefit: Provides standardized, structured updates for frequently changing content.\nDrawbacks: Content often limited to headlines/summaries, may not include full text; feeds can be discontinued or change formats.\n\n&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;rss version=\"2.0\"&gt;\n  &lt;channel&gt;\n    &lt;title&gt;Minimal News Feed&lt;/title&gt;\n    &lt;link&gt;http://www.example.com/news&lt;/link&gt;\n    &lt;item&gt;\n      &lt;title&gt;First Example News Story&lt;/title&gt;\n      &lt;link&gt;http://www.example.com/news/story1.html&lt;/link&gt;\n      &lt;description&gt;This is a brief summary of the first example news story.&lt;/description&gt;\n    &lt;/item&gt;\n  &lt;/channel&gt;\n&lt;/rss&gt;"
+  },
+  {
+    "objectID": "ccs/slides.html#json-apis",
+    "href": "ccs/slides.html#json-apis",
+    "title": "Computational Communication Science",
+    "section": "JSON APIs",
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"I’m not saying it’s not bad. It’s bad. But it could be worse.\",\n        \"author\": \"Saul Goodman\"\n    },\n    {\n        \"quote\": \"Alright, I've got the talking pillow now... Okay?\",\n        \"author\": \"Walter White\"\n    }\n]"
+  },
+  {
+    "objectID": "ccs/slides.html#web-scraping",
+    "href": "ccs/slides.html#web-scraping",
+    "title": "Computational Communication Science",
+    "section": "Web Scraping",
+    "text": "Web Scraping\n\ninvolves extracting data from websites, and it’s particularly useful for content where APIs might not be available.\nHTML content is downloaded and parsed to extract specific elements (e.g., headlines, article bodies, dates).\nChallenges:\n\nLayout updates can break scraping code.\nWebsites may block or limit automated access.\nContent loaded via JavaScript can be harder to scrape directly."
+  },
+  {
+    "objectID": "ccs/slides.html#scraping-with-remote-controlled-browsers",
+    "href": "ccs/slides.html#scraping-with-remote-controlled-browsers",
+    "title": "Computational Communication Science",
+    "section": "Scraping with remote-controlled browsers",
+    "text": "Scraping with remote-controlled browsers\n\nUtilizes automated browsers (e.g., Chrome, Firefox) to navigate websites, interact with elements, and extract content, mimicking human user behavior.\nBenefit: Can handle dynamic content (JavaScript, AJAX), login walls, and other complex interactive elements that traditional web scraping struggles with.\nDrawbacks:\n\nSignificantly slower than direct HTML fetching as it renders the entire page.\nRequires setting up browser drivers (e.g., ChromeDriver, GeckoDriver).\nStill detectable by sophisticated anti-bot systems."
+  },
+  {
+    "objectID": "ccs/slides.html#data-donations-1",
+    "href": "ccs/slides.html#data-donations-1",
+    "title": "Computational Communication Science",
+    "section": "Data Donations",
+    "text": "Data Donations\n\nInvolves requesting and collecting data directly from users, who volunteer to share their digital information for research purposes.\nBenefit: Provides access to data from closed platforms (e.g., mobile apps, private social media groups) or highly personalized content that is otherwise inaccessible.\nDrawbacks:\n\nData format and completeness can vary widely across platforms/donors.\nSample may not be representative of the broader population.\nRequires robust infrastructure to collect and process diverse donated data."
+  },
+  {
+    "objectID": "ccs/slides.html#multimodal-data",
+    "href": "ccs/slides.html#multimodal-data",
+    "title": "Computational Communication Science",
+    "section": "Multimodal data",
+    "text": "Multimodal data\n\nMany platforms provide text as well as images or audiovisual data.\nImages and audiovisual data need to be downloaded before analysis.\nWe can use the multimodal data directly or convert them to text (e.g. transcripts or image descriptions).\nConversion to text makes things easier for us, but loses lots of information.\nMany useful tools available, e.g. for mass downloading, speech transcription, video-to-image conversion, etc."
+  },
+  {
+    "objectID": "ccs/slides.html#text-as-data",
+    "href": "ccs/slides.html#text-as-data",
+    "title": "Computational Communication Science",
+    "section": "Text as Data",
+    "text": "Text as Data\nTextual data, often unstructured, needs to be transformed into a format suitable for computational analysis. Common representations include:\n\nStrings: The raw, sequential characters of text (e.g., “This is a sentence.”). This is the most basic form, preserving the original wording.\nTerm-Document Matrices (TDMs) / Document-Term Matrices (DTMs): Numerical representations where rows are documents and columns are terms (words), with cell values indicating term frequency (or presence) in a document. This focuses on word counts and relationships across documents.\nWord Embeddings: Vector representations of words in a high-dimensional space, where semantically similar words are located closer together. This captures semantic meaning and context."
+  },
+  {
+    "objectID": "ccs/slides.html#text-as-strings",
+    "href": "ccs/slides.html#text-as-strings",
+    "title": "Computational Communication Science",
+    "section": "Text as Strings",
+    "text": "Text as Strings\n\n\n\n\n\n\ndocument_id\ntext_content\n\n\n\n\n1\nThe quick brown fox jumps over the lazy dog.\n\n\n2\nA lazy cat sleeps on the mat.\n\n\n3\nThe fox and the dog are friends."
+  },
+  {
+    "objectID": "ccs/slides.html#text-as-term-document-matrix",
+    "href": "ccs/slides.html#text-as-term-document-matrix",
+    "title": "Computational Communication Science",
+    "section": "Text as Term-Document Matrix",
+    "text": "Text as Term-Document Matrix\n\nTerm-Document Matrix (TDM) quantify word occurrences.\nEach column is a unique term, each row is a document, and cells indicate how often a term appears in a document.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndocument\nbrown\ncat\ndog\nfox\nfriends\njumps\nlazy\nmat\nquick\nsleeps\n\n\n\n\n1\n1\n0\n1\n1\n0\n1\n1\n0\n1\n0\n\n\n2\n0\n1\n0\n0\n0\n0\n1\n1\n0\n1\n\n\n3\n0\n0\n1\n1\n1\n0\n0\n0\n0\n0"
+  },
+  {
+    "objectID": "ccs/slides.html#text-as-word-embeddings",
+    "href": "ccs/slides.html#text-as-word-embeddings",
+    "title": "Computational Communication Science",
+    "section": "Text as Word Embeddings",
+    "text": "Text as Word Embeddings\n\nWord or sentence embeddings represent text as numerical vectors, capturing semantic relationships.\nWe can use vector arithmetic to compute semantic relations like queen = king - man + woman.\nThe embedding dimensions themselves have no interpretable meaning to us.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSentence ID\nDim 1\nDim 2\nDim 3\nDim 4\nDim 5\nDim 6\nDim 7\nDim 8\nDim 9\nDim 10\n\n\n\n\n1\n0.78\n0.15\n0.92\n0.23\n0.65\n0.42\n0.81\n0.19\n0.70\n0.33\n\n\n2\n0.21\n0.89\n0.10\n0.77\n0.33\n0.95\n0.05\n0.68\n0.25\n0.87\n\n\n3\n0.62\n0.35\n0.75\n0.12\n0.88\n0.08\n0.59\n0.30\n0.91\n0.17"
+  },
+  {
+    "objectID": "ccs/slides.html#traditional-automatic-content-analysis",
+    "href": "ccs/slides.html#traditional-automatic-content-analysis",
+    "title": "Computational Communication Science",
+    "section": "Traditional automatic content analysis",
+    "text": "Traditional automatic content analysis\n\nPreprocess the data\n\nremove stopwords or infrequent terms\nresolve anaphora or homonyms\ndetect entities, negations, fixed phrases\n\nConvert text to term-document matrix or text embeddings.\nUse unsupervised or supervised machine learning, dictionaries, or other approaches\nGet predictions (i.e. categories) per document or term\nextensive literature, e.g. Scharkow (2013);Van Atteveldt et al. (2022)"
+  },
+  {
+    "objectID": "ccs/slides.html#large-language-models-llm",
+    "href": "ccs/slides.html#large-language-models-llm",
+    "title": "Computational Communication Science",
+    "section": "Large Language Models (LLM)",
+    "text": "Large Language Models (LLM)\n\nModels train on vast internet text (books, articles, websites) and learn contextual word embeddings, i.e. word vectors change based on surrounding words (e.g., “river bank” vs. “money bank”), capturing nuanced meaning.\nReinforcement Learning from Human Feedback (RLHF): Human rankings of LLM responses to instructions train a reward model. The LLM then optimizes its responses to maximize this reward.\nGiven a prompt, the LLM uses its learned knowledge to predict the most probable word sequence for a response.\nLLM can be used for many tasks: translation, summarization, text editing, etc.\nLLM Explainer by the FT, RLHF explainer by OpenAI"
+  },
+  {
+    "objectID": "ccs/slides.html#large-multimodal-models-lmms",
+    "href": "ccs/slides.html#large-multimodal-models-lmms",
+    "title": "Computational Communication Science",
+    "section": "Large Multimodal Models (LMMs)",
+    "text": "Large Multimodal Models (LMMs)\n\nBeyond text, LMMs integrate modalities like text, images, audio, or video, unlike text-focused LLMs.\nSpecifically trained to understand and generate image-related content\nLMM learn to represent different modalities in a shared “embedding space,” understanding how text relates to visuals.\nLMM can perform tasks like image captioning, visual question answering, image generation from text, and object recognition."
+  },
+  {
+    "objectID": "ccs/slides.html#content-analysis-with-llmlmm",
+    "href": "ccs/slides.html#content-analysis-with-llmlmm",
+    "title": "Computational Communication Science",
+    "section": "Content analysis with LLM/LMM",
+    "text": "Content analysis with LLM/LMM\n\nZero-Shot/Few Shot Coding, the LLM performs a task with no or few specific examples, relying solely on a clear instruction in the prompt\nBenefits:\n\nNo preprocessing or training data necessary, can perform a wide array of tasks.\nWe can simply re-use coding instructions for manual content analysis.\nOften better at understanding subtle meanings and complex tasks/contexts.\n\nDrawbacks:\n\nLLM may inherit and amplify biases present in their training data.\nUsing commercial LLM APIs can be costly, and coding is relatively slow.\nPerformance can vary significantly with minor changes in prompt wording or the selection of few-shot examples."
+  },
+  {
+    "objectID": "ccs/slides.html#ai-based-content-analysis",
+    "href": "ccs/slides.html#ai-based-content-analysis",
+    "title": "Computational Communication Science",
+    "section": "AI-based content analysis",
+    "text": "AI-based content analysis\n\nIn this course, we use LLM/LMM for basically all content analysis tasks.\nBasic workflow is similar to manual content analysis:\n\nCollect the content data to be coded (text, image, video, etc.).\nDevelop codebook with coding instructions and examples.\nCombine instructions with text/image data to prompts for LLM API.\nCollect structured predictions for each coding unit from the model.\nMaybe combine different predictions (varying tasks, varying LLM/LMM)\n\nAlways validate with human coding!"
+  },
+  {
     "objectID": "ccs/slides.html#references",
     "href": "ccs/slides.html#references",
     "title": "Computational Communication Science",
     "section": "References",
-    "text": "References\n\n\n\n\nBagchi, C., Menczer, F., Lundquist, J., Tarafdar, M., Paik, A., & Grabowicz, P. A. (2024). Social media algorithms can curb misinformation, but do they? arXiv. https://doi.org/10.48550/ARXIV.2409.18393\n\n\nClemm von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of Web Browsing Data: A Guide. Social Science Computer Review, 42(6), 1479–1504. https://doi.org/10.1177/08944393241227868\n\n\nErnst, A., Dietrich, F., Rohr, B., Reinecke, L., & Scharkow, M. (2024). Revisiting the digital jukebox in daily life: Applying mood management theory to algorithmically curated music streaming environments. http://dx.doi.org/10.31234/osf.io/7eb4g\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nMunger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. Political Behavior, 39(3), 629–649. https://doi.org/10.1007/s11109-016-9373-5\n\n\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 18(2), 124–141. https://doi.org/10.1080/19312458.2023.2181319\n\n\nParry, D., & Toth, R. (2025). Extracting Meaningful Measures of Smartphone Usage from Android Event Log Data: A Methodological Primer. Computational Communication Research, 7(1), 1. https://doi.org/10.5117/ccr2025.1.8.parr\n\n\nPfiffner, N., & Friemel, Thomas. N. (2023). Leveraging Data Donations for Communication Research: Exploring Drivers Behind the Willingness to Donate. Communication Methods and Measures, 17(3), 227–249. https://doi.org/10.1080/19312458.2023.2176474\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nScharkow, M. (2016). The accuracy of self-reported internet use. A validation study using client log data. Communication Methods and Measures, 10(1), 13–27. https://doi.org/10.1080/19312458.2015.1118446\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell.\n\n\nWagner, M. W. (2023). Independence by permission. Science, 381(6656), 388–391. https://doi.org/10.1126/science.adi2430"
+    "text": "References\n\n\n\n\nBagchi, C., Menczer, F., Lundquist, J., Tarafdar, M., Paik, A., & Grabowicz, P. A. (2024). Social media algorithms can curb misinformation, but do they? arXiv. https://doi.org/10.48550/ARXIV.2409.18393\n\n\nClemm von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of Web Browsing Data: A Guide. Social Science Computer Review, 42(6), 1479–1504. https://doi.org/10.1177/08944393241227868\n\n\nErnst, A., Dietrich, F., Rohr, B., Reinecke, L., & Scharkow, M. (2024). Revisiting the digital jukebox in daily life: Applying mood management theory to algorithmically curated music streaming environments. http://dx.doi.org/10.31234/osf.io/7eb4g\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nMunger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. Political Behavior, 39(3), 629–649. https://doi.org/10.1007/s11109-016-9373-5\n\n\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 18(2), 124–141. https://doi.org/10.1080/19312458.2023.2181319\n\n\nParry, D., & Toth, R. (2025). Extracting Meaningful Measures of Smartphone Usage from Android Event Log Data: A Methodological Primer. Computational Communication Research, 7(1), 1. https://doi.org/10.5117/ccr2025.1.8.parr\n\n\nPfiffner, N., & Friemel, Thomas. N. (2023). Leveraging Data Donations for Communication Research: Exploring Drivers Behind the Willingness to Donate. Communication Methods and Measures, 17(3), 227–249. https://doi.org/10.1080/19312458.2023.2176474\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nScharkow, M. (2013). Thematic content analysis using supervised machine learning: An empirical evaluation using german online news. Quality & Quantity, 47(2), 761–773.\n\n\nScharkow, M. (2016). The accuracy of self-reported internet use. A validation study using client log data. Communication Methods and Measures, 10(1), 13–27. https://doi.org/10.1080/19312458.2015.1118446\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell.\n\n\nWagner, M. W. (2023). Independence by permission. Science, 381(6656), 388–391. https://doi.org/10.1126/science.adi2430"
   }
 ]
