@@ -1440,4 +1440,150 @@ sjPlot::plot_model(m2_media, type = "std") + labs(
 :::
 ::::::
 
+
+# Sitzung 6 {#s6}
+
+# Fragen zur praktischen Übung?
+
+# Fragen zu Take Home #1
+
+## Annahmen des GLM
+
+### Statistische Annahmen 
+
+- Linearität und Additivität der Zusammenhänge
+- Normalverteilung und Homoskedastizität der Residuen
+- Unabhängigkeit der Residuen
+- keine einflussreichen Ausreißer 
+- keine Multikollinearität
+
+### Kausalannahmen
+
+- korrekt spezifiziertes Modell, d.h. keine fehlenden oder überflüssigen Kovariaten
+
+
+## Linearität & Additivität
+
+- **Annahme**: der Zusammenhang zwischen $X$ und $Y$ ist linear und unabhängig von $Z$
+- **Diagnose**: Inspektion des Scatterplots bzw. des Fitted/Residual-Plots
+- **Verletzung**: nichtlineare Zusammenhänge (quadratisch, exponentiell, etc.)
+- **Konsequenz der Verletzung**: verzerrte Regressionskoeffizienten
+- **Lösung**: Transformation von $X$ oder $Y$, nichtlineares Regressionsmodell, Moderationsanalyse mit $Z$
+
+## Homoskedastizizät der Residuen
+
+- **Annahme**: Residualvarianz ist für alle Werte von $X$ gleich
+- **Diagnose**: Fitted/Residual-Plots
+- **Verletzung**: Residuen streuen in Abhängigkeit von $X$
+- **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
+- **Lösung**: alternative Standardfehler, Datentransformationen, alternatives Modell
+
+## Unabhängigkeit der Residuen
+
+- **Annahme**: Residuen korrelieren weder miteinander noch mit den Prädiktoren
+- **Diagnose**: Nachdenken über datengenerierenden Prozess, Test auf serielle Korrelation
+- **Verletzung**: Residuen (und oft Variablen) sind geclustert (zeitlich, Stichprobe)
+- **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
+- **Lösung**: Multilevel-Modell, Modell mit Autokorrelationen
+
+
+## keine einflussreichen Ausreißer 
+
+- **Annahme**: alle Fälle tragen gleich zur Schätzung bei
+- **Diagnose**: Scatterplot, Leverage-Plot
+- **Verletzung**: einzelne Fälle beeinflussen die Höhe der Regressionsgeraden
+- **Konsequenz der Verletzung**: verzerrte Regressionskoeffizienten
+- **Lösung**: Ausschluss von Ausreißern (mit klar definierten Regeln!)
+
+##  keine Multikollinearität
+
+- **Annahme**: Prädiktorvariablen $X$ korrelieren nicht zu stark miteinander
+- **Diagnose**: Korrelationsmatrix der Prädiktoren, VIF-Analyse (Variance Inflation Factor)
+- **Verletzung**: Prädiktorvariablen korrelieren stark miteinander
+- **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
+- **Lösung**: Ausschluss von Prädiktorvariablen
+
+
+
+## Beispiel: van Erkel & van Aelst, 2021
+
+
+```{r, include = F}
+library(performance)
+library(see)
+m1 <- lm(PK ~ Gender + Age + Education + Political_interest, data = vanerkel21)
+```
+
+
+
+```{r, fig.width = 16, fig.height = 8, echo = F}
+#| fig-align: center
+
+performance::check_model(m1)
+```
+
+## Linearität und Homoskedastizität
+
+```{r}
+#| fig-align: center
+performance::check_model(m1, check = c("linearity", "homogeneity"))
+```
+
+## Multikollinearität
+
+::: columns
+::: {.column width="45%"}
+```{r}
+#
+correlation::correlation(m1$model) |> summary()
+```
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+```{r, echo = F}
+performance::check_model(m1, check = c("vif"), panel = F) |> plot()
+```
+:::
+:::
+
+
+
+
+## Kausalannahmen, Confounders, Colliders
+
+![Quelle: https://catalogofbias.org](https://catalogofbias.org/wp-content/uploads/sites/2/2019/03/Collider-bias_fig-1-e1551439537528.png)
+
+
+## Confounder- oder Ommitted-Variable-Bias
+
+![](figs/confounder.png)
+
+Nicht-Berücksichtigung einer relevanten Kovariate, die $X$ *und* $Y$ beeinflusst, verzerrt den geschätzen Zusammenhang zwischen $X$ und $Y$.
+
+
+## Collider-Bias
+
+![](figs/collider.png)
+
+Berücksichtigung einer Kovariate, die von $X$ *und* $Y$ beeinflusst wird, verzerrt den geschätzen Zusammenhang zwischen $X$ und $Y$.
+
+## (Kausale) Pfadmodelle
+
+![Quelle: https://www.andrewheiss.com/blog/2020/02/25/closing-backdoors-dags/](https://www.andrewheiss.com/blog/2020/02/25/closing-backdoors-dags/load-libraries-make-dag-1.png)
+
+## Verletzung der Modellannahmen - und nun?
+
+- Keine Panik! Modellannahmen sind praktisch immer verletzt (z.B. Normalverteilung der Residuen)
+- viele Annahmen beziehen sich auf die Residuen, nicht auf $X$ oder $Y$
+- wichtig ist, einschätzen zu können, welche Konsequenzen eine Verletzung der Modellannahme haben kann
+  - verzerrte Schätzer (zu hoch, zu niedrig)
+  - falsche Standardfehler (Alpha- und Beta-Fehler)
+  - falsche Kausalschlüsse (Rohrer, 2018; Coenen, 2022)
+- vorsichtig formulieren, Robustheit der Ergebnisse prüfen
+
+
+
 ## Literatur

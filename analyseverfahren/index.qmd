@@ -87,3 +87,15 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 ### Literatur
 
 @vanerkel2021
+
+
+## Sitzung 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Folien"></a> {#6}
+
+### Themen
+
+- Regressionsannahmen
+- Kausalität und Drittvariablen
+
+### Literatur
+
+@vanerkel2021

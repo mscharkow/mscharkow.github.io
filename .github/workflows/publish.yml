@@ -45,6 +45,8 @@ jobs:
             any::faux
             any::multcomp
             any::sjPlot
+            any::performance
+            any::see
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
