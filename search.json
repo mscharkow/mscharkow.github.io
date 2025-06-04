@@ -1551,7 +1551,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Send him to Belize? I'll send YOU to Belize.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"It's always darkest just before the dawn.\",\n        \"author\": \"Hank Schrader\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -2006,28 +2006,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -991.34, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.04139 -13.98598\nsample estimates:\nmean of x mean of y \n 165.9977  180.0114"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.76, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.03294 -13.97747\nsample estimates:\nmean of x mean of y \n 165.9881  179.9933"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 3.671716e-22\n\ndo_t_test(100, males, males)\n\n[1] 0.7391721"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 8.730523e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.504839"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.8674612 0.5802853 0.6629550 0.4464306 0.1561438 0.7612408\n\nsum(results_h0 &lt;= .05)\n\n[1] 52"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.9034072 0.1604495 0.2354687 0.1268761 0.6904851 0.1429363\n\nsum(results_h0 &lt;= .05)\n\n[1] 59"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 452\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 438\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -2671,7 +2671,7 @@
     "href": "ccs/slides.html#json-apis",
     "title": "Computational Communication Science",
     "section": "JSON APIs",
-    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"You won, Walter. You got the job. Do yourself a favor and learn to take yes for an answer.\",\n        \"author\": \"Mike Ehrmantraut\"\n    },\n    {\n        \"quote\": \"If I ever get anal polyps, I'll know what to name them.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Because I say so.\",\n        \"author\": \"Walter White\"\n    },\n    {\n        \"quote\": \"I do not believe fear to be an effective motivator. I want investment. For now, I'm simply interested in time frame.\",\n        \"author\": \"Gustavo Fring\"\n    }\n]"
   },
   {
     "objectID": "ccs/slides.html#web-scraping",
@@ -2763,6 +2763,13 @@
     "title": "Computational Communication Science",
     "section": "AI-based content analysis",
     "text": "AI-based content analysis\n\nIn this course, we use LLM/LMM for basically all content analysis tasks.\nBasic workflow is similar to manual content analysis:\n\nCollect the content data to be coded (text, image, video, etc.).\nDevelop codebook with coding instructions and examples.\nCombine instructions with text/image data to prompts for LLM API.\nCollect structured predictions for each coding unit from the model.\nMaybe combine different predictions (varying tasks, varying LLM/LMM)\n\nAlways validate with human coding!"
+  },
+  {
+    "objectID": "ccs/slides.html#tasks",
+    "href": "ccs/slides.html#tasks",
+    "title": "Computational Communication Science",
+    "section": "Tasks",
+    "text": "Tasks\n\nInstall python tools in our RStudio server: pipx install yt-dlp vcsi whisper-ctranslate2 && pipx ensurepath, then start a new terminal.\nTry out yt-dlp in the new terminal.\nWork through the data collection examples\n\nYou need to re-download the ZIP file and data for the next sessions. Sorry!"
   },
   {
     "objectID": "ccs/slides.html#references",
