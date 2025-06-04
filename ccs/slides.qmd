@@ -522,5 +522,12 @@ tibble(
   4. Maybe combine different predictions (varying tasks, varying LLM/LMM)
 * Always validate with human coding!
 
+## Tasks
+
+1. Install python tools in our RStudio server: `pipx install yt-dlp vcsi whisper-ctranslate2 && pipx ensurepath`, then start a new terminal.
+2. Try out `yt-dlp` in the new terminal.
+3. Work through the [data collection examples](https://stats.ifp.uni-mainz.de/ma-ccs/content-data.html)
+
+You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 ## References
