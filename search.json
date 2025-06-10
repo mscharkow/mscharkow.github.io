@@ -301,6 +301,13 @@
     "text": "Sitzung 6 \n\nThemen\n\nRegressionsannahmen\nKausalität und Drittvariablen\n\n\n\nLiteratur\nVan Erkel & Van Aelst (2021)"
   },
   {
+    "objectID": "analyseverfahren/index.html#7",
+    "href": "analyseverfahren/index.html#7",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Sitzung 7 ",
+    "text": "Sitzung 7 \n\nThemen\n\nModellvorhersagen\nVisualisierung von Vorhersagen\n\n\n\nLiteratur\nVan Erkel & Van Aelst (2021);Arel-Bundock et al. (2024)"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
     "href": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
     "title": "Anwendungsorientierte Analyseverfahren",
@@ -1197,6 +1204,146 @@
     "text": "Verletzung der Modellannahmen - und nun?\n\nKeine Panik! Modellannahmen sind praktisch immer verletzt (z.B. Normalverteilung der Residuen)\nviele Annahmen beziehen sich auf die Residuen, nicht auf \\(X\\) oder \\(Y\\)\nwichtig ist, einschätzen zu können, welche Konsequenzen eine Verletzung der Modellannahme haben kann\n\nverzerrte Schätzer (zu hoch, zu niedrig)\nfalsche Standardfehler (Alpha- und Beta-Fehler)\nfalsche Kausalschlüsse (Rohrer, 2018; Coenen, 2022)\n\nvorsichtig formulieren, Robustheit der Ergebnisse prüfen"
   },
   {
+    "objectID": "analyseverfahren/slides.html#modellvorhersagen-1",
+    "href": "analyseverfahren/slides.html#modellvorhersagen-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellvorhersagen",
+    "text": "Modellvorhersagen\n\nModellvorhersagen helfen, komplexe Modelle besser verstehen zu können\ndurch Einsetzen von Werten für die Prädiktoren in die Regressionsgleichung können wir Werte für \\(Y\\) vorhersagen, d.h. \\(\\hat{Y}\\)\nes können real existierende oder fiktive Daten eingesetzt werden\nauf Grund der statistischen Unsicherheit in den Regressionskoeffizienten sind auch die Vorhersagen mit Unsicherheit behaftet\ndaher erhalten wir Punktschätzer und Konfidenz bzw. Vorhersageintervalle für \\(\\hat{Y}\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#welche-daten-vorhersagen",
+    "href": "analyseverfahren/slides.html#welche-daten-vorhersagen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Welche Daten vorhersagen?",
+    "text": "Welche Daten vorhersagen?\n\nempirische Daten, d.h. alle oder ausgewählte Fälle des Datensatzes, auf dem das Modell basiert\nidealtypische Daten, d.h. Beispieldaten, die auf (Kombinationen von) für uns relevanten Variablen basieren\ncounterfactual Daten, d.h. nicht beobachtete Daten, die das Gegenteil der beobachteten in einer oder mehreren Variablen sind\n\n \n\nbei kategoriellen Prädiktoren werden die einzelnen Ausprägungen verwendet\nbei metrischen Prädiktoren werden typische Fälle (Min, Max, Median, Quartile) oder gezielte Einzelwerte eingesetzt"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#aggregation",
+    "href": "analyseverfahren/slides.html#aggregation",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Aggregation",
+    "text": "Aggregation\n\noft sind neben einzelnen Vorhersagen auch aggregierte Vorhersagen für spezifische Gruppen von Interesse\nentweder (a) empirisch vorkommende Gruppen im Datensatz oder (b) kontrafaktische Gruppen\nAnalysestrategie:\n\nfür jede Gruppe je einen Datensatz auswählen (a) oder (b) generieren\nVorhersagen für alle Fälle pro Datensatz berechnen\nVorhersagen aggregieren, z.B. durch Berechnen des Mittelwertes für \\(\\hat{Y}\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#intervalle",
+    "href": "analyseverfahren/slides.html#intervalle",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Intervalle",
+    "text": "Intervalle\n\nbei Modellvorhersagen unterscheidet man zwischen confidence und prediction intervals für \\(\\hat{Y}\\)\nin die Berechnung der Konfidenzintervalle fließt nur die Unsicherheit in den Regressionskoeffizienten ein\nin die Berechnung der Vorhersageintervalle fließt zusätzlich noch die Residualvarianz ein\nVorhersageintervalle sind daher immer breiter (je nach \\(R^2\\)) als die Konfidenzintervalle der Vorhersagen\nVorhersageintervalle werden meist nur für einzelne vorhergesagte Werte angegeben, ansonsten verwenden wir nur CI"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispiel-van-erkel-van-aelst-2021-1",
+    "href": "analyseverfahren/slides.html#beispiel-van-erkel-van-aelst-2021-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispiel: van Erkel & van Aelst, 2021",
+    "text": "Beispiel: van Erkel & van Aelst, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(987)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n0.46\n(0.09, 0.83)\n2.45\n0.014\n-0.13\n\n\n\nGender (female)\n-0.51\n(-0.65, -0.37)\n-6.96\n&lt; .001\n-0.37\n\n\n\nAge\n0.02\n(0.02, 0.03)\n8.48\n&lt; .001\n0.23\n\n\n\nEducation (Middle)\n0.35\n(0.13, 0.56)\n3.15\n0.002\n0.26\n\n\n\nEducation (High)\n0.60\n(0.38, 0.82)\n5.42\n&lt; .001\n0.44\n\n\n\nPolitical interest\n0.20\n(0.18, 0.23)\n14.76\n&lt; .001\n0.40\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n3021.49\n\n\nR2\n\n\n\n\n\n0.35\n\n\nR2 (adj.)\n\n\n\n\n\n0.34\n\n\nSigma\n\n\n\n\n\n1.10"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellvorhersagen-für-die-stichprobe",
+    "href": "analyseverfahren/slides.html#modellvorhersagen-für-die-stichprobe",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellvorhersagen für die Stichprobe",
+    "text": "Modellvorhersagen für die Stichprobe\n\n\n\n\n\n\nGender\n\n\nAge\n\n\nEducation\n\n\nPolitical_interest\n\n\nPK\n\n\nPredicted_PK\n\n\n\n\n\n\nmale\n\n\n66\n\n\nMiddle\n\n\n8\n\n\n5\n\n\n3.90\n\n\n\n\nfemale\n\n\n68\n\n\nLower\n\n\n6\n\n\n3\n\n\n2.68\n\n\n\n\nmale\n\n\n34\n\n\nMiddle\n\n\n10\n\n\n3\n\n\n3.61\n\n\n\n\nfemale\n\n\n57\n\n\nHigh\n\n\n8\n\n\n3\n\n\n3.45\n\n\n\n\nfemale\n\n\n24\n\n\nHigh\n\n\n5\n\n\n4\n\n\n2.11"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#vorhergesagte-verteilung",
+    "href": "analyseverfahren/slides.html#vorhergesagte-verteilung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Vorhergesagte Verteilung",
+    "text": "Vorhergesagte Verteilung"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#confidence-vs.-prediction-intervals",
+    "href": "analyseverfahren/slides.html#confidence-vs.-prediction-intervals",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Confidence vs. prediction intervals",
+    "text": "Confidence vs. prediction intervals\nConfidence intervals\n\n\n\n\n\n\nGender\n\n\nAge\n\n\nEducation\n\n\nPolitical_interest\n\n\nPK\n\n\nfit\n\n\nlwr\n\n\nupr\n\n\n\n\n\n\nfemale\n\n\n45\n\n\nMiddle\n\n\n3\n\n\n2\n\n\n1.91\n\n\n1.76\n\n\n2.05\n\n\n\n\nfemale\n\n\n59\n\n\nHigh\n\n\n7\n\n\n4\n\n\n3.29\n\n\n3.15\n\n\n3.42\n\n\n\n\nfemale\n\n\n52\n\n\nHigh\n\n\n7\n\n\n4\n\n\n3.13\n\n\n3.01\n\n\n3.26\n\n\n\n\n\n\n \nPrediction intervals\n\n\n\n\n\n\nGender\n\n\nAge\n\n\nEducation\n\n\nPolitical_interest\n\n\nPK\n\n\nfit\n\n\nlwr\n\n\nupr\n\n\n\n\n\n\nfemale\n\n\n45\n\n\nMiddle\n\n\n3\n\n\n2\n\n\n1.91\n\n\n-0.26\n\n\n4.08\n\n\n\n\nfemale\n\n\n59\n\n\nHigh\n\n\n7\n\n\n4\n\n\n3.29\n\n\n1.12\n\n\n5.46\n\n\n\n\nfemale\n\n\n52\n\n\nHigh\n\n\n7\n\n\n4\n\n\n3.13\n\n\n0.96\n\n\n5.30"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#kategorielle-prädiktoren-geschlecht",
+    "href": "analyseverfahren/slides.html#kategorielle-prädiktoren-geschlecht",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Kategorielle Prädiktoren: Geschlecht",
+    "text": "Kategorielle Prädiktoren: Geschlecht\n\nfür jeden Fall im Datensatz wird jeweils jede Ausprägung von Geschlecht einmal eingesetzt (counterfactuals)\nalle anderen Prädiktoren bleiben, wie sie waren\n\n \n\n\n\n\n\n\nid\n\n\nAge\n\n\nGender\n\n\nPolitical_interest\n\n\nPK\n\n\nPredicted_PK\n\n\n\n\n\n\n1\n\n\n45\n\n\nfemale\n\n\n3\n\n\n2\n\n\n1.91\n\n\n\n\n1\n\n\n45\n\n\nmale\n\n\n3\n\n\n2\n\n\n2.42\n\n\n\n\n2\n\n\n59\n\n\nfemale\n\n\n7\n\n\n4\n\n\n3.29\n\n\n\n\n2\n\n\n59\n\n\nmale\n\n\n7\n\n\n4\n\n\n3.80\n\n\n\n\n3\n\n\n52\n\n\nfemale\n\n\n7\n\n\n4\n\n\n3.13\n\n\n\n\n3\n\n\n52\n\n\nmale\n\n\n7\n\n\n4\n\n\n3.64"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#aggregierte-vorhersagen-nach-geschlecht",
+    "href": "analyseverfahren/slides.html#aggregierte-vorhersagen-nach-geschlecht",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Aggregierte Vorhersagen nach Geschlecht",
+    "text": "Aggregierte Vorhersagen nach Geschlecht\n\nder neu generierte Datensatz mit den counterfactuals wird nach Geschlecht geteilt\npro Teildatensatz wird der Mittelwert sowie das CI von \\(\\hat{Y}\\) berechnet\nErgebnis sind die vorhergesagten Mittelwerte des politischen Wissens nach Geschlecht\n\n\n\n\n\n\n\n\n\nGender\n\n\nestimate\n\n\nstd.error\n\n\nconf.low\n\n\nconf.high\n\n\ndf\n\n\n\n\n\n\nmale\n\n\n3.29\n\n\n0.05\n\n\n3.19\n\n\n3.38\n\n\nInf\n\n\n\n\nfemale\n\n\n2.78\n\n\n0.05\n\n\n2.68\n\n\n2.88\n\n\nInf"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#visualisierung-der-vorhersagen",
+    "href": "analyseverfahren/slides.html#visualisierung-der-vorhersagen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Visualisierung der Vorhersagen",
+    "text": "Visualisierung der Vorhersagen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#vorhersagen-nach-geschlecht-und-bildung",
+    "href": "analyseverfahren/slides.html#vorhersagen-nach-geschlecht-und-bildung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Vorhersagen nach Geschlecht und Bildung",
+    "text": "Vorhersagen nach Geschlecht und Bildung"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#metrische-prädiktoren-alter",
+    "href": "analyseverfahren/slides.html#metrische-prädiktoren-alter",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Metrische Prädiktoren: Alter",
+    "text": "Metrische Prädiktoren: Alter\n\nwir wählen spezifische Werte (z.B. 18, 40, 65) der Altersvariable\nfür jeden Fall wird jeder Alterswert einmal eingesetzt (counterfactuals)\nalle anderen Prädiktoren bleiben, wie sie waren\n\n \n\n\n\n\n\n\nid\n\n\nAge\n\n\nGender\n\n\nPolitical_interest\n\n\nPK\n\n\nPredicted_PK\n\n\n\n\n\n\n1\n\n\n18\n\n\nfemale\n\n\n3\n\n\n2\n\n\n1.31\n\n\n\n\n1\n\n\n40\n\n\nfemale\n\n\n3\n\n\n2\n\n\n1.80\n\n\n\n\n1\n\n\n65\n\n\nfemale\n\n\n3\n\n\n2\n\n\n2.35\n\n\n\n\n2\n\n\n18\n\n\nfemale\n\n\n7\n\n\n4\n\n\n2.38\n\n\n\n\n2\n\n\n40\n\n\nfemale\n\n\n7\n\n\n4\n\n\n2.87\n\n\n\n\n2\n\n\n65\n\n\nfemale\n\n\n7\n\n\n4\n\n\n3.42"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#fallweise-vorhersagen-typische-werte",
+    "href": "analyseverfahren/slides.html#fallweise-vorhersagen-typische-werte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Fallweise Vorhersagen (typische Werte)",
+    "text": "Fallweise Vorhersagen (typische Werte)\n\nstatt spezifisch ausgewählten Werten verwenden wir Kennwerte\nFive Numbers: Minimum, 1. Quartil, Median, 3. Quartil, Maximum\n\n\n\n\n\n\n\n\n\nid\n\n\nAge\n\n\nGender\n\n\nPolitical_interest\n\n\nPK\n\n\nPredicted_PK\n\n\n\n\n\n\n1\n\n\n19\n\n\nfemale\n\n\n3\n\n\n2\n\n\n1.33\n\n\n\n\n1\n\n\n44\n\n\nfemale\n\n\n3\n\n\n2\n\n\n1.89\n\n\n\n\n1\n\n\n56\n\n\nfemale\n\n\n3\n\n\n2\n\n\n2.15\n\n\n\n\n1\n\n\n65\n\n\nfemale\n\n\n3\n\n\n2\n\n\n2.35\n\n\n\n\n1\n\n\n71\n\n\nfemale\n\n\n3\n\n\n2\n\n\n2.48\n\n\n\n\n2\n\n\n19\n\n\nfemale\n\n\n7\n\n\n4\n\n\n2.40\n\n\n\n\n2\n\n\n44\n\n\nfemale\n\n\n7\n\n\n4\n\n\n2.96\n\n\n\n\n2\n\n\n56\n\n\nfemale\n\n\n7\n\n\n4\n\n\n3.22"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#aggregierte-vorhersagen-nach-alter",
+    "href": "analyseverfahren/slides.html#aggregierte-vorhersagen-nach-alter",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Aggregierte Vorhersagen nach Alter",
+    "text": "Aggregierte Vorhersagen nach Alter\n\n\n\n\n\n\nAge\n\n\nestimate\n\n\nstd.error\n\n\nconf.low\n\n\nconf.high\n\n\ndf\n\n\n\n\n\n\n19\n\n\n2.29\n\n\n0.10\n\n\n2.11\n\n\n2.48\n\n\nInf\n\n\n\n\n44\n\n\n2.85\n\n\n0.04\n\n\n2.76\n\n\n2.93\n\n\nInf\n\n\n\n\n56\n\n\n3.11\n\n\n0.04\n\n\n3.04\n\n\n3.18\n\n\nInf\n\n\n\n\n65\n\n\n3.31\n\n\n0.05\n\n\n3.22\n\n\n3.40\n\n\nInf\n\n\n\n\n71\n\n\n3.44\n\n\n0.06\n\n\n3.33\n\n\n3.56\n\n\nInf\n\n\n\n\n\n\n\n\nVorhersagen für Minimum, 1. Quartil, Median, 3. Quartil, Maximum"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#visualisierung-der-vorhersagen-1",
+    "href": "analyseverfahren/slides.html#visualisierung-der-vorhersagen-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Visualisierung der Vorhersagen",
+    "text": "Visualisierung der Vorhersagen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#vorhersagen-nach-alter-und-geschlecht",
+    "href": "analyseverfahren/slides.html#vorhersagen-nach-alter-und-geschlecht",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Vorhersagen nach Alter und Geschlecht",
+    "text": "Vorhersagen nach Alter und Geschlecht\n\n\n\n\n\n\nAge\n\n\nGender\n\n\nestimate\n\n\nstd.error\n\n\nconf.low\n\n\nconf.high\n\n\ndf\n\n\n\n\n\n\n19\n\n\nmale\n\n\n2.54\n\n\n0.11\n\n\n2.33\n\n\n2.75\n\n\nInf\n\n\n\n\n19\n\n\nfemale\n\n\n2.03\n\n\n0.10\n\n\n1.84\n\n\n2.22\n\n\nInf\n\n\n\n\n44\n\n\nmale\n\n\n3.09\n\n\n0.06\n\n\n2.98\n\n\n3.20\n\n\nInf\n\n\n\n\n44\n\n\nfemale\n\n\n2.58\n\n\n0.05\n\n\n2.47\n\n\n2.69\n\n\nInf\n\n\n\n\n56\n\n\nmale\n\n\n3.35\n\n\n0.05\n\n\n3.26\n\n\n3.45\n\n\nInf\n\n\n\n\n56\n\n\nfemale\n\n\n2.84\n\n\n0.05\n\n\n2.74\n\n\n2.95\n\n\nInf\n\n\n\n\n65\n\n\nmale\n\n\n3.55\n\n\n0.06\n\n\n3.44\n\n\n3.66\n\n\nInf\n\n\n\n\n65\n\n\nfemale\n\n\n3.04\n\n\n0.06\n\n\n2.92\n\n\n3.17\n\n\nInf\n\n\n\n\n71\n\n\nmale\n\n\n3.69\n\n\n0.06\n\n\n3.56\n\n\n3.81\n\n\nInf\n\n\n\n\n71\n\n\nfemale\n\n\n3.18\n\n\n0.07\n\n\n3.03\n\n\n3.32\n\n\nInf"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#visualisierung-der-vorhersagen-2",
+    "href": "analyseverfahren/slides.html#visualisierung-der-vorhersagen-2",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Visualisierung der Vorhersagen",
+    "text": "Visualisierung der Vorhersagen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#fazit",
+    "href": "analyseverfahren/slides.html#fazit",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Fazit",
+    "text": "Fazit\n\nmit Modellvorhersagen lassen sich vielfältige Fragen auf Basis desselben Modells beantworten\nfür komplexe, nichtlineare Modelle intuitive(re) Grafiken statt schwer interpretierbarer Koeffizienten\nWahl der passenden Prädiktorkombinationen nicht trivial (counterfactual, empirisch, typisch)\nsubtile Unterschiede in der Interpretation und uneinheitliche Begrifflichkeiten (marginal, conditional, adjusted predictions)\nin der Kommunikationswissenschaft (leider) selten anzutreffen, außer in der Moderationsanalyse"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-2",
+    "href": "analyseverfahren/slides.html#take-home-2",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take Home #2",
+    "text": "Take Home #2\nReplizieren sie eine Regressionsanalyse aus van Erkel & van Aelst (2021) mit R oder SPSS oder anderer Software\n\nStudierende mit gerader Matrikelnummer: Tabelle 5\nStudierende mit ungerader Matrikelnummer: Tabelle 6\nDer Datensatz ist in data/VanErkel_vanAelst2021.sav und enthält alle nötigen Variablen.\nMachen sie einen Screenshot der Regressionstabelle als PNG oder JPG und laden Sie diesen in Moodle hoch.\nDeadline: 25.06.2025, 12h"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#literatur-1",
     "href": "analyseverfahren/slides.html#literatur-1",
     "title": "Anwendungsorientierte Analyseverfahren",
@@ -1551,7 +1698,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"It's always darkest just before the dawn.\",\n        \"author\": \"Hank Schrader\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"If you don’t know who I am, then maybe your best course would be to tread lightly.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -2006,28 +2153,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.76, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.03294 -13.97747\nsample estimates:\nmean of x mean of y \n 165.9881  179.9933"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -993.12, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.06038 -14.00499\nsample estimates:\nmean of x mean of y \n 165.9853  180.0180"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 8.730523e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.504839"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.260151e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.550917"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.9034072 0.1604495 0.2354687 0.1268761 0.6904851 0.1429363\n\nsum(results_h0 &lt;= .05)\n\n[1] 59"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.6800678 0.3366737 0.1059950 0.2372103 0.4454489 0.8051959\n\nsum(results_h0 &lt;= .05)\n\n[1] 44"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 438\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 466\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -2671,7 +2818,7 @@
     "href": "ccs/slides.html#json-apis",
     "title": "Computational Communication Science",
     "section": "JSON APIs",
-    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Because I say so.\",\n        \"author\": \"Walter White\"\n    },\n    {\n        \"quote\": \"I do not believe fear to be an effective motivator. I want investment. For now, I'm simply interested in time frame.\",\n        \"author\": \"Gustavo Fring\"\n    }\n]"
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Scientists love lasers.\",\n        \"author\": \"Saul Goodman\"\n    },\n    {\n        \"quote\": \"Jesus! Just grow some fucking balls!\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "ccs/slides.html#web-scraping",
