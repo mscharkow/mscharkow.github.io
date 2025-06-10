@@ -1585,5 +1585,262 @@ Berücksichtigung einer Kovariate, die von $X$ *und* $Y$ beeinflusst wird, verze
 - vorsichtig formulieren, Robustheit der Ergebnisse prüfen
 
 
+# Sitzung 7 {#s7}
+
+
+# Fragen zur praktischen Übung?
+
+
+## Modellvorhersagen
+
+- Modellvorhersagen helfen, komplexe Modelle besser verstehen zu können
+- durch Einsetzen von Werten für die Prädiktoren in die Regressionsgleichung können wir Werte für $Y$ vorhersagen, d.h. $\hat{Y}$
+- es können real existierende oder fiktive Daten eingesetzt werden
+- auf Grund der statistischen Unsicherheit in den Regressionskoeffizienten sind auch die Vorhersagen mit Unsicherheit behaftet
+- daher erhalten wir Punktschätzer und Konfidenz bzw.  Vorhersageintervalle für $\hat{Y}$
+
+
+## Welche Daten vorhersagen?
+
+- *empirische* Daten, d.h. alle oder ausgewählte Fälle des Datensatzes, auf dem das Modell basiert
+- *idealtypische* Daten, d.h. Beispieldaten, die auf (Kombinationen von) für uns relevanten Variablen basieren
+- *counterfactual* Daten, d.h. nicht beobachtete Daten, die das Gegenteil der beobachteten in einer oder mehreren Variablen sind
+
+\ 
+
+- bei kategoriellen Prädiktoren werden die einzelnen Ausprägungen verwendet
+- bei metrischen Prädiktoren werden typische Fälle (Min, Max, Median, Quartile) oder gezielte Einzelwerte eingesetzt
+
+## Aggregation
+
+- oft sind neben einzelnen Vorhersagen auch aggregierte Vorhersagen für spezifische Gruppen von Interesse
+- entweder (a) empirisch vorkommende Gruppen im Datensatz oder (b) kontrafaktische Gruppen
+- Analysestrategie:
+  1. für jede Gruppe je einen Datensatz auswählen (a) oder  (b) generieren
+  2. Vorhersagen für alle Fälle pro Datensatz berechnen
+  3. Vorhersagen aggregieren, z.B. durch Berechnen des Mittelwertes für $\hat{Y}$
+
+
+## Intervalle
+
+- bei Modellvorhersagen unterscheidet man zwischen *confidence* und *prediction intervals* für $\hat{Y}$
+- in die Berechnung der Konfidenzintervalle fließt nur die Unsicherheit in den Regressionskoeffizienten ein
+- in die Berechnung der Vorhersageintervalle fließt *zusätzlich* noch die Residualvarianz ein
+- Vorhersageintervalle sind daher immer breiter (je nach $R^2$) als die Konfidenzintervalle der Vorhersagen
+- Vorhersageintervalle werden meist nur für einzelne vorhergesagte Werte angegeben, ansonsten verwenden wir nur CI
+
+## Beispiel: van Erkel & van Aelst, 2021
+
+
+```{r }
+#vanerkel21 <- haven::read_sav("data/Vanerkel_Vanaelst_2021.sav") |>
+# rename(
+#   Radio = News_channels_w4_1, TV = News_channels_w4_2, Newspaper = News_channels_w4_3, Websites = News_channels_w4_4,
+#   Facebook = News_channels_w4_5, Twitter = News_channels_w4_6
+# ) |>
+# mutate(Education = as_factor(Education),
+#  Gender = as_factor(Gender)) |>
+#  haven::zap_labels() |>
+#  select(4, 6:7, Radio, Newspaper, TV, Facebook, Twitter, Websites, PK, Political_interest, inf_over = Information_overload, pers_news = personalized_news)
+m1 <- lm(PK ~ Gender + Age + Education + Political_interest, data = vanerkel21)
+model_table(m1)
+```
+
+## Modellvorhersagen für die Stichprobe
+
+```{r}
+marginaleffects::predictions(m1) |> 
+as_tibble() |> 
+select(Gender:Political_interest, PK, Predicted_PK = estimate) |> 
+sample_n(5)
+```
+
+## Vorhergesagte Verteilung 
+
+```{r}
+marginaleffects::predictions(m1) |> 
+select(Predicted_PK = estimate, PK) |> 
+gather(k,v) |> 
+ggplot(aes(fill = k, y = v, color = k))+
+geom_density(alpha = .5)+
+coord_flip()+
+labs(y = "Political Knowledge", color = "Type", fill = "Type", x = "")
+```
+
+## Confidence vs. prediction intervals
+
+### Confidence intervals
+
+```{r}
+marginaleffects::predictions(m1) |> as_tibble() |> select(Gender:Political_interest, PK) |> bind_cols(predict(m1, interval = "conf")) |> head(3)
+```
+\ 
+
+### Prediction intervals
+
+```{r}
+marginaleffects::predictions(m1) |> as_tibble() |> select(Gender:Political_interest, PK) |> bind_cols(predict(m1, interval = "pred")) |> head(3)
+```
+
+## Kategorielle Prädiktoren: Geschlecht
+
+- für jeden Fall im Datensatz wird jeweils jede Ausprägung von Geschlecht einmal eingesetzt (counterfactuals)
+- alle anderen Prädiktoren bleiben, wie sie waren
+
+\ 
+
+```{r}
+marginaleffects::predictions(m1, variables = "Gender") |> 
+  as_tibble() |> 
+select(-p.value, -s.value, -statistic) |> 
+arrange(rowidcf) |> 
+select(id =rowidcf, Age, Gender, Political_interest, PK, Predicted_PK = estimate) |> 
+head(6)
+```
+
+
+## Aggregierte Vorhersagen nach Geschlecht
+
+- der neu generierte Datensatz mit den counterfactuals wird nach Geschlecht geteilt
+- pro Teildatensatz wird der Mittelwert sowie das CI von $\hat{Y}$ berechnet
+- Ergebnis sind die vorhergesagten Mittelwerte des politischen Wissens nach Geschlecht
+
+\
+
+```{r}
+preds_gender <- marginaleffects::avg_predictions(m1, variables = "Gender") |>
+  as_tibble() |> 
+  select(-p.value, -s.value, -statistic)
+preds_gender
+```
+
+## Visualisierung der Vorhersagen 
+
+```{r}
+preds_gender |>
+  ggplot(aes(x = Gender, y = estimate, ymin = conf.low, ymax = conf.high)) +
+  geom_pointrange() +
+  labs(x = "Gender", y = "Predicted political knowledge")
+```
+
+## Vorhersagen nach Geschlecht und Bildung
+
+```{r}
+preds_gender_edu <- marginaleffects::avg_predictions(m1, variables = c("Gender", "Education")) |>
+  as_tibble()
+preds_gender_edu |>
+  ggplot(aes(
+    x = Gender, y = estimate, ymin = conf.low, ymax = conf.high,
+    group = Education, color = Education
+  )) +
+  geom_pointrange(position = position_dodge(.5)) +
+  labs(x = "Gender", y = "Predicted political knowledge")
+```
+## Metrische Prädiktoren: Alter
+
+- wir wählen spezifische Werte (z.B. 18, 40, 65) der Altersvariable 
+- für jeden Fall wird jeder Alterswert einmal eingesetzt (counterfactuals)
+- alle anderen Prädiktoren bleiben, wie sie waren
+
+\ 
+
+```{r}
+marginaleffects::predictions(m1, variables = list("Age" = c(18, 40, 65))) |>
+  as_tibble() |> 
+select(-p.value, -s.value, -statistic) |> 
+arrange(rowidcf) |> 
+select(id =rowidcf, Age, Gender, Political_interest, PK, Predicted_PK = estimate) |> 
+head(6)
+```
+
+
+
+## Fallweise Vorhersagen (typische Werte)
+
+- statt spezifisch ausgewählten Werten verwenden wir Kennwerte
+- Five Numbers: Minimum, 1. Quartil, Median, 3. Quartil, Maximum
+
+
+\
+
+```{r}
+marginaleffects::predictions(m1, variables = "Age") |>
+  as_tibble() |> 
+select(-p.value, -s.value, -statistic) |> 
+arrange(rowidcf) |> 
+select(id =rowidcf, Age, Gender, Political_interest, PK, Predicted_PK = estimate) |> 
+head(8)
+```
+
+
+## Aggregierte Vorhersagen nach Alter
+
+```{r}
+preds_age <- marginaleffects::avg_predictions(m1, variables = "Age") |>
+  as_tibble() |> 
+  select(-p.value, -s.value, -statistic)
+preds_age
+```
+
+::: {.aside}
+Vorhersagen für Minimum, 1. Quartil, Median, 3. Quartil, Maximum
+:::
+
+
+## Visualisierung der Vorhersagen 
+
+```{r}
+preds_age |>
+  ggplot(aes(
+    x = Age, y = estimate, ymin = conf.low, ymax = conf.high
+  )) +
+  geom_ribbon(alpha = .1) +
+  geom_line() +
+  labs(x = "Age", y = "Predicted political knowledge")
+```
+
+## Vorhersagen nach Alter und Geschlecht
+
+```{r}
+preds_age_gender <- marginaleffects::avg_predictions(m1, variables = c("Age", "Gender")) |>
+  as_tibble() |> 
+  select(-p.value, -s.value, -statistic)
+preds_age_gender
+```
+
+## Visualisierung der Vorhersagen
+
+
+```{r}
+preds_age_gender |>
+  ggplot(aes(
+    x = Age, y = estimate, ymin = conf.low, ymax = conf.high,
+    group = Gender, fill = Gender, color = Gender
+  )) +
+  geom_ribbon(alpha = .1, color = NA) +
+  geom_line() +
+  labs(x = "Age", y = "Predicted political knowledge")
+```
+
+## Fazit
+
+- mit Modellvorhersagen lassen sich vielfältige Fragen auf Basis desselben Modells beantworten
+- für komplexe, nichtlineare Modelle intuitive(re) Grafiken statt schwer interpretierbarer Koeffizienten
+- Wahl der passenden Prädiktorkombinationen nicht trivial (counterfactual, empirisch, typisch)
+- subtile Unterschiede in der Interpretation und uneinheitliche Begrifflichkeiten (marginal, conditional, adjusted predictions)
+- in der Kommunikationswissenschaft (leider) selten anzutreffen, außer in der Moderationsanalyse 
+
+
+## Take Home #2
+
+Replizieren sie eine Regressionsanalyse aus van Erkel & van Aelst (2021) mit R oder SPSS oder anderer Software
+
+  - Studierende mit gerader Matrikelnummer: Tabelle 5
+  - Studierende mit ungerader Matrikelnummer: Tabelle 6
+
+- Der Datensatz ist in `data/VanErkel_vanAelst2021.sav` und enthält alle nötigen Variablen.
+
+- Machen sie einen Screenshot der Regressionstabelle als PNG oder JPG und laden Sie diesen in Moodle hoch.
+- Deadline: 25.06.2025, 12h
 
 ## Literatur
