@@ -530,4 +530,26 @@ tibble(
 
 You need to re-download the ZIP file and data for the next sessions. Sorry!
 
+
+# Session 7 {#s7}
+
+## Questions about coding tasks
+
+- tabular data and R packages
+- JSON and RSS APIs
+- web scraping
+- downloading images and videos
+
+
+## Automatic text analysis
+
+- working with text strings
+- basic text analysis and regular expressions
+
+## Zero-shot classification
+
+- get your API key from <https://ki-chat.uni-mainz.de/>
+- try out in the regular chat interface
+
+
 ## References
