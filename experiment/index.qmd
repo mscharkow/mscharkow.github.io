@@ -137,5 +137,18 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 - Messinstrumente recherchieren und auswählen
 - Fragebogen entwerfen
 
+## Sitzung 8 <a class="bi bi-easel-fill" href="slides.html#/s8" alt="Folien"></a> {#8}
+
+### Themen
+
+- Fragebogen und Randomisierung in Soscisurvey
+- Datenmanagement und -analyse bei Within-Subject-Designs
+
+
+### Aufgabe zur nächsten Sitzung
+
+1. Fragebogen inkl. Stimuli und Messinstrumente finalisieren
+2. Technischen Pretest durchführen, ggf. eigentlichen Pretest (n ~ 5) durchführen
+3. Code für Datenanalyse vorbereiten
 
 # Literatur
