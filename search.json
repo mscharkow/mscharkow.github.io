@@ -126,6 +126,13 @@
     "text": "Sitzung 7 \n\nThemen\n\nMessung\nBriefing, Informed Consent, Debriefing\n\n\n\nAufgabe zur nächsten Sitzung\n\nStimuli finalisieren\nMessinstrumente recherchieren und auswählen\nFragebogen entwerfen"
   },
   {
+    "objectID": "experiment/index.html#8",
+    "href": "experiment/index.html#8",
+    "title": "BA Experiment",
+    "section": "Sitzung 8 ",
+    "text": "Sitzung 8 \n\nThemen\n\nFragebogen und Randomisierung in Soscisurvey\nDatenmanagement und -analyse bei Within-Subject-Designs\n\n\n\nAufgabe zur nächsten Sitzung\n\nFragebogen inkl. Stimuli und Messinstrumente finalisieren\nTechnischen Pretest durchführen, ggf. eigentlichen Pretest (n ~ 5) durchführen\nCode für Datenanalyse vorbereiten"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
@@ -1705,7 +1712,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"\\\"Cap'n Cook?\\\" That's not you? Like I said, no one is looking for you.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I am the man that I am son, and there's plenty that I would change about that but, here we are and this is just what it is.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -2160,28 +2167,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -987.81, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.00331 -13.94785\nsample estimates:\nmean of x mean of y \n 166.0046  179.9802"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.72, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02335 -13.96792\nsample estimates:\nmean of x mean of y \n 165.9968  179.9924"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.856339e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.1154766"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 7.692602e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.8822687"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.9863776 0.7098055 0.7835218 0.1993393 0.3366905 0.8467864\n\nsum(results_h0 &lt;= .05)\n\n[1] 56"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.23498402 0.47383289 0.14154027 0.16085242 0.08750574 0.10934120\n\nsum(results_h0 &lt;= .05)\n\n[1] 54"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 463\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 467\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -2527,6 +2534,83 @@
     "text": "Aufgaben bis übernächste (!) Woche\n\nPräregistrierung finalisieren\nExperimentaldesign und Stimuli fertigstellen\nSkalen und Items recherchieren\nFragebogen entwickeln (in Word oder SosciSurvey)"
   },
   {
+    "objectID": "experiment/slides.html#agenda-heute-4",
+    "href": "experiment/slides.html#agenda-heute-4",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Agenda heute",
+    "text": "Agenda heute\n\n5-Min Präsentationen\nExperimente in Soscisurvey\nDaten aus Soscisurvey\nDatenanalyse Within-Subject-Designs"
+  },
+  {
+    "objectID": "experiment/slides.html#experimente-in-soscisurvey",
+    "href": "experiment/slides.html#experimente-in-soscisurvey",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Experimente in Soscisurvey",
+    "text": "Experimente in Soscisurvey\n\nSoscisurvey ist sehr gut für Experimente geeignet\nvielfältige Randomisierungsmöglichkeiten, flexible Programmierung\nDatenexport per API und R-Paket"
+  },
+  {
+    "objectID": "experiment/slides.html#randomisierung-in-soscisurvey",
+    "href": "experiment/slides.html#randomisierung-in-soscisurvey",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Randomisierung in Soscisurvey",
+    "text": "Randomisierung in Soscisurvey\n\nUrne anlegen (Name z.B. gruppe) mit k Ausprägungen (Anzahl Faktorenkombinationen/Pseudogruppen)\nInterne Variable IV01 anlegen.\nAuf erster Fragebogenseite per PHP aus Urne ziehen:\n\nurnDraw('gruppe', 'IV01');\n\nAuf Stimulusseite per PHP zuordnen:\n\nif (value('IV01_01') == 1) {\n  html('Stimulus 1A');\n} elseif (value('IV01_01') == 2) {\n  html('Stimulus 1B');\n}\n\nItems auf dieselbe oder die folgende Seite."
+  },
+  {
+    "objectID": "experiment/slides.html#within-subject-experiment-in-soscisurvey",
+    "href": "experiment/slides.html#within-subject-experiment-in-soscisurvey",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Within-Subject-Experiment in Soscisurvey",
+    "text": "Within-Subject-Experiment in Soscisurvey\n\nGleiche Schritte wie oben, aber für jede Messwiederholung:\n\nFrageblock kopieren\nStimulusseite anlegen mit PHP-Code nach Versuchsplan\nJe eine Kopie des Frageblocks pro Stimulusseite\n\nVariablen sollten dann so heißen: BLOCK_i_j, wobei i die Stimulusseite ist, j die Itemnummer\nvorzugsweise ein Variablenblock mit demselben Response-Format, alternativ mehrere (unterschiedliche Kürzel vorn)"
+  },
+  {
+    "objectID": "experiment/slides.html#stimuli-einbinden",
+    "href": "experiment/slides.html#stimuli-einbinden",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Stimuli einbinden",
+    "text": "Stimuli einbinden\n\nBilder und Videos können in Soscisurvey hochgeladen werden oder extern gehostet\nsystematisch Dateinamen verwenden, etwa thema_bedingung1_bedingung2.jpg, also sport_0_1.jpg\neinbinden mit HTML\n\n&lt;img src=\"sport_0_1.jpg\"/&gt; \n\n&lt;video playsinline controls controlsList=\"nodownload\" style=\"max-width: 100%;\"&gt;\n  &lt;source src=\"sport_0_1.mp4\" type=\"video/mp4\" /&gt;\n&lt;/video&gt;"
+  },
+  {
+    "objectID": "experiment/slides.html#datenanalyse",
+    "href": "experiment/slides.html#datenanalyse",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Datenanalyse",
+    "text": "Datenanalyse\n\nDaten liegen zunächst im Breitformat vor, d.h. jedes Item aus jedem Block eine Variable\nfür die Auswertung benötigen wir die Daten im Langformat:\n\n\n\n\n\n\n\nCASE\ngruppe\nseite\nbedingung\nitem_1\nitem_2\nitem_3\n\n\n\n\n101\n1\n1\nA\n5\n4\n3\n\n\n101\n1\n2\nB\n2\n5\n1\n\n\n103\n2\n1\nB\n4\n3\n5"
+  },
+  {
+    "objectID": "experiment/slides.html#versuchsplan-als-daten",
+    "href": "experiment/slides.html#versuchsplan-als-daten",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Versuchsplan als Daten",
+    "text": "Versuchsplan als Daten\n\num die Soscisurvey-Daten möglichst einfach mit den Versuchsbedingungen zu verknüpfen, erstellen wir eine Excel-Datei mit dem Versuchsplan:\n\n\n\n\n\n\n\ngruppe\nseite\nki_ursprung\nki_markierung\n\n\n\n\n1\n1\n1\n1\n\n\n1\n2\n1\n0\n\n\n1\n3\n0\n1\n\n\n1\n4\n0\n0\n\n\n2\n1\n0\n0\n\n\n\n\n\n\n\nzwingend erforderlich sind die Pseudogruppe (gruppe) und die Stimulusseite (seite), in den weiteren Spalten stehen die Versuchsbedingen, Thema, o.ä.\ndie meisten Gruppen hatten das im Rahmen des Designs schon (ggf. in anderem Format) angelegt"
+  },
+  {
+    "objectID": "experiment/slides.html#kombinierte-daten-im-langformat",
+    "href": "experiment/slides.html#kombinierte-daten-im-langformat",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Kombinierte Daten im Langformat",
+    "text": "Kombinierte Daten im Langformat\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCASE\ngruppe\nseite\nbedingung\nitem_1\nitem_2\nitem_3\nki_ursprung\nki_markierung\n\n\n\n\n101\n1\n1\nA\n5\n4\n3\n1\n1\n\n\n101\n1\n2\nB\n2\n5\n1\n1\n0\n\n\n103\n2\n1\nB\n4\n3\n5\n0\n0\n\n\n\n\n\n\n\nKovariaten auf Personenebene können wir einfach wieder hinzufügen, da die CASE-Variable vorhanden ist"
+  },
+  {
+    "objectID": "experiment/slides.html#datenanalyse-1",
+    "href": "experiment/slides.html#datenanalyse-1",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Datenanalyse",
+    "text": "Datenanalyse\n\nim Between-Design können wir einfach T-Test oder ANOVA durchführen lm(y ~ bedingung)\nim Within-Subject-Design ist das nicht möglich, weil durch die Messwiederholungen die Unabhängkeitsannahme verletzt ist\nstattdessen schätzen wir ein Multilevel- oder Mixed Effects Modell lmer(y ~ bedingung + (1|CASE)\nInterpretation der Effekt etc. ist identisch, auch die Visualisierung ist problemlos möglich"
+  },
+  {
+    "objectID": "experiment/slides.html#praktische-übung",
+    "href": "experiment/slides.html#praktische-übung",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Praktische Übung",
+    "text": "Praktische Übung\n\nerstellen oder öffnen Sie Ihr Soscisurvey-Projekt\nwir erstellen gemeinsam Urne, Randomisierung und Frageblöcke sowie API-Zugriff\narbeiten Sie https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-analyse.html durch (gern auch in der Gruppe)\nerstellen Sie eine codeplan.xlsx Datei\npassen Sie den Beispiel-Code für Ihre Studie an"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgaben-bis-nächste-woche-2",
+    "href": "experiment/slides.html#aufgaben-bis-nächste-woche-2",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgaben bis nächste Woche",
+    "text": "Aufgaben bis nächste Woche\n\nFragebogen inkl. Stimuli und Messinstrumente finalisieren.\nTechnischen Pretest durchführen, eigentlichen Pretest (n ~ 5) durchführen\nCode für Datenanalyse vorbereiten"
+  },
+  {
     "objectID": "experiment/slides.html#literatur-1",
     "href": "experiment/slides.html#literatur-1",
     "title": "Experiment: Mediennutzung und -wirkung",
@@ -2825,7 +2909,7 @@
     "href": "ccs/slides.html#json-apis",
     "title": "Computational Communication Science",
     "section": "JSON APIs",
-    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Jesus! Just grow some fucking balls!\",\n        \"author\": \"Walter White\"\n    },\n    {\n        \"quote\": \"You do seem to have a little “shit creek” action going… You know, FYI, you can buy a paddle.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Today is the first day of the rest of your life.\",\n        \"author\": \"Walter White\"\n    },\n    {\n        \"quote\": \"Alright, tell you what. Both of you pull it out your butts right now, or I go grab a flashlight and some pliers and go exploring.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "ccs/slides.html#web-scraping",

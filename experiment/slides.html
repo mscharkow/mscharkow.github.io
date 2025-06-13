@@ -403,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -987.81, df = 2e+06, p-value &lt; 2.2e-16
+t = -989.72, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.00331 -13.94785
+ -14.02335 -13.96792
 sample estimates:
 mean of x mean of y 
- 166.0046  179.9802 </code></pre>
+ 165.9968  179.9924 </code></pre>
 </div>
 </div>
 </section>
@@ -424,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.856339e-21</code></pre>
+<pre><code>[1] 7.692602e-16</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1154766</code></pre>
+<pre><code>[1] 0.8822687</code></pre>
 </div>
 </div>
 </section>
@@ -439,11 +439,11 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9863776 0.7098055 0.7835218 0.1993393 0.3366905 0.8467864</code></pre>
+<pre><code>[1] 0.23498402 0.47383289 0.14154027 0.16085242 0.08750574 0.10934120</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 56</code></pre>
+<pre><code>[1] 54</code></pre>
 </div>
 </div>
 </section>
@@ -455,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 463</code></pre>
+<pre><code>[1] 467</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1162,6 +1162,292 @@ mean of x mean of y
 <li>Skalen und Items recherchieren</li>
 <li>Fragebogen entwickeln (in Word oder SosciSurvey)</li>
 </ul>
+</section></section>
+<section>
+<section id="s8" class="title-slide slide level1 center">
+<h1>Sitzung 8</h1>
+
+</section>
+<section id="agenda-heute-4" class="slide level2">
+<h2>Agenda heute</h2>
+<ol type="1">
+<li>5-Min Präsentationen</li>
+<li>Experimente in Soscisurvey</li>
+<li>Daten aus Soscisurvey</li>
+<li>Datenanalyse Within-Subject-Designs</li>
+</ol>
+</section></section>
+<section>
+<section id="min-präsentationen-2" class="title-slide slide level1 center">
+<h1>5-Min Präsentationen</h1>
+
+</section>
+<section id="experimente-in-soscisurvey" class="slide level2">
+<h2>Experimente in Soscisurvey</h2>
+<ul>
+<li>Soscisurvey ist sehr gut für Experimente geeignet</li>
+<li>vielfältige Randomisierungsmöglichkeiten, flexible Programmierung</li>
+<li>Datenexport per API und R-Paket</li>
+</ul>
+</section>
+<section id="randomisierung-in-soscisurvey" class="slide level2">
+<h2>Randomisierung in Soscisurvey</h2>
+<ol type="1">
+<li>Urne anlegen (Name z.B. <code>gruppe</code>) mit k Ausprägungen (Anzahl Faktorenkombinationen/Pseudogruppen)</li>
+<li>Interne Variable <code>IV01</code> anlegen.</li>
+<li>Auf erster Fragebogenseite per PHP aus Urne ziehen:</li>
+</ol>
+<pre><code>urnDraw('gruppe', 'IV01');</code></pre>
+<ol start="4" type="1">
+<li>Auf Stimulusseite per PHP zuordnen:</li>
+</ol>
+<pre><code>if (value('IV01_01') == 1) {
+  html('Stimulus 1A');
+} elseif (value('IV01_01') == 2) {
+  html('Stimulus 1B');
+}</code></pre>
+<ol start="5" type="1">
+<li>Items auf dieselbe oder die folgende Seite.</li>
+</ol>
+</section>
+<section id="within-subject-experiment-in-soscisurvey" class="slide level2">
+<h2>Within-Subject-Experiment in Soscisurvey</h2>
+<ul>
+<li><p>Gleiche Schritte wie oben, aber für jede Messwiederholung:</p>
+<ol type="1">
+<li>Frageblock kopieren</li>
+<li>Stimulusseite anlegen mit PHP-Code nach Versuchsplan</li>
+<li>Je eine Kopie des Frageblocks pro Stimulusseite</li>
+</ol></li>
+<li><p>Variablen sollten dann so heißen: <code>BLOCK_i_j</code>, wobei i die Stimulusseite ist, j die Itemnummer</p></li>
+<li><p>vorzugsweise ein Variablenblock mit demselben Response-Format, alternativ mehrere (unterschiedliche Kürzel vorn)</p></li>
+</ul>
+</section>
+<section id="stimuli-einbinden" class="slide level2">
+<h2>Stimuli einbinden</h2>
+<ul>
+<li>Bilder und Videos können in Soscisurvey hochgeladen werden oder extern gehostet</li>
+<li>systematisch Dateinamen verwenden, etwa thema_bedingung1_bedingung2.jpg, also sport_0_1.jpg</li>
+<li>einbinden mit HTML</li>
+</ul>
+<pre><code>&lt;img src="sport_0_1.jpg"/&gt; 
+
+&lt;video playsinline controls controlsList="nodownload" style="max-width: 100%;"&gt;
+  &lt;source src="sport_0_1.mp4" type="video/mp4" /&gt;
+&lt;/video&gt;</code></pre>
+</section>
+<section id="datenanalyse" class="slide level2">
+<h2>Datenanalyse</h2>
+<ul>
+<li>Daten liegen zunächst im Breitformat vor, d.h. jedes Item aus jedem Block eine Variable</li>
+<li>für die Auswertung benötigen wir die Daten im Langformat:</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">CASE</th>
+<th style="text-align: left;">gruppe</th>
+<th style="text-align: left;">seite</th>
+<th style="text-align: left;">bedingung</th>
+<th style="text-align: right;">item_1</th>
+<th style="text-align: right;">item_2</th>
+<th style="text-align: right;">item_3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">101</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">101</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">103</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="versuchsplan-als-daten" class="slide level2">
+<h2>Versuchsplan als Daten</h2>
+<ul>
+<li>um die Soscisurvey-Daten möglichst einfach mit den Versuchsbedingungen zu verknüpfen, erstellen wir eine Excel-Datei mit dem Versuchsplan:</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">gruppe</th>
+<th style="text-align: left;">seite</th>
+<th style="text-align: left;">ki_ursprung</th>
+<th style="text-align: left;">ki_markierung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>zwingend erforderlich sind die Pseudogruppe (<code>gruppe</code>) und die Stimulusseite (<code>seite</code>), in den weiteren Spalten stehen die Versuchsbedingen, Thema, o.ä.</li>
+<li>die meisten Gruppen hatten das im Rahmen des Designs schon (ggf. in anderem Format) angelegt</li>
+</ul>
+</section>
+<section id="kombinierte-daten-im-langformat" class="slide level2">
+<h2>Kombinierte Daten im Langformat</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">CASE</th>
+<th style="text-align: left;">gruppe</th>
+<th style="text-align: left;">seite</th>
+<th style="text-align: left;">bedingung</th>
+<th style="text-align: right;">item_1</th>
+<th style="text-align: right;">item_2</th>
+<th style="text-align: right;">item_3</th>
+<th style="text-align: left;">ki_ursprung</th>
+<th style="text-align: left;">ki_markierung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">101</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">101</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">103</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>Kovariaten auf Personenebene können wir einfach wieder hinzufügen, da die CASE-Variable vorhanden ist</li>
+</ul>
+</section>
+<section id="datenanalyse-1" class="slide level2">
+<h2>Datenanalyse</h2>
+<ul>
+<li>im Between-Design können wir einfach T-Test oder ANOVA durchführen <code>lm(y ~ bedingung)</code></li>
+<li>im Within-Subject-Design ist das nicht möglich, weil durch die Messwiederholungen die Unabhängkeitsannahme verletzt ist</li>
+<li>stattdessen schätzen wir ein Multilevel- oder Mixed Effects Modell <code>lmer(y ~ bedingung + (1|CASE)</code></li>
+<li>Interpretation der Effekt etc. ist identisch, auch die Visualisierung ist problemlos möglich</li>
+</ul>
+</section>
+<section id="praktische-übung" class="slide level2">
+<h2>Praktische Übung</h2>
+<ul>
+<li>erstellen oder öffnen Sie Ihr Soscisurvey-Projekt</li>
+<li>wir erstellen gemeinsam Urne, Randomisierung und Frageblöcke sowie API-Zugriff</li>
+<li>arbeiten Sie <a href="https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-analyse.html" class="uri">https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-analyse.html</a> durch (gern auch in der Gruppe)</li>
+<li>erstellen Sie eine codeplan.xlsx Datei</li>
+<li>passen Sie den Beispiel-Code für Ihre Studie an</li>
+</ul>
+</section>
+<section id="aufgaben-bis-nächste-woche-2" class="slide level2">
+<h2>Aufgaben bis nächste Woche</h2>
+<ol type="1">
+<li>Fragebogen inkl. Stimuli und Messinstrumente finalisieren.</li>
+<li>Technischen Pretest durchführen, eigentlichen Pretest (n ~ 5) durchführen</li>
+<li>Code für Datenanalyse vorbereiten</li>
+</ol>
 </section>
 <section id="literatur-1" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
