@@ -642,4 +642,122 @@ tibble(Gruppe = 1:3, Treatment_1 = c("A", "B", "C"), Treatment_2 = c("B", "C", "
 -   Skalen und Items recherchieren
 -   Fragebogen entwickeln (in Word oder SosciSurvey)
 
+
+# Sitzung 8 {#s8}
+
+## Agenda heute
+
+1.  5-Min Präsentationen
+3.  Experimente in Soscisurvey
+4.  Daten aus Soscisurvey 
+5.  Datenanalyse Within-Subject-Designs
+
+# 5-Min Präsentationen
+
+## Experimente in Soscisurvey
+
+- Soscisurvey ist sehr gut für Experimente geeignet
+- vielfältige Randomisierungsmöglichkeiten, flexible Programmierung
+- Datenexport per API und R-Paket
+
+## Randomisierung in Soscisurvey
+
+1. Urne anlegen (Name z.B. `gruppe`) mit k Ausprägungen (Anzahl Faktorenkombinationen/Pseudogruppen)
+2. Interne Variable `IV01` anlegen.
+3. Auf erster Fragebogenseite per PHP aus Urne ziehen: 
+```
+urnDraw('gruppe', 'IV01');
+```
+4. Auf Stimulusseite per PHP zuordnen:
+```
+if (value('IV01_01') == 1) {
+  html('Stimulus 1A');
+} elseif (value('IV01_01') == 2) {
+  html('Stimulus 1B');
+}
+```
+5. Items auf dieselbe oder die folgende Seite.
+
+## Within-Subject-Experiment in Soscisurvey
+
+-  Gleiche Schritte wie oben, aber für jede Messwiederholung:
+
+    1. Frageblock kopieren
+    2. Stimulusseite anlegen mit PHP-Code nach Versuchsplan
+    3. Je eine Kopie des Frageblocks pro Stimulusseite
+
+- Variablen sollten dann so heißen: `BLOCK_i_j`, wobei i die Stimulusseite ist, j die Itemnummer
+- vorzugsweise ein Variablenblock mit demselben Response-Format, alternativ mehrere (unterschiedliche Kürzel vorn)
+
+
+## Stimuli einbinden
+
+- Bilder und Videos können in Soscisurvey hochgeladen werden oder extern gehostet
+- systematisch Dateinamen verwenden, etwa thema_bedingung1_bedingung2.jpg, also sport_0_1.jpg
+- einbinden mit HTML
+```
+<img src="sport_0_1.jpg"/> 
+
+<video playsinline controls controlsList="nodownload" style="max-width: 100%;">
+  <source src="sport_0_1.mp4" type="video/mp4" />
+</video>
+```
+
+
+## Datenanalyse
+
+- Daten liegen zunächst im Breitformat vor, d.h. jedes Item aus jedem Block eine Variable
+- für die Auswertung benötigen wir die Daten im Langformat:
+
+
+```{r}
+a = tribble(
+  ~CASE, ~gruppe, ~seite, ~item_1, ~item_2, ~item_3, ~bedingung, 
+  101, "1", "1", 5, 4, 3, "A",
+  101, "1", "2", 2, 5, 1, "B",
+  103, "2", "1", 4, 3, 5, "B"
+) |> select(CASE, gruppe, seite, bedingung, everything())
+a
+```
+
+## Versuchsplan als Daten
+
+- um die Soscisurvey-Daten möglichst einfach mit den Versuchsbedingungen zu verknüpfen, erstellen wir eine Excel-Datei mit dem Versuchsplan:
+
+```{r}
+vpn = read_tsv("versuchsplan.tsv") |> head(5) |> mutate_all(as.character)
+vpn
+```
+
+- zwingend erforderlich sind die Pseudogruppe (`gruppe`) und die Stimulusseite (`seite`), in den weiteren Spalten stehen die Versuchsbedingen, Thema, o.ä.
+- die meisten Gruppen hatten das im Rahmen des Designs schon (ggf. in anderem Format) angelegt
+
+## Kombinierte Daten im Langformat
+
+```{r}
+a |> left_join(vpn)
+```
+- Kovariaten auf Personenebene können wir einfach wieder hinzufügen, da die CASE-Variable vorhanden ist
+
+## Datenanalyse
+
+- im Between-Design können wir einfach T-Test oder ANOVA durchführen `lm(y ~ bedingung)`
+- im Within-Subject-Design ist das nicht möglich, weil durch die Messwiederholungen die Unabhängkeitsannahme verletzt ist
+- stattdessen schätzen wir ein Multilevel- oder Mixed Effects Modell `lmer(y ~ bedingung + (1|CASE)` 
+- Interpretation der Effekt etc. ist identisch, auch die Visualisierung ist problemlos möglich
+
+## Praktische Übung
+
+- erstellen oder öffnen Sie Ihr Soscisurvey-Projekt
+- wir erstellen gemeinsam Urne, Randomisierung und Frageblöcke sowie API-Zugriff
+- arbeiten Sie <https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-analyse.html> durch (gern auch in der Gruppe)
+- erstellen Sie eine codeplan.xlsx Datei
+- passen Sie den Beispiel-Code für Ihre Studie an
+
+## Aufgaben bis nächste Woche
+
+1. Fragebogen inkl. Stimuli und Messinstrumente finalisieren.
+2. Technischen Pretest durchführen, eigentlichen Pretest (n ~ 5) durchführen
+3. Code für Datenanalyse vorbereiten
+
 ## Literatur
