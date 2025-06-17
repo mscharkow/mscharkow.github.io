@@ -319,7 +319,14 @@
     "href": "analyseverfahren/index.html#7",
     "title": "BA Anwendungsorientierte Analyseverfahren",
     "section": "Sitzung 7 ",
-    "text": "Sitzung 7 \n\nThemen\n\nModellvorhersagen\nVisualisierung von Vorhersagen\n\n\n\nLiteratur\nVan Erkel & Van Aelst (2021);Arel-Bundock et al. (2024)"
+    "text": "Sitzung 7 \n\nThemen\n\nModellvorhersagen\nVisualisierung von Vorhersagen"
+  },
+  {
+    "objectID": "analyseverfahren/index.html#8",
+    "href": "analyseverfahren/index.html#8",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Sitzung 8 ",
+    "text": "Sitzung 8 \n\nThemen\n\nGrundlagen Moderation\nKategorielle Moderatoren\n\n\n\nLiteratur\nVögele & Bachl (2017)"
   },
   {
     "objectID": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
@@ -1358,11 +1365,172 @@
     "text": "Take Home #2\nReplizieren sie eine Regressionsanalyse aus van Erkel & van Aelst (2021) mit R oder SPSS oder anderer Software\n\nStudierende mit gerader Matrikelnummer: Tabelle 5\nStudierende mit ungerader Matrikelnummer: Tabelle 6\nDer Datensatz ist in data/VanErkel_vanAelst2021.sav und enthält alle nötigen Variablen.\nMachen sie einen Screenshot der Regressionstabelle als PNG oder JPG und laden Sie diesen in Moodle hoch.\nDeadline: 25.06.2025, 10h"
   },
   {
+    "objectID": "analyseverfahren/slides.html#wiederholung-information-overload-vanerkel2021",
+    "href": "analyseverfahren/slides.html#wiederholung-information-overload-vanerkel2021",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Wiederholung: Information Overload (Van Erkel & Van Aelst, 2021)",
+    "text": "Wiederholung: Information Overload (Van Erkel & Van Aelst, 2021)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(983)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n6.93\n(5.89, 7.97)\n13.09\n&lt; .001\n0.03\n\n\n\nGender (female)\n0.72\n(0.32, 1.12)\n3.51\n&lt; .001\n0.23\n\n\n\nAge\n0.02\n(0.00, 0.03)\n2.06\n0.039\n0.07\n\n\n\nEducation (Middle)\n-0.40\n(-1.01, 0.21)\n-1.29\n0.198\n-0.13\n\n\n\nEducation (High)\n-0.62\n(-1.23, -0.01)\n-1.98\n0.048\n-0.20\n\n\n\nOutlets Used\n0.10\n(0.06, 0.13)\n4.97\n&lt; .001\n0.16\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n5062.21\n\n\nR2\n\n\n\n\n\n0.04\n\n\nR2 (adj.)\n\n\n\n\n\n0.03\n\n\nSigma\n\n\n\n\n\n3.11"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#moderationsanalyse",
+    "href": "analyseverfahren/slides.html#moderationsanalyse",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Moderationsanalyse",
+    "text": "Moderationsanalyse\n\nDiagnose: Effektheterogenität, d.h. der Zusammenhang von X und Y ist nicht für alle gleich\nder Effekt von X auf Y hängt von Moderatorvariable Z ab (“wird von Z moderiert”)\ndie Größe und die Richtung des Regressionskoeffizienten ist davon abhängig, welche Ausprägung Z hat\nBeispiele:\n\nExperimente mit min. 2 Faktoren, die sich gegenseitig beeiflussen\nEffektheterogenität in verschiedenen Subgruppen der Stichprobe\n\nEffektheterogenität aktuell en vogue (person-specific media effects, Valkenburg et al., 2021), aber theoretisch und empirisch ggf. problematisch (Healy, 2017; Vuorre et al., 2022)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#woran-erkennen-wir-effektheterogenität",
+    "href": "analyseverfahren/slides.html#woran-erkennen-wir-effektheterogenität",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Woran erkennen wir Effektheterogenität?",
+    "text": "Woran erkennen wir Effektheterogenität?"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#analysemöglichkeiten",
+    "href": "analyseverfahren/slides.html#analysemöglichkeiten",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Analysemöglichkeiten",
+    "text": "Analysemöglichkeiten\n(a) separate Regressionsmodelle pro Subgruppe schätzen\n\nkein direkter Test der Moderationshypothese\nweniger statistische Power wg. kleinerer Subsamples\nalle Regressionskoeffizienten werden unterschiedlich geschätzt\nbei metrischen Moderatoren Dichotomisierung o.ä. nötig\n\n(b) Moderationsanalyse mit Interaktionstermen\n\ngezielt für spezifische Prädiktoren möglich\nstatistische Power bleibt erhalten\nmetrische Moderatoren problemlos integrierbar"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispiel-getrennte-analysen",
+    "href": "analyseverfahren/slides.html#beispiel-getrennte-analysen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispiel getrennte Analysen",
+    "text": "Beispiel getrennte Analysen\n\n\n\n\n\n \nOverload (female)\nOverload (male)\n\n\nPredictors\nEstimates\nCI\np\nEstimates\nCI\np\n\n\n(Intercept)\n7.79\n6.47 – 9.11\n&lt;0.001\n7.97\n6.53 – 9.40\n&lt;0.001\n\n\nAge\n0.02\n-0.00 – 0.04\n0.090\n0.01\n-0.01 – 0.04\n0.186\n\n\nEducation: Middle\n0.08\n-0.83 – 1.00\n0.858\n-0.59\n-1.43 – 0.25\n0.171\n\n\nEducation: High\n0.12\n-0.79 – 1.02\n0.799\n-0.72\n-1.56 – 0.11\n0.089\n\n\nObservations\n474\n519\n\n\nR2 / R2 adjusted\n0.006 / -0.000\n0.009 / 0.004"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regressionsformel-für-moderation",
+    "href": "analyseverfahren/slides.html#regressionsformel-für-moderation",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regressionsformel für Moderation",
+    "text": "Regressionsformel für Moderation\n\nBei der Moderationsanalyse gehen wir davon aus, dass der Effekt X auf Y eine Funktion von Z ist  \\(Y = b_0 + f(Z)X + b_2Z + \\epsilon\\)\nDie Funktion f(Z) sei definiert als lineare Funktion \\(f(Z) = b_1 + b_3Z\\)  \\(Y = b_0 + (b_1 + b_3Z)X + b_2Z + \\epsilon\\)\nDurch Ausmultiplizieren erhalten wir einen Interaktionsterm \\(XZ\\), der einfach das Produkt von \\(X\\) und \\(Z\\) ist  \\(Y = b_0 + b_1X + b_2Z + b_3XZ + \\epsilon\\)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#was-bedeuten-die-koeffizienten",
+    "href": "analyseverfahren/slides.html#was-bedeuten-die-koeffizienten",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Was bedeuten die Koeffizienten?",
+    "text": "Was bedeuten die Koeffizienten?\n\nRegressionsformel \\(Y = b_0 + b_1X + b_2Z + b_3XZ + \\epsilon\\)\n\\(b_0\\) (Intercept) ist der erwartete Wert von \\(Y\\), wenn \\(X = 0\\) und \\(Z = 0\\)\n\\(b_1\\) ist der (konditionale) Effekt von \\(X\\), wenn \\(Z = 0\\)\n\\(b_2\\) ist der (konditionale) Effekt von \\(Z\\), wenn \\(X = 0\\)\n\\(b_3\\) ist der eigentliche Interaktionseffekt, d.h. die Differenz in \\(b_1\\), wenn \\(Z\\) sich um eine Einheit ändert"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#interpretation-konditionaler-effekte",
+    "href": "analyseverfahren/slides.html#interpretation-konditionaler-effekte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Interpretation konditionaler Effekte",
+    "text": "Interpretation konditionaler Effekte\n\nbei Moderationsanalysen wird oft nur auf die Signifikanz des Interaktionsterms geschaut.\nman kann und sollte aber auch die substanziellen Effekte betrachten, z.B. durch\n\nSchätzung der konditionalen Regressionskoeffizienten für (typische) Werte von \\(Z\\)\nVisualisierung der Modellvorhersagen für \\(Y\\) für (typische) Werte von \\(Z\\)\n\n\nWichtig: Bei Regressionsmodellen mit Interaktionseffekten \\(XZ\\) sind die Koeffizienten von \\(X\\) und \\(Z\\) nicht mehr unabhängig voneinander interpretierbar, d.h. die Effekte sind nicht mehr unkonditional für alle Fälle \\(n\\) gültig!\nWichtig: Damit die konditionalen Effekte überhaupt interpretierbar sind, sollten wir metrische Variablen zentrieren und kategorielle Variablen dummy- oder effektcodieren!"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#interaktionsterme",
+    "href": "analyseverfahren/slides.html#interaktionsterme",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Interaktionsterme",
+    "text": "Interaktionsterme\n\nin R kann man Interaktionsterme direkt in die Modellformel für lm() aufnehmen: y ~ x + z + x:z oder einfacher y ~ x * z\nalternativ werden Interaktionsterme manuell erstellt:\n\nvor der Schätzung die beiden Variablen \\(X\\) und \\(Z\\) miteinander zu einer neuen Variable \\(XZ\\) multiplizieren\ndieser Interaktionsterm \\(XZ\\) wird dann als zusätzliche Prädiktorvariable ins Modell aufgenommen\n\nfür leichtere Interpretierbarkeit immer darauf achten, dass \\(X\\) und \\(Z\\) einen sinnvollen Wert für 0 haben"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-vögele2017",
+    "href": "analyseverfahren/slides.html#beispielstudie-vögele2017",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: Vögele & Bachl (2017)",
+    "text": "Beispielstudie: Vögele & Bachl (2017)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#daten-3",
+    "href": "analyseverfahren/slides.html#daten-3",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Daten",
+    "text": "Daten\n\n\n\nschwab: Experimentalbedingung Dialekt schwäbisch 0 (nein), 1 (ja)\natol: Attitude toward other language = Einstellung zum Schwäbischen (1-5)\ngesamt: Gesamtbewertung des Politikers (Outcome-Variable, 1-5)\n\n  Your browser does not support the audio element.    Your browser does not support the audio element. \n\n\n\n\n\n\n\n\n\nschwab\n\n\ngeschlecht_w\n\n\natol\n\n\ngesamt\n\n\n\n\n\n\n1\n\n\n0\n\n\n3.4\n\n\n4\n\n\n\n\n1\n\n\n0\n\n\n3.0\n\n\n3\n\n\n\n\n0\n\n\n0\n\n\n2.8\n\n\n5\n\n\n\n\n1\n\n\n1\n\n\n4.8\n\n\n4\n\n\n\n\n1\n\n\n1\n\n\n3.4\n\n\n3"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#bivariates-modell-nur-versuchsbedingung",
+    "href": "analyseverfahren/slides.html#bivariates-modell-nur-versuchsbedingung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Bivariates Modell (nur Versuchsbedingung)",
+    "text": "Bivariates Modell (nur Versuchsbedingung)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(361)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n3.81\n(3.67, 3.94)\n55.54\n&lt; .001\n0.00\n\n\n\nschwab\n-0.20\n(-0.39, -0.02)\n-2.22\n0.027\n-0.12\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n937.93\n\n\nR2\n\n\n\n\n\n0.01\n\n\nR2 (adj.)\n\n\n\n\n\n0.01\n\n\nSigma\n\n\n\n\n\n0.88"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#zwei-prädiktoren-nur-haupteffekte",
+    "href": "analyseverfahren/slides.html#zwei-prädiktoren-nur-haupteffekte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Zwei Prädiktoren (nur Haupteffekte)",
+    "text": "Zwei Prädiktoren (nur Haupteffekte)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(360)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n3.63\n(3.46, 3.79)\n43.52\n&lt; .001\n0.00\n\n\n\nschwab\n-0.21\n(-0.39, -0.03)\n-2.31\n0.021\n-0.12\n\n\n\ngeschlecht w\n0.34\n(0.16, 0.52)\n3.75\n&lt; .001\n0.19\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n926.08\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n0.86"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modell-mit-kategoriellem-moderator",
+    "href": "analyseverfahren/slides.html#modell-mit-kategoriellem-moderator",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modell mit kategoriellem Moderator",
+    "text": "Modell mit kategoriellem Moderator\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(359)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n3.71\n(3.51, 3.90)\n37.37\n&lt; .001\n0.00\n\n\n\nschwab\n-0.36\n(-0.62, -0.09)\n-2.66\n0.008\n-0.12\n\n\n\ngeschlecht w\n0.19\n(-0.07, 0.46)\n1.42\n0.158\n0.19\n\n\n\nschwab × geschlecht w\n0.27\n(-0.09, 0.63)\n1.49\n0.137\n0.08\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n925.89\n\n\nR2\n\n\n\n\n\n0.06\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n0.86\n\n\n\n\n\n\n\nAchtung: Durch das bloße Hinzufügen des Interaktionsterms ändert sich die Interpretation der Regressionskoeffizienten! Wir sehen jetzt die Effekte des Dialekts bei Männern (geschlecht_w = 0) bzw. den Geschlechtseffekt in der Bedingung ohne Dialekt (schwab=0)."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#konditionale-effekte",
+    "href": "analyseverfahren/slides.html#konditionale-effekte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Konditionale Effekte",
+    "text": "Konditionale Effekte\nDurch Einsetzen in die Gleichung \\(f(Z) = b_1 + b_3Z\\) lassen sich die konditionalen Effekte von \\(X\\) (Dialekt) bei verschiedenen Ausprägungen vom Moderator \\(Z\\) (Geschlecht) schätzen:\n\n\n\n\n\n\n\n\nterm\n\n\ngeschlecht_w\n\n\nestimate\n\n\np.value\n\n\nconf.low\n\n\nconf.high\n\n\n\n\n\n\nschwab\n\n\n0\n\n\n-0.36\n\n\n0.01\n\n\n-0.62\n\n\n-0.09\n\n\n\n\nschwab\n\n\n1\n\n\n-0.09\n\n\n0.48\n\n\n-0.33\n\n\n0.15"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#average-marginal-effects-ame",
+    "href": "analyseverfahren/slides.html#average-marginal-effects-ame",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Average Marginal Effects (AME)",
+    "text": "Average Marginal Effects (AME)\nDie durchschnittlichen Effekte von \\(X\\) über die gesamte Stichprobe (average marginal effects) lassen sich bestimmen, indem für jeden einzelnen Fall der konditionale Effekt berechnet und dann gemittelt wird.\n\n\n\n\n\n\nterm\n\n\nestimate\n\n\np.value\n\n\nconf.low\n\n\nconf.high\n\n\n\n\n\n\nschwab\n\n\n-0.21\n\n\n0.02\n\n\n-0.39\n\n\n-0.03\n\n\n\n\n\n\n\nAverage Marginal Effects (AME) entsprechen im linearen Modell den unmoderierten Koeffizienten\n\n\n\n\n\n\nterm\n\n\nestimate\n\n\nstd.error\n\n\nstatistic\n\n\np.value\n\n\n\n\n\n\nschwab\n\n\n-0.21\n\n\n0.09\n\n\n-2.31\n\n\n0.02\n\n\n\n\ngeschlecht_w\n\n\n0.34\n\n\n0.09\n\n\n3.75\n\n\n0.00"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#vorhergesagte-werte",
+    "href": "analyseverfahren/slides.html#vorhergesagte-werte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Vorhergesagte Werte",
+    "text": "Vorhergesagte Werte\n\nDurch Einsetzen der Werte von \\(X\\) in die Regressionsgleichung lassen sich wie immer die vorhergesagten Werte in \\(Y\\) schätzen.\nIm Beispiel gibt es nur 4 typische Bedingungen (2 Treatment x 2 Geschlecht), die wir explizit vorhersagen.\n\n\n\n\n\n\n\n\nschwab\n\n\ngeschlecht_w\n\n\nestimate\n\n\nstd.error\n\n\nconf.low\n\n\nconf.high\n\n\ndf\n\n\n\n\n\n\n0\n\n\n0\n\n\n3.71\n\n\n0.10\n\n\n3.51\n\n\n3.90\n\n\nInf\n\n\n\n\n0\n\n\n1\n\n\n3.90\n\n\n0.09\n\n\n3.72\n\n\n4.08\n\n\nInf\n\n\n\n\n1\n\n\n0\n\n\n3.35\n\n\n0.09\n\n\n3.17\n\n\n3.53\n\n\nInf\n\n\n\n\n1\n\n\n1\n\n\n3.81\n\n\n0.08\n\n\n3.65\n\n\n3.97\n\n\nInf"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#visualisierung-der-vorhersagen-3",
+    "href": "analyseverfahren/slides.html#visualisierung-der-vorhersagen-3",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Visualisierung der Vorhersagen",
+    "text": "Visualisierung der Vorhersagen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#erweiterungen",
+    "href": "analyseverfahren/slides.html#erweiterungen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Erweiterungen",
+    "text": "Erweiterungen\n\ndieselbe Analyselogik gilt auch für Moderatoren mit mehr als zwei Ausprägungen, d.h.\n\nalle konditionalen Effekte gelten dann für die Referenzgruppe\nes gibt jeweils \\(k-1\\) Haupt- und Interaktionseffekte\n\nin (zum Glück) seltenen Fällen gibt es auch 3-Wege-Interaktionen (2 Moderatoren)\n\nEinbeziehung bzw. Berechnung der Interaktionsterme \\(XZ_1\\), \\(XZ_2\\) und \\(XZ_1Z_2\\)\nInterpretation doppelt konditionaler Effekt sehr kompliziert"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispiel-moderation-mit-3-gruppen",
+    "href": "analyseverfahren/slides.html#beispiel-moderation-mit-3-gruppen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispiel Moderation mit 3 Gruppen",
+    "text": "Beispiel Moderation mit 3 Gruppen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(987)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n2.82\n(2.55, 3.09)\n20.37\n&lt; .001\n-0.16\n\n\n\nGender (female)\n-0.63\n(-1.07, -0.19)\n-2.81\n0.005\n-0.46\n\n\n\nEducation (Middle)\n0.50\n(0.18, 0.82)\n3.04\n0.002\n0.37\n\n\n\nEducation (High)\n0.98\n(0.66, 1.30)\n6.00\n&lt; .001\n0.72\n\n\n\nGender (female) × Education (Middle)\n-0.11\n(-0.61, 0.40)\n-0.42\n0.672\n-0.08\n\n\n\nGender (female) × Education (High)\n-0.45\n(-0.94, 0.05)\n-1.75\n0.080\n-0.33\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n3300.42\n\n\nR2\n\n\n\n\n\n0.14\n\n\nR2 (adj.)\n\n\n\n\n\n0.13\n\n\nSigma\n\n\n\n\n\n1.27"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispiel-moderation-mit-3-gruppen-1",
+    "href": "analyseverfahren/slides.html#beispiel-moderation-mit-3-gruppen-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispiel Moderation mit 3 Gruppen",
+    "text": "Beispiel Moderation mit 3 Gruppen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispiel-3-way-interaction",
+    "href": "analyseverfahren/slides.html#beispiel-3-way-interaction",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispiel 3-Way-Interaction",
+    "text": "Beispiel 3-Way-Interaction\n\nQuelle: Rains et al. (2023)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#zwischenfazit",
+    "href": "analyseverfahren/slides.html#zwischenfazit",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Zwischenfazit",
+    "text": "Zwischenfazit\n\nModerationsanalysen mit kategoriellen Variablen sind technisch leicht durchführbar, erfordern aber eine neue Interpretation\ndie Interpretation der stat. Signifikanz der Interaktionsterme ist einfach, die substanzielle Interpretation schwierig\ndurch Hinzunahme des Interaktionsterms werden aus den beteiligten Haupteffekten automatisch konditionale Effekte in der Referenzgruppe (!)\ndie Koeffizienten der Prädiktoren ohne Interaktionsterm bleiben unkonditional (!)"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#literatur-1",
     "href": "analyseverfahren/slides.html#literatur-1",
     "title": "Anwendungsorientierte Analyseverfahren",
     "section": "Literatur",
-    "text": "Literatur\n\n\n\n\nAuty, S., & Lewis, C. (2004). Exploring children’s choice: The reminder effect of product placement. Psychology & Marketing, 21(9), 697–713. https://doi.org/10.1002/mar.20025\n\n\nJohannes, N., Dienlin, T., Bakhshi, H., & Przybylski, A. K. (2022). No effect of different types of media on well-being. Scientific Reports, 12(1), 61.\n\n\nKümpel, A. S. (2019). Getting Tagged, Getting Involved with News? A Mixed-Methods Investigation of the Effects and Motives of News-Related Tagging Activities on Social Network Sites. Journal of Communication, 69(4), 373–395. https://doi.org/10.1093/joc/jqz019\n\n\nVan Erkel, P. F., & Van Aelst, P. (2021). Why don’t we learn from social media? Studying effects of and mechanisms behind social media news use on general surveillance political knowledge. Political Communication, 38(4), 407–425. https://doi.org/10.1080/10584609.2020.1784328"
+    "text": "Literatur\n\n\n\n\nAuty, S., & Lewis, C. (2004). Exploring children’s choice: The reminder effect of product placement. Psychology & Marketing, 21(9), 697–713. https://doi.org/10.1002/mar.20025\n\n\nJohannes, N., Dienlin, T., Bakhshi, H., & Przybylski, A. K. (2022). No effect of different types of media on well-being. Scientific Reports, 12(1), 61.\n\n\nKümpel, A. S. (2019). Getting Tagged, Getting Involved with News? A Mixed-Methods Investigation of the Effects and Motives of News-Related Tagging Activities on Social Network Sites. Journal of Communication, 69(4), 373–395. https://doi.org/10.1093/joc/jqz019\n\n\nVan Erkel, P. F., & Van Aelst, P. (2021). Why don’t we learn from social media? Studying effects of and mechanisms behind social media news use on general surveillance political knowledge. Political Communication, 38(4), 407–425. https://doi.org/10.1080/10584609.2020.1784328\n\n\nVögele, C., & Bachl, M. (2017). Der Einfluss des Dialekts auf die Bewertung von Politikern. Studies in Communication | Media, 6(2), 196–215. https://doi.org/10.5771/2192-4007-2017-2-196"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#lernziele",
@@ -1712,7 +1880,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I am the man that I am son, and there's plenty that I would change about that but, here we are and this is just what it is.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You don't want a criminal lawyer. You want a criminal lawyer.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -2167,28 +2335,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.72, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02335 -13.96792\nsample estimates:\nmean of x mean of y \n 165.9968  179.9924"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.27, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02115 -13.96570\nsample estimates:\nmean of x mean of y \n 165.9928  179.9862"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 7.692602e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.8822687"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 7.951976e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.8899032"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.23498402 0.47383289 0.14154027 0.16085242 0.08750574 0.10934120\n\nsum(results_h0 &lt;= .05)\n\n[1] 54"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.48493359 0.84913743 0.69502138 0.41222945 0.06906181 0.46572399\n\nsum(results_h0 &lt;= .05)\n\n[1] 49"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 467\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 471\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -2909,7 +3077,7 @@
     "href": "ccs/slides.html#json-apis",
     "title": "Computational Communication Science",
     "section": "JSON APIs",
-    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Today is the first day of the rest of your life.\",\n        \"author\": \"Walter White\"\n    },\n    {\n        \"quote\": \"Alright, tell you what. Both of you pull it out your butts right now, or I go grab a flashlight and some pliers and go exploring.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"I’m not saying it’s not bad. It’s bad. But it could be worse.\",\n        \"author\": \"Saul Goodman\"\n    },\n    {\n        \"quote\": \"Fire in the hole, bitch!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
   },
   {
     "objectID": "ccs/slides.html#web-scraping",
