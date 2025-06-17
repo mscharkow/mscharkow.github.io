@@ -63,6 +63,13 @@
     "text": "Session 7 \n\nTopics\n\nautomatic text analysis\n\n\n\nReading\nVan Atteveldt et al. (2022)\n\n\nTasks for the next session\n\nComplete the next coding assignments in R."
   },
   {
+    "objectID": "ccs/index.html#8",
+    "href": "ccs/index.html#8",
+    "title": "MA Computational Communication Science",
+    "section": "Session 8 ",
+    "text": "Session 8 \n\nTopics\n\nautomatic image analysis\n\n\n\nReading\nVan Atteveldt et al. (2022)\n\n\nTasks for the next session\n\nComplete the next coding assignments in R."
+  },
+  {
     "objectID": "experiment/index.html#beschreibung",
     "href": "experiment/index.html#beschreibung",
     "title": "BA Experiment",
@@ -1880,7 +1887,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"You don't want a criminal lawyer. You want a criminal lawyer.\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"If you’re committed enough, you can make any story work.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -2335,28 +2342,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.27, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02115 -13.96570\nsample estimates:\nmean of x mean of y \n 165.9928  179.9862"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -988.16, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.00259 -13.94715\nsample estimates:\nmean of x mean of y \n 165.9944  179.9693"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 7.951976e-16\n\ndo_t_test(100, males, males)\n\n[1] 0.8899032"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 8.803125e-14\n\ndo_t_test(100, males, males)\n\n[1] 0.1395587"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.48493359 0.84913743 0.69502138 0.41222945 0.06906181 0.46572399\n\nsum(results_h0 &lt;= .05)\n\n[1] 49"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.72163312 0.50906607 0.53012083 0.96537327 0.51365929 0.07528994\n\nsum(results_h0 &lt;= .05)\n\n[1] 54"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 471\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 473\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -3077,7 +3084,7 @@
     "href": "ccs/slides.html#json-apis",
     "title": "Computational Communication Science",
     "section": "JSON APIs",
-    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"I’m not saying it’s not bad. It’s bad. But it could be worse.\",\n        \"author\": \"Saul Goodman\"\n    },\n    {\n        \"quote\": \"Fire in the hole, bitch!\",\n        \"author\": \"Jesse Pinkman\"\n    }\n]"
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Hey, tell your douchebag brother-in-law to head towards the light.\",\n        \"author\": \"Jesse Pinkman\"\n    },\n    {\n        \"quote\": \"Congratulations, you’ve just left your family a second-hand Subaru.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
   },
   {
     "objectID": "ccs/slides.html#web-scraping",
@@ -3181,8 +3188,8 @@
     "objectID": "ccs/slides.html#questions-about-coding-tasks",
     "href": "ccs/slides.html#questions-about-coding-tasks",
     "title": "Computational Communication Science",
-    "section": "Questions about coding tasks",
-    "text": "Questions about coding tasks\n\ntabular data and R packages\nJSON and RSS APIs\nweb scraping\ndownloading images and videos"
+    "section": "Questions about coding tasks?",
+    "text": "Questions about coding tasks?\n\ntabular data and R packages\nJSON and RSS APIs\nweb scraping\ndownloading images and videos\nany additional sources?"
   },
   {
     "objectID": "ccs/slides.html#automatic-text-analysis",
@@ -3197,6 +3204,34 @@
     "title": "Computational Communication Science",
     "section": "Zero-shot classification",
     "text": "Zero-shot classification\n\nget your API key from https://ki-chat.uni-mainz.de/\ntry out in the regular chat interface"
+  },
+  {
+    "objectID": "ccs/slides.html#questions-about-coding-tasks-1",
+    "href": "ccs/slides.html#questions-about-coding-tasks-1",
+    "title": "Computational Communication Science",
+    "section": "Questions about coding tasks?",
+    "text": "Questions about coding tasks?\n\nstring manipulation and regular expressions\nLLM API requests\nstructured JSON responsed and types\nend-to-end coding pipelines"
+  },
+  {
+    "objectID": "ccs/slides.html#image-and-video-coding",
+    "href": "ccs/slides.html#image-and-video-coding",
+    "title": "Computational Communication Science",
+    "section": "Image and video coding",
+    "text": "Image and video coding\n\nWhisper transcriptions and vcsi video-to-image\nLarge multimodal or visual models\nHow can we deal with multimodal content?"
+  },
+  {
+    "objectID": "ccs/slides.html#computational-workflows",
+    "href": "ccs/slides.html#computational-workflows",
+    "title": "Computational Communication Science",
+    "section": "Computational workflows",
+    "text": "Computational workflows\n\ntry to think in successive steps\nlook up suitable code snippets to re-use\nask me or a LLM, but provide as much detailed information as possible\nsuccessively build pipelines and intermediate objects for your analysis\nget single tasks to work first, than run the same task repeatedly using map() etc."
+  },
+  {
+    "objectID": "ccs/slides.html#term-papers",
+    "href": "ccs/slides.html#term-papers",
+    "title": "Computational Communication Science",
+    "section": "Term papers",
+    "text": "Term papers\n\nmax (!) 5000 words, max 3 co-authors\nany communication-related topic, but the method must be computational\nclassic scholarly paper, but also alternative formats\ndeadline etc. as usual\ntalk to me about research questions etc."
   },
   {
     "objectID": "ccs/slides.html#references",
