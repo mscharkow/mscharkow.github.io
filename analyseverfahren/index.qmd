@@ -106,6 +106,13 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 -   Modellvorhersagen
 -   Visualisierung von Vorhersagen
 
+## Sitzung 8 <a class="bi bi-easel-fill" href="slides.html#/s8" alt="Folien"></a> {#8}
+
+### Themen
+
+-   Grundlagen Moderation
+-   Kategorielle Moderatoren
+
 ### Literatur
 
-@vanerkel2021;@arel-bundock2024
+@vögele2017

@@ -1969,7 +1969,7 @@ sjPlot::tab_model(m1_w, m1_m, dv.labels = c("Overload (female)", "Overload (male
     -   dieser Interaktionsterm $XZ$ wird dann als zusätzliche Prädiktorvariable ins Modell aufgenommen
 -   für leichtere Interpretierbarkeit immer darauf achten, dass $X$ und $Z$ einen sinnvollen Wert für 0 haben
 
-## Beispielstudie: Vögele & Bachl, 2017
+## Beispielstudie: @vögele2017
 
 ![](images/voeg1.png){fig-align="center"}
 
