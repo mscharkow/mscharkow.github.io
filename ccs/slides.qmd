@@ -533,12 +533,13 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 # Session 7 {#s7}
 
-## Questions about coding tasks
+## Questions about coding tasks?
 
 - tabular data and R packages
 - JSON and RSS APIs
 - web scraping
 - downloading images and videos
+- any additional sources?
 
 
 ## Automatic text analysis
@@ -550,6 +551,40 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 - get your API key from <https://ki-chat.uni-mainz.de/>
 - try out in the regular chat interface
+
+
+# Session 8 {#s8}
+
+## Questions about coding tasks?
+
+- string manipulation and regular expressions
+- LLM API requests
+- structured JSON responsed and types
+- end-to-end coding pipelines
+
+## Image and video coding
+
+- Whisper transcriptions and vcsi video-to-image
+- Large multimodal or visual models
+
+- How can we deal with multimodal content?
+
+## Computational workflows
+
+- try to think in successive steps
+- look up suitable code snippets to re-use
+- ask me or a LLM, but provide as much detailed information as possible
+- successively build pipelines and intermediate objects for your analysis
+- get single tasks to work first, than run the same task repeatedly using `map()` etc.
+
+## Term papers
+
+- max (!) 5000 words, max 3 co-authors
+- any communication-related topic, but the method must be computational
+- classic scholarly paper, but also alternative formats
+- deadline etc. as usual
+- talk to me about research questions etc.
+
 
 
 ## References
