@@ -1559,14 +1559,14 @@ performance::check_model(m1, check = c("vif"), panel = F) |> plot()
 
 ## Confounder- oder Ommitted-Variable-Bias
 
-![](figs/confounder.png)
+![](images/confounder.png)
 
 Nicht-Berücksichtigung einer relevanten Kovariate, die $X$ *und* $Y$ beeinflusst, verzerrt den geschätzen Zusammenhang zwischen $X$ und $Y$.
 
 
 ## Collider-Bias
 
-![](figs/collider.png)
+![](images/collider.png)
 
 Berücksichtigung einer Kovariate, die von $X$ *und* $Y$ beeinflusst wird, verzerrt den geschätzen Zusammenhang zwischen $X$ und $Y$.
 
@@ -1842,5 +1842,416 @@ Replizieren sie eine Regressionsanalyse aus van Erkel & van Aelst (2021) mit R o
 
 - Machen sie einen Screenshot der Regressionstabelle als PNG oder JPG und laden Sie diesen in Moodle hoch.
 - Deadline: 25.06.2025, 10h
+
+
+# Sitzung 8 {#s8}
+
+
+# Fragen zur praktischen Übung?
+
+## Wiederholung: Information Overload [@vanerkel2021]
+
+```{r}
+vanerkel21 = vanerkel21 |> 
+  rename(Outlets_Used = count_total)
+m1 <- lm(Information_overload ~ Gender + Age + Education + Outlets_Used, data = vanerkel21)
+model_table(m1)
+```
+
+# Was tut eine intervenierende Variable?
+
+![iv](images/mod_vs_med.png){fig-align="center"}
+
+## Moderationsanalyse
+
+-   Diagnose: Effektheterogenität, d.h. der Zusammenhang von X und Y ist nicht für alle gleich
+-   der Effekt von X auf Y hängt von Moderatorvariable Z ab ("wird von Z moderiert")
+-   die Größe und die Richtung des Regressionskoeffizienten ist davon abhängig, welche Ausprägung Z hat
+-   Beispiele:
+    -   Experimente mit min. 2 Faktoren, die sich gegenseitig beeiflussen
+    -   Effektheterogenität in verschiedenen Subgruppen der Stichprobe
+- Effektheterogenität aktuell en vogue (person-specific media effects, Valkenburg et al., 2021), aber theoretisch und empirisch ggf. problematisch (Healy, 2017; Vuorre et al., 2022)
+
+## Woran erkennen wir Effektheterogenität?
+
+```{r, echo = F}
+x <- sample(0:10, 100, T)
+z <- sample(c(-.5, .5), 100, T)
+z2 <- sample(-10:10, 100, T)
+e <- rnorm(100, 5, 3)
+y <- 1.2 * x + 2 * z + 1.5 * x * z + 2 * e
+y2 <- 1.8 * x + .5 * z2 + .5 * x * z2 + 5 * e
+y3 <- 2 * x + 8 * z + .5 * e
+d <- data.frame(tore = x, kommentar = factor(z, labels = c("Gruppe 1", "Gruppe 2")), spass = y, bildquali = z2)
+d2 <- data.frame(tore = x, bildquali = z2, spass = y2)
+d3 <- data.frame(tore = x, kommentar = factor(z, labels = c("Gruppe 1", "Gruppe 2")), spass = y3)
+```
+
+```{r }
+library(patchwork)
+p1 = lm(spass ~ tore + kommentar, d) |> 
+  marginaleffects::avg_predictions(variables=c("tore", "kommentar")) |> 
+ggplot(aes(x = jitter(tore), y = estimate, color = kommentar)) +
+  geom_point(size = .5) +
+  geom_smooth(method = "lm", alpha = .1) +
+  labs(x = "X", y = "Y", color = "", subtitle = "Effekthomogenität")+
+  scale_x_continuous(labels = NULL)+
+  scale_y_continuous(labels = NULL)+
+  theme(legend.position = "bottom")
+
+p2 = lm(spass ~ tore * kommentar, d) |> 
+  marginaleffects::avg_predictions(variables=c("tore", "kommentar")) |> 
+ggplot(aes(x = jitter(tore), y = estimate, color = kommentar)) +
+  geom_point(size = .5) +
+  geom_smooth(method = "lm", alpha = .1) +
+  labs(x = "X", y = "Y", color = "", subtitle = "Effektheterogenität (Moderation)")+
+  scale_x_continuous(labels = NULL)+
+  scale_y_continuous(labels = NULL)+theme(legend.position = "bottom")
+
+p1+p2
+```
+
+## Analysemöglichkeiten
+
+### (a) separate Regressionsmodelle pro Subgruppe schätzen
+- kein direkter Test der Moderationshypothese
+-   weniger statistische Power wg. kleinerer Subsamples
+-   alle Regressionskoeffizienten werden unterschiedlich geschätzt
+-   bei metrischen Moderatoren Dichotomisierung o.ä. nötig
+
+### (b) Moderationsanalyse mit Interaktionstermen
+
+-   gezielt für spezifische Prädiktoren möglich
+-   statistische Power bleibt erhalten
+-   metrische Moderatoren problemlos integrierbar
+
+## Beispiel getrennte Analysen
+
+```{r}
+m1_m = lm(Information_overload ~  Age + Education , data = vanerkel21 |> filter(Gender == "male"))
+m1_w = lm(Information_overload ~  Age + Education , data = vanerkel21 |> filter(Gender == "female"))
+sjPlot::tab_model(m1_w, m1_m, dv.labels = c("Overload (female)", "Overload (male)"))
+```
+
+
+## Regressionsformel für Moderation
+
+-   Bei der Moderationsanalyse gehen wir davon aus, dass der *Effekt* X auf Y eine Funktion von Z ist <br/> $Y = b_0 + f(Z)X + b_2Z + \epsilon$
+
+-   Die Funktion f(Z) sei definiert als lineare Funktion $f(Z) = b_1 + b_3Z$ <br/> $Y = b_0 + (b_1 + b_3Z)X + b_2Z + \epsilon$
+
+-   Durch Ausmultiplizieren erhalten wir einen Interaktionsterm $XZ$, der einfach das Produkt von $X$ und $Z$ ist <br/> $Y = b_0 + b_1X + b_2Z + b_3XZ + \epsilon$
+
+## Was bedeuten die Koeffizienten?
+
+-   Regressionsformel $Y = b_0 + b_1X + b_2Z + b_3XZ + \epsilon$
+-   $b_0$ (Intercept) ist der erwartete Wert von $Y$, wenn $X = 0$ und $Z = 0$
+-   $b_1$ ist der (konditionale) Effekt von $X$, wenn $Z = 0$
+-   $b_2$ ist der (konditionale) Effekt von $Z$, wenn $X = 0$
+-   $b_3$ ist der eigentliche Interaktionseffekt, d.h. die Differenz in $b_1$, wenn $Z$ sich um eine Einheit ändert
+
+## Interpretation konditionaler Effekte
+
+-   bei Moderationsanalysen wird oft nur auf die Signifikanz des Interaktionsterms geschaut.
+-   man kann und sollte aber auch die substanziellen Effekte betrachten, z.B. durch
+    -   Schätzung der konditionalen Regressionskoeffizienten für (typische) Werte von $Z$
+    -   Visualisierung der Modellvorhersagen für $Y$ für (typische) Werte von $Z$
+
+**Wichtig:** Bei Regressionsmodellen mit Interaktionseffekten $XZ$ sind die Koeffizienten von $X$ und $Z$ nicht mehr unabhängig voneinander interpretierbar, d.h. die Effekte sind nicht mehr *unkonditional* für alle Fälle $n$ gültig!
+
+**Wichtig:** Damit die konditionalen Effekte überhaupt interpretierbar sind, sollten wir metrische Variablen zentrieren und kategorielle Variablen dummy- oder effektcodieren!
+
+## Interaktionsterme
+
+-   in R kann man Interaktionsterme direkt in die Modellformel für `lm()` aufnehmen: `y ~ x + z + x:z` oder einfacher `y ~ x * z`
+-   alternativ werden Interaktionsterme manuell erstellt:
+    -   vor der Schätzung die beiden Variablen $X$ und $Z$ miteinander zu einer neuen Variable $XZ$ multiplizieren
+    -   dieser Interaktionsterm $XZ$ wird dann als zusätzliche Prädiktorvariable ins Modell aufgenommen
+-   für leichtere Interpretierbarkeit immer darauf achten, dass $X$ und $Z$ einen sinnvollen Wert für 0 haben
+
+## Beispielstudie: Vögele & Bachl, 2017
+
+![](images/voeg1.png){fig-align="center"}
+
+## Daten
+
+::: columns
+::: {.column width="45%"}
+-   schwab: Experimentalbedingung Dialekt schwäbisch 0 (nein), 1 (ja)
+-   atol: Attitude toward other language = Einstellung zum Schwäbischen (1-5)
+-   gesamt: Gesamtbewertung des Politikers (Outcome-Variable, 1-5)
+
+ <audio controls>
+  <source src="https://osf.io/download/ah5yt/?direct=&mode=render3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+ <audio controls>
+  <source src="https://osf.io/download/34jtc/?direct=&amp;mode=render" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+
+    
+
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+```{r}
+vb17 <- haven::read_sav("data/Voegele_Bachl_2017.sav") |>
+  mutate(geschlecht_w = ifelse(Geschlecht == 1, 1, 0)) |>
+  haven::zap_labels()
+
+vb17 |> 
+select(schwab, geschlecht_w, atol, gesamt) |> 
+sample_n(5)
+```
+:::
+:::
+
+## Bivariates Modell (nur Versuchsbedingung)
+
+```{r}
+lm(gesamt ~ schwab, data = vb17) |>
+  model_table()
+```
+
+# Beispielanalyse: kategorielle Moderatoren
+
+## Zwei Prädiktoren (nur Haupteffekte)
+
+```{r}
+lm(gesamt ~ schwab + geschlecht_w, data = vb17) |>
+  model_table()
+```
+
+## Modell mit kategoriellem Moderator
+
+```{r}
+m1_geschlecht = lm(gesamt ~ schwab * geschlecht_w, data = vb17) 
+m1_geschlecht |>
+  model_table()
+```
+
+::: aside
+**Achtung:** Durch das bloße Hinzufügen des Interaktionsterms ändert sich die Interpretation der Regressionskoeffizienten! Wir sehen jetzt die Effekte des Dialekts bei Männern (geschlecht_w = 0) bzw. den Geschlechtseffekt in der Bedingung ohne Dialekt (schwab=0).
+:::
+
+## Konditionale Effekte
+
+Durch Einsetzen in die Gleichung $f(Z) = b_1 + b_3Z$ lassen sich die konditionalen Effekte von $X$ (Dialekt) bei verschiedenen Ausprägungen vom Moderator $Z$ (Geschlecht) schätzen:
+
+\
+
+```{r, echo = F}
+marginaleffects::avg_slopes(m1_geschlecht, variable = "schwab", by = "geschlecht_w") |>
+  as_tibble() |> 
+select(term, geschlecht_w, estimate, p.value, conf.low, conf.high)
+```
+
+## Average Marginal Effects (AME)
+
+Die *durchschnittlichen* Effekte von $X$ über die gesamte Stichprobe (average marginal effects) lassen sich bestimmen, indem für jeden einzelnen Fall der konditionale Effekt berechnet und dann gemittelt wird.
+
+```{r}
+marginaleffects::avg_slopes(m1_geschlecht, variable = "schwab") |>
+  as_tibble() |> 
+select(term, estimate, p.value, conf.low, conf.high)
+```
+
+\
+Average Marginal Effects (AME) entsprechen im linearen Modell den unmoderierten Koeffizienten
+
+```{r}
+lm(gesamt ~ schwab + geschlecht_w, data = vb17) |>
+  broom::tidy() |> 
+slice(-1) |> 
+as_tibble()
+
+```
+
+## Vorhergesagte Werte
+
+-   Durch Einsetzen der Werte von $X$ in die Regressionsgleichung lassen sich wie immer die vorhergesagten Werte in $Y$ schätzen.
+-   Im Beispiel gibt es nur 4 typische Bedingungen (2 Treatment x 2 Geschlecht), die wir explizit vorhersagen.\
+
+```{r}
+preds_schwab_geschlecht <- marginaleffects::avg_predictions(m1_geschlecht, variables = c("schwab", "geschlecht_w")) |>
+  as_tibble() |> 
+  select(-p.value, -s.value, -statistic)
+preds_schwab_geschlecht
+```
+
+## Visualisierung der Vorhersagen
+
+```{r}
+preds_schwab_geschlecht |>
+  mutate(schwab = factor(schwab), geschlecht_w = factor(geschlecht_w)) |>
+  ggplot(aes(
+    x = schwab, y = estimate, group = geschlecht_w,
+    color = geschlecht_w, ymin = conf.low, ymax = conf.high
+  )) +
+  geom_pointrange(position = position_dodge(.5)) +
+  scale_x_discrete(labels = c("Hochdeutsch", "Dialekt")) +
+  scale_color_discrete(labels = c("männlich", "weiblich")) +
+  labs(
+    y = "Gesamtbewertung (vorhergesagt)",
+    x = "Versuchsbedingung",
+    color = "Geschlecht der ProbandInnen"
+  )
+```
+
+## Erweiterungen
+
+-   dieselbe Analyselogik gilt auch für Moderatoren mit mehr als zwei Ausprägungen, d.h.
+    -   alle konditionalen Effekte gelten dann für die Referenzgruppe
+    -   es gibt jeweils $k-1$ Haupt- und Interaktionseffekte
+-   in (zum Glück) seltenen Fällen gibt es auch 3-Wege-Interaktionen (2 Moderatoren)
+    -   Einbeziehung bzw. Berechnung der Interaktionsterme $XZ_1$, $XZ_2$ und $XZ_1Z_2$
+    -   Interpretation doppelt konditionaler Effekt sehr kompliziert
+
+
+## Beispiel Moderation mit 3 Gruppen
+
+```{r}
+m2 = lm(PK ~ Gender * Education, data = vanerkel21)
+model_table(m2)
+```
+
+## Beispiel Moderation mit 3 Gruppen
+
+```{r}
+marginaleffects::avg_predictions(m2, variables = c("Gender", "Education")) |>
+  as_tibble() |> 
+  ggplot(aes(
+    x = Education, y = estimate, group = Gender,
+    color = Gender, ymin = conf.low, ymax = conf.high
+  )) +
+  geom_pointrange(position = position_dodge(.5))+
+  geom_line(linetype = "dashed",position = position_dodge(.5))+
+labs(y = "Political Knowledge")
+```
+
+## Beispiel 3-Way-Interaction
+
+![Quelle: Rains et al. (2023) ](images/rains.png)
+
+## Zwischenfazit
+
+- Moderationsanalysen mit kategoriellen Variablen sind technisch leicht durchführbar, erfordern aber eine neue Interpretation
+- die Interpretation der stat. Signifikanz der Interaktionsterme ist einfach, die substanzielle Interpretation schwierig
+- durch Hinzunahme des Interaktionsterms werden aus den beteiligten Haupteffekten automatisch konditionale Effekte in der Referenzgruppe (!)
+- die Koeffizienten der Prädiktoren ohne Interaktionsterm bleiben unkonditional (!)
+
+
+<!--
+# Fragen?
+
+
+# Beispielanalyse: metrische Moderatoren
+
+## Regression mit metrischem Moderator
+
+- Anstelle einer dichotomen Variable kann man auch eine metrische Moderatorvariable berücksichtigt werden, hier zum Beispiel die Voreinstellung gegenüber dem schwäbischen Dialekt (atol).
+- Hypothese: Je positiver die Einstellung zum schwäbischen Dialekt bei einer Versuchsperson, desto positiver der Effekt der Experimentalbedingung
+- Reminder: der Koeffizient für Dialekt bezieht sich nun auf einen konkreten Wert von atol (konditionaler Effekt)
+
+## Regression mit metrischem Moderator
+
+
+```{r}
+m2_atol <- lm(gesamt ~ schwab * atol, data = vb17)
+model_table(m2_atol)
+```
+
+::: {.aside}
+Achtung: Der konditionale Effekt für Dialekt macht nur Sinn, wenn atol auch 0 sein kann (Skala ist aber 1-5!).
+:::
+## Konditionale Effekte durch Zentrierung
+
+- Zentrierung von atol mit 1, d.h. Koeffizient für Dialekt gilt für atol = 1 (Minimum)
+
+```{r}
+lm(gesamt ~ schwab * I(atol - 1), data = vb17) |> # atol = 1
+  model_table()
+```
+
+## Conditional Effects
+
+- wie bei Modellvorhersagen können wir für typische Werte des Moderators den Koeffizienten von X schätzen
+
+```{r}
+marginaleffects::avg_slopes(m2_atol, by = "atol") |> 
+as_tibble() |> 
+select(term, atol, estimate, p.value, conf.low, conf.high) |> 
+filter(atol %in% 1:5 & term == "schwab")
+```
+## Conditional effects plot
+
+```{r}
+marginaleffects::plot_slopes(m2_atol, variables = "schwab", condition = "atol") +
+  labs(x = "ATOL Score", y = "Effekt von Dialekt auf Bewertung") +
+  geom_hline(yintercept = 0, linetype = "dashed")
+```
+## Johnson-Neyman Intervalle
+
+- es werden Intervallgrenzen geschätzt, jenseits derer die Regressionskoeffizienten von $X$ signifikant sind
+
+<blockquote>
+```{r, results = "asis"}
+interactions::johnson_neyman(m2_atol, "schwab", "atol", plot = F)
+```
+
+</blockquote>
+
+
+- Problem 1: Alpha-Fehler durch (sehr) häufige Tests
+- Problem 2: "The difference between signficant and insignificant is not itself signficant" (Andrew Gelman), sprich: die Punkte, an denen die stat. Signifikanz "umspringt", haben keinerlei besondere Eigenschaften
+- nicht verwenden!
+
+## Modellvorhersagen
+
+- wie immer lassen sich mit ausgewählten Werten der Prädiktoren auch Vorhersagen berechnen
+
+```{r}
+preds_schwab_atol <- marginaleffects::avg_predictions(m2_atol, variables = list("schwab" = 0:1, "atol" = c(1, 3, 5))) |>
+  as_tibble() |> 
+  select(-p.value, -s.value, -statistic)
+preds_schwab_atol
+```
+
+## Visualisierung der Modellvorhersagen
+
+```{r}
+preds_schwab_atol |>
+  mutate(atol = factor(atol, labels = c("niedrig (1)", "mittel (3)", "hoch (5)"))) |>
+  ggplot(aes(
+    x = factor(schwab), y = estimate, ymin = conf.low, ymax = conf.high,
+    group = atol, color = atol,
+  )) +
+  geom_pointrange(position = position_dodge(.33)) +
+  geom_line(position = position_dodge(.33)) +
+  scale_x_discrete(labels = c("Hochdeutsch", "Dialekt")) +
+  labs(y = "Gesamtbewertung (vorhergesagt)", x = "Dialekt", color = "ATOL Score")
+```
+
+
+## Tipps
+
+ * auf korrekte Interpretation der Referenzgruppen achten bei kategoriellen Moderatoren
+ * metrische Variablen zentrieren, die keinen interpretierbaren Nullpunkt haben, bevor man Interaktionsterme einfügt
+ * immer auch $X$ und $Z$ im Modell zu haben, wenn der Interaktionsterm $XZ$ im Modell ist
+ * pragmatischer Vorschlag: wenn kein signifikanter Interaktionseffekt, dann lieber unkonditionales Modell (ohne Moderator) berichten
+ * substanzielle Interpretation durch Berechnung und Visualisierung von conditional effects und Modellvorhersagen
+
+
+## Fazit
+ * lineare Modelle mit Moderation sind in der Regel sehr (zu!) leicht zu spezifizieren, aber zumeist deutlich schwieriger substanziell zu interpretieren (außer Signifikanz des Interaktionseffekts)
+ * auch wenn die Regressionstabelle optisch sehr ähnlich aussieht, ändert sich Interpretation grundsätzlich
+ * viele SozialwissenschaftlerInnen interpretieren moderierte Effekte entweder gar nicht oder falsch
+* Moderationshypothesen sind nicht per se theoretisch wertvoll, und auch bei Moderationsanalysen gibt es Alpha-Fehler
+
+-->
 
 ## Literatur
