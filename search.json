@@ -70,6 +70,13 @@
     "text": "Session 8 \n\nTopics\n\nautomatic image analysis\n\n\n\nReading\nVan Atteveldt et al. (2022)\n\n\nTasks for the next session\n\nComplete the next coding assignments in R."
   },
   {
+    "objectID": "ccs/index.html#9",
+    "href": "ccs/index.html#9",
+    "title": "MA Computational Communication Science",
+    "section": "Session 8 ",
+    "text": "Session 8 \n\nTopics\n\nsimulation and generative agents\n\n\n\nReading\nVan Atteveldt et al. (2022)\n\n\nTasks for the next session\n\nComplete the next coding assignments in R."
+  },
+  {
     "objectID": "experiment/index.html#beschreibung",
     "href": "experiment/index.html#beschreibung",
     "title": "BA Experiment",
@@ -334,6 +341,13 @@
     "title": "BA Anwendungsorientierte Analyseverfahren",
     "section": "Sitzung 8 ",
     "text": "Sitzung 8 \n\nThemen\n\nGrundlagen Moderation\nKategorielle Moderatoren\n\n\n\nLiteratur\nVögele & Bachl (2017)"
+  },
+  {
+    "objectID": "analyseverfahren/index.html#9",
+    "href": "analyseverfahren/index.html#9",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Sitzung 9 ",
+    "text": "Sitzung 9 \n\nThemen\n\nmetrische Moderatoren\n\n\n\nLiteratur\nVögele & Bachl (2017)"
   },
   {
     "objectID": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
@@ -1526,11 +1540,130 @@
     "text": "Beispiel 3-Way-Interaction\n\nQuelle: Rains et al. (2023)"
   },
   {
-    "objectID": "analyseverfahren/slides.html#zwischenfazit",
-    "href": "analyseverfahren/slides.html#zwischenfazit",
+    "objectID": "analyseverfahren/slides.html#fazit-der-letzten-sitzung",
+    "href": "analyseverfahren/slides.html#fazit-der-letzten-sitzung",
     "title": "Anwendungsorientierte Analyseverfahren",
-    "section": "Zwischenfazit",
-    "text": "Zwischenfazit\n\nModerationsanalysen mit kategoriellen Variablen sind technisch leicht durchführbar, erfordern aber eine neue Interpretation\ndie Interpretation der stat. Signifikanz der Interaktionsterme ist einfach, die substanzielle Interpretation schwierig\ndurch Hinzunahme des Interaktionsterms werden aus den beteiligten Haupteffekten automatisch konditionale Effekte in der Referenzgruppe (!)\ndie Koeffizienten der Prädiktoren ohne Interaktionsterm bleiben unkonditional (!)"
+    "section": "Fazit der letzten Sitzung",
+    "text": "Fazit der letzten Sitzung\n\nModerationsanalysen mit kategoriellen Variablen sind technisch leicht durchführbar, erfordern aber eine neue Interpretation\ndie Interpretation der stat. Signifikanz der Interaktionsterme ist einfach, die substanzielle Interpretation schwierig\ndurch Hinzunahme des Interaktionsterms werden aus den beteiligten Haupteffekten automatisch konditionale Effekte in der Referenzgruppe (!)\ndie Koeffizienten der Prädiktoren ohne Interaktionsterm bleiben unkonditional (!)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#wiederholung-kategorielle-moderatoren",
+    "href": "analyseverfahren/slides.html#wiederholung-kategorielle-moderatoren",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Wiederholung: Kategorielle Moderatoren",
+    "text": "Wiederholung: Kategorielle Moderatoren\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(987)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n8.81\n(8.13, 9.49)\n25.59\n&lt; .001\n0.11\n\n\n\nGender (female)\n-0.12\n(-1.21, 0.98)\n-0.21\n0.833\n-0.04\n\n\n\nEducation (Middle)\n-0.60\n(-1.40, 0.20)\n-1.47\n0.141\n-0.19\n\n\n\nEducation (High)\n-0.75\n(-1.54, 0.05)\n-1.85\n0.065\n-0.24\n\n\n\nGender (female) × Education (Middle)\n0.63\n(-0.63, 1.88)\n0.98\n0.326\n0.20\n\n\n\nGender (female) × Education (High)\n0.74\n(-0.50, 1.98)\n1.17\n0.242\n0.23\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n5108.02\n\n\nR2\n\n\n\n\n\n0.01\n\n\nR2 (adj.)\n\n\n\n\n\n0.00\n\n\nSigma\n\n\n\n\n\n3.16"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#metrische-moderatoren",
+    "href": "analyseverfahren/slides.html#metrische-moderatoren",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Metrische Moderatoren",
+    "text": "Metrische Moderatoren\n\ndie grundlegende Logik aus Interaktionsterm und konditionalen Effekten bleibt gleich\nInterpretation des Interaktionseffekts vorwiegend Vorzeichen + Signifikanz\ndurch Zentrierung kann man klarer interpretierbarer konditionale Effekte erhalten\nz.B. Mittelwertzentrierung: Effekt von X bei mittlerem Z\nder konditionale Effekt bei mittlerem Z ist nicht dasselbe wie der unkonditionale Effekt"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regression-mit-metrischem-moderator",
+    "href": "analyseverfahren/slides.html#regression-mit-metrischem-moderator",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regression mit metrischem Moderator",
+    "text": "Regression mit metrischem Moderator\n\nAnstelle einer dichotomen Variable kann man auch eine metrische Moderatorvariable berücksichtigt werden, hier zum Beispiel die Voreinstellung gegenüber dem schwäbischen Dialekt (atol).\nHypothese: Je positiver die Einstellung zum schwäbischen Dialekt bei einer Versuchsperson, desto positiver der Effekt der Experimentalbedingung\nReminder: der Koeffizient für Dialekt bezieht sich nun auf einen konkreten Wert von atol (konditionaler Effekt)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regression-ohne-moderator",
+    "href": "analyseverfahren/slides.html#regression-ohne-moderator",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regression ohne Moderator",
+    "text": "Regression ohne Moderator\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(360)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n3.44\n(3.02, 3.85)\n16.38\n&lt; .001\n0.00\n\n\n\nschwab\n-0.20\n(-0.38, -0.02)\n-2.15\n0.032\n-0.11\n\n\n\natol\n0.11\n(0.00, 0.23)\n1.88\n0.060\n0.10\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n936.42\n\n\nR2\n\n\n\n\n\n0.02\n\n\nR2 (adj.)\n\n\n\n\n\n0.02\n\n\nSigma\n\n\n\n\n\n0.87"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regression-mit-metrischem-moderator-1",
+    "href": "analyseverfahren/slides.html#regression-mit-metrischem-moderator-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regression mit metrischem Moderator",
+    "text": "Regression mit metrischem Moderator\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(359)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n4.19\n(3.60, 4.79)\n13.79\n&lt; .001\n0.01\n\n\n\nschwab\n-1.53\n(-2.32, -0.74)\n-3.80\n&lt; .001\n-0.11\n\n\n\natol\n-0.12\n(-0.29, 0.06)\n-1.30\n0.196\n0.09\n\n\n\nschwab × atol\n0.40\n(0.17, 0.64)\n3.40\n&lt; .001\n0.18\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n926.98\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n0.86\n\n\n\n\n\n\n\nAchtung: Der konditionale Effekt für Dialekt macht nur Sinn, wenn atol auch 0 sein kann (Skala ist aber 1-5!)."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#konditionale-effekte-durch-zentrierung",
+    "href": "analyseverfahren/slides.html#konditionale-effekte-durch-zentrierung",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Konditionale Effekte durch Zentrierung",
+    "text": "Konditionale Effekte durch Zentrierung\n\nZentrierung von atol mit 1, d.h. Koeffizient für Dialekt gilt für atol = 1 (Minimum)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(359)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n4.08\n(3.65, 4.51)\n18.69\n&lt; .001\n0.10\n\n\n\nschwab\n-1.13\n(-1.69, -0.56)\n-3.91\n&lt; .001\n0.06\n\n\n\natol - 1\n-0.12\n(-0.29, 0.06)\n-1.30\n0.196\n0.09\n\n\n\nschwab × atol - 1\n0.40\n(0.17, 0.64)\n3.40\n&lt; .001\n0.18\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n926.98\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n0.86"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#mittelwertzentrierung-1",
+    "href": "analyseverfahren/slides.html#mittelwertzentrierung-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Mittelwertzentrierung",
+    "text": "Mittelwertzentrierung\n\nüblicherweise wird auf den Mittelwert von \\(Z\\) zentriert\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(359)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n3.81\n(3.68, 3.95)\n56.55\n&lt; .001\n0.01\n\n\n\nschwab\n-0.20\n(-0.38, -0.02)\n-2.21\n0.028\n-0.11\n\n\n\natol - mean(atol, na rm = T)\n-0.12\n(-0.29, 0.06)\n-1.30\n0.196\n0.09\n\n\n\nschwab × atol - mean(atol, na rm = T)\n0.40\n(0.17, 0.64)\n3.40\n&lt; .001\n0.18\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n926.98\n\n\nR2\n\n\n\n\n\n0.05\n\n\nR2 (adj.)\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n0.86"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#conditional-effects",
+    "href": "analyseverfahren/slides.html#conditional-effects",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Conditional Effects",
+    "text": "Conditional Effects\n\nwie bei Modellvorhersagen können wir für typische Werte des Moderators den Koeffizienten von \\(X\\) schätzen\n\n\n\n\n\n\n\nterm\n\n\natol\n\n\nestimate\n\n\np.value\n\n\nconf.low\n\n\nconf.high\n\n\n\n\n\n\nschwab\n\n\n1\n\n\n-1.13\n\n\n0.00\n\n\n-1.69\n\n\n-0.56\n\n\n\n\nschwab\n\n\n2\n\n\n-0.72\n\n\n0.00\n\n\n-1.07\n\n\n-0.37\n\n\n\n\nschwab\n\n\n3\n\n\n-0.32\n\n\n0.00\n\n\n-0.51\n\n\n-0.13\n\n\n\n\nschwab\n\n\n4\n\n\n0.08\n\n\n0.50\n\n\n-0.16\n\n\n0.32\n\n\n\n\nschwab\n\n\n5\n\n\n0.48\n\n\n0.03\n\n\n0.05\n\n\n0.92"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#conditional-effects-plot",
+    "href": "analyseverfahren/slides.html#conditional-effects-plot",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Conditional effects plot",
+    "text": "Conditional effects plot"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#johnson-neyman-intervalle",
+    "href": "analyseverfahren/slides.html#johnson-neyman-intervalle",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Johnson-Neyman Intervalle",
+    "text": "Johnson-Neyman Intervalle\n\nes werden Intervallgrenzen geschätzt, jenseits derer die Regressionskoeffizienten von \\(X\\) signifikant sind\n\n\nJOHNSON-NEYMAN INTERVAL\nWhen atol is OUTSIDE the interval [3.35, 4.74], the slope of schwab is p &lt; .05.\nNote: The range of observed values of atol is [1.00, 5.00]\n\n\nProblem 1: Alpha-Fehler durch (sehr) häufige Tests\nProblem 2: “The difference between signficant and insignificant is not itself signficant” (Andrew Gelman), sprich: die Punkte, an denen die stat. Signifikanz “umspringt”, haben keinerlei besondere Eigenschaften\nnicht verwenden!"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellvorhersagen-2",
+    "href": "analyseverfahren/slides.html#modellvorhersagen-2",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellvorhersagen",
+    "text": "Modellvorhersagen\n\nwie immer lassen sich mit ausgewählten Werten der Prädiktoren auch Vorhersagen berechnen\n\n\n\n\n\n\n\nschwab\n\n\natol\n\n\nestimate\n\n\nstd.error\n\n\nconf.low\n\n\nconf.high\n\n\ndf\n\n\n\n\n\n\n0\n\n\n1\n\n\n4.08\n\n\n0.22\n\n\n3.65\n\n\n4.51\n\n\nInf\n\n\n\n\n0\n\n\n3\n\n\n3.85\n\n\n0.07\n\n\n3.70\n\n\n3.99\n\n\nInf\n\n\n\n\n0\n\n\n5\n\n\n3.62\n\n\n0.16\n\n\n3.30\n\n\n3.94\n\n\nInf\n\n\n\n\n1\n\n\n1\n\n\n2.95\n\n\n0.19\n\n\n2.59\n\n\n3.32\n\n\nInf\n\n\n\n\n1\n\n\n3\n\n\n3.53\n\n\n0.06\n\n\n3.40\n\n\n3.65\n\n\nInf\n\n\n\n\n1\n\n\n5\n\n\n4.10\n\n\n0.15\n\n\n3.81\n\n\n4.39\n\n\nInf"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#visualisierung-der-modellvorhersagen",
+    "href": "analyseverfahren/slides.html#visualisierung-der-modellvorhersagen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Visualisierung der Modellvorhersagen",
+    "text": "Visualisierung der Modellvorhersagen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#tipps",
+    "href": "analyseverfahren/slides.html#tipps",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Tipps",
+    "text": "Tipps\n\nauf korrekte Interpretation der Referenzgruppen achten bei kategoriellen Moderatoren\nmetrische Variablen zentrieren, die keinen interpretierbaren Nullpunkt haben, bevor man Interaktionsterme einfügt\nimmer auch \\(X\\) und \\(Z\\) im Modell zu haben, wenn der Interaktionsterm \\(XZ\\) im Modell ist\npragmatischer Vorschlag: wenn kein signifikanter Interaktionseffekt, dann lieber unkonditionales Modell (ohne Moderator) berichten\nsubstanzielle Interpretation durch Berechnung und Visualisierung von conditional effects und Modellvorhersagen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#fazit-1",
+    "href": "analyseverfahren/slides.html#fazit-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Fazit",
+    "text": "Fazit\n\nlineare Modelle mit Moderation sind in der Regel sehr (zu!) leicht zu spezifizieren, aber zumeist deutlich schwieriger substanziell zu interpretieren (außer Signifikanz des Interaktionseffekts)\nauch wenn die Regressionstabelle optisch sehr ähnlich aussieht, ändert sich Interpretation grundsätzlich\nviele SozialwissenschaftlerInnen interpretieren moderierte Effekte entweder gar nicht oder falsch\nModerationshypothesen sind nicht per se theoretisch wertvoll, und auch bei Moderationsanalysen gibt es Alpha-Fehler"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-aufgabe-3",
+    "href": "analyseverfahren/slides.html#take-home-aufgabe-3",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home Aufgabe #3",
+    "text": "Take-Home Aufgabe #3\nAltay et al. (2022) untersuchen experimentell, ob falsche Nachrichten weniger als wahre geteilt werden, und wie dies von der Interessantheit der Nachricht abhängt.\nBeantworten Sie folgende Forschungsfragen mit Hilfe der Studien-Daten:\n\nWerden wahre Nachrichten eher geteilt als falsche?\nWerden interessante Nachrichten eher geteilt als uninteressante?\nGibt es den im Titel des Artikels angesprochenen Effekt eines zusätzlichen “interesting-if-true” Effekts auf das Teilen von Nachrichten? Wie fällt dieser Interaktionseffekt aus?\n\n\n\nAltay, S., De Araujo, E., & Mercier, H. (2022). “If this account is true, it is most enormously wonderful”: Interestingness-if-true and the sharing of true and false news. Digital Journalism, 10(3), 373-394."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-aufgabe-3-1",
+    "href": "analyseverfahren/slides.html#take-home-aufgabe-3-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home Aufgabe #3",
+    "text": "Take-Home Aufgabe #3\n\nStellen Sie die Ergebnisse des/der geschätzen Modells/Modelle sinnvoll tabellarisch oder grafisch dar (Screenshot reicht).\nBeantworten Sie die Forschungsfragen anhand von Ihnen ausgewählter Kennwerte bzw. Quantities of Interest (2-3 Sätze pro Forschungsfrage)\nLösung als PDF-Datei bitte bis 09.07.2025, 10 Uhr in Moodle hochladen."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-aufgabe-3-2",
+    "href": "analyseverfahren/slides.html#take-home-aufgabe-3-2",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home Aufgabe #3",
+    "text": "Take-Home Aufgabe #3\n\n# Daten laden\naltay22 = read_tsv(\"data/altay2022.tsv\")\n\n\n\n\n\n\n\nShare\n\n\nType\n\n\nInteresting\n\n\n\n\n\n\n2\n\n\nTN\n\n\n3\n\n\n\n\n1\n\n\nTN\n\n\n6\n\n\n\n\n1\n\n\nTN\n\n\n4\n\n\n\n\n\n\n \n\nShare = Wahrscheinlichkeit, die Nachricht mit anderen zu teilen (1-6, höher ist wahrscheinlicher)\nType = Nachrichtentyp (experimentell variiert, TN=wahr, FN=falsch)\nInteresting = Wahrgenommene Interessantheit der Nachricht (1-7, höher ist interessanter)"
   },
   {
     "objectID": "analyseverfahren/slides.html#literatur-1",
@@ -1887,7 +2020,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"If you’re committed enough, you can make any story work.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"I could have saved her.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -2342,28 +2475,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -988.16, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.00259 -13.94715\nsample estimates:\nmean of x mean of y \n 165.9944  179.9693"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.13, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.02513 -13.96972\nsample estimates:\nmean of x mean of y \n 166.0107  180.0081"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 8.803125e-14\n\ndo_t_test(100, males, males)\n\n[1] 0.1395587"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 2.450944e-29\n\ndo_t_test(100, males, males)\n\n[1] 0.2954679"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.72163312 0.50906607 0.53012083 0.96537327 0.51365929 0.07528994\n\nsum(results_h0 &lt;= .05)\n\n[1] 54"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.63134271 0.86396425 0.03315217 0.99991952 0.30451905 0.13843925\n\nsum(results_h0 &lt;= .05)\n\n[1] 45"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 473\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 478\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -3084,7 +3217,7 @@
     "href": "ccs/slides.html#json-apis",
     "title": "Computational Communication Science",
     "section": "JSON APIs",
-    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Hey, tell your douchebag brother-in-law to head towards the light.\",\n        \"author\": \"Jesse Pinkman\"\n    },\n    {\n        \"quote\": \"Congratulations, you’ve just left your family a second-hand Subaru.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"It’s easy money. Until we catch you.\",\n        \"author\": \"Hank Schrader\"\n    },\n    {\n        \"quote\": \"Don't bullshit a bullshitter.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "ccs/slides.html#web-scraping",
@@ -3133,14 +3266,14 @@
     "href": "ccs/slides.html#text-as-term-document-matrix",
     "title": "Computational Communication Science",
     "section": "Text as Term-Document Matrix",
-    "text": "Text as Term-Document Matrix\n\nTerm-Document Matrix (TDM) quantify word occurrences.\nEach column is a unique term, each row is a document, and cells indicate how often a term appears in a document.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndocument\nbrown\ncat\ndog\nfox\nfriends\njumps\nlazy\nmat\nquick\nsleeps\n\n\n\n\n1\n1\n0\n1\n1\n0\n1\n1\n0\n1\n0\n\n\n2\n0\n1\n0\n0\n0\n0\n1\n1\n0\n1\n\n\n3\n0\n0\n1\n1\n1\n0\n0\n0\n0\n0"
+    "text": "Text as Term-Document Matrix\n\nTerm-Document Matrix (TDM) quantify word occurrences.\nEach column is a unique term, each row is a document, and cells indicate how often a term appears in a document.\n\ndocument | brown | cat | dog | fox | friends | jumps | lazy | mat | quick | sleeps |\n|:|:|:-|:-|:-|:–|:|:–|:-|:|:-| | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 0 | | 2 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | | 3 | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |"
   },
   {
     "objectID": "ccs/slides.html#text-as-word-embeddings",
     "href": "ccs/slides.html#text-as-word-embeddings",
     "title": "Computational Communication Science",
     "section": "Text as Word Embeddings",
-    "text": "Text as Word Embeddings\n\nWord or sentence embeddings represent text as numerical vectors, capturing semantic relationships.\nWe can use vector arithmetic to compute semantic relations like queen = king - man + woman.\nThe embedding dimensions themselves have no interpretable meaning to us.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSentence ID\nDim 1\nDim 2\nDim 3\nDim 4\nDim 5\nDim 6\nDim 7\nDim 8\nDim 9\nDim 10\n\n\n\n\n1\n0.78\n0.15\n0.92\n0.23\n0.65\n0.42\n0.81\n0.19\n0.70\n0.33\n\n\n2\n0.21\n0.89\n0.10\n0.77\n0.33\n0.95\n0.05\n0.68\n0.25\n0.87\n\n\n3\n0.62\n0.35\n0.75\n0.12\n0.88\n0.08\n0.59\n0.30\n0.91\n0.17"
+    "text": "Text as Word Embeddings\n\nWord or sentence embeddings represent text as numerical vectors, capturing semantic relationships.\nWe can use vector arithmetic to compute semantic relations like queen = king - man + woman.\nThe embedding dimensions themselves have no interpretable meaning to us.\n\nSentence ID | Dim 1 | Dim 2 | Dim 3 | Dim 4 | Dim 5 | Dim 6 | Dim 7 | Dim 8 | Dim 9 | Dim 10 |\n|:|:|:|:|:|:|:|:|:|:|:-| | 1 | 0.78 | 0.15 | 0.92 | 0.23 | 0.65 | 0.42 | 0.81 | 0.19 | 0.70 | 0.33 | | 2 | 0.21 | 0.89 | 0.10 | 0.77 | 0.33 | 0.95 | 0.05 | 0.68 | 0.25 | 0.87 | | 3 | 0.62 | 0.35 | 0.75 | 0.12 | 0.88 | 0.08 | 0.59 | 0.30 | 0.91 | 0.17 |"
   },
   {
     "objectID": "ccs/slides.html#traditional-automatic-content-analysis",
@@ -3234,10 +3367,101 @@
     "text": "Term papers\n\nmax (!) 5000 words, max 3 co-authors\nany communication-related topic, but the method must be computational\nclassic scholarly paper, but also alternative formats\ndeadline etc. as usual\ntalk to me about research questions etc."
   },
   {
+    "objectID": "ccs/slides.html#questions-about-coding-tasks-2",
+    "href": "ccs/slides.html#questions-about-coding-tasks-2",
+    "title": "Computational Communication Science",
+    "section": "Questions about coding tasks?",
+    "text": "Questions about coding tasks?\n\nvideo downloading and processing with external tools\nzero-shot image classification"
+  },
+  {
+    "objectID": "ccs/slides.html#inspiration-for-term-papers",
+    "href": "ccs/slides.html#inspiration-for-term-papers",
+    "title": "Computational Communication Science",
+    "section": "Inspiration for term papers",
+    "text": "Inspiration for term papers\n\nexamples (broadly): Bachl & Scharkow (2015);Bachl (2018)\nblog posts: http://varianceexplained.org/r/trump-tweets/, https://observablehq.com/@uwdata/a2-example-movies-data\nthe pudding: https://pudding.cool/2024/11/love-songs/, https://pudding.cool/2023/05/country-radio/, https://pudding.cool/2017/03/punk/\ndata sources from Kaggle: Netflix content, Top Spotify Songs, TMDB Movies with Credits, etc."
+  },
+  {
+    "objectID": "ccs/slides.html#simulation-and-agent-based-modeling",
+    "href": "ccs/slides.html#simulation-and-agent-based-modeling",
+    "title": "Computational Communication Science",
+    "section": "Simulation and agent-based modeling",
+    "text": "Simulation and agent-based modeling\nClassical Empirical Social Research\n\nTheory development in the form of verbal statements\nTheory testing based on empirical data\n(Null) hypothesis testing as a comparison of theory and empiricism\n\nSimulations\n\nTheory development in the form of algorithms/code\nGeneration of (multiple) simulated data\nComparison of simulated data with empirical data"
+  },
+  {
+    "objectID": "ccs/slides.html#types-of-simulations",
+    "href": "ccs/slides.html#types-of-simulations",
+    "title": "Computational Communication Science",
+    "section": "Types of Simulations",
+    "text": "Types of Simulations\n\nMonte Carlo simulation\nSocial simulations (Waldherr & Wettstein, 2019)"
+  },
+  {
+    "objectID": "ccs/slides.html#monte-carlo-simulation",
+    "href": "ccs/slides.html#monte-carlo-simulation",
+    "title": "Computational Communication Science",
+    "section": "Monte Carlo Simulation",
+    "text": "Monte Carlo Simulation\n\nAssumptions about the distribution of data in the population\nRepeated drawing of random samples from the population\nRepeated application of a procedure and analysis of the results"
+  },
+  {
+    "objectID": "ccs/slides.html#advantages-and-disadvantages-of-monte-carlo-simulation",
+    "href": "ccs/slides.html#advantages-and-disadvantages-of-monte-carlo-simulation",
+    "title": "Computational Communication Science",
+    "section": "Advantages and Disadvantages of Monte Carlo Simulation",
+    "text": "Advantages and Disadvantages of Monte Carlo Simulation\n\nEspecially suitable for testing procedures (does my analysis do what it’s supposed to?) and for\nPower analysis (can my study find a specific effect?)\nData-generating process must be known (approximately)\nRule specification via formulas\nIsolated consideration of all cases (no interactions between agents)"
+  },
+  {
+    "objectID": "ccs/slides.html#social-simulations",
+    "href": "ccs/slides.html#social-simulations",
+    "title": "Computational Communication Science",
+    "section": "Social Simulations",
+    "text": "Social Simulations\n\nComplex equation systems - Macromodels\nMicrosimulation (sample of agents is artificially “aged”)\nDiscrete-Event Simulations (e.g., queuing models)\nCellular Automata (e.g., Schelling’s segregation model)\nAgent-based Models"
+  },
+  {
+    "objectID": "ccs/slides.html#agent-based-models-abm",
+    "href": "ccs/slides.html#agent-based-models-abm",
+    "title": "Computational Communication Science",
+    "section": "Agent-Based Models (ABM)",
+    "text": "Agent-Based Models (ABM)\nComputer models with the following components:\n\nAgents\nEnvironment\nRules\n\nSuitable for modeling and simulating complex systems with\n\nHeterogeneous, interacting, and adaptive agents\nDynamic, non-linear processes\nMicro-macro linkages"
+  },
+  {
+    "objectID": "ccs/slides.html#simulation-specification",
+    "href": "ccs/slides.html#simulation-specification",
+    "title": "Computational Communication Science",
+    "section": "Simulation Specification",
+    "text": "Simulation Specification\n\nIn ABM, often relatively simple action rules\nFormal specification with a probabilistic components\nFew parameters within the agents, few for the environment\nProblem 1: Social science theory often not sufficiently specific and complete\nProblem 2: Model assumptions vs. simulation results"
+  },
+  {
+    "objectID": "ccs/slides.html#generative-agent-models",
+    "href": "ccs/slides.html#generative-agent-models",
+    "title": "Computational Communication Science",
+    "section": "Generative Agent Models",
+    "text": "Generative Agent Models\n\nInstead of formal (programmed) rules we use verbal rules\nUse of an LLM as an agent (“Roleplaying”)\nLLM supplements verbal instructions and role with verbal responses\nResponses depend on training data and LLM quality\nVery few validation studies to date (Larooij & Törnberg, 2025)\nOften relatively naive assumptions about the generalizability of results (= substitute for human agents)"
+  },
+  {
+    "objectID": "ccs/slides.html#hype",
+    "href": "ccs/slides.html#hype",
+    "title": "Computational Communication Science",
+    "section": "Hype",
+    "text": "Hype"
+  },
+  {
+    "objectID": "ccs/slides.html#outlook-on-llm-based-abm",
+    "href": "ccs/slides.html#outlook-on-llm-based-abm",
+    "title": "Computational Communication Science",
+    "section": "Outlook on LLM-based ABM",
+    "text": "Outlook on LLM-based ABM\n\nDiverse application areas, especially in reception research\nRelatively simple rule specification, complex agent personas (possibly with memory)\nEasy to link with real stimuli\nInter-agent communication possible, but not yet implemented in Expected Parrot\nDisadvantages: LLM biases shine through, unclear generalizability\nLLM responses are definitely not equivalent to human respondents!"
+  },
+  {
+    "objectID": "ccs/slides.html#tasks-for-the-next-sessions",
+    "href": "ccs/slides.html#tasks-for-the-next-sessions",
+    "title": "Computational Communication Science",
+    "section": "Tasks for the next sessions",
+    "text": "Tasks for the next sessions\n\nReview practical exercise https://stats.ifp.uni-mainz.de/ma-ccs/generative-agents.html\nComplete homework in R\nThink about your term paper\nLearn Quarto publishing (practical exercise in 2 weeks)"
+  },
+  {
     "objectID": "ccs/slides.html#references",
     "href": "ccs/slides.html#references",
     "title": "Computational Communication Science",
     "section": "References",
-    "text": "References\n\n\n\n\nBagchi, C., Menczer, F., Lundquist, J., Tarafdar, M., Paik, A., & Grabowicz, P. A. (2024). Social media algorithms can curb misinformation, but do they? arXiv. https://doi.org/10.48550/ARXIV.2409.18393\n\n\nClemm von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of Web Browsing Data: A Guide. Social Science Computer Review, 42(6), 1479–1504. https://doi.org/10.1177/08944393241227868\n\n\nErnst, A., Dietrich, F., Rohr, B., Reinecke, L., & Scharkow, M. (2024). Revisiting the digital jukebox in daily life: Applying mood management theory to algorithmically curated music streaming environments. http://dx.doi.org/10.31234/osf.io/7eb4g\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nMunger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. Political Behavior, 39(3), 629–649. https://doi.org/10.1007/s11109-016-9373-5\n\n\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 18(2), 124–141. https://doi.org/10.1080/19312458.2023.2181319\n\n\nParry, D., & Toth, R. (2025). Extracting Meaningful Measures of Smartphone Usage from Android Event Log Data: A Methodological Primer. Computational Communication Research, 7(1), 1. https://doi.org/10.5117/ccr2025.1.8.parr\n\n\nPfiffner, N., & Friemel, Thomas. N. (2023). Leveraging Data Donations for Communication Research: Exploring Drivers Behind the Willingness to Donate. Communication Methods and Measures, 17(3), 227–249. https://doi.org/10.1080/19312458.2023.2176474\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nScharkow, M. (2013). Thematic content analysis using supervised machine learning: An empirical evaluation using german online news. Quality & Quantity, 47(2), 761–773.\n\n\nScharkow, M. (2016). The accuracy of self-reported internet use. A validation study using client log data. Communication Methods and Measures, 10(1), 13–27. https://doi.org/10.1080/19312458.2015.1118446\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell.\n\n\nWagner, M. W. (2023). Independence by permission. Science, 381(6656), 388–391. https://doi.org/10.1126/science.adi2430"
+    "text": "References\n\n\n\n\nBachl, M. (2018). (Alternative) media sources in AfD-centered facebook discussions. Studies in Communication | Media, 7(2), 256–270. https://doi.org/10.5771/2192-4007-2018-2-128\n\n\nBachl, M., & Scharkow, M. (2015). Eine quantitative Bestandsaufnahme von Informationen über Krankheiten auf der deutschsprachigen Wikipedia, 2002-2014. In E. Baumann & M. Hastall (Eds.), Gesundheitskommunikation im gesellschaftlichen Wandel (pp. 93–104). Nomos. https://doi.org/10.5771/9783845264677-93\n\n\nBagchi, C., Menczer, F., Lundquist, J., Tarafdar, M., Paik, A., & Grabowicz, P. A. (2024). Social media algorithms can curb misinformation, but do they? arXiv. https://doi.org/10.48550/ARXIV.2409.18393\n\n\nClemm von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of Web Browsing Data: A Guide. Social Science Computer Review, 42(6), 1479–1504. https://doi.org/10.1177/08944393241227868\n\n\nErnst, A., Dietrich, F., Rohr, B., Reinecke, L., & Scharkow, M. (2024). Revisiting the digital jukebox in daily life: Applying mood management theory to algorithmically curated music streaming environments. http://dx.doi.org/10.31234/osf.io/7eb4g\n\n\nFreelon, D. (2018). Computational Research in the Post-API Age. Political Communication, 35(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506\n\n\nHaim, M. (2023). Computational Communication Science. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-40171-9\n\n\nHilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., González-Bailón, S., Lamberson, P., Pan, J., Peng, T.-Q., et al. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. International Journal of Communication, 13, 3912–3934.\n\n\nJünger, J., & Gärtner, C. (2023). Computational Methods für die Sozial- und Geisteswissenschaften. Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-37747-2\n\n\nLarooij, M., & Törnberg, P. (2025). Do large language models solve the problems of agent-based modeling? A critical review of generative social simulations. https://doi.org/10.48550/ARXIV.2504.03274\n\n\nLazer, D., Pentland, A., Adamic, L., Aral, S., Barabási, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., et al. (2009). Computational social science. Science, 323(5915), 721–723.\n\n\nMunger, K. (2017). Tweetment effects on the tweeted: Experimentally reducing racist harassment. Political Behavior, 39(3), 629–649. https://doi.org/10.1007/s11109-016-9373-5\n\n\nOhme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2023). Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking. Communication Methods and Measures, 18(2), 124–141. https://doi.org/10.1080/19312458.2023.2181319\n\n\nParry, D., & Toth, R. (2025). Extracting Meaningful Measures of Smartphone Usage from Android Event Log Data: A Methodological Primer. Computational Communication Research, 7(1), 1. https://doi.org/10.5117/ccr2025.1.8.parr\n\n\nPfiffner, N., & Friemel, Thomas. N. (2023). Leveraging Data Donations for Communication Research: Exploring Drivers Behind the Willingness to Donate. Communication Methods and Measures, 17(3), 227–249. https://doi.org/10.1080/19312458.2023.2176474\n\n\nSalganik, M. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\nScharkow, M. (2013). Thematic content analysis using supervised machine learning: An empirical evaluation using german online news. Quality & Quantity, 47(2), 761–773.\n\n\nScharkow, M. (2016). The accuracy of self-reported internet use. A validation study using client log data. Communication Methods and Measures, 10(1), 13–27. https://doi.org/10.1080/19312458.2015.1118446\n\n\nVan Atteveldt, W., Trilling, D., & Calderón, C. A. (2022). Computational analysis of communication. Wiley Blackwell.\n\n\nWagner, M. W. (2023). Independence by permission. Science, 381(6656), 388–391. https://doi.org/10.1126/science.adi2430\n\n\nWaldherr, A., & Wettstein, M. (2019). Bridging the gaps: Using agent-based modeling to reconcile data and theory in computational communication science. International Journal of Communication, 13(00), 24. https://ijoc.org/index.php/ijoc/article/view/10588"
   }
 ]
