@@ -131,7 +131,7 @@ Refresh your R skills.
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/automatic-text-analysis.html) in R. 
 
 
-## Session 8 <a class="bi bi-easel-fill" href="slides.html#/s7" alt="Slides"></a> {#8}
+## Session 8 <a class="bi bi-easel-fill" href="slides.html#/s8" alt="Slides"></a> {#8}
 
 ### Topics
 
@@ -144,3 +144,18 @@ Refresh your R skills.
 ### Tasks for the next session
 
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/automatic-image-analysis.html) in R. 
+
+
+## Session 8 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Slides"></a> {#9}
+
+### Topics
+
+- simulation and generative agents
+
+### Reading
+
+@vanatteveldt2022computational
+
+### Tasks for the next session
+
+1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/generative-agents.html) in R. 

@@ -303,9 +303,8 @@ knitr::kable(plan)
 
 ## Combining data
 
-1. What is the difference between `join()`, `left_join()` and `right_join()`?
-2. What kinds of data would you try to combine for a research project?
-
+1.  What is the difference between `join()`, `left_join()` and `right_join()`?
+2.  What kinds of data would you try to combine for a research project?
 
 # Session 6 {#s6}
 
@@ -320,38 +319,31 @@ Methods for data collection (using R), from simplest to most complex:
 5.  **Collect content or take screenshots** using remotely controlled browsers.
 6.  **Request data donations** from users.
 
-
 ## Machine-readable files
 
-* Download and read structured data files (like CSV, JSON, XML) that are publicly available online
-* **Benefit:** Often the easiest and most reliable way to obtain data when available
-* **Drawbacks:** Limited availability, needs some searching
-* Examples: 
-  - [Stranger Things Dialogue](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-10-18/stranger_things_all_dialogue.csv)
-  - [ParlSpeech V2 dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/L4OAKN)
-  - [NSF Grant Terminations](https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-05-06/nsf_terminations.csv)
-
+-   Download and read structured data files (like CSV, JSON, XML) that are publicly available online
+-   **Benefit:** Often the easiest and most reliable way to obtain data when available
+-   **Drawbacks:** Limited availability, needs some searching
+-   Examples:
+    -   [Stranger Things Dialogue](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-10-18/stranger_things_all_dialogue.csv)
+    -   [ParlSpeech V2 dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/L4OAKN)
+    -   [NSF Grant Terminations](https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-05-06/nsf_terminations.csv)
 
 ## Specific R packages
 
-
-* **Benefit:** Simple to install in R, pre-processed or readily accessible text data
-* **Drawbacks:** Very limited scope, sometimes not up-to-date
-* **Examples:**
-    * **`gutenbergr`**: Accessing literary works from Project Gutenberg.
-    * **`manifestoR`**: Contains annotated party manifestos from many countries and years from the Manifesto project
-    * **`taylor`**: Provides song data, including lyrics for the Taylor Swift discography 
-
-
-
+-   **Benefit:** Simple to install in R, pre-processed or readily accessible text data
+-   **Drawbacks:** Very limited scope, sometimes not up-to-date
+-   **Examples:**
+    -   **`gutenbergr`**: Accessing literary works from Project Gutenberg.
+    -   **`manifestoR`**: Contains annotated party manifestos from many countries and years from the Manifesto project
+    -   **`taylor`**: Provides song data, including lyrics for the Taylor Swift discography
 
 ## RSS Feeds
 
-* **Benefit:** Provides standardized, structured updates for frequently changing content.
-* **Drawbacks:** Content often limited to headlines/summaries, may not include full text; feeds can be discontinued or change formats.
+-   **Benefit:** Provides standardized, structured updates for frequently changing content.
+-   **Drawbacks:** Content often limited to headlines/summaries, may not include full text; feeds can be discontinued or change formats.
 
-
-```
+```         
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
@@ -366,60 +358,50 @@ Methods for data collection (using R), from simplest to most complex:
 </rss>
 ```
 
-
 ## JSON APIs
 
-* **Benefit:** Provides structured, flexible data (JSON format); often allows for specific queries and filters.
-* **Drawbacks:** Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.
-
+-   **Benefit:** Provides structured, flexible data (JSON format); often allows for specific queries and filters.
+-   **Drawbacks:** Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.
 
 ```{r, echo = F, results='markup'}
 a = read_lines("https://api.breakingbadquotes.xyz/v1/quotes/2") 
 a |> jsonlite::prettify()
 ```
 
-
-
 ## Web Scraping
 
-
-* involves extracting data from websites, and it's particularly useful for content where APIs might not be available.
-* HTML content is downloaded and parsed to extract specific elements (e.g., headlines, article bodies, dates).
-* **Challenges:**
-    * Layout updates can break scraping code.
-    * Websites may block or limit automated access.
-    * Content loaded via JavaScript can be harder to scrape directly.
-
-
+-   involves extracting data from websites, and it's particularly useful for content where APIs might not be available.
+-   HTML content is downloaded and parsed to extract specific elements (e.g., headlines, article bodies, dates).
+-   **Challenges:**
+    -   Layout updates can break scraping code.
+    -   Websites may block or limit automated access.
+    -   Content loaded via JavaScript can be harder to scrape directly.
 
 ## Scraping with remote-controlled browsers
 
-* Utilizes automated browsers (e.g., Chrome, Firefox) to navigate websites, interact with elements, and extract content, mimicking human user behavior.
-* **Benefit:** Can handle dynamic content (JavaScript, AJAX), login walls, and other complex interactive elements that traditional web scraping struggles with.
-* **Drawbacks:**
-    * Significantly slower than direct HTML fetching as it renders the entire page.
-    * Requires setting up browser drivers (e.g., ChromeDriver, GeckoDriver).
-    * Still detectable by sophisticated anti-bot systems.
-
+-   Utilizes automated browsers (e.g., Chrome, Firefox) to navigate websites, interact with elements, and extract content, mimicking human user behavior.
+-   **Benefit:** Can handle dynamic content (JavaScript, AJAX), login walls, and other complex interactive elements that traditional web scraping struggles with.
+-   **Drawbacks:**
+    -   Significantly slower than direct HTML fetching as it renders the entire page.
+    -   Requires setting up browser drivers (e.g., ChromeDriver, GeckoDriver).
+    -   Still detectable by sophisticated anti-bot systems.
 
 ## Data Donations
 
-* Involves requesting and collecting data directly from users, who volunteer to share their digital information for research purposes.
-* **Benefit:** Provides access to data from closed platforms (e.g., mobile apps, private social media groups) or highly personalized content that is otherwise inaccessible.
-* **Drawbacks:**
-    * Data format and completeness can vary widely across platforms/donors.
-    * Sample may not be representative of the broader population.
-    * Requires robust infrastructure to collect and process diverse donated data.
+-   Involves requesting and collecting data directly from users, who volunteer to share their digital information for research purposes.
+-   **Benefit:** Provides access to data from closed platforms (e.g., mobile apps, private social media groups) or highly personalized content that is otherwise inaccessible.
+-   **Drawbacks:**
+    -   Data format and completeness can vary widely across platforms/donors.
+    -   Sample may not be representative of the broader population.
+    -   Requires robust infrastructure to collect and process diverse donated data.
 
 ## Multimodal data
 
-- Many platforms provide text as well as images or audiovisual data.
-- Images and audiovisual data need to be downloaded before analysis.
-- We can use the multimodal data directly or convert them to text (e.g. transcripts or image descriptions).
-- Conversion to text makes things easier for us, but loses lots of information.
-- Many useful tools available, e.g. for [mass downloading](https://github.com/yt-dlp/yt-dlp), [speech transcription](https://github.com/Softcatala/whisper-ctranslate2), [video-to-image conversion](https://github.com/amietn/vcsi), etc.
-
-  
+-   Many platforms provide text as well as images or audiovisual data.
+-   Images and audiovisual data need to be downloaded before analysis.
+-   We can use the multimodal data directly or convert them to text (e.g. transcripts or image descriptions).
+-   Conversion to text makes things easier for us, but loses lots of information.
+-   Many useful tools available, e.g. for [mass downloading](https://github.com/yt-dlp/yt-dlp), [speech transcription](https://github.com/Softcatala/whisper-ctranslate2), [video-to-image conversion](https://github.com/amietn/vcsi), etc.
 
 # Automatic content analysis
 
@@ -427,10 +409,9 @@ a |> jsonlite::prettify()
 
 Textual data, often unstructured, needs to be transformed into a format suitable for computational analysis. Common representations include:
 
-* **Strings:** The raw, sequential characters of text (e.g., "This is a sentence."). This is the most basic form, preserving the original wording.
-* **Term-Document Matrices (TDMs) / Document-Term Matrices (DTMs):** Numerical representations where rows are documents and columns are terms (words), with cell values indicating term frequency (or presence) in a document. This focuses on word counts and relationships across documents.
-* **Word Embeddings:** Vector representations of words in a high-dimensional space, where semantically similar words are located closer together. This captures semantic meaning and context.
-
+-   **Strings:** The raw, sequential characters of text (e.g., "This is a sentence."). This is the most basic form, preserving the original wording.
+-   **Term-Document Matrices (TDMs) / Document-Term Matrices (DTMs):** Numerical representations where rows are documents and columns are terms (words), with cell values indicating term frequency (or presence) in a document. This focuses on word counts and relationships across documents.
+-   **Word Embeddings:** Vector representations of words in a high-dimensional space, where semantically similar words are located closer together. This captures semantic meaning and context.
 
 ## Text as Strings
 
@@ -445,146 +426,242 @@ tibble(
 )
 ```
 
-
 ## Text as Term-Document Matrix
 
-- Term-Document Matrix (TDM) quantify word occurrences. 
-- Each column is a unique term, each row is a document, and cells indicate how often a term appears in a document.
+-   Term-Document Matrix (TDM) quantify word occurrences.
+-   Each column is a unique term, each row is a document, and cells indicate how often a term appears in a document.
 
-| document | brown | cat | dog | fox | friends | jumps | lazy | mat | quick | sleeps |
-|:---------|:------|:----|:----|:----|:--------|:------|:-----|:----|:------|:-------|
-| 1        | 1     | 0   | 1   | 1   | 0       | 1     | 1    | 0   | 1     | 0      |
-| 2        | 0     | 1   | 0   | 0   | 0       | 0     | 1    | 1   | 0     | 1      |
-| 3        | 0     | 0   | 1   | 1   | 1       | 0     | 0    | 0   | 0     | 0      |
+| document \| brown \| cat \| dog \| fox \| friends \| jumps \| lazy \| mat \| quick \| sleeps \|
 
+\|:\|:\|:-\|:-\|:-\|:--\|:\|:--\|:-\|:\|:-\| \| 1 \| 1 \| 0 \| 1 \| 1 \| 0 \| 1 \| 1 \| 0 \| 1 \| 0 \| \| 2 \| 0 \| 1 \| 0 \| 0 \| 0 \| 0 \| 1 \| 1 \| 0 \| 1 \| \| 3 \| 0 \| 0 \| 1 \| 1 \| 1 \| 0 \| 0 \| 0 \| 0 \| 0 \|
 
-## Text as Word Embeddings 
+## Text as Word Embeddings
 
-- Word or sentence embeddings represent text as numerical vectors, capturing semantic relationships.
-- We can use vector arithmetic to compute semantic relations like `queen = king - man + woman`.
-- The embedding dimensions themselves have no interpretable meaning to us.
+-   Word or sentence embeddings represent text as numerical vectors, capturing semantic relationships.
+-   We can use vector arithmetic to compute semantic relations like `queen = king - man + woman`.
+-   The embedding dimensions themselves have no interpretable meaning to us.
 
-| Sentence ID | Dim 1 | Dim 2 | Dim 3 | Dim 4 | Dim 5 | Dim 6 | Dim 7 | Dim 8 | Dim 9 | Dim 10 |
-|:------------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:-------|
-| 1           | 0.78  | 0.15  | 0.92  | 0.23  | 0.65  | 0.42  | 0.81  | 0.19  | 0.70  | 0.33   |
-| 2           | 0.21  | 0.89  | 0.10  | 0.77  | 0.33  | 0.95  | 0.05  | 0.68  | 0.25  | 0.87   |
-| 3           | 0.62  | 0.35  | 0.75  | 0.12  | 0.88  | 0.08  | 0.59  | 0.30  | 0.91  | 0.17   |
+| Sentence ID \| Dim 1 \| Dim 2 \| Dim 3 \| Dim 4 \| Dim 5 \| Dim 6 \| Dim 7 \| Dim 8 \| Dim 9 \| Dim 10 \|
 
+\|:\|:\|:\|:\|:\|:\|:\|:\|:\|:\|:-\| \| 1 \| 0.78 \| 0.15 \| 0.92 \| 0.23 \| 0.65 \| 0.42 \| 0.81 \| 0.19 \| 0.70 \| 0.33 \| \| 2 \| 0.21 \| 0.89 \| 0.10 \| 0.77 \| 0.33 \| 0.95 \| 0.05 \| 0.68 \| 0.25 \| 0.87 \| \| 3 \| 0.62 \| 0.35 \| 0.75 \| 0.12 \| 0.88 \| 0.08 \| 0.59 \| 0.30 \| 0.91 \| 0.17 \|
 
 ## Traditional automatic content analysis
 
-- Preprocess the data 
-  - remove stopwords or infrequent terms
-  - resolve anaphora or homonyms
-  - detect entities, negations, fixed phrases
-- Convert text to term-document matrix or text embeddings.
-- Use unsupervised or supervised machine learning, dictionaries, or other approaches
-- Get predictions (i.e. categories) per document or term
-- extensive literature, e.g. @scharkow2013;@vanatteveldt2022computational
-
+-   Preprocess the data
+    -   remove stopwords or infrequent terms
+    -   resolve anaphora or homonyms
+    -   detect entities, negations, fixed phrases
+-   Convert text to term-document matrix or text embeddings.
+-   Use unsupervised or supervised machine learning, dictionaries, or other approaches
+-   Get predictions (i.e. categories) per document or term
+-   extensive literature, e.g. @scharkow2013;@vanatteveldt2022computational
 
 ## Large Language Models (LLM)
 
-* Models train on vast internet text (books, articles, websites) and learn **contextual word embeddings**, i.e. word vectors change based on surrounding words (e.g., "river bank" vs. "money bank"), capturing nuanced meaning.
-* **Reinforcement Learning from Human Feedback (RLHF):** Human rankings of LLM responses to instructions train a reward model. The LLM then optimizes its responses to maximize this reward.
-* Given a prompt, the LLM uses its learned knowledge to **predict the most probable word sequence** for a response.
-* LLM can be used for many tasks: translation, summarization, text editing, etc.
-* [LLM Explainer by the FT](https://ig.ft.com/generative-ai/), [RLHF explainer by OpenAI](https://openai.com/index/instruction-following/)
+-   Models train on vast internet text (books, articles, websites) and learn **contextual word embeddings**, i.e. word vectors change based on surrounding words (e.g., "river bank" vs. "money bank"), capturing nuanced meaning.
+-   **Reinforcement Learning from Human Feedback (RLHF):** Human rankings of LLM responses to instructions train a reward model. The LLM then optimizes its responses to maximize this reward.
+-   Given a prompt, the LLM uses its learned knowledge to **predict the most probable word sequence** for a response.
+-   LLM can be used for many tasks: translation, summarization, text editing, etc.
+-   [LLM Explainer by the FT](https://ig.ft.com/generative-ai/), [RLHF explainer by OpenAI](https://openai.com/index/instruction-following/)
 
+## Large Multimodal Models (LMMs)
 
-## Large Multimodal Models (LMMs) 
-
-* Beyond text, LMMs integrate modalities like text, images, audio, or video, unlike text-focused LLMs.
-* Specifically trained to understand and generate image-related content
-* LMM learn to represent different modalities in a shared "embedding space," understanding how text relates to visuals.
-* LMM can perform tasks like image captioning, visual question answering, image generation from text, and object recognition.
+-   Beyond text, LMMs integrate modalities like text, images, audio, or video, unlike text-focused LLMs.
+-   Specifically trained to understand and generate image-related content
+-   LMM learn to represent different modalities in a shared "embedding space," understanding how text relates to visuals.
+-   LMM can perform tasks like image captioning, visual question answering, image generation from text, and object recognition.
 
 ## Content analysis with LLM/LMM
 
-*  **Zero-Shot/Few Shot Coding**, the LLM performs a task with no or few specific examples, relying solely on a clear instruction in the prompt
-* **Benefits:**
-    * No preprocessing or training data necessary, can perform a wide array of tasks.
-    * We can simply re-use coding instructions for manual content analysis.
-    * Often better at understanding subtle meanings and complex tasks/contexts.
-* **Drawbacks:**
-    * LLM may inherit and amplify biases present in their  training data.
-    * Using commercial LLM APIs can be costly, and coding is relatively slow.
-    * Performance can vary significantly with minor changes in prompt wording or the selection of few-shot examples.
+-   **Zero-Shot/Few Shot Coding**, the LLM performs a task with no or few specific examples, relying solely on a clear instruction in the prompt
+-   **Benefits:**
+    -   No preprocessing or training data necessary, can perform a wide array of tasks.
+    -   We can simply re-use coding instructions for manual content analysis.
+    -   Often better at understanding subtle meanings and complex tasks/contexts.
+-   **Drawbacks:**
+    -   LLM may inherit and amplify biases present in their training data.
+    -   Using commercial LLM APIs can be costly, and coding is relatively slow.
+    -   Performance can vary significantly with minor changes in prompt wording or the selection of few-shot examples.
 
 ## AI-based content analysis
 
-* In this course, we use LLM/LMM for basically all content analysis tasks.
-* Basic workflow is similar to manual content analysis:
-  1. Collect the content data to be coded (text, image, video, etc.).
-  1. Develop codebook with coding instructions and examples.
-  2. Combine instructions with text/image data to prompts for LLM API.
-  3. Collect structured predictions for each coding unit from the model.
-  4. Maybe combine different predictions (varying tasks, varying LLM/LMM)
-* Always validate with human coding!
+-   In this course, we use LLM/LMM for basically all content analysis tasks.
+-   Basic workflow is similar to manual content analysis:
+    1.  Collect the content data to be coded (text, image, video, etc.).
+    2.  Develop codebook with coding instructions and examples.
+    3.  Combine instructions with text/image data to prompts for LLM API.
+    4.  Collect structured predictions for each coding unit from the model.
+    5.  Maybe combine different predictions (varying tasks, varying LLM/LMM)
+-   Always validate with human coding!
 
 ## Tasks
 
-1. Install python tools in our RStudio server: `pipx install yt-dlp vcsi whisper-ctranslate2 && pipx ensurepath`, then start a new terminal.
-2. Try out `yt-dlp` in the new terminal.
-3. Work through the [data collection examples](https://stats.ifp.uni-mainz.de/ma-ccs/content-data.html)
+1.  Install python tools in our RStudio server: `pipx install yt-dlp vcsi whisper-ctranslate2 && pipx ensurepath`, then start a new terminal.
+2.  Try out `yt-dlp` in the new terminal.
+3.  Work through the [data collection examples](https://stats.ifp.uni-mainz.de/ma-ccs/content-data.html)
 
 You need to re-download the ZIP file and data for the next sessions. Sorry!
-
 
 # Session 7 {#s7}
 
 ## Questions about coding tasks?
 
-- tabular data and R packages
-- JSON and RSS APIs
-- web scraping
-- downloading images and videos
-- any additional sources?
-
+-   tabular data and R packages
+-   JSON and RSS APIs
+-   web scraping
+-   downloading images and videos
+-   any additional sources?
 
 ## Automatic text analysis
 
-- working with text strings
-- basic text analysis and regular expressions
+-   working with text strings
+-   basic text analysis and regular expressions
 
 ## Zero-shot classification
 
-- get your API key from <https://ki-chat.uni-mainz.de/>
-- try out in the regular chat interface
-
+-   get your API key from <https://ki-chat.uni-mainz.de/>
+-   try out in the regular chat interface
 
 # Session 8 {#s8}
 
 ## Questions about coding tasks?
 
-- string manipulation and regular expressions
-- LLM API requests
-- structured JSON responsed and types
-- end-to-end coding pipelines
+-   string manipulation and regular expressions
+-   LLM API requests
+-   structured JSON responsed and types
+-   end-to-end coding pipelines
 
 ## Image and video coding
 
-- Whisper transcriptions and vcsi video-to-image
-- Large multimodal or visual models
+-   Whisper transcriptions and vcsi video-to-image
 
-- How can we deal with multimodal content?
+-   Large multimodal or visual models
+
+-   How can we deal with multimodal content?
 
 ## Computational workflows
 
-- try to think in successive steps
-- look up suitable code snippets to re-use
-- ask me or a LLM, but provide as much detailed information as possible
-- successively build pipelines and intermediate objects for your analysis
-- get single tasks to work first, than run the same task repeatedly using `map()` etc.
+-   try to think in successive steps
+-   look up suitable code snippets to re-use
+-   ask me or a LLM, but provide as much detailed information as possible
+-   successively build pipelines and intermediate objects for your analysis
+-   get single tasks to work first, than run the same task repeatedly using `map()` etc.
 
 ## Term papers
 
-- max (!) 5000 words, max 3 co-authors
-- any communication-related topic, but the method must be computational
-- classic scholarly paper, but also alternative formats
-- deadline etc. as usual
-- talk to me about research questions etc.
+-   max (!) 5000 words, max 3 co-authors
+-   any communication-related topic, but the method must be computational
+-   classic scholarly paper, but also alternative formats
+-   deadline etc. as usual
+-   talk to me about research questions etc.
 
+# Session 9 {#s9}
+
+## Questions about coding tasks?
+
+-   video downloading and processing with external tools
+-   zero-shot image classification
+
+## Inspiration for term papers
+
+-   examples (broadly): @bachlscharkow2015;@bachl2018
+- blog posts: <http://varianceexplained.org/r/trump-tweets/>, <https://observablehq.com/@uwdata/a2-example-movies-data>
+- the pudding: <https://pudding.cool/2024/11/love-songs/>, <https://pudding.cool/2023/05/country-radio/>, <https://pudding.cool/2017/03/punk/>
+
+-   data sources from Kaggle: [Netflix content](https://www.kaggle.com/datasets/shivamb/netflix-shows), [Top Spotify Songs](https://www.kaggle.com/datasets/asaniczka/top-spotify-songs-in-73-countries-daily-updated), [TMDB Movies with Credits](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata), etc.
+
+
+## Simulation and agent-based modeling
+
+### Classical Empirical Social Research
+
+-   Theory development in the form of verbal statements
+-   Theory testing based on empirical data
+-   (Null) hypothesis testing as a comparison of theory and empiricism
+
+### Simulations
+
+-   Theory development in the form of algorithms/code
+-   Generation of (multiple) simulated data
+-   Comparison of simulated data with empirical data
+
+## Types of Simulations
+
+-   Monte Carlo simulation
+-   Social simulations [@waldherr2019]
+
+## Monte Carlo Simulation
+
+-   Assumptions about the distribution of data in the population
+-   Repeated drawing of random samples from the population
+-   Repeated application of a procedure and analysis of the results
+
+## Advantages and Disadvantages of Monte Carlo Simulation
+
+-   Especially suitable for testing procedures (does my analysis do what it's supposed to?) and for
+-   Power analysis (can my study find a specific effect?)
+-   Data-generating process must be known (approximately)
+-   Rule specification via formulas
+-   Isolated consideration of all cases (no interactions between agents)
+
+## Social Simulations
+
+-   Complex equation systems - Macromodels
+-   Microsimulation (sample of agents is artificially "aged")
+-   Discrete-Event Simulations (e.g., queuing models)
+-   Cellular Automata (e.g., Schelling's segregation model)
+-   Agent-based Models
+
+## Agent-Based Models (ABM)
+
+### Computer models with the following components:
+
+-   Agents
+-   Environment
+-   Rules
+
+### Suitable for modeling and simulating complex systems with
+
+-   Heterogeneous, interacting, and adaptive agents
+-   Dynamic, non-linear processes
+-   Micro-macro linkages
+
+## Simulation Specification
+
+-   In ABM, often relatively simple action rules
+-   Formal specification with a probabilistic components
+-   Few parameters within the agents, few for the environment
+-   Problem 1: Social science theory often not sufficiently specific and complete
+-   Problem 2: Model assumptions vs. simulation results
+
+## Generative Agent Models
+
+-   Instead of formal (programmed) rules we use verbal rules
+-   Use of an LLM as an agent ("Roleplaying")
+-   LLM supplements verbal instructions and role with verbal responses
+-   Responses depend on training data and LLM quality
+-   Very few validation studies to date [@larooij2025]
+-   Often relatively naive assumptions about the generalizability of results (= substitute for human agents)
+
+## Hype
+
+![](images/clipboard-4111669777.png)
+
+## Outlook on LLM-based ABM
+
+-   Diverse application areas, especially in reception research
+-   Relatively simple rule specification, complex agent personas (possibly with memory)
+-   Easy to link with real stimuli
+-   Inter-agent communication possible, but not yet implemented in Expected Parrot
+-   Disadvantages: LLM biases shine through, unclear generalizability
+-   LLM responses are definitely not equivalent to human respondents!
+
+## Tasks for the next sessions
+
+-   Review practical exercise <https://stats.ifp.uni-mainz.de/ma-ccs/generative-agents.html>
+-   Complete homework in R
+- Think about your term paper
+- Learn Quarto publishing (practical exercise in 2 weeks)
 
 
 ## References
