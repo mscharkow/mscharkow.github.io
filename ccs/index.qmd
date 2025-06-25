@@ -146,7 +146,7 @@ Refresh your R skills.
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/automatic-image-analysis.html) in R. 
 
 
-## Session 8 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Slides"></a> {#9}
+## Session 9 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Slides"></a> {#9}
 
 ### Topics
 
