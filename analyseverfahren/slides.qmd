@@ -7,7 +7,8 @@ format: minimalist-revealjs
 df-print: kable
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
-
+execute: 
+  cache: true
 embed-resources: true
 ---
 
@@ -2137,17 +2138,33 @@ labs(y = "Political Knowledge")
 
 ![Quelle: Rains et al. (2023) ](images/rains.png)
 
-## Zwischenfazit
+
+# Sitzung 9 {#s9}
+
+# Take-Home #2
+
+## Fazit der letzten Sitzung
 
 - Moderationsanalysen mit kategoriellen Variablen sind technisch leicht durchführbar, erfordern aber eine neue Interpretation
 - die Interpretation der stat. Signifikanz der Interaktionsterme ist einfach, die substanzielle Interpretation schwierig
 - durch Hinzunahme des Interaktionsterms werden aus den beteiligten Haupteffekten automatisch konditionale Effekte in der Referenzgruppe (!)
 - die Koeffizienten der Prädiktoren ohne Interaktionsterm bleiben unkonditional (!)
 
+## Wiederholung: Kategorielle Moderatoren
 
-<!--
-# Fragen?
+```{r}
+lm(Information_overload ~ Gender * Education, data = vanerkel21) |> 
+  model_table()
+```
 
+
+## Metrische Moderatoren
+
+- die grundlegende Logik aus Interaktionsterm und konditionalen Effekten bleibt gleich
+- Interpretation des Interaktionseffekts vorwiegend Vorzeichen + Signifikanz
+- durch Zentrierung kann man klarer interpretierbarer konditionale Effekte erhalten
+- z.B. Mittelwertzentrierung: Effekt von X bei mittlerem Z
+- der konditionale Effekt bei mittlerem Z ist **nicht** dasselbe wie der unkonditionale Effekt
 
 # Beispielanalyse: metrische Moderatoren
 
@@ -2156,6 +2173,15 @@ labs(y = "Political Knowledge")
 - Anstelle einer dichotomen Variable kann man auch eine metrische Moderatorvariable berücksichtigt werden, hier zum Beispiel die Voreinstellung gegenüber dem schwäbischen Dialekt (atol).
 - Hypothese: Je positiver die Einstellung zum schwäbischen Dialekt bei einer Versuchsperson, desto positiver der Effekt der Experimentalbedingung
 - Reminder: der Koeffizient für Dialekt bezieht sich nun auf einen konkreten Wert von atol (konditionaler Effekt)
+
+## Regression ohne Moderator
+
+
+```{r}
+lm(gesamt ~ schwab + atol, data = vb17) |> 
+  model_table()
+```
+
 
 ## Regression mit metrischem Moderator
 
@@ -2168,6 +2194,7 @@ model_table(m2_atol)
 ::: {.aside}
 Achtung: Der konditionale Effekt für Dialekt macht nur Sinn, wenn atol auch 0 sein kann (Skala ist aber 1-5!).
 :::
+
 ## Konditionale Effekte durch Zentrierung
 
 - Zentrierung von atol mit 1, d.h. Koeffizient für Dialekt gilt für atol = 1 (Minimum)
@@ -2177,9 +2204,18 @@ lm(gesamt ~ schwab * I(atol - 1), data = vb17) |> # atol = 1
   model_table()
 ```
 
+## Mittelwertzentrierung
+
+- üblicherweise wird auf den Mittelwert von $Z$ zentriert
+
+```{r}
+lm(gesamt ~ schwab * I(atol - mean(atol, na.rm = T)), data = vb17) |> # atol = 1
+  model_table()
+```
+
 ## Conditional Effects
 
-- wie bei Modellvorhersagen können wir für typische Werte des Moderators den Koeffizienten von X schätzen
+- wie bei Modellvorhersagen können wir für typische Werte des Moderators den Koeffizienten von $X$ schätzen
 
 ```{r}
 marginaleffects::avg_slopes(m2_atol, by = "atol") |> 
@@ -2252,6 +2288,49 @@ preds_schwab_atol |>
  * viele SozialwissenschaftlerInnen interpretieren moderierte Effekte entweder gar nicht oder falsch
 * Moderationshypothesen sind nicht per se theoretisch wertvoll, und auch bei Moderationsanalysen gibt es Alpha-Fehler
 
--->
+
+## Take-Home Aufgabe #3
+
+Altay et al. (2022) untersuchen experimentell, ob falsche Nachrichten weniger als wahre geteilt werden, und wie dies von der Interessantheit der Nachricht abhängt. 
+
+Beantworten Sie folgende Forschungsfragen mit Hilfe der Studien-Daten:
+  
+  1. Werden wahre Nachrichten eher geteilt als falsche?
+  2. Werden interessante Nachrichten eher geteilt als uninteressante?
+  3. Gibt es den im Titel des Artikels angesprochenen Effekt eines **zusätzlichen "interesting-if-true"** Effekts auf das Teilen von Nachrichten? Wie fällt dieser Interaktionseffekt aus?
+
+::: {.aside}
+Altay, S., De Araujo, E., & Mercier, H. (2022). “If this account is true, it is most enormously wonderful”: Interestingness-if-true and the sharing of true and false news. Digital Journalism, 10(3), 373-394.
+:::
+
+## Take-Home Aufgabe #3
+
+  1. Stellen Sie die Ergebnisse des/der geschätzen Modells/Modelle sinnvoll tabellarisch oder grafisch dar (Screenshot reicht).
+  2. Beantworten Sie die Forschungsfragen anhand von Ihnen ausgewählter Kennwerte bzw. Quantities of Interest (2-3 Sätze pro Forschungsfrage)
+  3. Lösung als **PDF-Datei** bitte bis 09.07.2025, 10 Uhr in Moodle hochladen.
+
+
+## Take-Home Aufgabe #3
+
+
+```{r, echo = T, eval = F}
+# Daten laden
+altay22 = read_tsv("data/altay2022.tsv")
+```
+
+```{r}
+altay22 = read_tsv("data/altay2022.tsv")
+altay22 |> 
+select(Share, Type, Interesting) |> 
+head(3)
+```
+
+\ 
+
+- `Share` = Wahrscheinlichkeit, die Nachricht mit anderen zu teilen (1-6, höher ist wahrscheinlicher)
+- `Type` = Nachrichtentyp (experimentell variiert, `TN`=wahr, `FN`=falsch)
+- `Interesting` = Wahrgenommene Interessantheit der Nachricht (1-7, höher ist interessanter)
+
+
 
 ## Literatur

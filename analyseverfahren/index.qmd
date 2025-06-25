@@ -116,3 +116,14 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 ### Literatur
 
 @vögele2017
+
+
+## Sitzung 9 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Folien"></a> {#9}
+
+### Themen
+
+-   metrische Moderatoren
+
+### Literatur
+
+@vögele2017
