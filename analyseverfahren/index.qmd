@@ -127,3 +127,13 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 ### Literatur
 
 @vögele2017
+
+## Sitzung 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Folien"></a> {#10}
+
+### Themen
+
+-   logistische Regression
+
+### Literatur
+
+@festl2013

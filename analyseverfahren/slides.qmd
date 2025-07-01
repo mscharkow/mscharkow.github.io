@@ -1441,7 +1441,6 @@ sjPlot::plot_model(m2_media, type = "std") + labs(
 :::
 ::::::
 
-
 # Sitzung 6 {#s6}
 
 # Fragen zur praktischen Übung?
@@ -1450,72 +1449,65 @@ sjPlot::plot_model(m2_media, type = "std") + labs(
 
 ## Annahmen des GLM
 
-### Statistische Annahmen 
+### Statistische Annahmen
 
-- Linearität und Additivität der Zusammenhänge
-- Normalverteilung und Homoskedastizität der Residuen
-- Unabhängigkeit der Residuen
-- keine einflussreichen Ausreißer 
-- keine Multikollinearität
+-   Linearität und Additivität der Zusammenhänge
+-   Normalverteilung und Homoskedastizität der Residuen
+-   Unabhängigkeit der Residuen
+-   keine einflussreichen Ausreißer
+-   keine Multikollinearität
 
 ### Kausalannahmen
 
-- korrekt spezifiziertes Modell, d.h. keine fehlenden oder überflüssigen Kovariaten
-
+-   korrekt spezifiziertes Modell, d.h. keine fehlenden oder überflüssigen Kovariaten
 
 ## Linearität & Additivität
 
-- **Annahme**: der Zusammenhang zwischen $X$ und $Y$ ist linear und unabhängig von $Z$
-- **Diagnose**: Inspektion des Scatterplots bzw. des Fitted/Residual-Plots
-- **Verletzung**: nichtlineare Zusammenhänge (quadratisch, exponentiell, etc.)
-- **Konsequenz der Verletzung**: verzerrte Regressionskoeffizienten
-- **Lösung**: Transformation von $X$ oder $Y$, nichtlineares Regressionsmodell, Moderationsanalyse mit $Z$
+-   **Annahme**: der Zusammenhang zwischen $X$ und $Y$ ist linear und unabhängig von $Z$
+-   **Diagnose**: Inspektion des Scatterplots bzw. des Fitted/Residual-Plots
+-   **Verletzung**: nichtlineare Zusammenhänge (quadratisch, exponentiell, etc.)
+-   **Konsequenz der Verletzung**: verzerrte Regressionskoeffizienten
+-   **Lösung**: Transformation von $X$ oder $Y$, nichtlineares Regressionsmodell, Moderationsanalyse mit $Z$
 
 ## Homoskedastizizät der Residuen
 
-- **Annahme**: Residualvarianz ist für alle Werte von $X$ gleich
-- **Diagnose**: Fitted/Residual-Plots
-- **Verletzung**: Residuen streuen in Abhängigkeit von $X$
-- **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
-- **Lösung**: alternative Standardfehler, Datentransformationen, alternatives Modell
+-   **Annahme**: Residualvarianz ist für alle Werte von $X$ gleich
+-   **Diagnose**: Fitted/Residual-Plots
+-   **Verletzung**: Residuen streuen in Abhängigkeit von $X$
+-   **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
+-   **Lösung**: alternative Standardfehler, Datentransformationen, alternatives Modell
 
 ## Unabhängigkeit der Residuen
 
-- **Annahme**: Residuen korrelieren weder miteinander noch mit den Prädiktoren
-- **Diagnose**: Nachdenken über datengenerierenden Prozess, Test auf serielle Korrelation
-- **Verletzung**: Residuen (und oft Variablen) sind geclustert (zeitlich, Stichprobe)
-- **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
-- **Lösung**: Multilevel-Modell, Modell mit Autokorrelationen
+-   **Annahme**: Residuen korrelieren weder miteinander noch mit den Prädiktoren
+-   **Diagnose**: Nachdenken über datengenerierenden Prozess, Test auf serielle Korrelation
+-   **Verletzung**: Residuen (und oft Variablen) sind geclustert (zeitlich, Stichprobe)
+-   **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
+-   **Lösung**: Multilevel-Modell, Modell mit Autokorrelationen
 
+## keine einflussreichen Ausreißer
 
-## keine einflussreichen Ausreißer 
+-   **Annahme**: alle Fälle tragen gleich zur Schätzung bei
+-   **Diagnose**: Scatterplot, Leverage-Plot
+-   **Verletzung**: einzelne Fälle beeinflussen die Höhe der Regressionsgeraden
+-   **Konsequenz der Verletzung**: verzerrte Regressionskoeffizienten
+-   **Lösung**: Ausschluss von Ausreißern (mit klar definierten Regeln!)
 
-- **Annahme**: alle Fälle tragen gleich zur Schätzung bei
-- **Diagnose**: Scatterplot, Leverage-Plot
-- **Verletzung**: einzelne Fälle beeinflussen die Höhe der Regressionsgeraden
-- **Konsequenz der Verletzung**: verzerrte Regressionskoeffizienten
-- **Lösung**: Ausschluss von Ausreißern (mit klar definierten Regeln!)
+## keine Multikollinearität
 
-##  keine Multikollinearität
-
-- **Annahme**: Prädiktorvariablen $X$ korrelieren nicht zu stark miteinander
-- **Diagnose**: Korrelationsmatrix der Prädiktoren, VIF-Analyse (Variance Inflation Factor)
-- **Verletzung**: Prädiktorvariablen korrelieren stark miteinander
-- **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
-- **Lösung**: Ausschluss von Prädiktorvariablen
-
-
+-   **Annahme**: Prädiktorvariablen $X$ korrelieren nicht zu stark miteinander
+-   **Diagnose**: Korrelationsmatrix der Prädiktoren, VIF-Analyse (Variance Inflation Factor)
+-   **Verletzung**: Prädiktorvariablen korrelieren stark miteinander
+-   **Konsequenz der Verletzung**: falsche Standardfehler, ineffiziente Schätzung
+-   **Lösung**: Ausschluss von Prädiktorvariablen
 
 ## Beispiel: van Erkel & van Aelst, 2021
-
 
 ```{r, include = F}
 library(performance)
 library(see)
 m1 <- lm(PK ~ Gender + Age + Education + Political_interest, data = vanerkel21)
 ```
-
-
 
 ```{r, fig.width = 16, fig.height = 8, echo = F}
 #| fig-align: center
@@ -1532,7 +1524,7 @@ performance::check_model(m1, check = c("linearity", "homogeneity"))
 
 ## Multikollinearität
 
-::: columns
+:::::: columns
 ::: {.column width="45%"}
 ```{r}
 #
@@ -1548,22 +1540,17 @@ correlation::correlation(m1$model) |> summary()
 performance::check_model(m1, check = c("vif"), panel = F) |> plot()
 ```
 :::
-:::
-
-
-
+::::::
 
 ## Kausalannahmen, Confounders, Colliders
 
 ![Quelle: https://catalogofbias.org](https://catalogofbias.org/wp-content/uploads/sites/2/2019/03/Collider-bias_fig-1-e1551439537528.png)
-
 
 ## Confounder- oder Ommitted-Variable-Bias
 
 ![](images/confounder.png)
 
 Nicht-Berücksichtigung einer relevanten Kovariate, die $X$ *und* $Y$ beeinflusst, verzerrt den geschätzen Zusammenhang zwischen $X$ und $Y$.
-
 
 ## Collider-Bias
 
@@ -1577,61 +1564,55 @@ Berücksichtigung einer Kovariate, die von $X$ *und* $Y$ beeinflusst wird, verze
 
 ## Verletzung der Modellannahmen - und nun?
 
-- Keine Panik! Modellannahmen sind praktisch immer verletzt (z.B. Normalverteilung der Residuen)
-- viele Annahmen beziehen sich auf die Residuen, nicht auf $X$ oder $Y$
-- wichtig ist, einschätzen zu können, welche Konsequenzen eine Verletzung der Modellannahme haben kann
-  - verzerrte Schätzer (zu hoch, zu niedrig)
-  - falsche Standardfehler (Alpha- und Beta-Fehler)
-  - falsche Kausalschlüsse (Rohrer, 2018; Coenen, 2022)
-- vorsichtig formulieren, Robustheit der Ergebnisse prüfen
-
+-   Keine Panik! Modellannahmen sind praktisch immer verletzt (z.B. Normalverteilung der Residuen)
+-   viele Annahmen beziehen sich auf die Residuen, nicht auf $X$ oder $Y$
+-   wichtig ist, einschätzen zu können, welche Konsequenzen eine Verletzung der Modellannahme haben kann
+    -   verzerrte Schätzer (zu hoch, zu niedrig)
+    -   falsche Standardfehler (Alpha- und Beta-Fehler)
+    -   falsche Kausalschlüsse (Rohrer, 2018; Coenen, 2022)
+-   vorsichtig formulieren, Robustheit der Ergebnisse prüfen
 
 # Sitzung 7 {#s7}
 
-
 # Fragen zur praktischen Übung?
-
 
 ## Modellvorhersagen
 
-- Modellvorhersagen helfen, komplexe Modelle besser verstehen zu können
-- durch Einsetzen von Werten für die Prädiktoren in die Regressionsgleichung können wir Werte für $Y$ vorhersagen, d.h. $\hat{Y}$
-- es können real existierende oder fiktive Daten eingesetzt werden
-- auf Grund der statistischen Unsicherheit in den Regressionskoeffizienten sind auch die Vorhersagen mit Unsicherheit behaftet
-- daher erhalten wir Punktschätzer und Konfidenz bzw.  Vorhersageintervalle für $\hat{Y}$
-
+-   Modellvorhersagen helfen, komplexe Modelle besser verstehen zu können
+-   durch Einsetzen von Werten für die Prädiktoren in die Regressionsgleichung können wir Werte für $Y$ vorhersagen, d.h. $\hat{Y}$
+-   es können real existierende oder fiktive Daten eingesetzt werden
+-   auf Grund der statistischen Unsicherheit in den Regressionskoeffizienten sind auch die Vorhersagen mit Unsicherheit behaftet
+-   daher erhalten wir Punktschätzer und Konfidenz bzw. Vorhersageintervalle für $\hat{Y}$
 
 ## Welche Daten vorhersagen?
 
-- *empirische* Daten, d.h. alle oder ausgewählte Fälle des Datensatzes, auf dem das Modell basiert
-- *idealtypische* Daten, d.h. Beispieldaten, die auf (Kombinationen von) für uns relevanten Variablen basieren
-- *counterfactual* Daten, d.h. nicht beobachtete Daten, die das Gegenteil der beobachteten in einer oder mehreren Variablen sind
+-   *empirische* Daten, d.h. alle oder ausgewählte Fälle des Datensatzes, auf dem das Modell basiert
+-   *idealtypische* Daten, d.h. Beispieldaten, die auf (Kombinationen von) für uns relevanten Variablen basieren
+-   *counterfactual* Daten, d.h. nicht beobachtete Daten, die das Gegenteil der beobachteten in einer oder mehreren Variablen sind
 
-\ 
+ 
 
-- bei kategoriellen Prädiktoren werden die einzelnen Ausprägungen verwendet
-- bei metrischen Prädiktoren werden typische Fälle (Min, Max, Median, Quartile) oder gezielte Einzelwerte eingesetzt
+-   bei kategoriellen Prädiktoren werden die einzelnen Ausprägungen verwendet
+-   bei metrischen Prädiktoren werden typische Fälle (Min, Max, Median, Quartile) oder gezielte Einzelwerte eingesetzt
 
 ## Aggregation
 
-- oft sind neben einzelnen Vorhersagen auch aggregierte Vorhersagen für spezifische Gruppen von Interesse
-- entweder (a) empirisch vorkommende Gruppen im Datensatz oder (b) kontrafaktische Gruppen
-- Analysestrategie:
-  1. für jede Gruppe je einen Datensatz auswählen (a) oder  (b) generieren
-  2. Vorhersagen für alle Fälle pro Datensatz berechnen
-  3. Vorhersagen aggregieren, z.B. durch Berechnen des Mittelwertes für $\hat{Y}$
-
+-   oft sind neben einzelnen Vorhersagen auch aggregierte Vorhersagen für spezifische Gruppen von Interesse
+-   entweder (a) empirisch vorkommende Gruppen im Datensatz oder (b) kontrafaktische Gruppen
+-   Analysestrategie:
+    1.  für jede Gruppe je einen Datensatz auswählen (a) oder (b) generieren
+    2.  Vorhersagen für alle Fälle pro Datensatz berechnen
+    3.  Vorhersagen aggregieren, z.B. durch Berechnen des Mittelwertes für $\hat{Y}$
 
 ## Intervalle
 
-- bei Modellvorhersagen unterscheidet man zwischen *confidence* und *prediction intervals* für $\hat{Y}$
-- in die Berechnung der Konfidenzintervalle fließt nur die Unsicherheit in den Regressionskoeffizienten ein
-- in die Berechnung der Vorhersageintervalle fließt *zusätzlich* noch die Residualvarianz ein
-- Vorhersageintervalle sind daher immer breiter (je nach $R^2$) als die Konfidenzintervalle der Vorhersagen
-- Vorhersageintervalle werden meist nur für einzelne vorhergesagte Werte angegeben, ansonsten verwenden wir nur CI
+-   bei Modellvorhersagen unterscheidet man zwischen *confidence* und *prediction intervals* für $\hat{Y}$
+-   in die Berechnung der Konfidenzintervalle fließt nur die Unsicherheit in den Regressionskoeffizienten ein
+-   in die Berechnung der Vorhersageintervalle fließt *zusätzlich* noch die Residualvarianz ein
+-   Vorhersageintervalle sind daher immer breiter (je nach $R^2$) als die Konfidenzintervalle der Vorhersagen
+-   Vorhersageintervalle werden meist nur für einzelne vorhergesagte Werte angegeben, ansonsten verwenden wir nur CI
 
 ## Beispiel: van Erkel & van Aelst, 2021
-
 
 ```{r }
 #vanerkel21 <- haven::read_sav("data/Vanerkel_Vanaelst_2021.sav") |>
@@ -1656,7 +1637,7 @@ select(Gender:Political_interest, PK, Predicted_PK = estimate) |>
 sample_n(5)
 ```
 
-## Vorhergesagte Verteilung 
+## Vorhergesagte Verteilung
 
 ```{r}
 marginaleffects::predictions(m1) |> 
@@ -1675,7 +1656,8 @@ labs(y = "Political Knowledge", color = "Type", fill = "Type", x = "")
 ```{r}
 marginaleffects::predictions(m1) |> as_tibble() |> select(Gender:Political_interest, PK) |> bind_cols(predict(m1, interval = "conf")) |> head(3)
 ```
-\ 
+
+ 
 
 ### Prediction intervals
 
@@ -1685,10 +1667,10 @@ marginaleffects::predictions(m1) |> as_tibble() |> select(Gender:Political_inter
 
 ## Kategorielle Prädiktoren: Geschlecht
 
-- für jeden Fall im Datensatz wird jeweils jede Ausprägung von Geschlecht einmal eingesetzt (counterfactuals)
-- alle anderen Prädiktoren bleiben, wie sie waren
+-   für jeden Fall im Datensatz wird jeweils jede Ausprägung von Geschlecht einmal eingesetzt (counterfactuals)
+-   alle anderen Prädiktoren bleiben, wie sie waren
 
-\ 
+ 
 
 ```{r}
 marginaleffects::predictions(m1, variables = "Gender") |> 
@@ -1699,12 +1681,11 @@ select(id =rowidcf, Age, Gender, Political_interest, PK, Predicted_PK = estimate
 head(6)
 ```
 
-
 ## Aggregierte Vorhersagen nach Geschlecht
 
-- der neu generierte Datensatz mit den counterfactuals wird nach Geschlecht geteilt
-- pro Teildatensatz wird der Mittelwert sowie das CI von $\hat{Y}$ berechnet
-- Ergebnis sind die vorhergesagten Mittelwerte des politischen Wissens nach Geschlecht
+-   der neu generierte Datensatz mit den counterfactuals wird nach Geschlecht geteilt
+-   pro Teildatensatz wird der Mittelwert sowie das CI von $\hat{Y}$ berechnet
+-   Ergebnis sind die vorhergesagten Mittelwerte des politischen Wissens nach Geschlecht
 
 \
 
@@ -1715,7 +1696,7 @@ preds_gender <- marginaleffects::avg_predictions(m1, variables = "Gender") |>
 preds_gender
 ```
 
-## Visualisierung der Vorhersagen 
+## Visualisierung der Vorhersagen
 
 ```{r}
 preds_gender |>
@@ -1737,13 +1718,14 @@ preds_gender_edu |>
   geom_pointrange(position = position_dodge(.5)) +
   labs(x = "Gender", y = "Predicted political knowledge")
 ```
+
 ## Metrische Prädiktoren: Alter
 
-- wir wählen spezifische Werte (z.B. 18, 40, 65) der Altersvariable 
-- für jeden Fall wird jeder Alterswert einmal eingesetzt (counterfactuals)
-- alle anderen Prädiktoren bleiben, wie sie waren
+-   wir wählen spezifische Werte (z.B. 18, 40, 65) der Altersvariable
+-   für jeden Fall wird jeder Alterswert einmal eingesetzt (counterfactuals)
+-   alle anderen Prädiktoren bleiben, wie sie waren
 
-\ 
+ 
 
 ```{r}
 marginaleffects::predictions(m1, variables = list("Age" = c(18, 40, 65))) |>
@@ -1754,13 +1736,10 @@ select(id =rowidcf, Age, Gender, Political_interest, PK, Predicted_PK = estimate
 head(6)
 ```
 
-
-
 ## Fallweise Vorhersagen (typische Werte)
 
-- statt spezifisch ausgewählten Werten verwenden wir Kennwerte
-- Five Numbers: Minimum, 1. Quartil, Median, 3. Quartil, Maximum
-
+-   statt spezifisch ausgewählten Werten verwenden wir Kennwerte
+-   Five Numbers: Minimum, 1. Quartil, Median, 3. Quartil, Maximum
 
 \
 
@@ -1773,7 +1752,6 @@ select(id =rowidcf, Age, Gender, Political_interest, PK, Predicted_PK = estimate
 head(8)
 ```
 
-
 ## Aggregierte Vorhersagen nach Alter
 
 ```{r}
@@ -1783,12 +1761,11 @@ preds_age <- marginaleffects::avg_predictions(m1, variables = "Age") |>
 preds_age
 ```
 
-::: {.aside}
+::: aside
 Vorhersagen für Minimum, 1. Quartil, Median, 3. Quartil, Maximum
 :::
 
-
-## Visualisierung der Vorhersagen 
+## Visualisierung der Vorhersagen
 
 ```{r}
 preds_age |>
@@ -1811,7 +1788,6 @@ preds_age_gender
 
 ## Visualisierung der Vorhersagen
 
-
 ```{r}
 preds_age_gender |>
   ggplot(aes(
@@ -1825,28 +1801,27 @@ preds_age_gender |>
 
 ## Fazit
 
-- mit Modellvorhersagen lassen sich vielfältige Fragen auf Basis desselben Modells beantworten
-- für komplexe, nichtlineare Modelle intuitive(re) Grafiken statt schwer interpretierbarer Koeffizienten
-- Wahl der passenden Prädiktorkombinationen nicht trivial (counterfactual, empirisch, typisch)
-- subtile Unterschiede in der Interpretation und uneinheitliche Begrifflichkeiten (marginal, conditional, adjusted predictions)
-- in der Kommunikationswissenschaft (leider) selten anzutreffen, außer in der Moderationsanalyse 
-
+-   mit Modellvorhersagen lassen sich vielfältige Fragen auf Basis desselben Modells beantworten
+-   für komplexe, nichtlineare Modelle intuitive(re) Grafiken statt schwer interpretierbarer Koeffizienten
+-   Wahl der passenden Prädiktorkombinationen nicht trivial (counterfactual, empirisch, typisch)
+-   subtile Unterschiede in der Interpretation und uneinheitliche Begrifflichkeiten (marginal, conditional, adjusted predictions)
+-   in der Kommunikationswissenschaft (leider) selten anzutreffen, außer in der Moderationsanalyse
 
 ## Take Home #2
 
 Replizieren sie eine Regressionsanalyse aus van Erkel & van Aelst (2021) mit R oder SPSS oder anderer Software
 
-  - Studierende mit gerader Matrikelnummer: Tabelle 5
-  - Studierende mit ungerader Matrikelnummer: Tabelle 6
+-   Studierende mit gerader Matrikelnummer: Tabelle 5
 
-- Der Datensatz ist in `data/VanErkel_vanAelst2021.sav` und enthält alle nötigen Variablen.
+-   Studierende mit ungerader Matrikelnummer: Tabelle 6
 
-- Machen sie einen Screenshot der Regressionstabelle als PNG oder JPG und laden Sie diesen in Moodle hoch.
-- Deadline: 25.06.2025, 10h
+-   Der Datensatz ist in `data/VanErkel_vanAelst2021.sav` und enthält alle nötigen Variablen.
 
+-   Machen sie einen Screenshot der Regressionstabelle als PNG oder JPG und laden Sie diesen in Moodle hoch.
+
+-   Deadline: 25.06.2025, 10h
 
 # Sitzung 8 {#s8}
-
 
 # Fragen zur praktischen Übung?
 
@@ -1871,7 +1846,7 @@ model_table(m1)
 -   Beispiele:
     -   Experimente mit min. 2 Faktoren, die sich gegenseitig beeiflussen
     -   Effektheterogenität in verschiedenen Subgruppen der Stichprobe
-- Effektheterogenität aktuell en vogue (person-specific media effects, Valkenburg et al., 2021), aber theoretisch und empirisch ggf. problematisch (Healy, 2017; Vuorre et al., 2022)
+-   Effektheterogenität aktuell en vogue (person-specific media effects, Valkenburg et al., 2021), aber theoretisch und empirisch ggf. problematisch (Healy, 2017; Vuorre et al., 2022)
 
 ## Woran erkennen wir Effektheterogenität?
 
@@ -1915,7 +1890,8 @@ p1+p2
 ## Analysemöglichkeiten
 
 ### (a) separate Regressionsmodelle pro Subgruppe schätzen
-- kein direkter Test der Moderationshypothese
+
+-   kein direkter Test der Moderationshypothese
 -   weniger statistische Power wg. kleinerer Subsamples
 -   alle Regressionskoeffizienten werden unterschiedlich geschätzt
 -   bei metrischen Moderatoren Dichotomisierung o.ä. nötig
@@ -1933,7 +1909,6 @@ m1_m = lm(Information_overload ~  Age + Education , data = vanerkel21 |> filter(
 m1_w = lm(Information_overload ~  Age + Education , data = vanerkel21 |> filter(Gender == "female"))
 sjPlot::tab_model(m1_w, m1_m, dv.labels = c("Overload (female)", "Overload (male)"))
 ```
-
 
 ## Regressionsformel für Moderation
 
@@ -1976,40 +1951,38 @@ sjPlot::tab_model(m1_w, m1_m, dv.labels = c("Overload (female)", "Overload (male
 
 ## Daten
 
-::: columns
-::: {.column width="45%"}
--   schwab: Experimentalbedingung Dialekt schwäbisch 0 (nein), 1 (ja)
--   atol: Attitude toward other language = Einstellung zum Schwäbischen (1-5)
--   gesamt: Gesamtbewertung des Politikers (Outcome-Variable, 1-5)
-
- <audio controls>
-  <source src="https://osf.io/download/ah5yt/?direct=&mode=render3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio> 
- <audio controls>
-  <source src="https://osf.io/download/34jtc/?direct=&amp;mode=render" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio> 
-
-    
-
-:::
-
-::: {.column width="10%"}
-:::
+:::: {.columns}
 
 ::: {.column width="45%"}
-```{r}
+
+- schwab: Experimentalbedingung Dialekt schwäbisch 0 (nein), 1 (ja)
+- atol: Attitude toward other language = Einstellung zum Schwäbischen (1-5)
+- gesamt: Gesamtbewertung des Politikers (Outcome-Variable, 1-5)
+<audio controls> 
+  <source src="https://osf.io/download/ah5yt/?direct=&mode=render3" type="audio/mpeg"> 
+  Your browser does not support the audio element. 
+</audio> 
+<audio controls> 
+  <source src="https://osf.io/download/34jtc/?direct=&amp;mode=render" type="audio/mpeg"> 
+  Your browser does not support the audio element. 
+</audio>
+:::
+
+::: {.column width="55%"}
+
+```{r, echo = F, warning = FALSE, message = FALSE}
 vb17 <- haven::read_sav("data/Voegele_Bachl_2017.sav") |>
   mutate(geschlecht_w = ifelse(Geschlecht == 1, 1, 0)) |>
   haven::zap_labels()
-
-vb17 |> 
-select(schwab, geschlecht_w, atol, gesamt) |> 
-sample_n(5)
+vb17 |>
+  select(schwab, geschlecht_w, atol, gesamt) |>
+  sample_n(5)
 ```
+
 :::
-:::
+
+::::
+
 
 ## Bivariates Modell (nur Versuchsbedingung)
 
@@ -2112,7 +2085,6 @@ preds_schwab_geschlecht |>
     -   Einbeziehung bzw. Berechnung der Interaktionsterme $XZ_1$, $XZ_2$ und $XZ_1Z_2$
     -   Interpretation doppelt konditionaler Effekt sehr kompliziert
 
-
 ## Beispiel Moderation mit 3 Gruppen
 
 ```{r}
@@ -2136,8 +2108,7 @@ labs(y = "Political Knowledge")
 
 ## Beispiel 3-Way-Interaction
 
-![Quelle: Rains et al. (2023) ](images/rains.png)
-
+![Quelle: Rains et al. (2023)](images/rains.png)
 
 # Sitzung 9 {#s9}
 
@@ -2145,10 +2116,10 @@ labs(y = "Political Knowledge")
 
 ## Fazit der letzten Sitzung
 
-- Moderationsanalysen mit kategoriellen Variablen sind technisch leicht durchführbar, erfordern aber eine neue Interpretation
-- die Interpretation der stat. Signifikanz der Interaktionsterme ist einfach, die substanzielle Interpretation schwierig
-- durch Hinzunahme des Interaktionsterms werden aus den beteiligten Haupteffekten automatisch konditionale Effekte in der Referenzgruppe (!)
-- die Koeffizienten der Prädiktoren ohne Interaktionsterm bleiben unkonditional (!)
+-   Moderationsanalysen mit kategoriellen Variablen sind technisch leicht durchführbar, erfordern aber eine neue Interpretation
+-   die Interpretation der stat. Signifikanz der Interaktionsterme ist einfach, die substanzielle Interpretation schwierig
+-   durch Hinzunahme des Interaktionsterms werden aus den beteiligten Haupteffekten automatisch konditionale Effekte in der Referenzgruppe (!)
+-   die Koeffizienten der Prädiktoren ohne Interaktionsterm bleiben unkonditional (!)
 
 ## Wiederholung: Kategorielle Moderatoren
 
@@ -2157,47 +2128,43 @@ lm(Information_overload ~ Gender * Education, data = vanerkel21) |>
   model_table()
 ```
 
-
 ## Metrische Moderatoren
 
-- die grundlegende Logik aus Interaktionsterm und konditionalen Effekten bleibt gleich
-- Interpretation des Interaktionseffekts vorwiegend Vorzeichen + Signifikanz
-- durch Zentrierung kann man klarer interpretierbarer konditionale Effekte erhalten
-- z.B. Mittelwertzentrierung: Effekt von X bei mittlerem Z
-- der konditionale Effekt bei mittlerem Z ist **nicht** dasselbe wie der unkonditionale Effekt
+-   die grundlegende Logik aus Interaktionsterm und konditionalen Effekten bleibt gleich
+-   Interpretation des Interaktionseffekts vorwiegend Vorzeichen + Signifikanz
+-   durch Zentrierung kann man klarer interpretierbarer konditionale Effekte erhalten
+-   z.B. Mittelwertzentrierung: Effekt von X bei mittlerem Z
+-   der konditionale Effekt bei mittlerem Z ist **nicht** dasselbe wie der unkonditionale Effekt
 
 # Beispielanalyse: metrische Moderatoren
 
 ## Regression mit metrischem Moderator
 
-- Anstelle einer dichotomen Variable kann man auch eine metrische Moderatorvariable berücksichtigt werden, hier zum Beispiel die Voreinstellung gegenüber dem schwäbischen Dialekt (atol).
-- Hypothese: Je positiver die Einstellung zum schwäbischen Dialekt bei einer Versuchsperson, desto positiver der Effekt der Experimentalbedingung
-- Reminder: der Koeffizient für Dialekt bezieht sich nun auf einen konkreten Wert von atol (konditionaler Effekt)
+-   Anstelle einer dichotomen Variable kann man auch eine metrische Moderatorvariable berücksichtigt werden, hier zum Beispiel die Voreinstellung gegenüber dem schwäbischen Dialekt (atol).
+-   Hypothese: Je positiver die Einstellung zum schwäbischen Dialekt bei einer Versuchsperson, desto positiver der Effekt der Experimentalbedingung
+-   Reminder: der Koeffizient für Dialekt bezieht sich nun auf einen konkreten Wert von atol (konditionaler Effekt)
 
 ## Regression ohne Moderator
-
 
 ```{r}
 lm(gesamt ~ schwab + atol, data = vb17) |> 
   model_table()
 ```
 
-
 ## Regression mit metrischem Moderator
-
 
 ```{r}
 m2_atol <- lm(gesamt ~ schwab * atol, data = vb17)
 model_table(m2_atol)
 ```
 
-::: {.aside}
+::: aside
 Achtung: Der konditionale Effekt für Dialekt macht nur Sinn, wenn atol auch 0 sein kann (Skala ist aber 1-5!).
 :::
 
 ## Konditionale Effekte durch Zentrierung
 
-- Zentrierung von atol mit 1, d.h. Koeffizient für Dialekt gilt für atol = 1 (Minimum)
+-   Zentrierung von atol mit 1, d.h. Koeffizient für Dialekt gilt für atol = 1 (Minimum)
 
 ```{r}
 lm(gesamt ~ schwab * I(atol - 1), data = vb17) |> # atol = 1
@@ -2206,7 +2173,7 @@ lm(gesamt ~ schwab * I(atol - 1), data = vb17) |> # atol = 1
 
 ## Mittelwertzentrierung
 
-- üblicherweise wird auf den Mittelwert von $Z$ zentriert
+-   üblicherweise wird auf den Mittelwert von $Z$ zentriert
 
 ```{r}
 lm(gesamt ~ schwab * I(atol - mean(atol, na.rm = T)), data = vb17) |> # atol = 1
@@ -2215,7 +2182,7 @@ lm(gesamt ~ schwab * I(atol - mean(atol, na.rm = T)), data = vb17) |> # atol = 1
 
 ## Conditional Effects
 
-- wie bei Modellvorhersagen können wir für typische Werte des Moderators den Koeffizienten von $X$ schätzen
+-   wie bei Modellvorhersagen können wir für typische Werte des Moderators den Koeffizienten von $X$ schätzen
 
 ```{r}
 marginaleffects::avg_slopes(m2_atol, by = "atol") |> 
@@ -2223,6 +2190,7 @@ as_tibble() |>
 select(term, atol, estimate, p.value, conf.low, conf.high) |> 
 filter(atol %in% 1:5 & term == "schwab")
 ```
+
 ## Conditional effects plot
 
 ```{r}
@@ -2230,25 +2198,26 @@ marginaleffects::plot_slopes(m2_atol, variables = "schwab", condition = "atol") 
   labs(x = "ATOL Score", y = "Effekt von Dialekt auf Bewertung") +
   geom_hline(yintercept = 0, linetype = "dashed")
 ```
+
 ## Johnson-Neyman Intervalle
 
-- es werden Intervallgrenzen geschätzt, jenseits derer die Regressionskoeffizienten von $X$ signifikant sind
+-   es werden Intervallgrenzen geschätzt, jenseits derer die Regressionskoeffizienten von $X$ signifikant sind
 
 <blockquote>
+
 ```{r, results = "asis"}
 interactions::johnson_neyman(m2_atol, "schwab", "atol", plot = F)
 ```
 
 </blockquote>
 
-
-- Problem 1: Alpha-Fehler durch (sehr) häufige Tests
-- Problem 2: "The difference between signficant and insignificant is not itself signficant" (Andrew Gelman), sprich: die Punkte, an denen die stat. Signifikanz "umspringt", haben keinerlei besondere Eigenschaften
-- nicht verwenden!
+-   Problem 1: Alpha-Fehler durch (sehr) häufige Tests
+-   Problem 2: "The difference between signficant and insignificant is not itself signficant" (Andrew Gelman), sprich: die Punkte, an denen die stat. Signifikanz "umspringt", haben keinerlei besondere Eigenschaften
+-   nicht verwenden!
 
 ## Modellvorhersagen
 
-- wie immer lassen sich mit ausgewählten Werten der Prädiktoren auch Vorhersagen berechnen
+-   wie immer lassen sich mit ausgewählten Werten der Prädiktoren auch Vorhersagen berechnen
 
 ```{r}
 preds_schwab_atol <- marginaleffects::avg_predictions(m2_atol, variables = list("schwab" = 0:1, "atol" = c(1, 3, 5))) |>
@@ -2272,46 +2241,42 @@ preds_schwab_atol |>
   labs(y = "Gesamtbewertung (vorhergesagt)", x = "Dialekt", color = "ATOL Score")
 ```
 
-
 ## Tipps
 
- * auf korrekte Interpretation der Referenzgruppen achten bei kategoriellen Moderatoren
- * metrische Variablen zentrieren, die keinen interpretierbaren Nullpunkt haben, bevor man Interaktionsterme einfügt
- * immer auch $X$ und $Z$ im Modell zu haben, wenn der Interaktionsterm $XZ$ im Modell ist
- * pragmatischer Vorschlag: wenn kein signifikanter Interaktionseffekt, dann lieber unkonditionales Modell (ohne Moderator) berichten
- * substanzielle Interpretation durch Berechnung und Visualisierung von conditional effects und Modellvorhersagen
-
+-   auf korrekte Interpretation der Referenzgruppen achten bei kategoriellen Moderatoren
+-   metrische Variablen zentrieren, die keinen interpretierbaren Nullpunkt haben, bevor man Interaktionsterme einfügt
+-   immer auch $X$ und $Z$ im Modell zu haben, wenn der Interaktionsterm $XZ$ im Modell ist
+-   pragmatischer Vorschlag: wenn kein signifikanter Interaktionseffekt, dann lieber unkonditionales Modell (ohne Moderator) berichten
+-   substanzielle Interpretation durch Berechnung und Visualisierung von conditional effects und Modellvorhersagen
 
 ## Fazit
- * lineare Modelle mit Moderation sind in der Regel sehr (zu!) leicht zu spezifizieren, aber zumeist deutlich schwieriger substanziell zu interpretieren (außer Signifikanz des Interaktionseffekts)
- * auch wenn die Regressionstabelle optisch sehr ähnlich aussieht, ändert sich Interpretation grundsätzlich
- * viele SozialwissenschaftlerInnen interpretieren moderierte Effekte entweder gar nicht oder falsch
-* Moderationshypothesen sind nicht per se theoretisch wertvoll, und auch bei Moderationsanalysen gibt es Alpha-Fehler
 
+-   lineare Modelle mit Moderation sind in der Regel sehr (zu!) leicht zu spezifizieren, aber zumeist deutlich schwieriger substanziell zu interpretieren (außer Signifikanz des Interaktionseffekts)
+-   auch wenn die Regressionstabelle optisch sehr ähnlich aussieht, ändert sich Interpretation grundsätzlich
+-   viele SozialwissenschaftlerInnen interpretieren moderierte Effekte entweder gar nicht oder falsch
+-   Moderationshypothesen sind nicht per se theoretisch wertvoll, und auch bei Moderationsanalysen gibt es Alpha-Fehler
 
 ## Take-Home Aufgabe #3
 
-Altay et al. (2022) untersuchen experimentell, ob falsche Nachrichten weniger als wahre geteilt werden, und wie dies von der Interessantheit der Nachricht abhängt. 
+Altay et al. (2022) untersuchen experimentell, ob falsche Nachrichten weniger als wahre geteilt werden, und wie dies von der Interessantheit der Nachricht abhängt.
 
 Beantworten Sie folgende Forschungsfragen mit Hilfe der Studien-Daten:
-  
-  1. Werden wahre Nachrichten eher geteilt als falsche?
-  2. Werden interessante Nachrichten eher geteilt als uninteressante?
-  3. Gibt es den im Titel des Artikels angesprochenen Effekt eines **zusätzlichen "interesting-if-true"** Effekts auf das Teilen von Nachrichten? Wie fällt dieser Interaktionseffekt aus?
 
-::: {.aside}
+1.  Werden wahre Nachrichten eher geteilt als falsche?
+2.  Werden interessante Nachrichten eher geteilt als uninteressante?
+3.  Gibt es den im Titel des Artikels angesprochenen Effekt eines **zusätzlichen "interesting-if-true"** Effekts auf das Teilen von Nachrichten? Wie fällt dieser Interaktionseffekt aus?
+
+::: aside
 Altay, S., De Araujo, E., & Mercier, H. (2022). “If this account is true, it is most enormously wonderful”: Interestingness-if-true and the sharing of true and false news. Digital Journalism, 10(3), 373-394.
 :::
 
 ## Take-Home Aufgabe #3
 
-  1. Stellen Sie die Ergebnisse des/der geschätzen Modells/Modelle sinnvoll tabellarisch oder grafisch dar (Screenshot reicht).
-  2. Beantworten Sie die Forschungsfragen anhand von Ihnen ausgewählter Kennwerte bzw. Quantities of Interest (2-3 Sätze pro Forschungsfrage)
-  3. Lösung als **PDF-Datei** bitte bis 09.07.2025, 10 Uhr in Moodle hochladen.
-
+1.  Stellen Sie die Ergebnisse des/der geschätzen Modells/Modelle sinnvoll tabellarisch oder grafisch dar (Screenshot reicht).
+2.  Beantworten Sie die Forschungsfragen anhand von Ihnen ausgewählter Kennwerte bzw. Quantities of Interest (2-3 Sätze pro Forschungsfrage)
+3.  Lösung als **PDF-Datei** bitte bis 09.07.2025, 10 Uhr in Moodle hochladen.
 
 ## Take-Home Aufgabe #3
-
 
 ```{r, echo = T, eval = F}
 # Daten laden
@@ -2325,12 +2290,250 @@ select(Share, Type, Interesting) |>
 head(3)
 ```
 
-\ 
 
-- `Share` = Wahrscheinlichkeit, die Nachricht mit anderen zu teilen (1-6, höher ist wahrscheinlicher)
-- `Type` = Nachrichtentyp (experimentell variiert, `TN`=wahr, `FN`=falsch)
-- `Interesting` = Wahrgenommene Interessantheit der Nachricht (1-7, höher ist interessanter)
+-   `Share` = Wahrscheinlichkeit, die Nachricht mit anderen zu teilen (1-6, höher ist wahrscheinlicher)
+-   `Type` = Nachrichtentyp (experimentell variiert, `TN`=wahr, `FN`=falsch)
+-   `Interesting` = Wahrgenommene Interessantheit der Nachricht (1-7, höher ist interessanter)
+
+# Sitzung 10 {#s10}
+
+## Kategorielle Outcomes - $\chi^2$ Test
 
 
+-   oft sind wir an Zusammenhängen von kategoriellen Variablen interessiert
+-   Klassische Analysestrategie: Kreuztabelle und $\chi^2$ Test auf Unabhängigkeit
+-   Vorteil: einfache Darstellung (Tabelle mit Spaltenprozenten, $\chi^2$ Wert, p-Wert, Kontingenzkoeffizient)
+-   Nachteil: der $\chi^2$ Test ist ein Globaltest, d.h. wir testen nur, ob es irgendwo signifikante Abweichungen der beobachteten von den erwarteten Häufigkeiten gibt, aber nicht wie und wo
+-   weiterer Nachteil: nur kategorielle Prädiktoren, nur bivariate Zusammenhänge
+-   Alternative: GLM mit logistischer Link-Funktion
+
+## Lineare Regression bei dichotomer AV
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+
+```{r, echo = F, warning = F, fig.height = 4}
+invlogit <- function(x) {
+  1 / (1 + exp(-x))
+}
+x <- 18:80
+y <- invlogit(-30 + .5 * x) + rnorm(63, sd = .3)
+vm <- qplot(x, round(jitter(y))) + ylim(0, 1) + xlim(30, 80) + labs(x = "Alter", y = "Person mag Volksmusik")
+#vm
+```
+
+- viele vorausgesagte Werte von Y kann es in den Daten nicht geben, da nur die Werte 0 und 1 empirisch vorkommen.
+- linearer Zusammenhang ist nicht gegeben, d.h. wir verstoßen gegen die Annahmen der OLS-Regression
+- trotzdem häufiger Einsatz als Linear Probability Model (LPM) mit einfacher Interpretation
+
+:::
+
+::: {.column width="55%"}
+
+```{r, echo = F, warning = F, message = F, fig.width = 8, fig.height = 6}
+vm + geom_smooth(method = "lm", width = 2, se = F) + ylim(-.5, 1.5)
+```
+
+::: 
+
+::::
+
+
+## (Inverse) Logit-Funktion
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+-   Logit-Funktion: $P(Y) = \frac {1}{1+e^{-(\beta_0 + \beta_1 x)}}$
+-   Die Logit-Funktion transformiert alle Werte in einen Bereich von 0-1.
+-   Die Werte von 0-1 können als Wahrscheinlichkeiten interpretiert werden.
+
+:::
+
+::: {.column width="55%"}
+
+```{r, echo = F, warning = F,fig.width = 8, fig.height = 6}
+vm + geom_smooth(method = "glm", method.args = list(family = "binomial"), se = F, width = 2)
+```
+
+::: 
+
+::::
+## Lineare vs. logistische Regression
+
+$Logit(Y) = b_0 + b_1 X_i + \epsilon_i$
+
+-   gleiche Annahmen zu Unabhängigkeit und Multikollinearität
+-   gleiche Logik der Modellspezifikation mit Nullmodell und Prädiktorvariablen
+-   gleiche Logik der statistischen Inferenz, d.h. Standardfehler und Konfidenzintervalle
+-   unterschiedliche Interpretation der Koeffizienten (sowohl unstandardisiert als auch standardisiert)
+-   unterschiedliche Maße der Modellgüte ( $R^2$, etc.)
+
+## Interpretation logistischer Modelle
+
+-   unstandardisierte Koeffizienten sind bei logistischer Regression schwer interpretierbar
+-   Interpretation als (Änderung von) Wahrscheinlichkeiten ist **falsch**, u.a. weil diese nicht konstant sind
+-   3 Möglichkeiten, logistische Modelle zu interpretieren:
+    -   Divide-by-4-Regel mit unstandardisierten Koeffizienten
+    -   Average Marginal Effects
+    -   Odds-Ratios
+
+## Unstandardisierte Koeffizienten
+
+-   die Interpretation von unstandardisierten Koeffizienten im logistischen Modell hängt (auch) am Intercept bzw. an den anderen Kovariaten
+-   der Intercept lässt sich durch die sog. Inverse Logit Funktion (in R `plogis()`) in eine Baseline-Wahrscheinlichkeit umrechnen
+-   die Veränderung der Wahrscheinlichkeiten bei einer Änderung von $X$ (Slope) ist nicht in allen Fällen gleich groß
+-   Gelman & Hill (2007) empfehlen für eine schnelle Interpretation unstandardisierte Koeffizienten die Divide-by-4-Regel
+-   $B/4$ ist eine *Obergrenze* für die Änderung in der Wahrscheinlichkeit P(Y=1), wenn $X$ sich um eine Einheit ändert
+-   Abweichung ist am Rande der Verteilung von $Y$ größer als in der Mitte
+
+## Average Marginal Effects
+
+-   für jeden Wert von $X$ lässt sich der Anstieg in der Logit-Funktion von $Y$ berechnen.
+-   wenn wir dies für alle Werte in der Stichprobe tun, und davon den Mittelwert errechnen, erhalten wir den AME
+-   dieser lässt sich als durchschnittliche Veränderung in der Wahrscheinlichkeit P(Y=1) über alle Fälle interpretieren
+-   alternativ können wir auch wieder typische Fälle auswählen und dafür die vorgesagten Werten von $Y$ schätzen
+-   dies bietet sich vor allem bei Modellen mit kategoriellen Prädiktorvariablen an (vgl. ANOVA)
+
+## Odds Ratios - Exp(B)
+
+-   die meisten logistischen Regressionen berichten statt B den Wert Exp(B), der auch als Odds Ratio (OR) bezeichnen wird
+-   Odds = $P(x)/1-P(x)$ kann man im Deutschen als Chance oder Risiko übersetzen, nicht jedoch als Wahrscheinlichkeit!
+-   eine OR=1 bedeutet kein Effekt, OR \> 1 bedeutet eine *erhöhte* Chance bzw. Risiko, eine OR \< 1 eine *niedrigere* Chance/Risiko
+-   Exp(B) = .5 heißt: mit jedem Skalenpunkt mehr X besteht ein halb so großes Risiko
+-   Exp(B) = 2 heißt: mit jedem Skalenpunkt mehr X verdoppelt sich das Risiko
+
+## Modellgüte: Pseudo $R^2$
+
+-   weit verbreitetes Maß für die Güte einer logistischen Regression ist das Pseudo $R^2$ von McFadden, Nagelkerke oder Cox & Snell.
+-   diese setzen die Log-Likelihood des Nullmodells mit dem gefitteten Modell in Beziehung, beschreiben also wieviel besser das Modell gegenüber dem Nullmodell ist
+-   die Interpretation ist vergleichbar mit dem klassischen $R^2$, wobei nicht immer klar ist, inwiefern der Wertebereich wirklich von 0-1 geht
+
+# Beispielstudie @festl2013
+
+```{r}
+festl13 <- haven::read_sav("data/festl13.sav") |>
+  mutate(gender = as_factor(gender)) |>
+  haven::zap_label()
+```
+
+![](images/festl13.png){fig-align="center"}
+
+## Daten
+
+```{r}
+festl13 |> 
+sample_n(5)
+```
+
+\
+
+```{r}
+festl13 |>
+  select(cbvictim_gen) |>
+  report::report_table() |> 
+select(1:8)
+```
+
+## Nullmodell
+
+```{r}
+m0 <- glm(cbvictim_gen ~ 1, data = festl13, family = binomial)
+model_table(m0)
+```
+
+
+```{r, echo=TRUE}
+plogis(-2.14)
+```
+
+## Kategorieller Prädiktor
+
+```{r}
+m1_gender <- glm(cbvictim_gen ~ gender, festl13, family = binomial(link = "logit"))
+model_table(m1_gender)
+```
+
+## Odds-Ratios (Exp(B))
+
+```{r, echo = F}
+report::report_table(m1_gender, exponentiate = TRUE, include_effectsize = FALSE) |> 
+  slice(1:2) |> 
+  mutate_if(is.numeric, round, 2)
+```
+
+## AME und Modellvorhersagen
+
+
+### AME
+
+```{r, echo = F}
+marginaleffects::avg_comparisons(m1_gender) |>
+  as_tibble() |> 
+select(-contrast, -s.value, -starts_with("pred")) 
+```
+
+\
+
+### Vorhergesagte Wahrscheinlichkeiten
+```{r}
+preds_gender <- marginaleffects::avg_predictions(m1_gender, variables = "gender") |>
+  as_tibble() |> 
+  mutate_if(is.numeric, round, 2)
+preds_gender
+```
+
+
+## Visualisierung der Modellvorhersagen
+
+```{r}
+
+preds_gender |>
+  ggplot(aes(x = gender, y = estimate, ymin = conf.low, ymax = conf.high)) +
+  geom_pointrange() +
+  labs(y = "Predicted Probability of Cybervictimization", x = "Gender")
+```
+
+## Multiple logistische Regression
+
+```{r}
+m2_gender_internet <- glm(cbvictim_gen ~ gender + internetuse, data = festl13, family = binomial)
+model_table(m2_gender_internet)
+```
+
+## Average Marginal Effects
+
+```{r}
+marginaleffects::avg_comparisons(m2_gender_internet) |>
+  as_tibble() |> 
+select(-contrast, -s.value, -starts_with("pred"))
+```
+
+## Modellvorhersagen
+
+```{r}
+preds_internet <- marginaleffects::avg_predictions(m2_gender_internet, variables = c("internetuse")) |>
+  as_tibble()
+preds_internet |>
+  ggplot(aes(
+    x = internetuse, y = estimate, ymin = conf.low, ymax = conf.high
+  )) +
+  geom_line() +
+  geom_ribbon(alpha = .1) +
+  labs(
+    x = "Internet use (hours/day)",
+    y = "Predicted probability of Cybervictimization",
+  )
+```
+
+## Fazit
+
+-   in vielen Fällen ist die logistische Regression eine sinnvolle Alternative zu Kreuztabellen
+-   die Modellierung ist praktisch identisch mit linearen Regressionsmodellen
+-   die Interpretation der Koeffizienten ist komplexer, aber AME und Modellvorhersagen helfen dabei
+-   das Linear Probability Model führt oft zu ähnlichen Ergebnissen (vor allem wenn Y nicht allzu selten oder häufig 1 ist)
 
 ## Literatur
