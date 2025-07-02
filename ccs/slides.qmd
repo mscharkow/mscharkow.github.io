@@ -664,4 +664,81 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 - Learn Quarto publishing (practical exercise in 2 weeks)
 
 
+# Session 10 {#s10}
+
+## Questions about coding tasks?
+
+-   scraping headlines for testing
+-   creating a persona and generating prompts
+- creating stimuli using LLM
+- generating stimulus x persona combinations
+- getting and analyzing results
+
+## Writing papers with statistical analyses
+
+*   Reproducible research is crucial for academic work.
+*   Traditional word processors present challenges like:
+    *   **Copy/paste errors:** Introducing inconsistencies between code and results.
+    *   **Manual citation management:** Prone to errors and time-consuming.
+    *   **Reproducibility concerns:** Difficulty verifying results and replicating analyses.
+
+
+
+## Knitr and Quarto
+
+*   knitr integrates R code directly into your writing.
+*   It automates result inclusion, saving time and reducing errors.
+*   Quarto uses Pandoc for versatile document conversion.
+*   It combines R **running** code, text, and figures in one file.
+*   You can easily create reports in multiple formats.
+*   **Code Example:** ````{r} qplot(rnorm(100)) ``` – simple code execution.
+
+
+## Code example
+
+```{r, echo = T} 
+qplot(rnorm(100)) 
+```
+
+## Enhanced Features for Academic Writing
+
+*   Cross-referencing simplifies citing figures and tables.
+*   Callouts highlight important definitions and caveats.
+*   Automatic numbering of sections improves readability.
+*   Quarto ensures consistent formatting throughout your paper.
+
+
+## Term Paper Specific Benefits
+
+*   Easily include statistical analyses and visualizations.
+*   Automated bibliography generation with BibTeX or CSL.
+*   Maintain a clear record of your data analysis steps.
+*   Share your code and results for transparency and verification.
+*   *Compared to Word:* reduces manual formatting, copy/paste and citation errors.
+
+
+## Multiple Output Formats
+
+*   Create PDFs for submission to professors and journals.
+*   Generate HTML reports for online presentations and sharing.
+*   Export to Word (.docx) for compatibility with specific requirements.
+*   *Compared to Word:* simplifies converting between formats automatically.
+*   **Beyond the Basics:**
+    *   **Slides:**  Create presentation slides (like these!) directly from your document.
+    *   **Closeread:**  Generate scrollytelling narratives with interactive data visualizations.
+
+
+## Quarto Resources
+
+*   Quarto Website: [https://quarto.org/](https://quarto.org/)
+*   Quarto Gallery: [https://gallery.quarto.org/](https://gallery.quarto.org/)
+*   Quarto R Documentation: [https://quarto.org/docs/language/r/](https://quarto.org/docs/language/r/)
+*   Closeread <https://closeread.dev/>
+
+
+## Tasks for  next week
+
+- Check my basic term paper template, modify settings, text and code, check the resulting document.
+- Collect questions you might have about how to accomplish certain tasks in Quarto.
+
 ## References

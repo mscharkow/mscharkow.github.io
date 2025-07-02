@@ -159,3 +159,15 @@ Refresh your R skills.
 ### Tasks for the next session
 
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/generative-agents.html) in R. 
+
+
+## Session 10 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Slides"></a> {#10}
+
+### Topics
+
+- simulation and generative agents
+- quarto publishing
+
+### Tasks for the next session
+
+1. Check example paper qmd file.
