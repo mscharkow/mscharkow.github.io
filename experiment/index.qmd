@@ -151,4 +151,18 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 2. Technischen Pretest durchführen, ggf. eigentlichen Pretest (n ~ 5) durchführen
 3. Code für Datenanalyse vorbereiten
 
+## Sitzung 9 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Folien"></a> {#9}
+
+## Sitzung 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Folien"></a> {#10}
+
+### Themen
+
+- Feldphase
+- Datenauswertung
+
+
+### Aufgabe zur nächsten Sitzung
+
+2. Datenauswertung und Abschlusspräsentationen
+
 # Literatur

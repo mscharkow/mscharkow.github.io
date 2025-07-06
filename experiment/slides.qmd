@@ -760,4 +760,25 @@ a |> left_join(vpn)
 2. Technischen Pretest durchführen, eigentlichen Pretest (n ~ 5) durchführen
 3. Code für Datenanalyse vorbereiten
 
+
+# Sitzung 9 {#s9}
+
+# Sitzung 10 {#s10}
+
+# Wie war die Feldphase?
+
+## Datenauswertung
+
+- Plausibilitätscheck, Bereinigung, Stichprobenbeschreibung
+- Hypothesentests samt Mittelwertvergleichen etc.
+- Ergebnistabellen oder Grafiken
+- ggf. explorative Zusatzauswertungen
+
+## Aufgaben bis nächste Woche
+
+- Datenauswertung
+- Abschlusspräsentation (max. 10 Minuten, minimale Herleitung)
+- Fragen zum Ergebnisbericht etc. mitbringen
+
+
 ## Literatur
