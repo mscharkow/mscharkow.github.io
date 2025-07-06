@@ -154,6 +154,20 @@
     "text": "Sitzung 8 \n\nThemen\n\nFragebogen und Randomisierung in Soscisurvey\nDatenmanagement und -analyse bei Within-Subject-Designs\n\n\n\nAufgabe zur nächsten Sitzung\n\nFragebogen inkl. Stimuli und Messinstrumente finalisieren\nTechnischen Pretest durchführen, ggf. eigentlichen Pretest (n ~ 5) durchführen\nCode für Datenanalyse vorbereiten"
   },
   {
+    "objectID": "experiment/index.html#9",
+    "href": "experiment/index.html#9",
+    "title": "BA Experiment",
+    "section": "Sitzung 9 ",
+    "text": "Sitzung 9"
+  },
+  {
+    "objectID": "experiment/index.html#10",
+    "href": "experiment/index.html#10",
+    "title": "BA Experiment",
+    "section": "Sitzung 10 ",
+    "text": "Sitzung 10 \n\nThemen\n\nFeldphase\nDatenauswertung\n\n\n\nAufgabe zur nächsten Sitzung\n\nDatenauswertung und Abschlusspräsentationen"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michael Scharkow",
@@ -2167,7 +2181,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Look, I saved your life, Jesse. Are you gonna save mine?\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Sometimes it just feels better not to talk. At All. About Anything. To Anyone.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -2622,28 +2636,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -991.89, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.05571 -14.00028\nsample estimates:\nmean of x mean of y \n 165.9772  180.0052"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.45, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.03246 -13.97698\nsample estimates:\nmean of x mean of y \n 165.9953  180.0000"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 9.430308e-23\n\ndo_t_test(100, males, males)\n\n[1] 0.0514957"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 4.683984e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.5224275"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.5573028 0.7434915 0.6041255 0.8397790 0.8186833 0.2363738\n\nsum(results_h0 &lt;= .05)\n\n[1] 48"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.7116316 0.7163652 0.3132516 0.2634205 0.9951778 0.7431390\n\nsum(results_h0 &lt;= .05)\n\n[1] 50"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 455\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 503\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -3066,6 +3080,20 @@
     "text": "Aufgaben bis nächste Woche\n\nFragebogen inkl. Stimuli und Messinstrumente finalisieren.\nTechnischen Pretest durchführen, eigentlichen Pretest (n ~ 5) durchführen\nCode für Datenanalyse vorbereiten"
   },
   {
+    "objectID": "experiment/slides.html#datenauswertung",
+    "href": "experiment/slides.html#datenauswertung",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Datenauswertung",
+    "text": "Datenauswertung\n\nPlausibilitätscheck, Bereinigung, Stichprobenbeschreibung\nHypothesentests samt Mittelwertvergleichen etc.\nErgebnistabellen oder Grafiken\nggf. explorative Zusatzauswertungen"
+  },
+  {
+    "objectID": "experiment/slides.html#aufgaben-bis-nächste-woche-3",
+    "href": "experiment/slides.html#aufgaben-bis-nächste-woche-3",
+    "title": "Experiment: Mediennutzung und -wirkung",
+    "section": "Aufgaben bis nächste Woche",
+    "text": "Aufgaben bis nächste Woche\n\nDatenauswertung\nAbschlusspräsentation (max. 10 Minuten, minimale Herleitung)\nFragen zum Ergebnisbericht etc. mitbringen"
+  },
+  {
     "objectID": "experiment/slides.html#literatur-1",
     "href": "experiment/slides.html#literatur-1",
     "title": "Experiment: Mediennutzung und -wirkung",
@@ -3364,7 +3392,7 @@
     "href": "ccs/slides.html#json-apis",
     "title": "Computational Communication Science",
     "section": "JSON APIs",
-    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Do what you're gonna do.\",\n        \"author\": \"Hank Schrader\"\n    },\n    {\n        \"quote\": \"I told you, Skyler, I warned you for a solid year: you cross me, and there will be consequences.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Scientists love lasers.\",\n        \"author\": \"Saul Goodman\"\n    },\n    {\n        \"quote\": \"Jesse, you asked me if I was in the meth business or the money business.. Neither. I'm in the empire business.\",\n        \"author\": \"Walter White\"\n    }\n]"
   },
   {
     "objectID": "ccs/slides.html#web-scraping",

@@ -403,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -991.89, df = 2e+06, p-value &lt; 2.2e-16
+t = -989.45, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.05571 -14.00028
+ -14.03246 -13.97698
 sample estimates:
 mean of x mean of y 
- 165.9772  180.0052 </code></pre>
+ 165.9953  180.0000 </code></pre>
 </div>
 </div>
 </section>
@@ -424,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 9.430308e-23</code></pre>
+<pre><code>[1] 4.683984e-21</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.0514957</code></pre>
+<pre><code>[1] 0.5224275</code></pre>
 </div>
 </div>
 </section>
@@ -439,11 +439,11 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5573028 0.7434915 0.6041255 0.8397790 0.8186833 0.2363738</code></pre>
+<pre><code>[1] 0.7116316 0.7163652 0.3132516 0.2634205 0.9951778 0.7431390</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 48</code></pre>
+<pre><code>[1] 50</code></pre>
 </div>
 </div>
 </section>
@@ -455,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 455</code></pre>
+<pre><code>[1] 503</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1448,6 +1448,38 @@ mean of x mean of y
 <li>Technischen Pretest durchführen, eigentlichen Pretest (n ~ 5) durchführen</li>
 <li>Code für Datenanalyse vorbereiten</li>
 </ol>
+</section></section>
+<section id="s9" class="title-slide slide level1 center">
+<h1>Sitzung 9</h1>
+
+</section>
+
+<section id="s10" class="title-slide slide level1 center">
+<h1>Sitzung 10</h1>
+
+</section>
+
+<section>
+<section id="wie-war-die-feldphase" class="title-slide slide level1 center">
+<h1>Wie war die Feldphase?</h1>
+
+</section>
+<section id="datenauswertung" class="slide level2">
+<h2>Datenauswertung</h2>
+<ul>
+<li>Plausibilitätscheck, Bereinigung, Stichprobenbeschreibung</li>
+<li>Hypothesentests samt Mittelwertvergleichen etc.</li>
+<li>Ergebnistabellen oder Grafiken</li>
+<li>ggf. explorative Zusatzauswertungen</li>
+</ul>
+</section>
+<section id="aufgaben-bis-nächste-woche-3" class="slide level2">
+<h2>Aufgaben bis nächste Woche</h2>
+<ul>
+<li>Datenauswertung</li>
+<li>Abschlusspräsentation (max. 10 Minuten, minimale Herleitung)</li>
+<li>Fragen zum Ergebnisbericht etc. mitbringen</li>
+</ul>
 </section>
 <section id="literatur-1" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
