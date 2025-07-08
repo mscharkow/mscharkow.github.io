@@ -375,7 +375,14 @@
     "href": "analyseverfahren/index.html#10",
     "title": "BA Anwendungsorientierte Analyseverfahren",
     "section": "Sitzung 10 ",
-    "text": "Sitzung 10 \n\nThemen\n\nlogistische Regression\n\n\n\nLiteratur\nFestl et al. (2013)"
+    "text": "Sitzung 10 \n\nThemen\n\nlogistische Regression\n\n\n\nLiteratur\nFestl et al. (2013)\n\n\nLiteratur\nVögele & Bachl (2017)"
+  },
+  {
+    "objectID": "analyseverfahren/index.html#11",
+    "href": "analyseverfahren/index.html#11",
+    "title": "BA Anwendungsorientierte Analyseverfahren",
+    "section": "Sitzung 11 ",
+    "text": "Sitzung 11 \n\nThemen\n\nMultilevel-Regression\n\n\n\nLiteratur\nFähnrich et al. (2020)"
   },
   {
     "objectID": "analyseverfahren/slides.html#warum-noch-eine-vorlesung-zur-statistik",
@@ -1827,6 +1834,202 @@
     "text": "Fazit\n\nin vielen Fällen ist die logistische Regression eine sinnvolle Alternative zu Kreuztabellen\ndie Modellierung ist praktisch identisch mit linearen Regressionsmodellen\ndie Interpretation der Koeffizienten ist komplexer, aber AME und Modellvorhersagen helfen dabei\ndas Linear Probability Model führt oft zu ähnlichen Ergebnissen (vor allem wenn Y nicht allzu selten oder häufig 1 ist)"
   },
   {
+    "objectID": "analyseverfahren/slides.html#take-home-3---haupteffekte",
+    "href": "analyseverfahren/slides.html#take-home-3---haupteffekte",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home #3 - Haupteffekte",
+    "text": "Take-Home #3 - Haupteffekte\n\nlm(Share ~ Type + Interesting, data = altay22)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2987)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n0.36\n(0.21, 0.52)\n4.57\n&lt; .001\n-0.11\n\n\n\nType (TN)\n0.35\n(0.25, 0.46)\n6.89\n&lt; .001\n0.23\n\n\n\nInteresting\n0.45\n(0.41, 0.48)\n26.98\n&lt; .001\n0.44\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n10512.35\n\n\nR2\n\n\n\n\n\n0.20\n\n\nR2 (adj.)\n\n\n\n\n\n0.20\n\n\nSigma\n\n\n\n\n\n1.40"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-3---interaktionseffekt",
+    "href": "analyseverfahren/slides.html#take-home-3---interaktionseffekt",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home #3 - Interaktionseffekt",
+    "text": "Take-Home #3 - Interaktionseffekt\n\nlm(Share ~ Type + Interesting + Type:Interesting, data = altay22)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(2986)\np\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n0.64\n(0.44, 0.83)\n6.31\n&lt; .001\n-0.11\n\n\n\nType (TN)\n-0.25\n(-0.54, 0.04)\n-1.69\n0.091\n0.23\n\n\n\nInteresting\n0.38\n(0.34, 0.43)\n17.37\n&lt; .001\n0.38\n\n\n\nType (TN) × Interesting\n0.15\n(0.08, 0.21)\n4.38\n&lt; .001\n0.14\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n10495.21\n\n\nR2\n\n\n\n\n\n0.21\n\n\nR2 (adj.)\n\n\n\n\n\n0.21\n\n\nSigma\n\n\n\n\n\n1.40"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-3---modellvorhersagen",
+    "href": "analyseverfahren/slides.html#take-home-3---modellvorhersagen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home #3 - Modellvorhersagen",
+    "text": "Take-Home #3 - Modellvorhersagen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#nochmal-modellannahmen-unabhängigkeit",
+    "href": "analyseverfahren/slides.html#nochmal-modellannahmen-unabhängigkeit",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Nochmal Modellannahmen: Unabhängigkeit",
+    "text": "Nochmal Modellannahmen: Unabhängigkeit\n\nbeim GLM gehen wir davon aus, dass die Residuen unabhängig voneinander sind\nAnnahme ist verletzt, wenn die Fälle der Stichprobe nicht unabhängig voneinander sind\ntypische Fälle sind (a) zeitliche Abhängigkeiten, z.B. durch Messwiederholung, und (b) Abhängigkeiten durch geschachtelte Daten\nwenn Unabhängigkeitsannahme verletzt ist, werden (a) Schätzer verzerrt sein und (b) die Standardfehler zu klein, d.h. erhöhtes Risiko für Alpha-Fehler"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#was-sind-geschachtelte-nested-daten",
+    "href": "analyseverfahren/slides.html#was-sind-geschachtelte-nested-daten",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Was sind geschachtelte (nested) Daten?",
+    "text": "Was sind geschachtelte (nested) Daten?\nLevel-1-Einheiten gehören zu/sind geschachtelt in Level-2-Einheiten.\n\nSchüler geschachtelt in Klassen oder Schulen\nBeiträge geschachtelt in Nachrichtenoutlets, Accounts, Ausgaben oder Sendungen\nMessungen geschachtelt in Personen (Personen sind Level-2!)\nDaten können auch auf mehr als zwei hierarchischen Ebenen (Schüler, Klasse, Schule) geschachtelt oder kreuzklassifiziert sein\nbei kreuzklassifizierten Daten gehören Level-1-Einheiten zu min. zwei verschiedenen Kontexten (z.B. Bewertungen von Werbespots gehören zu bewertenden Personen und bewerteten Spots)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#warum-multilevel-modelle",
+    "href": "analyseverfahren/slides.html#warum-multilevel-modelle",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Warum Multilevel-Modelle?",
+    "text": "Warum Multilevel-Modelle?\n\nstatistische Gründe: Die Schachtelung der Level-1-Einheiten muss auch berücksichtigt werden, wenn nur Level-1-Zusammenhänge von Interesse sind (dependence as a nuisance).\nsubstanziellen Gründe: Multilevel-Modelle erlauben eine Zerlegung in Between- und Within-Group-Varianz und damit die adäquate Modellierung von Zusammenhängen auf verschiedenen Ebenen (dependence as an interesting phenomenon)."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#grundbegriffe",
+    "href": "analyseverfahren/slides.html#grundbegriffe",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Grundbegriffe",
+    "text": "Grundbegriffe\n\nMultilevel Model = Hierarchical Model = Mixed Effects Model (= Mehrebenen-Modell)\nBetween-Group-Varianz = Varianz, die durch Unterschiede in den Level-2-Einheiten erzeugt wird\nWithin-Group-Varianz = Varianz, die durch Unterschiede der Level-1-Einheiten innerhalb derselben Level-2-Einheit erzeugt wird\nFixed Effects = Zusammenhänge, die in allen Level-2-Kontexten gleich sind\nRandom (Varying) Effects = Zusammenhänge, die über die Level-2-Kontexte variieren\nCross-Level-Interaction = Zusammenhang zwischen Level-1-Effekt und Level-2-Kontextmerkmalen"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#nullmodell-mit-varierenden-intercepts",
+    "href": "analyseverfahren/slides.html#nullmodell-mit-varierenden-intercepts",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Nullmodell mit varierenden Intercepts",
+    "text": "Nullmodell mit varierenden Intercepts\nDas Multilevel-Nullmodell für geschachtelte Daten mit \\(i\\) Individuen in \\(j\\) Gruppen besteht aus je einem Nullmodell pro Ebene:\nLevel 1: \\(Y_{ij} = b_{0j}+ \\epsilon_{ij}\\) und Level 2: \\(b_{0j} = \\gamma_{00} + u_{0j}\\)\noder zusammengenommen: \\(Y_{ij} = \\gamma_{00} + u_{0j} + \\epsilon_{ij}\\)\n\\(\\gamma_{00}\\) ist der globale Mittelwert von \\(Y\\), \\(u_{0j}\\) ist die gruppenspezifische Abweichung vom globalen Mittelwert und \\(\\epsilon_{ij}\\) ist das individuelle Residuum."
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#intra-class-correlation-icc",
+    "href": "analyseverfahren/slides.html#intra-class-correlation-icc",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Intra-Class-Correlation (ICC)",
+    "text": "Intra-Class-Correlation (ICC)\n\nzu Beginn sollte man ein Nullmodell (d.h. ohne Prädiktoren) schätzen, um die Intra-Class-Correlation (ICC) zu berechnen\nICC Anteil der Varianz in einer Variable, der durch die Kontexte (Level-2) erklärt wird. Technisch: der Anteil Between-Group-Varianz (also die Varianz von \\(u_{0j}\\)) an der Gesamtvarianz von \\(Y\\).\nwenn der ICC hoch ist (viel Gruppenvarianz), lohnt sich die Betrachtung von Level-2-Prädiktoren\nwenn der ICC niedrig ist (wenig Gruppenvarianz), sind Level-1-Prädiktoren ein sinnvolleres Ziel\nselbst bei kleinem ICC ist Mehrebenenanalyse sinnvoll, da sie nie “schlechter” als ein klassisches Regressionsmodell ist"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#regression-und-multilevel-regression",
+    "href": "analyseverfahren/slides.html#regression-und-multilevel-regression",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Regression und Multilevel-Regression",
+    "text": "Regression und Multilevel-Regression\n\nMultilevel-Modelle sind eine konzeptionelle Erweiterung der (linearen) Regression\nalle Annahmen der Regression (Normalverteilung der Residuen, Homoskedastizität, Linearität) weiterhin\ngruppenspezifischen Abweichungen werden oft nur summarisch, d.h. z.B. ihre Varianz berichtet, aber nicht einzeln inspiziert\nZentrierung ist üblich, Standardisierung der Koeffizienten eher selten"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#random-bzw.-varying--intercept-modell",
+    "href": "analyseverfahren/slides.html#random-bzw.-varying--intercept-modell",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Random (bzw. Varying-) Intercept Modell",
+    "text": "Random (bzw. Varying-) Intercept Modell\n-Intercepts dürfen gruppenspezifisch variieren, Regressionskoeffizienten \\(B\\) sind für alle Level-2-Einheiten gleich\n\\(Y_{ij} = \\gamma_{00} + u_{0j} + B_1 x_1 +  B_2 x_2 + ... + \\epsilon_{ij}\\)\n\ndie variierenden Intercepts die Abweichungen der einzelnen Level-2-Einheiten vom globalen Intercept\nOutput und Interpretation der Regressionskoeffizienten entspricht dem regulären linearen Regressionsmodell"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#r2-und-modellvergleich",
+    "href": "analyseverfahren/slides.html#r2-und-modellvergleich",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "\\(R^2\\) und Modellvergleich",
+    "text": "\\(R^2\\) und Modellvergleich\n\nIn Multilevel-Modellen gibt es keinen Standard für die Berechnung von \\(R^2\\)\nAlternative 1: separate Inspektion bzw. Modellvergleich der einzelnen Varianzkomponenten (Residual und Level-2-Varianz) hat den Vorteil, dass man recht klar erkennen kann, welche L1- bzw. L2-Prädiktoren wie das Modell verbessern\nAlternative 2: Globalmaße, die in entweder nur die Fixed Effects (marginal \\(R2\\)) oder Fixed und Random Effects (conditional \\(R2\\)) berücksichtigen (Nakagawa et al., 2017)\nWie beim partiellen F-Test der Regression kann man auch verschiedene Modelle miteinander hinsichtlich ihrer Varianzaufklärung vergleichen, dies wird oft Likelihood-Ratio-Test genannt"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellerweiterungen",
+    "href": "analyseverfahren/slides.html#modellerweiterungen",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellerweiterungen",
+    "text": "Modellerweiterungen\n\n\n\nzusätzlich zu den Intercepts kann man auch Regressionskoeffizienten über die Level-2-Einheiten variieren lassen, um die Effektheterogenität über Gruppen zu prüfen\nebenso kann man Interaktionen sowohl innerhalb einer Ebene als auch sog. Cross-Level-Interactions modellieren, d.h. ob der Kontext- den Individualeffekt moderiert"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#beispielstudie-fähnrich-et-al.-2020",
+    "href": "analyseverfahren/slides.html#beispielstudie-fähnrich-et-al.-2020",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Beispielstudie: Fähnrich et al. (2020)",
+    "text": "Beispielstudie: Fähnrich et al. (2020)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#daten-5",
+    "href": "analyseverfahren/slides.html#daten-5",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Daten",
+    "text": "Daten\n\nStichprobe von 10807 Facebook-Posts von 42 Universitäten\nUni-Fans ist die Anzahl Fans der Facebook-Seite (in Tausend), d.h. hier eine Level-2-Variable\nAlle anderen Variablen sind pro Post, d.h. Level-1-Variablen.\n\n\n\n\n\n\n\nuni\n\n\nuni_fans\n\n\ncreated_time\n\n\ntype\n\n\nlikes_count\n\n\ncomments_count\n\n\n\n\n\n\nUT Southwestern\n\n\n15.41\n\n\n2015-05-10 22:40:25\n\n\nlink\n\n\n5\n\n\n0\n\n\n\n\nJohns Hopkins U\n\n\n113.61\n\n\n2013-08-13 15:50:01\n\n\nphoto\n\n\n103\n\n\n3\n\n\n\n\nU British Columbia\n\n\n121.04\n\n\n2013-06-20 18:22:58\n\n\nphoto\n\n\n66\n\n\n5\n\n\n\n\nU Colorado Boulder\n\n\n154.47\n\n\n2012-10-30 20:03:57\n\n\nlink\n\n\n253\n\n\n56\n\n\n\n\nU Michigan\n\n\n710.50\n\n\n2013-08-01 17:26:54\n\n\nphoto\n\n\n7968\n\n\n261"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#outcome-variable-4",
+    "href": "analyseverfahren/slides.html#outcome-variable-4",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Outcome-Variable",
+    "text": "Outcome-Variable\n\n\n\n\n\n\nVariable\n\n\nn_Obs\n\n\nMean\n\n\nSD\n\n\nMedian\n\n\nMAD\n\n\nMin\n\n\nMax\n\n\n\n\n\n\ncomments_count\n\n\n10807\n\n\n12.15\n\n\n36.46\n\n\n3\n\n\n4.45\n\n\n0\n\n\n1556"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#nullmodell-und-icc",
+    "href": "analyseverfahren/slides.html#nullmodell-und-icc",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Nullmodell und ICC",
+    "text": "Nullmodell und ICC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(10804)\np\nEffects\nGroup\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n14.34\n(9.23, 19.44)\n5.50\n&lt; .001\nfixed\n\n0.06\n\n\n\n\n16.71\n\n\n\nrandom\nuni\n\n\n\n\n\n33.32\n\n\n\nrandom\nResidual\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n\n\n106618.77\n\n\nR2 (conditional)\n\n\n\n\n\n\n\n0.20\n\n\nR2 (marginal)\n\n\n\n\n\n\n\n0.00\n\n\nSigma\n\n\n\n\n\n\n\n33.32\n\n\n\n\n\n\n\n\n16.71^2 / (16.71^2 + 33.32^2)\n\n[1] 0.2009607"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#vorhergesagte-werte-uni-page",
+    "href": "analyseverfahren/slides.html#vorhergesagte-werte-uni-page",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Vorhergesagte Werte (Uni-Page)",
+    "text": "Vorhergesagte Werte (Uni-Page)\n\n\n\n\n\n\nuni\n\n\nestimate\n\n\nstd.error\n\n\nstatistic\n\n\np.value\n\n\nconf.low\n\n\nconf.high\n\n\ndf\n\n\n\n\n\n\nColumbia U\n\n\n2.33\n\n\n2.61\n\n\n0.89\n\n\n0.37\n\n\n-2.78\n\n\n7.44\n\n\nInf\n\n\n\n\nCornell U\n\n\n9.40\n\n\n2.61\n\n\n3.61\n\n\n0.00\n\n\n4.29\n\n\n14.51\n\n\nInf\n\n\n\n\nDuke U\n\n\n8.69\n\n\n2.61\n\n\n3.34\n\n\n0.00\n\n\n3.58\n\n\n13.80\n\n\nInf\n\n\n\n\nHarvard U\n\n\n66.38\n\n\n2.61\n\n\n25.48\n\n\n0.00\n\n\n61.27\n\n\n71.48\n\n\nInf\n\n\n\n\nImperial College London\n\n\n3.40\n\n\n2.61\n\n\n1.30\n\n\n0.19\n\n\n-1.71\n\n\n8.50\n\n\nInf\n\n\n\n\nJohns Hopkins U\n\n\n3.18\n\n\n2.61\n\n\n1.22\n\n\n0.22\n\n\n-1.92\n\n\n8.29\n\n\nInf\n\n\n\n\nMIT\n\n\n15.76\n\n\n2.61\n\n\n6.05\n\n\n0.00\n\n\n10.66\n\n\n20.87\n\n\nInf\n\n\n\n\nNew York U\n\n\n10.71\n\n\n2.61\n\n\n4.11\n\n\n0.00\n\n\n5.61\n\n\n15.82\n\n\nInf\n\n\n\n\nNorthwestern U\n\n\n7.88\n\n\n2.61\n\n\n3.03\n\n\n0.00\n\n\n2.78\n\n\n12.99\n\n\nInf\n\n\n\n\nPrinceton U\n\n\n5.63\n\n\n2.61\n\n\n2.16\n\n\n0.03\n\n\n0.53\n\n\n10.74\n\n\nInf"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#varying-intercept-modell-topic-research",
+    "href": "analyseverfahren/slides.html#varying-intercept-modell-topic-research",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Varying Intercept-Modell (Topic Research)",
+    "text": "Varying Intercept-Modell (Topic Research)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(10387)\np\nEffects\nGroup\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n15.57\n(10.48, 20.67)\n5.99\n&lt; .001\nfixed\n\n0.06\n\n\n\ntopic research\n-4.06\n(-5.53, -2.59)\n-5.42\n&lt; .001\nfixed\n\n-0.05\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n\n\n102577.73\n\n\nR2 (conditional)\n\n\n\n\n\n\n\n0.20\n\n\nR2 (marginal)\n\n\n\n\n\n\n\n0.00\n\n\nSigma\n\n\n\n\n\n\n\n33.41"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellvorhersagen-varying-intercepts",
+    "href": "analyseverfahren/slides.html#modellvorhersagen-varying-intercepts",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellvorhersagen (varying intercepts)",
+    "text": "Modellvorhersagen (varying intercepts)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#varying-intercept-vs.-varying-slope-modell",
+    "href": "analyseverfahren/slides.html#varying-intercept-vs.-varying-slope-modell",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Varying Intercept vs. Varying Slope-Modell",
+    "text": "Varying Intercept vs. Varying Slope-Modell\n\n\n\n\n\n\n\n\nnpar\n\n\nAIC\n\n\nBIC\n\n\nlogLik\n\n\n-2*log(L)\n\n\nChisq\n\n\nDf\n\n\nPr(&gt;Chisq)\n\n\n\n\n\n\nm1_research\n\n\n4\n\n\n102582.7\n\n\n102611.7\n\n\n-51287.36\n\n\n102574.7\n\n\n\n\n\n\n\n\n\n\nm2_research_vs\n\n\n6\n\n\n102532.8\n\n\n102576.3\n\n\n-51260.39\n\n\n102520.8\n\n\n53.93\n\n\n2\n\n\n0"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#varying-slopes-pro-uni-page",
+    "href": "analyseverfahren/slides.html#varying-slopes-pro-uni-page",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Varying Slopes pro Uni-Page",
+    "text": "Varying Slopes pro Uni-Page\n\n\n\n\n\n\nterm\n\n\nuni\n\n\nestimate\n\n\nstd.error\n\n\nstatistic\n\n\np.value\n\n\nconf.low\n\n\nconf.high\n\n\n\n\n\n\ntopic_research\n\n\nColumbia U\n\n\n-0.43\n\n\n1.22\n\n\n-0.35\n\n\n0.72\n\n\n-2.82\n\n\n1.96\n\n\n\n\ntopic_research\n\n\nCornell U\n\n\n-3.15\n\n\n1.22\n\n\n-2.58\n\n\n0.01\n\n\n-5.54\n\n\n-0.76\n\n\n\n\ntopic_research\n\n\nDuke U\n\n\n-2.72\n\n\n1.22\n\n\n-2.23\n\n\n0.03\n\n\n-5.11\n\n\n-0.33\n\n\n\n\ntopic_research\n\n\nHarvard U\n\n\n-24.59\n\n\n1.22\n\n\n-20.16\n\n\n0.00\n\n\n-26.98\n\n\n-22.20\n\n\n\n\ntopic_research\n\n\nImperial College London\n\n\n-0.91\n\n\n1.22\n\n\n-0.75\n\n\n0.45\n\n\n-3.30\n\n\n1.48\n\n\n\n\ntopic_research\n\n\nJohns Hopkins U\n\n\n-0.73\n\n\n1.22\n\n\n-0.60\n\n\n0.55\n\n\n-3.13\n\n\n1.66\n\n\n\n\ntopic_research\n\n\nMIT\n\n\n-5.51\n\n\n1.22\n\n\n-4.52\n\n\n0.00\n\n\n-7.90\n\n\n-3.12\n\n\n\n\ntopic_research\n\n\nNew York U\n\n\n-3.48\n\n\n1.22\n\n\n-2.85\n\n\n0.00\n\n\n-5.87\n\n\n-1.09\n\n\n\n\ntopic_research\n\n\nNorthwestern U\n\n\n-2.43\n\n\n1.22\n\n\n-1.99\n\n\n0.05\n\n\n-4.82\n\n\n-0.04\n\n\n\n\ntopic_research\n\n\nPrinceton U\n\n\n-1.67\n\n\n1.22\n\n\n-1.37\n\n\n0.17\n\n\n-4.07\n\n\n0.72"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modellvorhersagen-varying-slopes",
+    "href": "analyseverfahren/slides.html#modellvorhersagen-varying-slopes",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modellvorhersagen (varying slopes)",
+    "text": "Modellvorhersagen (varying slopes)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#modell-mit-level-2-prädiktor",
+    "href": "analyseverfahren/slides.html#modell-mit-level-2-prädiktor",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Modell mit Level-2-Prädiktor",
+    "text": "Modell mit Level-2-Prädiktor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\n95% CI\nt(10384)\np\nEffects\nGroup\nStd. Coef.\nFit\n\n\n\n\n(Intercept)\n10.88\n(6.56, 15.19)\n4.94\n&lt; .001\nfixed\n\n0.05\n\n\n\ntopic research\n-5.69\n(-8.35, -3.04)\n-4.21\n&lt; .001\nfixed\n\n-0.07\n\n\n\nuni fans\n0.01\n(0.01, 0.01)\n8.18\n&lt; .001\nfixed\n\n0.21\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAICc\n\n\n\n\n\n\n\n102509.01\n\n\nR2 (conditional)\n\n\n\n\n\n\n\n0.16\n\n\nR2 (marginal)\n\n\n\n\n\n\n\n0.05\n\n\nSigma\n\n\n\n\n\n\n\n33.32"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#fazit-3",
+    "href": "analyseverfahren/slides.html#fazit-3",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Fazit",
+    "text": "Fazit\n\nin der Kommunikationswissenschaft sind geschachtelte Daten nahezu überall anzutreffen, sei es bei Inhaltsanalysen, Panel- oder Mehrländer-Befragungen\noft sind auch Personen die Level-2-Einheiten, z.B. bei Experience-Sampling-Daten oder Within-Subject-Experimenten\ndie Grundlogik der Multilevel-Analyse entspricht dem linearen Modell, lediglich die Art und Weise, die Schachtelung zu berücksichtigen, variiert\nwenn Verdacht auf Verletzung der Unabhängigkeitsannahme besteht, kann man immer zumindest ein Varying Intercept Modell schätzen, das nie “schlechter” als ein lineares Regressionsmodell ist\ntechnisch muss man in R (fast) nur lm() durch lmer() ersetzen und die Modellformel leicht anpassen (siehe praktische Übung)"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-3",
+    "href": "analyseverfahren/slides.html#take-home-3",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home #3",
+    "text": "Take-Home #3\n\nin den Studien von Altay et al. (2022) haben ale TeilnehmerInnen mehrere Artikel bewertet\nUnabhängigkeit der Bewertungen ist damit klar verletzt, unsere Single-Level-Analysen eigentlich nicht korrekt\nder ICC ist mit .45 sehr groß, d.h. Bereitschaft, einen Beitrag zu teilen, hängt erheblich von der Person, nicht (nur) vom Beitrag ab\n\n\n\n\n\n\n\nICC_adjusted\n\n\nICC_unadjusted\n\n\noptional\n\n\n\n\n\n\n0.45\n\n\n0.45\n\n\nFALSE"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-3---single-vs.-multilevel-modell",
+    "href": "analyseverfahren/slides.html#take-home-3---single-vs.-multilevel-modell",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home #3 - Single vs. Multilevel Modell",
+    "text": "Take-Home #3 - Single vs. Multilevel Modell\n\n\n\n\n \nShare\nShare\n\n\nPredictors\nEstimates\nCI\np\nEstimates\nCI\np\n\n\n(Intercept)\n2.23\n2.15 – 2.30\n&lt;0.001\n2.23\n2.11 – 2.35\n&lt;0.001\n\n\nType [TN]\n0.36\n0.26 – 0.46\n&lt;0.001\n0.34\n0.27 – 0.42\n&lt;0.001\n\n\nInteresting c\n0.38\n0.34 – 0.43\n&lt;0.001\n0.34\n0.30 – 0.37\n&lt;0.001\n\n\nType [TN] × Interesting c\n0.15\n0.08 – 0.21\n&lt;0.001\n0.14\n0.09 – 0.19\n&lt;0.001\n\n\nRandom Effects\n\n\n\nσ2\n \n1.04\n\n\n\nτ00\n \n0.92 Participants\n\n\nICC\n \n0.47\n\n\nN\n \n299 Participants\n\nObservations\n2990\n2990\n\n\nR2 / R2 adjusted\n0.206 / 0.205\n0.173 / 0.562"
+  },
+  {
+    "objectID": "analyseverfahren/slides.html#take-home-3-1",
+    "href": "analyseverfahren/slides.html#take-home-3-1",
+    "title": "Anwendungsorientierte Analyseverfahren",
+    "section": "Take-Home #3",
+    "text": "Take-Home #3\n\nKoeffizienten sind sich im Multilevel-Modell praktisch gleich\nPräzision der Schätzung ist höher (kleinere Standardfehler, engere CI)\nwir haben aber zusätzlich erfahren, dass Sharing fast zur Hälfte von der Person abhängt\ndementsprechend kann man Follow-Up-Studien oder Interventionen planen"
+  },
+  {
     "objectID": "analyseverfahren/slides.html#literatur-1",
     "href": "analyseverfahren/slides.html#literatur-1",
     "title": "Anwendungsorientierte Analyseverfahren",
@@ -2181,7 +2384,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Sometimes it just feels better not to talk. At All. About Anything. To Anyone.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Just because you shot Jesse James doesn't mean you are Jesse James.\",\n        \"author\": \"Mike Ehrmantraut\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -2636,28 +2839,28 @@
     "href": "experiment/slides.html#beispiel-t-test",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beispiel T-Test",
-    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -989.45, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.03246 -13.97698\nsample estimates:\nmean of x mean of y \n 165.9953  180.0000"
+    "text": "Beispiel T-Test\n\nmales = rnorm(n = 1e6, m = 180, sd = 10)\nfemales = rnorm(n = 1e6, m = 166, sd = 10)\nt.test(females, males) \n\n\n    Welch Two Sample t-test\n\ndata:  females and males\nt = -990.78, df = 2e+06, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -14.04269 -13.98724\nsample estimates:\nmean of x mean of y \n 165.9914  180.0063"
   },
   {
     "objectID": "experiment/slides.html#simulation-mit-zufallsziehung",
     "href": "experiment/slides.html#simulation-mit-zufallsziehung",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Simulation mit Zufallsziehung",
-    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 4.683984e-21\n\ndo_t_test(100, males, males)\n\n[1] 0.5224275"
+    "text": "Simulation mit Zufallsziehung\n\ndo_t_test = function(n, group1, group2){\n  m = sample(group1, n)\n  w = sample(group2, n)\n  t.test(m,w)$p.value\n}\n\ndo_t_test(100, females, males)\n\n[1] 1.530911e-13\n\ndo_t_test(100, males, males)\n\n[1] 0.3539985"
   },
   {
     "objectID": "experiment/slides.html#alpha-fehler",
     "href": "experiment/slides.html#alpha-fehler",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Alpha-Fehler",
-    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.7116316 0.7163652 0.3132516 0.2634205 0.9951778 0.7431390\n\nsum(results_h0 &lt;= .05)\n\n[1] 50"
+    "text": "Alpha-Fehler\n\nset.seed(123)\nresults_h0 = replicate(1000, do_t_test(n = 100, males, males))\nresults_h0 |&gt; head()\n\n[1] 0.01322005 0.67813697 0.18252733 0.59986649 0.79411108 0.39457938\n\nsum(results_h0 &lt;= .05)\n\n[1] 44"
   },
   {
     "objectID": "experiment/slides.html#beta-fehler-und-power",
     "href": "experiment/slides.html#beta-fehler-und-power",
     "title": "Experiment: Mediennutzung und -wirkung",
     "section": "Beta-Fehler und Power",
-    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 503\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
+    "text": "Beta-Fehler und Power\n\nresults_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))\nresults_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))\n\nsum(results_h1_n10 &lt;= .05)\n\n[1] 451\n\nsum(results_h1_n100 &lt;= .05)\n\n[1] 1000"
   },
   {
     "objectID": "experiment/slides.html#power-analyse",
@@ -3392,7 +3595,7 @@
     "href": "ccs/slides.html#json-apis",
     "title": "Computational Communication Science",
     "section": "JSON APIs",
-    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Scientists love lasers.\",\n        \"author\": \"Saul Goodman\"\n    },\n    {\n        \"quote\": \"Jesse, you asked me if I was in the meth business or the money business.. Neither. I'm in the empire business.\",\n        \"author\": \"Walter White\"\n    }\n]"
+    "text": "JSON APIs\n\nBenefit: Provides structured, flexible data (JSON format); often allows for specific queries and filters.\nDrawbacks: Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.\n\n\n\n[\n    {\n        \"quote\": \"Is that your fly-sabre?\",\n        \"author\": \"Jesse Pinkman\"\n    },\n    {\n        \"quote\": \"You two suck at peddling meth.\",\n        \"author\": \"Saul Goodman\"\n    }\n]"
   },
   {
     "objectID": "ccs/slides.html#web-scraping",
