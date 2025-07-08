@@ -21,9 +21,12 @@ registerS3method(
   envir = asNamespace("knitr")
 )
 
-model_table <- function(model) {
-  report::report_table(model) |> 
-    summary() |> 
-    insight::display(zap_small = TRUE)
+model_table <- function(model, fixed = F) {
+  a = report::report_table(model) |> 
+    summary() 
+  if(fixed == T){
+    a = a |> filter(Effects!="random" | is.na(Effects)) 
+}
+    a |> insight::display(zap_small = TRUE) 
 }
 ```

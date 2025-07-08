@@ -8,7 +8,7 @@ df-print: kable
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
 execute: 
-  cache: true
+  cache: false
 embed-resources: true
 ---
 
@@ -2535,5 +2535,305 @@ preds_internet |>
 -   die Modellierung ist praktisch identisch mit linearen Regressionsmodellen
 -   die Interpretation der Koeffizienten ist komplexer, aber AME und Modellvorhersagen helfen dabei
 -   das Linear Probability Model führt oft zu ähnlichen Ergebnissen (vor allem wenn Y nicht allzu selten oder häufig 1 ist)
+
+
+
+# Sitzung 11 {#s11}
+
+
+
+```{r}
+library(lme4)
+library(performance)
+library(tidyverse)
+uni_fb <- haven::read_sav("data/Faehnrich_2020.sav") |> mutate(uni_fans = uni_fans / 10)
+options(knitr.kable.NA = '')
+```
+
+
+## Take-Home #3 - Haupteffekte
+
+```{r, eval = F, echo = T}
+lm(Share ~ Type + Interesting, data = altay22)
+```
+
+
+```{r}
+altay22 = read_tsv("data/altay2022.tsv")
+lm(Share ~ Type + Interesting, data = altay22) |> 
+  model_table()
+```
+
+
+## Take-Home #3 - Interaktionseffekt
+
+```{r, eval = F, echo = T}
+lm(Share ~ Type + Interesting + Type:Interesting, data = altay22)
+```
+
+
+```{r}
+lm(Share ~ Type + Interesting + Type:Interesting, data = altay22) |> 
+  model_table()
+```
+
+
+
+## Take-Home #3 - Modellvorhersagen
+
+```{r}
+lm(Share ~ Type + Interesting + Type:Interesting, data = altay22) |> 
+  marginaleffects::avg_predictions(variables = c("Type", "Interesting")) |> 
+  filter(Interesting %in% c(1,4,7)) |> 
+  ggplot(aes(x = Interesting, y = estimate, ymin = conf.low, ymax = conf.high, color = Type, group = Type))+
+  geom_pointrange(position = position_dodge(.5))+
+  geom_line(position = position_dodge(.5))+
+  scale_color_discrete(labels = c("False News", "True News"))+
+  labs(y = "Predicted sharing intention")
+```
+
+
+
+
+## Nochmal Modellannahmen: Unabhängigkeit
+
+- beim GLM gehen wir davon aus, dass die Residuen unabhängig voneinander sind
+- Annahme ist verletzt, wenn die Fälle der Stichprobe nicht unabhängig voneinander sind
+- typische Fälle sind (a) zeitliche Abhängigkeiten, z.B. durch Messwiederholung, und (b) Abhängigkeiten durch geschachtelte Daten
+- wenn Unabhängigkeitsannahme verletzt ist, werden (a) Schätzer verzerrt sein und (b) die Standardfehler zu klein, d.h. erhöhtes Risiko für Alpha-Fehler
+
+
+## Was sind geschachtelte (nested) Daten?
+
+Level-1-Einheiten gehören zu/sind geschachtelt in Level-2-Einheiten.
+
+* Schüler geschachtelt in Klassen oder Schulen
+* Beiträge geschachtelt in Nachrichtenoutlets, Accounts, Ausgaben oder Sendungen
+* Messungen geschachtelt in Personen (Personen sind Level-2!)
+
+- Daten können auch auf mehr als zwei hierarchischen Ebenen (Schüler, Klasse, Schule) geschachtelt oder kreuzklassifiziert sein
+- bei kreuzklassifizierten Daten gehören Level-1-Einheiten zu min. zwei verschiedenen Kontexten (z.B. Bewertungen von Werbespots gehören zu bewertenden Personen und bewerteten Spots)
+
+## Warum Multilevel-Modelle?
+
+* statistische Gründe: Die Schachtelung der Level-1-Einheiten muss auch berücksichtigt werden, wenn nur Level-1-Zusammenhänge von Interesse sind (dependence as a nuisance).
+
+* substanziellen Gründe: Multilevel-Modelle erlauben eine Zerlegung in Between- und Within-Group-Varianz und damit die adäquate Modellierung von Zusammenhängen auf verschiedenen Ebenen (dependence as an interesting phenomenon).
+
+
+## Grundbegriffe
+
+* Multilevel Model = Hierarchical Model = Mixed Effects Model (= Mehrebenen-Modell)
+* Between-Group-Varianz = Varianz, die durch Unterschiede in den Level-2-Einheiten erzeugt wird
+* Within-Group-Varianz = Varianz, die durch Unterschiede der Level-1-Einheiten innerhalb derselben Level-2-Einheit erzeugt wird
+* Fixed Effects = Zusammenhänge, die in allen Level-2-Kontexten gleich sind
+* Random (Varying) Effects = Zusammenhänge, die über die Level-2-Kontexte variieren
+* Cross-Level-Interaction = Zusammenhang zwischen Level-1-Effekt und Level-2-Kontextmerkmalen
+
+## Nullmodell mit varierenden Intercepts
+
+Das Multilevel-Nullmodell für geschachtelte Daten mit $i$ Individuen in $j$ Gruppen besteht aus je einem Nullmodell pro Ebene:
+
+Level 1: $Y_{ij} = b_{0j}+ \epsilon_{ij}$   und   Level 2: $b_{0j} = \gamma_{00} + u_{0j}$
+
+oder zusammengenommen:  $Y_{ij} = \gamma_{00} + u_{0j} + \epsilon_{ij}$
+
+$\gamma_{00}$ ist der globale Mittelwert von $Y$, $u_{0j}$ ist die gruppenspezifische Abweichung vom globalen Mittelwert und $\epsilon_{ij}$ ist das individuelle Residuum.
+
+
+## Intra-Class-Correlation (ICC)
+
+- zu Beginn sollte man ein Nullmodell (d.h. ohne Prädiktoren) schätzen, um die Intra-Class-Correlation (ICC) zu berechnen
+- ICC Anteil der Varianz in einer Variable, der durch die Kontexte (Level-2) erklärt wird. Technisch: der Anteil Between-Group-Varianz (also die Varianz von $u_{0j}$) an der Gesamtvarianz von $Y$. 
+- wenn der ICC hoch ist (viel Gruppenvarianz), lohnt sich die Betrachtung von Level-2-Prädiktoren
+- wenn der ICC niedrig ist (wenig Gruppenvarianz), sind Level-1-Prädiktoren ein sinnvolleres Ziel
+- selbst bei kleinem ICC ist Mehrebenenanalyse sinnvoll, da sie nie "schlechter" als ein klassisches Regressionsmodell ist
+
+
+## Regression und Multilevel-Regression
+
+- Multilevel-Modelle sind eine konzeptionelle Erweiterung der (linearen) Regression
+- alle Annahmen der Regression (Normalverteilung der Residuen, Homoskedastizität, Linearität) weiterhin
+- gruppenspezifischen Abweichungen werden oft nur summarisch, d.h. z.B. ihre Varianz berichtet, aber nicht einzeln inspiziert
+- Zentrierung ist üblich, Standardisierung der Koeffizienten eher selten
+
+## Random (bzw. Varying-) Intercept Modell
+
+-Intercepts dürfen gruppenspezifisch variieren, Regressionskoeffizienten $B$ sind  für alle Level-2-Einheiten gleich
+
+$Y_{ij} = \gamma_{00} + u_{0j} + B_1 x_1 +  B_2 x_2 + ... + \epsilon_{ij}$
+
+- die variierenden Intercepts die Abweichungen der einzelnen Level-2-Einheiten vom globalen Intercept 
+- Output und Interpretation der Regressionskoeffizienten entspricht dem regulären linearen Regressionsmodell 
+
+
+
+## $R^2$ und Modellvergleich
+
+- In Multilevel-Modellen gibt es keinen Standard für die Berechnung von $R^2$
+- Alternative 1: separate Inspektion bzw. Modellvergleich der einzelnen Varianzkomponenten (Residual und Level-2-Varianz) hat den Vorteil, dass man recht klar erkennen kann, welche L1- bzw. L2-Prädiktoren wie das Modell verbessern
+- Alternative 2: Globalmaße, die in entweder nur die Fixed Effects (marginal $R2$) oder Fixed und Random Effects (conditional $R2$) berücksichtigen (Nakagawa et al., 2017)
+- Wie beim partiellen F-Test der Regression kann man auch verschiedene Modelle miteinander hinsichtlich ihrer Varianzaufklärung vergleichen, dies wird oft Likelihood-Ratio-Test genannt
+
+## Modellerweiterungen
+
+![](images/gelman_hill.png){fig-align="center"}
+\
+
+- zusätzlich zu den Intercepts kann man auch Regressionskoeffizienten über die Level-2-Einheiten variieren lassen, um die Effektheterogenität über Gruppen zu prüfen
+- ebenso kann man Interaktionen sowohl innerhalb einer Ebene als auch sog. Cross-Level-Interactions modellieren, d.h. ob der Kontext- den Individualeffekt moderiert
+
+
+## Beispielstudie: Fähnrich et al. (2020)
+
+![](images/faehnrich.png)
+
+## Daten
+
+- Stichprobe von `r nrow(uni_fb)` Facebook-Posts von `r n_distinct(uni_fb$uni)` Universitäten 
+- Uni-Fans ist die Anzahl Fans der *Facebook-Seite* (in Tausend), d.h. hier eine Level-2-Variable
+- Alle anderen Variablen sind pro Post, d.h. Level-1-Variablen.
+
+```{r, echo = F}
+faehnrich19 <- haven::read_sav("data/Faehnrich_2020.sav") |>
+  haven::zap_labels()
+
+faehnrich19 |> 
+select(uni, uni_fans, created_time, type, likes_count, comments_count) |> 
+sample_n(5)
+```
+
+
+## Outcome-Variable
+
+```{r}
+faehnrich19 |>
+  select(comments_count) |>
+  report::report_table() |> 
+select(1:8)
+
+faehnrich19 |>
+  ggplot(aes(x = comments_count)) +
+  geom_histogram()
+```
+
+## Nullmodell und ICC
+
+```{r}
+m0 <- lmer(comments_count ~ 1 + (1 | uni), data = faehnrich19)
+model_table(m0)
+```
+
+\
+
+```{r, echo = T}
+16.71^2 / (16.71^2 + 33.32^2)
+```
+
+
+## Vorhergesagte Werte (Uni-Page)
+
+```{r}
+preds_uni <- marginaleffects::avg_predictions(m0, variables = "uni") |>
+  as_tibble()
+preds_uni |> 
+select(-s.value) |> 
+  head(10)
+```
+
+## Varying Intercept-Modell (Topic Research)
+
+```{r}
+m1_research <- lmer(comments_count ~ 1 + topic_research + (1 | uni), data = faehnrich19)
+model_table(m1_research, fixed = T)
+```
+
+## Modellvorhersagen (varying intercepts)
+
+```{r}
+preds_uni <- marginaleffects::avg_predictions(m1_research, variables = c("topic_research", "uni")) |>
+  as_tibble()
+preds_uni |>
+  ggplot(aes(x = factor(topic_research), y = estimate, color = uni, group = uni)) +
+  geom_line(show.legend = FALSE) +
+  geom_point(show.legend = FALSE) +
+  labs(x = "Topic Research", y = "Predicted # of comments")
+```
+
+## Varying Intercept vs. Varying Slope-Modell
+
+```{r}
+m2_research_vs <- lmer(comments_count ~ 1 + topic_research + (1 + topic_research | uni), data = faehnrich19)
+anova(m1_research, m2_research_vs)
+```
+
+## Varying Slopes pro Uni-Page
+
+```{r}
+marginaleffects::avg_slopes(m2_research_vs, by = "uni") |>
+  as_tibble() |> 
+select(-contrast, -s.value, -starts_with("pred")) |> 
+  head(10)
+```
+
+## Modellvorhersagen (varying slopes)
+
+```{r}
+preds_uni_vs <- marginaleffects::avg_predictions(m2_research_vs, variables = c("topic_research", "uni")) |>
+  as_tibble()
+```
+
+```{r}
+preds_uni_vs |>
+  ggplot(aes(x = factor(topic_research), y = estimate, color = uni, group = uni)) +
+  geom_line(show.legend = FALSE) +
+  geom_point(show.legend = FALSE) +
+  labs(x = "Topic Research", y = "Predicted comments")
+```
+
+## Modell mit Level-2-Prädiktor
+
+```{r}
+m3_research_fans <- lmer(comments_count ~ 1 + topic_research + uni_fans + (1 + topic_research | uni), data = faehnrich19)
+model_table(m3_research_fans, fixed = T)
+```
+
+
+## Fazit
+
+- in der Kommunikationswissenschaft sind geschachtelte Daten nahezu überall anzutreffen, sei es bei Inhaltsanalysen, Panel- oder Mehrländer-Befragungen
+- oft sind auch Personen die Level-2-Einheiten, z.B. bei Experience-Sampling-Daten oder Within-Subject-Experimenten
+- die Grundlogik der Multilevel-Analyse entspricht dem linearen Modell, lediglich die Art und Weise, die Schachtelung zu berücksichtigen, variiert
+- wenn Verdacht auf Verletzung der Unabhängigkeitsannahme besteht, kann man immer zumindest ein Varying Intercept Modell schätzen, das nie "schlechter" als ein lineares Regressionsmodell ist
+
+- technisch muss man in R (fast) nur `lm()` durch `lmer()` ersetzen und die Modellformel leicht anpassen (siehe praktische Übung) 
+
+## Take-Home #3
+
+- in den Studien von Altay et al. (2022) haben ale TeilnehmerInnen *mehrere* Artikel bewertet
+- Unabhängigkeit der Bewertungen ist damit klar verletzt, unsere Single-Level-Analysen eigentlich nicht korrekt
+- der ICC ist mit .45 sehr groß, d.h. Bereitschaft, einen Beitrag zu teilen, hängt erheblich von der Person, nicht (nur) vom Beitrag ab
+
+```{r}
+lmer(Share ~ 1 + (1|Participants), data = altay22) |> 
+  performance::icc() 
+```
+
+## Take-Home #3 - Single vs. Multilevel Modell
+
+```{r}
+altay22$Interesting_c = scale(altay22$Interesting, scale = F)
+m_multi = lmer(Share ~ Type * Interesting_c + (1|Participants), data = altay22)
+m_flat = lm(Share ~ Type * Interesting_c, data = altay22)
+sjPlot::tab_model(m_flat, m_multi)
+```
+
+## Take-Home #3
+
+- Koeffizienten sind sich im Multilevel-Modell praktisch gleich
+- Präzision der Schätzung ist höher (kleinere Standardfehler, engere CI)
+- wir haben aber zusätzlich erfahren, dass Sharing fast zur Hälfte von der Person abhängt
+- dementsprechend kann man Follow-Up-Studien oder Interventionen planen
+
 
 ## Literatur

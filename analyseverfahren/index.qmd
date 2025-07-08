@@ -117,7 +117,6 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 
 @vögele2017
 
-
 ## Sitzung 9 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Folien"></a> {#9}
 
 ### Themen
@@ -137,3 +136,17 @@ make_schedule(start_date, end_date, no_classes, topics, onlyslides = F) |>
 ### Literatur
 
 @festl2013
+
+### Literatur
+
+@vögele2017
+
+## Sitzung 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Folien"></a> {#11}
+
+### Themen
+
+-   Multilevel-Regression
+
+### Literatur
+
+@fähnrich2020
