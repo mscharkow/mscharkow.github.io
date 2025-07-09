@@ -741,4 +741,54 @@ qplot(rnorm(100))
 - Check my basic term paper template, modify settings, text and code, check the resulting document.
 - Collect questions you might have about how to accomplish certain tasks in Quarto.
 
+
+# Session 11 {#s11}
+
+# Questions about Quarto?
+
+
+\
+\
+
+IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
+
+## Visual mode
+
+- RStudio provides a visual mode for editing
+- it enables you to work using menus and clicking
+- especially useful for citations, images and tables
+
+## References
+
+- citations in markdown are simply `@smith2022` 
+- you can search and include references in visual mode, based on DOI
+- the Bibtex entry is automatically generated and added to your references file
+- similarly, there is a Zotero connector if you already use Zotero's online library
+
+## Code
+
+- for smaller documents, writing all your code in the respective chunks works fine
+- for longer documents, move the computations etc. into a separate chunk at the top, then reference only the computed objects in the document
+- alternatively: work on your code in a regular R file, and use `source("mycode.R")` in the first chunk
+- for expensive computations use either caching or write the results into a dedicated file `saveRDS(my_regression_model, "reg1.rds")` 
+
+
+## Visual branding
+
+- Quarto documents can be customized either through YAML header options like `mainfont` or with a brand file
+- use a `_brand.yml` file in the same folder, which includes many visual options like colors, fonts, styles
+- works for HTML, RevealJS slides, and some parts of PDF documents
+- does *not* impact the ggplot2 graphics, for which you'd need to set theme, colors, etc. separately
+- `_brand.yml` [instructions](https://quarto.org/docs/authoring/brand.html)
+
+
+## Closeread
+
+- a Quarto extension specifically for Scrollytelling articles
+- mainly two features: stickies and focus effects (panning, scrolling, zooming, highlighting)
+- stickies can be text, regular images or computed images (e.g. ggplot2 graphics)
+- create fake animations by successively adding layers to your plot, e.g. you start with an empty plot, and add `geom_*`
+- [Closeread prize](https://posit.co/blog/closeread-prize-winners/) winners all have github repositories, so you can read and copy code
+
+
 ## References

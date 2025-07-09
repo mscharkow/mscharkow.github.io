@@ -161,7 +161,7 @@ Refresh your R skills.
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/generative-agents.html) in R. 
 
 
-## Session 10 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Slides"></a> {#10}
+## Session 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Slides"></a> {#10}
 
 ### Topics
 
@@ -171,3 +171,15 @@ Refresh your R skills.
 ### Tasks for the next session
 
 1. Check example paper qmd file.
+
+
+## Session 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Slides"></a> {#11}
+
+### Topics
+
+- quarto documents with branding
+- closeread extension
+
+### Tasks for the next session
+
+1. Bring all your term-paper questions.
