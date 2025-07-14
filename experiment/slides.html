@@ -403,13 +403,13 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
     Welch Two Sample t-test
 
 data:  females and males
-t = -987.91, df = 2e+06, p-value &lt; 2.2e-16
+t = -989.18, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.00454 -13.94908
+ -14.02052 -13.96507
 sample estimates:
 mean of x mean of y 
- 166.0128  179.9896 </code></pre>
+ 166.0046  179.9974 </code></pre>
 </div>
 </div>
 </section>
@@ -424,11 +424,11 @@ mean of x mean of y
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4.750073e-22</code></pre>
+<pre><code>[1] 5.068076e-22</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.2185905</code></pre>
+<pre><code>[1] 0.6115184</code></pre>
 </div>
 </div>
 </section>
@@ -439,11 +439,11 @@ mean of x mean of y
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.19431040 0.89627593 0.29385216 0.04225262 0.47569975 0.77795276</code></pre>
+<pre><code>[1] 0.9448921 0.0061930 0.7275112 0.2651163 0.8653915 0.7656020</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 52</code></pre>
+<pre><code>[1] 56</code></pre>
 </div>
 </div>
 </section>
@@ -455,7 +455,7 @@ mean of x mean of y
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 478</code></pre>
+<pre><code>[1] 450</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1454,8 +1454,8 @@ mean of x mean of y
 
 </section>
 
-<section id="s10" class="title-slide slide level1 center">
-<h1>Sitzung 10</h1>
+<section id="s11" class="title-slide slide level1 center">
+<h1>Sitzung 11</h1>
 
 </section>
 
@@ -1480,6 +1480,77 @@ mean of x mean of y
 <li>Abschlusspräsentation (max. 10 Minuten, minimale Herleitung)</li>
 <li>Fragen zum Ergebnisbericht etc. mitbringen</li>
 </ul>
+</section></section>
+<section id="s12" class="title-slide slide level1 center">
+<h1>Sitzung 12</h1>
+
+</section>
+
+<section>
+<section id="absclusspräsentationwn" class="title-slide slide level1 center">
+<h1>Absclusspräsentationwn</h1>
+
+</section>
+<section id="projektbericht" class="slide level2">
+<h2>Projektbericht</h2>
+<ul>
+<li>maximal (!) 10.000 Wörter insgesamt ohne Anhang</li>
+<li>Zusammenfassung des Experiments, kein Praktikumsbericht</li>
+<li>Recycling der Preregistration und Zwischenberichte erwünscht</li>
+<li>Struktur und Inhalte wie ein Journal-Beitrag</li>
+<li>Formalien und Regeln wissenschaftlicher Arbeit sind sehr wichtig und notenrelevant.</li>
+</ul>
+</section>
+<section id="struktur" class="slide level2">
+<h2>Struktur</h2>
+<ol type="1">
+<li>Einleitung - Forschungsfrage, nicht unbedingt Relevanz</li>
+<li>Literatur + (Theorie) + Hypothesen (aus Literatur/Theorie entwickelt!)</li>
+<li>Methode - Design - Stimuli - Messung - Stichprobe - ggf. Datenmanagement/Analyse (stat. Verfahren müssen nicht erklärt werden)</li>
+<li>Ergebnisse - Basics, Hypothesentests etc., explorative Analysen</li>
+<li>Diskussion - Zusammenfassung, Limitationen, wiss./praktische Implikationen</li>
+</ol>
+</section>
+<section id="tabellenabbildungen" class="slide level2">
+<h2>Tabellen/Abbildungen</h2>
+<ul>
+<li>gern und viel verwenden (an Leser/Leserin denken!)</li>
+<li>keine rohen SPSS/R Outputs, sondern APA-Tabellen</li>
+<li>Abbildung auf mögliche Redundanzen prüfen (z.B. Zahlenlabels)</li>
+<li>Tab/Abb sind nummeriert, beschriftet, enthalten Fallzahl und ggf. Lesehilfe</li>
+<li>Tab/Abb, über die sie schreiben, gehören in die Arbeit, andere in den Anhang</li>
+<li>Tabellen/Abbildungen im Anhang müssen nicht groß aufbereitet werden, aber nummeriert, beschriftet, etc.</li>
+</ul>
+</section>
+<section id="häufige-fehler" class="slide level2">
+<h2>Häufige Fehler</h2>
+<ul>
+<li>zu wenig Theorie/Literatur - Suche ggf. erweitern</li>
+<li>Hypothesen “fallen vom Himmel” - Belege oder eig. Herleitung</li>
+<li>logische Brüche - passt Design/Stichprobe/Messung, etc. zueinander</li>
+<li>zuviel Arbeitsbericht (“die Rekrutierung war schwierig und die Absprachen im Team wurden nicht immer eingehalten”)</li>
+<li>unzureichende Ergebnisdarstellung nach APA (zu wenige/viele/falsche Koeffizienten in Tabelle)</li>
+<li>langweilige Diskussionsteile (triviale Selbstkritik, kaum Ausblick/Anschluss an Einleitung/Literaturteil)</li>
+<li>formale Fehler (Zitationen, Beschriftungen, Rechtschreibung/Grammatik)</li>
+</ul>
+</section>
+<section id="arbeitsteilungbenotung" class="slide level2">
+<h2>Arbeitsteilung/Benotung</h2>
+<ul>
+<li>Gruppennote ist der Standard, wenn alles nach Plan läuft</li>
+<li>formale Benennung der Verantwortlichkeiten, wird <em>nicht</em> geprüft</li>
+<li>Optionen für Einzelnoten:
+<ul>
+<li>Einzelnoten für Gruppenbericht - Bescheid geben wg. Verantwortlichkeiten</li>
+<li>Einzelarbeit - entweder kurzer Gesamtbericht oder alternative(s) Kapitel</li>
+</ul></li>
+<li>es müssen nicht alle gleich viel schreiben, auch andere Arbeiten sind wertvoll</li>
+</ul>
+</section></section>
+<section>
+<section id="fragen-kommentare-anregungen-kritik" class="title-slide slide level1 center">
+<h1>Fragen, Kommentare, Anregungen, Kritik?</h1>
+
 </section>
 <section id="literatur-1" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
