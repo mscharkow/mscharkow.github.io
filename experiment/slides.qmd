@@ -763,7 +763,7 @@ a |> left_join(vpn)
 
 # Sitzung 9 {#s9}
 
-# Sitzung 10 {#s10}
+# Sitzung 11 {#s11}
 
 # Wie war die Feldphase?
 
@@ -780,5 +780,59 @@ a |> left_join(vpn)
 - Abschlusspräsentation (max. 10 Minuten, minimale Herleitung)
 - Fragen zum Ergebnisbericht etc. mitbringen
 
+# Sitzung 12 {#s12}
+
+# Absclusspräsentationwn
+
+## Projektbericht
+
+- maximal (!) 10.000 Wörter insgesamt ohne Anhang
+- Zusammenfassung des Experiments, kein Praktikumsbericht
+- Recycling der Preregistration und Zwischenberichte erwünscht
+- Struktur und Inhalte wie ein Journal-Beitrag
+- Formalien und Regeln wissenschaftlicher Arbeit sind sehr wichtig und notenrelevant.
+
+## Struktur
+
+  1. Einleitung  - Forschungsfrage, nicht unbedingt Relevanz
+  2. Literatur + (Theorie) + Hypothesen (aus Literatur/Theorie entwickelt!)
+  3. Methode 
+    - Design
+    - Stimuli
+    - Messung
+    - Stichprobe
+    - ggf. Datenmanagement/Analyse (stat. Verfahren müssen nicht erklärt werden)
+  4. Ergebnisse  - Basics, Hypothesentests etc., explorative Analysen
+  5. Diskussion - Zusammenfassung, Limitationen, wiss./praktische Implikationen
+  
+## Tabellen/Abbildungen
+
+- gern und viel verwenden (an Leser/Leserin denken!)
+- keine rohen SPSS/R Outputs, sondern APA-Tabellen
+- Abbildung auf mögliche Redundanzen prüfen (z.B. Zahlenlabels)
+- Tab/Abb sind nummeriert, beschriftet, enthalten Fallzahl und ggf. Lesehilfe
+- Tab/Abb, über die sie schreiben, gehören in die Arbeit, andere in den Anhang
+- Tabellen/Abbildungen im Anhang müssen nicht groß aufbereitet werden, aber nummeriert, beschriftet, etc.
+
+## Häufige Fehler
+
+- zu wenig Theorie/Literatur - Suche ggf. erweitern
+- Hypothesen "fallen vom Himmel" - Belege oder eig. Herleitung
+- logische Brüche - passt Design/Stichprobe/Messung, etc. zueinander
+- zuviel Arbeitsbericht ("die Rekrutierung war schwierig und die Absprachen im Team wurden nicht immer eingehalten")
+- unzureichende Ergebnisdarstellung nach APA (zu wenige/viele/falsche Koeffizienten in Tabelle)
+- langweilige Diskussionsteile (triviale Selbstkritik, kaum Ausblick/Anschluss an Einleitung/Literaturteil)
+- formale Fehler (Zitationen, Beschriftungen, Rechtschreibung/Grammatik)
+
+## Arbeitsteilung/Benotung
+
+- Gruppennote ist der Standard, wenn alles nach Plan läuft
+- formale Benennung der Verantwortlichkeiten, wird *nicht* geprüft
+- Optionen für Einzelnoten:
+  - Einzelnoten für Gruppenbericht - Bescheid geben wg. Verantwortlichkeiten 
+  - Einzelarbeit - entweder kurzer Gesamtbericht oder alternative(s) Kapitel
+- es müssen nicht alle gleich viel schreiben, auch andere Arbeiten sind wertvoll
+
+# Fragen, Kommentare, Anregungen, Kritik?
 
 ## Literatur

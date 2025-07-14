@@ -153,7 +153,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 ## Sitzung 9 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Folien"></a> {#9}
 
-## Sitzung 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Folien"></a> {#10}
+## Sitzung 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Folien"></a> {#11}
 
 ### Themen
 
@@ -164,5 +164,13 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 ### Aufgabe zur nächsten Sitzung
 
 2. Datenauswertung und Abschlusspräsentationen
+
+## Sitzung 12 <a class="bi bi-easel-fill" href="slides.html#/s12" alt="Folien"></a> {#12}
+
+### Themen
+
+- Abschlusspräsentationen
+- Projektbericht
+- Fragen und Antworten
 
 # Literatur
