@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="de"><head>
+<html lang="en"><head>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.34">
 
   <meta name="author" content="Prof.&nbsp;Dr.&nbsp;Michael Scharkow">
   <title>Experiment: Mediennutzung und -wirkung</title>
@@ -397,19 +397,19 @@ Prof.&nbsp;Dr.&nbsp;Michael Scharkow
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>males <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="fl">1e6</span>, <span class="at">m =</span> <span class="dv">180</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
 <span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>females <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="fl">1e6</span>, <span class="at">m =</span> <span class="dv">166</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(females, males) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(females, males) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
 
 data:  females and males
-t = -990.74, df = 2e+06, p-value &lt; 2.2e-16
+t = -991.34, df = 2e+06, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -14.03807 -13.98264
+ -14.04166 -13.98625
 sample estimates:
 mean of x mean of y 
- 165.9903  180.0007 </code></pre>
+ 165.9918  180.0058 </code></pre>
 </div>
 </div>
 </section>
@@ -422,13 +422,13 @@ mean of x mean of y
 <span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">t.test</span>(m,w)<span class="sc">$</span>p.value</span>
 <span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, females, males)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.217515e-20</code></pre>
+<pre><code>[1] 2.611198e-15</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">do_t_test</span>(<span class="dv">100</span>, males, males)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.422165</code></pre>
+<pre><code>[1] 0.05223898</code></pre>
 </div>
 </div>
 </section>
@@ -437,13 +437,13 @@ mean of x mean of y
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">100</span>, males, males))</span>
-<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>results_h0 <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4500813 0.7186620 0.7419388 0.4453747 0.9146918 0.1410044</code></pre>
+<pre><code>[1] 0.5103731 0.7879636 0.7183231 0.7540907 0.3358314 0.1825833</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h0 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 63</code></pre>
+<pre><code>[1] 57</code></pre>
 </div>
 </div>
 </section>
@@ -453,11 +453,11 @@ mean of x mean of y
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>results_h1_n10 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">5</span>, females, males))</span>
 <span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>results_h1_n100 <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">do_t_test</span>(<span class="at">n =</span> <span class="dv">50</span>, females, males))</span>
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n10 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 459</code></pre>
+<pre><code>[1] 469</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(results_h1_n100 <span class="sc">&lt;=</span> .<span class="dv">05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1000</code></pre>
 </div>
@@ -1561,16 +1561,16 @@ mean of x mean of y
 Bullock, J. G., Green, D. P., &amp; Ha, S. E. (2010). Yes, but what<span>’</span>s the mechanism? (don<span>’</span>t expect an easy answer). <em>Journal of Personality and Social Psychology</em>, <em>98</em>(4), 550–558. <a href="https://doi.org/10.1037/a0018933">https://doi.org/10.1037/a0018933</a>
 </div>
 <div id="ref-koch2019" class="csl-entry" role="listitem">
-Koch, T., Peter, C., &amp; Müller, P. (2019). <em>Das Experiment in der Kommunikations- und Medienwissenschaft</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-19754-4">https://doi.org/10.1007/978-3-658-19754-4</a>
+Koch, T., Peter, C., &amp; Müller, P. (2019). <em>Das experiment in der kommunikations- und medienwissenschaft</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-19754-4">https://doi.org/10.1007/978-3-658-19754-4</a>
 </div>
 <div id="ref-larooij2025" class="csl-entry" role="listitem">
-Larooij, M., &amp; Törnberg, P. (2025). <em>Do Large Language Models Solve the Problems of Agent-Based Modeling? A Critical Review of Generative Social Simulations</em>. <a href="https://doi.org/10.48550/ARXIV.2504.03274">https://doi.org/10.48550/ARXIV.2504.03274</a>
+Larooij, M., &amp; Törnberg, P. (2025). <em>Do large language models solve the problems of agent-based modeling? A critical review of generative social simulations</em>. <a href="https://doi.org/10.48550/ARXIV.2504.03274">https://doi.org/10.48550/ARXIV.2504.03274</a>
 </div>
 <div id="ref-rijnhart2021" class="csl-entry" role="listitem">
 Rijnhart, J. J. M., Lamp, S. J., Valente, M. J., MacKinnon, D. P., Twisk, J. W. R., &amp; Heymans, M. W. (2021). Mediation analysis methods used in observational research: a scoping review and recommendations. <em>BMC Medical Research Methodology</em>, <em>21</em>(1). <a href="https://doi.org/10.1186/s12874-021-01426-3">https://doi.org/10.1186/s12874-021-01426-3</a>
 </div>
 <div id="ref-waldherr2019" class="csl-entry" role="listitem">
-Waldherr, A., &amp; Wettstein, M. (2019). Bridging the Gaps: Using Agent-Based Modeling to Reconcile Data and Theory in Computational Communication Science. <em>International Journal of Communication</em>, <em>13</em>(00), 24. <a href="https://ijoc.org/index.php/ijoc/article/view/10588">https://ijoc.org/index.php/ijoc/article/view/10588</a>
+Waldherr, A., &amp; Wettstein, M. (2019). Bridging the gaps: Using agent-based modeling to reconcile data and theory in computational communication science. <em>International Journal of Communication</em>, <em>13</em>(00), 24. <a href="https://ijoc.org/index.php/ijoc/article/view/10588">https://ijoc.org/index.php/ijoc/article/view/10588</a>
 </div>
 <div id="ref-wang2022" class="csl-entry" role="listitem">
 Wang, J., &amp; Sundar, S. S. (2022). Liking versus commenting on online news: effects of expression affordances on political attitudes. <em>Journal of Computer-Mediated Communication</em>, <em>27</em>(6). <a href="https://doi.org/10.1093/jcmc/zmac018">https://doi.org/10.1093/jcmc/zmac018</a>
@@ -1852,12 +1852,12 @@ Wang, J., &amp; Sundar, S. S. (2022). Liking versus commenting on online news: e
           // flash "checked"
           button.classList.add('code-copy-button-checked');
           var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Kopiert");
+          button.setAttribute("title", "Copied!");
           let tooltip;
           if (window.bootstrap) {
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Kopiert");
+            button.setAttribute("data-bs-title", "Copied!");
             tooltip = new bootstrap.Tooltip(button, 
               { trigger: "manual", 
                 customClass: "code-copy-button-tooltip",
@@ -1899,7 +1899,7 @@ Wang, J., &amp; Sundar, S. S. (2022). Liking versus commenting on online news: e
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/mscharkow\.github\.io\/");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

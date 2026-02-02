@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-2ea1a577d2009bdda2d81086d00480ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -56,23 +56,23 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Keine Treffer",
-    "search-matching-documents-text": "Treffer",
-    "search-copy-link-title": "Link in die Suche kopieren",
-    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
-    "search-more-match-text": "weitere Treffer in diesem Dokument",
-    "search-more-matches-text": "weitere Treffer in diesem Dokument",
-    "search-clear-button-title": "Zurücksetzen",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Abbrechen",
-    "search-submit-button-title": "Abschicken",
-    "search-label": "Suchen"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-teaching .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -85,7 +85,35 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-teaching'] = new List('listing-teaching', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-research .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-research'] = new List('listing-research', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -166,23 +194,88 @@ window.Quarto = {
 <section id="about" class="level2">
 <h2 class="anchored" data-anchor-id="about">About</h2>
 <p><img src="ms.jpg" class="img-fluid" style="float:right;padding:5px;border: 1px solid #ccc;width:200px; margin-left:2em;"></p>
-<p>I am professor for <a href="https://ccs.ifp.uni-mainz.de">Computational Communication Science</a> at the <a href="https://www.ifp.uni-mainz.de">Department of Communication</a>, <a href="https://www.uni-mainz.de">Johannes Gutenberg University Mainz</a>. My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling.</p>
+<p>I am a professor of <a href="https://ccs.ifp.uni-mainz.de">Computational Communication Science</a> at the <a href="https://www.ifp.uni-mainz.de">Department of Communication</a>, <a href="https://www.uni-mainz.de">Johannes Gutenberg University Mainz</a>. My main research interests are online communication, media use and effects, and quantitative methods, especially automatic data collection and statistical modeling.</p>
+<p><a href="./cv">Curriculum Vitae</a> (<a href="./cv/cv-mscharkow.pdf">PDF</a>) | <a href="https://scholar.google.com/citations?user=MKN8lkMAAAAJ&amp;hl=en">Google Scholar</a></p>
 <section id="contact" class="level3">
 <h3 class="anchored" data-anchor-id="contact">Contact</h3>
 <p>Johannes-Gutenberg University Mainz <br> Department of Communication <br> Jakob-Welder-Weg 12 <br> 55128 Mainz <br> Germany</p>
 <p><a href="mailto:scharkow@uni-mainz.de" class="email">scharkow@uni-mainz.de</a></p>
 </section>
 </section>
+<section id="research" class="level2">
+<h2 class="anchored" data-anchor-id="research">Research</h2>
+<div id="listing-research" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1769986800000" data-listing-file-modified-sort="1757964437543" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<a href="./publications/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./publications/pub_title.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<div class="card-subtitle listing-subtitle">
+Publications
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1769986800000" data-listing-file-modified-sort="1757964420749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2217">
+<a href="./presentations/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./presentations/pres_title.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<div class="card-subtitle listing-subtitle">
+Presentations
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
 <section id="teaching" class="level2">
 <h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div id="listing-teaching" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1743465600000" data-listing-file-modified-sort="1752487571599" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="276">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1759269600000" data-listing-file-modified-sort="1770052119848" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="591">
+<a href="./inhaltsanalyse/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="inhaltsanalyse/images/ia_title.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+BA Inhaltsanalyse
+</h5>
+<div class="card-subtitle listing-subtitle">
+Analyse öffentlicher Kommunikation
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+10/2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1759269600000" data-listing-file-modified-sort="1760356044266" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
+<a href="./ma-datenanalyse/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="ma-datenanalyse/images/ma_r_title.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+MA Fortgeschrittene Datenanalyse mit R
+</h5>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+10/2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-date-sort="1743458400000" data-listing-file-modified-sort="1751984365652" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="276">
 <a href="./analyseverfahren/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="analyseverfahren/images/aa_title.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -198,7 +291,7 @@ BA Anwendungsorientierte Analyseverfahren
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1743465600000" data-listing-file-modified-sort="1752487571635" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
+<div class="g-col-1" data-index="3" data-listing-date-sort="1743458400000" data-listing-file-modified-sort="1752469127055" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
 <a href="./experiment/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="experiment/images/exp_title.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -217,7 +310,7 @@ Mediennutzung und -wirkung
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1743465600000" data-listing-file-modified-sort="1752487571628" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="522">
+<div class="g-col-1" data-index="4" data-listing-date-sort="1743458400000" data-listing-file-modified-sort="1752047294885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="522">
 <a href="./ccs/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="ccs/images/ccs_title.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -233,44 +326,15 @@ MA Computational Communication Science
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1727740800000" data-listing-file-modified-sort="1752487571641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="471">
-<a href="./inhaltsanalyse/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="inhaltsanalyse/images/ia_title.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-BA Inhaltsanalyse
-</h5>
-<div class="card-subtitle listing-subtitle">
-Analyse öffentlicher Kommunikation
 </div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-10/2024
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1727740800000" data-listing-file-modified-sort="1752487571642" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="90">
-<a href="./ma-datenanalyse/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="ma-datenanalyse/images/ma_r_title.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-MA Fortgeschrittene Datenanalyse mit R
-</h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-10/2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">Keine Treffer</div>
-</div></main> <!-- /main -->
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -296,12 +360,12 @@ MA Fortgeschrittene Datenanalyse mit R
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Kopiert");
+      button.setAttribute("title", "Copied!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Kopiert");
+        button.setAttribute("data-bs-title", "Copied!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -343,7 +407,7 @@ MA Fortgeschrittene Datenanalyse mit R
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/mscharkow\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -677,7 +741,7 @@ MA Fortgeschrittene Datenanalyse mit R
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><a href=".">home</a></p>
+<p><a href=".">Home</a> | This site does not collect any tracking or log data.</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
