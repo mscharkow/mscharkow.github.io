@@ -637,8 +637,8 @@ Es soll Sexismus in Social Media Posts dichotom codiert werden (ja/nein).
 <div class="cell-output cell-output-stdout">
 <pre><code>[
     {
-        "quote": "Keys, scumbag. It's the universal symbol for keys.",
-        "author": "Mike Ehrmantraut"
+        "quote": "La familia es todo.",
+        "author": "Tio Salamanca"
     }
 ]
  </code></pre>
@@ -880,8 +880,8 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 ```
 [
     {
-        "quote": "Gatorade me, bitch!",
-        "author": "Jesse Pinkman"
+        "quote": "MILFs? What the hell is a MILF?",
+        "author": "Skyler White"
     }
 ]
  
@@ -1453,21 +1453,25 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <section id="statistisches-modell" class="slide level2">
 <h2>Statistisches Modell</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>my_model <span class="ot">=</span> <span class="fu">lm</span>(hp <span class="sc">~</span> <span class="fu">factor</span>(cyl), <span class="at">data =</span> mtcars)</span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>report<span class="sc">::</span><span class="fu">report_table</span>(my_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="kable-table">
 <table class="caption-top">
 <colgroup>
-<col style="width: 2%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 4%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 9%">
+<col style="width: 1%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 3%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 10%">
 <col style="width: 14%">
-<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 7%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1481,6 +1485,8 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <th style="text-align: right;">df_error</th>
 <th style="text-align: right;">p</th>
 <th style="text-align: right;">Std_Coefficient</th>
+<th style="text-align: right;">Std_Coefficient_CI_low</th>
+<th style="text-align: right;">Std_Coefficient_CI_high</th>
 <th style="text-align: right;">Fit</th>
 </tr>
 </thead>
@@ -1496,6 +1502,8 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">0.0000001</td>
 <td style="text-align: right;">-0.9341957</td>
+<td style="text-align: right;">-1.2752368</td>
+<td style="text-align: right;">-0.5931546</td>
 <td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
@@ -1508,6 +1516,8 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <td style="text-align: right;">2.162695</td>
 <td style="text-align: right;">29</td>
 <td style="text-align: right;">0.0389489</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 </tr>
@@ -1523,6 +1533,8 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <td style="text-align: right;">0.0000000</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">4</td>
@@ -1535,6 +1547,8 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">0.5782919</td>
+<td style="text-align: right;">0.0314095</td>
+<td style="text-align: right;">1.1251742</td>
 <td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
@@ -1548,6 +1562,8 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">1.8461585</td>
+<td style="text-align: right;">1.3904232</td>
+<td style="text-align: right;">2.3018938</td>
 <td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
@@ -1562,8 +1578,25 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">AIC</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">328.3299068</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">8</td>
 <td style="text-align: left;">AICc</td>
 <td style="text-align: right;">NA</td>
@@ -1574,11 +1607,30 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 <td style="text-align: right;">329.8113882</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">BIC</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">334.1928504</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">10</td>
 <td style="text-align: left;">R2</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
@@ -1600,11 +1652,15 @@ Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 <td style="text-align: right;">0.6941406</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">13</td>
 <td style="text-align: left;">Sigma</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
@@ -1638,28 +1694,29 @@ Type: response</code></pre>
 <section id="visualisierung-i-deskriptiv" class="slide level2">
 <h2>Visualisierung I: deskriptiv</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> <span class="fu">group_by</span>(cyl) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">mean_hp =</span> <span class="fu">mean</span>(hp)) <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(cyl), <span class="at">y =</span> mean_hp))<span class="sc">+</span> <span class="co"># cyl als kategoriell</span></span>
-<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Zylinder"</span>, <span class="at">y =</span> <span class="st">"Leistung in PS"</span>, <span class="at">caption =</span> <span class="st">"n = 32"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> <span class="fu">group_by</span>(cyl) <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">mean_hp =</span> <span class="fu">mean</span>(hp)) <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(cyl), <span class="at">y =</span> mean_hp))<span class="sc">+</span> <span class="co"># cyl als kategoriell</span></span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Zylinder"</span>, <span class="at">y =</span> <span class="st">"Leistung in PS"</span>, <span class="at">caption =</span> <span class="st">"n = 32"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
 <section id="visualisierung-ii-mit-ci" class="slide level2">
 <h2>Visualisierung II: mit CI</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(cyl), <span class="at">y =</span> hp))<span class="sc">+</span></span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data =</span> mean_cl_boot)<span class="sc">+</span></span>
-<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Zylinder"</span>, <span class="at">y =</span> <span class="st">"Leistung in PS"</span>, <span class="at">caption =</span> <span class="st">"n = 32"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(cyl), <span class="at">y =</span> hp))<span class="sc">+</span></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data =</span> mean_cl_boot)<span class="sc">+</span></span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Zylinder"</span>, <span class="at">y =</span> <span class="st">"Leistung in PS"</span>, <span class="at">caption =</span> <span class="st">"n = 32"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
 <section id="visualisierung-iii-modellbasiert" class="slide level2">
 <h2>Visualisierung III: modellbasiert</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>marginaleffects<span class="sc">::</span><span class="fu">avg_predictions</span>(my_model, <span class="at">by =</span> <span class="st">"cyl"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(cyl), <span class="at">y =</span> estimate, <span class="at">ymin =</span> conf.low, <span class="at">ymax =</span> conf.high))<span class="sc">+</span></span>
-<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>()<span class="sc">+</span><span class="fu">theme_minimal</span>()<span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Zylinder"</span>, <span class="at">y =</span> <span class="st">"Leistung in PS"</span>, <span class="at">caption =</span> <span class="st">"n = 32"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>marginaleffects<span class="sc">::</span><span class="fu">avg_predictions</span>(my_model, <span class="at">by =</span> <span class="st">"cyl"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(cyl), <span class="at">y =</span> estimate, <span class="at">ymin =</span> conf.low, <span class="at">ymax =</span> conf.high))<span class="sc">+</span></span>
+<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>()<span class="sc">+</span><span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb8-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Zylinder"</span>, <span class="at">y =</span> <span class="st">"Leistung in PS"</span>, <span class="at">caption =</span> <span class="st">"n = 32"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
@@ -1747,7 +1804,7 @@ Type: response</code></pre>
 <section>
 <section id="danke-fürs-mitmachen" class="title-slide slide level1 center">
 <h1>Danke fürs Mitmachen!</h1>
-<p>````</p>
+
 </section>
 <section id="literatur-1" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>

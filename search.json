@@ -1012,7 +1012,7 @@
     "href": "inhaltsanalyse/slides.html#beispiel-json",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Beispiel JSON",
-    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"Keys, scumbag. It's the universal symbol for keys.\",\n        \"author\": \"Mike Ehrmantraut\"\n    }\n]"
+    "text": "Beispiel JSON\nhttps://api.breakingbadquotes.xyz/v1/quotes\n\n\n[\n    {\n        \"quote\": \"La familia es todo.\",\n        \"author\": \"Tio Salamanca\"\n    }\n]"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#workflow",
@@ -1341,7 +1341,7 @@
     "href": "inhaltsanalyse/slides.html#statistisches-modell",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Statistisches Modell",
-    "text": "Statistisches Modell\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\nCI\nCI_low\nCI_high\nt\ndf_error\np\nStd_Coefficient\nFit\n\n\n\n\n1\n(Intercept)\n82.63636\n0.95\n59.253610\n106.01912\n7.227991\n29\n0.0000001\n-0.9341957\nNA\n\n\n2\ncyl [6]\n39.64935\n0.95\n2.153528\n77.14517\n2.162695\n29\n0.0389489\nNA\nNA\n\n\n3\ncyl [8]\n126.57792\n0.95\n95.331403\n157.82444\n8.285112\n29\n0.0000000\nNA\nNA\n\n\n4\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n0.5782919\nNA\n\n\n5\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n1.8461585\nNA\n\n\n6\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n8\nAICc\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n329.8113882\n\n\n10\nR2\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n0.7138734\n\n\n11\nR2 (adj.)\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n0.6941406\n\n\n13\nSigma\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n37.9183929"
+    "text": "Statistisches Modell\n\nmy_model = lm(hp ~ factor(cyl), data = mtcars)\nreport::report_table(my_model)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\nCI\nCI_low\nCI_high\nt\ndf_error\np\nStd_Coefficient\nStd_Coefficient_CI_low\nStd_Coefficient_CI_high\nFit\n\n\n\n\n1\n(Intercept)\n82.63636\n0.95\n59.253610\n106.01912\n7.227991\n29\n0.0000001\n-0.9341957\n-1.2752368\n-0.5931546\nNA\n\n\n2\ncyl [6]\n39.64935\n0.95\n2.153528\n77.14517\n2.162695\n29\n0.0389489\nNA\nNA\nNA\nNA\n\n\n3\ncyl [8]\n126.57792\n0.95\n95.331403\n157.82444\n8.285112\n29\n0.0000000\nNA\nNA\nNA\nNA\n\n\n4\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n0.5782919\n0.0314095\n1.1251742\nNA\n\n\n5\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n1.8461585\n1.3904232\n2.3018938\nNA\n\n\n6\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n7\nAIC\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n328.3299068\n\n\n8\nAICc\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n329.8113882\n\n\n9\nBIC\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n334.1928504\n\n\n10\nR2\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n0.7138734\n\n\n11\nR2 (adj.)\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n0.6941406\n\n\n13\nSigma\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n37.9183929"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#modellvorhersagen",
@@ -1362,14 +1362,14 @@
     "href": "inhaltsanalyse/slides.html#visualisierung-ii-mit-ci",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Visualisierung II: mit CI",
-    "text": "Visualisierung II: mit CI\n\nmtcars |&gt; \n  ggplot(aes(x = factor(cyl), y = hp))+\n  stat_summary(fun.data = mean_cl_boot)+\n  theme_minimal()+ labs(x = \"Zylinder\", y = \"Leistung in PS\", caption = \"n = 32\")"
+    "text": "Visualisierung II: mit CI\n\nmtcars |&gt; \n  ggplot(aes(x = factor(cyl), y = hp))+\n  stat_summary(fun.data = mean_cl_boot)+\n  theme_minimal()+labs(x = \"Zylinder\", y = \"Leistung in PS\", caption = \"n = 32\")"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#visualisierung-iii-modellbasiert",
     "href": "inhaltsanalyse/slides.html#visualisierung-iii-modellbasiert",
     "title": "Inhaltsanalyse: Inhalte öffentlicher Kommunikation",
     "section": "Visualisierung III: modellbasiert",
-    "text": "Visualisierung III: modellbasiert\n\nmarginaleffects::avg_predictions(my_model, by = \"cyl\") |&gt; \n  ggplot(aes(x = factor(cyl), y = estimate, ymin = conf.low, ymax = conf.high))+\n  geom_pointrange()+theme_minimal()+ labs(x = \"Zylinder\", y = \"Leistung in PS\", caption = \"n = 32\")"
+    "text": "Visualisierung III: modellbasiert\n\nmarginaleffects::avg_predictions(my_model, by = \"cyl\") |&gt; \n  ggplot(aes(x = factor(cyl), y = estimate, ymin = conf.low, ymax = conf.high))+\n  geom_pointrange()+theme_minimal()+\n  labs(x = \"Zylinder\", y = \"Leistung in PS\", caption = \"n = 32\")"
   },
   {
     "objectID": "inhaltsanalyse/slides.html#deskriptiv-vs.-modellbasierte-visualisierung",
