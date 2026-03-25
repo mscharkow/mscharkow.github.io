@@ -1,0 +1,41 @@
+
+## Journal articles
+
+```{r, include = F}
+  library(tidyverse);library(bib2df);library(jsonlite);library(glue); library(RefManageR)
+#bib = bib2df("scharkow.bib",merge_lines = T) %>% mutate(YEAR = as.numeric(str_match(BIBTEXKEY, "\\d+"))) %>% arrange(-YEAR) %>% left_join(tibble(pdf = list.files("pubs", pattern = "*.pdf")) %>% mutate(BIBTEXKEY = str_replace_all(pdf, ".pdf",''))) %>% mutate(pdf_url = ifelse(is.na(pdf), '', paste0("| [PDF](/pubs/", pdf, ")")))
+#bib %>% filter(CATEGORY=="ARTICLE") %>% glue::glue_data("@{BIBTEXKEY} {pdf_url} \n\n", .na = '')
+RefManageR::BibOptions(check.entries = T, style = "markdown", 
+                       bib.style = "authoryear", sorting = "ydnt",
+                       max.names=99)
+#bib = RefManageR::ReadBib("scharkow.bib", .Encoding = "UTF-8", check = 'warn') |>
+
+file.remove(here::here("publications/zotero.bib"))
+bib = RefManageR::ReadZotero("6614867", temp.file = here::here("publications/zotero.bib"), delete.file = F, 
+                             .params = list(collection = "MAPQDAYJ", key = "CfOeDkFvIIZSBlAFM4PoqduR")) |> 
+  as.data.frame() |> rownames_to_column("key") |> 
+  as_tibble() |> 
+  mutate(year = as.numeric(year)) |> 
+  arrange(-year, key) 
+```
+
+
+```{r, results="asis",echo=F, warning=F, message=F}
+bib |> filter(bibtype %in% c("Article", "inproceedings")) |> pull(key) %>% paste0("@", ., "\n\n") |> cat("\n\n")
+```
+
+
+
+## Book chapters
+
+```{r, results="asis",echo=F, warning=F, message=F}
+bib |> filter(bibtype=="InCollection") |> pull(key) %>% paste0("@", ., "\n\n") |> cat("\n\n")
+
+```
+
+## Monograph
+
+```{r, results="asis",echo=F, warning=F, message=F}
+bib |> filter(bibtype=="Book") |> pull(key) %>% paste0("@", ., "\n\n") |> cat("\n\n")
+
+```

@@ -2,14 +2,11 @@
 title: "Anwendungsorientierte Analyseverfahren"
 author: "Prof. Dr. Michael Scharkow"
 date: today
-date-format: "[Sommersemester] 2025"
+date-format: "[Sommersemester] 2026"
 format: minimalist-revealjs
 df-print: kable
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
-execute: 
-  cache: false
-embed-resources: true
 ---
 
 ```{r child = '_common.qmd'}
@@ -1537,7 +1534,7 @@ correlation::correlation(m1$model) |> summary()
 
 ::: {.column width="45%"}
 ```{r, echo = F}
-performance::check_model(m1, check = c("vif"), panel = F) |> plot()
+#performance::check_model(m1, check = c("vif"), panel = F) |> plot()
 ```
 :::
 ::::::

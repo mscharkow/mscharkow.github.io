@@ -2,7 +2,7 @@
 title: "Computational Communication Science"
 author: "Prof. Dr. Michael Scharkow"
 date: today
-date-format: "[Sommersemester] 2025"
+date-format: "[Sommersemester] 2026"
 format: minimalist-revealjs
 df-print: kable
 bibliography: references.bib
@@ -364,7 +364,7 @@ Methods for data collection (using R), from simplest to most complex:
 -   **Drawbacks:** Requires understanding of API documentation; rate limits and authentication (API keys) are common; APIs can change or be deprecated.
 
 ```{r, echo = F, results='markup'}
-a = read_lines("https://api.breakingbadquotes.xyz/v1/quotes/2") 
+a = '[{"quote":"If that’s true, if you don’t know who I am, then maybe your best course… would be to tread lightly.","author":"Walter White"},{"quote":"Sometimes it just feels better not to talk. At All. About Anything. To Anyone.","author":"Walter White"}]'
 a |> jsonlite::prettify()
 ```
 

@@ -1,0 +1,118 @@
+---
+title: "Inhalt und Form des Mainzer <br/> CCS Methoden-Tracks"
+subtitle: "CCR Day 2025"
+author: "Michael Scharkow | Institut für Publizistik | JGU Mainz"
+date: today
+date-format: iso
+#date-format: "[Sommersemester] 2025"
+format: minimalist-revealjs
+df-print: kable
+#bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+lang: en
+embed-resources: true
+---
+
+
+## Ausgangslage: Methoden im BA Publizistik
+
+### Statistik 
+  - VL Methoden der Publizistikwissenschaft (2 SWS)
+  - VL Statistik (2+2 SWS)  
+  - S Datenanalyse mit R (2 SWS)  
+  - VL Anwendungsorientierte Analyseverfahren mit R (2 SWS)  
+
+### Methodenseminare
+  - HS Inhaltsanalyse (4 SWS)  
+  - HS Befragung (4 SWS)  
+  - HS Experiment (4 SWS)
+
+
+## Aufgabe
+
+- Computational Methods auch im BA (eigenes Modul im MA)
+- keine zusätzlichen Methodenveranstaltungen
+- kein freies Deputat für Zusatzangebote
+
+### Lösungsvorschlag: CCS Track
+
+
+## CCS Track
+
+- pro Methodenseminar min. 1 Parallelkurs mit CCS-Inhalten
+- Anreize (neben Methodeninteresse 🙄):
+  - Priorität in der Kurswahl (sonst ggf. Losverfahren)
+  - Zertifikat nach 3 besuchten Kursen (nicht Transcript of Records)
+- Computational Methods nach Möglichkeit integriert in Kursinhalte
+
+## Inhalte
+
+### Inhaltsanalyse
+
+- automatische Datenerhebung (Web Scraping, APIs, R-Pakete, etc.)
+- ~~Transformer Modelle, Embeddings, Hugging Face API~~, Zero-Shot mit LLM
+- Bild- und Videoverarbeitung, Transkription, Zero-Shot mit multimodalen LLM
+
+### Befragung
+
+- Digital Trace Data, Data Donations, Gesis APP Kit, Experience Sampling  
+- Sosci Survey API, Datenmanagement, Data Linkage
+
+### Experiment
+
+- Simulation, Agent-based und generative Modeling, Poweranalyse
+- Stimulus-Design mit LLM und Diffusion Models
+
+## Lehrformen
+
+- wahlweise Inverted Classroom oder in-class Übungen 
+- Website mit Replication Code und (minimalem) Begleittext
+- kleine Hausaufgaben mit Coding Übungen (unbenotet, aber Pflicht)
+
+<https://stats.ifp.uni-mainz.de/ba-ccs-track/>
+
+## Infrastruktur
+
+### Zuhause
+- Quarto-Websites für alle praktischen Methodenkurse (MA und BA)
+- knitr::purl -> Replication-R-Skripte + Daten -> ZIP-Datei
+
+### RStudio-Server
+- stock `rocker/tidyverse` container + bash Skript für:
+- Pakete nachinstallieren, User anlegen, ZIP-Files für alle User extrahieren
+- API-Keys in `.Renviron` hinterlegen
+
+## Software
+
+- ausschließlich R + `tidyverse` und minimale zusätzliche Pakete
+- **kein Python**, kein CUDA, keine lokalen Modelle
+- Python-basierte CLI-Tools wie `yt-dlp`, `whisper-ctranslate2`, `vcsi`
+- ~~eigene minimale R-Pakete `hfapi`, {tidyllm}, {rollama}~~
+- {ellmer} mit ~~selbst-~~ JGU-gehosteten Modellen (OpenAI API)
+
+## Fazit Inhalte
+
+  - (mäßig) positives Feedback, wenig Beschwerden, wenige Inspirierte
+  - Integration in Seminaren unterschiedlich erfolgreich (IA am leichtesten)
+  - selbst in 4 SWS nicht genug Zeit für konzeptionelle Grundlagen + Praxis
+  - Problem: inverted  vs. non-inverted classroom vs. Hausaufgaben
+  - relativ selten CCS-Projektarbeiten, aber zumindest Recognition+Recall
+  - viel Unterstützung nötig, vor allem bei Transfer in eigene Projekte
+  
+  
+## Fazit Technik
+  - Quarto-Website + Replication Code + RStudio Server läuft hervorragend
+  - regelmäßige Updates der LLM-bezogenen R-Beispiele nötig
+  - alles außer stock R und cran-Pakete erhöht den Betreuungsaufwand massiv
+  - JGU-gehostete LLM als (hoffentlich) langfristige Erleichterung für uns
+  - obwohl alle bereits Statistik mit R hatten, wenig Code Literacy
+  - Vibe Coding mit LLM als massives Problem
+  
+## Infos
+
+- Michael Scharkow <scharkow@uni-mainz.de>
+- Yannick Winkler, Felix Dietrich, Alicia Ernst, Anna Schnauber-Stockmann
+
+- Quarto Kurs-Websites: <https://stats.ifp.uni-mainz.de/>
+- Beispiel Quellcode für Website: <https://github.com/ccsmainz/ma-datenanalyse>
+

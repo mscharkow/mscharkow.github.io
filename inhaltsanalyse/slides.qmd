@@ -2,7 +2,7 @@
 title: "Inhaltsanalyse: Inhalte öffentlicher Kommunikation"
 author: "Prof. Dr. Michael Scharkow"
 date: today
-date-format: "[Wintersemester] 2024/25"
+date-format: "[Wintersemester] 2025/26"
 format: minimalist-revealjs
 df-print: kable
 bibliography: references.bib
@@ -14,7 +14,6 @@ csl: https://www.zotero.org/styles/apa
 ```{r}
 library(tidyverse)
 ```
-
 
 ## Lernziele
 
@@ -31,128 +30,58 @@ library(tidyverse)
 -   relevante Skills in vielen Jobs außerhalb der Wissenschaft (Data Science, Journalismus, Marktforschung)
 -   Ziel ist vor allem Verständnis der Grundlagen und Dinge ausprobieren
 
+## Inhalt
 
-## Inhalt 
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 15%">
-<col style="width: 73%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Sitzung</th>
-<th style="text-align: left;">Datum</th>
-<th style="text-align: left;">Thema</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">25.10.2024</td>
-<td style="text-align: left;"><a href="#1">Einführung und Grundlagen</a><a></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">08.11.2024</td>
-<td style="text-align: left;"><a href="#2">CCS: Inhaltsanalyse mit LLM</a><a></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">15.11.2024</td>
-<td style="text-align: left;"><a href="#3">Themenwahl und Forschungsfragen</a><a></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">22.11.2024</td>
-<td style="text-align: left;"><a href="#4">Studiendesign und Stichprobe*</a><a></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">29.11.2024</td>
-<td style="text-align: left;"><a href="#5">CCS: Datenerhebung</a><a></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">06.12.2024</td>
-<td style="text-align: left;"><a href="#6">Kategorien und Codierung*</a><a></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">13.12.2024</td>
-<td style="text-align: left;"><a href="#7">CCS: Reli-Test und Validierung*</a><a></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">20.12.2024</td>
-<td style="text-align: left;"><a href="#8">Codebuch-Finalisierung (Sprechstunde)</a><a></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">10.01.2025</td>
-<td style="text-align: left;"><a href="#9">Feldphase (Sprechstunde)</a><a></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">17.01.2025</td>
-<td style="text-align: left;"><a href="#10">Datenanalyse und -visualisierung*</a><a></a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">24.01.2025</td>
-<td style="text-align: left;"><a href="#11">Ergebnisaufbereitung</a><a></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">31.01.2025</td>
-<td style="text-align: left;"><a href="#12">Abschluss</a><a></a></td>
-</tr>
-</tbody>
-</table>
-
+::: {style="font-size:2rem;"}
+```{r}
+source(here::here("funcs.R"))
+start_date = as.Date("2025-10-28")
+end_date = as.Date("2026-02-10")
+no_classes = as.Date(c( "2025-12-24", "2025-12-30", "2025-12-23"))
+topics = "Einführung und Grundlagen, Themenwahl und Forschungsfragen, CCS: Datenerhebung, Studiendesign und Stichprobe*, Kategorien und Codierung*, CCS: Inhaltsanalyse mit LLM, Codebuch-Finalisierung*, Reliabilitätstest, Feldphase (keine Sitzung),  Datenaufbereitung und -analyse*,  CCS: Zero-Shot Codierung I, CCS: Zero-Shot Codierung II, Visualisierung und Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish() 
+make_schedule(start_date, end_date, no_classes, topics) |> 
+  mutate(Datum = strftime(Datum, "%d.%m.%Y")) |> kableExtra::kable(format.args = )
+```
+:::
 
 ## Literatur
 
-![](https://images-na.ssl-images-amazon.com/images/I/51+sDU+LbxL._SX347_BO1,204,203,200_.jpg){height="600px" align="right"}
-![](https://media.springernature.com/full/springer-static/cover-hires/book/978-3-658-36179-2?as=webp){height="600px" align="right"}
-![](https://pictures.abebooks.com/isbn/9781506395661-us.jpg){height="600px" align="right"}
-
+![](https://images-na.ssl-images-amazon.com/images/I/51+sDU+LbxL._SX347_BO1,204,203,200_.jpg){height="600px" align="right"} ![](https://media.springernature.com/full/springer-static/cover-hires/book/978-3-658-36179-2?as=webp){height="600px" align="right"} ![](https://pictures.abebooks.com/isbn/9781506395661-us.jpg){height="600px" align="right"}
 
 ## Leistungen
+
 ### Aktive Teilnahme
 
-- aktive Mitarbeit in einer Arbeitsgruppe
-- 1 Gruppenbericht zum Stand der Arbeit
-- 3 Hausaufgaben zu CCS-Sitzungen 
+-   aktive Mitarbeit in einer Arbeitsgruppe
+-   1 Gruppenbericht zum Stand der Arbeit
+-   3 Hausaufgaben zu CCS-Sitzungen
 
 ### Prüfungsleistung
 
-- Projektbericht als Gruppenhausarbeit
+-   Projektbericht als Gruppenhausarbeit
 
 ## Studentische Arbeitsgruppen
 
--   i.d.R. 4 Studierende pro Gruppe (= max. 5 Gruppen im Seminar)
+-   i.d.R. 4-5 Studierende pro Gruppe (= max. 5 Gruppen im Seminar)
 -   ‚Learning by doing' in der AG
 -   von anderen AGs lernen über andere Methoden, Themen und Arbeitsweisen
 -   Lernen von Feedback zur eigenen Arbeit und der Arbeit der anderen AGs
 
 ## Gruppenberichte
 
-- jedes Gruppenmitglied ist federführend für einen Bericht
-- Protokollierung des Diskussionsprozesse in der AG seit dem letzen Bericht
-- Vorbereitung einer zusammenfassenden Kurzpräsentation (5 min) mit 2-3 Folien
-- Upload der Folien spätestens Fr, 8h in Moodle
-- alle anderen geben Feedback für eigene und andere AG
-
+-   jedes Gruppenmitglied ist federführend für einen Bericht
+-   Protokollierung des Diskussionsprozesse in der AG seit dem letzen Bericht
+-   Vorbereitung einer zusammenfassenden Kurzpräsentation (5 min) mit 2-3 Folien
+-   Upload der Folien spätestens Di, 8h in Moodle
+-   alle anderen geben Feedback für eigene und andere AG
 
 ## Sitzungen zu CCS
 
 -   Inverted Classroom, d.h. verpflichtende Vorbereitung <br/><https://stats.ifp.uni-mainz.de/ba-ccs-track/>
--   Hausaufgaben für jede CCS-Sitzung, Abgabe jeweils Do, 12h in Moodle
+-   Hausaufgaben für jede CCS-Sitzung, Abgabe jeweils Mo, 12h in Moodle
 -   eigenes Notebook zu den praktischen Sitzungen mitbringen
 -   wir verwenden R und RStudio, <https://rstudio.ifp.uni-mainz.de>
 -   gern paarweise arbeiten, das hilft in der Sitzung und macht mehr Spaß
-
 
 ## Hausarbeiten
 
@@ -162,18 +91,7 @@ library(tidyverse)
 -   es muss nichts "rauskommen", außer dass sie etwas gelernt haben
 -   Formalien und Regeln wissenschaftlicher Arbeit sind wichtig und notenrelevant
 
-
 # Was ist Inhaltsanalyse?
-
-
-## Aufgabe
-
-<https://sosci.zdv.uni-mainz.de/ia_btw2021/>
- 
-  1. Codieren Sie politische TikTok-Inhalte zunächst alleine in verschiedenen Formaten.
-  2. Was ist Ihnen beim Codieren aufgefallen? Was war einfach, was schwierig?
-
-
 
 ## Definitionen
 
@@ -191,6 +109,13 @@ library(tidyverse)
 
 Diskutieren Sie in Paaren, wie nach @benoit2009 politische Positionen zu Aussagen werden, und welche Inferenzen wir durch Analysen dieser Aussagen ziehen können.
 
+## Hausaufgaben
+
+-   Bilden Sie Arbeitsgruppen (à 4-5 Personen) und entwickeln Sie erste Themenideen (ca. 1-3 Themen).
+-   Bringen Sie die Themenideen als kurze Pitches samt Forschungsfrage(n) mit.
+
+````{=html}
+<!--
 
 # Manuelle und automatische Codierung
 
@@ -215,13 +140,7 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 ```
 
 
-## Zero-Shot-Codierung
 
-- Large Language Models (umgangssprachlich oft KI) können verschiedene sprachliche Aufgaben "lösen", u.a. auch inhaltsanalytische
-- da die Modelle dafür nicht extra angepasst werden müssen, spricht man von Zero-Shot-Codierung
-- im Gegensatz zu älteren automatischen Verfahren braucht es (fast) keine Umstellung gegenüber manuellem Codieren
-- zahlreiche aktuelle Studien untersuchen, ob man manuelle Codierung durch LLM-basierte ersetzen kann
-- ob und wie gut man eigene Kategorien mit LLM codieren kann, muss man ausprobieren (und machen wir)
 
 
 ## Hausaufgaben
@@ -229,6 +148,8 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 - <https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html> selbständig durcharbeiten
 - Hausaufgabe (Abgabe Do, 12h, Moodle)
 - Lektüre: @tornberg2023
+
+
 
 # Fragen?
 
@@ -239,46 +160,6 @@ readr::read_csv2("https://raw.githubusercontent.com/bachl/raw_data/refs/heads/ma
 - Wie hat unser Beispielcode funktioniert?
 - Wie haben Sie die Aufgaben gelöst?
 - Wie kann man größere Mengen an Codierungen automatisch durchführen?
-
-## Wie funktioniert ein Neuronales Netz?
-
-![https://medium.com/data-science-365/overview-of-a-neural-networks-learning-process-61690a502fa](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ZXAOUqmlyECgfVa81Sr6Ew.png)
-
-## Was sind Transformer Modelle
-
-{{< video https://www.youtube.com/watch?v=SZorAJ4I-sA&t=51s   height="70%" width="70%" >}}
-
-Explainer: <https://ig.ft.com/generative-ai/>
-
-  
-## Multimodale Embeddings: CLIP
-
-![https://openai.com/index/clip/](https://images.ctfassets.net/kftzwdyauwt9/fbc4f633-9ad4-4dc2-3809c22df5e0/0bd2d5abf90d052731538613e4a42668/overview-a.svg){fig-align="left"}
-
-
-## Wie funktioniert ChatGPT?
-
-![https://openai.com/blog/chatgpt](images/ChatGPT_Diagram.png){fig-align="left"}
-
-
-## Aufgabe: Prompting-Strategien
-
-- Worin unterscheiden sich Zero-Shot-, Few-Shot- und Chain-of-Thought-Strategien für die Codierung? [vgl. @weber2024]
-- Entwickeln Sie für die Hausaufgabe zur Codierung *Studierende* je einen Prompt-Typ und testen Sie diese.
-- (Wie) funktioniert dies bei der Bildklassifikation?
-
-
-## Vor- und Nachteile der LLM-Codierung
-
-- Prompts ähneln manuellen Codieranweisungen (+ etwas Prompt Engineering)
-- LLM können Codierentscheidung und Begründungen liefern
-- viele verschiedene kommerzielle und freie LLM sind verfügbar, Ensemble Codierung möglich
-- nicht alles lässt sich leicht per LLM codieren (z.B. einfach Personen zählen)
-- kommerzielle LLM kosten Geld pro Abfrage und haben ggf. Guardrails, die die Codierung verhindern bzw. erschweren
-- die Nutzung von LLM ist datenschutzrechtlich und ethisch bedenklich
-- multimodalle LLM sind aktuell noch sehr neu und ungetestet
-- validieren, validieren, validieren!
-
 
 
 
@@ -296,7 +177,10 @@ Explainer: <https://ig.ft.com/generative-ai/>
 
 # Fragen?
 
-# Sitzung 3 {#s3}
+-->
+````
+
+# Sitzung 2 {#s2}
 
 # Ihre Themenideen
 
@@ -322,10 +206,10 @@ Explainer: <https://ig.ft.com/generative-ai/>
 
 ## Woher bekommt man gute Hypothesen?
 
-  - existierende Theorien mit klaren Annahmen
-  - existierende empirische Befunde (auch bei mehrdeutiger Ergebnislage)
-  - eigene Herleitung aus plausiblen, begründeten Annahmen
-  - nicht: 3 Sätze Alltagserfahrung
+-   existierende Theorien mit klaren Annahmen
+-   existierende empirische Befunde (auch bei mehrdeutiger Ergebnislage)
+-   eigene Herleitung aus plausiblen, begründeten Annahmen
+-   nicht: 3 Sätze Alltagserfahrung
 
 ## Begriffsarbeit
 
@@ -339,6 +223,104 @@ Explainer: <https://ig.ft.com/generative-ai/>
 2.  Formulieren sie (eher allgemeine) 1-2 Forschungsfragen.
 3.  Stellen sie 3-5 (eher konkrete) Hypothesen auf (mit Begründung!).
 4.  Unterziehen Sie die für Ihre Studie relevanten Konstrukte einer dimensionalen und semantischen Analyse.
+
+## CCS Hausaufgabe
+
+1.  Arbeiten Sie <https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html> einmal durch
+2.  Hausaufgabe ist in der übernächsten Woche fällig (spätestens, nicht frühestens!)
+
+# Sitzung 3 {#s3}
+
+## Erhebung von Inhalten für Inhaltsanalysen
+
+-   sehr viele Text- und Bild-Inhalte sind digital (und online) vorhanden, aber Zugang für wissenschaftliche Zwecke oft problembehaftet
+-   Problem 1: Vollständigkeit, z.B. durch selektive Rechtevergabe oder technische Zugangsbarrieren im Archiv
+-   Problem 2: Rechtslage/Copyright, wobei Forschung und Lehre stark priviligiert sind
+-   Problem 3: Ethische Fragen, etwa ob Individuen Schaden bei der Erhebung ersteht oder Zustimmung der Betroffenen vorliegt
+-   Problem 4: Praktische und methodische Fragen, etwa wie man möglichst zuverlässig Inhalte erheben kann
+
+## Online-Archive traditioneller Medien
+
+-   seitens der Anbieter, z.B. SPIEGEL oder ZEIT Archiv, Tagesschau Sendungsarchiv
+-   kommerzielle Datenbanken, z.B. LexisNexis oder Factiva
+-   GDELT (Global Database of Events, Language and Tone) und Mediacloud als riesige, nicht-kommerzielle Datenbanken (ohne Volltexte)
+-   NewsAPI als kommerzielle Datenbank mit einfachem Zugriff, aber limitiertem (kostenlosen) Zugang
+
+## Social Media Plattformen
+
+-   fast alle großen Social Media Plattformen mit eigenen durchsuchbaren Archiven
+-   hohe technische Hürden gegen automatisierte Erhebung im großen Stil (Mastodon \> TikTok \> Facebook/Instagram)
+-   hohes Risiko, dass gerade noch funktionierende Zugänge kurzfristig nicht verfügbar sind
+-   Alternative zur anbieterseitigen Erhebung: Data Donation
+
+## Mobile Apps und andere geschlossene Systeme
+
+-   technisch extrem schwierig zu erheben durch Sandboxing auf Android/iOS
+-   Alternative 1: Überwachung und Mitschnitt von Netzwerk-Traffic
+-   Alternative 2: Data Donations von NutzerInnen, z.B. in Form von Screenshots (u.a. Screenome Project)
+
+## Datenerhebung mit R
+
+Möglichkeiten, aufsteigend vom leichtesten zum schwierigsten
+
+1.  maschinenlesbaren Dateien direkt aus dem WWW einlesen (z.B. CSV-Files)
+2.  fertige R-Pakete für einzelne Plattformen/Anbieter verwenden
+3.  über API (Application Programming Interface) halb-standardisierte Daten erhalten
+4.  über Web-Scraping HTML-Inhalte von Websites herunterladen und verarbeiten
+5.  über ferngesteuerte Browser Inhalte erheben oder Screenshots erstellen
+6.  NutzerInnen um Datenspenden bitten
+
+## Was ist eine API?
+
+-   Austausch maschinenlesbarer Daten zwischen verschiedenen Programmen/Computern
+-   Formate sind standardisiert (z.B. XML oder JSON), Inhalte variieren
+-   Web-APIs nutzen die gleichen Protokolle wie Browser, aber liefern anderen Datenstrukturen
+-   oft nutzen Plattformen für ihre eigenen (Mobil-) Apps ebenfalls APIs
+-   mit speziellen R-Paketen können diese API-Daten wieder in R-Objekte wie z.B. Datenframes umgewandelt werden
+
+## Beispiel JSON
+
+<https://api.breakingbadquotes.xyz/v1/quotes>
+
+```{r, echo = F}
+a = read_lines("https://api.breakingbadquotes.xyz/v1/quotes") 
+a |> jsonlite::prettify()
+```
+
+## Workflow
+
+1.  Datenquelle finden (Website, Feed, API)
+2.  relevanten Ausgangspunkt finden (Suchanfrage, Accountname, etc.)
+3.  Daten herunterladen
+4.  Daten filtern und auswählen
+5.  Daten in ein standardisiertes Format für die Analyse bringen
+6.  (Daten quick & dirty auswerten oder visualisieren)
+
+## Buchempfehlungen {layout-ncol="3"}
+
+![](https://medien.umbreitkatalog.de/bildzentrale_original/978/365/840/1702.jpg){height="600px"} ![](https://media.springernature.com/full/springer-static/cover-hires/book/978-3-658-37747-2?as=png){height="600px"} ![](https://media.wiley.com/product_data/coverImage300/39/11196802/1119680239.jpg){height="600px"}
+
+## CLI-Tools in Python
+
+-   für spezifische Aufgaben gibt es zahlreiche Tools, z.B.
+-   Videos herunterladen - `youtube-dlp`
+-   Audio transkribieren - `whisper-ctranslate2`
+-   Videos in Einzelbilder zerlegen - `vcsi`
+-   Python ist auf Mac und Linux-Systemen installiert, unter Windows kann es nachinstalliert werden
+-   Installation der einzelnen Pakete über `pip install <tool>`
+
+## Zeeschuimer-Datenspende
+
+-   Firefox-Erweiterung, die beim Surfen auf bestimmten Plattformen die angezeigten Inhalte und deren Metadaten speichert
+-   Export als `ndjson`-Datei, die man mit R einlesen kann
+-   vor allem für Instagram und ggf. auch TikTok interessant
+-   sehr umfangreiche Meta-Daten, aber etwas unübersichtlich
+
+## Aufgaben bis zur übernächsten Sitzung
+
+1.  Finalisieren Sie die Forschungsfragen und Hypothesen.
+2.  Finalisieren Sie semantische und dimensionale Analyse
+3.  Melden Sie Gruppenmitglieder und Zuständigkeiten
 
 # Forschungsdesign und Stichprobe {#s4}
 
@@ -366,7 +348,7 @@ Explainer: <https://ig.ft.com/generative-ai/>
 ### Auswahleinheit
 
 -   alle vorliegende Materialen, die aus dem gesamten Spektrum verfügbaren Medienmaterials für die Untersuchung ausgewählt werden
-    -   Beispiel: Facebook-Posts der IfP-Seite (inkl. dazugehöriger Kommentare)
+    -   Beispiel: LinkedIn-Posts der IfP-Seite (inkl. dazugehöriger Kommentare)
 
 ### Analyseeinheit
 
@@ -405,7 +387,7 @@ Explainer: <https://ig.ft.com/generative-ai/>
 -   nicht auf allen Stufen ist derselbe Auswahlmechnismus nötig oder sinnvoll
 -   Beispiel:
     1.  Auswahl von Politikeraccounts auf Instagram (gezielte Auswahl)
-    2.  Auswahl von 100 zufälligen Beiträgen aus 2019 (einfache Zufallsstichprobe)
+    2.  Auswahl von 100 zufälligen Beiträgen aus 2025 (einfache Zufallsstichprobe)
     3.  Auswahl jedes 5. Nutzerkommentars (bis zu 20) (systematsche Zufallsstichprobe)
 
 ## Stichproben und Inferenzschlüsse
@@ -414,7 +396,7 @@ Explainer: <https://ig.ft.com/generative-ai/>
 -   streng genommen sind statistische Inferenzen nur für Zufallsstichproben möglich
 -   Für welche zusätzlichen (unbekannten) Untersuchungseinheiten können wir Voraussagen treffen?
 -   Beispiel:
-    -   Sie finden stat. signifikante Unterschiede zwischen Posts der offiziellen SPD- und FDP-Twitter-Accounts im Oktober 2019
+    -   Sie finden stat. signifikante Unterschiede zwischen Posts der offiziellen SPD- und FDP-TikTok-Accounts im Oktober 2025
     -   Auf was beziehen sich Ihre Inferenzen?
 
 ## Stichprobenumfang
@@ -432,19 +414,14 @@ Explainer: <https://ig.ft.com/generative-ai/>
 
 ## Aufgaben bis zur nächsten Sitzung
 
-1. Lesen Sie [Datenerhebung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html) 
-2. Lösen Sie die Hausaufgaben 1 und 2 in R
-3. Wenn Sie Firefox installiert haben: Bitte [Zeeschuimer Erweiterung](https://github.com/digitalmethodsinitiative/zeeschuimer/releases) installieren <https://github.com/digitalmethodsinitiative/zeeschuimer/releases/download/v1.11.1/zeeschuimer-v1.11.1.xpi>
-
-
-## Aufgaben bis zur übernächsten Sitzung
-
 1.  Finalisieren Sie die Forschungsfragen und Hypothesen.
-3.  Diskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.
-4.  Definieren Sie Untersuchungseinheit(en) und Grundgesamtheit.
-5.  Entwickeln Sie einen konzeptionell angemessenen Stichprobenplan.
-6.  Überlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann.
+2.  Diskutieren und finalisieren Sie das Untersuchungsdesign Ihrer Studie.
+3.  Definieren Sie Untersuchungseinheit(en) und Grundgesamtheit.
+4.  Entwickeln Sie einen konzeptionell angemessenen Stichprobenplan.
+5.  Überlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann.
 
+````{=html}
+<!--
 # Sitzung 5 {#s5}
 
 ## Erhebung von Inhalten für Inhaltsanalysen
@@ -563,8 +540,10 @@ a |> jsonlite::prettify()
 5.  Entwickeln Sie einen konzeptionell angemessenen Stichprobenplan.
 6.  Überlegen Sie, wie die Stichprobenziehung praktisch umgesetzt werden kann.
 
+-->
+````
 
-# Sitzung 6 {#s6}
+# Sitzung 5 {#s5}
 
 # 5-Minuten Präsentationen
 
@@ -645,13 +624,6 @@ a |> jsonlite::prettify()
 -   Kategoriensystem (= alle Kategorien zusammengenommen)
 -   Codebogen
 
-## Zero-Shot Codierung
-
-- am besten die Zero-Shot-Tasks gleich mitdenken bzw. identische Codieranweisungen für Codierer und LLM
-- structured output Beispiel in R ansehen, Code anpassen
-- mehrere LLM-Modelle/Anbieter als Codierer verwenden
-- validieren, validieren, validieren!
-
 ## Aufgaben bis nächste Woche
 
 1.  Finalisieren Sie Forschungsdesign und Stichprobenplan.
@@ -659,8 +631,57 @@ a |> jsonlite::prettify()
 3.  Erstellen Sie ein passendes Codesheet für die Dateneingabe in Excel oder Teams.
 4.  Jedes Gruppenmitglied codiert dieselben (!) 10 Codiereinheiten, die Codierungen werden untereinander in einer Datei gesammelt.
 
-
 # Sitzung 7 {#s7}
+
+# 5-Minuten Präsentationen
+
+## Wie funktioniert ein Neuronales Netz?
+
+![https://medium.com/data-science-365/overview-of-a-neural-networks-learning-process-61690a502fa](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ZXAOUqmlyECgfVa81Sr6Ew.png)
+
+## Was sind Transformer Modelle
+
+{{< video https://www.youtube.com/watch?v=SZorAJ4I-sA&t=51s height="70%" width="70%" >}}
+
+Explainer: <https://ig.ft.com/generative-ai/>
+
+## Multimodale Embeddings: CLIP
+
+![https://openai.com/index/clip/](https://images.ctfassets.net/kftzwdyauwt9/fbc4f633-9ad4-4dc2-3809c22df5e0/0bd2d5abf90d052731538613e4a42668/overview-a.svg){fig-align="left"}
+
+## Wie funktioniert ChatGPT?
+
+![https://openai.com/blog/chatgpt](images/ChatGPT_Diagram.png){fig-align="left"}
+
+## Zero-Shot-Codierung mit LLM
+
+-   LLM können verschiedene sprachliche Aufgaben "lösen", u.a. auch inhaltsanalytische
+-   da die Modelle dafür nicht extra angepasst werden müssen, spricht man von Zero-Shot-Codierung
+-   im Gegensatz zu älteren automatischen Verfahren braucht es (fast) keine Umstellung gegenüber manuellem Codieren
+-   zahlreiche aktuelle Studien untersuchen, ob man manuelle Codierung durch LLM-basierte ersetzen kann
+-   ob und wie gut man eigene Kategorien mit LLM codieren kann, muss man ausprobieren (und machen wir)
+
+## Ablauf der LLM-Codierung
+
+![Quelle: @tornberg2023 ](images/clipboard-970418601.png)
+
+## Vor- und Nachteile der LLM-Codierung
+
+-   Prompts ähneln manuellen Codieranweisungen (+ etwas Prompt Engineering)
+-   LLM können Codierentscheidung und Begründungen liefern
+-   viele verschiedene kommerzielle und freie LLM sind verfügbar, Ensemble Codierung möglich
+-   nicht alles lässt sich leicht per LLM codieren (z.B. einfach Personen zählen)
+-   kommerzielle LLM kosten Geld pro Abfrage und haben ggf. Guardrails, die die Codierung verhindern bzw. erschweren
+-   die Nutzung von LLM ist datenschutzrechtlich und ethisch bedenklich
+-   multimodalle LLM sind aktuell noch sehr neu und ungetestet
+-   validieren, validieren, validieren!
+
+## Hausaufgabe
+
+1.  Erledigen Sie die Hausaufgabe auf <https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html>
+2.  Codieren Sie in der Gruppe 20 Codiereinheiten für einen Reliabilitätstest, d.h. einzeln (!) und jede/r dieselben (!) Fälle. Fügen Sie die Codierungen in ein Codesheet untereinander (wichtige Variablen: coder_id und unit_id).
+
+# Sitzung 8 {#s8}
 
 # 5-Minuten Präsentationen
 
@@ -702,20 +723,26 @@ a |> jsonlite::prettify()
 - Für mehr als zwei Codierer und verschiedene Skalenniveaus geeignet.
 - Akzeptable Werte wie bei Holsti (> .8), allerdings deutlich "strenger" wg. Zufallskorrektur.
 
-## Validierungsmaße für Classifier
 
-- manuelle Codierung als Goldstandard
-- Abweichung automatischer von manueller Codierung
-- Grundlage: Konfusionsmatrix mit korrekt/falsch positiven/negativen
-- Maße: Precision, Recall, F-Score
+## Feldphase
 
-## Aufgaben bis nächste Woche
+- ca. 8-10h Codierarbeit pro Person
+- Stichprobengröße ergibt sich aus Codierzeit pro Codiereinheit
+- Hilfe bei Codiereinheiten/Stichprobe/Daten nur noch bis Donnerstag dieser Woche bzw. ab 8.1.2026
 
-- Codebuch überarbeiten
-- Reliabilitätstest durchführen (20 Codiereinheiten) und auswerten
-- Datenerhebung abschließen
 
-Keine Sitzung nächste Woche, aber Angebot Sprechstunde per Teams zum gleichen Termin.
+## Aufgabe heute
+
+- erster Reliabilitätstest
+- bei Bedarf: Codebuch überarbeiten und 2. Reliabilitätstest
+- Stichprobe/Datenerhebung mit mir finalisieren
+
+## Aufgaben bis 13.1.2026 (!)
+
+- Datenerhebung abschließen, Material aufbereiten
+- Codierung/Feldphase
+- Erholung
+
 
 # Sitzung 10 {#s10}
 
@@ -768,6 +795,9 @@ Wichtig: Exaktheit, Konsistenz, Beschriftungen, etc.
   - Wann wäre die Hypothese wider- oder belegt? (*nicht* "bewiesen" oder "verifiziert")
 4. Werten sie die Daten entsprechend aus.
 
+
+<!--
+
 # Sitzung 11 {#s11}
 
 ## Zero-shot Klassifikation
@@ -786,16 +816,16 @@ Wichtig: Exaktheit, Konsistenz, Beschriftungen, etc.
 - Upload von Stimuli am besten als gezippten Ordner
 - Hilfe: <https://edubruell.github.io/tidyllm/>
 
-# Sitzung 12 {#s12}
+-->
 
-## Datenmanagement
-
-- gültige und fehlende Werte prüfen (ggf. NA setzen)
-- Datensatz filtern und finale Fallzahlen prüfen
-- Indices bilden und auf Plausibilität testen
-- ggf. finalen Datensatz separat speichern
+# Sitzung 13 {#s13}
 
 ## Datenbeschreibung I: univariat
+
+```{r, include =F}
+theme_set(theme_minimal())
+```
+
 
 ```{r, echo = TRUE}
 mtcars |> 
@@ -814,71 +844,64 @@ mtcars |>
   summary()
 ```
 
-## Hypothesentests I 
-
-```{r, echo = TRUE}
-t.test(hp ~ am, data = mtcars) |> 
-  report::report_table() |> 
-  summary()
-```
-
-## Hypothesentests II 
-
-```{r, echo = TRUE}
-aov(hp ~ am, data = mtcars) |> 
-  report::report_table() |> 
-  summary()
-```
-
-## Hypothesentests III 
-
-```{r, echo = TRUE}
-mtcars |> 
-  select(am, vs) |> 
-  table() |> 
-  chisq.test() |> 
-  report::report_table() |> 
-  summary()
-```
-
-## Hypothesentests III 
+## Statistisches Modell
 
 ```{r, echo = T}
-cor.test(~ mpg + hp, data = mtcars) |> 
-  report::report_table() |> 
-  summary()
+my_model = lm(hp ~ factor(cyl), data = mtcars)
+report::report_table(my_model)
 ```
-## Visualizisierung mit ggplot2
+
+
+
+## Modellvorhersagen
+
+```{r}
+marginaleffects::avg_predictions(my_model, by = "cyl")
+```
+
+
+## Visualisierung I: deskriptiv
+
+```{r, echo = T}
+mtcars |> group_by(cyl) |> summarise(mean_hp = mean(hp)) |> 
+  ggplot(aes(x = factor(cyl), y = mean_hp))+ # cyl als kategoriell
+  geom_col() + labs(x = "Zylinder", y = "Leistung in PS", caption = "n = 32")
+```
+
+## Visualisierung II: mit CI
 
 ```{r, echo = T}
 mtcars |> 
   ggplot(aes(x = factor(cyl), y = hp))+
   stat_summary(fun.data = mean_cl_boot)+
-  theme_minimal()+ labs(x = "Zylinder", y = "Leistung in PS", caption = "n = 32")
+  theme_minimal()+labs(x = "Zylinder", y = "Leistung in PS", caption = "n = 32")
 ```
+
+## Visualisierung III: modellbasiert
+
+```{r, echo = T}
+marginaleffects::avg_predictions(my_model, by = "cyl") |> 
+  ggplot(aes(x = factor(cyl), y = estimate, ymin = conf.low, ymax = conf.high))+
+  geom_pointrange()+theme_minimal()+
+  labs(x = "Zylinder", y = "Leistung in PS", caption = "n = 32")
+```
+
+## Deskriptiv vs. modellbasierte Visualisierung
+
+- deskriptive Darstellung passt zu den (Roh-)Daten
+- modellbasierte Darstellung passt zum statistischen Test (= basiert auf demselben Modell)
+- modellbasierte Darstellung korrigiert ggf. Verzerrung (z.B. bei geschachtelten Daten) 
+- funktioniert besonders gut bei komplexeren (multivariaten) Analysen
+- Moderationsanalysen z.B. durch unterschiedliche Farben visualisieren
+
 
 ## Tipps
 
 - `report::report_table()` (plus ggf. `summary()`) ist sehr vielseitig
-- für dichotome Variablen Chi-Quadrat-Test oder Linear Probability Model (= ANOVA/t-Test)
 - Visualisierung mit ggplot (`theme_minimal` oder `tinythemes::theme_ipsum_rc`)
+- Darstellung von statistischer Unsicherheit über Konfidenzintervalle
 - eigene Farben und Themes sehr leicht möglich (z.B. `remotes::install_github('Mikata-Project/ggthemr')`)
 - ggplot2 Grafiken abspeichern mit `ggsave("myplot.png", width = 8, height = 4.5)`
-
-## Aufgaben heute
-
-- Daten aufbereiten und auswerten
-- Ergebnispräsentation (1-2 Folien FF+Hypothesen, 1-2 Folien Methoden, 3-5 Folien Ergebnisse)
-- Präsentation **maximal** 10 min nächste Woche (gern nur 1 Vortragende/r)
-
-
-# Sitzung 13 {#s13}
-
-## Evaluation
-
-<https://befragung.uni-mainz.de/evasys/online.php?p=73T1T>
-
-# Abschlusspräsentationen
 
 ## Projektbericht I
 
@@ -892,21 +915,35 @@ mtcars |>
   
 ## Projektbericht II
 
-- ca. 10 Seiten pro Gruppenmitglied, maximal (!) 10.000 Wörter insgesamt. Es gilt Qualität vor Quantität.
+- ca. 10 Seiten pro Gruppenmitglied, maximal (!) 10.000 Wörter insgesamt. Es gilt Qualität vor Quantität
 - relevante Grafiken und Tabellen in den Text, ergänzende Analysen in den Anhang
 - Dokumentation der eigenen Arbeit, d.h. Berichte können recycled werden
-- es muss nichts "rauskommen", außer dass sie etwas gelernt haben
+- es muss nichts "rauskommen", außer dass Sie etwas gelernt haben
 - Formalien und Regeln wissenschaftlicher Arbeit sind wichtig und notenrelevant
 - sprachliche und formale Endredaktion lohnt sich, ebenso schöne Aufbereitung der Ergebnisse
 
 ## Projektbericht III
 
 - übliche Gliederung jeder empirischen Studie (gern an Fachartikeln orientieren)
-- zentrale Begriffe sind zu definieren, Forschungsfragen und Hypothesen sind aus der Literatur herzuleiten
+- zentrale Begriffe sind zu definieren, Forschungsfragen und Hypothesen sind (aus der Literatur) herzuleiten
 - methodisches Vorgehen ist zu erläutern und zu begründen (u.a. Stichprobe, Codebuch, Reliabilität, etc.) 
 - Abbildungen und Tabellen sind verständlich (!) zu beschriften (inkl. Fallzahl!)
 - Ergebnisse sind inhaltlich zu interpretieren und in den Forschungsstand einzuordnen 
 - (Was ist neu? Was wurde bestätigt? Was nicht? Praktische Implikationen? Weitere Forschung?)
+
+## Aufgaben heute
+
+- Analysen aufbereiten und visualisieren
+- Ergebnispräsentation (1-2 Folien FF+Hypothesen, 1-2 Folien Methoden, 3-5 Folien Ergebnisse)
+- Präsentation **maximal** 10 min nächste Woche (gern nur 1 Vortragende/r)
+
+
+# Sitzung 14 {#s14}
+
+
+# Abschlusspräsentationen
+
+# Feedback
 
 # Fragen?
 

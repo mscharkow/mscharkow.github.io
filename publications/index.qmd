@@ -1,0 +1,11 @@
+---
+subtitle: Publications
+date: today
+bibliography: zotero.bib
+csl: https://www.zotero.org/styles/apa-cv
+suppress-bibliography: true
+author: ""
+image: pub_title.jpg
+---
+
+{{< include _bib.qmd >}}

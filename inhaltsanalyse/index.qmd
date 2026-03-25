@@ -1,7 +1,7 @@
 ---
 title: "BA Inhaltsanalyse"
 subtitle: "Analyse öffentlicher Kommunikation"
-date: 2024-10-01
+date: 2025-10-01
 title-block-style: default
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
@@ -9,11 +9,10 @@ csl: https://www.zotero.org/styles/apa
 
 ```{r}
 source(here::here("funcs.R"))
-start_date = as.Date("2024-10-25")
-end_date = as.Date("2025-02-10")
-no_classes = as.Date(c("2024-11-01", "2024-12-27", "2025-01-03"))
-topics = "Einführung und Grundlagen, CCS: Inhaltsanalyse mit LLM, Themenwahl und Forschungsfragen, Studiendesign und Stichprobe*, CCS: Datenerhebung, Kategorien und Codierung*, 
-CCS: Reli-Test und Validierung*, Codebuch-Finalisierung, Feldphase (Sprechstunde), Datenanalyse und -visualisierung*, CCS: Zero-Shot Codierung/Validierung, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
+start_date = as.Date("2025-10-28")
+end_date = as.Date("2026-02-10")
+no_classes = as.Date(c( "2025-12-24", "2025-12-30", "2025-12-23"))
+topics = "Einführung und Grundlagen, Themenwahl und Forschungsfragen, CCS: Datenerhebung, Studiendesign und Stichprobe*, Kategorien und Codierung*, Codebuch-Finalisierung, CCS: Inhaltsanalyse mit LLM*, Reliabilitätstest, Feldphase (keine Sitzung),  Datenaufbereitung und -analyse*,  CCS: Zero-Shot Codierung I, CCS: Zero-Shot Codierung II, Visualisierung und Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
 ```
 
 ![](images/ia_title.png)
@@ -44,12 +43,31 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 ### Literatur
 
 @benoit2009; @rössler2017 [Kap. 1, 2]
-
+<!--
 ### Aufgabe zur nächsten Sitzung
 
 [Zero-Shot-Codierung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html) mit Hausaufgabe
+-->
 
 ## Sitzung 2 <a class="bi bi-easel-fill" href="slides.html#/s2" alt="Folien"></a> {#2}
+
+### Themen
+
+-   Vorstellung von Themenideen
+-   Herleitung von Forschungsfragen und Hypothesen
+-   Begriffsarbeit (semantische und dimensionale Analyse)
+
+### Literatur
+
+@rössler2017 [Kap. 3]
+
+### Aufgabe zur nächsten Sitzung
+
+-   Forschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren
+-   Gruppen und Verantwortlichkeiten melden
+- <https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html> durcharbeiten
+
+<!--
 
 ### Themen
 
@@ -66,7 +84,27 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 Gruppenbildung und Ideen für Themen und Forschungsfragen
 
+-->
+
 ## Sitzung 3 <a class="bi bi-easel-fill" href="slides.html#/s3" alt="Folien"></a> {#3}
+
+
+### Themen
+
+-   Erhebung von Online-Inhalten in R
+-   Nutzung von CLI-Tools für Datenerhebung und -verarbeitung
+
+### Literatur
+
+@haim2023 [Kap. 5 und 6]
+
+
+### Aufgabe zur nächsten Sitzung
+
+- <https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html#hausaufgabe> 
+
+<!--
+
 
 ### Themen
 
@@ -83,6 +121,8 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 -   Forschungsfragen und Hypothesen formulieren sowie zentrale Begriffe definieren
 -   Gruppen und Verantwortlichkeiten melden
 
+ -->
+ 
 ## Sitzung 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Folien"></a> {#4}
 
 ### Themen
@@ -97,6 +137,10 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 
 ### Aufgabe zur nächsten Sitzung
 
+- Studiendesign und Stichprobe planen
+- Datenerhebung planen und ggf. bereits durchführen
+
+<!--
 [Datenerhebung in R](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-daten.html) mit Hausaufgaben 1 und 2
 
 ## Sitzung 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Folien"></a> {#5}
@@ -110,8 +154,9 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 
 @haim2023 [Kap. 5 und 6]
 
+-->
 
-## Sitzung 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Folien"></a> {#6}
+## Sitzung 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Folien"></a> {#5}
 
 ### Themen
 
@@ -128,7 +173,28 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - erste Codebuch-Fassung
 - Probecodierung
 
+
 ## Sitzung 7 <a class="bi bi-easel-fill" href="slides.html#/s7" alt="Folien"></a> {#7}
+
+### Themen
+
+-   Textcodierung mit Large Language Models
+-   Bildcodierung mit multimodalen Modellen
+-   Prompting-Strategien für Zero- und Few-Shot-Codierung
+-   praktische Tipps mit für die Batch-Codierung mit R und {tidyllm}
+
+### Literatur
+
+@tornberg2023; @weber2024
+
+### Aufgabe zur nächsten Sitzung
+
+- [CCS-Hausaufgabe](https://stats.ifp.uni-mainz.de/ba-ccs-track/ia-zeroshot.html)
+- Codierung für den Reliabilitätstest
+
+
+
+## Sitzung 8 <a class="bi bi-easel-fill" href="slides.html#/s8" alt="Folien"></a> {#8}
 
 ### Themen
 
@@ -144,6 +210,8 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Finalisierung Codebuch
 - Reliabilitätstest
 - Datenerhebung
+
+
 
 ## Sitzung 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Folien"></a> {#10}
 
@@ -163,37 +231,22 @@ Gruppenbildung und Ideen für Themen und Forschungsfragen
 - Aufbereitung der finalen Daten
 - Erstellung Analyseplan und Auswertung
 
-## Sitzung 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Folien"></a> {#11}
-
-### Themen
-
-- Strukturierte Zero-Shot Klassifikation mit `tidyllm`
-- Erstellen eigener Prompts und JSON-Schemata
-
-
-## Sitzung 12 <a class="bi bi-easel-fill" href="slides.html#/s12" alt="Folien"></a> {#12}
-
-### Themen
-
-- Datenaufbereitung und Datenanalyse mit R
-
-
-### Literatur
-
-<https://stats.ifp.uni-mainz.de/ba-datenanalyse>
-
-### Aufgabe zur nächsten Sitzung
-
-- Daten auswerten
-- Ergebnispräsentation vorbereiten (max. 10 min)
-
 ## Sitzung 13 <a class="bi bi-easel-fill" href="slides.html#/s13" alt="Folien"></a> {#13}
 
 ### Themen
 
-- Abschlusspräsentationen
+- Datenvisualisierung mit R
 - Projektberichte
-- Evaluation
+
+### Aufgabe zur nächsten Sitzung
+
+- Ergebnispräsentation vorbereiten (max. 10 min)
+
+## Sitzung 14 <a class="bi bi-easel-fill" href="slides.html#/s14" alt="Folien"></a> {#14}
+
+### Themen
+
+- Abschlusspräsentationen
 
 ## Literatur
 

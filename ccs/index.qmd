@@ -2,7 +2,7 @@
 title: "MA Computational Communication Science "
 lang: en 
 #subtitle: "Mediennutzung und -wirkung"
-date: 2025-04-01
+date: 2026-04-01
 title-block-style: default
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
@@ -10,10 +10,10 @@ csl: https://www.zotero.org/styles/apa
 
 ```{r}
 source(here::here("funcs.R"))
-start_date = as.Date("2025-04-23")
-end_date = as.Date("2025-07-17")
-no_classes = as.Date(c("2025-05-14"))
-topics = "Introduction, CCS Paper Potpourri, Ethical and legal perspectives, Digital trace data, Digital trace data, Automatic content analysis, Automatic content analysis, Automatic content analysis, Automatic content analysis, Simulation and computational experiments, Simulation and computational experiments,  Q & A" |> str_split_1(", ") |> str_squish()
+start_date = as.Date("2026-04-15")
+end_date = as.Date("2026-07-08")
+no_classes = as.Date(c())
+topics = "Introduction, Computational Workflows and Writing, CCS Paper Potpourri, Ethical and legal perspectives, Digital trace data, Digital trace data, Automatic content analysis, Automatic content analysis, Automatic content analysis, Simulation and computational experiments, Simulation and computational experiments, Q & A" |> str_split_1(", ") |> str_squish()
 #topics = "Introduction, CCS Paper Potpourri, Ethical and legal perspectives, Digital traces - data collection, Digital traces - data analysis, Computational content analysis - data collection, Computational content analysis - unsupervised approaches, Computational content analysis - supervised approaches, Computational content analysis - multimodal content, Agent-based modeling, Computational experiments,  Q & A" |> str_split_1(", ") |> str_squish()
 ```
 

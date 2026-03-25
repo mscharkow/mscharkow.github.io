@@ -3,24 +3,33 @@ title: Michael Scharkow
 subtitle: Computational Communication Researcher
 author: ""
 date: ""
-page-layout: full
 format: 
   html:
     toc: false
 listing: 
-  type: grid
-  contents: 
-    - "*/index.qmd"
-  fields: [image, title, subtitle, date]
-  sort: 
+  - id: teaching
+    type: grid
+    contents: 
+      - "{analyseverfahren,experiment,inhaltsanalyse,ma-datenanalyse,ccs}/index.qmd"
+    fields: [image, title, subtitle, date]
+    sort: 
     - "date desc"
     - title
+  - id: research
+    type: grid
+    contents:
+      - "{publications,presentations}/index.qmd"
+    fields: [image,subtitle]
+    sort: 
+    - "subtitle desc"
 ---
 
 ## About
 ![](ms.jpg){style="float:right;padding:5px;border: 1px solid #ccc;width:200px; margin-left:2em;"}
 
-I am professor for [Computational Communication Science](https://ccs.ifp.uni-mainz.de) at the [Department of Communication](https://www.ifp.uni-mainz.de), [Johannes Gutenberg University Mainz](https://www.uni-mainz.de). My main research interests are online communication, media use and effects, and quantitative methods, especially data collection and statistical modeling. 
+I am a professor of [Computational Communication Science](https://ccs.ifp.uni-mainz.de) at the [Department of Communication](https://www.ifp.uni-mainz.de), [Johannes Gutenberg University Mainz](https://www.uni-mainz.de). My main research interests are online communication, media use and effects, and quantitative methods, especially automatic data collection and statistical modeling. 
+
+[Curriculum Vitae](/cv) ([PDF](/cv/cv-mscharkow.pdf)) | [Google Scholar](https://scholar.google.com/citations?user=MKN8lkMAAAAJ&hl=en) 
 
 ### Contact
 
@@ -32,5 +41,15 @@ Germany
 
 <scharkow@uni-mainz.de>
 
+## Research
+
+:::{#research}
+:::
+
 
 ## Teaching
+
+:::{#teaching}
+:::
+
+

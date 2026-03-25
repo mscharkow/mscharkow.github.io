@@ -1,7 +1,7 @@
 ---
 title: "MA Fortgeschrittene Datenanalyse mit R"
 #subtitle: "Mediennutzung und Medienwirkung"
-date: 2024-10-01
+date: 2025-10-01
 title-block-style: default
 #bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
@@ -9,11 +9,11 @@ csl: https://www.zotero.org/styles/apa
 
 ```{r}
 source(here::here("funcs.R"))
-start_date = as.Date("2024-10-22")
-end_date = as.Date("2025-02-07")
-no_classes = as.Date(c( "2024-12-24", "2024-12-31"))
-topics = "R Basics (Blocktermin Fr), R Basics (Blocktermin Mo), ANOVA und Regression, Moderationsanalyse, Mediationsanalyse und Pfadmodelle, Lagged und Cross-Lagged Modelle, Multilevel-Längsschnittanalyse, 
-Multilevelmodelle, Wiederholung, Übung (keine Sitzung), Explorative Faktorenanalyse, Konfirmatorische Faktorenanalyse, Messinvarianz, Wiederholung/Übung" |> str_split_1(", ") |> str_squish()
+start_date = as.Date("2025-10-28")
+end_date = as.Date("2026-02-10")
+no_classes = as.Date(c( "2025-12-24", "2025-12-30", "2025-12-23"))
+topics = "R Basics (Blocktermin Freitag), keine Sitzung (Blocktermin Freitag), ANOVA und Regression, Moderationsanalyse, Mediationsanalyse und Pfadmodelle, Lagged und Cross-Lagged Modelle, Multilevel-Längsschnittanalyse, 
+Multilevelmodelle, Übung (keine Sitzung), Wiederholung/Übung, Explorative Faktorenanalyse, Konfirmatorische Faktorenanalyse, Messinvarianz, Wiederholung/Übung" |> str_split_1(", ") |> str_squish()
 ```
 
 ![](images/ma_r_title.jpg)

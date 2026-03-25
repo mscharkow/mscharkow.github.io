@@ -1,0 +1,96 @@
+---
+author: " "
+date: today
+bibliography: "../publications/zotero.bib"
+citeproc: true
+csl: "../publications/apa-cv.csl"
+link-citations: false
+suppress-bibliography: true
+format: 
+  typst: 
+    papersize: a4
+    fontsize: 11pt
+    shift-heading-level-by: 0
+    mainfont: "Minion Pro"
+    output-file: "cv-mscharkow.pdf"
+  html: default
+---
+
+```{css}
+p.date{float:right;}
+```
+
+```{=typst} 
+#set par(justify: false)
+#show heading: set block(below: 1.25em)
+#set list(marker: [], body-indent: 0pt)
+```
+
+Johannes-Gutenberg University Mainz  
+Department of Communication  
+Jakob-Welder-Weg 12  
+55128 Mainz, Germany
+
+<scharkow@uni-mainz.de>
+
+
+## Work experience 
+::: {.plain}
+- **Full Professor** – Johannes Gutenberg University Mainz *since 10/2019*
+- **Full Professor** – Zeppelin University *2017‑2019*
+- **Research Associate** – University of Hohenheim *2010‑2017*
+- **Senior Project Researcher** – University of Münster *2012‑2014*
+- **Visiting Scholar** – Ohio State University *04‑05/2012*
+- **Research Associate** – Berlin University of the Arts *2006‑2009*
+- **Research & Teaching Assistant** – Freie Universität Berlin *2001‑2005*
+:::
+
+## Education
+::: {.plain}
+  - **Dr. phil.** – Communication, Berlin University of the Arts *2011*
+  - **M.A.** – Communication, Political Science, Sociology, Freie Universität Berlin *2006*
+:::
+
+
+## Grants
+::: {.plain}
+  - **Diversity-X: Identifying gender citation gaps in communication research**   *BMBF* \
+  2022-2024, with Sabine Trepte 
+  
+  - **Multilevel flows of political communication on Facebook**  *Fritz Thyssen Foundation* \
+  2020-2023, with Marko Bachl  
+  
+  - **Young Scholars Network: Temporal dynamics and process models in media effects research**   *DFG* \
+  2013-2016, with Jens Vogelgesang  
+  
+  - **EXIST Project: Bayesian Analysis and Reporting Tool - BART**  *BMWT*  \ 
+  2008-2009, with Christoph Ehlers, Christoph Meyer zu Kniendorf, Cord Meyer zu Kniendorf, Jens Vogelgesang  
+
+:::
+
+## Awards & Honors
+::: {.plain}
+  - **Top Faculty Paper Award**, ICA Mobile Communication Division *2023*
+  - **Top Faculty Paper Award**, ICA Mass Communication Division *2019*
+  - **CMM Article of the Year**, AEJMC Communication Theory and Methodology Division *2016*
+  - **Top Faculty Paper Award**, ICA Communication and Technology Division *2017*
+  - **Top Faculty Paper Award**, ICA Mass Communication Division *2017*
+  - **Best Submission Award**, DGPuK Methods Division *2016*
+  - **Top Faculty Paper Award**, ICA Game Studies Division *2014*
+  - **Best Submission Award**, DGPuK Methods Division *2014*
+  - **DGPuK Journal Article of the Year**, DGPuK *2012*
+  - **Best MA thesis**, Verein der Freunde der Publizistik e.V. *2007*
+:::
+## Service
+
+**Panel Member**, European Research Council, SH3 Panel (since 2022)
+
+**Associate Editor**, *Journal of Communication* (2018-2022)
+
+**Vice Chair**, Methods Division of the German Communication Association (2014-2016)
+
+**Editorial Board Member** for *Journal of Communication*, *Communication Measures and Methods*, *Computational Communication Research*, and *Media Psychology*  
+
+::: {.content-visible when-format="typst"}
+{{< include ../publications/_bib.qmd >}} 
+:::

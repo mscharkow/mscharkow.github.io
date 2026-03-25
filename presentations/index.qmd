@@ -1,0 +1,148 @@
+---
+subtitle: Presentations
+date: today
+image: pres_title.jpg
+author: ""
+---
+
+## Conference presentations
+
+Rohr, B., Ernst, A., Dietrich, F., & Scharkow, M. (2023). *Opportunities and challenges of real-time data linkage designs – A case study using the Spotify API*. 10th Conference of the European Survey Research Association (ESRA), Milan, Italy.
+
+Ernst, A., Dietrich, F., Rohr, B., Reinecke, L., & Scharkow, M. (2023). *The digital jukebox revisited: Applying Mood Management Theory to algorithmically curated music streaming environments.* 73rd Annual Conference of the International Communication Association (ICA), Toronto, Ontario, Canada.
+
+Dietrich, F., Ernst, A., Rohr, B., Reinecke, L., & Scharkow, M. (2023). *(I can’t get no) satisfaction: Music listeners’ algorithmically curated entertainment experience.* 73rd Annual Conference of the International Communication Association (ICA), Toronto, Ontario, Canada.
+
+Trepte, S., Scharkow, M. (2022). *Are all of us invited to the party? National diversity of ICA conferences and membership.* ICA’s 72nd annual conference, Paris, France.
+
+Mangold, F., Vogelgesang, J., & Scharkow, M. (2021). *Audience Preference and News Use in an Age of Choice: A News Orientation Perspective.* Paper presented at the 2021 ICA conference, virtual.
+
+Mangold, F. & Scharkow, M. (2021). *Metrics of News Audience Polarization: Same or Different?* Paper presented at the 2021 ICA conference, virtual.
+
+Bachl, M., Scharkow, M. & Winkler, Y. (2021). *News Sharing by Party Line? An Analysis of Source Sharing Patterns in Political Social Media Discussions*. Paper presented at the 2021 ICA conference, virtual.
+
+Jürgens, P., Meltzer, C., & Scharkow, M. (2021). *The convoluted path to Equality: An automated image analysis of facial age and gender on German TV*. Paper presented at the 2021 ICA conference, virtual.
+
+Stier, S., Mangold, F., Scharkow, M., & Breuer, J. (2020). *Do Online Intermediaries Increase the Frequency and Diversity of News Exposure? Cross-Country Evidence from Web Tracking and Surveys.* Paper presented at the 2020 ECPR conference, Innsbruck, Austria.
+
+Bachl, M. & Scharkow, M. (2020). *News sharing by party line? An analysis of source sharing patterns in political social media discussions.* Paper presented at the 2020 ECPR conference, Innsbruck, Austria.
+
+Mangold, F. & Scharkow, M. (2019). *The quest of building meaningful audience networks. Reconsidering and renewing the research agenda.* Paper presented at the 2019 ICA conference, Washington, DC, May.
+
+Scharkow, M. & Bachl, M. (2017). *Reinforcing spirals and the issue of stable attitudes and behavior.* Presented at the Annual Conference of the Methods Division of the German Communication Association (DGPuK), Mainz, September.
+
+Bachl, M. & Scharkow, M. (2017) *Correcting measurement error in content analysis*. Paper presented at the 2017 ICA conference, San Diego, May.
+
+Dienlin, T., Trepte, S. & Scharkow, M. (2017). *Self-Disclosure and the Affordances of SNSs: Testing the Privacy Calculus Within an Experimental Framework.* Paper presented at the 2017 ICA conference, San Diego, May.
+
+Masur, P., Meltzer, C., & Scharkow, M. (2017). *Social Support and Self Disclosure in Face to Face and Instant Messenger Communication.* Paper presented at the 2017 ICA conference, San Diego, May.
+
+Scharkow, M. & Bachl, M. (2017). *Reinforcing spirals and the issue of stable attitudes and behavior.* Panel presentation at the 2017 ICA conference, San Diego, May.
+
+Scharkow, M. (2016). *The reliability and temporal stability of self-reported media use - a meta-analysis*. Presented at the Annual Conference of the Methods Division of the German Communication Association (DGPuK), Amsterdam, September.
+
+Bachl, M. & Scharkow, M. (2016). *How measurement errors lead to minimal media effect findings in linkage analysis and what we can do about it*. Presented at the Annual Conference of the Methods Division of the German Communication Association (DGPuK), Amsterdam, September.
+
+Masur, P. K., Scharkow, M. & Trepte, S. (2016). Geben und Nehmen: Das Zusammenspiel von Selbstoffenbarungsbereitschaft und sozialer Unterstützung in Online- und Offline-Kontexten [Self-disclosure and social support in online and offline contexts]. Vortrag auf dem 50. Kongress der Deutschen Gesellschaft für Psychologie (DGPs), 18.-22. Leipzig, September.
+
+Scharkow, M. & Bachl, M. (2016). *Messages Mismeasured: Minimal Media Effects as a Consequence of Unreliable Measurement.* Paper presented at the 2016 ICA conference, Fukuoka, June.
+
+Vogelgesang, J. & Scharkow, M. (2016). *Evaluating the Facebook message effectiveness of Top 50 Shanghai Ranking Universities.* Paper presented at the 2016 ICA conference, Fukuoka, June.
+
+Festl, R., Vogelgesang, J., Scharkow, M., & Quandt, T. (2016). Longitudinal Patterns of Involvement in Cyberbullying: Results from a Latent Transition Analysis among Adolescents. Paper presented at the 2016 ICA conference, Fukuoka, June.
+
+Bachl, M. & Scharkow, M. (2015). *MC-SIMEX-Korrektur von Messfehlern in nominalen Variablen*. Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Stuttgart, September.
+
+Festl, R., Vogelgesang, J., Scharkow, M., & Quandt, T. (2015). *Spirals of retaliation? Analyzing patterns of cyberbullying involvement among high school students using latent transition analysis.* Vortrag auf dem 20. Workshop Aggression, Linz, November.
+
+Scharkow, M. & Bachl, M. (2015). *Dealing with measurement error in content analysis data using simulation-extrapolation.* Paper presented at the 2015 ICA conference, San Juan, May.
+
+Bachl, M. & Scharkow, M. (2014). *Eine quantitative Bestandsaufnahme von Informationen über Krankheiten auf der deutschsprachigen Wikipedia, 2002-2014* [A quantitative analysis of disease-related information on Wikipedia]. Vortrag auf der Jahrestagung der Ad-hoc-Gruppe Gesundheitskommunikation der DGPuK. Mainz, November.
+
+Festl, R., Scharkow, M., & Quandt, T. (2014). *The Misperception of Cyberbullying Norms among High School Students.* Presentation presented at the 2014 European Communication Congress, Lissabon, November.
+
+Scharkow, M. & Domahidi, E. (2014). *Die Kombination von manueller und automatischer Codierung für die Auswahl von relevanten Studien für Meta-Analysen* [Combining manual and automatic coding for selecting relevant studies in meta analyses]. Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Munich, October.
+
+Bachl, M. & Scharkow, M. (2014). *Empirische Analyse der Wikipedia - Potenziale und Anwendungsbeispiele für die Kommunikationswissenschaft* [Empirical analyses of Wikipedia. Potential and applications in communication research]. Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Munich, October.
+
+Scharkow, M. (2014) *The accuracy of self-reported internet use - a validation study using client log data.* Paper presented at the 2014 ICA conference, Seattle, May.
+
+Scharkow, M., Festl, R., & Quandt, T. (2014). *Longitudinal patterns of problematic computer game use among adolescents and adults – a 2-year panel study.* Paper presented at the 2014 ICA conference, Seattle, May.
+
+Festl, R., Scharkow, M., & Quandt, T. (2014) *The individual or the class: A multilevel analysis of cyberbullying behavior in school classes.* Paper presented at the 2014 ICA conference, Seattle, May.
+
+Elson, M., Breuer, J., Scharkow, M., & Thorsten Quandt (2014). *Digital Games and Frustration: Effects on Aggression and Cooperative Behavior.* Paper presented at the 2014 ICA conference, Seattle, May.
+
+Elson, M., Mohseni, M. R., Breuer, J., & Scharkow, M. (2013). *The unstandardized use of the Competitive Reaction Time Task to measure aggressive behavior in media effects research: A methodological CRTTique.* Paper presented at the 8th Conference of the Media Psychology Divison of the German Psychological Society (DGPs), Würzburg, August.
+
+Breuer, J., Scharkow, M., & Quandt, T. (2013). *The effects of playing versus watching a digital game on the perception and evaluation of in-game violence.* Paper presented at the 2013 ICA conference, London, June.
+
+Günther, E. & Scharkow, M. (2013). *Online Sophistication of News Websites.* Paper presented at the 2013 ICA conference, London, June.
+
+Hayes, A.F. & Scharkow, M. (2013). *The Relative Trustworthiness of Popular Inferential Approaches to Testing Indirect Effects in Statistical Mediation Analysis: Does Method Really Matter?* Paper presented at the 2013 ICA conference, London, June.
+
+Mahrt, M. & Scharkow, M. (2013). *Between big data and deep analysis? Scaling digital media research.* Paper presented at the 2013 ICA conference, London, June.
+
+Vogelgesang, J. & Scharkow, M. (2013). *The Validity of Google Trends to Measure Issue Salience*. Paper presented at the Annual Conference of the World Association for Public Opinion Research (WAPOR), Boston, May.
+
+Breuer, J., Scharkow, M., & Quandt, T. (2012). *The others. Why research on the effects of digital games on aggression needs a multiplayer perspective.* Paper presented at the preconference of the ECREA Temporary Working Group (TWG) on Digital Games Research, Istanbul.
+
+Vogelgesang, J., & Scharkow, M. (2012). *Sozialforschung im 21. Jahrhundert: Können Suchmaschinenstatistiken bevölkerungsrepräsentative Befragungen ersetzen?* [Can we substitute representative surveys with online search query data?] Vortrag im Rahmen der Ad-hoc-Gruppe *Sozialforschung im World Wide Web* auf dem Soziologentag 2012 in Bochum und Dortmund, October.
+
+Scharkow, M. & Vogelgesang, J. (2012). *Reliabilitätstests und dann? Auswirkungen von Messfehlern in inhaltsanalytischen Daten* [Consequences of measurement error in content analyses]. Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Zürich, September.
+
+Günther, E. & Scharkow, M. (2012). *Automatisierte Datenbereinigung bei Inhalts- und Linkanalysen von Online-Nachrichten* [Automated data processing and filtering for content and link analyses of online news]. Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Zürich, September.
+
+Günther, E. & Scharkow, M. (2012). *Online sophistication of news websites.* Presentation at the annual IAMCR conference. Durban, July.
+
+Breuer, J., Elson, M., Mohseni, R., & Scharkow, M. (2012). *Are we really only measuring media effects? Problems and pitfalls associated with the implementation and analysis of the Competitive Reaction Time Task (CRTT) in research on digital games.* Paper presented at the 17th International Workshop on Aggression, Luxembourg, July.
+
+Bachl, M., Vogelgesang, J., Scharkow, M., & Brettschneider, F. (2012). *RTR-Messungen in der deutschen Wahlforschung: Gestern – heute – morgen* [Contiuous Response Measurement in German election studies]. Vortrag auf der Jahrestagung des Arbeitskreis Wahlen und Politische Einstellungen in der DVPW, Frankfurt, June.
+
+Breuer, J., Elson, M., Scharkow, M., & Quandt, T. (2012). *More than just violence - The importance of contextual factors and game characteristics for research on the digital-games-aggression link.* Paper presented at the 4th International Computer Game Conference Clash of Realities, Cologne, May.
+
+Scharkow, M., Festl, R., Vogelgesang, J., & Quandt, T. (2012). *Choosing digital games: The relationship between gaming motives and genre preferences.* Paper presented at the 2012 ICA conference, Phoenix, May.
+
+Domahidi, E., Scharkow, M., & Quandt, T. (2012). *Real friends and virtual life? Computer games as foci of activity for social community building.* Paper presented at the 2012 ICA conference, Phoenix, May.
+
+Festl, R., Scharkow, M., & Quandt, T. (2012). *Peer influence on adolescents’ communication behavior: A comparison of different context effects on cyberbullying.* Paper presented at the 2012 ICA conference, Phoenix, May.
+
+Domahidi, E., Scharkow, M., & Quandt, T. (2012). *Real friends and virtual life? Explaining co-playing networks of computer gamers.* Paper presented at the International Sunbelt Social Network Conference XXXII, Redondo Beach, CA, March.
+
+Festl, R., Quandt, T., Scharkow, M., Chen, V., Koskimaa, R., Mäyrä, F., & Suominen, J. (2011). *International gaming: Comparative survey research on digital gaming* (Panel). DIGRA Conference, Utrecht, September.
+
+Breuer, J., Scharkow, M., & Quandt, T. (2011) *Tunnel vision or spectator mode? - The effects of watching versus playing a violent video game on immersion and perceived violence.* Poster presented at the 7th Conference of the Media Psychology Division of the DGPs, Bremen, August.
+
+Festl, R., Scharkow, M., & Quandt, T. (2011). *The social fabric of virtual life: Findings from a large-scale multi-level research project.* Presented at multi.player: International Conference on the Social Aspects of Digital Gaming. Stuttgart, July.
+
+Festl, R., Scharkow, M., Breuer, J., & Quandt, T. (2011). *War Games: Analyzing the relationship between militaristic attitudes and the use of military-themed digital games.* Presentation at the annual IAMCR conference. Istanbul, July.
+
+von Pape, T. & Scharkow, M. (2011). *Bridging the space of places with a flow of tweets. A topography of local event tweets in a French-German border region.* Presentation at the annual IAMCR conference. Istanbul, July.
+
+Scharkow, M., Kordes, C., & Bleuel, F. (2011). *Visual stereotypes and party affiliation cues. An exploratory study of political cognition using candidate photographs.* Poster presented at the Annual Meeting of the International Society of Political Psychology. Istanbul, July.
+
+Scharkow, M. (2011). *Online content analysis using supervised machine learning – an empirical evaluation.* Paper presented at the 2011 ICA Conference. Boston, May.
+
+Scharkow, M. (2009). *NewsClassifier - ein integriertes Instrument zur manuellen und automatischen Erhebung und Codierung von Online-Inhalten* [An integrated instrument for the manual and automatic collection and coding of online content], Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Mainz, September.
+
+Scharkow, M. (2009). *Crowdsourcing Content Analysis. Vom Nutzen vieler Amateurcodierer für die Online-Inhaltsanalyse* [Crowdsourcing content analysis], Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Mainz, September.
+
+Mirza, D. & Scharkow, M. (2009). *Through the Eyes of the Spectator: A Content Analysis of User-Comments on the Internet Movie Database.* Presentation at the Society for Cognitive Studies of the Moving Image 2009 Conference, Kopenhagen, June.
+
+Vogelgesang, J. & Scharkow, M. (2009). *Is there a Place for Bayesian Statistics in Communication Research?* Vortrag auf der Jahrestagung der DGPuK, Bremen, May.
+
+Scharkow, M. & Vogelgesang, J. (2009): Google Insights for Search – eine neue Methode zur Messung der Public Agenda? [Google Insights for Search - a novel method for measuring the public agenda], Vortrag auf der Fachgruppentagung Journalismusforschung und Methoden der DGPuK. Berlin, February.
+
+Scharkow, M. (2008). *Einschaltquoten im Social Web – Möglichkeiten der Erhebung und Analyse von Publikumsdaten am Beispiel YouTube.* [Collecting audience data on Youtube] Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Bad Tölz, September.
+
+Suckfüll, M., Schwerd, F., & Scharkow, M. (2008). *Modes of Internet Use.* Poster auf der 10. German Online Research Tagung. Hamburg, March.
+
+Suckfüll, M., Schwerd, F., & Scharkow, M. (2007). *Internetmodalitäten.* [Modes of Internet use] Vortrag auf der Jahrestagung der Fachgruppe Medienpsychologie. Dresden, September.
+
+Schwerd, F., Scharkow, M., & Suckfüll, M. (2007). *Online-Sortierstudien als Datenerhebungsinstrument.* [Data collection using online card sorting]. Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK. Salzburg, September.
+
+Scharkow, M. & Vogelgesang, J. (2007). *Effects of Domestic Media Use on European Integration?* Paper presented at the Annual Conference of the World Association for Public Opinion Research (WAPOR). Berlin, September.
+
+Scharkow, M. (2007). *Mediennutzung und europäische Integration.* [Media use and European integration]. Vortrag beim Düsseldorfer Forum Politische Kommunikation. Düsseldorf, April.
+
+## Invited talks

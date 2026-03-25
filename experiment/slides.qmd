@@ -2,7 +2,7 @@
 title: "Experiment: Mediennutzung und -wirkung"
 author: "Prof. Dr. Michael Scharkow"
 date: today
-date-format: "[Sommersemester] 2025"
+date-format: "[Sommersemester] 2026"
 format: minimalist-revealjs
 df-print: kable
 bibliography: references.bib

@@ -1,0 +1,31 @@
+---
+subtitle: "Research Projects"
+image: cover.jpg
+author: ""
+---
+
+## Diversity-X. Gender Diversity in Communication Science
+
+04/2022-03/2025
+
+Joint project with [Sabine Trepte, University of Hohenheim](https://medienpsychologie.uni-hohenheim.de/trepte).
+
+Gender diversity and the fair representation of women in science are among the most discussed science policy issues of our time. The joint project "Gender-Citation Diversity" of the University of Hohenheim and the University of Mainz analyzed the visibility and citation diversity in communication, specifically for scholarly publications, for scientific conferences and for science communication on social media using computational and bibliometric approaches. We also developed an app that checks the citation diversity in scholarly documents.
+
+Funded by Bundesministerium für Bildung und Forschung (BMBF).
+
+[Diversity-X App](https://diversity-x.de) | 
+[Project Information](https://medienpsychologie.uni-hohenheim.de/en/diversity-e)
+
+
+## Multilevel Flows of Political Communication on Facebook – A Computational Approach Using Individual Digital Traces
+
+12/2020-11/2023
+
+Joint project with [Marko Bachl, FU Berlin](https://www.polsoz.fu-berlin.de/kommwiss/arbeitsstellen/digitale-methoden/Team/mbachl/).
+
+This research project analyzed political discourse on Facebook, moving beyond traditional media studies by examining how both professional communicators and everyday users co-created political conversations through comments, shares, and interactions. Utilizing a large-scale dataset of nearly all communication activity from approximately 400 German political party and candidate Facebook pages during the 2017 election year, the study aimed to identify the individual-level processes driving media effects—going beyond simply measuring audience reactions to understand why they occurred within this dynamic, multi-layered online environment.
+
+Funded by Fritz-Thyssen-Stiftung.
+
+[Project Information](https://www.fritz-thyssen-stiftung.de/fundings/multilevel-flows-of-political-communication-on-facebook-a-computational-approach-using-individual-digital-traces/)

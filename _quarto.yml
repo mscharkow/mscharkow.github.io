@@ -1,3 +1,4 @@
+title: "[**Michael Scharkow**](/)"
 author:
   - name: Michael Scharkow
     affiliation: JGU Mainz
@@ -5,7 +6,7 @@ author:
 date: last-modified
 
 date-format: "MM/YYYY"
-lang: de
+lang: en
 language:
   title-block-author-single: ""
   title-block-affiliation-single: ""
@@ -18,12 +19,13 @@ format:
     toc: true
     toc-location: right
     margin-top: 1em
-    toc-title: Inhalt
+    toc-title: " "
     mainfont: "Roboto Slab"
     color: rgb(193,0,42)
     linkcolor: "#257180"
     title-block-style: default
-    footer: "hello"
+    page-layout: full
+
 
 df-print: kable
 
@@ -39,4 +41,4 @@ project:
     browser: false
 
 website:
-  page-footer: "[home](/)"
+  page-footer: "[Home](/) | This site does not collect any tracking or log data."
