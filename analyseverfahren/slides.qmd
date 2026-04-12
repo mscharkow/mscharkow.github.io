@@ -155,7 +155,7 @@ Interpretieren Sie die folgenden Analysen:
 ::: {.column width="40%"}
 ### Simulation
 
--   Wir simulieren die Körpergröße in der Grundgesamtheit von N = 1200 Studentinnen und Studenten am IfP.
+-   Wir simulieren die Körpergröße in der Grundgesamtheit von N = 1200 Studierenden am IfP.
 -   Dadurch können wir prüfen, wie gut unsere Schätzung der Körpergröße durch eine einzelne Stichprobe gelingt.
 :::
 
@@ -203,7 +203,10 @@ STP.sd <- sd(STP)
 ### Stichprobenkennwerte
 
 ```{r, fig.height = 5, fig.width = 10, echo = F}
-## Grafische Darstellung der Körpergrößesverteilung in der Stichprobe
+### Stichprobenkennwerte
+
+```{r, fig.height = 5, fig.width = 10, echo = F}
+## Grafische Darstellung der Körpergrößenverteilung in der Stichprobe
 ggplot(data.frame(STP), aes(STP)) +
   geom_histogram(fill = "#999999") +
   geom_vline(xintercept = STP.mean, color = "#C1002B") +
@@ -249,7 +252,7 @@ ggplot(filter(STPx1000.vis, facet < 5)) +
 
 :::::: columns
 ::: {.column width="40%"}
--   Die Mittelwerte der einzelnen Stichproben streuen um den wahren Populationsmittelwert von `r round(mean(GG))` = Standardfehler (SE).
+-   Die Mittelwerte der einzelnen Stichproben streuen um den wahren Populationsmittelwert von `r round(mean(GG))` mit einem Standardfehler (SE).
 
 -   SE = $SD(x)/\sqrt(n-1)$, den wir anhand **einer** Stichprobe berechnen können, als Schätzer für die Streuung der Stichprobenmittelwerte.
 
@@ -371,7 +374,7 @@ a1 + a2
 ## Die Welt der Nullhypothese?
 
 -   Im Gegensatz zu den unendlich vielen Alternativhypothesen, die man haben kann, gibt es immer nur eine Nullhypothese.
-    -   Es besteht kein Unterschied/Abhängigekeit zwischen Gruppen oder Variablen.
+    -   Es besteht kein Unterschied/Abhängigkeit zwischen Gruppen oder Variablen.
 -   Von fast allen Verfahren (T-Test, Korrelation, Chi-Quadrat-Test, etc.) wissen wir, wie die "Welt der Nullhypothese aussieht.
 -   Wir prüfen Stichprobenkennwerte daraufhin, wie häufig oder wahrscheinlich sie in der Welt der Nullhypothese sind.
 -   Diese Wahrscheinlichkeit ist der p-Wert.
@@ -385,7 +388,7 @@ a1 + a2
 
 ## Was bedeutet der p-Wert **nicht**?
 
--   **p(Daten\|H1)**: Die Wahrscheinlichkeit, die empirischen Daten zu beoachten, wenn die Alternativhypothese gilt.
+-   **p(Daten\|H1)**: Die Wahrscheinlichkeit, die empirischen Daten zu beobachten, wenn die Alternativhypothese gilt.
 
 -   **p(H0\|Daten)**: Die Wahrscheinlichkeit für die Richtigkeit der Nullhypothese im Lichte der Daten.
 
@@ -650,7 +653,7 @@ $$
 Y_i = b_0 + b_1 X_1 + + b_2 X_2 + b_3 X_3 + ... + \epsilon_i
 $$
 
--   weil der Modell eine lineare Gleichung ist, können wir problemlos mehrere Prädikorvariablen $X$ hinzufügen
+-   weil der Modell eine lineare Gleichung ist, können wir problemlos mehrere Prädiktorvariablen $X$ hinzufügen
 -   Outcome $Y$ als eine (gewichtete) Linearkombination der Prädiktorvariablen $X_1$ ... $X_k$
 -   Parameter $b_1$, $b_2$, $b3$ ... sind die Gewichte, mit denen die Prädiktoren $X$ zur Vorhersage von $Y$ beitragen
 -   Interpretation von jedem $b$ ist dieselbe wie im bivariaten Fall
@@ -1222,7 +1225,7 @@ top |>
 
 ## Studienleistung, Teil 1
 
-(1) Interpretieren sie die Ergebnisse der **beiden** linearen Modelle, in denen die Mittelwertunterschiede getestet werden, Zeile für Zeile.
+(1) Interpretieren Sie die Ergebnisse der **beiden** linearen Modelle, in denen die Mittelwertunterschiede getestet werden, Zeile für Zeile.
 
 (2) Welche Dekaden werden *nicht* miteinander verglichen, d.h. für diese bräuchten wir Post-Hoc Vergleiche?
 
@@ -1466,7 +1469,7 @@ sjPlot::plot_model(m2_media, type = "std") + labs(
 -   **Konsequenz der Verletzung**: verzerrte Regressionskoeffizienten
 -   **Lösung**: Transformation von $X$ oder $Y$, nichtlineares Regressionsmodell, Moderationsanalyse mit $Z$
 
-## Homoskedastizizät der Residuen
+## Homoskedastizität der Residuen
 
 -   **Annahme**: Residualvarianz ist für alle Werte von $X$ gleich
 -   **Diagnose**: Fitted/Residual-Plots
@@ -1806,7 +1809,7 @@ preds_age_gender |>
 
 ## Take Home #2
 
-Replizieren sie eine Regressionsanalyse aus van Erkel & van Aelst (2021) mit R oder SPSS oder anderer Software
+Replizieren Sie eine Regressionsanalyse aus van Erkel & van Aelst (2021) mit R oder SPSS oder anderer Software
 
 -   Studierende mit gerader Matrikelnummer: Tabelle 5
 
@@ -1814,7 +1817,7 @@ Replizieren sie eine Regressionsanalyse aus van Erkel & van Aelst (2021) mit R o
 
 -   Der Datensatz ist in `data/VanErkel_vanAelst2021.sav` und enthält alle nötigen Variablen.
 
--   Machen sie einen Screenshot der Regressionstabelle als PNG oder JPG und laden Sie diesen in Moodle hoch.
+-   Machen Sie einen Screenshot der Regressionstabelle als PNG oder JPG und laden Sie diesen in Moodle hoch.
 
 -   Deadline: 25.06.2025, 10h
 
@@ -1841,7 +1844,7 @@ model_table(m1)
 -   der Effekt von X auf Y hängt von Moderatorvariable Z ab ("wird von Z moderiert")
 -   die Größe und die Richtung des Regressionskoeffizienten ist davon abhängig, welche Ausprägung Z hat
 -   Beispiele:
-    -   Experimente mit min. 2 Faktoren, die sich gegenseitig beeiflussen
+    -   Experimente mit min. 2 Faktoren, die sich gegenseitig beeinflussen
     -   Effektheterogenität in verschiedenen Subgruppen der Stichprobe
 -   Effektheterogenität aktuell en vogue (person-specific media effects, Valkenburg et al., 2021), aber theoretisch und empirisch ggf. problematisch (Healy, 2017; Vuorre et al., 2022)
 
@@ -2604,11 +2607,11 @@ lm(Share ~ Type + Interesting + Type:Interesting, data = altay22) |>
 
 Level-1-Einheiten gehören zu/sind geschachtelt in Level-2-Einheiten.
 
-* Schüler geschachtelt in Klassen oder Schulen
+* Schüler*innen geschachtelt in Klassen oder Schulen
 * Beiträge geschachtelt in Nachrichtenoutlets, Accounts, Ausgaben oder Sendungen
 * Messungen geschachtelt in Personen (Personen sind Level-2!)
 
-- Daten können auch auf mehr als zwei hierarchischen Ebenen (Schüler, Klasse, Schule) geschachtelt oder kreuzklassifiziert sein
+- Daten können auch auf mehr als zwei hierarchischen Ebenen (Schüler*innen, Klasse, Schule) geschachtelt oder kreuzklassifiziert sein
 - bei kreuzklassifizierten Daten gehören Level-1-Einheiten zu min. zwei verschiedenen Kontexten (z.B. Bewertungen von Werbespots gehören zu bewertenden Personen und bewerteten Spots)
 
 ## Warum Multilevel-Modelle?
@@ -2807,7 +2810,7 @@ model_table(m3_research_fans, fixed = T)
 
 ## Take-Home #3
 
-- in den Studien von Altay et al. (2022) haben ale TeilnehmerInnen *mehrere* Artikel bewertet
+- in den Studien von Altay et al. (2022) haben alle TeilnehmerInnen *mehrere* Artikel bewertet
 - Unabhängigkeit der Bewertungen ist damit klar verletzt, unsere Single-Level-Analysen eigentlich nicht korrekt
 - der ICC ist mit .45 sehr groß, d.h. Bereitschaft, einen Beitrag zu teilen, hängt erheblich von der Person, nicht (nur) vom Beitrag ab
 
