@@ -13,7 +13,7 @@ source(here::here("funcs.R"))
 start_date = as.Date("2026-04-14")
 end_date = as.Date("2026-07-07")
 no_classes = as.Date(c("2025-04-21", "2025-06-09"))
-topics = "Einführung (keine Sitzung), Themen, CCS: Simulation, Forschungsfragen & Hypothesen, Studiendesign und Stichprobe*, CCS: Stimuluserstellung*, 
+topics = "Einführung, Themen, CCS: Simulation, Forschungsfragen & Hypothesen, Studiendesign und Stichprobe*, CCS: Stimuluserstellung*, 
 Messung & Fragebogen*, CCS: Soscisurvey*, Pretest, Feldphase, Ergebnisaufbereitung, Abschluss" |> str_split_1(", ") |> str_squish()
 ```
 
@@ -42,7 +42,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 ### Literatur
 
-@koch2019 [Kap. 1, 2]
+@koch2025 [Kap. 1, 2]
 
 ### Aufgabe zur nächsten Sitzung
 
@@ -86,7 +86,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 ### Literatur
 
-@koch2019 [Kap. 2 und 3]
+@koch2025 [Kap. 2 und 3]
 
 ### Aufgabe zur nächsten Sitzung
 
@@ -103,7 +103,7 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 ### Literatur
 
-@koch2019 [Kap. 5 und 6]
+@koch2025 [Kap. 5 und 6]
 
 ### Aufgabe zur nächsten Sitzung
 

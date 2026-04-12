@@ -60,7 +60,7 @@ Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sic
 
 -   Protokollierung der Diskussionsprozesse in der AG
 -   Vorbereitung einer Kurzpräsentation (5 min) mit 3-4 Folien
--   Upload von Folien spätestens Mo 8h, Präsentation in der Sitzung
+-   Upload von Folien spätestens Di 8h, Präsentation in der Sitzung
 
 ## Themen
 
@@ -78,6 +78,13 @@ Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sic
 -   gern paarweise arbeiten, das hilft in der Sitzung und macht mehr Spaß
 -   Lernziel ist, grundlegende Methoden kennenzulernen und Sachen einfach auszuprobieren
 
+## Aufgabe: aktuelle Experimentalforschung
+
+- Recherchieren Sie je eine aktuelle Experimentalstudie in der Kommunikationswissenschaft
+- Grundlagen sind die Top 20 Journals nach Scimago Ranking <https://www.scimagojr.com/journalrank.php?area=3300&category=3315>
+- besprechen Sie die Studie paarweise und fassen Sie in max. einer Minute (!) zusammen: Thema, Forschungsfrage, Experimentaldesign und -bedingungen, Outcome-Variablen, Ergebnisse, Fazit
+- finden Sie min. einen offensichtlichen Kritikpunkt
+
 ## Aufgaben zur nächsten Sitzung
 
 ### Grundlagen wiederholen
@@ -88,17 +95,16 @@ Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sic
 
 ## Experiment vorschlagen
 
--   Schauen Sie die auf Moodle hochgeladenen Beispielstudien zur Inspiration an.
 -   Überlegen Sie, was Sie gern experimentell untersuchen wollen. Die Machbarkeit ist erst einmal sekundär.
 -   Fassen Sie Ihre Überlegungen auf max. 1/2 A4-Seite zusammen. Diese stellen Sie in der nächsten Sitzung mündlich kurz vor.
--   Relevant sind grob Thema, Versuchsbedingen, Outcome-Variablen
+-   Relevant sind grob Thema, Versuchsbedingungen, Outcome-Variablen
 
 ## Literatur
 
 ::: {layout-ncol="2"}
-Koch, T., Peter, C., & Müller, P. (2019). *Das Experiment in der Kommunikations- und Medienwissenschaft*. Grundlagen, Durchführung und Auswertung experimenteller Forschung. Wiesbaden: Springer VS.
+Koch, T., Seeger, C., & Müller, P. (2025). *Das Experiment in der Kommunikations- und Medienwissenschaft*. Grundlagen, Durchführung und Auswertung experimenteller Forschung. 2. Auflage. Wiesbaden: Springer VS.
 
-![](https://media2.hugendubel.de/shop/coverscans/310/31053865_9783658197537_xl.jpg){width="480"}
+![](koch25.png){width="480"}
 :::
 
 # Sitzung 2 {#s2}
@@ -334,7 +340,7 @@ lmer(answer_friendly ~ text * emoji + (1|agent_agent_name), data = d) %>%
 
 ## Kausalität im Experiment
 
-![Quelle: @koch2019](images/kausal_koch.png)
+![Quelle: @koch2025](images/kausal_koch.png)
 
 ## Problem 2: Mediation und indirekte Effekte
 
@@ -414,11 +420,11 @@ lmer(answer_friendly ~ text * emoji + (1|agent_agent_name), data = d) %>%
 
 ## Experimentalfaktoren
 
-![Quelle: @koch2019](images/clipboard-1783332828.png)
+![Quelle: @koch2025](images/clipboard-1783332828.png)
 
 ## Between- und Within-Subject-Design
 
-![Quelle: @koch2019](images/clipboard-2151872876.png)
+![Quelle: @koch2025](images/clipboard-2151872876.png)
 
 ## Studiendesign und stat. Power
 
