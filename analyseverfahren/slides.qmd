@@ -24,7 +24,7 @@ csl: https://www.zotero.org/styles/apa
 
 -   Studierende werden dazu befähigt, die Anwendung ausgewählter Analyseverfahren nachzuvollziehen sowie entsprechende Forschungsergebnisse und Interpretationen zu verstehen.
 -   Studierende sind in der Lage, für ausgewählte Analyseverfahren anhand vorgegebener Daten Ergebnisse aus der Forschungsliteratur mittels Statistiksoftware zu reproduzieren.
--   Studierende verfügen über die die Kompetenz, Angemessenheit und Güte von methodischen Vorgehensweisen zu beurteilen.
+-   Studierende verfügen über die Kompetenz, Angemessenheit und Güte von methodischen Vorgehensweisen zu beurteilen.
 -   (Studierende finden Statistik weniger schlimm und langweilig).
 
 ## Was die Vorlesung (nicht) ist
@@ -375,7 +375,7 @@ a1 + a2
 
 -   Im Gegensatz zu den unendlich vielen Alternativhypothesen, die man haben kann, gibt es immer nur eine Nullhypothese.
     -   Es besteht kein Unterschied/Abhängigkeit zwischen Gruppen oder Variablen.
--   Von fast allen Verfahren (T-Test, Korrelation, Chi-Quadrat-Test, etc.) wissen wir, wie die "Welt der Nullhypothese aussieht.
+-   Von fast allen Verfahren (T-Test, Korrelation, Chi-Quadrat-Test, etc.) wissen wir, wie die "Welt der Nullhypothese" aussieht.
 -   Wir prüfen Stichprobenkennwerte daraufhin, wie häufig oder wahrscheinlich sie in der Welt der Nullhypothese sind.
 -   Diese Wahrscheinlichkeit ist der p-Wert.
 
@@ -979,7 +979,7 @@ Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-syst
 -   um $k$ Gruppen zu vergleichen, werden $k-1$ Prädiktor-Variablen erstellt (vor oder automatisch während der Analyse)
 -   die $k-1$ Variablen werden in das Regressionsmodell aufgenommen: $Y_i = b_0 + b_1 X_1 + b_2 X_2 + ... + b_{k-1} X_{k-1} + \epsilon_i$.
 -   in der Referenzgruppe (alle $X_1 = X_2 = ... = 0$) ergibt sich $Y = b_0$ (Intercept = Mittelwert der Referenzgruppe)
--   $b_1$ gibt (bei Dummy-Codierung) die Differenz zwischen der Gruppe 1 und der Referenzgruppe wider, $b_2$ die Differenz zwischen der Gruppe 2 und der Referenzgruppe, etc.
+-   $b_1$ gibt (bei Dummy-Codierung) die Differenz zwischen der Gruppe 1 und der Referenzgruppe wieder, $b_2$ die Differenz zwischen der Gruppe 2 und der Referenzgruppe, etc.
 -   man kann mehrere, aber **nicht alle** paarweisen Vergleiche gleichzeitig modellieren
 
 ## Dummy-Codierung 4 Gruppen
@@ -1022,7 +1022,7 @@ Beispiele: <https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-syst
 -   für kategorielle Prädiktoren kann man anhand des geschätzten Modells alle Mittelwerte paarweise vergleichen
 -   entspricht separaten T-Tests mit je zwei Gruppen
 -   aufgrund der Vielzahl einzelner Tests erhöht sich die Gefahr von Alpha-Fehlern (d.h. irrtümlich signifikante Ergebnisse)
--   p-Werte (manchmal auch die CI) sollten daher korrigiert werden sollten (vgl. Bender & Lange, 2001)
+-   p-Werte (manchmal auch die CI) sollten daher korrigiert werden (vgl. Bender & Lange, 2001)
 -   verschiedenste Korrekturverfahren möglich (Bonferroni, Hochberg), eines sollte gewählt werden
 
 ## GLM vs. t-Test/ANOVA
@@ -1343,7 +1343,7 @@ Outcome: Rezeptionswahrscheinlichkeit, Referenzkategorie: Tagging, Daten: Kümpe
 
 ## Partieller F-Test
 
--   globaler F-Test als Modellvergleich: Residualvarianz mein Modell vs. Nullmodell
+-   globaler F-Test als Modellvergleich: Residualvarianz meines Modells vs. Nullmodell
 -   partieller F-Test: Modell 1 vs. Modell 2 (wobei Modell 2 auch alle Prädiktoren von 1 enthalten muss)
 -   Interpretation, wenn der F-Test signifikant ist: Modell 2 kann sig. mehr Varianz in $Y$ erklären als Modell 1
 -   Modell 2 ist damit auch signifikant besser darin, $Y$ vorauszusagen
@@ -1550,13 +1550,13 @@ correlation::correlation(m1$model) |> summary()
 
 ![](images/confounder.png)
 
-Nicht-Berücksichtigung einer relevanten Kovariate, die $X$ *und* $Y$ beeinflusst, verzerrt den geschätzen Zusammenhang zwischen $X$ und $Y$.
+Nicht-Berücksichtigung einer relevanten Kovariate, die $X$ *und* $Y$ beeinflusst, verzerrt den geschätzten Zusammenhang zwischen $X$ und $Y$.
 
 ## Collider-Bias
 
 ![](images/collider.png)
 
-Berücksichtigung einer Kovariate, die von $X$ *und* $Y$ beeinflusst wird, verzerrt den geschätzen Zusammenhang zwischen $X$ und $Y$.
+Berücksichtigung einer Kovariate, die von $X$ *und* $Y$ beeinflusst wird, verzerrt den geschätzten Zusammenhang zwischen $X$ und $Y$.
 
 ## (Kausale) Pfadmodelle
 
@@ -2272,7 +2272,7 @@ Altay, S., De Araujo, E., & Mercier, H. (2022). “If this account is true, it i
 
 ## Take-Home Aufgabe #3
 
-1.  Stellen Sie die Ergebnisse des/der geschätzen Modells/Modelle sinnvoll tabellarisch oder grafisch dar (Screenshot reicht).
+1.  Stellen Sie die Ergebnisse des/der geschätzten Modells/Modelle sinnvoll tabellarisch oder grafisch dar (Screenshot reicht).
 2.  Beantworten Sie die Forschungsfragen anhand von Ihnen ausgewählter Kennwerte bzw. Quantities of Interest (2-3 Sätze pro Forschungsfrage)
 3.  Lösung als **PDF-Datei** bitte bis 09.07.2025, 10 Uhr in Moodle hochladen.
 
