@@ -30,7 +30,7 @@ lang: en
     -   either as traditional 3000 word research paper or
     -   alternative forms, e.g. [Scrollytelling](https://posit.co/blog/closeread-prize-winners/)
     -   fantastic example (in German): [Blaue Bücher, rosa Bücher](https://www.sueddeutsche.de/projekte/artikel/kultur/gender-wie-gleichberechtigt-sind-kinderbuecher-e970817/)
--   team work (in small teams) is more fun ad highly encouraged
+-   team work (in small teams) is more fun and highly encouraged
 
 ## English
 
@@ -83,7 +83,7 @@ knitr::kable(plan)
 
 -   the field is moving extremely fast, that means
     -   many approaches are outdated within a few years
-    -   platforms restrict access to data and prohibit distribution of replication data
+    -   platforms restrict access to data and prohibit the distribution of replication data
     -   replication of many studies is difficult
 -   starting from methods or data feels strange (and for some uncomfortable) compared to traditional empirical research
 -   you will need (and learn) coding skills at least in R, but might need Python later
@@ -116,6 +116,54 @@ knitr::kable(plan)
 
 # Session 2 {#s2}
 
+## Questions about Quarto?
+
+
+\\\
+\\\
+
+IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
+
+## Visual mode
+
+- RStudio provides a visual mode for editing
+- it enables you to work using menus and clicking
+- especially useful for citations, images and tables
+
+## References
+
+- citations in markdown are simply `@smith2022`
+- you can search and include references in visual mode, based on DOI
+- the BibTeX entry is automatically generated and added to your references file
+- similarly, there is a Zotero connector if you already use Zotero's online library
+
+## Code
+
+- for smaller documents, writing all your code in the respective chunks works fine
+- for longer documents, move the computations etc. into a separate chunk at the top, then reference only the computed objects in the document
+- alternatively: work on your code in a regular R file, and use `source("mycode.R")` in the first chunk
+- for expensive computations use either caching or write the results into a dedicated file `saveRDS(my_regression_model, "reg1.rds")`
+
+
+## Visual branding
+
+- Quarto documents can be customized either through YAML header options like `mainfont` or with a brand file
+- use a `_brand.yml` file in the same folder, which includes many visual options like colors, fonts, styles
+- works for HTML, RevealJS slides, and some parts of PDF documents
+- does *not* impact the ggplot2 graphics, for which you'd need to set theme, colors, etc. separately
+- `_brand.yml` [instructions](https://quarto.org/docs/authoring/brand.html)
+
+
+## Closeread
+
+- a Quarto extension specifically for Scrollytelling articles
+- mainly two features: stickies and focus effects (panning, scrolling, zooming, highlighting)
+- stickies can be text, regular images or computed images (e.g. ggplot2 graphics)
+- create fake animations by successively adding layers to your plot, e.g. you start with an empty plot, and add `geom_*`
+- [Closeread prize](https://posit.co/blog/closeread-prize-winners/) winners all have github repositories, so you can read and copy code
+
+# Session 3 {#s3}
+
 ## CCS Paper Potpourri
 
 -   2x 30 minutes/5 papers in the hallway
@@ -139,19 +187,19 @@ knitr::kable(plan)
     -   [summary article](https://retractionwatch.com/2025/04/28/experiment-using-ai-generated-posts-on-reddit-draws-fire-for-ethics-concerns/) and [follow up](https://retractionwatch.com/2025/04/29/ethics-committee-ai-llm-reddit-changemyview-university-zurich/)
     -   [original thread on Reddit](%3Chttps://www.reddit.com/r/changemyview/comments/1k8b2hj/meta_unauthorized_experiment_on_cmv_involving)
 
-# Session 3 {#s3}
+# Session 4 {#s4}
 
-## @salganik2018 I
+## Salganik 2018 I
 
 ![](images/sal61.png)
 
-## @salganik2018 I
+## Salganik 2018 I
 
 -   What are the main differences between Consequentialism and Deontology?
 -   How can the four mentioned ethical principles be applied to the experiment run by @munger2017?
 -   In case of doubt, what priority should these principles have among themselves?
 
-## @salganik2018 II
+## Salganik 2018 II
 
 ![](images/sal63.png)
 
@@ -176,7 +224,7 @@ knitr::kable(plan)
 -   free model (e.g. Wikipedia): everyone can get the data
 -   paid model (e.g. Twitter/X): you pay the platform or a third party for access
 -   grant model (e.g. TikTok): you can apply for access to the API as a scholar
--   collab model (e.g. Meta): you can work with the platforms on spefific research questions
+-   collab model (e.g. Meta): you can work with the platforms on specific research questions
 -   data donation model: you ask participants to donate their DDP (Data Download Packages)
 -   independent/rogue model: you access a secret API or scrape the data otherwise
 
@@ -211,7 +259,7 @@ knitr::kable(plan)
 -   Request JSON files if given the option between multiple formats
 -   Read @ohme2023
 
-# Session 4 {#s4}
+# Session 5 {#s5}
 
 ## Digital trace data
 
@@ -252,7 +300,7 @@ knitr::kable(plan)
 -   [Zeeschuimer](https://github.com/digitalmethodsinitiative/zeeschuimer) browser extension tracks exposure to specific platforms
 -   TikTok, Instagram, X/Twitter, LinkedIn, Pinterest, etc.
 -   while active, logs exposure to content, along with content metadata
--   logs can be sent to online server, or downloaded and donated manually
+-   logs can be sent to an online server, or downloaded and donated manually
 -   works well for lab experiments, linkage studies, etc. that combine use + content data
 -   requires very active participation and data management strategies
 
@@ -286,7 +334,7 @@ knitr::kable(plan)
 3.  Aggregating and processing digital trace data
 4.  Linking digital traces to survey or content data
 
-# Session 5 {#s5}
+# Session 6 {#s6}
 
 ## JSON data
 
@@ -295,7 +343,7 @@ knitr::kable(plan)
 
 ## Session detection
 
-1.  Describe the basic algorithm to detect sessions.
+1.  Describe the basic algorithm for identifying user sessions.
 2.  What assumptions do we have to make about user behavior?
 3.  How can we define sessions for (a) browser or (b) phone log files?
 
@@ -306,7 +354,7 @@ knitr::kable(plan)
 1.  What is the difference between `join()`, `left_join()` and `right_join()`?
 2.  What kinds of data would you try to combine for a research project?
 
-# Session 6 {#s6}
+# Session 7 {#s7}
 
 ## Data Collection for Content Analysis
 
@@ -485,7 +533,7 @@ tibble(
 
 ## AI-based content analysis
 
--   In this course, we use LLM/LMM for basically all content analysis tasks.
+-   In this course, we use LLM/LMM for essentially all content analysis tasks.
 -   Basic workflow is similar to manual content analysis:
     1.  Collect the content data to be coded (text, image, video, etc.).
     2.  Develop codebook with coding instructions and examples.
@@ -502,7 +550,7 @@ tibble(
 
 You need to re-download the ZIP file and data for the next sessions. Sorry!
 
-# Session 7 {#s7}
+# Session 8 {#s8}
 
 ## Questions about coding tasks?
 
@@ -519,16 +567,16 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 ## Zero-shot classification
 
--   get your API key from <https://ki-chat.uni-mainz.de/>
+-   get your API key from https://ki-chat.uni-mainz.de/
 -   try out in the regular chat interface
 
-# Session 8 {#s8}
+# Session 9 {#s9}
 
 ## Questions about coding tasks?
 
 -   string manipulation and regular expressions
 -   LLM API requests
--   structured JSON responsed and types
+-   structured JSON responses and types
 -   end-to-end coding pipelines
 
 ## Image and video coding
@@ -536,6 +584,8 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 -   Whisper transcriptions and vcsi video-to-image
 
 -   Large multimodal or visual models
+
+## Computational workflows
 
 -   How can we deal with multimodal content?
 
@@ -555,7 +605,7 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 -   deadline etc. as usual
 -   talk to me about research questions etc.
 
-# Session 9 {#s9}
+# Session 10 {#s10}
 
 ## Questions about coding tasks?
 
@@ -570,6 +620,13 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 -   data sources from Kaggle: [Netflix content](https://www.kaggle.com/datasets/shivamb/netflix-shows), [Top Spotify Songs](https://www.kaggle.com/datasets/asaniczka/top-spotify-songs-in-73-countries-daily-updated), [TMDB Movies with Credits](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata), etc.
 
+
+## Tasks for the next sessions
+
+-   Work through [data collection examples](https://stats.ifp.uni-mainz.de/ma-ccs/content-data.html)
+-   Think about your term paper
+
+# Session 11 {#s11}
 
 ## Simulation and agent-based modeling
 
@@ -640,8 +697,8 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 -   Use of an LLM as an agent ("Roleplaying")
 -   LLM supplements verbal instructions and role with verbal responses
 -   Responses depend on training data and LLM quality
--   Very few validation studies to date [@larooij2025]
--   Often relatively naive assumptions about the generalizability of results (= substitute for human agents)
+-   Very few validation studies to date [@larooij2025].
+-   Often relatively naive assumptions about the generalizability of results (i.e., treating LLMs as substitutes for human agents)
 
 ## Hype
 
@@ -664,15 +721,15 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 - Learn Quarto publishing (practical exercise in 2 weeks)
 
 
-# Session 10 {#s10}
+# Session 12 {#s12}
 
 ## Questions about coding tasks?
 
 -   scraping headlines for testing
 -   creating a persona and generating prompts
-- creating stimuli using LLM
-- generating stimulus x persona combinations
-- getting and analyzing results
+-   creating stimuli using LLM
+-   generating stimulus × persona combinations
+-   getting and analyzing results
 
 ## Writing papers with statistical analyses
 
@@ -736,59 +793,9 @@ qplot(rnorm(100))
 *   Closeread <https://closeread.dev/>
 
 
-## Tasks for  next week
+## Tasks for next week
 
 - Check my basic term paper template, modify settings, text and code, check the resulting document.
 - Collect questions you might have about how to accomplish certain tasks in Quarto.
 
 
-# Session 11 {#s11}
-
-# Questions about Quarto?
-
-
-\
-\
-
-IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
-
-## Visual mode
-
-- RStudio provides a visual mode for editing
-- it enables you to work using menus and clicking
-- especially useful for citations, images and tables
-
-## References
-
-- citations in markdown are simply `@smith2022` 
-- you can search and include references in visual mode, based on DOI
-- the Bibtex entry is automatically generated and added to your references file
-- similarly, there is a Zotero connector if you already use Zotero's online library
-
-## Code
-
-- for smaller documents, writing all your code in the respective chunks works fine
-- for longer documents, move the computations etc. into a separate chunk at the top, then reference only the computed objects in the document
-- alternatively: work on your code in a regular R file, and use `source("mycode.R")` in the first chunk
-- for expensive computations use either caching or write the results into a dedicated file `saveRDS(my_regression_model, "reg1.rds")` 
-
-
-## Visual branding
-
-- Quarto documents can be customized either through YAML header options like `mainfont` or with a brand file
-- use a `_brand.yml` file in the same folder, which includes many visual options like colors, fonts, styles
-- works for HTML, RevealJS slides, and some parts of PDF documents
-- does *not* impact the ggplot2 graphics, for which you'd need to set theme, colors, etc. separately
-- `_brand.yml` [instructions](https://quarto.org/docs/authoring/brand.html)
-
-
-## Closeread
-
-- a Quarto extension specifically for Scrollytelling articles
-- mainly two features: stickies and focus effects (panning, scrolling, zooming, highlighting)
-- stickies can be text, regular images or computed images (e.g. ggplot2 graphics)
-- create fake animations by successively adding layers to your plot, e.g. you start with an empty plot, and add `geom_*`
-- [Closeread prize](https://posit.co/blog/closeread-prize-winners/) winners all have github repositories, so you can read and copy code
-
-
-## References

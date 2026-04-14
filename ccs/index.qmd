@@ -49,13 +49,20 @@ Select a study on Moodle and repare a poster (A1) for the study you selected.
 
 ## Session 2 <a class="bi bi-easel-fill" href="slides.html#/s2" alt="Slides"></a> {#2}
 
+
+
+## Session 3 <a class="bi bi-easel-fill" href="slides.html#/s3" alt="Slides"></a> {#3}
+
 ### Topics
 
 Poster Session: Interesting studies in computational communication science.
 
 
-## Session 3 <a class="bi bi-easel-fill" href="slides.html#/s3" alt="Slides"></a> {#3}
 
+
+
+
+## Session 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Slides"></a> {#4}
 ### Topics
 
 -   Basic of research ethics
@@ -71,7 +78,7 @@ Poster Session: Interesting studies in computational communication science.
 Refresh your R skills.
 
 
-## Session 4 <a class="bi bi-easel-fill" href="slides.html#/s4" alt="Slides"></a> {#4}
+## Session 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Slides"></a> {#5}
 
 ### Topics
 
@@ -88,7 +95,9 @@ Refresh your R skills.
 1. Complete the [first coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/individual-trace-data.html) in R. 
 2. Work through the [second chapter on digital trace data](https://stats.ifp.uni-mainz.de/ma-ccs/aggregate-trace-data.html) in R.
 
-## Session 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Slides"></a> {#5}
+
+
+## Session 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Slides"></a> {#6}
 
 ### Topics
 
@@ -100,7 +109,10 @@ Refresh your R skills.
 @douglasparry2025;@clemmvonhohenberg2024
 
 
-## Session 6 <a class="bi bi-easel-fill" href="slides.html#/s6" alt="Slides"></a> {#6}
+
+
+## Session 7 <a class="bi bi-easel-fill" href="slides.html#/s7" alt="Slides"></a> {#7}
+
 
 ### Topics
 
@@ -115,8 +127,7 @@ Refresh your R skills.
 
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/content-data.html) in R. 
 
-
-## Session 7 <a class="bi bi-easel-fill" href="slides.html#/s7" alt="Slides"></a> {#7}
+## Session 8 <a class="bi bi-easel-fill" href="slides.html#/s8" alt="Slides"></a> {#8}
 
 ### Topics
 
@@ -131,7 +142,10 @@ Refresh your R skills.
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/automatic-text-analysis.html) in R. 
 
 
-## Session 8 <a class="bi bi-easel-fill" href="slides.html#/s8" alt="Slides"></a> {#8}
+
+
+
+## Session 9 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Slides"></a> {#9}
 
 ### Topics
 
@@ -146,7 +160,8 @@ Refresh your R skills.
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/automatic-image-analysis.html) in R. 
 
 
-## Session 9 <a class="bi bi-easel-fill" href="slides.html#/s9" alt="Slides"></a> {#9}
+
+## Session 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Slides"></a> {#10}
 
 ### Topics
 
@@ -161,25 +176,17 @@ Refresh your R skills.
 1. Complete the [next coding assignments](https://stats.ifp.uni-mainz.de/ma-ccs/generative-agents.html) in R. 
 
 
-## Session 10 <a class="bi bi-easel-fill" href="slides.html#/s10" alt="Slides"></a> {#10}
+## Session 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Slides"></a> {#11}
+
 
 ### Topics
 
 - simulation and generative agents
 - quarto publishing
 
-### Tasks for the next session
-
-1. Check example paper qmd file.
-
-
-## Session 11 <a class="bi bi-easel-fill" href="slides.html#/s11" alt="Slides"></a> {#11}
-
-### Topics
-
-- quarto documents with branding
-- closeread extension
 
 ### Tasks for the next session
 
 1. Bring all your term-paper questions.
+
+## Session 12 <a class="bi bi-easel-fill" href="slides.html#/s12" alt="Slides"></a> {#12}
