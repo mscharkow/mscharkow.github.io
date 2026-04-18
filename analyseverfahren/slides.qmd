@@ -16,9 +16,9 @@ csl: https://www.zotero.org/styles/apa
 
 ## Warum (noch) eine Vorlesung zur Statistik?
 
--   **Literacy**: Wenn man aktuelle Forschung lesen möchte (oder muss), führt kein Weg an etwas komplexeren Analysen vorbei
--   **Selbstwirksamkeit**: Wer einmal eine Analyse durchgeführt hat, kann in Seminar- und Abschlussarbeiten besser Daten auswerten
--   **Jobaussichten**: Viele AbsolventInnen berichten rückblickend, dass gerade die Methodenskills am besten verwertbar waren bei der Jobsuche und im Beruf
+-   **Literacy**: wenn man aktuelle Forschung lesen möchte (oder muss), führt kein Weg an etwas komplexeren Analysen vorbei
+-   **Selbstwirksamkeit**: wer einmal eine Analyse durchgeführt hat, kann in Seminar- und Abschlussarbeiten besser Daten auswerten
+-   **Jobaussichten**: viele AbsolventInnen berichten rückblickend, dass gerade die Methodenskills am besten verwertbar waren bei der Jobsuche und im Beruf
 
 ## Ziele der Vorlesung
 
@@ -62,7 +62,7 @@ knitr::kable(plan[7:12, ])
 
 ### Material
 
--   Folien und Übungsmaterialien samt Daten und R-Code auf <br/> <https://stats.ifp.uni-mainz.de/ba-aa-vl>
+-   Übungsmaterialien samt Daten und R-Code auf <br/> <https://stats.ifp.uni-mainz.de/ba-aa-vl>
 
 ### Studienleistung
 
@@ -79,24 +79,6 @@ knitr::kable(plan[7:12, ])
 -   praktische Anwendung als integraler Teil der Vorlesung und der Studienleistung
 -   Copy & Paste/Anpassung von bestehendem Code ist ok!
 
-## Software
-
--   in der VL vorgestellten Analysen lassen sich mit praktisch jeder Statistiksoftware reproduzieren
--   jede Statistiksoftware ist nur ein Werkzeug
--   Lektürekompetenz heißt auch, man kann sowohl SPSS als auch Stata oder R-Output lesen
--   wegen Verfügbarkeit und Zukunftsfähigkeit verwende ich R
-
-### Für die Studienleistung ist irrelevant, welche Software Sie verwenden!
-
-## Warum muss ich jetzt auch noch R lernen?
-
--   **Sie müssen nicht!**
--   R ist freie Software und durch viele tausend Pakete (packages) erweiterbar, u.a. für
-    -   Datenerhebung: Web-Scraping, APIs (z.B. für TikTok oder Spotify), Textdaten
-    -   Auswertung: Statistik, Textanalyse, Audiodaten, Psychophysiologie, etc.
-    -   Datenpräsentation und -visualisierung: Grafiken, Berichte, Folien (z.B. diese)
--   grundlegende Programmierkenntnisse, die auch ohne Statistik nützlich sein können
--   das IfP hat auf R umgestellt, siehe Kurz-Websites <https://stats.ifp.uni-mainz.de/>
 
 ## Kleines R-Beispiel: Breaking Bad Deaths
 
@@ -144,19 +126,19 @@ Interpretieren Sie die folgenden Analysen:
 
 > "Die Inferenzstatistik (d.h. schließende Statistik) beschäftigt sich mit der Frage, wie man aufgrund von Stichprobendaten auf Sachverhalte in einer zugrundeliegenden Population schließen kann." (Eid et al., 2010, p. 191)
 
--   Uns interessieren Verfahren für die statistische **Punkt**- und **Intervallschätzung**
--   Die Verfahren basieren auf bestimmten Annahmen über die Stichprobe und Variable(n)
--   Klassische (asymptotische) Inferenzstatistik basiert auf ausreichend großen Zufallsstichproben
--   Alternative Ansätze, wie z.B. Bootstrapping, kommen mit weniger strengen Annahmen aus, sind dafür aber weniger mathematisch abgesichert und elegant
+-   Verfahren für die statistische **Punkt**- und **Intervallschätzung**
+-   basieren auf bestimmten Annahmen über die Stichprobe und Variable(n)
+-   klassische (asymptotische) Inferenzstatistik basiert auf ausreichend großen Zufallsstichproben
+-   alternative Ansätze, wie z.B. Bootstrapping, kommen mit weniger strengen Annahmen aus, sind dafür aber weniger mathematisch abgesichert und elegant
 
-## Ein simuliertes Beispiel
+## Simuliertes Beispiel
 
 :::::: columns
 ::: {.column width="40%"}
 ### Simulation
 
--   Wir simulieren die Körpergröße in der Grundgesamtheit von N = 1200 Studierenden am IfP
--   Dadurch können wir prüfen, wie gut unsere Schätzung der Körpergröße durch eine einzelne Stichprobe gelingt
+-   wir simulieren die Körpergröße in der Grundgesamtheit von N = 1200 Studierenden am IfP
+-    wir prüfen, wie gut unsere Schätzung der Körpergröße durch eine einzelne Stichprobe gelingt
 :::
 
 ::: {.column width="10%"}
@@ -192,8 +174,8 @@ STP.mean <- mean(STP)
 STP.sd <- sd(STP)
 ```
 
--   Wir ziehen **eine** Zufallsstichprobe von n = 30 Studierenden und erheben deren Körpergröße
--   In dieser Stichprobe beträgt die mittlere Körpergröße M = `r round(STP.mean)` (SD = `r round(STP.sd)`)
+-   wir ziehen **eine** Zufallsstichprobe von n = 30 Studierenden und erheben deren Körpergröße
+-   in dieser Stichprobe beträgt die mittlere Körpergröße M = `r round(STP.mean)` (SD = `r round(STP.sd)`)
 :::
 
 ::: {.column width="10%"}
@@ -203,10 +185,6 @@ STP.sd <- sd(STP)
 ### Stichprobenkennwerte
 
 ```{r, fig.height = 5, fig.width = 10, echo = F}
-### Stichprobenkennwerte
-
-```{r, fig.height = 5, fig.width = 10, echo = F}
-## Grafische Darstellung der Körpergrößenverteilung in der Stichprobe
 ggplot(data.frame(STP), aes(STP)) +
   geom_histogram(fill = "#999999") +
   geom_vline(xintercept = STP.mean, color = "#C1002B") +
@@ -219,9 +197,10 @@ ggplot(data.frame(STP), aes(STP)) +
 
 :::::: columns
 ::: {.column width="40%"}
--   Asymptotische Inferenz basiert auf der Annahme, dass die Mittelwerte **vieler** Stichproben derselben Grundgesamtheit normalverteilt sind
+-   asymptotische Inferenz basiert auf der Annahme, dass die Mittelwerte **vieler** Stichproben derselben Grundgesamtheit normalverteilt sind
 -   wir ziehen 1000 Stichproben mit jeweils n = 30
--   Blau: Mittelwert in der Grundgesamtheit, Rot: Mittelwert in der einzelnen Stichprobe
+-   blau: Mittelwert in der Grundgesamtheit
+-   rot: Mittelwert in der einzelnen Stichprobe
 :::
 
 ::: {.column width="10%"}
@@ -252,7 +231,7 @@ ggplot(filter(STPx1000.vis, facet < 5)) +
 
 :::::: columns
 ::: {.column width="40%"}
--   Die Mittelwerte der einzelnen Stichproben streuen um den wahren Populationsmittelwert von `r round(mean(GG))` mit einem Standardfehler (SE)
+-   die Mittelwerte der einzelnen Stichproben streuen um den wahren Populationsmittelwert von `r round(mean(GG))` mit einem Standardfehler (SE)
 
 -   SE = $SD(x)/\sqrt(n-1)$, den wir anhand **einer** Stichprobe berechnen können, als Schätzer für die Streuung der Stichprobenmittelwerte
 
@@ -270,8 +249,8 @@ ggplot(data.frame(STPx1000.mean)) +
   labs(title = "Mittelwerte aus 1000 Stichproben mit n = 30", x = paste0("Körpergröße (M(GG) = ", round(mean(GG), 0), ", SD = ", round(sd(STPx1000.mean), 1)))
 ```
 
--   Bei unseren 1000 simulierten Stichproben ist der Mittelwert der Mittelwerte M = `r round(mean(STPx1000.mean), 1)`
--   Die Standardabweichung der Mittelwerte ist SE = `r round(sd(STPx1000.mean),1)`
+-   bei den 1000 simulierten Stichproben ist der Mittelwert der Mittelwerte M = `r round(mean(STPx1000.mean), 1)`
+-    Standardabweichung der Mittelwerte: SE = `r round(sd(STPx1000.mean),1)`
 :::
 ::::::
 
@@ -279,9 +258,9 @@ ggplot(data.frame(STPx1000.mean)) +
 
 :::::: columns
 ::: {.column width="40%"}
--   Stichprobentheorie sagt uns wie bestimmte Kennwerte (z.B. Mittelwerte) in unendlich wiederholten Stichproben verteilt sind
--   Diese Information können wir mit den Schätzern aus *einer* Stichprobe kombinieren
--   Darauf basieren die Intervallschätzung und Hypothesentests
+-   Stichprobentheorie sagt uns, wie bestimmte Kennwerte (z.B. Mittelwerte) in unendlich wiederholten Stichproben verteilt sind
+-   dieses Wissen können wir mit den Schätzern aus *einer* Stichprobe kombinieren
+-   darauf basieren die Intervallschätzung und Hypothesentests
 :::
 
 ::: {.column width="10%"}
@@ -306,8 +285,8 @@ ggplot(data.frame(x = STPx1000.mean), aes(x)) +
 :::::: columns
 ::: {.column width="40%"}
 -   basieren auf der Annahme, dass ein Schätzer einer bestimmten Verteilung folgt
--   Bei einer Standardnormalverteilung (M = 0, SD = 1) liegen 95% aller Werte zwischen -1,96 und 1,96
--   Wenn wir M und SE einsetzen, bekommen wir ein 95%-CI für den Mittelwert, d.h. M - 1.96xSE und M + 1.96xSE
+-   bei einer Standardnormalverteilung (M = 0, SD = 1) liegen 95% aller Werte zwischen -1,96 und 1,96
+-   wenn wir M und SE einsetzen, bekommen wir ein 95%-CI für den Mittelwert, d.h. M - 1.96xSE und M + 1.96xSE
 :::
 
 ::: {.column width="10%"}
@@ -334,11 +313,11 @@ gg_df |>
 
 ## Interpretation eines Konfidenzintervalls
 
--   Ein 95%-Konfidenzintervall bedeutet: in 95 Prozent aller denkbaren Stichproben würde das Konfidenzintervall den wahren Populationswert enthalten
--   Die Wahrscheinlichkeit, den wahren Wert zu enthalten, bezieht sich auf die **Konstruktion** von Konfidenzintervallen, nicht auf ein einzelnes Intervall
--   Wir wissen aber bei einer einzigen, konkreten Stichprobe **nicht**, ob unser Konfidenzintervall den wahren Wert enthält
--   Aber wir sind **zuversichtlich** ("confident"), dass unsere Stichprobe zu den 95% "Treffern" gehört, nicht zu den 5% Abweichlern
--   Wenn der Wert unter der Nullhypothese nicht im Konfidenzintervall liegt, bezeichnen wir das Ergebnis als statistisch signifikant
+-   95%-Konfidenzintervall: in 95 Prozent aller denkbaren Stichproben würde das Konfidenzintervall den wahren Populationswert enthalten
+-   die Wahrscheinlichkeit, den wahren Wert zu enthalten, bezieht sich auf die **Konstruktion** von Konfidenzintervallen, nicht auf ein einzelnes Intervall
+-   wir wissen aber bei einer einzigen, konkreten Stichprobe **nicht**, ob unser Konfidenzintervall den wahren Wert enthält
+-   aber wir sind **zuversichtlich** ("confident"), dass unsere Stichprobe zu den 95% "Treffern" gehört, nicht zu den 5% Abweichlern
+-   wenn der Wert unter der Nullhypothese nicht im Konfidenzintervall liegt, bezeichnen wir das Ergebnis als statistisch signifikant
 
 ## Abdeckung der Konfidenzintervalle
 
@@ -371,29 +350,26 @@ library(patchwork)
 a1 + a2
 ```
 
-## Die Welt der Nullhypothese?
+## Die Welt der Nullhypothese
 
--   Im Gegensatz zu den unendlich vielen Alternativhypothesen, die man haben kann, gibt es immer nur eine Nullhypothese
-    -   Es besteht kein Unterschied/Abhängigkeit zwischen Gruppen oder Variablen.
--   Von fast allen Verfahren (T-Test, Korrelation, Chi-Quadrat-Test, etc.) wissen wir, wie die "Welt der Nullhypothese" aussieht
--   Wir prüfen Stichprobenkennwerte daraufhin, wie häufig oder wahrscheinlich sie in der Welt der Nullhypothese sind
--   Diese Wahrscheinlichkeit ist der p-Wert
+-   im Gegensatz zu den unendlich vielen Alternativhypothesen, die man haben kann, gibt es immer nur **eine Nullhypothese**
+    -   "Es besteht kein Unterschied/Abhängigkeit zwischen Gruppen oder Variablen."
+-   von fast allen Verfahren (T-Test, Korrelation, Chi-Quadrat-Test, etc.) wissen wir, wie die "Welt der Nullhypothese" aussieht
+-   Prüfung der Stichprobenkennwerte daraufhin, wie häufig oder wahrscheinlich sie in der Welt der Nullhypothese sind
+-   diese Häufigkeit/Wahrscheinlichkeit ist der p-Wert
 
 ## Was bedeutet der p-Wert?
 
 **p(Daten\|H0)**
 
 -   Der p-Wert ist die bedingte Wahrscheinlichkeit, die empirischen Daten (z.B. eine Mittelwertdifferenz zwischen zwei Gruppen) zu beobachten, wenn die Nullhypothese in der Grundgesamtheit gilt
--   Beispiel bei einem t-Test für eine Mittelwertdifferenz erhalten wir einen p-Wert von p = .08. Das bedeutet, wir würden in 8 von 100 Fällen eine mindestens gleich große Differenz beobachten, auch wenn in der Grundgesamtheit gar kein Unterschied ist
+-   Beispiel: bei einem t-Test für eine Mittelwertdifferenz erhalten wir einen p-Wert von p = .08. Das bedeutet, wir würden in 8 von 100 Fällen eine mindestens gleich große Differenz beobachten, auch wenn in der Grundgesamtheit gar kein Unterschied ist
 
 ## Was bedeutet der p-Wert **nicht**?
 
 -   **p(Daten\|H1)**: Die Wahrscheinlichkeit, die empirischen Daten zu beobachten, wenn die Alternativhypothese gilt
-
 -   **p(H0\|Daten)**: Die Wahrscheinlichkeit für die Richtigkeit der Nullhypothese im Lichte der Daten
-
 -   **p(H1\|Daten)**: Die Wahrscheinlichkeit für die Richtigkeit der Alternativhypothese im Licht der Daten
-
 -   Der p-Wert sagt also **nichts** über die Wahrscheinlichkeit der Null- **oder** Alternativhypothese!
 
 außerdem:
@@ -403,11 +379,11 @@ außerdem:
 
 ## Was bedeutet dann statistische Signifikanz?
 
--   Wir nennen ein Ergebnis statistisch signifikant, wenn $p < \alpha$, wobei $\alpha$ das zuvor angenommene Signifikanzniveau ist
--   Zwei mögliche Ursachen:
-    -   Die Nullhypothese gilt, aber wir beobachten zufällig ein sehr seltenes Ereignis *oder*
-    -   Die Nullhypothese gilt nicht. (Das heißt nicht, die Alternativhypothese gilt.)
--   Wenn $p < .05$, sind wir zuversichtlich, dass unsere Stichprobe nicht zu den 5% Abweichlern in der Welt der Nullhypothese gehört, sondern einfach die Nullhypothese nicht stimmt
+-   Ergebnis ist statistisch signifikant, wenn $p < \alpha$, wobei $\alpha$ das zuvor angenommene Signifikanzniveau ist
+-   zwei mögliche Ursachen:
+    -   Nullhypothese gilt, aber wir beobachten zufällig ein sehr seltenes Ereignis *oder*
+    -   Nullhypothese gilt nicht. (Das heißt **nicht**, die Alternativhypothese gilt.)
+-   wenn $p < .05$, sind wir zuversichtlich, dass unsere Stichprobe nicht zu den 5% Abweichlern in der Welt der Nullhypothese gehört, sondern einfach die Nullhypothese nicht stimmt
 
 # Fehler in der Inferenz
 
@@ -419,9 +395,9 @@ außerdem:
 
 :::::: columns
 ::: {.column width="40%"}
--   Ein $\alpha = .05$ bedeutet, dass wir in 5 von 100 Fällen ein signifikantes Ergebnis bekommen, obwohl die Nullhypothese gilt
--   Mit unseren 1000 Stichproben und $\mu_0 = 170$ sollten wir beim T-Test grob 50 fälschlich signifikante Ergebnisse bekommen
--   Fehler ist abhängig von $\alpha$, aber unabhängig von den Daten und der konkreten $H_0$
+-   $\alpha = .05$ bedeutet, dass wir in 5 von 100 Fällen ein signifikantes Ergebnis bekommen, obwohl die Nullhypothese gilt
+-   mit unseren 1000 Stichproben und $\mu_0 = 170$ sollten wir ca. 50 fälschlich signifikante Ergebnisse bekommen
+-   Alpha-Fehler ist abhängig von $\alpha$, aber unabhängig von den Daten und der konkreten $H_0$
 :::
 
 ::: {.column width="10%"}
@@ -446,9 +422,9 @@ außerdem:
 
 ## Beta-Fehler und statistische Power
 
--   Um Beta-Fehler (H0 wird fälschlich angenommen) zu verringern, brauchen wir statistische Power bzw. Präzision (vgl. Konfidenzintervalle)
--   Um die Power/Präzision eines Tests/einer Schätzung zu erhöhen, muss man zumeist die Stichprobengröße erhöhen
--   Per Umstellung der SE-Formel kann man die nötige Stichprobengröße für erwartete Schätzer berechnen
+-   um Beta-Fehler (H0 wird fälschlich angenommen) zu verringern, brauchen wir statistische Power bzw. Präzision (vgl. Konfidenzintervalle)
+-   um die Power/Präzision eines Tests/einer Schätzung zu erhöhen, muss man zumeist die Stichprobengröße erhöhen
+-   per Umstellung der SE-Formel kann man die nötige Stichprobengröße für erwartete Schätzer berechnen
 
 ::: {layout-ncol="2"}
 ```{r}
@@ -490,9 +466,9 @@ Inferenzstatistik ‚funktioniert', weil...
 
 -   Hypothesentests als stumpfe Rituale mit dem Ziel, p \< .05 zu erhalten
 -   von Konvention zum reinen Selbstzweck (Signifikanz = gut, keine = schlecht)
--   Das sog. **p-Hacking** bedeutet, die Daten und Analysen so zu frisieren, bis ein stat. signifikantes Ergebnis erscheint
+-   sog. **p-Hacking** bedeutet, die Daten und Analysen so zu frisieren, bis ein stat. signifikantes Ergebnis erscheint
 -   Signifikanz sagt nichts über substanzielle Bedeutung!
--   Bitte in Zukunft beachten:
+-   bitte in Zukunft beachten:
     -   Nicht p-hacken, nicht im Nachhinein am Alpha-Niveau schrauben!
     -   Kein Bedauern nicht-signifikanter Ergebnisse ("leider knapp nicht signifikant")!
 

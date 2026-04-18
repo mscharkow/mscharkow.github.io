@@ -51,6 +51,7 @@ Stier, S., Mangold, F., Scharkow, M., & Breuer, J. (2020). *Do Online Intermedia
 
 Bachl, M. & Scharkow, M. (2020). *News sharing by party line? An analysis of source sharing patterns in political social media discussions.* Paper presented at the 2020 ECPR conference, Innsbruck, Austria, August.
 
+
 Mangold, F. & Scharkow, M. (2019). *The quest of building meaningful audience networks. Reconsidering and renewing the research agenda.* Paper presented at the 2019 ICA conference, Washington, DC, May.
 
 Scharkow, M. & Bachl, M. (2017). *Reinforcing spirals and the issue of stable attitudes and behavior.* Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK, Mainz, September.
@@ -74,7 +75,6 @@ Scharkow, M. & Bachl, M. (2016). *Messages Mismeasured: Minimal Media Effects as
 Vogelgesang, J. & Scharkow, M. (2016). *Evaluating the Facebook message effectiveness of Top 50 Shanghai Ranking Universities.* Paper presented at the 2016 ICA conference, Fukuoka, June.
 
 Festl, R., Vogelgesang, J., Scharkow, M., & Quandt, T. (2016). Longitudinal Patterns of Involvement in Cyberbullying: Results from a Latent Transition Analysis among Adolescents. Paper presented at the 2016 ICA conference, Fukuoka, June.
-
 
 ### 2011-2015
 
@@ -150,7 +150,8 @@ Scharkow, M., Kordes, C., & Bleuel, F. (2011). *Visual stereotypes and party aff
 
 Scharkow, M. (2011). *Online content analysis using supervised machine learning - an empirical evaluation.* Paper presented at the 2011 ICA conference, Boston, May.
 
-### 2006-2010
+
+### 2005-2010
 
 Scharkow, M. (2009). *NewsClassifier - ein integriertes Instrument zur manuellen und automatischen Erhebung und Codierung von Online-Inhalten* [An integrated instrument for the manual and automatic collection and coding of online content]. Vortrag auf der Jahrestagung der Fachgruppe Methoden der Publizistik- und Kommunikationswissenschaft der DGPuK, Mainz, September.
 

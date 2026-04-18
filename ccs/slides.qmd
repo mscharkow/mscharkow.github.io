@@ -205,33 +205,12 @@ qplot(rnorm(100))
 *   **Beyond the Basics:**
     *   **Slides:**  Create presentation slides (like these!) directly from your document.
     *   **Closeread:**  Generate scrollytelling narratives with interactive data visualizations.
+    
 
-
-## Quarto Resources
-
-*   Quarto Website: [https://quarto.org/](https://quarto.org/)
-*   Quarto Gallery: [https://gallery.quarto.org/](https://gallery.quarto.org/)
-*   Quarto R Documentation: [https://quarto.org/docs/language/r/](https://quarto.org/docs/language/r/)
-*   Closeread <https://closeread.dev/>
-
-
-## Tasks for next week
-
-- Check my basic term paper template, modify settings, text and code, check the resulting document.
-- Collect questions you might have about how to accomplish certain tasks in Quarto.
-
-
-# Questions about Quarto?
-
-IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
-
-## Visual mode
+## Scientific writing and references
 
 - RStudio provides a visual mode for editing
-- it enables you to work using menus and clicking
-- especially useful for citations, images and tables
-
-## References
+- edit document with buttons and menus, useful for citations, images and tables
 
 - citations in markdown are simply `@smith2022`
 - you can search and include references in visual mode, based on DOI
@@ -262,6 +241,15 @@ IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
 - stickies can be text, regular images or computed images (e.g. ggplot2 graphics)
 - create fake animations by successively adding layers to your plot, e.g. you start with an empty plot, and add `geom_*`
 - [Closeread prize](https://posit.co/blog/closeread-prize-winners/) winners all have github repositories, so you can read and copy code
+
+
+## Quarto Resources
+
+*   Quarto Website: [https://quarto.org/](https://quarto.org/)
+*   Quarto Gallery: [https://gallery.quarto.org/](https://gallery.quarto.org/)
+*   Quarto R Documentation: [https://quarto.org/docs/language/r/](https://quarto.org/docs/language/r/)
+*   Closeread <https://closeread.dev/>
+*   IfP Quarto website: <https://code.ifp.uni-mainz.de/IfP/ma-datenanalyse>
 
 # Session 3 {#s3}
 

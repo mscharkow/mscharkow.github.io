@@ -80,10 +80,12 @@ Der Kurs ist als inverted classroom konzipiert, d.h. die Studierenden eignen sic
 
 ## Aufgabe: aktuelle Experimentalforschung
 
-- Recherchieren Sie je eine aktuelle Experimentalstudie in der Kommunikationswissenschaft
-- Grundlagen sind die Top 20 Journals nach Scimago Ranking <https://www.scimagojr.com/journalrank.php?area=3300&category=3315>
-- besprechen Sie die Studie paarweise und fassen Sie in max. einer Minute (!) zusammen: Thema, Forschungsfrage, Experimentaldesign und -bedingungen, Outcome-Variablen, Ergebnisse, Fazit
+- recherchieren Sie zu zweit je eine aktuelle Experimentalstudie in der Kommunikationswissenschaft
+- Basis sind die Top 20 Journals nach Scimago Ranking <https://www.scimagojr.com/journalrank.php?area=3300&category=3315>
+- besprechen Sie die gefundende Studie paarweise und fassen Sie in max. einer Minute (!) zusammen: Thema, Forschungsfrage, Experimentaldesign und -bedingungen, Outcome-Variablen, Ergebnisse, Fazit
 - finden Sie min. einen offensichtlichen Kritikpunkt
+- laden Sie die PDF in Moodle hoch
+
 
 ## Aufgaben zur nächsten Sitzung
 
