@@ -167,11 +167,30 @@ knitr::kable(plan)
     *   `[Link](url)` $\rightarrow$ hyperlinks
     *   `![Image](path)` $\rightarrow$ images
 
+## The YAML Header
 
-## Code example
+*   The configuration block at the top of the file (between `---` and `---`)
+*   Defines document-wide settings and metadata
+*   **Examples:**
+    *   **Metadata:** `title: "Analysis"`, `author: "Student"`, `bibliography: refs.bib`
+    *   **Output Options:** `format: html`, `number-sections: true`, `toc: true`
+    *   **Visuals:** `mainfont: "Times New Roman"`, `theme: minimalist`
+*   Detailed visual options can be moved to a separate `_brand.yml` file
 
-```{r, echo = T} 
-qplot(rnorm(100)) 
+
+## Knitr code chunk example
+
+**In your `.qmd` file:**
+```{.markdown}
+```{r}
+#| echo: false
+qplot(rnorm(100))
+```
+```
+
+**Result:**
+```{r, echo = FALSE}
+qplot(rnorm(100))
 ```
 
 ## Quarto workflow
@@ -294,7 +313,7 @@ qplot(rnorm(100))
 
 ## Research Ethics in Practice
 
--   Is informed consent needed for a content analysis of social media posts from members parliament?
+-   Is informed consent needed for a content analysis of social media posts from members of parliament?
 -   What about comments on posts or public pages, e.g., from parties or politicians?
 -   What about Tinder profiles or other online dating platforms?
 -   What if informed consent is practically not possible?
@@ -360,7 +379,7 @@ qplot(rnorm(100))
 
 ## API data
 
--   mostly only public **content** data with few meta data, e.g. time stamps and account information
+-   mostly only public **content** data with little metadata, e.g. time stamps and account information
 -   pure usage data very rarely available from an API, and mostly only aggregated
 -   very rare for any large platforms, severe privacy concerns for individual-level data
 -   example 1: [Wikipedia Views API](https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/de.wikipedia/all-access/all-agents/Deutscher_Bundestag/daily/20240101/20250101), aggregate views per day
@@ -428,7 +447,7 @@ qplot(rnorm(100))
 ## JSON data
 
 1.  (How) did you successfully read your a single JSON file?
-2.  How can we read multiples files? `list.files()` & `map()` functions
+2.  How can we read multiple files? `list.files()` & `map()` functions
 
 ## Session detection
 
@@ -775,7 +794,7 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 ## Simulation Specification
 
 -   in ABM, often relatively simple action rules
--   formal specification with a probabilistic components
+-   formal specification with probabilistic components
 -   few parameters within the agents, few for the environment
 -   problem 1: social science theory often not sufficiently specific and complete
 -   problem 2: model assumptions vs. simulation results
