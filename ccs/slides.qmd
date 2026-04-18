@@ -20,7 +20,7 @@ lang: en
 -   *Datafied Society* is more
     -   theory and research-focused
     -   (and probably has a unifying topic)
--   Write your term paper in either of the classes.
+-   write your term paper in either of the classes
 
 ## Course credit and requirements
 
@@ -52,14 +52,23 @@ lang: en
 -   terminology and many methods mostly derived from the natural sciences and engineering
 -   innovation often (but not always) happens outside academia, e.g. within companies such as Google or Meta
 
+## Background 
+
+- early computational work in the late 1960s (Annenberg Conference, General Inquirer)
+- early simulation studies and formal modeling in the 1970s (Schelling's Segregation model)
+- first AI hype in communication in the 1980s (Amsterdam School)
+- @lazerpentland2009 position piece on computational *social* science in general
+- ICA interest group and division *computational methods* in 2010s
+- first professorships in Mainz, Vienna, Ilmenau, Munich
+
 ## Computational methods
 
 -   the "Big 3" approaches in CCS:
     1.  automatic content analysis
     2.  analysis of digital traces and digital behavioral data
-    3.  simulation and agent-based modelling
+    3.  simulation and agent-based modeling
 -   historically, *very* strong emphasis on web data and automatic content analysis [@vanatteveldt2022computational]
--   agent-based modeling still very niche topics (see your own study choices for next week!)
+-   agent-based modeling is still a very niche topic (see your own study choices for next week!)
 
 ## Schedule
 
@@ -103,24 +112,116 @@ knitr::kable(plan)
     -   you work through an application using R at home
     -   we discuss the practical tasks in the following session
     -   we creatively apply the new methods to our own topics
--   Bring your own ideas, data, research questions to class!
+-   bring your own ideas, data, research questions to class
 
-## CCS Paper Potpourri
+## CCS Paper Potpourri (in 2 weeks)
 
--   10 posters overall, we'll probably do 2x 45min sessions.
+- choose from a sample of 25 articles, from *classics* to very recent papers
+- create posters for the article, highlighting RQ, methods, findings
+-   10 posters overall, we'll probably do 2x 30 min sessions 
+-   remember to get the posters printed ASAP at the ZDV (A2 or A1 normal paper)
 -   please bring the digital versions as well, just in case
--   remember to get the posters printed ASAP
 -   any questions about the studies or posters?
+
+## Next week
+
+- first practical exercises for warming up
+- bring your laptop or use the ZDV desktop
+- we cover infrastructure/workflow issues
 
 # Questions?
 
 # Session 2 {#s2}
 
-## Questions about Quarto?
 
 
-\\\
-\\\
+## Writing papers with statistical analyses
+
+*   reproducible research is crucial for academic work
+*   traditional word processors present challenges like:
+    *   **Copy/paste errors:** Introducing inconsistencies between code and results.
+    *   **Manual citation management:** Prone to errors and time-consuming.
+    *   **Reproducibility concerns:** Difficulty verifying results and replicating analyses.
+* Solutions: *Literate Programming* - mixing text and code
+
+
+
+## Knitr and Quarto
+
+*   the knitr package integrates R code directly into your writing
+*   it automates result inclusion, saving time and reducing errors
+*   Quarto uses pandoc for versatile document conversion, i.e. markdown to html/pdf/docx/epub, etc.
+*   it combines R **running** code, text, and figures in one file
+*   you can easily create reports in multiple formats
+*   **code example:** ````{r} qplot(rnorm(100)) ``` – simple code execution
+
+## Markdown basics
+
+*   **Markdown** is a lightweight markup language for plain-text formatting
+*   quarto uses markdown as its base language for text
+*   **common examples:**
+    *   `**bold**` $\rightarrow$ **bold**
+    *   `*italic*` $\rightarrow$ *italic*
+    *   `# Heading` $\rightarrow$ structural headings
+    *   `- List` $\rightarrow$ bullet points
+    *   `[Link](url)` $\rightarrow$ hyperlinks
+    *   `![Image](path)` $\rightarrow$ images
+
+
+## Code example
+
+```{r, echo = T} 
+qplot(rnorm(100)) 
+```
+
+## Quarto workflow
+
+![https://kieranhealy.org/resources/](images/workflow-wide-quarto.png)
+
+
+## Enhanced Features for Academic Writing
+
+*   cross-referencing simplifies citing figures and tables
+*   callouts highlight important definitions and caveats
+*   automatic numbering of sections improves readability
+*   Quarto ensures consistent formatting throughout your paper
+
+
+## Term Paper Specific Benefits
+
+*   easily include statistical analyses and visualizations
+*   automated bibliography generation with BibTeX or CSL
+*   maintain a clear record of your data analysis steps
+*   share your code and results for transparency and verification
+*   *compared to Word:* reduces manual formatting, copy/paste and citation errors
+
+
+## Multiple Output Formats
+
+*   create PDFs for submission to professors and journals
+*   generate HTML reports for online presentations and sharing
+*   export to Word (.docx) for compatibility with specific requirements
+*   *compared to Word:* simplifies converting between formats automatically
+*   **Beyond the Basics:**
+    *   **Slides:**  Create presentation slides (like these!) directly from your document.
+    *   **Closeread:**  Generate scrollytelling narratives with interactive data visualizations.
+
+
+## Quarto Resources
+
+*   Quarto Website: [https://quarto.org/](https://quarto.org/)
+*   Quarto Gallery: [https://gallery.quarto.org/](https://gallery.quarto.org/)
+*   Quarto R Documentation: [https://quarto.org/docs/language/r/](https://quarto.org/docs/language/r/)
+*   Closeread <https://closeread.dev/>
+
+
+## Tasks for next week
+
+- Check my basic term paper template, modify settings, text and code, check the resulting document.
+- Collect questions you might have about how to accomplish certain tasks in Quarto.
+
+
+# Questions about Quarto?
 
 IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
 
@@ -135,7 +236,7 @@ IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
 - citations in markdown are simply `@smith2022`
 - you can search and include references in visual mode, based on DOI
 - the BibTeX entry is automatically generated and added to your references file
-- similarly, there is a Zotero connector if you already use Zotero's online library
+- similarly, there is a [Zotero connector](https://www.zotero.org/download/) if you already use Zotero's online library
 
 ## Code
 
@@ -147,7 +248,7 @@ IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
 
 ## Visual branding
 
-- Quarto documents can be customized either through YAML header options like `mainfont` or with a brand file
+- quarto documents can be customized either through YAML header options like `mainfont` or with a brand file
 - use a `_brand.yml` file in the same folder, which includes many visual options like colors, fonts, styles
 - works for HTML, RevealJS slides, and some parts of PDF documents
 - does *not* impact the ggplot2 graphics, for which you'd need to set theme, colors, etc. separately
@@ -254,10 +355,10 @@ IfP Quarto website: <https://github.com/ccsmainz/ma-datenanalyse>
 
 ## Next session (in 2 weeks!)
 
--   Get data dwnload packages (DDP) for all major online platforms/services that you use (at least 2), e.g. from Google/Youtube, Instagram, TikTok, Spotify, Netflix, etc.
--   How? Google "data download package \[PLATFORM\]"
--   Request JSON files if given the option between multiple formats
--   Read @ohme2023
+-   get data dwnload packages (DDP) for all major online platforms/services that you use (at least 2), e.g. from Google/Youtube, Instagram, TikTok, Spotify, Netflix, etc.
+-   how? Google "data download package \[PLATFORM\]"
+-   request JSON files if given the option between multiple formats
+-   read @ohme2023
 
 # Session 5 {#s5}
 
@@ -369,7 +470,7 @@ Methods for data collection (using R), from simplest to most complex:
 
 ## Machine-readable files
 
--   Download and read structured data files (like CSV, JSON, XML) that are publicly available online
+-   download and read structured data files (like CSV, JSON, XML) that are publicly available online
 -   **Benefit:** Often the easiest and most reliable way to obtain data when available
 -   **Drawbacks:** Limited availability, needs some searching
 -   Examples:
@@ -419,7 +520,7 @@ a |> jsonlite::prettify()
 ## Web Scraping
 
 -   involves extracting data from websites, and it's particularly useful for content where APIs might not be available.
--   HTML content is downloaded and parsed to extract specific elements (e.g., headlines, article bodies, dates).
+-   HTML content is downloaded and parsed to extract specific elements (e.g., headlines, article bodies, dates)
 -   **Challenges:**
     -   Layout updates can break scraping code.
     -   Websites may block or limit automated access.
@@ -427,7 +528,7 @@ a |> jsonlite::prettify()
 
 ## Scraping with remote-controlled browsers
 
--   Utilizes automated browsers (e.g., Chrome, Firefox) to navigate websites, interact with elements, and extract content, mimicking human user behavior.
+-   utilizes automated browsers (e.g., Chrome, Firefox) to navigate websites, interact with elements, and extract content, mimicking human user behavior
 -   **Benefit:** Can handle dynamic content (JavaScript, AJAX), login walls, and other complex interactive elements that traditional web scraping struggles with.
 -   **Drawbacks:**
     -   Significantly slower than direct HTML fetching as it renders the entire page.
@@ -436,7 +537,7 @@ a |> jsonlite::prettify()
 
 ## Data Donations
 
--   Involves requesting and collecting data directly from users, who volunteer to share their digital information for research purposes.
+-   involves requesting and collecting data directly from users, who volunteer to share their digital information for research purposes
 -   **Benefit:** Provides access to data from closed platforms (e.g., mobile apps, private social media groups) or highly personalized content that is otherwise inaccessible.
 -   **Drawbacks:**
     -   Data format and completeness can vary widely across platforms/donors.
@@ -445,11 +546,11 @@ a |> jsonlite::prettify()
 
 ## Multimodal data
 
--   Many platforms provide text as well as images or audiovisual data.
--   Images and audiovisual data need to be downloaded before analysis.
--   We can use the multimodal data directly or convert them to text (e.g. transcripts or image descriptions).
--   Conversion to text makes things easier for us, but loses lots of information.
--   Many useful tools available, e.g. for [mass downloading](https://github.com/yt-dlp/yt-dlp), [speech transcription](https://github.com/Softcatala/whisper-ctranslate2), [video-to-image conversion](https://github.com/amietn/vcsi), etc.
+-   many platforms provide text as well as images or audiovisual data
+-   images and audiovisual data need to be downloaded before analysis
+-   we can use the multimodal data directly or convert them to text (e.g. transcripts or image descriptions)
+-   conversion to text makes things easier for us, but loses lots of information
+-   many useful tools available, e.g. for [mass downloading](https://github.com/yt-dlp/yt-dlp), [speech transcription](https://github.com/Softcatala/whisper-ctranslate2), [video-to-image conversion](https://github.com/amietn/vcsi), etc.
 
 # Automatic content analysis
 
@@ -476,8 +577,8 @@ tibble(
 
 ## Text as Term-Document Matrix
 
--   Term-Document Matrix (TDM) quantify word occurrences.
--   Each column is a unique term, each row is a document, and cells indicate how often a term appears in a document.
+-   term-document matrix (TDM) quantify word occurrences
+-   each column is a unique term, each row is a document, and cells indicate how often a term appears in a document
 
 | document \| brown \| cat \| dog \| fox \| friends \| jumps \| lazy \| mat \| quick \| sleeps \|
 
@@ -485,9 +586,9 @@ tibble(
 
 ## Text as Word Embeddings
 
--   Word or sentence embeddings represent text as numerical vectors, capturing semantic relationships.
--   We can use vector arithmetic to compute semantic relations like `queen = king - man + woman`.
--   The embedding dimensions themselves have no interpretable meaning to us.
+-   word or sentence embeddings represent text as numerical vectors, capturing semantic relationships
+-   we can use vector arithmetic to compute semantic relations like `queen = king - man + woman`
+-   the embedding dimensions themselves have no interpretable meaning to us
 
 | Sentence ID \| Dim 1 \| Dim 2 \| Dim 3 \| Dim 4 \| Dim 5 \| Dim 6 \| Dim 7 \| Dim 8 \| Dim 9 \| Dim 10 \|
 
@@ -495,29 +596,29 @@ tibble(
 
 ## Traditional automatic content analysis
 
--   Preprocess the data
+-   preprocess the data
     -   remove stopwords or infrequent terms
     -   resolve anaphora or homonyms
     -   detect entities, negations, fixed phrases
--   Convert text to term-document matrix or text embeddings.
--   Use unsupervised or supervised machine learning, dictionaries, or other approaches
--   Get predictions (i.e. categories) per document or term
+-   convert text to term-document matrix or text embeddings
+-   use unsupervised or supervised machine learning, dictionaries, or other approaches
+-   get predictions (i.e. categories) per document or term
 -   extensive literature, e.g. @scharkow2013;@vanatteveldt2022computational
 
 ## Large Language Models (LLM)
 
--   Models train on vast internet text (books, articles, websites) and learn **contextual word embeddings**, i.e. word vectors change based on surrounding words (e.g., "river bank" vs. "money bank"), capturing nuanced meaning.
+-   models train on vast internet text (books, articles, websites) and learn **contextual word embeddings**, i.e. word vectors change based on surrounding words (e.g., "river bank" vs. "money bank"), capturing nuanced meaning
 -   **Reinforcement Learning from Human Feedback (RLHF):** Human rankings of LLM responses to instructions train a reward model. The LLM then optimizes its responses to maximize this reward.
--   Given a prompt, the LLM uses its learned knowledge to **predict the most probable word sequence** for a response.
+-   given a prompt, the LLM uses its learned knowledge to **predict the most probable word sequence** for a response
 -   LLM can be used for many tasks: translation, summarization, text editing, etc.
 -   [LLM Explainer by the FT](https://ig.ft.com/generative-ai/), [RLHF explainer by OpenAI](https://openai.com/index/instruction-following/)
 
 ## Large Multimodal Models (LMMs)
 
--   Beyond text, LMMs integrate modalities like text, images, audio, or video, unlike text-focused LLMs.
+-   beyond text, LMMs integrate modalities like text, images, audio, or video, unlike text-focused LLMs
 -   Specifically trained to understand and generate image-related content
--   LMM learn to represent different modalities in a shared "embedding space," understanding how text relates to visuals.
--   LMM can perform tasks like image captioning, visual question answering, image generation from text, and object recognition.
+-   LMMs learn to represent different modalities in a shared "embedding space," understanding how text relates to visuals
+-   LMM can perform tasks like image captioning, visual question answering, image generation from text, and object recognition
 
 ## Content analysis with LLM/LMM
 
@@ -533,14 +634,14 @@ tibble(
 
 ## AI-based content analysis
 
--   In this course, we use LLM/LMM for essentially all content analysis tasks.
--   Basic workflow is similar to manual content analysis:
+-   in this course, we use LLM/LMM for essentially all content analysis tasks
+-   basic workflow is similar to manual content analysis:
     1.  Collect the content data to be coded (text, image, video, etc.).
     2.  Develop codebook with coding instructions and examples.
     3.  Combine instructions with text/image data to prompts for LLM API.
     4.  Collect structured predictions for each coding unit from the model.
     5.  Maybe combine different predictions (varying tasks, varying LLM/LMM)
--   Always validate with human coding!
+-   always validate with human coding
 
 ## Tasks
 
@@ -555,7 +656,7 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 ## Questions about coding tasks?
 
 -   tabular data and R packages
--   JSON and RSS APIs
+-   json and RSS APIs
 -   web scraping
 -   downloading images and videos
 -   any additional sources?
@@ -581,13 +682,13 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 ## Image and video coding
 
--   Whisper transcriptions and vcsi video-to-image
+-   whisper transcriptions and vcsi video-to-image
 
--   Large multimodal or visual models
+-   large multimodal or visual models
 
 ## Computational workflows
 
--   How can we deal with multimodal content?
+-   how can we deal with multimodal content?
 
 ## Computational workflows
 
@@ -595,7 +696,7 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 -   look up suitable code snippets to re-use
 -   ask me or a LLM, but provide as much detailed information as possible
 -   successively build pipelines and intermediate objects for your analysis
--   get single tasks to work first, than run the same task repeatedly using `map()` etc.
+-   get single tasks to work first, then run the same task repeatedly using `map()` etc.
 
 ## Term papers
 
@@ -632,15 +733,15 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 ### Classical Empirical Social Research
 
--   Theory development in the form of verbal statements
--   Theory testing based on empirical data
+-   theory development in the form of verbal statements
+-   theory testing based on empirical data
 -   (Null) hypothesis testing as a comparison of theory and empiricism
 
 ### Simulations
 
--   Theory development in the form of algorithms/code
--   Generation of (multiple) simulated data
--   Comparison of simulated data with empirical data
+-   theory development in the form of algorithms/code
+-   generation of (multiple) simulated data
+-   comparison of simulated data with empirical data
 
 ## Types of Simulations
 
@@ -649,56 +750,56 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 ## Monte Carlo Simulation
 
--   Assumptions about the distribution of data in the population
--   Repeated drawing of random samples from the population
--   Repeated application of a procedure and analysis of the results
+-   assumptions about the distribution of data in the population
+-   repeated drawing of random samples from the population
+-   repeated application of a procedure and analysis of the results
 
 ## Advantages and Disadvantages of Monte Carlo Simulation
 
--   Especially suitable for testing procedures (does my analysis do what it's supposed to?) and for
--   Power analysis (can my study find a specific effect?)
+-   especially suitable for testing procedures (does my analysis do what it's supposed to?) and for
+-   power analysis (can my study find a specific effect?)
 -   Data-generating process must be known (approximately)
 -   Rule specification via formulas
 -   Isolated consideration of all cases (no interactions between agents)
 
 ## Social Simulations
 
--   Complex equation systems - Macromodels
--   Microsimulation (sample of agents is artificially "aged")
--   Discrete-Event Simulations (e.g., queuing models)
--   Cellular Automata (e.g., Schelling's segregation model)
--   Agent-based Models
+-   complex equation systems - macromodels
+-   microsimulation (sample of agents is artificially "aged")
+-   discrete-event simulations (e.g., queuing models)
+-   cellular automata (e.g., Schelling's segregation model)
+-   agent-based models
 
 ## Agent-Based Models (ABM)
 
 ### Computer models with the following components:
 
--   Agents
--   Environment
--   Rules
+-   agents
+-   environment
+-   rules
 
-### Suitable for modeling and simulating complex systems with
+### suitable for modeling and simulating complex systems with
 
--   Heterogeneous, interacting, and adaptive agents
--   Dynamic, non-linear processes
--   Micro-macro linkages
+-   heterogeneous, interacting, and adaptive agents
+-   dynamic, non-linear processes
+-   micro-macro linkages
 
 ## Simulation Specification
 
--   In ABM, often relatively simple action rules
--   Formal specification with a probabilistic components
--   Few parameters within the agents, few for the environment
--   Problem 1: Social science theory often not sufficiently specific and complete
--   Problem 2: Model assumptions vs. simulation results
+-   in ABM, often relatively simple action rules
+-   formal specification with a probabilistic components
+-   few parameters within the agents, few for the environment
+-   problem 1: social science theory often not sufficiently specific and complete
+-   problem 2: model assumptions vs. simulation results
 
 ## Generative Agent Models
 
--   Instead of formal (programmed) rules we use verbal rules
--   Use of an LLM as an agent ("Roleplaying")
--   LLM supplements verbal instructions and role with verbal responses
--   Responses depend on training data and LLM quality
--   Very few validation studies to date [@larooij2025].
--   Often relatively naive assumptions about the generalizability of results (i.e., treating LLMs as substitutes for human agents)
+-   instead of formal (programmed) rules we use verbal rules
+-   use of an LLM as an agent ("Roleplaying")
+-   LLMs supplement verbal instructions and role with verbal responses
+-   responses depend on training data and LLM quality
+-   very few validation studies to date [@larooij2025]
+-   often relatively naive assumptions about the generalizability of results (i.e., treating LLMs as substitutes for human agents)
 
 ## Hype
 
@@ -706,11 +807,11 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 
 ## Outlook on LLM-based ABM
 
--   Diverse application areas, especially in reception research
--   Relatively simple rule specification, complex agent personas (possibly with memory)
--   Easy to link with real stimuli
--   Inter-agent communication possible, but not yet implemented in Expected Parrot
--   Disadvantages: LLM biases shine through, unclear generalizability
+-   diverse application areas, especially in reception research
+-   relatively simple rule specification, complex agent personas (possibly with memory)
+-   easy to link with real stimuli
+-   inter-agent communication possible, but not yet implemented in Expected Parrot
+-   disadvantages: LLM biases shine through, unclear generalizability
 -   LLM responses are definitely not equivalent to human respondents!
 
 ## Tasks for the next sessions
@@ -731,71 +832,6 @@ You need to re-download the ZIP file and data for the next sessions. Sorry!
 -   generating stimulus × persona combinations
 -   getting and analyzing results
 
-## Writing papers with statistical analyses
 
-*   Reproducible research is crucial for academic work.
-*   Traditional word processors present challenges like:
-    *   **Copy/paste errors:** Introducing inconsistencies between code and results.
-    *   **Manual citation management:** Prone to errors and time-consuming.
-    *   **Reproducibility concerns:** Difficulty verifying results and replicating analyses.
-
-
-
-## Knitr and Quarto
-
-*   knitr integrates R code directly into your writing.
-*   It automates result inclusion, saving time and reducing errors.
-*   Quarto uses Pandoc for versatile document conversion.
-*   It combines R **running** code, text, and figures in one file.
-*   You can easily create reports in multiple formats.
-*   **Code Example:** ````{r} qplot(rnorm(100)) ``` – simple code execution.
-
-
-## Code example
-
-```{r, echo = T} 
-qplot(rnorm(100)) 
-```
-
-## Enhanced Features for Academic Writing
-
-*   Cross-referencing simplifies citing figures and tables.
-*   Callouts highlight important definitions and caveats.
-*   Automatic numbering of sections improves readability.
-*   Quarto ensures consistent formatting throughout your paper.
-
-
-## Term Paper Specific Benefits
-
-*   Easily include statistical analyses and visualizations.
-*   Automated bibliography generation with BibTeX or CSL.
-*   Maintain a clear record of your data analysis steps.
-*   Share your code and results for transparency and verification.
-*   *Compared to Word:* reduces manual formatting, copy/paste and citation errors.
-
-
-## Multiple Output Formats
-
-*   Create PDFs for submission to professors and journals.
-*   Generate HTML reports for online presentations and sharing.
-*   Export to Word (.docx) for compatibility with specific requirements.
-*   *Compared to Word:* simplifies converting between formats automatically.
-*   **Beyond the Basics:**
-    *   **Slides:**  Create presentation slides (like these!) directly from your document.
-    *   **Closeread:**  Generate scrollytelling narratives with interactive data visualizations.
-
-
-## Quarto Resources
-
-*   Quarto Website: [https://quarto.org/](https://quarto.org/)
-*   Quarto Gallery: [https://gallery.quarto.org/](https://gallery.quarto.org/)
-*   Quarto R Documentation: [https://quarto.org/docs/language/r/](https://quarto.org/docs/language/r/)
-*   Closeread <https://closeread.dev/>
-
-
-## Tasks for next week
-
-- Check my basic term paper template, modify settings, text and code, check the resulting document.
-- Collect questions you might have about how to accomplish certain tasks in Quarto.
 
 
