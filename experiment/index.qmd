@@ -83,16 +83,18 @@ make_schedule(start_date, end_date, no_classes, topics) |>
 
 ### Themen
 
--   Simulation von Studien und agentenbasierte Modelle
+-   Agentenbasierte Modelle (ABM) und generative Agenten mit LLM
+-   Monte-Carlo-Simulation und Power-Analyse
 -   praktische R-Übung
 
 ### Literatur
 
 @larooij2025;@waldherr2019
 
-### Aufgabe zur nächsten Sitzung
+### Aufgabe zur nächste Sitzung
 
 -   [R-Hausaufgabe zur Simulation](https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html)
+-   Erste Überlegungen zu Forschungsdesign und Stichprobe für Ihr eigenes Experiment
 
 ## Sitzung 5 <a class="bi bi-easel-fill" href="slides.html#/s5" alt="Folien"></a> {#5}
 

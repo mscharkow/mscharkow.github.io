@@ -252,68 +252,6 @@ Stellen Sie sich und Ihren Themenvorschlag kurz vor!
 -   Monte-Carlo-Simulation
 -   soziale Simulationen [@waldherr2019]
 
-## Monte-Carlo-Simulation
-
--   Annahmen über Verteilung von Daten in der Grundgesamtheit
--   wiederholtes Ziehen von Zufallsstichproben aus der Grundgesamtheit
--   wiederholte Anwendung eines Verfahrens und Analyse der Ergebnisse
-
-## Beispiel T-Test
-
-```{r, echo = T}
-males = rnorm(n = 1e6, m = 180, sd = 10)
-females = rnorm(n = 1e6, m = 166, sd = 10)
-t.test(females, males) 
-```
-
-## Simulation mit Zufallsziehung
-
-```{r, echo = T}
-do_t_test = function(n, group1, group2){
-  m = sample(group1, n)
-  w = sample(group2, n)
-  t.test(m,w)$p.value
-}
-
-do_t_test(100, females, males)
-do_t_test(100, males, males)
-```
-
-## Alpha-Fehler
-
-```{r, echo = T}
-set.seed(123)
-results_h0 = replicate(1000, do_t_test(n = 100, males, males))
-results_h0 |> head()
-sum(results_h0 <= .05)
-```
-
-## Beta-Fehler und Power
-
-```{r, echo = T}
-results_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))
-results_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))
-
-sum(results_h1_n10 <= .05)
-sum(results_h1_n100 <= .05)
-```
-
-## Power-Analyse
-
--   für jedes Experiment sollte vorher eine Power-Analyse durchgeführt werden
--   plausible Annahmen (z.B. aus der Literatur) für Effektgrößen/Unterschiede zwischen den Versuchsbedingungen
--   für einfache Designs gibt es z.B. Online-Calculators
--   für komplexere Designs Monte-Carlo-Simulation
--   wir zielen auf ca. 80% Power für den erwarteten Effekt
-
-## Vor- und Nachteile Monte-Carlo-Simulation
-
--   eignen sich vor allem zum Prüfen von Verfahren (tut meine Analyse was sie soll?) und zur
--   Power-Analyse (kann meine Studie einen bestimmten Effekt finden?)
--   datengenerierender Prozess muss (näherungsweise) bekannt sein
--   Regelspezifikation über Formeln
--   isolierte Betrachtung aller Fälle (keine Interaktionen zwischen Agenten)
-
 ## Soziale Simulationen
 
 -   komplexe Gleichungssysteme - Makromodelle
@@ -343,6 +281,13 @@ sum(results_h1_n100 <= .05)
 -   wenige Parameter innerhalb der Agenten, wenige für die Umwelt
 -   Problem 1: sozialwissenschaftliche Theorie oft nicht ausreichend spezifisch und vollständig
 -   Problem 2: Annahmen des Modells vs. Ergebnisse der Simulation
+
+## Übergang: Klassische ABM vs. Generative Agenten
+
+-   Klassische ABM: Programmierer schreibt explizite Regeln
+-   Generative Agenten: LLM interpretiert sprachliche Anweisungen
+-   Beide haben Agenten, Umwelt, Interaktionen
+-   Generative Agenten erlauben komplexere Verhalten, aber weniger Kontrolle
 
 ## Generative Agentenmodelle
 
@@ -405,10 +350,83 @@ lmer(answer_friendly ~ text * emoji + (1|agent_agent_name), data = d) %>%
 -   Nachteile: Biases der LLM schlagen durch, unklare Generalisierbarkeit
 -   LLM-Antworten sind definitiv nicht äquivalent mit menschlichen Befragten!
 
+## Monte-Carlo-Simulation
+
+-   Annahmen über Verteilung von Daten in der Grundgesamtheit
+-   wiederholtes Ziehen von Zufallsstichproben aus der Grundgesamtheit
+-   wiederholte Anwendung eines Verfahrens und Analyse der Ergebnisse
+
+## Beispiel T-Test
+
+```{r, echo = T}
+males = rnorm(n = 1e6, m = 180, sd = 10)
+females = rnorm(n = 1e6, m = 166, sd = 10)
+t.test(females, males) 
+```
+
+## Simulation mit Zufallsziehung
+
+```{r, echo = T}
+do_t_test = function(n, group1, group2){
+  m = sample(group1, n)
+  w = sample(group2, n)
+  t.test(m,w)$p.value
+}
+
+do_t_test(100, females, males)
+do_t_test(100, males, males)
+```
+
+## Alpha-Fehler
+
+```{r, echo = T}
+set.seed(123)
+results_h0 = replicate(1000, do_t_test(n = 100, males, males))
+results_h0 |> head()
+sum(results_h0 <= .05)
+```
+
+## Beta-Fehler und Power
+
+```{r, echo = T}
+results_h1_n10 = replicate(1000, do_t_test(n = 5, females, males))
+results_h1_n100 = replicate(1000, do_t_test(n = 50, females, males))
+
+sum(results_h1_n10 <= .05)
+sum(results_h1_n100 <= .05)
+```
+
+## Power-Analyse
+
+-   für jedes Experiment sollte vorher eine Power-Analyse durchgeführt werden
+-   plausible Annahmen (z.B. aus der Literatur) für Effektgrößen/Unterschiede zwischen den Versuchsbedingungen
+-   für einfache Designs gibt es z.B. Online-Calculators
+-   für komplexere Designs Monte-Carlo-Simulation
+-   wir zielen auf ca. 80% Power für den erwarteten Effekt
+
+## Vor- und Nachteile Monte-Carlo-Simulation
+
+-   eignen sich vor allem zum Prüfen von Verfahren (tut meine Analyse was sie soll?) und zur
+-   Power-Analyse (kann meine Studie einen bestimmten Effekt finden?)
+-   datengenerierender Prozess muss (näherungsweise) bekannt sein
+-   Regelspezifikation über Formeln
+-   isolierte Betrachtung aller Fälle (keine Interaktionen zwischen Agenten)
+
+## Brücke zur nächsten Sitzung
+
+Die Power-Analyse heute hilft Ihnen, in der nächsten Sitzung:
+
+-   Ihr Forschungsdesign zu konkretisieren
+-   Eine realistische Stichprobenplanung zu erstellen
+-   Beides auf Ihre Forschungsfrage und Hypothesen abzustimmen
+
+Denken Sie schon einmal nach: Welches Design (Between/Within) passt zu Ihrer Forschungsfrage?
+
 ## Aufgaben zur nächsten Sitzung
 
 -   praktische Übung nachbereiten <https://stats.ifp.uni-mainz.de/ba-ccs-track/exp-simulation.html>
 -   Hausaufgabe in R erledigen
+-   Erste Überlegungen zu Forschungsdesign und Stichprobe
 
 # Sitzung 5 {#s5}
 
