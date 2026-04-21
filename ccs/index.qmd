@@ -49,7 +49,19 @@ Select a study on Moodle and repare a poster (A1) for the study you selected.
 
 ## Session 2 <a class="bi bi-easel-fill" href="slides.html#/s2" alt="Slides"></a> {#2}
 
+### Topics
 
+-   Writing papers with statistical analyses: reproducible research and literate programming
+-   Knitr and Quarto: integrating R code, automated result inclusion, versatile document conversion
+-   Markdown basics, YAML headers, Quarto workflow features, and scrollytelling with {closeread}
+
+### Reading
+
+None (practical session)
+
+### Tasks for the next session
+
+Prepare your poster presentation for Session 3.
 
 ## Session 3 <a class="bi bi-easel-fill" href="slides.html#/s3" alt="Slides"></a> {#3}
 
